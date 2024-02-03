@@ -97,17 +97,14 @@ int main(void)
   while (1)
   {
     /* USER CODE END WHILE */
-	  HAL_GPIO_WritePin(LED_GPIO_Port, LED_Pin, SET);
-	  HAL_Delay(1000);
-	  HAL_GPIO_WritePin(LED_GPIO_Port, LED_Pin, RESET);
-	  HAL_Delay(1000);
+//	  HAL_GPIO_WritePin(LED_GPIO_Port, LED_Pin, SET);
+//	  HAL_Delay(1000);
+//	  HAL_GPIO_WritePin(LED_GPIO_Port, LED_Pin, RESET);
+//	  HAL_Delay(1000);
 	  HAL_GPIO_WritePin(LED_SYSTEM_GPIO_Port, GPIO_PIN_13, SET);
-	  HAL_Delay(500);
+	  HAL_Delay(5000);
 	  HAL_GPIO_WritePin(LED_SYSTEM_GPIO_Port, GPIO_PIN_13, RESET);
-	  HAL_Delay(500);
-
-
-
+	  HAL_Delay(3000);
     /* USER CODE BEGIN 3 */
   }
   /* USER CODE END 3 */
