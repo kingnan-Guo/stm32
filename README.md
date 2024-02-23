@@ -33,3 +33,18 @@ brew install --cask gcc-arm-embedded
 make -j7 all 
 
 
+## ============
+嵌入式 GDB 配置
+localhost:3333
+/usr/local/bin/openocd
+-f interface/stlink-v2.cfg -f target/stm32f1x.cfg
+
+##===
+在 debugger 情况下 外设 设置 svd 的路径
+添加 svd 在 官网下载  svd 并且放在 /Users/kingnan/Documents/stm32 program/en.stm32f1_svd/STM32F1_svd_V1.2/STM32F103.svd
+中
+
+
+
+
+
