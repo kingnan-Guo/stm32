@@ -26,15 +26,16 @@
 				{
 					"includeDirectories" : 
 					[
-						"/usr/local/Cellar/arm-none-eabi-gcc/13.2.0/lib/gcc/arm-none-eabi/13.2.0/include",
-						"/usr/local/Cellar/arm-none-eabi-gcc/13.2.0/lib/gcc/arm-none-eabi/13.2.0/include-fixed"
+						"/Applications/ArmGNUToolchain/13.2.Rel1/arm-none-eabi/lib/gcc/arm-none-eabi/13.2.1/include",
+						"/Applications/ArmGNUToolchain/13.2.Rel1/arm-none-eabi/lib/gcc/arm-none-eabi/13.2.1/include-fixed",
+						"/Applications/ArmGNUToolchain/13.2.Rel1/arm-none-eabi/arm-none-eabi/include"
 					],
 					"linkDirectories" : [],
 					"linkFrameworkDirectories" : [],
 					"linkLibraries" : []
 				},
 				"path" : "/usr/local/bin/arm-none-eabi-gcc",
-				"version" : "13.2.0"
+				"version" : "13.2.1"
 			},
 			"language" : "C",
 			"sourceFileExtensions" : 
@@ -51,15 +52,19 @@
 				{
 					"includeDirectories" : 
 					[
-						"/usr/local/Cellar/arm-none-eabi-gcc/13.2.0/lib/gcc/arm-none-eabi/13.2.0/include",
-						"/usr/local/Cellar/arm-none-eabi-gcc/13.2.0/lib/gcc/arm-none-eabi/13.2.0/include-fixed"
+						"/Applications/ArmGNUToolchain/13.2.Rel1/arm-none-eabi/arm-none-eabi/include/c++/13.2.1",
+						"/Applications/ArmGNUToolchain/13.2.Rel1/arm-none-eabi/arm-none-eabi/include/c++/13.2.1/arm-none-eabi",
+						"/Applications/ArmGNUToolchain/13.2.Rel1/arm-none-eabi/arm-none-eabi/include/c++/13.2.1/backward",
+						"/Applications/ArmGNUToolchain/13.2.Rel1/arm-none-eabi/lib/gcc/arm-none-eabi/13.2.1/include",
+						"/Applications/ArmGNUToolchain/13.2.Rel1/arm-none-eabi/lib/gcc/arm-none-eabi/13.2.1/include-fixed",
+						"/Applications/ArmGNUToolchain/13.2.Rel1/arm-none-eabi/arm-none-eabi/include"
 					],
 					"linkDirectories" : [],
 					"linkFrameworkDirectories" : [],
 					"linkLibraries" : []
 				},
 				"path" : "/usr/local/bin/arm-none-eabi-g++",
-				"version" : "13.2.0"
+				"version" : "13.2.1"
 			},
 			"language" : "CXX",
 			"sourceFileExtensions" : 

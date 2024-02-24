@@ -32,8 +32,12 @@
 					<Add directory="/Users/kingnan/Documents/github/stm32/Drivers/STM32F1xx_HAL_Driver/Inc"/>
 					<Add directory="/Users/kingnan/Documents/github/stm32/Drivers/CMSIS/Device/ST/STM32F1xx/Include"/>
 					<Add directory="/Users/kingnan/Documents/github/stm32/Drivers/CMSIS/Include"/>
-					<Add directory="/usr/local/Cellar/arm-none-eabi-gcc/13.2.0/lib/gcc/arm-none-eabi/13.2.0/include"/>
-					<Add directory="/usr/local/Cellar/arm-none-eabi-gcc/13.2.0/lib/gcc/arm-none-eabi/13.2.0/include-fixed"/>
+					<Add directory="/Applications/ArmGNUToolchain/13.2.Rel1/arm-none-eabi/bin/../lib/gcc/arm-none-eabi/13.2.1/../../../../arm-none-eabi/include/c++/13.2.1"/>
+					<Add directory="/Applications/ArmGNUToolchain/13.2.Rel1/arm-none-eabi/bin/../lib/gcc/arm-none-eabi/13.2.1/../../../../arm-none-eabi/include/c++/13.2.1/arm-none-eabi"/>
+					<Add directory="/Applications/ArmGNUToolchain/13.2.Rel1/arm-none-eabi/bin/../lib/gcc/arm-none-eabi/13.2.1/../../../../arm-none-eabi/include/c++/13.2.1/backward"/>
+					<Add directory="/Applications/ArmGNUToolchain/13.2.Rel1/arm-none-eabi/bin/../lib/gcc/arm-none-eabi/13.2.1/include"/>
+					<Add directory="/Applications/ArmGNUToolchain/13.2.Rel1/arm-none-eabi/bin/../lib/gcc/arm-none-eabi/13.2.1/include-fixed"/>
+					<Add directory="/Applications/ArmGNUToolchain/13.2.Rel1/arm-none-eabi/bin/../lib/gcc/arm-none-eabi/13.2.1/../../../../arm-none-eabi/include"/>
 				</Compiler>
 				<MakeCommands>
 					<Build command="/usr/bin/make -j8 -f &quot;/Users/kingnan/Documents/github/stm32/cmake-build-debug/Makefile&quot;  VERBOSE=1 stm32F103C8T6Test.elf"/>
@@ -57,8 +61,12 @@
 					<Add directory="/Users/kingnan/Documents/github/stm32/Drivers/STM32F1xx_HAL_Driver/Inc"/>
 					<Add directory="/Users/kingnan/Documents/github/stm32/Drivers/CMSIS/Device/ST/STM32F1xx/Include"/>
 					<Add directory="/Users/kingnan/Documents/github/stm32/Drivers/CMSIS/Include"/>
-					<Add directory="/usr/local/Cellar/arm-none-eabi-gcc/13.2.0/lib/gcc/arm-none-eabi/13.2.0/include"/>
-					<Add directory="/usr/local/Cellar/arm-none-eabi-gcc/13.2.0/lib/gcc/arm-none-eabi/13.2.0/include-fixed"/>
+					<Add directory="/Applications/ArmGNUToolchain/13.2.Rel1/arm-none-eabi/bin/../lib/gcc/arm-none-eabi/13.2.1/../../../../arm-none-eabi/include/c++/13.2.1"/>
+					<Add directory="/Applications/ArmGNUToolchain/13.2.Rel1/arm-none-eabi/bin/../lib/gcc/arm-none-eabi/13.2.1/../../../../arm-none-eabi/include/c++/13.2.1/arm-none-eabi"/>
+					<Add directory="/Applications/ArmGNUToolchain/13.2.Rel1/arm-none-eabi/bin/../lib/gcc/arm-none-eabi/13.2.1/../../../../arm-none-eabi/include/c++/13.2.1/backward"/>
+					<Add directory="/Applications/ArmGNUToolchain/13.2.Rel1/arm-none-eabi/bin/../lib/gcc/arm-none-eabi/13.2.1/include"/>
+					<Add directory="/Applications/ArmGNUToolchain/13.2.Rel1/arm-none-eabi/bin/../lib/gcc/arm-none-eabi/13.2.1/include-fixed"/>
+					<Add directory="/Applications/ArmGNUToolchain/13.2.Rel1/arm-none-eabi/bin/../lib/gcc/arm-none-eabi/13.2.1/../../../../arm-none-eabi/include"/>
 				</Compiler>
 				<MakeCommands>
 					<Build command="/usr/bin/make -j8 -f &quot;/Users/kingnan/Documents/github/stm32/cmake-build-debug/Makefile&quot;  VERBOSE=1 stm32F103C8T6Test.elf/fast"/>

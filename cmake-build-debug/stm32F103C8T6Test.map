@@ -1428,17 +1428,17 @@ LOAD /Applications/ArmGNUToolchain/13.2.Rel1/arm-none-eabi/bin/../lib/gcc/arm-no
  .debug_rnglists
                 0x000002ab      0x121 CMakeFiles/stm32F103C8T6Test.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_usart.c.obj
 
-.debug_line     0x00000000     0x453b
- .debug_line    0x00000000      0x4b3 CMakeFiles/stm32F103C8T6Test.elf.dir/Core/Src/main.c.obj
- .debug_line    0x000004b3      0x2ff CMakeFiles/stm32F103C8T6Test.elf.dir/Core/Src/stm32f1xx_hal_msp.c.obj
- .debug_line    0x000007b2      0x189 CMakeFiles/stm32F103C8T6Test.elf.dir/Core/Src/stm32f1xx_it.c.obj
- .debug_line    0x0000093b      0x27b CMakeFiles/stm32F103C8T6Test.elf.dir/Core/Src/system_stm32f1xx.c.obj
- .debug_line    0x00000bb6       0x78 CMakeFiles/stm32F103C8T6Test.elf.dir/Core/Startup/startup_stm32f103c8tx.s.obj
- .debug_line    0x00000c2e      0x5b0 CMakeFiles/stm32F103C8T6Test.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal.c.obj
- .debug_line    0x000011de      0x703 CMakeFiles/stm32F103C8T6Test.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_cortex.c.obj
- .debug_line    0x000018e1      0x62c CMakeFiles/stm32F103C8T6Test.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_gpio.c.obj
- .debug_line    0x00001f0d      0xd06 CMakeFiles/stm32F103C8T6Test.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc.c.obj
- .debug_line    0x00002c13     0x1928 CMakeFiles/stm32F103C8T6Test.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_usart.c.obj
+.debug_line     0x00000000     0x453d
+ .debug_line    0x00000000      0x4b5 CMakeFiles/stm32F103C8T6Test.elf.dir/Core/Src/main.c.obj
+ .debug_line    0x000004b5      0x2ff CMakeFiles/stm32F103C8T6Test.elf.dir/Core/Src/stm32f1xx_hal_msp.c.obj
+ .debug_line    0x000007b4      0x189 CMakeFiles/stm32F103C8T6Test.elf.dir/Core/Src/stm32f1xx_it.c.obj
+ .debug_line    0x0000093d      0x27b CMakeFiles/stm32F103C8T6Test.elf.dir/Core/Src/system_stm32f1xx.c.obj
+ .debug_line    0x00000bb8       0x78 CMakeFiles/stm32F103C8T6Test.elf.dir/Core/Startup/startup_stm32f103c8tx.s.obj
+ .debug_line    0x00000c30      0x5b0 CMakeFiles/stm32F103C8T6Test.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal.c.obj
+ .debug_line    0x000011e0      0x703 CMakeFiles/stm32F103C8T6Test.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_cortex.c.obj
+ .debug_line    0x000018e3      0x62c CMakeFiles/stm32F103C8T6Test.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_gpio.c.obj
+ .debug_line    0x00001f0f      0xd06 CMakeFiles/stm32F103C8T6Test.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc.c.obj
+ .debug_line    0x00002c15     0x1928 CMakeFiles/stm32F103C8T6Test.elf.dir/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_usart.c.obj
 
 .debug_str      0x00000000     0x1c32
  .debug_str     0x00000000     0x1c32 CMakeFiles/stm32F103C8T6Test.elf.dir/Core/Src/main.c.obj
