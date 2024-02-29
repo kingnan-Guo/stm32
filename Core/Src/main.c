@@ -18,7 +18,7 @@
 /* USER CODE END Header */
 /* Includes ------------------------------------------------------------------*/
 #include "main.h"
-#include "stdio.h"
+#include <stdio.h>
 
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
@@ -109,6 +109,7 @@ int main(void)
         HAL_GPIO_WritePin(GPIOC, GPIO_PIN_13, SET);
         HAL_Delay(500);
         //    printF("11");
+      printf("open close");
         //	  HAL_Delay(1000);
     /* USER CODE BEGIN 3 */
   }
@@ -121,7 +122,7 @@ int main(void)
   */
 void SystemClock_Config(void)
 {
-  RCC_OscInitTypeDef RCC_OscInit Struct = {0};
+  RCC_OscInitTypeDef RCC_OscInitStruct = {0};
   RCC_ClkInitTypeDef RCC_ClkInitStruct = {0};
 
   /** Initializes the RCC Oscillators according to the specified parameters
@@ -230,7 +231,12 @@ static void MX_GPIO_Init(void)
 }
 
 /* USER CODE BEGIN 4 */
-
+int fputc(int ch,FILE *f){
+    // 串口发送函数
+    //外设具柄 八位无符号数据指针 发送长度 延时时间
+    HAL_USART_Transmit(&husart3, (uint8_t *)ch, 1, 1000);
+    return ch;
+};
 /* USER CODE END 4 */
 
 /**
