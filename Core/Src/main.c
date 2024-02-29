@@ -18,6 +18,7 @@
 /* USER CODE END Header */
 /* Includes ------------------------------------------------------------------*/
 #include "main.h"
+#include "stdio.h"
 
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
@@ -97,15 +98,18 @@ int main(void)
   while (1)
   {
     /* USER CODE END WHILE */
-//	  HAL_GPIO_WritePin(LED_GPIO_Port, LED_Pin, SET);
-//	  HAL_Delay(1000);
-//	  HAL_GPIO_WritePin(LED_GPIO_Port, LED_Pin, RESET);
-//	  HAL_Delay(1000);
-	  HAL_GPIO_WritePin(LED_SYSTEM_GPIO_Port, GPIO_PIN_13, RESET);
-	  HAL_Delay(500);
-	  HAL_GPIO_WritePin(LED_SYSTEM_GPIO_Port, GPIO_PIN_13, SET);
-      HAL_Delay(500);
-//	  HAL_Delay(1000);
+        //	  HAL_GPIO_WritePin(LED_GPIO_Port, LED_Pin, SET);
+        //	  HAL_Delay(1000);
+        //	  HAL_GPIO_WritePin(LED_GPIO_Port, LED_Pin, RESET);
+        //	  HAL_Delay(1000);
+
+        //	  HAL_GPIO_WritePin(LED_SYSTEM_GPIO_Port, GPIO_PIN_13, RESET);
+        HAL_GPIO_WritePin(GPIOC, GPIO_PIN_13, GPIO_PIN_RESET);
+        HAL_Delay(500);
+        HAL_GPIO_WritePin(GPIOC, GPIO_PIN_13, SET);
+        HAL_Delay(500);
+        //    printF("11");
+        //	  HAL_Delay(1000);
     /* USER CODE BEGIN 3 */
   }
   /* USER CODE END 3 */
@@ -117,7 +121,7 @@ int main(void)
   */
 void SystemClock_Config(void)
 {
-  RCC_OscInitTypeDef RCC_OscInitStruct = {0};
+  RCC_OscInitTypeDef RCC_OscInit Struct = {0};
   RCC_ClkInitTypeDef RCC_ClkInitStruct = {0};
 
   /** Initializes the RCC Oscillators according to the specified parameters
