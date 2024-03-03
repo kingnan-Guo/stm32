@@ -5,7 +5,7 @@
 		<Option title="stm32F103C8T6Test"/>
 		<Option makefile_is_custom="1"/>
 		<Option compiler="gcc"/>
-		<Option virtualFolders="CMake Files\;CMake Files\..\;CMake Files\..\..\;CMake Files\..\..\..\;CMake Files\..\..\..\..\;CMake Files\..\..\..\..\..\;CMake Files\..\..\..\..\..\usr\;CMake Files\..\..\..\..\..\usr\local\;CMake Files\..\..\..\..\..\usr\local\vcpkg\;CMake Files\..\..\..\..\..\usr\local\vcpkg\scripts\;CMake Files\..\..\..\..\..\usr\local\vcpkg\scripts\buildsystems\;"/>
+		<Option virtualFolders="CMake Files\;"/>
 		<Build>
 			<Target title="all">
 				<Option working_dir="/Users/kingnan/Documents/github/stm32/cmake-build-debug"/>
@@ -130,6 +130,9 @@
 			<Option target="stm32F103C8T6Test.elf"/>
 		</Unit>
 		<Unit filename="/Users/kingnan/Documents/github/stm32/Drivers/.DS_Store">
+			<Option target="stm32F103C8T6Test.elf"/>
+		</Unit>
+		<Unit filename="/Users/kingnan/Documents/github/stm32/Drivers/CMSIS/.DS_Store">
 			<Option target="stm32F103C8T6Test.elf"/>
 		</Unit>
 		<Unit filename="/Users/kingnan/Documents/github/stm32/Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f103xb.h">
@@ -341,9 +344,6 @@
 		</Unit>
 		<Unit filename="/Users/kingnan/Documents/github/stm32/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>
-		</Unit>
-		<Unit filename="/Users/kingnan/Documents/github/stm32/../../../../../usr/local/vcpkg/scripts/buildsystems/vcpkg.cmake">
-			<Option virtualFolder="CMake Files\..\..\..\..\..\usr\local\vcpkg\scripts\buildsystems\"/>
 		</Unit>
 	</Project>
 </CodeBlocks_project_file>

@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/stm32F103C8T6Project.iml" filepath="$PROJECT_DIR$/.idea/stm32F103C8T6Project.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/stm32F103C8T6Test.iml" filepath="$PROJECT_DIR$/.idea/stm32F103C8T6Test.iml" />
     </modules>
   </component>

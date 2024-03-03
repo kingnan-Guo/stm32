@@ -3,7 +3,7 @@ set(CMAKE_HOST_SYSTEM_NAME "Darwin")
 set(CMAKE_HOST_SYSTEM_VERSION "22.1.0")
 set(CMAKE_HOST_SYSTEM_PROCESSOR "x86_64")
 
-include("/usr/local/vcpkg/scripts/buildsystems/vcpkg.cmake")
+
 
 set(CMAKE_SYSTEM "Generic-1")
 set(CMAKE_SYSTEM_NAME "Generic")

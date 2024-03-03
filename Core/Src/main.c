@@ -109,7 +109,7 @@ int main(void)
         HAL_GPIO_WritePin(GPIOC, GPIO_PIN_13, SET);
         HAL_Delay(500);
         //    printF("11");
-      printf("open close");
+//      printf("open close");
         //	  HAL_Delay(1000);
     /* USER CODE BEGIN 3 */
   }
