@@ -1,3 +1,4 @@
+## stm32 HALL 库 模板
 ## 第一个可以在使用 cubeide 可以烧录到  stm32C8T6 开发板上的程序
 可以执行  
 点亮led PC13 PA11
