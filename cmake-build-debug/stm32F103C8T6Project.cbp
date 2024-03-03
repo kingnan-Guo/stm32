@@ -263,6 +263,9 @@
 		<Unit filename="/Users/kingnan/Documents/github/stm32/User/stm32f10x_it.h">
 			<Option target="stm32F103C8T6Project.elf"/>
 		</Unit>
+		<Unit filename="/Users/kingnan/Documents/github/stm32/startup/startup_stm32f103c8tx.s">
+			<Option target="stm32F103C8T6Project.elf"/>
+		</Unit>
 		<Unit filename="/Users/kingnan/Documents/github/stm32/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>
 		</Unit>

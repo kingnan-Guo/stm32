@@ -64,6 +64,12 @@
 			{
 				"command" : 2,
 				"file" : 0,
+				"line" : 36,
+				"parent" : 0
+			},
+			{
+				"command" : 2,
+				"file" : 0,
 				"line" : 49,
 				"parent" : 0
 			},
@@ -118,41 +124,41 @@
 					"fragment" : "-fmessage-length=0"
 				},
 				{
-					"backtrace" : 7,
+					"backtrace" : 8,
 					"fragment" : "-Og"
 				},
 				{
-					"backtrace" : 7,
+					"backtrace" : 8,
 					"fragment" : "-g"
 				}
 			],
 			"defines" : 
 			[
 				{
-					"backtrace" : 8,
+					"backtrace" : 9,
 					"define" : "DEBUG"
 				},
 				{
-					"backtrace" : 8,
+					"backtrace" : 9,
 					"define" : "STM32F103xB"
 				},
 				{
-					"backtrace" : 8,
+					"backtrace" : 9,
 					"define" : "USE_HAL_DRIVER"
 				}
 			],
 			"includes" : 
 			[
 				{
-					"backtrace" : 9,
+					"backtrace" : 10,
 					"path" : "/Users/kingnan/Documents/github/stm32/Libraries/CMSIS"
 				},
 				{
-					"backtrace" : 9,
+					"backtrace" : 10,
 					"path" : "/Users/kingnan/Documents/github/stm32/Libraries/STM32F10x_StdPeriph_Driver/inc"
 				},
 				{
-					"backtrace" : 9,
+					"backtrace" : 10,
 					"path" : "/Users/kingnan/Documents/github/stm32/User"
 				}
 			],
@@ -194,6 +200,93 @@
 				50,
 				51,
 				54
+			]
+		},
+		{
+			"compileCommandFragments" : 
+			[
+				{
+					"fragment" : "-g"
+				},
+				{
+					"backtrace" : 5,
+					"fragment" : "-mcpu=cortex-m3"
+				},
+				{
+					"backtrace" : 5,
+					"fragment" : "-mthumb"
+				},
+				{
+					"backtrace" : 5,
+					"fragment" : "-mthumb-interwork"
+				},
+				{
+					"backtrace" : 6,
+					"fragment" : "-ffunction-sections"
+				},
+				{
+					"backtrace" : 6,
+					"fragment" : "-fdata-sections"
+				},
+				{
+					"backtrace" : 6,
+					"fragment" : "-fno-common"
+				},
+				{
+					"backtrace" : 6,
+					"fragment" : "-fmessage-length=0"
+				},
+				{
+					"backtrace" : 7,
+					"fragment" : "-x"
+				},
+				{
+					"backtrace" : 7,
+					"fragment" : "assembler-with-cpp"
+				},
+				{
+					"backtrace" : 8,
+					"fragment" : "-Og"
+				},
+				{
+					"backtrace" : 8,
+					"fragment" : "-g"
+				}
+			],
+			"defines" : 
+			[
+				{
+					"backtrace" : 9,
+					"define" : "DEBUG"
+				},
+				{
+					"backtrace" : 9,
+					"define" : "STM32F103xB"
+				},
+				{
+					"backtrace" : 9,
+					"define" : "USE_HAL_DRIVER"
+				}
+			],
+			"includes" : 
+			[
+				{
+					"backtrace" : 10,
+					"path" : "/Users/kingnan/Documents/github/stm32/Libraries/CMSIS"
+				},
+				{
+					"backtrace" : 10,
+					"path" : "/Users/kingnan/Documents/github/stm32/Libraries/STM32F10x_StdPeriph_Driver/inc"
+				},
+				{
+					"backtrace" : 10,
+					"path" : "/Users/kingnan/Documents/github/stm32/User"
+				}
+			],
+			"language" : "ASM",
+			"sourceIndexes" : 
+			[
+				56
 			]
 		}
 	],
@@ -324,7 +417,8 @@
 			"sourceIndexes" : 
 			[
 				52,
-				56
+				56,
+				57
 			]
 		}
 	],
@@ -636,6 +730,12 @@
 			"backtrace" : 1,
 			"path" : "User/stm32f10x_it.h",
 			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 1,
+			"path" : "startup/startup_stm32f103c8tx.s",
+			"sourceGroupIndex" : 2
 		},
 		{
 			"backtrace" : 1,

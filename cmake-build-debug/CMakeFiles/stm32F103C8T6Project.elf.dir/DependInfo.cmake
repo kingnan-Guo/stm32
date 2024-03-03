@@ -4,6 +4,26 @@ set(CMAKE_DEPENDS_IN_PROJECT_ONLY OFF)
 
 # The set of languages for which implicit dependencies are needed:
 set(CMAKE_DEPENDS_LANGUAGES
+  "ASM"
+  )
+# The set of files for implicit dependencies of each language:
+set(CMAKE_DEPENDS_CHECK_ASM
+  "/Users/kingnan/Documents/github/stm32/startup/startup_stm32f103c8tx.s" "/Users/kingnan/Documents/github/stm32/cmake-build-debug/CMakeFiles/stm32F103C8T6Project.elf.dir/startup/startup_stm32f103c8tx.s.obj"
+  )
+set(CMAKE_ASM_COMPILER_ID "GNU")
+
+# Preprocessor definitions for this target.
+set(CMAKE_TARGET_DEFINITIONS_ASM
+  "DEBUG"
+  "STM32F103xB"
+  "USE_HAL_DRIVER"
+  )
+
+# The include file search paths:
+set(CMAKE_ASM_TARGET_INCLUDE_PATH
+  "/Users/kingnan/Documents/github/stm32/Libraries/CMSIS"
+  "/Users/kingnan/Documents/github/stm32/Libraries/STM32F10x_StdPeriph_Driver/inc"
+  "/Users/kingnan/Documents/github/stm32/User"
   )
 
 # The set of dependency files which are needed:

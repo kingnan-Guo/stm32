@@ -777,6 +777,14 @@ User/stm32f10x_it.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/stm32F103C8T6Project.elf.dir/build.make CMakeFiles/stm32F103C8T6Project.elf.dir/User/stm32f10x_it.c.s
 .PHONY : User/stm32f10x_it.c.s
 
+startup/startup_stm32f103c8tx.obj: startup/startup_stm32f103c8tx.s.obj
+.PHONY : startup/startup_stm32f103c8tx.obj
+
+# target to build an object file
+startup/startup_stm32f103c8tx.s.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/stm32F103C8T6Project.elf.dir/build.make CMakeFiles/stm32F103C8T6Project.elf.dir/startup/startup_stm32f103c8tx.s.obj
+.PHONY : startup/startup_stm32f103c8tx.s.obj
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -867,6 +875,7 @@ help:
 	@echo "... User/stm32f10x_it.obj"
 	@echo "... User/stm32f10x_it.i"
 	@echo "... User/stm32f10x_it.s"
+	@echo "... startup/startup_stm32f103c8tx.obj"
 .PHONY : help
 
 
