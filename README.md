@@ -25,12 +25,18 @@
 
 配置 下载 && Debug 过程中
 ![GDB.png](readmeFile%2FGDB.png)
+
     openOCD 面板配置文件
-    /Users/kingnan/Documents/stm32Project/stm32F103C8T6Project/stlink.cfg
+    ./stlink.cfg
 
 ![OCD.png](readmeFile%2FOCD.png)
+
     /usr/local/bin/openocd
     -f interface/stlink-v2.cfg -f target/stm32f1x.cfg
    
 
 
+svd 文件加载
+ 路径 ./stm32_Files/STM32F1_svd_V1.2/STM32F103.svd
+
+![svd文件加载.png](readmeFile%2Fsvd%E6%96%87%E4%BB%B6%E5%8A%A0%E8%BD%BD.png)

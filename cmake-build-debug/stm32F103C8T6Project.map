@@ -711,8 +711,6 @@ Discarded input sections
                 0x00000000        0xe CMakeFiles/stm32F103C8T6Project.elf.dir/Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_gpio.c.obj
  .text.GPIO_ReadOutputData
                 0x00000000        0x6 CMakeFiles/stm32F103C8T6Project.elf.dir/Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_gpio.c.obj
- .text.GPIO_SetBits
-                0x00000000        0x4 CMakeFiles/stm32F103C8T6Project.elf.dir/Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_gpio.c.obj
  .text.GPIO_WriteBit
                 0x00000000        0xa CMakeFiles/stm32F103C8T6Project.elf.dir/Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_gpio.c.obj
  .text.GPIO_Write
@@ -1757,7 +1755,7 @@ LOAD /Applications/ArmGNUToolchain/13.2.Rel1/arm-none-eabi/bin/../lib/gcc/arm-no
                 0x08000000                g_pfnVectors
                 0x0800010c                        . = ALIGN (0x4)
 
-.text           0x0800010c      0x448
+.text           0x0800010c      0x454
                 0x0800010c                        . = ALIGN (0x4)
  *(.text)
  *(.text*)
@@ -1779,187 +1777,190 @@ LOAD /Applications/ArmGNUToolchain/13.2.Rel1/arm-none-eabi/bin/../lib/gcc/arm-no
  .text.GPIO_Init
                 0x080002b4       0xb0 CMakeFiles/stm32F103C8T6Project.elf.dir/Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_gpio.c.obj
                 0x080002b4                GPIO_Init
- .text.GPIO_ResetBits
+ .text.GPIO_SetBits
                 0x08000364        0x4 CMakeFiles/stm32F103C8T6Project.elf.dir/Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_gpio.c.obj
-                0x08000364                GPIO_ResetBits
+                0x08000364                GPIO_SetBits
+ .text.GPIO_ResetBits
+                0x08000368        0x4 CMakeFiles/stm32F103C8T6Project.elf.dir/Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_gpio.c.obj
+                0x08000368                GPIO_ResetBits
  .text.RCC_APB2PeriphClockCmd
-                0x08000368       0x1c CMakeFiles/stm32F103C8T6Project.elf.dir/Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_rcc.c.obj
-                0x08000368                RCC_APB2PeriphClockCmd
- .text.main     0x08000384       0x38 CMakeFiles/stm32F103C8T6Project.elf.dir/User/main.c.obj
-                0x08000384                main
+                0x0800036c       0x1c CMakeFiles/stm32F103C8T6Project.elf.dir/Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_rcc.c.obj
+                0x0800036c                RCC_APB2PeriphClockCmd
+ .text.main     0x08000388       0x40 CMakeFiles/stm32F103C8T6Project.elf.dir/User/main.c.obj
+                0x08000388                main
  .text.NMI_Handler
-                0x080003bc        0x2 CMakeFiles/stm32F103C8T6Project.elf.dir/User/stm32f10x_it.c.obj
-                0x080003bc                NMI_Handler
- .text.HardFault_Handler
-                0x080003be        0x2 CMakeFiles/stm32F103C8T6Project.elf.dir/User/stm32f10x_it.c.obj
-                0x080003be                HardFault_Handler
- .text.MemManage_Handler
-                0x080003c0        0x2 CMakeFiles/stm32F103C8T6Project.elf.dir/User/stm32f10x_it.c.obj
-                0x080003c0                MemManage_Handler
- .text.BusFault_Handler
-                0x080003c2        0x2 CMakeFiles/stm32F103C8T6Project.elf.dir/User/stm32f10x_it.c.obj
-                0x080003c2                BusFault_Handler
- .text.UsageFault_Handler
-                0x080003c4        0x2 CMakeFiles/stm32F103C8T6Project.elf.dir/User/stm32f10x_it.c.obj
-                0x080003c4                UsageFault_Handler
- .text.SVC_Handler
-                0x080003c6        0x2 CMakeFiles/stm32F103C8T6Project.elf.dir/User/stm32f10x_it.c.obj
-                0x080003c6                SVC_Handler
- .text.DebugMon_Handler
                 0x080003c8        0x2 CMakeFiles/stm32F103C8T6Project.elf.dir/User/stm32f10x_it.c.obj
-                0x080003c8                DebugMon_Handler
- .text.PendSV_Handler
+                0x080003c8                NMI_Handler
+ .text.HardFault_Handler
                 0x080003ca        0x2 CMakeFiles/stm32F103C8T6Project.elf.dir/User/stm32f10x_it.c.obj
-                0x080003ca                PendSV_Handler
- .text.SysTick_Handler
+                0x080003ca                HardFault_Handler
+ .text.MemManage_Handler
                 0x080003cc        0x2 CMakeFiles/stm32F103C8T6Project.elf.dir/User/stm32f10x_it.c.obj
-                0x080003cc                SysTick_Handler
- *fill*         0x080003ce        0x2 
+                0x080003cc                MemManage_Handler
+ .text.BusFault_Handler
+                0x080003ce        0x2 CMakeFiles/stm32F103C8T6Project.elf.dir/User/stm32f10x_it.c.obj
+                0x080003ce                BusFault_Handler
+ .text.UsageFault_Handler
+                0x080003d0        0x2 CMakeFiles/stm32F103C8T6Project.elf.dir/User/stm32f10x_it.c.obj
+                0x080003d0                UsageFault_Handler
+ .text.SVC_Handler
+                0x080003d2        0x2 CMakeFiles/stm32F103C8T6Project.elf.dir/User/stm32f10x_it.c.obj
+                0x080003d2                SVC_Handler
+ .text.DebugMon_Handler
+                0x080003d4        0x2 CMakeFiles/stm32F103C8T6Project.elf.dir/User/stm32f10x_it.c.obj
+                0x080003d4                DebugMon_Handler
+ .text.PendSV_Handler
+                0x080003d6        0x2 CMakeFiles/stm32F103C8T6Project.elf.dir/User/stm32f10x_it.c.obj
+                0x080003d6                PendSV_Handler
+ .text.SysTick_Handler
+                0x080003d8        0x2 CMakeFiles/stm32F103C8T6Project.elf.dir/User/stm32f10x_it.c.obj
+                0x080003d8                SysTick_Handler
+ *fill*         0x080003da        0x2 
  .text.Reset_Handler
-                0x080003d0       0x48 CMakeFiles/stm32F103C8T6Project.elf.dir/startup/startup_stm32f103c8tx.s.obj
-                0x080003d0                Reset_Handler
+                0x080003dc       0x48 CMakeFiles/stm32F103C8T6Project.elf.dir/startup/startup_stm32f103c8tx.s.obj
+                0x080003dc                Reset_Handler
  .text.Default_Handler
-                0x08000418        0x2 CMakeFiles/stm32F103C8T6Project.elf.dir/startup/startup_stm32f103c8tx.s.obj
-                0x08000418                USBWakeUp_IRQHandler
-                0x08000418                EXTI2_IRQHandler
-                0x08000418                TIM1_CC_IRQHandler
-                0x08000418                PVD_IRQHandler
-                0x08000418                EXTI3_IRQHandler
-                0x08000418                EXTI0_IRQHandler
-                0x08000418                I2C2_EV_IRQHandler
-                0x08000418                ADC1_2_IRQHandler
-                0x08000418                SPI1_IRQHandler
-                0x08000418                TAMPER_IRQHandler
-                0x08000418                DMA1_Channel4_IRQHandler
-                0x08000418                USART3_IRQHandler
-                0x08000418                RTC_IRQHandler
-                0x08000418                DMA1_Channel7_IRQHandler
-                0x08000418                CAN1_RX1_IRQHandler
-                0x08000418                TIM4_IRQHandler
-                0x08000418                I2C1_EV_IRQHandler
-                0x08000418                DMA1_Channel6_IRQHandler
-                0x08000418                TIM3_IRQHandler
-                0x08000418                RCC_IRQHandler
-                0x08000418                TIM1_TRG_COM_IRQHandler
-                0x08000418                DMA1_Channel1_IRQHandler
-                0x08000418                Default_Handler
-                0x08000418                EXTI15_10_IRQHandler
-                0x08000418                EXTI9_5_IRQHandler
-                0x08000418                SPI2_IRQHandler
-                0x08000418                DMA1_Channel5_IRQHandler
-                0x08000418                EXTI4_IRQHandler
-                0x08000418                USB_LP_CAN1_RX0_IRQHandler
-                0x08000418                USB_HP_CAN1_TX_IRQHandler
-                0x08000418                DMA1_Channel3_IRQHandler
-                0x08000418                TIM1_UP_IRQHandler
-                0x08000418                WWDG_IRQHandler
-                0x08000418                TIM2_IRQHandler
-                0x08000418                TIM1_BRK_IRQHandler
-                0x08000418                EXTI1_IRQHandler
-                0x08000418                USART2_IRQHandler
-                0x08000418                I2C2_ER_IRQHandler
-                0x08000418                DMA1_Channel2_IRQHandler
-                0x08000418                CAN1_SCE_IRQHandler
-                0x08000418                FLASH_IRQHandler
-                0x08000418                USART1_IRQHandler
-                0x08000418                I2C1_ER_IRQHandler
-                0x08000418                RTC_Alarm_IRQHandler
- *fill*         0x0800041a        0x2 
+                0x08000424        0x2 CMakeFiles/stm32F103C8T6Project.elf.dir/startup/startup_stm32f103c8tx.s.obj
+                0x08000424                USBWakeUp_IRQHandler
+                0x08000424                EXTI2_IRQHandler
+                0x08000424                TIM1_CC_IRQHandler
+                0x08000424                PVD_IRQHandler
+                0x08000424                EXTI3_IRQHandler
+                0x08000424                EXTI0_IRQHandler
+                0x08000424                I2C2_EV_IRQHandler
+                0x08000424                ADC1_2_IRQHandler
+                0x08000424                SPI1_IRQHandler
+                0x08000424                TAMPER_IRQHandler
+                0x08000424                DMA1_Channel4_IRQHandler
+                0x08000424                USART3_IRQHandler
+                0x08000424                RTC_IRQHandler
+                0x08000424                DMA1_Channel7_IRQHandler
+                0x08000424                CAN1_RX1_IRQHandler
+                0x08000424                TIM4_IRQHandler
+                0x08000424                I2C1_EV_IRQHandler
+                0x08000424                DMA1_Channel6_IRQHandler
+                0x08000424                TIM3_IRQHandler
+                0x08000424                RCC_IRQHandler
+                0x08000424                TIM1_TRG_COM_IRQHandler
+                0x08000424                DMA1_Channel1_IRQHandler
+                0x08000424                Default_Handler
+                0x08000424                EXTI15_10_IRQHandler
+                0x08000424                EXTI9_5_IRQHandler
+                0x08000424                SPI2_IRQHandler
+                0x08000424                DMA1_Channel5_IRQHandler
+                0x08000424                EXTI4_IRQHandler
+                0x08000424                USB_LP_CAN1_RX0_IRQHandler
+                0x08000424                USB_HP_CAN1_TX_IRQHandler
+                0x08000424                DMA1_Channel3_IRQHandler
+                0x08000424                TIM1_UP_IRQHandler
+                0x08000424                WWDG_IRQHandler
+                0x08000424                TIM2_IRQHandler
+                0x08000424                TIM1_BRK_IRQHandler
+                0x08000424                EXTI1_IRQHandler
+                0x08000424                USART2_IRQHandler
+                0x08000424                I2C2_ER_IRQHandler
+                0x08000424                DMA1_Channel2_IRQHandler
+                0x08000424                CAN1_SCE_IRQHandler
+                0x08000424                FLASH_IRQHandler
+                0x08000424                USART1_IRQHandler
+                0x08000424                I2C1_ER_IRQHandler
+                0x08000424                RTC_Alarm_IRQHandler
+ *fill*         0x08000426        0x2 
  .text.__libc_init_array
-                0x0800041c       0x50 /Applications/ArmGNUToolchain/13.2.Rel1/arm-none-eabi/bin/../lib/gcc/arm-none-eabi/13.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libg.a(libc_a-init.o)
-                0x0800041c                __libc_init_array
+                0x08000428       0x50 /Applications/ArmGNUToolchain/13.2.Rel1/arm-none-eabi/bin/../lib/gcc/arm-none-eabi/13.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libg.a(libc_a-init.o)
+                0x08000428                __libc_init_array
  .text.__retarget_lock_acquire_recursive
-                0x0800046c        0x4 /Applications/ArmGNUToolchain/13.2.Rel1/arm-none-eabi/bin/../lib/gcc/arm-none-eabi/13.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libg.a(libc_a-lock.o)
-                0x0800046c                __retarget_lock_acquire_recursive
+                0x08000478        0x4 /Applications/ArmGNUToolchain/13.2.Rel1/arm-none-eabi/bin/../lib/gcc/arm-none-eabi/13.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libg.a(libc_a-lock.o)
+                0x08000478                __retarget_lock_acquire_recursive
  .text.__retarget_lock_release_recursive
-                0x08000470        0x4 /Applications/ArmGNUToolchain/13.2.Rel1/arm-none-eabi/bin/../lib/gcc/arm-none-eabi/13.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libg.a(libc_a-lock.o)
-                0x08000470                __retarget_lock_release_recursive
+                0x0800047c        0x4 /Applications/ArmGNUToolchain/13.2.Rel1/arm-none-eabi/bin/../lib/gcc/arm-none-eabi/13.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libg.a(libc_a-lock.o)
+                0x0800047c                __retarget_lock_release_recursive
  .text.startup.register_fini
-                0x08000474       0x14 /Applications/ArmGNUToolchain/13.2.Rel1/arm-none-eabi/bin/../lib/gcc/arm-none-eabi/13.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libg.a(libc_a-__call_atexit.o)
- .text.atexit   0x08000488        0xc /Applications/ArmGNUToolchain/13.2.Rel1/arm-none-eabi/bin/../lib/gcc/arm-none-eabi/13.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libg.a(libc_a-atexit.o)
-                0x08000488                atexit
+                0x08000480       0x14 /Applications/ArmGNUToolchain/13.2.Rel1/arm-none-eabi/bin/../lib/gcc/arm-none-eabi/13.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libg.a(libc_a-__call_atexit.o)
+ .text.atexit   0x08000494        0xc /Applications/ArmGNUToolchain/13.2.Rel1/arm-none-eabi/bin/../lib/gcc/arm-none-eabi/13.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libg.a(libc_a-atexit.o)
+                0x08000494                atexit
  .text.__libc_fini_array
-                0x08000494       0x28 /Applications/ArmGNUToolchain/13.2.Rel1/arm-none-eabi/bin/../lib/gcc/arm-none-eabi/13.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libg.a(libc_a-fini.o)
-                0x08000494                __libc_fini_array
+                0x080004a0       0x28 /Applications/ArmGNUToolchain/13.2.Rel1/arm-none-eabi/bin/../lib/gcc/arm-none-eabi/13.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libg.a(libc_a-fini.o)
+                0x080004a0                __libc_fini_array
  .text.__register_exitproc
-                0x080004bc       0x80 /Applications/ArmGNUToolchain/13.2.Rel1/arm-none-eabi/bin/../lib/gcc/arm-none-eabi/13.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libg.a(libc_a-__atexit.o)
-                0x080004bc                __register_exitproc
+                0x080004c8       0x80 /Applications/ArmGNUToolchain/13.2.Rel1/arm-none-eabi/bin/../lib/gcc/arm-none-eabi/13.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libg.a(libc_a-__atexit.o)
+                0x080004c8                __register_exitproc
  *(.glue_7)
- .glue_7        0x0800053c        0x0 linker stubs
+ .glue_7        0x08000548        0x0 linker stubs
  *(.glue_7t)
- .glue_7t       0x0800053c        0x0 linker stubs
+ .glue_7t       0x08000548        0x0 linker stubs
  *(.eh_frame)
- .eh_frame      0x0800053c        0x0 /Applications/ArmGNUToolchain/13.2.Rel1/arm-none-eabi/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v7-m/nofp/crtbegin.o
+ .eh_frame      0x08000548        0x0 /Applications/ArmGNUToolchain/13.2.Rel1/arm-none-eabi/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v7-m/nofp/crtbegin.o
  *(.init)
- .init          0x0800053c        0x4 /Applications/ArmGNUToolchain/13.2.Rel1/arm-none-eabi/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v7-m/nofp/crti.o
-                0x0800053c                _init
- .init          0x08000540        0x8 /Applications/ArmGNUToolchain/13.2.Rel1/arm-none-eabi/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v7-m/nofp/crtn.o
+ .init          0x08000548        0x4 /Applications/ArmGNUToolchain/13.2.Rel1/arm-none-eabi/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v7-m/nofp/crti.o
+                0x08000548                _init
+ .init          0x0800054c        0x8 /Applications/ArmGNUToolchain/13.2.Rel1/arm-none-eabi/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v7-m/nofp/crtn.o
  *(.fini)
- .fini          0x08000548        0x4 /Applications/ArmGNUToolchain/13.2.Rel1/arm-none-eabi/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v7-m/nofp/crti.o
-                0x08000548                _fini
- .fini          0x0800054c        0x8 /Applications/ArmGNUToolchain/13.2.Rel1/arm-none-eabi/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v7-m/nofp/crtn.o
-                0x08000554                        . = ALIGN (0x4)
-                0x08000554                        _etext = .
+ .fini          0x08000554        0x4 /Applications/ArmGNUToolchain/13.2.Rel1/arm-none-eabi/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v7-m/nofp/crti.o
+                0x08000554                _fini
+ .fini          0x08000558        0x8 /Applications/ArmGNUToolchain/13.2.Rel1/arm-none-eabi/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v7-m/nofp/crtn.o
+                0x08000560                        . = ALIGN (0x4)
+                0x08000560                        _etext = .
 
-.vfp11_veneer   0x08000554        0x0
- .vfp11_veneer  0x08000554        0x0 linker stubs
+.vfp11_veneer   0x08000560        0x0
+ .vfp11_veneer  0x08000560        0x0 linker stubs
 
-.v4_bx          0x08000554        0x0
- .v4_bx         0x08000554        0x0 linker stubs
+.v4_bx          0x08000560        0x0
+ .v4_bx         0x08000560        0x0 linker stubs
 
-.iplt           0x08000554        0x0
- .iplt          0x08000554        0x0 /Applications/ArmGNUToolchain/13.2.Rel1/arm-none-eabi/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v7-m/nofp/crtbegin.o
+.iplt           0x08000560        0x0
+ .iplt          0x08000560        0x0 /Applications/ArmGNUToolchain/13.2.Rel1/arm-none-eabi/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v7-m/nofp/crtbegin.o
 
-.rel.dyn        0x08000554        0x0
- .rel.iplt      0x08000554        0x0 /Applications/ArmGNUToolchain/13.2.Rel1/arm-none-eabi/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v7-m/nofp/crtbegin.o
+.rel.dyn        0x08000560        0x0
+ .rel.iplt      0x08000560        0x0 /Applications/ArmGNUToolchain/13.2.Rel1/arm-none-eabi/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v7-m/nofp/crtbegin.o
 
-.rodata         0x08000554        0x0
-                0x08000554                        . = ALIGN (0x4)
+.rodata         0x08000560        0x0
+                0x08000560                        . = ALIGN (0x4)
  *(.rodata)
  *(.rodata*)
-                0x08000554                        . = ALIGN (0x4)
+                0x08000560                        . = ALIGN (0x4)
 
-.ARM.extab      0x08000554        0x0
-                0x08000554                        . = ALIGN (0x4)
+.ARM.extab      0x08000560        0x0
+                0x08000560                        . = ALIGN (0x4)
  *(.ARM.extab* .gnu.linkonce.armextab.*)
-                0x08000554                        . = ALIGN (0x4)
+                0x08000560                        . = ALIGN (0x4)
 
-.ARM            0x08000554        0x0
-                0x08000554                        . = ALIGN (0x4)
-                0x08000554                        __exidx_start = .
+.ARM            0x08000560        0x0
+                0x08000560                        . = ALIGN (0x4)
+                0x08000560                        __exidx_start = .
  *(.ARM.exidx*)
-                0x08000554                        __exidx_end = .
-                0x08000554                        . = ALIGN (0x4)
+                0x08000560                        __exidx_end = .
+                0x08000560                        . = ALIGN (0x4)
 
-.preinit_array  0x08000554        0x0
-                0x08000554                        . = ALIGN (0x4)
-                0x08000554                        PROVIDE (__preinit_array_start = .)
+.preinit_array  0x08000560        0x0
+                0x08000560                        . = ALIGN (0x4)
+                0x08000560                        PROVIDE (__preinit_array_start = .)
  *(.preinit_array*)
-                0x08000554                        PROVIDE (__preinit_array_end = .)
-                0x08000554                        . = ALIGN (0x4)
+                0x08000560                        PROVIDE (__preinit_array_end = .)
+                0x08000560                        . = ALIGN (0x4)
 
-.init_array     0x08000554        0x8
-                0x08000554                        . = ALIGN (0x4)
-                0x08000554                        PROVIDE (__init_array_start = .)
+.init_array     0x08000560        0x8
+                0x08000560                        . = ALIGN (0x4)
+                0x08000560                        PROVIDE (__init_array_start = .)
  *(SORT_BY_NAME(.init_array.*))
  .init_array.00000
-                0x08000554        0x4 /Applications/ArmGNUToolchain/13.2.Rel1/arm-none-eabi/bin/../lib/gcc/arm-none-eabi/13.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libg.a(libc_a-__call_atexit.o)
+                0x08000560        0x4 /Applications/ArmGNUToolchain/13.2.Rel1/arm-none-eabi/bin/../lib/gcc/arm-none-eabi/13.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libg.a(libc_a-__call_atexit.o)
  *(.init_array*)
- .init_array    0x08000558        0x4 /Applications/ArmGNUToolchain/13.2.Rel1/arm-none-eabi/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v7-m/nofp/crtbegin.o
-                0x0800055c                        PROVIDE (__init_array_end = .)
-                0x0800055c                        . = ALIGN (0x4)
+ .init_array    0x08000564        0x4 /Applications/ArmGNUToolchain/13.2.Rel1/arm-none-eabi/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v7-m/nofp/crtbegin.o
+                0x08000568                        PROVIDE (__init_array_end = .)
+                0x08000568                        . = ALIGN (0x4)
 
-.fini_array     0x0800055c        0x4
-                0x0800055c                        . = ALIGN (0x4)
-                0x0800055c                        PROVIDE (__fini_array_start = .)
+.fini_array     0x08000568        0x4
+                0x08000568                        . = ALIGN (0x4)
+                0x08000568                        PROVIDE (__fini_array_start = .)
  *(SORT_BY_NAME(.fini_array.*))
  *(.fini_array*)
- .fini_array    0x0800055c        0x4 /Applications/ArmGNUToolchain/13.2.Rel1/arm-none-eabi/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v7-m/nofp/crtbegin.o
-                0x08000560                        PROVIDE (__fini_array_end = .)
-                0x08000560                        . = ALIGN (0x4)
-                0x08000560                        _sidata = LOADADDR (.data)
+ .fini_array    0x08000568        0x4 /Applications/ArmGNUToolchain/13.2.Rel1/arm-none-eabi/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v7-m/nofp/crtbegin.o
+                0x0800056c                        PROVIDE (__fini_array_end = .)
+                0x0800056c                        . = ALIGN (0x4)
+                0x0800056c                        _sidata = LOADADDR (.data)
 
-.data           0x20000000        0x4 load address 0x08000560
+.data           0x20000000        0x4 load address 0x0800056c
                 0x20000000                        . = ALIGN (0x4)
                 0x20000000                        _sdata = .
  *(.data)
@@ -1973,17 +1974,17 @@ LOAD /Applications/ArmGNUToolchain/13.2.Rel1/arm-none-eabi/bin/../lib/gcc/arm-no
                 0x20000004                        _edata = .
 
 .tm_clone_table
-                0x20000004        0x0 load address 0x08000564
+                0x20000004        0x0 load address 0x08000570
  .tm_clone_table
                 0x20000004        0x0 /Applications/ArmGNUToolchain/13.2.Rel1/arm-none-eabi/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v7-m/nofp/crtbegin.o
  .tm_clone_table
                 0x20000004        0x0 /Applications/ArmGNUToolchain/13.2.Rel1/arm-none-eabi/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v7-m/nofp/crtend.o
 
-.igot.plt       0x20000004        0x0 load address 0x08000564
+.igot.plt       0x20000004        0x0 load address 0x08000570
  .igot.plt      0x20000004        0x0 /Applications/ArmGNUToolchain/13.2.Rel1/arm-none-eabi/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v7-m/nofp/crtbegin.o
                 0x20000004                        . = ALIGN (0x4)
 
-.bss            0x20000004      0x1b4 load address 0x08000564
+.bss            0x20000004      0x1b4 load address 0x08000570
                 0x20000004                        _sbss = .
                 0x20000004                        __bss_start__ = _sbss
  *(.bss)
@@ -2007,7 +2008,7 @@ LOAD /Applications/ArmGNUToolchain/13.2.Rel1/arm-none-eabi/bin/../lib/gcc/arm-no
                 0x200001b8                        __bss_end__ = _ebss
 
 ._user_heap_stack
-                0x200001b8      0x600 load address 0x08000564
+                0x200001b8      0x600 load address 0x08000570
                 0x200001b8                        . = ALIGN (0x8)
                 [!provide]                        PROVIDE (end = .)
                 [!provide]                        PROVIDE (_end = .)
@@ -2063,13 +2064,13 @@ LOAD /Applications/ArmGNUToolchain/13.2.Rel1/arm-none-eabi/bin/../lib/gcc/arm-no
 LOAD /Applications/ArmGNUToolchain/13.2.Rel1/arm-none-eabi/bin/../lib/gcc/arm-none-eabi/13.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libm.a
 LOAD /Applications/ArmGNUToolchain/13.2.Rel1/arm-none-eabi/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v7-m/nofp/libgcc.a
 
-.debug_info     0x00000000     0x1986
+.debug_info     0x00000000     0x19b7
  .debug_info    0x00000000      0x439 CMakeFiles/stm32F103C8T6Project.elf.dir/Libraries/CMSIS/system_stm32f10x.c.obj
  .debug_info    0x00000439      0x8be CMakeFiles/stm32F103C8T6Project.elf.dir/Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_gpio.c.obj
  .debug_info    0x00000cf7      0x8bc CMakeFiles/stm32F103C8T6Project.elf.dir/Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_rcc.c.obj
- .debug_info    0x000015b3      0x2a6 CMakeFiles/stm32F103C8T6Project.elf.dir/User/main.c.obj
- .debug_info    0x00001859       0xfd CMakeFiles/stm32F103C8T6Project.elf.dir/User/stm32f10x_it.c.obj
- .debug_info    0x00001956       0x30 CMakeFiles/stm32F103C8T6Project.elf.dir/startup/startup_stm32f103c8tx.s.obj
+ .debug_info    0x000015b3      0x2d7 CMakeFiles/stm32F103C8T6Project.elf.dir/User/main.c.obj
+ .debug_info    0x0000188a       0xfd CMakeFiles/stm32F103C8T6Project.elf.dir/User/stm32f10x_it.c.obj
+ .debug_info    0x00001987       0x30 CMakeFiles/stm32F103C8T6Project.elf.dir/startup/startup_stm32f103c8tx.s.obj
 
 .debug_abbrev   0x00000000      0x7df
  .debug_abbrev  0x00000000      0x1c7 CMakeFiles/stm32F103C8T6Project.elf.dir/Libraries/CMSIS/system_stm32f10x.c.obj
@@ -2117,20 +2118,20 @@ LOAD /Applications/ArmGNUToolchain/13.2.Rel1/arm-none-eabi/bin/../lib/gcc/arm-no
  .debug_rnglists
                 0x000001c6       0x19 CMakeFiles/stm32F103C8T6Project.elf.dir/startup/startup_stm32f103c8tx.s.obj
 
-.debug_line     0x00000000     0x17ac
+.debug_line     0x00000000     0x17ad
  .debug_line    0x00000000      0x3e1 CMakeFiles/stm32F103C8T6Project.elf.dir/Libraries/CMSIS/system_stm32f10x.c.obj
  .debug_line    0x000003e1      0x723 CMakeFiles/stm32F103C8T6Project.elf.dir/Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_gpio.c.obj
  .debug_line    0x00000b04      0x90e CMakeFiles/stm32F103C8T6Project.elf.dir/Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_rcc.c.obj
- .debug_line    0x00001412      0x207 CMakeFiles/stm32F103C8T6Project.elf.dir/User/main.c.obj
- .debug_line    0x00001619      0x11b CMakeFiles/stm32F103C8T6Project.elf.dir/User/stm32f10x_it.c.obj
- .debug_line    0x00001734       0x78 CMakeFiles/stm32F103C8T6Project.elf.dir/startup/startup_stm32f103c8tx.s.obj
+ .debug_line    0x00001412      0x208 CMakeFiles/stm32F103C8T6Project.elf.dir/User/main.c.obj
+ .debug_line    0x0000161a      0x11b CMakeFiles/stm32F103C8T6Project.elf.dir/User/stm32f10x_it.c.obj
+ .debug_line    0x00001735       0x78 CMakeFiles/stm32F103C8T6Project.elf.dir/startup/startup_stm32f103c8tx.s.obj
 
 .debug_str      0x00000000      0xc2d
  .debug_str     0x00000000      0xc2d CMakeFiles/stm32F103C8T6Project.elf.dir/Libraries/CMSIS/system_stm32f10x.c.obj
                                 0x33b (size before relaxing)
  .debug_str     0x00000c2d      0x5a4 CMakeFiles/stm32F103C8T6Project.elf.dir/Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_gpio.c.obj
  .debug_str     0x00000c2d      0x68e CMakeFiles/stm32F103C8T6Project.elf.dir/Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_rcc.c.obj
- .debug_str     0x00000c2d      0x354 CMakeFiles/stm32F103C8T6Project.elf.dir/User/main.c.obj
+ .debug_str     0x00000c2d      0x361 CMakeFiles/stm32F103C8T6Project.elf.dir/User/main.c.obj
  .debug_str     0x00000c2d      0x240 CMakeFiles/stm32F103C8T6Project.elf.dir/User/stm32f10x_it.c.obj
  .debug_str     0x00000c2d       0x9a CMakeFiles/stm32F103C8T6Project.elf.dir/startup/startup_stm32f103c8tx.s.obj
 

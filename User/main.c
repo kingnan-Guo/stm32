@@ -15,7 +15,7 @@ int main(void) {
 
         GPIO_Init(GPIOC, &GPIO_InitStructure);
         // 高电平设置
-//        GPIO_SetBits(GPIOC, GPIO_Pin_13);
+        GPIO_SetBits(GPIOC, GPIO_Pin_13);
 
         // 关闭端口
         GPIO_ResetBits(GPIOC, GPIO_Pin_13);
