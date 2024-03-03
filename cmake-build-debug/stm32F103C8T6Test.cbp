@@ -96,9 +96,6 @@
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="/Users/kingnan/Documents/github/stm32/Core/.DS_Store">
-			<Option target="stm32F103C8T6Test.elf"/>
-		</Unit>
 		<Unit filename="/Users/kingnan/Documents/github/stm32/Core/Inc/main.h">
 			<Option target="stm32F103C8T6Test.elf"/>
 		</Unit>
@@ -127,12 +124,6 @@
 			<Option target="stm32F103C8T6Test.elf"/>
 		</Unit>
 		<Unit filename="/Users/kingnan/Documents/github/stm32/Core/Startup/startup_stm32f103c8tx.s">
-			<Option target="stm32F103C8T6Test.elf"/>
-		</Unit>
-		<Unit filename="/Users/kingnan/Documents/github/stm32/Drivers/.DS_Store">
-			<Option target="stm32F103C8T6Test.elf"/>
-		</Unit>
-		<Unit filename="/Users/kingnan/Documents/github/stm32/Drivers/CMSIS/.DS_Store">
 			<Option target="stm32F103C8T6Test.elf"/>
 		</Unit>
 		<Unit filename="/Users/kingnan/Documents/github/stm32/Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f103xb.h">
