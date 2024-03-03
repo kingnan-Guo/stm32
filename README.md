@@ -23,17 +23,14 @@
 
     
 
-配置 下载 && Debug 过程中 
-    
+配置 下载 && Debug 过程中
+![GDB.png](readmeFile%2FGDB.png)
     openOCD 面板配置文件
     /Users/kingnan/Documents/stm32Project/stm32F103C8T6Project/stlink.cfg
-    ![GDB.png](readmeFile%2FGDB.png)
 
-
-
-
+![OCD.png](readmeFile%2FOCD.png)
     /usr/local/bin/openocd
     -f interface/stlink-v2.cfg -f target/stm32f1x.cfg
-    ![OCD.png](readmeFile%2FOCD.png)
+   
 
 
