@@ -1,25 +1,25 @@
 #include "stm32f10x.h" 
 #include "delay.h"
+#include "LED.h"
+#include "key.h"
+
+uint8_t KeyNumber;
 
 int main(void) {
+    LED_Init();
+    Key_Init();
 	while(1) {
 		// project begin
 
-        // gpioc 的外设时钟配置完成
-        RCC_APB2PeriphClockCmd(RCC_APB2Periph_GPIOC, ENABLE);
+        KeyNumber = Key_GetNum();
+        if(KeyNumber == 1){
+            LED1_Turn();
+        }
 
-        // 配置端口模式
-        GPIO_InitTypeDef GPIO_InitStructure;
-        GPIO_InitStructure.GPIO_Pin = GPIO_Pin_13;// 端口
-        GPIO_InitStructure.GPIO_Mode = GPIO_Mode_Out_PP;// 模式 通用推挽输出
-        GPIO_InitStructure.GPIO_Speed = GPIO_Speed_50MHz;// 速度
+//        LED1_ON();
+//        Delay_ms(500);
+//        LED1_OFF();
+//        Delay_ms(500);
 
-        GPIO_Init(GPIOC, &GPIO_InitStructure);
-        // 高电平设置
-        GPIO_SetBits(GPIOC, GPIO_Pin_13);
-        Delay_ms(200);
-        // 关闭端口
-        GPIO_ResetBits(GPIOC, GPIO_Pin_13);
-        Delay_ms(200);
     }
 }

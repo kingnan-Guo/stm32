@@ -777,6 +777,30 @@ User/stm32f10x_it.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/stm32F103C8T6Project.elf.dir/build.make CMakeFiles/stm32F103C8T6Project.elf.dir/User/stm32f10x_it.c.s
 .PHONY : User/stm32f10x_it.c.s
 
+components/LED/LED.obj: components/LED/LED.c.obj
+.PHONY : components/LED/LED.obj
+
+# target to build an object file
+components/LED/LED.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/stm32F103C8T6Project.elf.dir/build.make CMakeFiles/stm32F103C8T6Project.elf.dir/components/LED/LED.c.obj
+.PHONY : components/LED/LED.c.obj
+
+components/LED/LED.i: components/LED/LED.c.i
+.PHONY : components/LED/LED.i
+
+# target to preprocess a source file
+components/LED/LED.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/stm32F103C8T6Project.elf.dir/build.make CMakeFiles/stm32F103C8T6Project.elf.dir/components/LED/LED.c.i
+.PHONY : components/LED/LED.c.i
+
+components/LED/LED.s: components/LED/LED.c.s
+.PHONY : components/LED/LED.s
+
+# target to generate assembly for a file
+components/LED/LED.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/stm32F103C8T6Project.elf.dir/build.make CMakeFiles/stm32F103C8T6Project.elf.dir/components/LED/LED.c.s
+.PHONY : components/LED/LED.c.s
+
 components/delay/delay.obj: components/delay/delay.c.obj
 .PHONY : components/delay/delay.obj
 
@@ -800,6 +824,30 @@ components/delay/delay.s: components/delay/delay.c.s
 components/delay/delay.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/stm32F103C8T6Project.elf.dir/build.make CMakeFiles/stm32F103C8T6Project.elf.dir/components/delay/delay.c.s
 .PHONY : components/delay/delay.c.s
+
+components/key/key.obj: components/key/key.c.obj
+.PHONY : components/key/key.obj
+
+# target to build an object file
+components/key/key.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/stm32F103C8T6Project.elf.dir/build.make CMakeFiles/stm32F103C8T6Project.elf.dir/components/key/key.c.obj
+.PHONY : components/key/key.c.obj
+
+components/key/key.i: components/key/key.c.i
+.PHONY : components/key/key.i
+
+# target to preprocess a source file
+components/key/key.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/stm32F103C8T6Project.elf.dir/build.make CMakeFiles/stm32F103C8T6Project.elf.dir/components/key/key.c.i
+.PHONY : components/key/key.c.i
+
+components/key/key.s: components/key/key.c.s
+.PHONY : components/key/key.s
+
+# target to generate assembly for a file
+components/key/key.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/stm32F103C8T6Project.elf.dir/build.make CMakeFiles/stm32F103C8T6Project.elf.dir/components/key/key.c.s
+.PHONY : components/key/key.c.s
 
 startup/startup_stm32f103c8tx.obj: startup/startup_stm32f103c8tx.s.obj
 .PHONY : startup/startup_stm32f103c8tx.obj
@@ -899,9 +947,15 @@ help:
 	@echo "... User/stm32f10x_it.obj"
 	@echo "... User/stm32f10x_it.i"
 	@echo "... User/stm32f10x_it.s"
+	@echo "... components/LED/LED.obj"
+	@echo "... components/LED/LED.i"
+	@echo "... components/LED/LED.s"
 	@echo "... components/delay/delay.obj"
 	@echo "... components/delay/delay.i"
 	@echo "... components/delay/delay.s"
+	@echo "... components/key/key.obj"
+	@echo "... components/key/key.i"
+	@echo "... components/key/key.s"
 	@echo "... startup/startup_stm32f103c8tx.obj"
 .PHONY : help
 

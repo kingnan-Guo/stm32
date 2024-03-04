@@ -55,6 +55,8 @@ include_directories(
         Libraries/STM32F10x_StdPeriph_Driver/inc
         User
         components/delay
+        components/LED
+        components/key
 )
 
 

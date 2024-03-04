@@ -31,6 +31,8 @@
 					<Add directory="/Users/kingnan/Documents/github/stm32/Libraries/STM32F10x_StdPeriph_Driver/inc"/>
 					<Add directory="/Users/kingnan/Documents/github/stm32/User"/>
 					<Add directory="/Users/kingnan/Documents/github/stm32/components/delay"/>
+					<Add directory="/Users/kingnan/Documents/github/stm32/components/LED"/>
+					<Add directory="/Users/kingnan/Documents/github/stm32/components/key"/>
 					<Add directory="/Applications/ArmGNUToolchain/13.2.Rel1/arm-none-eabi/bin/../lib/gcc/arm-none-eabi/13.2.1/../../../../arm-none-eabi/include/c++/13.2.1"/>
 					<Add directory="/Applications/ArmGNUToolchain/13.2.Rel1/arm-none-eabi/bin/../lib/gcc/arm-none-eabi/13.2.1/../../../../arm-none-eabi/include/c++/13.2.1/arm-none-eabi"/>
 					<Add directory="/Applications/ArmGNUToolchain/13.2.Rel1/arm-none-eabi/bin/../lib/gcc/arm-none-eabi/13.2.1/../../../../arm-none-eabi/include/c++/13.2.1/backward"/>
@@ -59,6 +61,8 @@
 					<Add directory="/Users/kingnan/Documents/github/stm32/Libraries/STM32F10x_StdPeriph_Driver/inc"/>
 					<Add directory="/Users/kingnan/Documents/github/stm32/User"/>
 					<Add directory="/Users/kingnan/Documents/github/stm32/components/delay"/>
+					<Add directory="/Users/kingnan/Documents/github/stm32/components/LED"/>
+					<Add directory="/Users/kingnan/Documents/github/stm32/components/key"/>
 					<Add directory="/Applications/ArmGNUToolchain/13.2.Rel1/arm-none-eabi/bin/../lib/gcc/arm-none-eabi/13.2.1/../../../../arm-none-eabi/include/c++/13.2.1"/>
 					<Add directory="/Applications/ArmGNUToolchain/13.2.Rel1/arm-none-eabi/bin/../lib/gcc/arm-none-eabi/13.2.1/../../../../arm-none-eabi/include/c++/13.2.1/arm-none-eabi"/>
 					<Add directory="/Applications/ArmGNUToolchain/13.2.Rel1/arm-none-eabi/bin/../lib/gcc/arm-none-eabi/13.2.1/../../../../arm-none-eabi/include/c++/13.2.1/backward"/>
@@ -265,10 +269,22 @@
 		<Unit filename="/Users/kingnan/Documents/github/stm32/User/stm32f10x_it.h">
 			<Option target="stm32F103C8T6Project.elf"/>
 		</Unit>
+		<Unit filename="/Users/kingnan/Documents/github/stm32/components/LED/LED.c">
+			<Option target="stm32F103C8T6Project.elf"/>
+		</Unit>
+		<Unit filename="/Users/kingnan/Documents/github/stm32/components/LED/LED.h">
+			<Option target="stm32F103C8T6Project.elf"/>
+		</Unit>
 		<Unit filename="/Users/kingnan/Documents/github/stm32/components/delay/delay.c">
 			<Option target="stm32F103C8T6Project.elf"/>
 		</Unit>
 		<Unit filename="/Users/kingnan/Documents/github/stm32/components/delay/delay.h">
+			<Option target="stm32F103C8T6Project.elf"/>
+		</Unit>
+		<Unit filename="/Users/kingnan/Documents/github/stm32/components/key/key.c">
+			<Option target="stm32F103C8T6Project.elf"/>
+		</Unit>
+		<Unit filename="/Users/kingnan/Documents/github/stm32/components/key/key.h">
 			<Option target="stm32F103C8T6Project.elf"/>
 		</Unit>
 		<Unit filename="/Users/kingnan/Documents/github/stm32/startup/startup_stm32f103c8tx.s">

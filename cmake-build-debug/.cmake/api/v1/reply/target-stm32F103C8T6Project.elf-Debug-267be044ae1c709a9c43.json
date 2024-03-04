@@ -28,25 +28,25 @@
 			{
 				"command" : 0,
 				"file" : 0,
-				"line" : 72,
-				"parent" : 0
-			},
-			{
-				"command" : 1,
-				"file" : 0,
-				"line" : 68,
-				"parent" : 0
-			},
-			{
-				"command" : 1,
-				"file" : 0,
-				"line" : 69,
+				"line" : 74,
 				"parent" : 0
 			},
 			{
 				"command" : 1,
 				"file" : 0,
 				"line" : 70,
+				"parent" : 0
+			},
+			{
+				"command" : 1,
+				"file" : 0,
+				"line" : 71,
+				"parent" : 0
+			},
+			{
+				"command" : 1,
+				"file" : 0,
+				"line" : 72,
 				"parent" : 0
 			},
 			{
@@ -76,7 +76,7 @@
 			{
 				"command" : 3,
 				"file" : 0,
-				"line" : 61,
+				"line" : 63,
 				"parent" : 0
 			},
 			{
@@ -164,6 +164,14 @@
 				{
 					"backtrace" : 10,
 					"path" : "/Users/kingnan/Documents/github/stm32/components/delay"
+				},
+				{
+					"backtrace" : 10,
+					"path" : "/Users/kingnan/Documents/github/stm32/components/LED"
+				},
+				{
+					"backtrace" : 10,
+					"path" : "/Users/kingnan/Documents/github/stm32/components/key"
 				}
 			],
 			"language" : "C",
@@ -204,7 +212,9 @@
 				50,
 				51,
 				54,
-				56
+				56,
+				58,
+				60
 			]
 		},
 		{
@@ -290,12 +300,20 @@
 				{
 					"backtrace" : 10,
 					"path" : "/Users/kingnan/Documents/github/stm32/components/delay"
+				},
+				{
+					"backtrace" : 10,
+					"path" : "/Users/kingnan/Documents/github/stm32/components/LED"
+				},
+				{
+					"backtrace" : 10,
+					"path" : "/Users/kingnan/Documents/github/stm32/components/key"
 				}
 			],
 			"language" : "ASM",
 			"sourceIndexes" : 
 			[
-				58
+				62
 			]
 		}
 	],
@@ -385,7 +403,9 @@
 				50,
 				51,
 				54,
-				56
+				56,
+				58,
+				60
 			]
 		},
 		{
@@ -420,7 +440,9 @@
 				27,
 				53,
 				55,
-				57
+				57,
+				59,
+				61
 			]
 		},
 		{
@@ -428,8 +450,8 @@
 			"sourceIndexes" : 
 			[
 				52,
-				58,
-				59
+				62,
+				63
 			]
 		}
 	],
@@ -745,12 +767,34 @@
 		{
 			"backtrace" : 1,
 			"compileGroupIndex" : 0,
+			"path" : "components/LED/LED.c",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"path" : "components/LED/LED.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
 			"path" : "components/delay/delay.c",
 			"sourceGroupIndex" : 0
 		},
 		{
 			"backtrace" : 1,
 			"path" : "components/delay/delay.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "components/key/key.c",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"path" : "components/key/key.h",
 			"sourceGroupIndex" : 1
 		},
 		{
