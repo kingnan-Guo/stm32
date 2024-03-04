@@ -777,6 +777,30 @@ User/stm32f10x_it.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/stm32F103C8T6Project.elf.dir/build.make CMakeFiles/stm32F103C8T6Project.elf.dir/User/stm32f10x_it.c.s
 .PHONY : User/stm32f10x_it.c.s
 
+components/delay/delay.obj: components/delay/delay.c.obj
+.PHONY : components/delay/delay.obj
+
+# target to build an object file
+components/delay/delay.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/stm32F103C8T6Project.elf.dir/build.make CMakeFiles/stm32F103C8T6Project.elf.dir/components/delay/delay.c.obj
+.PHONY : components/delay/delay.c.obj
+
+components/delay/delay.i: components/delay/delay.c.i
+.PHONY : components/delay/delay.i
+
+# target to preprocess a source file
+components/delay/delay.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/stm32F103C8T6Project.elf.dir/build.make CMakeFiles/stm32F103C8T6Project.elf.dir/components/delay/delay.c.i
+.PHONY : components/delay/delay.c.i
+
+components/delay/delay.s: components/delay/delay.c.s
+.PHONY : components/delay/delay.s
+
+# target to generate assembly for a file
+components/delay/delay.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/stm32F103C8T6Project.elf.dir/build.make CMakeFiles/stm32F103C8T6Project.elf.dir/components/delay/delay.c.s
+.PHONY : components/delay/delay.c.s
+
 startup/startup_stm32f103c8tx.obj: startup/startup_stm32f103c8tx.s.obj
 .PHONY : startup/startup_stm32f103c8tx.obj
 
@@ -875,6 +899,9 @@ help:
 	@echo "... User/stm32f10x_it.obj"
 	@echo "... User/stm32f10x_it.i"
 	@echo "... User/stm32f10x_it.s"
+	@echo "... components/delay/delay.obj"
+	@echo "... components/delay/delay.i"
+	@echo "... components/delay/delay.s"
 	@echo "... startup/startup_stm32f103c8tx.obj"
 .PHONY : help
 

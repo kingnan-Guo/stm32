@@ -54,13 +54,14 @@ include_directories(
         Libraries/CMSIS
         Libraries/STM32F10x_StdPeriph_Driver/inc
         User
+        components/delay
 )
 
 
 add_definitions(-DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB)
 
 #file(GLOB_RECURSE SOURCES "Core/*.*" "Drivers/*.*")
-file(GLOB_RECURSE SOURCES "startup/*.*" "Libraries/*.*" "User/*.*")
+file(GLOB_RECURSE SOURCES "startup/*.*" "Libraries/*.*" "User/*.*" "components/*.*")
 
 set(LINKER_SCRIPT ${CMAKE_SOURCE_DIR}/STM32F103C8TX_FLASH.ld)
 

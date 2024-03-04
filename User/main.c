@@ -1,4 +1,5 @@
 #include "stm32f10x.h" 
+#include "delay.h"
 
 int main(void) {
 	while(1) {
@@ -16,8 +17,9 @@ int main(void) {
         GPIO_Init(GPIOC, &GPIO_InitStructure);
         // 高电平设置
         GPIO_SetBits(GPIOC, GPIO_Pin_13);
-
+        Delay_ms(200);
         // 关闭端口
         GPIO_ResetBits(GPIOC, GPIO_Pin_13);
+        Delay_ms(200);
     }
 }
