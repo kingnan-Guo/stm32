@@ -33,6 +33,7 @@
 					<Add directory="/Users/kingnan/Documents/github/stm32/components/delay"/>
 					<Add directory="/Users/kingnan/Documents/github/stm32/components/LED"/>
 					<Add directory="/Users/kingnan/Documents/github/stm32/components/key"/>
+					<Add directory="/Users/kingnan/Documents/github/stm32/components/oled"/>
 					<Add directory="/Applications/ArmGNUToolchain/13.2.Rel1/arm-none-eabi/bin/../lib/gcc/arm-none-eabi/13.2.1/../../../../arm-none-eabi/include/c++/13.2.1"/>
 					<Add directory="/Applications/ArmGNUToolchain/13.2.Rel1/arm-none-eabi/bin/../lib/gcc/arm-none-eabi/13.2.1/../../../../arm-none-eabi/include/c++/13.2.1/arm-none-eabi"/>
 					<Add directory="/Applications/ArmGNUToolchain/13.2.Rel1/arm-none-eabi/bin/../lib/gcc/arm-none-eabi/13.2.1/../../../../arm-none-eabi/include/c++/13.2.1/backward"/>
@@ -63,6 +64,7 @@
 					<Add directory="/Users/kingnan/Documents/github/stm32/components/delay"/>
 					<Add directory="/Users/kingnan/Documents/github/stm32/components/LED"/>
 					<Add directory="/Users/kingnan/Documents/github/stm32/components/key"/>
+					<Add directory="/Users/kingnan/Documents/github/stm32/components/oled"/>
 					<Add directory="/Applications/ArmGNUToolchain/13.2.Rel1/arm-none-eabi/bin/../lib/gcc/arm-none-eabi/13.2.1/../../../../arm-none-eabi/include/c++/13.2.1"/>
 					<Add directory="/Applications/ArmGNUToolchain/13.2.Rel1/arm-none-eabi/bin/../lib/gcc/arm-none-eabi/13.2.1/../../../../arm-none-eabi/include/c++/13.2.1/arm-none-eabi"/>
 					<Add directory="/Applications/ArmGNUToolchain/13.2.Rel1/arm-none-eabi/bin/../lib/gcc/arm-none-eabi/13.2.1/../../../../arm-none-eabi/include/c++/13.2.1/backward"/>
@@ -285,6 +287,15 @@
 			<Option target="stm32F103C8T6Project.elf"/>
 		</Unit>
 		<Unit filename="/Users/kingnan/Documents/github/stm32/components/key/key.h">
+			<Option target="stm32F103C8T6Project.elf"/>
+		</Unit>
+		<Unit filename="/Users/kingnan/Documents/github/stm32/components/oled/OLED.c">
+			<Option target="stm32F103C8T6Project.elf"/>
+		</Unit>
+		<Unit filename="/Users/kingnan/Documents/github/stm32/components/oled/OLED.h">
+			<Option target="stm32F103C8T6Project.elf"/>
+		</Unit>
+		<Unit filename="/Users/kingnan/Documents/github/stm32/components/oled/OLED_Font.h">
 			<Option target="stm32F103C8T6Project.elf"/>
 		</Unit>
 		<Unit filename="/Users/kingnan/Documents/github/stm32/startup/startup_stm32f103c8tx.s">

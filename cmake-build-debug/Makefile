@@ -849,6 +849,30 @@ components/key/key.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/stm32F103C8T6Project.elf.dir/build.make CMakeFiles/stm32F103C8T6Project.elf.dir/components/key/key.c.s
 .PHONY : components/key/key.c.s
 
+components/oled/OLED.obj: components/oled/OLED.c.obj
+.PHONY : components/oled/OLED.obj
+
+# target to build an object file
+components/oled/OLED.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/stm32F103C8T6Project.elf.dir/build.make CMakeFiles/stm32F103C8T6Project.elf.dir/components/oled/OLED.c.obj
+.PHONY : components/oled/OLED.c.obj
+
+components/oled/OLED.i: components/oled/OLED.c.i
+.PHONY : components/oled/OLED.i
+
+# target to preprocess a source file
+components/oled/OLED.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/stm32F103C8T6Project.elf.dir/build.make CMakeFiles/stm32F103C8T6Project.elf.dir/components/oled/OLED.c.i
+.PHONY : components/oled/OLED.c.i
+
+components/oled/OLED.s: components/oled/OLED.c.s
+.PHONY : components/oled/OLED.s
+
+# target to generate assembly for a file
+components/oled/OLED.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/stm32F103C8T6Project.elf.dir/build.make CMakeFiles/stm32F103C8T6Project.elf.dir/components/oled/OLED.c.s
+.PHONY : components/oled/OLED.c.s
+
 startup/startup_stm32f103c8tx.obj: startup/startup_stm32f103c8tx.s.obj
 .PHONY : startup/startup_stm32f103c8tx.obj
 
@@ -956,6 +980,9 @@ help:
 	@echo "... components/key/key.obj"
 	@echo "... components/key/key.i"
 	@echo "... components/key/key.s"
+	@echo "... components/oled/OLED.obj"
+	@echo "... components/oled/OLED.i"
+	@echo "... components/oled/OLED.s"
 	@echo "... startup/startup_stm32f103c8tx.obj"
 .PHONY : help
 

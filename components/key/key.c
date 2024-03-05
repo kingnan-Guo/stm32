@@ -13,7 +13,7 @@ void Key_Init(void){
 
 }
 
-uint8_t Key_GetNum(void){
+uint8_t Key_GetNum(    void){
     uint8_t keyNum = 0;
     if(GPIO_ReadInputDataBit(GPIOB, GPIO_Pin_1) == 0){
         Delay_ms(20);// 防抖

@@ -59,6 +59,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/stm32F103C8T6Project.elf.dir/components/delay/delay.c.obj.d"
   "CMakeFiles/stm32F103C8T6Project.elf.dir/components/key/key.c.obj"
   "CMakeFiles/stm32F103C8T6Project.elf.dir/components/key/key.c.obj.d"
+  "CMakeFiles/stm32F103C8T6Project.elf.dir/components/oled/OLED.c.obj"
+  "CMakeFiles/stm32F103C8T6Project.elf.dir/components/oled/OLED.c.obj.d"
   "CMakeFiles/stm32F103C8T6Project.elf.dir/startup/startup_stm32f103c8tx.s.obj"
   "stm32F103C8T6Project.elf"
   "stm32F103C8T6Project.elf.pdb"

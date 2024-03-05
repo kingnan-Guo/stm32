@@ -57,6 +57,7 @@ include_directories(
         components/delay
         components/LED
         components/key
+        components/oled
 )
 
 
