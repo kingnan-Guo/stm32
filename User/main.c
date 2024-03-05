@@ -15,7 +15,7 @@ int main(void) {
     OLED_ShowHexNum(3, 5, 0xAABB, 4);
     OLED_ShowBinNum(4, 1, 0xABAB, 16); // 十六 进制 转 二进制
     Delay_ms(2000);
-    OLED_Clear();
+//    OLED_Clear();
 
     LED_Init();
 	while(1) {
