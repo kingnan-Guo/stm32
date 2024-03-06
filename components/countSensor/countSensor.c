@@ -4,30 +4,30 @@
 /**
  * 1 配置 GPIO RCC开启 时钟
  * 2 AFIO 开启 时钟 （内核的外设nvic 不需要开启时钟， EXIT也不需要开启外设）
- * 3、执行完 GPIO_EXTILineConfig 后，AFIO 的第 8 个数据选择器 就配置好了
+ * 3、执行完 GPIO_EXTILineConfig 后，AFIO 的第 15 个数据选择器 就配置好了
  *        其中输入端被  拨到了 GPIOA 上 对应引脚 PA14
  *
  * 4、配置 EXTI
  */
 #include "stm32f10x.h"
-uint16_t counsensor_count;
+uint16_t counsensor_count = 1;
 void countSensor_Init(void){
 
     RCC_APB2PeriphClockCmd(RCC_APB2Periph_GPIOA, ENABLE);
     // 开启 AFIO 的时钟
     RCC_APB2PeriphClockCmd(RCC_APB2Periph_AFIO, ENABLE);
     GPIO_InitTypeDef GPIO_InitStructre;
-    GPIO_InitStructre.GPIO_Pin = GPIO_Pin_8;
+    GPIO_InitStructre.GPIO_Pin = GPIO_Pin_15;
     GPIO_InitStructre.GPIO_Mode = GPIO_Mode_IPU;// 上拉输入
     GPIO_InitStructre.GPIO_Speed = GPIO_Speed_50MHz;
     GPIO_Init(GPIOA, &GPIO_InitStructre);
 
     // AFIO
-    GPIO_EXTILineConfig(GPIO_PortSourceGPIOA, GPIO_PinSource8);
+    GPIO_EXTILineConfig(GPIO_PortSourceGPIOA, GPIO_PinSource15);
 
     EXTI_InitTypeDef EXTI_InitStruct;
     //指定 要配置的中断线
-    EXTI_InitStruct.EXTI_Line = EXTI_Line8;
+    EXTI_InitStruct.EXTI_Line = EXTI_Line15;
     // 指定 中断选择的新状态
     EXTI_InitStruct.EXTI_LineCmd = ENABLE;
     // 外部中断 的模式 分为 中断 模式  事件模式
@@ -64,12 +64,12 @@ uint16_t getCount(void){
 //中断 函数  固定的名称
 void EXTI15_10_IRQHandler(void) {
     //判定  中断 标志位 是否 为 1
-    if(EXTI_GetITStatus(EXTI_Line8) == SET){
+    if(EXTI_GetITStatus(EXTI_Line15) == SET){
         // 执行 中断 程序 start
-        counsensor_count ++;
+        counsensor_count++;
         //执行中断程序 end
         // 最后 清除中断 标志位， 如果不清除  会一直进入到中断程序 中
-        EXTI_ClearITPendingBit(EXTI_Line8);
+        EXTI_ClearITPendingBit(EXTI_Line15);
 
     }
 }

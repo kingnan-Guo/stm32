@@ -26,6 +26,6 @@ int main(void) {
         Delay_ms(1000);
         birth = birth + 1;
         OLED_ShowNum(2, 1, birth,8);
-        OLED_ShowNum(23, 1, getCount(),5);
+        OLED_ShowNum(3, 1,  getCount(),5);
     }
 }
