@@ -357,12 +357,12 @@ void GPIO_SetBits(GPIO_TypeDef* GPIOx, uint16_t GPIO_Pin);
 void GPIO_ResetBits(GPIO_TypeDef* GPIOx, uint16_t GPIO_Pin);
 void GPIO_WriteBit(GPIO_TypeDef* GPIOx, uint16_t GPIO_Pin, BitAction BitVal);
 void GPIO_Write(GPIO_TypeDef* GPIOx, uint16_t PortVal);
-void GPIO_PinLockConfig(GPIO_TypeDef* GPIOx, uint16_t GPIO_Pin);
-void GPIO_EventOutputConfig(uint8_t GPIO_PortSource, uint8_t GPIO_PinSource);
-void GPIO_EventOutputCmd(FunctionalState NewState);
-void GPIO_PinRemapConfig(uint32_t GPIO_Remap, FunctionalState NewState);
-void GPIO_EXTILineConfig(uint8_t GPIO_PortSource, uint8_t GPIO_PinSource);
-void GPIO_ETH_MediaInterfaceConfig(uint32_t GPIO_ETH_MediaInterface);
+void GPIO_PinLockConfig(GPIO_TypeDef* GPIOx, uint16_t GPIO_Pin);//锁定GPIO配置的 防止意外串改
+void GPIO_EventOutputConfig(uint8_t GPIO_PortSource, uint8_t GPIO_PinSource);// GPIO 事件输出功能
+void GPIO_EventOutputCmd(FunctionalState NewState);// GPIO 事件输出功能
+void GPIO_PinRemapConfig(uint32_t GPIO_Remap, FunctionalState NewState);//可以用来 进行引脚重 映射 ； GPIO_Remap:重映射的方式 ； NewState：重映射 状态
+void GPIO_EXTILineConfig(uint8_t GPIO_PortSource, uint8_t GPIO_PinSource);// 外部中断的 函数 ，可以配置AFIO的数据选择器 来选择我们想要的中断 引脚
+void GPIO_ETH_MediaInterfaceConfig(uint32_t GPIO_ETH_MediaInterface);// 以太网 外设
 
 #ifdef __cplusplus
 }

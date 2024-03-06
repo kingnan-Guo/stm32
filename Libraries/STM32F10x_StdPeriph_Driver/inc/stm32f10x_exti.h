@@ -154,14 +154,14 @@ typedef struct
   * @{
   */
 
-void EXTI_DeInit(void);
-void EXTI_Init(EXTI_InitTypeDef* EXTI_InitStruct);
-void EXTI_StructInit(EXTI_InitTypeDef* EXTI_InitStruct);
-void EXTI_GenerateSWInterrupt(uint32_t EXTI_Line);
-FlagStatus EXTI_GetFlagStatus(uint32_t EXTI_Line);
-void EXTI_ClearFlag(uint32_t EXTI_Line);
-ITStatus EXTI_GetITStatus(uint32_t EXTI_Line);
-void EXTI_ClearITPendingBit(uint32_t EXTI_Line);
+void EXTI_DeInit(void);// EXTI 配置清除  恢复成 上电默认的状态
+void EXTI_Init(EXTI_InitTypeDef* EXTI_InitStruct);// EXTI 初始化 EXTI_InitStruct进行配置
+void EXTI_StructInit(EXTI_InitTypeDef* EXTI_InitStruct);// 调用这个 函数 可以吧参数传递的 结构体变量 附一个默认值
+void EXTI_GenerateSWInterrupt(uint32_t EXTI_Line);// 参数给一个指定的中断线 就可以 软件触发 外部中断
+FlagStatus EXTI_GetFlagStatus(uint32_t EXTI_Line);//（主程序） 可以获取指定的标志位 是否被置1   （ 在外设运行的过程中 会产生 一些 状态 标志位； 外部中断来了 会有一个挂起 寄存器置了一个 标志位
+void EXTI_ClearFlag(uint32_t EXTI_Line);//（主程序） 对置 1 的标志位进行清除
+ITStatus EXTI_GetITStatus(uint32_t EXTI_Line);//（中断） 在中断 函数里如果想查看标志位 ， 获取重点标志位是否被置 1了
+void EXTI_ClearITPendingBit(uint32_t EXTI_Line);//（中断） 清除 中断 挂起 标志位
 
 #ifdef __cplusplus
 }
