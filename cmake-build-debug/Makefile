@@ -801,6 +801,30 @@ components/LED/LED.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/stm32F103C8T6Project.elf.dir/build.make CMakeFiles/stm32F103C8T6Project.elf.dir/components/LED/LED.c.s
 .PHONY : components/LED/LED.c.s
 
+components/countSensor/countSensor.obj: components/countSensor/countSensor.c.obj
+.PHONY : components/countSensor/countSensor.obj
+
+# target to build an object file
+components/countSensor/countSensor.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/stm32F103C8T6Project.elf.dir/build.make CMakeFiles/stm32F103C8T6Project.elf.dir/components/countSensor/countSensor.c.obj
+.PHONY : components/countSensor/countSensor.c.obj
+
+components/countSensor/countSensor.i: components/countSensor/countSensor.c.i
+.PHONY : components/countSensor/countSensor.i
+
+# target to preprocess a source file
+components/countSensor/countSensor.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/stm32F103C8T6Project.elf.dir/build.make CMakeFiles/stm32F103C8T6Project.elf.dir/components/countSensor/countSensor.c.i
+.PHONY : components/countSensor/countSensor.c.i
+
+components/countSensor/countSensor.s: components/countSensor/countSensor.c.s
+.PHONY : components/countSensor/countSensor.s
+
+# target to generate assembly for a file
+components/countSensor/countSensor.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/stm32F103C8T6Project.elf.dir/build.make CMakeFiles/stm32F103C8T6Project.elf.dir/components/countSensor/countSensor.c.s
+.PHONY : components/countSensor/countSensor.c.s
+
 components/delay/delay.obj: components/delay/delay.c.obj
 .PHONY : components/delay/delay.obj
 
@@ -974,6 +998,9 @@ help:
 	@echo "... components/LED/LED.obj"
 	@echo "... components/LED/LED.i"
 	@echo "... components/LED/LED.s"
+	@echo "... components/countSensor/countSensor.obj"
+	@echo "... components/countSensor/countSensor.i"
+	@echo "... components/countSensor/countSensor.s"
 	@echo "... components/delay/delay.obj"
 	@echo "... components/delay/delay.i"
 	@echo "... components/delay/delay.s"

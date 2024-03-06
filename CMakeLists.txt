@@ -58,6 +58,7 @@ include_directories(
         components/LED
         components/key
         components/oled
+        components/countSensor
 )
 
 

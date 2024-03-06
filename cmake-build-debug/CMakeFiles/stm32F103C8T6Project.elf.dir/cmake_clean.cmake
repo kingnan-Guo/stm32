@@ -55,6 +55,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/stm32F103C8T6Project.elf.dir/User/stm32f10x_it.c.obj.d"
   "CMakeFiles/stm32F103C8T6Project.elf.dir/components/LED/LED.c.obj"
   "CMakeFiles/stm32F103C8T6Project.elf.dir/components/LED/LED.c.obj.d"
+  "CMakeFiles/stm32F103C8T6Project.elf.dir/components/countSensor/countSensor.c.obj"
+  "CMakeFiles/stm32F103C8T6Project.elf.dir/components/countSensor/countSensor.c.obj.d"
   "CMakeFiles/stm32F103C8T6Project.elf.dir/components/delay/delay.c.obj"
   "CMakeFiles/stm32F103C8T6Project.elf.dir/components/delay/delay.c.obj.d"
   "CMakeFiles/stm32F103C8T6Project.elf.dir/components/key/key.c.obj"

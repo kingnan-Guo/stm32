@@ -28,6 +28,7 @@ set(CMAKE_ASM_TARGET_INCLUDE_PATH
   "/Users/kingnan/Documents/github/stm32/components/LED"
   "/Users/kingnan/Documents/github/stm32/components/key"
   "/Users/kingnan/Documents/github/stm32/components/oled"
+  "/Users/kingnan/Documents/github/stm32/components/countSensor"
   )
 
 # The set of dependency files which are needed:
@@ -60,6 +61,7 @@ set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "/Users/kingnan/Documents/github/stm32/User/main.c" "CMakeFiles/stm32F103C8T6Project.elf.dir/User/main.c.obj" "gcc" "CMakeFiles/stm32F103C8T6Project.elf.dir/User/main.c.obj.d"
   "/Users/kingnan/Documents/github/stm32/User/stm32f10x_it.c" "CMakeFiles/stm32F103C8T6Project.elf.dir/User/stm32f10x_it.c.obj" "gcc" "CMakeFiles/stm32F103C8T6Project.elf.dir/User/stm32f10x_it.c.obj.d"
   "/Users/kingnan/Documents/github/stm32/components/LED/LED.c" "CMakeFiles/stm32F103C8T6Project.elf.dir/components/LED/LED.c.obj" "gcc" "CMakeFiles/stm32F103C8T6Project.elf.dir/components/LED/LED.c.obj.d"
+  "/Users/kingnan/Documents/github/stm32/components/countSensor/countSensor.c" "CMakeFiles/stm32F103C8T6Project.elf.dir/components/countSensor/countSensor.c.obj" "gcc" "CMakeFiles/stm32F103C8T6Project.elf.dir/components/countSensor/countSensor.c.obj.d"
   "/Users/kingnan/Documents/github/stm32/components/delay/delay.c" "CMakeFiles/stm32F103C8T6Project.elf.dir/components/delay/delay.c.obj" "gcc" "CMakeFiles/stm32F103C8T6Project.elf.dir/components/delay/delay.c.obj.d"
   "/Users/kingnan/Documents/github/stm32/components/key/key.c" "CMakeFiles/stm32F103C8T6Project.elf.dir/components/key/key.c.obj" "gcc" "CMakeFiles/stm32F103C8T6Project.elf.dir/components/key/key.c.obj.d"
   "/Users/kingnan/Documents/github/stm32/components/oled/OLED.c" "CMakeFiles/stm32F103C8T6Project.elf.dir/components/oled/OLED.c.obj" "gcc" "CMakeFiles/stm32F103C8T6Project.elf.dir/components/oled/OLED.c.obj.d"
