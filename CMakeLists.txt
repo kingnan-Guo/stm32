@@ -59,6 +59,7 @@ include_directories(
         components/key
         components/oled
         components/countSensor
+        components/Timer
 )
 
 

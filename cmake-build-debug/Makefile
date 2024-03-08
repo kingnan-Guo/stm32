@@ -801,6 +801,30 @@ components/LED/LED.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/stm32F103C8T6Project.elf.dir/build.make CMakeFiles/stm32F103C8T6Project.elf.dir/components/LED/LED.c.s
 .PHONY : components/LED/LED.c.s
 
+components/Timer/Timer.obj: components/Timer/Timer.c.obj
+.PHONY : components/Timer/Timer.obj
+
+# target to build an object file
+components/Timer/Timer.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/stm32F103C8T6Project.elf.dir/build.make CMakeFiles/stm32F103C8T6Project.elf.dir/components/Timer/Timer.c.obj
+.PHONY : components/Timer/Timer.c.obj
+
+components/Timer/Timer.i: components/Timer/Timer.c.i
+.PHONY : components/Timer/Timer.i
+
+# target to preprocess a source file
+components/Timer/Timer.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/stm32F103C8T6Project.elf.dir/build.make CMakeFiles/stm32F103C8T6Project.elf.dir/components/Timer/Timer.c.i
+.PHONY : components/Timer/Timer.c.i
+
+components/Timer/Timer.s: components/Timer/Timer.c.s
+.PHONY : components/Timer/Timer.s
+
+# target to generate assembly for a file
+components/Timer/Timer.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/stm32F103C8T6Project.elf.dir/build.make CMakeFiles/stm32F103C8T6Project.elf.dir/components/Timer/Timer.c.s
+.PHONY : components/Timer/Timer.c.s
+
 components/countSensor/countSensor.obj: components/countSensor/countSensor.c.obj
 .PHONY : components/countSensor/countSensor.obj
 
@@ -998,6 +1022,9 @@ help:
 	@echo "... components/LED/LED.obj"
 	@echo "... components/LED/LED.i"
 	@echo "... components/LED/LED.s"
+	@echo "... components/Timer/Timer.obj"
+	@echo "... components/Timer/Timer.i"
+	@echo "... components/Timer/Timer.s"
 	@echo "... components/countSensor/countSensor.obj"
 	@echo "... components/countSensor/countSensor.i"
 	@echo "... components/countSensor/countSensor.s"

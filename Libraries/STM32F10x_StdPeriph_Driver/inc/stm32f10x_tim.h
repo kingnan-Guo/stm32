@@ -1050,9 +1050,9 @@ typedef struct
   * @{
   */
 
-void TIM_DeInit(TIM_TypeDef* TIMx);
-void TIM_TimeBaseInit(TIM_TypeDef* TIMx, TIM_TimeBaseInitTypeDef* TIM_TimeBaseInitStruct);
-void TIM_OC1Init(TIM_TypeDef* TIMx, TIM_OCInitTypeDef* TIM_OCInitStruct);
+void TIM_DeInit(TIM_TypeDef* TIMx);// 恢复缺省 配置
+void TIM_TimeBaseInit(TIM_TypeDef* TIMx, TIM_TimeBaseInitTypeDef* TIM_TimeBaseInitStruct);// 时基单元 初始化 TIMx 选择某个定时器  TIM_TimeBaseInitStruct 配置时基单元大的 一些参数
+void TIM_OC1Init(TIM_TypeDef* TIMx, TIM_OCInitTypeDef* TIM_OCInitStruct);//
 void TIM_OC2Init(TIM_TypeDef* TIMx, TIM_OCInitTypeDef* TIM_OCInitStruct);
 void TIM_OC3Init(TIM_TypeDef* TIMx, TIM_OCInitTypeDef* TIM_OCInitStruct);
 void TIM_OC4Init(TIM_TypeDef* TIMx, TIM_OCInitTypeDef* TIM_OCInitStruct);
@@ -1063,32 +1063,32 @@ void TIM_TimeBaseStructInit(TIM_TimeBaseInitTypeDef* TIM_TimeBaseInitStruct);
 void TIM_OCStructInit(TIM_OCInitTypeDef* TIM_OCInitStruct);
 void TIM_ICStructInit(TIM_ICInitTypeDef* TIM_ICInitStruct);
 void TIM_BDTRStructInit(TIM_BDTRInitTypeDef* TIM_BDTRInitStruct);
-void TIM_Cmd(TIM_TypeDef* TIMx, FunctionalState NewState);
+void TIM_Cmd(TIM_TypeDef* TIMx, FunctionalState NewState);// 使能计数器 图上的 运行控制  TIMx 选择某个定时器  NewState 状态 使能 失能
 void TIM_CtrlPWMOutputs(TIM_TypeDef* TIMx, FunctionalState NewState);
-void TIM_ITConfig(TIM_TypeDef* TIMx, uint16_t TIM_IT, FunctionalState NewState);
+void TIM_ITConfig(TIM_TypeDef* TIMx, uint16_t TIM_IT, FunctionalState NewState);// 使能 中断 计数器  TIM_IT选择 配置哪个中断输出
 void TIM_GenerateEvent(TIM_TypeDef* TIMx, uint16_t TIM_EventSource);
 void TIM_DMAConfig(TIM_TypeDef* TIMx, uint16_t TIM_DMABase, uint16_t TIM_DMABurstLength);
 void TIM_DMACmd(TIM_TypeDef* TIMx, uint16_t TIM_DMASource, FunctionalState NewState);
-void TIM_InternalClockConfig(TIM_TypeDef* TIMx);
-void TIM_ITRxExternalClockConfig(TIM_TypeDef* TIMx, uint16_t TIM_InputTriggerSource);
+void TIM_InternalClockConfig(TIM_TypeDef* TIMx);// 选择内部时钟
+void TIM_ITRxExternalClockConfig(TIM_TypeDef* TIMx, uint16_t TIM_InputTriggerSource);// 选择ITRx其他定时器的时钟 TIMx 选择某个定时器 TIM_InputTriggerSource 选择要接入哪个 其他的定时器
 void TIM_TIxExternalClockConfig(TIM_TypeDef* TIMx, uint16_t TIM_TIxExternalCLKSource,
-                                uint16_t TIM_ICPolarity, uint16_t ICFilter);
+                                uint16_t TIM_ICPolarity, uint16_t ICFilter); // 选择 TIX 捕获通道的时钟  TIM_TIxExternalCLKSource 选择TIx 具体的某个引脚  ； TIM_ICPolarity 输入的极性  ICFilter 滤波器
 void TIM_ETRClockMode1Config(TIM_TypeDef* TIMx, uint16_t TIM_ExtTRGPrescaler, uint16_t TIM_ExtTRGPolarity,
-                             uint16_t ExtTRGFilter);
+                             uint16_t ExtTRGFilter);// 选择ETR通过外部的时钟模式 1 输入的时钟   ； TIM_ExtTRGPrescaler 外部出发 预分频器 （可以对 ETR 的外部时钟 提前做一个分频） ； TIM_ExtTRGPolarity 输入的极性；ExtTRGFilter 滤波器
 void TIM_ETRClockMode2Config(TIM_TypeDef* TIMx, uint16_t TIM_ExtTRGPrescaler, 
-                             uint16_t TIM_ExtTRGPolarity, uint16_t ExtTRGFilter);
+                             uint16_t TIM_ExtTRGPolarity, uint16_t ExtTRGFilter);// 选择ETR通过外部的时钟模式 2 输入的时钟
 void TIM_ETRConfig(TIM_TypeDef* TIMx, uint16_t TIM_ExtTRGPrescaler, uint16_t TIM_ExtTRGPolarity,
-                   uint16_t ExtTRGFilter);
-void TIM_PrescalerConfig(TIM_TypeDef* TIMx, uint16_t Prescaler, uint16_t TIM_PSCReloadMode);
-void TIM_CounterModeConfig(TIM_TypeDef* TIMx, uint16_t TIM_CounterMode);
-void TIM_SelectInputTrigger(TIM_TypeDef* TIMx, uint16_t TIM_InputTriggerSource);
+                   uint16_t ExtTRGFilter);// 单独用来配置 ETR 引脚的预分频器 极性 滤波器 这些参数
+void TIM_PrescalerConfig(TIM_TypeDef* TIMx, uint16_t Prescaler, uint16_t TIM_PSCReloadMode);// 单独写 预分频 值 的 ； Prescaler 要卸乳的 预分频值 ； TIM_PSCReloadMode写入的模式； 预分频器有个缓冲器 写入的值是在更新事件后才有效
+void TIM_CounterModeConfig(TIM_TypeDef* TIMx, uint16_t TIM_CounterMode);// 用来该表计数器的 计数模式； TIM_CounterMode 选择新的计数 模式
+void TIM_SelectInputTrigger(TIM_TypeDef* TIMx, uint16_t TIM_InputTriggerSource);//
 void TIM_EncoderInterfaceConfig(TIM_TypeDef* TIMx, uint16_t TIM_EncoderMode,
                                 uint16_t TIM_IC1Polarity, uint16_t TIM_IC2Polarity);
 void TIM_ForcedOC1Config(TIM_TypeDef* TIMx, uint16_t TIM_ForcedAction);
 void TIM_ForcedOC2Config(TIM_TypeDef* TIMx, uint16_t TIM_ForcedAction);
 void TIM_ForcedOC3Config(TIM_TypeDef* TIMx, uint16_t TIM_ForcedAction);
 void TIM_ForcedOC4Config(TIM_TypeDef* TIMx, uint16_t TIM_ForcedAction);
-void TIM_ARRPreloadConfig(TIM_TypeDef* TIMx, FunctionalState NewState);
+void TIM_ARRPreloadConfig(TIM_TypeDef* TIMx, FunctionalState NewState);// 自动重选器预装功能 配置  ； TIMx 选择某个定时器 ； 使能 还是 失能
 void TIM_SelectCOM(TIM_TypeDef* TIMx, FunctionalState NewState);
 void TIM_SelectCCDMA(TIM_TypeDef* TIMx, FunctionalState NewState);
 void TIM_CCPreloadControl(TIM_TypeDef* TIMx, FunctionalState NewState);
@@ -1121,8 +1121,8 @@ void TIM_SelectOnePulseMode(TIM_TypeDef* TIMx, uint16_t TIM_OPMode);
 void TIM_SelectOutputTrigger(TIM_TypeDef* TIMx, uint16_t TIM_TRGOSource);
 void TIM_SelectSlaveMode(TIM_TypeDef* TIMx, uint16_t TIM_SlaveMode);
 void TIM_SelectMasterSlaveMode(TIM_TypeDef* TIMx, uint16_t TIM_MasterSlaveMode);
-void TIM_SetCounter(TIM_TypeDef* TIMx, uint16_t Counter);
-void TIM_SetAutoreload(TIM_TypeDef* TIMx, uint16_t Autoreload);
+void TIM_SetCounter(TIM_TypeDef* TIMx, uint16_t Counter);// 给计数器写入一个值 ；如果想手动给一个计数制 就可以 用这个 函数
+void TIM_SetAutoreload(TIM_TypeDef* TIMx, uint16_t Autoreload);// 给自动重装器 各个自动重装值
 void TIM_SetCompare1(TIM_TypeDef* TIMx, uint16_t Compare1);
 void TIM_SetCompare2(TIM_TypeDef* TIMx, uint16_t Compare2);
 void TIM_SetCompare3(TIM_TypeDef* TIMx, uint16_t Compare3);
@@ -1136,9 +1136,9 @@ uint16_t TIM_GetCapture1(TIM_TypeDef* TIMx);
 uint16_t TIM_GetCapture2(TIM_TypeDef* TIMx);
 uint16_t TIM_GetCapture3(TIM_TypeDef* TIMx);
 uint16_t TIM_GetCapture4(TIM_TypeDef* TIMx);
-uint16_t TIM_GetCounter(TIM_TypeDef* TIMx);
-uint16_t TIM_GetPrescaler(TIM_TypeDef* TIMx);
-FlagStatus TIM_GetFlagStatus(TIM_TypeDef* TIMx, uint16_t TIM_FLAG);
+uint16_t TIM_GetCounter(TIM_TypeDef* TIMx);// 获取当前计数器 的值 ；如果想看当前计数器到哪里了  就可以调用这个函数
+uint16_t TIM_GetPrescaler(TIM_TypeDef* TIMx);//获取当前 预分频器的值
+FlagStatus TIM_GetFlagStatus(TIM_TypeDef* TIMx, uint16_t TIM_FLAG);// 下面四个 是 获取 清除 标志位的 函数
 void TIM_ClearFlag(TIM_TypeDef* TIMx, uint16_t TIM_FLAG);
 ITStatus TIM_GetITStatus(TIM_TypeDef* TIMx, uint16_t TIM_IT);
 void TIM_ClearITPendingBit(TIM_TypeDef* TIMx, uint16_t TIM_IT);

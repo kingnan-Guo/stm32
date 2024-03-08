@@ -2,7 +2,7 @@
 #include "LED.h"
 #include "delay.h"
 #include "OLED.h"
-#include "countSensor.h"
+//#include "countSensor.h"
 
 int main(void) {
     int64_t birth = 19930620;
@@ -19,13 +19,13 @@ int main(void) {
 
     LED_Init();
 
-    // 执行中中断 初始化
-    countSensor_Init();
 	while(1) {
         LED1_Turn();
         Delay_ms(1000);
-        birth = birth + 1;
-        OLED_ShowNum(2, 1, birth,8);
-        OLED_ShowNum(3, 1,  getCount(),5);
+//        birth = birth + 1;
+//        OLED_ShowNum(2, 1, birth,8);
+//        OLED_ShowNum(3, 1,  getCount(),5);
+
+
     }
 }

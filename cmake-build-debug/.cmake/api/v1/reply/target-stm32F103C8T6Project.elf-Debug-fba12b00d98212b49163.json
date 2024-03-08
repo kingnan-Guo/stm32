@@ -28,13 +28,7 @@
 			{
 				"command" : 0,
 				"file" : 0,
-				"line" : 76,
-				"parent" : 0
-			},
-			{
-				"command" : 1,
-				"file" : 0,
-				"line" : 72,
+				"line" : 77,
 				"parent" : 0
 			},
 			{
@@ -47,6 +41,12 @@
 				"command" : 1,
 				"file" : 0,
 				"line" : 74,
+				"parent" : 0
+			},
+			{
+				"command" : 1,
+				"file" : 0,
+				"line" : 75,
 				"parent" : 0
 			},
 			{
@@ -76,7 +76,7 @@
 			{
 				"command" : 3,
 				"file" : 0,
-				"line" : 65,
+				"line" : 66,
 				"parent" : 0
 			},
 			{
@@ -180,6 +180,10 @@
 				{
 					"backtrace" : 10,
 					"path" : "/Users/kingnan/Documents/github/stm32/components/countSensor"
+				},
+				{
+					"backtrace" : 10,
+					"path" : "/Users/kingnan/Documents/github/stm32/components/Timer"
 				}
 			],
 			"language" : "C",
@@ -224,7 +228,8 @@
 				58,
 				60,
 				62,
-				64
+				64,
+				66
 			]
 		},
 		{
@@ -326,12 +331,16 @@
 				{
 					"backtrace" : 10,
 					"path" : "/Users/kingnan/Documents/github/stm32/components/countSensor"
+				},
+				{
+					"backtrace" : 10,
+					"path" : "/Users/kingnan/Documents/github/stm32/components/Timer"
 				}
 			],
 			"language" : "ASM",
 			"sourceIndexes" : 
 			[
-				67
+				69
 			]
 		}
 	],
@@ -425,7 +434,8 @@
 				58,
 				60,
 				62,
-				64
+				64,
+				66
 			]
 		},
 		{
@@ -465,7 +475,8 @@
 				61,
 				63,
 				65,
-				66
+				67,
+				68
 			]
 		},
 		{
@@ -473,8 +484,8 @@
 			"sourceIndexes" : 
 			[
 				52,
-				67,
-				68
+				69,
+				70
 			]
 		}
 	],
@@ -796,6 +807,17 @@
 		{
 			"backtrace" : 1,
 			"path" : "components/LED/LED.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "components/Timer/Timer.c",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"path" : "components/Timer/Timer.h",
 			"sourceGroupIndex" : 1
 		},
 		{
