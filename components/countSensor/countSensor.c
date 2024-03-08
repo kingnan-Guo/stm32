@@ -32,8 +32,8 @@ void countSensor_Init(void){
     EXTI_InitStruct.EXTI_LineCmd = ENABLE;
     // 外部中断 的模式 分为 中断 模式  事件模式
     EXTI_InitStruct.EXTI_Mode = EXTI_Mode_Interrupt;//
-    // 下降沿触法
-    EXTI_InitStruct.EXTI_Trigger = EXTI_Trigger_Falling;
+    // 下降沿触法 EXTI_Trigger_Falling   上升沿触发EXTI_Trigger_Rising 上升下降沿触发 EXTI_Trigger_Rising_Falling
+    EXTI_InitStruct.EXTI_Trigger = EXTI_Trigger_Rising_Falling;
     EXTI_Init(&EXTI_InitStruct);
 
     // 配置 NVIC
