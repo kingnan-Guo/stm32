@@ -22,13 +22,16 @@ int main(void) {
 //    OLED_Clear();
     LED_Init();
     Timer_Init();
+    OLED_ShowString(2, 1, "CNT");
 	while(1) {
 
 
-        OLED_ShowNum(2, 1, birth,8);
-        //OLED_ShowNum(3, 1,  getCount(), 5);
+
+
+        OLED_ShowNum(2, 5,  Timer_GetCounter(), 5);
+
         OLED_ShowNum(3, 1, number_timer_interrupt, 8);
-        OLED_ShowNum(4, 1, TIM_GetCounter(TIM2), 5);
+//        OLED_ShowNum(4, 1, TIM_GetCounter(TIM2), 5);
 
     }
 }
@@ -40,7 +43,6 @@ void TIM2_IRQHandler(void){
     // 检测中断标志位 ; TIM_GetITStatus 获取中断标志位 ； TIM2 选择的时钟； TIM_IT_Update 哪种 中断方式
     if (TIM_GetITStatus(TIM2, TIM_IT_Update) == SET) {
         number_timer_interrupt ++;
-        birth = birth + 1;
         LED1_Turn();
         // 清除 中断 标志位
         TIM_ClearITPendingBit(TIM2, TIM_IT_Update);

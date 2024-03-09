@@ -1107,8 +1107,8 @@ void TIM_ETRClockMode1Config(TIM_TypeDef* TIMx, uint16_t TIM_ExtTRGPrescaler, ui
   *     @arg TIM_ExtTRGPSC_DIV8: ETRP frequency divided by 8.
   * @param  TIM_ExtTRGPolarity: The external Trigger Polarity.
   *   This parameter can be one of the following values:
-  *     @arg TIM_ExtTRGPolarity_Inverted: active low or falling edge active.
-  *     @arg TIM_ExtTRGPolarity_NonInverted: active high or rising edge active.
+  *     @arg TIM_ExtTRGPolarity_Inverted: active low or falling edge active. 低电平或下降沿有效
+  *     @arg TIM_ExtTRGPolarity_NonInverted: active high or rising edge active. 高电平或上升沿有效
   * @param  ExtTRGFilter: External Trigger Filter.
   *   This parameter must be a value between 0x00 and 0x0F
   * @retval None

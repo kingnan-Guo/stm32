@@ -37,5 +37,4 @@ CMakeFiles/stm32F103C8T6Project.elf.dir/User/main.c.obj: \
  /Users/kingnan/Documents/github/stm32/components/LED/LED.h \
  /Users/kingnan/Documents/github/stm32/components/delay/delay.h \
  /Users/kingnan/Documents/github/stm32/components/oled/OLED.h \
- /Users/kingnan/Documents/github/stm32/components/countSensor/countSensor.h \
  /Users/kingnan/Documents/github/stm32/components/Timer/Timer.h
