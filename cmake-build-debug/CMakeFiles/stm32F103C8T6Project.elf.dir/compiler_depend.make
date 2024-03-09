@@ -910,6 +910,8 @@ CMakeFiles/stm32F103C8T6Project.elf.dir/User/main.c.obj: /Users/kingnan/Document
   /Users/kingnan/Documents/github/stm32/Libraries/STM32F10x_StdPeriph_Driver/inc/stm32f10x_wwdg.h \
   /Users/kingnan/Documents/github/stm32/User/stm32f10x_conf.h \
   /Users/kingnan/Documents/github/stm32/components/LED/LED.h \
+  /Users/kingnan/Documents/github/stm32/components/Timer/Timer.h \
+  /Users/kingnan/Documents/github/stm32/components/countSensor/countSensor.h \
   /Users/kingnan/Documents/github/stm32/components/delay/delay.h \
   /Users/kingnan/Documents/github/stm32/components/oled/OLED.h
 
@@ -1180,6 +1182,10 @@ CMakeFiles/stm32F103C8T6Project.elf.dir/components/oled/OLED.c.obj: /Users/kingn
 /Users/kingnan/Documents/github/stm32/User/stm32f10x_it.h:
 
 /Users/kingnan/Documents/github/stm32/components/oled/OLED.h:
+
+/Users/kingnan/Documents/github/stm32/components/countSensor/countSensor.h:
+
+/Users/kingnan/Documents/github/stm32/components/Timer/Timer.h:
 
 /Users/kingnan/Documents/github/stm32/Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_tim.c:
 
