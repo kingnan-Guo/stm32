@@ -2,13 +2,14 @@
 #include "LED.h"
 #include "delay.h"
 #include "OLED.h"
-#include "countSensor.h"
+//#include "countSensor.h"
 #include "Timer.h"
 
 uint16_t number_timer_interrupt = 0;
+int64_t birth = 19930620;
 
 int main(void) {
-    int64_t birth = 19930620;
+
     OLED_Init();
 //    OLED_ShowChar(1, 1, 'Y');
 //    OLED_ShowChar(1, 2, 'e');
@@ -22,10 +23,9 @@ int main(void) {
     LED_Init();
     Timer_Init();
 	while(1) {
-        LED1_Turn();
-//        Delay_ms(2000);
-//        birth = birth + 1;
-//        OLED_ShowNum(2, 1, birth,8);
+
+
+        OLED_ShowNum(2, 1, birth,8);
         //OLED_ShowNum(3, 1,  getCount(), 5);
         OLED_ShowNum(3, 1, number_timer_interrupt, 8);
         OLED_ShowNum(4, 1, TIM_GetCounter(TIM2), 5);
@@ -40,6 +40,8 @@ void TIM2_IRQHandler(void){
     // 检测中断标志位 ; TIM_GetITStatus 获取中断标志位 ； TIM2 选择的时钟； TIM_IT_Update 哪种 中断方式
     if (TIM_GetITStatus(TIM2, TIM_IT_Update) == SET) {
         number_timer_interrupt ++;
+        birth = birth + 1;
+        LED1_Turn();
         // 清除 中断 标志位
         TIM_ClearITPendingBit(TIM2, TIM_IT_Update);
     }
