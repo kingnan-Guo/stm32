@@ -22,7 +22,7 @@
 
 void Timer_Init(void){
     // 开启时钟
-    RCC_APB1PeriphResetCmd(RCC_APB1Periph_TIM2, ENABLE);
+    RCC_APB1PeriphClockCmd(RCC_APB1Periph_TIM2, ENABLE);
     // 选择 时基单元 (如果 不写 也是默认使用内部时钟)
     TIM_InternalClockConfig(TIM2);// 选择内部时钟 TIM2
     //配置时基单元

@@ -23,9 +23,9 @@ int main(void) {
     Timer_Init();
 	while(1) {
         LED1_Turn();
-        Delay_ms(2000);
-        birth = birth + 1;
-        OLED_ShowNum(2, 1, birth,8);
+//        Delay_ms(2000);
+//        birth = birth + 1;
+//        OLED_ShowNum(2, 1, birth,8);
         //OLED_ShowNum(3, 1,  getCount(), 5);
         OLED_ShowNum(3, 1, number_timer_interrupt, 8);
         OLED_ShowNum(4, 1, TIM_GetCounter(TIM2), 5);
