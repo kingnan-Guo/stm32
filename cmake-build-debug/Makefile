@@ -801,6 +801,30 @@ components/LED/LED.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/stm32F103C8T6Project.elf.dir/build.make CMakeFiles/stm32F103C8T6Project.elf.dir/components/LED/LED.c.s
 .PHONY : components/LED/LED.c.s
 
+components/PWM/PWM.obj: components/PWM/PWM.c.obj
+.PHONY : components/PWM/PWM.obj
+
+# target to build an object file
+components/PWM/PWM.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/stm32F103C8T6Project.elf.dir/build.make CMakeFiles/stm32F103C8T6Project.elf.dir/components/PWM/PWM.c.obj
+.PHONY : components/PWM/PWM.c.obj
+
+components/PWM/PWM.i: components/PWM/PWM.c.i
+.PHONY : components/PWM/PWM.i
+
+# target to preprocess a source file
+components/PWM/PWM.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/stm32F103C8T6Project.elf.dir/build.make CMakeFiles/stm32F103C8T6Project.elf.dir/components/PWM/PWM.c.i
+.PHONY : components/PWM/PWM.c.i
+
+components/PWM/PWM.s: components/PWM/PWM.c.s
+.PHONY : components/PWM/PWM.s
+
+# target to generate assembly for a file
+components/PWM/PWM.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/stm32F103C8T6Project.elf.dir/build.make CMakeFiles/stm32F103C8T6Project.elf.dir/components/PWM/PWM.c.s
+.PHONY : components/PWM/PWM.c.s
+
 components/Timer/Timer.obj: components/Timer/Timer.c.obj
 .PHONY : components/Timer/Timer.obj
 
@@ -1022,6 +1046,9 @@ help:
 	@echo "... components/LED/LED.obj"
 	@echo "... components/LED/LED.i"
 	@echo "... components/LED/LED.s"
+	@echo "... components/PWM/PWM.obj"
+	@echo "... components/PWM/PWM.i"
+	@echo "... components/PWM/PWM.s"
 	@echo "... components/Timer/Timer.obj"
 	@echo "... components/Timer/Timer.i"
 	@echo "... components/Timer/Timer.s"

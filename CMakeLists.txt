@@ -60,6 +60,7 @@ include_directories(
         components/oled
         components/countSensor
         components/Timer
+        components/PWM
 )
 
 
