@@ -283,13 +283,18 @@ typedef struct
 /** @defgroup TIM_Output_Compare_and_PWM_modes 
   * @{
   */
+/**
+*  TIM_ForcedAction_Active  强制输出模式
+*  TIM_ForcedAction_InActive 强制输出模式
+*  但这两种模式 不允许初始化时 使用
+*/
 
-#define TIM_OCMode_Timing                  ((uint16_t)0x0000)
-#define TIM_OCMode_Active                  ((uint16_t)0x0010)
-#define TIM_OCMode_Inactive                ((uint16_t)0x0020)
-#define TIM_OCMode_Toggle                  ((uint16_t)0x0030)
-#define TIM_OCMode_PWM1                    ((uint16_t)0x0060)
-#define TIM_OCMode_PWM2                    ((uint16_t)0x0070)
+#define TIM_OCMode_Timing                  ((uint16_t)0x0000)// 冻结模式
+#define TIM_OCMode_Active                  ((uint16_t)0x0010)// 相等时 置 有效电平
+#define TIM_OCMode_Inactive                ((uint16_t)0x0020)// 相等时 置 无效电平
+#define TIM_OCMode_Toggle                  ((uint16_t)0x0030)// 相等时 电平翻转
+#define TIM_OCMode_PWM1                    ((uint16_t)0x0060)// PWM 模式 1
+#define TIM_OCMode_PWM2                    ((uint16_t)0x0070)// PWM 模式 2
 #define IS_TIM_OC_MODE(MODE) (((MODE) == TIM_OCMode_Timing) || \
                               ((MODE) == TIM_OCMode_Active) || \
                               ((MODE) == TIM_OCMode_Inactive) || \
@@ -304,6 +309,8 @@ typedef struct
                           ((MODE) == TIM_OCMode_PWM2) ||	\
                           ((MODE) == TIM_ForcedAction_Active) || \
                           ((MODE) == TIM_ForcedAction_InActive))
+
+
 /**
   * @}
   */
