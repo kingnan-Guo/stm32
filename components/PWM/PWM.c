@@ -15,7 +15,21 @@ void pwm_Init(void){
     // 选择 时基单元 (如果 不写 也是默认使用内部时钟)
     TIM_InternalClockConfig(TIM2);// 选择内部时钟 TIM2
 
-
+    /**
+     * 重定向 相关
+     * 1、首先开启 AFIO; AFIO:复用功能引脚重映射，外部中断引脚选择
+     * 2、部分重映射1的方式
+     * 3、 关闭 GPIOA_Pin_15 的 默认 功能 变为 普通引脚
+     *
+     * 4、 GPIO_Pin_0 要改成 GPIO_Pin_15 才能使用； GPIO_InitStructre.GPIO_Pin = GPIO_Pin_0; => GPIO_InitStructre.GPIO_Pin = GPIO_Pin_15;
+     */
+//    RCC_APB2PeriphClockCmd(RCC_APB2Periph_AFIO, ENABLE);
+//    // 有四种重定向的方式
+//    // 这里选择 部分重映射1的方式
+//    GPIO_PinRemapConfig(GPIO_PartialRemap1_TIM2, ENABLE);//
+//    //因为 GPIOA_Pin_15 有 默认复用 为 调试 JTDI ，所以若是 想要 GPIOA_Pin_15 为普通的 GPIO 那么也要做 重映射
+//    // 使用 GPIO_PinRemapConfig 配置 GPIO_Remap_SWJ_JTAGDisable ；关闭JTAG ；保留 SW ；因为sw 还要作为 st-link 烧录程序
+//    GPIO_PinRemapConfig(GPIO_Remap_SWJ_JTAGDisable, ENABLE);
 
 
 
