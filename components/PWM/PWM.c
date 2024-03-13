@@ -38,7 +38,7 @@ void PWM_Init(void){
      */
     RCC_APB2PeriphClockCmd(RCC_APB2Periph_GPIOA, ENABLE);
     GPIO_InitTypeDef GPIO_InitStructre;
-    GPIO_InitStructre.GPIO_Pin = GPIO_Pin_0;
+    GPIO_InitStructre.GPIO_Pin = GPIO_Pin_0; //GPIO_Pin_15
     GPIO_InitStructre.GPIO_Mode = GPIO_Mode_AF_PP;// 复用推挽输出，要用定时器直接控制引脚； 输出控制权转移给片上外设；PWM的波形才能通过引脚输出
     GPIO_InitStructre.GPIO_Speed = GPIO_Speed_50MHz;
     GPIO_Init(GPIOA, &GPIO_InitStructre);
