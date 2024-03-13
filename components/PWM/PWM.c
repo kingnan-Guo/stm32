@@ -8,7 +8,7 @@
  */
 #include "stm32f10x.h"
 
-void pwm_Init(void){
+void PWM_Init(void){
     // 开启时钟
     RCC_APB1PeriphClockCmd(RCC_APB1Periph_TIM2, ENABLE);
 
@@ -49,7 +49,7 @@ void pwm_Init(void){
      * 第四个参数 滤波器  采样电判定 高低电平 ； 以一个采样频率 F ，采样 N 个点 ； 如果N 个点 都一样 才会有效输出 ;这个值  就是 来决定  F 和 N 的
      *   0x00 是  不用滤波器
     */
-    TIM_ETRClockMode2Config(TIM2, TIM_ExtTRGPSC_OFF, TIM_ExtTRGPolarity_NonInverted, 0x00);
+//    TIM_ETRClockMode2Config(TIM2, TIM_ExtTRGPSC_OFF, TIM_ExtTRGPolarity_NonInverted, 0x00);
 
     //配置时基单元
     TIM_TimeBaseInitTypeDef TIM_TimeBaseInitStructure;
@@ -79,6 +79,6 @@ void pwm_Init(void){
 }
 
 
-void PWM_SetComplare1(uint16_t Compare){
+void PWM_SetCompare1(uint16_t Compare){
     TIM_SetCompare1(TIM2,  Compare);
 };
