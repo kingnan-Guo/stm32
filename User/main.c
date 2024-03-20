@@ -20,17 +20,20 @@ int main(void) {
 //    Delay_ms(2000);
 //    OLED_Clear();
 //    LED_Init();
+
+
     PWM_Init();
+    PWM_SetCompare2(1400);
 	while(1) {
-        for (i = 0; i <= 100; i++)
-        {
-            PWM_SetCompare1(i);
-            Delay_ms(10);
-        }
-        for (i = 0; i <= 100; i++)
-        {
-            PWM_SetCompare1(100 - i);
-            Delay_ms(10);
-        }
+//        for (i = 0; i <= 2500; i++)
+//        {
+//            PWM_SetCompare2(i);
+//            Delay_ms(1000);
+//        }
+//        for (i = 0; i <= 100; i++)
+//        {
+//            PWM_SetCompare2(100 - i);
+//            Delay_ms(100);
+//        }
     };
 };
