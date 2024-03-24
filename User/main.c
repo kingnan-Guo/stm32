@@ -4,12 +4,13 @@
 #include "OLED.h"
 //#include "countSensor.h"
 #include "Timer.h"
-#include "PWM.h"
+#include "servo.h"
 
 uint8_t i;
 
 int main(void) {
 //    OLED_Init();
+//    servo_init(void)
 //    OLED_ShowChar(1, 1, 'Y');
 //    OLED_ShowChar(1, 2, 'e');
 //    OLED_ShowString(1, 4, "miaomiao");
@@ -21,19 +22,22 @@ int main(void) {
 //    OLED_Clear();
 //    LED_Init();
 
+    OLED_Init();
+    servo_init();
+    servo_setAngle(90);
+    OLED_ShowString(1, 4, "miaomiao");
 
-    PWM_Init();
-    PWM_SetCompare2(1400);
 	while(1) {
-//        for (i = 0; i <= 2500; i++)
-//        {
-//            PWM_SetCompare2(i);
-//            Delay_ms(1000);
-//        }
-//        for (i = 0; i <= 100; i++)
-//        {
-//            PWM_SetCompare2(100 - i);
-//            Delay_ms(100);
-//        }
+        keyNUm = key_GetName();
+        if(kekeyNUm == 1){
+            Angel += 30;
+            if (Angel >180){
+
+                Ange = 1000;
+
+            }
+        }
+        servo_setAngle(90);
+        OLED_ShowNum(1, 7, weke,3);
     };
 };

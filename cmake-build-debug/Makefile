@@ -945,6 +945,30 @@ components/oled/OLED.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/stm32F103C8T6Project.elf.dir/build.make CMakeFiles/stm32F103C8T6Project.elf.dir/components/oled/OLED.c.s
 .PHONY : components/oled/OLED.c.s
 
+components/servo/servo.obj: components/servo/servo.c.obj
+.PHONY : components/servo/servo.obj
+
+# target to build an object file
+components/servo/servo.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/stm32F103C8T6Project.elf.dir/build.make CMakeFiles/stm32F103C8T6Project.elf.dir/components/servo/servo.c.obj
+.PHONY : components/servo/servo.c.obj
+
+components/servo/servo.i: components/servo/servo.c.i
+.PHONY : components/servo/servo.i
+
+# target to preprocess a source file
+components/servo/servo.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/stm32F103C8T6Project.elf.dir/build.make CMakeFiles/stm32F103C8T6Project.elf.dir/components/servo/servo.c.i
+.PHONY : components/servo/servo.c.i
+
+components/servo/servo.s: components/servo/servo.c.s
+.PHONY : components/servo/servo.s
+
+# target to generate assembly for a file
+components/servo/servo.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/stm32F103C8T6Project.elf.dir/build.make CMakeFiles/stm32F103C8T6Project.elf.dir/components/servo/servo.c.s
+.PHONY : components/servo/servo.c.s
+
 startup/startup_stm32f103c8tx.obj: startup/startup_stm32f103c8tx.s.obj
 .PHONY : startup/startup_stm32f103c8tx.obj
 
@@ -1064,6 +1088,9 @@ help:
 	@echo "... components/oled/OLED.obj"
 	@echo "... components/oled/OLED.i"
 	@echo "... components/oled/OLED.s"
+	@echo "... components/servo/servo.obj"
+	@echo "... components/servo/servo.i"
+	@echo "... components/servo/servo.s"
 	@echo "... startup/startup_stm32f103c8tx.obj"
 .PHONY : help
 

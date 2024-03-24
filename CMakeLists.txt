@@ -61,6 +61,7 @@ include_directories(
         components/countSensor
         components/Timer
         components/PWM
+        components/servo
 )
 
 

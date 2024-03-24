@@ -31,6 +31,7 @@ set(CMAKE_ASM_TARGET_INCLUDE_PATH
   "/Users/kingnan/Documents/github/stm32/components/countSensor"
   "/Users/kingnan/Documents/github/stm32/components/Timer"
   "/Users/kingnan/Documents/github/stm32/components/PWM"
+  "/Users/kingnan/Documents/github/stm32/components/servo"
   )
 
 # The set of dependency files which are needed:
@@ -69,6 +70,7 @@ set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "/Users/kingnan/Documents/github/stm32/components/delay/delay.c" "CMakeFiles/stm32F103C8T6Project.elf.dir/components/delay/delay.c.obj" "gcc" "CMakeFiles/stm32F103C8T6Project.elf.dir/components/delay/delay.c.obj.d"
   "/Users/kingnan/Documents/github/stm32/components/key/key.c" "CMakeFiles/stm32F103C8T6Project.elf.dir/components/key/key.c.obj" "gcc" "CMakeFiles/stm32F103C8T6Project.elf.dir/components/key/key.c.obj.d"
   "/Users/kingnan/Documents/github/stm32/components/oled/OLED.c" "CMakeFiles/stm32F103C8T6Project.elf.dir/components/oled/OLED.c.obj" "gcc" "CMakeFiles/stm32F103C8T6Project.elf.dir/components/oled/OLED.c.obj.d"
+  "/Users/kingnan/Documents/github/stm32/components/servo/servo.c" "CMakeFiles/stm32F103C8T6Project.elf.dir/components/servo/servo.c.obj" "gcc" "CMakeFiles/stm32F103C8T6Project.elf.dir/components/servo/servo.c.obj.d"
   )
 
 # Targets to which this target links which contain Fortran sources.
