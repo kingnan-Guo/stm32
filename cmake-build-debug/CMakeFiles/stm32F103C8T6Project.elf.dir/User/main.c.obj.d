@@ -38,4 +38,5 @@ CMakeFiles/stm32F103C8T6Project.elf.dir/User/main.c.obj: \
  /Users/kingnan/Documents/github/stm32/components/delay/delay.h \
  /Users/kingnan/Documents/github/stm32/components/oled/OLED.h \
  /Users/kingnan/Documents/github/stm32/components/Timer/Timer.h \
- /Users/kingnan/Documents/github/stm32/components/PWM/PWM.h
+ /Users/kingnan/Documents/github/stm32/components/servo/servo.h \
+ /Users/kingnan/Documents/github/stm32/components/key/key.h
