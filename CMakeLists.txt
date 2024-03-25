@@ -62,6 +62,7 @@ include_directories(
         components/Timer
         components/PWM
         components/servo
+        components/DCMotor
 )
 
 

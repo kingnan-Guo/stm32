@@ -38,6 +38,7 @@
 					<Add directory="/Users/kingnan/Documents/github/stm32/components/Timer"/>
 					<Add directory="/Users/kingnan/Documents/github/stm32/components/PWM"/>
 					<Add directory="/Users/kingnan/Documents/github/stm32/components/servo"/>
+					<Add directory="/Users/kingnan/Documents/github/stm32/components/DCMotor"/>
 					<Add directory="/Applications/ArmGNUToolchain/13.2.Rel1/arm-none-eabi/bin/../lib/gcc/arm-none-eabi/13.2.1/../../../../arm-none-eabi/include/c++/13.2.1"/>
 					<Add directory="/Applications/ArmGNUToolchain/13.2.Rel1/arm-none-eabi/bin/../lib/gcc/arm-none-eabi/13.2.1/../../../../arm-none-eabi/include/c++/13.2.1/arm-none-eabi"/>
 					<Add directory="/Applications/ArmGNUToolchain/13.2.Rel1/arm-none-eabi/bin/../lib/gcc/arm-none-eabi/13.2.1/../../../../arm-none-eabi/include/c++/13.2.1/backward"/>
@@ -73,6 +74,7 @@
 					<Add directory="/Users/kingnan/Documents/github/stm32/components/Timer"/>
 					<Add directory="/Users/kingnan/Documents/github/stm32/components/PWM"/>
 					<Add directory="/Users/kingnan/Documents/github/stm32/components/servo"/>
+					<Add directory="/Users/kingnan/Documents/github/stm32/components/DCMotor"/>
 					<Add directory="/Applications/ArmGNUToolchain/13.2.Rel1/arm-none-eabi/bin/../lib/gcc/arm-none-eabi/13.2.1/../../../../arm-none-eabi/include/c++/13.2.1"/>
 					<Add directory="/Applications/ArmGNUToolchain/13.2.Rel1/arm-none-eabi/bin/../lib/gcc/arm-none-eabi/13.2.1/../../../../arm-none-eabi/include/c++/13.2.1/arm-none-eabi"/>
 					<Add directory="/Applications/ArmGNUToolchain/13.2.Rel1/arm-none-eabi/bin/../lib/gcc/arm-none-eabi/13.2.1/../../../../arm-none-eabi/include/c++/13.2.1/backward"/>
@@ -277,6 +279,12 @@
 			<Option target="stm32F103C8T6Project.elf"/>
 		</Unit>
 		<Unit filename="/Users/kingnan/Documents/github/stm32/User/stm32f10x_it.h">
+			<Option target="stm32F103C8T6Project.elf"/>
+		</Unit>
+		<Unit filename="/Users/kingnan/Documents/github/stm32/components/DCMotor/DCMotor.c">
+			<Option target="stm32F103C8T6Project.elf"/>
+		</Unit>
+		<Unit filename="/Users/kingnan/Documents/github/stm32/components/DCMotor/DCMotor.h">
 			<Option target="stm32F103C8T6Project.elf"/>
 		</Unit>
 		<Unit filename="/Users/kingnan/Documents/github/stm32/components/LED/LED.c">

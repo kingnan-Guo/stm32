@@ -21,7 +21,7 @@ void PWM_Init(void){
      */
     RCC_APB2PeriphClockCmd(RCC_APB2Periph_GPIOA, ENABLE);
     GPIO_InitTypeDef GPIO_InitStructure;
-    GPIO_InitStructure.GPIO_Pin = GPIO_Pin_1;
+    GPIO_InitStructure.GPIO_Pin = GPIO_Pin_2;
     GPIO_InitStructure.GPIO_Mode = GPIO_Mode_AF_PP;// 复用推挽输出，要用定时器直接控制引脚； 输出控制权转移给片上外设；PWM的波形才能通过引脚输出
     GPIO_InitStructure.GPIO_Speed = GPIO_Speed_50MHz;
     GPIO_Init(GPIOA, &GPIO_InitStructure);
@@ -44,7 +44,7 @@ void PWM_Init(void){
     TIM_TimeBaseInitStructure.TIM_ClockDivision = TIM_CKD_DIV1;// 滤波器   TIM_CKD_DIV1 不分频
     TIM_TimeBaseInitStructure.TIM_CounterMode = TIM_CounterMode_Up;// 计数器 模式 ； TIM_CounterMode_Up 向上 计数
     TIM_TimeBaseInitStructure.TIM_Period =  20000 - 1; // 周期 ARR 自动重装器的值 (有一个数的偏差 ，取值 要早65535 之间)； 在 10k 的频率下 计数10000 就是 1s
-    TIM_TimeBaseInitStructure.TIM_Prescaler = 72  - 1;// PSC 预分频 的值 (有一个数的偏差 ，取值 要早65535 之间)；  对 72MHZ 进行7200 分频 得到10k 计数频率； 在 10k 的频率下 计数10000 就是 1s
+    TIM_TimeBaseInitStructure.TIM_Prescaler = 36  - 1;// 36 分频 20KHZ ；PSC 预分频 的值 (有一个数的偏差 ，取值 要早65535 之间)；  对 72MHZ 进行7200 分频 得到10k 计数频率； 在 10k 的频率下 计数10000 就是 1s
     TIM_TimeBaseInitStructure.TIM_RepetitionCounter = 0;// 重复计数器的值 （高级计数器才有的值）
     TIM_TimeBaseInit(TIM2, &TIM_TimeBaseInitStructure);
 
@@ -60,8 +60,8 @@ void PWM_Init(void){
     TIM_OCInitStructure.TIM_OCNPolarity  = TIM_OCPolarity_High;//输出比较 极性;选择 REF 有效时 输出 高电平
     TIM_OCInitStructure.TIM_OutputState = TIM_OutputState_Enable;//输出 使能 ； 开启
     TIM_OCInitStructure.TIM_Pulse = 0;// 设置RCC寄存器的值 ； （Capture Compare Register）输出比较寄存器 ； 直译 脉冲；改变CCR来改变 占空比
-    //通道 2 初始化
-    TIM_OC2Init(TIM2, &TIM_OCInitStructure);
+    // 通道 2 初始化
+    TIM_OC3Init(TIM2, &TIM_OCInitStructure);
     // 可使用 此进行通道一 初始化，那么 这样就可以 同时两个通道 来输出 两个 pwm 了
 //    TIM_OC1Init(TIM1, &TIM_OCInitStructure);
     //通道3  通道4 也是可以同时 使用的
@@ -78,6 +78,6 @@ void PWM_Init(void){
 }
 
 
-void PWM_SetCompare2(uint16_t Compare){
-    TIM_SetCompare2(TIM2,  Compare);
+void PWM_SetCompare3(uint16_t Compare){
+    TIM_SetCompare3(TIM2,  Compare);
 };
