@@ -17,8 +17,10 @@ int main(void) {
     PWM_SetPrescaler(720 -1); // 频率 Freq = 72MHZ / (psc + 1) / (Arr + 1) ; 当前 (Arr + 1) = 100 ; == 1KHZ
     PWM_SetCompare1(50);  // 占空比  Duty =  RCC / （ARR + 1）   == 50
 
-    OLED_ShowString(1, 1, "FReq: 00000 HZ");
+    OLED_ShowString(1, 1, "FReq: 00000HZ");
+    OLED_ShowString(2, 1, "Duty: 00%");
     while(1) {
         OLED_ShowNum(1, 7, IC_GetFreq(),5);
+        OLED_ShowNum(2, 7, IC_GetDuty(),2);
     }
 }

@@ -9,6 +9,18 @@
  *
  *
  *  最后调用 TIM_Cmd 开启定时器
+ *
+ *
+ *  当前 测量的 最低频率
+ *     1M / 65535  约等于 15Hz
+ *   如果小于 15HZ 那么 就溢出了
+ *
+ *   如果想再测更低的频率 那么 预分频 就更大一些，这样标准频率就降低
+ *
+ *   如果测其他的信号 有可能 会有比较大的误差
+ *      1、晶振 几万次的误差积累
+ *      2、接收其他信号的 晶振 误差
+ *      3、还有滤波的需求
  */
 #include "stm32f10x.h"
 /**
@@ -45,7 +57,11 @@ void IC_Init(void){
     TIM_TimeBaseInitStructure.TIM_RepetitionCounter = 0;// 重复计数器的值 （高级计数器才有的值）
     TIM_TimeBaseInit(TIM3, &TIM_TimeBaseInitStructure);// 时基单元 初始化
 
-    // 配置 初始化 输入
+    /**
+     * 配置  初始化 输入
+     *  通道 1 盆中 上升沿 触发
+     *  通道 2 配置 下降沿 触发
+     */
     TIM_ICInitTypeDef TIM_ICInitStructure;
     TIM_ICInitStructure.TIM_Channel = TIM_Channel_1;// 选择 通道 TIM_Channel_1
     TIM_ICInitStructure.TIM_ICFilter = 0xF;// 配置输入捕获的滤波器 0x0 ～ 0xF 值越大 滤波效果 越好
@@ -53,6 +69,28 @@ void IC_Init(void){
     TIM_ICInitStructure.TIM_ICPrescaler = TIM_ICPSC_DIV1;//分频器  不分频 ； 就是每 上升沿 都有效 TIM_ICPSC_DIV1
     TIM_ICInitStructure.TIM_ICSelection = TIM_ICSelection_DirectTI;// 选择 触发信号 从 哪个 引脚 输入 ； 这个参数 是配置 输入选择器的 ； 可以选择 直连通道 或者 是 交叉通道
     TIM_ICInit(TIM3, &TIM_ICInitStructure);
+
+    // 此处 可行 ； 可使用 TIM_PWMIConfig 替换下面这段
+    // TIM_ICInitStructure.TIM_Channel = TIM_Channel_2;// 选择 通道 TIM_Channel_2
+    // TIM_ICInitStructure.TIM_ICFilter = 0xF;// 配置输入捕获的滤波器 0x0 ～ 0xF 值越大 滤波效果 越好
+    // TIM_ICInitStructure.TIM_ICPolarity = TIM_ICPolarity_Falling;//极性 ； 边沿检测 极性检查； 选择  TIM_ICPolarity_Rising 上升沿触发 还是 TIM_ICPolarity_Falling下降沿触发
+    // TIM_ICInitStructure.TIM_ICPrescaler = TIM_ICPSC_DIV1;//分频器  不分频 ； 就是每 上升沿 都有效 TIM_ICPSC_DIV1
+    // TIM_ICInitStructure.TIM_ICSelection = TIM_ICSelection_IndirectTI;// 交叉输入 ； 选择 触发信号 从 哪个 引脚 输入 ； 这个参数 是配置 输入选择器的 ； 可以选择 直连通道 或者 是 交叉通道
+    // TIM_ICInit(TIM3, &TIM_ICInitStructure);
+
+    /**
+     * TIM_PWMIConfig
+     * 只需配置一个 通道 TIM_PWMIConfig 会把另一个 通道 至为 相反的
+     *
+     * 因为 通道1 是 直接 上升沿
+     * 配置 通道2 交叉 下降沿
+     *
+     *   只支持 通道1 通道2 的参数
+     */
+    TIM_PWMIConfig(TIM3, &TIM_ICInitStructure);
+
+
+
 
     /**
      * 主从模式 配置 好
@@ -79,3 +117,9 @@ void IC_Init(void){
 uint32_t IC_GetFreq(void){
     return 1000000 / (TIM_GetCapture1(TIM3) + 1);
 }
+
+//计算 占空比的 函数 CCR2 /CCR1
+uint32_t IC_GetDuty(void){
+    return  (TIM_GetCapture2(TIM3) + 1) * 100 / (TIM_GetCapture1(TIM3) + 1);
+}
+
