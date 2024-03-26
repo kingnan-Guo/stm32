@@ -34,12 +34,12 @@ void Motor_SetSpeed(float speed){
     if(speed > 0){
         GPIO_SetBits(GPIOA, GPIO_Pin_4);
         GPIO_ResetBits(GPIOA, GPIO_Pin_5);
-        PWM_SetCompare3(speed);
+//        PWM_SetCompare3(speed);
     }
     else{
         GPIO_ResetBits(GPIOA, GPIO_Pin_4);
         GPIO_SetBits(GPIOA, GPIO_Pin_5);
-        PWM_SetCompare3(-speed);
+//        PWM_SetCompare3(-speed);
     }
 }
 

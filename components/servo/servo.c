@@ -20,6 +20,6 @@ void servo_init(void){
  */
 void servo_setAngle(float Angle){
     // 180 度 舵机 ：  ； ；500 偏移量
-    PWM_SetCompare2(Angle / 180 * 2000 +  500);
+//    PWM_SetCompare2(Angle / 180 * 2000 +  500);
 }
 

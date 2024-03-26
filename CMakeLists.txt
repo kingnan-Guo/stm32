@@ -63,6 +63,7 @@ include_directories(
         components/PWM
         components/servo
         components/DCMotor
+        components/IC
 )
 
 

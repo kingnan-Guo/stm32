@@ -556,9 +556,9 @@ typedef struct
   * @{
   */
 
-#define  TIM_ICPolarity_Rising             ((uint16_t)0x0000)
-#define  TIM_ICPolarity_Falling            ((uint16_t)0x0002)
-#define  TIM_ICPolarity_BothEdge           ((uint16_t)0x000A)
+#define  TIM_ICPolarity_Rising             ((uint16_t)0x0000)// 上升沿触发
+#define  TIM_ICPolarity_Falling            ((uint16_t)0x0002)// 下降沿 触发
+#define  TIM_ICPolarity_BothEdge           ((uint16_t)0x000A)// 都触发
 #define IS_TIM_IC_POLARITY(POLARITY) (((POLARITY) == TIM_ICPolarity_Rising) || \
                                       ((POLARITY) == TIM_ICPolarity_Falling))
 #define IS_TIM_IC_POLARITY_LITE(POLARITY) (((POLARITY) == TIM_ICPolarity_Rising) || \
@@ -573,9 +573,9 @@ typedef struct
   */
 
 #define TIM_ICSelection_DirectTI           ((uint16_t)0x0001) /*!< TIM Input 1, 2, 3 or 4 is selected to be 
-                                                                   connected to IC1, IC2, IC3 or IC4, respectively */
+                                                                   connected to IC1, IC2, IC3 or IC4, respectively */   // 直连通道输入
 #define TIM_ICSelection_IndirectTI         ((uint16_t)0x0002) /*!< TIM Input 1, 2, 3 or 4 is selected to be
-                                                                   connected to IC2, IC1, IC4 or IC3, respectively. */
+                                                                   connected to IC2, IC1, IC4 or IC3, respectively. */  // 交叉通道输入
 #define TIM_ICSelection_TRC                ((uint16_t)0x0003) /*!< TIM Input 1, 2, 3 or 4 is selected to be connected to TRC. */
 #define IS_TIM_IC_SELECTION(SELECTION) (((SELECTION) == TIM_ICSelection_DirectTI) || \
                                         ((SELECTION) == TIM_ICSelection_IndirectTI) || \
@@ -588,10 +588,10 @@ typedef struct
   * @{
   */
 
-#define TIM_ICPSC_DIV1                     ((uint16_t)0x0000) /*!< Capture performed each time an edge is detected on the capture input. */
-#define TIM_ICPSC_DIV2                     ((uint16_t)0x0004) /*!< Capture performed once every 2 events. */
-#define TIM_ICPSC_DIV4                     ((uint16_t)0x0008) /*!< Capture performed once every 4 events. */
-#define TIM_ICPSC_DIV8                     ((uint16_t)0x000C) /*!< Capture performed once every 8 events. */
+#define TIM_ICPSC_DIV1                     ((uint16_t)0x0000) /*!< Capture performed each time an edge is detected on the capture input. */ // 不分频
+#define TIM_ICPSC_DIV2                     ((uint16_t)0x0004) /*!< Capture performed once every 2 events. */    // 2 分频
+#define TIM_ICPSC_DIV4                     ((uint16_t)0x0008) /*!< Capture performed once every 4 events. */    // 4 分频
+#define TIM_ICPSC_DIV8                     ((uint16_t)0x000C) /*!< Capture performed once every 8 events. */    // 8 分频
 #define IS_TIM_IC_PRESCALER(PRESCALER) (((PRESCALER) == TIM_ICPSC_DIV1) || \
                                         ((PRESCALER) == TIM_ICPSC_DIV2) || \
                                         ((PRESCALER) == TIM_ICPSC_DIV4) || \
@@ -1063,12 +1063,12 @@ void TIM_OC1Init(TIM_TypeDef* TIMx, TIM_OCInitTypeDef* TIM_OCInitStruct);//[OC�
 void TIM_OC2Init(TIM_TypeDef* TIMx, TIM_OCInitTypeDef* TIM_OCInitStruct);//[OC输出比较]  输出比较单元 2
 void TIM_OC3Init(TIM_TypeDef* TIMx, TIM_OCInitTypeDef* TIM_OCInitStruct);//[OC输出比较]  输出比较单元 3
 void TIM_OC4Init(TIM_TypeDef* TIMx, TIM_OCInitTypeDef* TIM_OCInitStruct);//[OC输出比较]  输出比较单元 4
-void TIM_ICInit(TIM_TypeDef* TIMx, TIM_ICInitTypeDef* TIM_ICInitStruct);
-void TIM_PWMIConfig(TIM_TypeDef* TIMx, TIM_ICInitTypeDef* TIM_ICInitStruct);
+void TIM_ICInit(TIM_TypeDef* TIMx, TIM_ICInitTypeDef* TIM_ICInitStruct);//[IC输出捕获] 结构体配置 输入捕获 单元； 有四个 通道；四个通道 共用一个 函数初始化； 结构体里会 额外 有噶参数 来具体配置哪个通道； 因为可能有交叉通道的配置 ；所以函数 和在一起 比较方便
+void TIM_PWMIConfig(TIM_TypeDef* TIMx, TIM_ICInitTypeDef* TIM_ICInitStruct);//[IC输出捕获] 配置输入捕获； 这个函数可以快速配置两个通道 ； 配置成 PWMI 模 式
 void TIM_BDTRConfig(TIM_TypeDef* TIMx, TIM_BDTRInitTypeDef *TIM_BDTRInitStruct);
 void TIM_TimeBaseStructInit(TIM_TimeBaseInitTypeDef* TIM_TimeBaseInitStruct);
 void TIM_OCStructInit(TIM_OCInitTypeDef* TIM_OCInitStruct);// [OC输出比较] 给输出比较结构体 赋 默认值的
-void TIM_ICStructInit(TIM_ICInitTypeDef* TIM_ICInitStruct);
+void TIM_ICStructInit(TIM_ICInitTypeDef* TIM_ICInitStruct);//[IC输出捕获]  可以给 输入捕获结构体赋一个初始值
 void TIM_BDTRStructInit(TIM_BDTRInitTypeDef* TIM_BDTRInitStruct);
 void TIM_Cmd(TIM_TypeDef* TIMx, FunctionalState NewState);// 使能计数器 图上的 运行控制  TIMx 选择某个定时器  NewState 状态 使能 失能
 void TIM_CtrlPWMOutputs(TIM_TypeDef* TIMx, FunctionalState NewState);// [OC输出比较]  仅高级定时器使用 ，在 高级定时器输出 PWM时 ， 需要调用这个函数，使能主输出， 否则 PWM 将不能正常输出
@@ -1086,9 +1086,9 @@ void TIM_ETRClockMode2Config(TIM_TypeDef* TIMx, uint16_t TIM_ExtTRGPrescaler,
                              uint16_t TIM_ExtTRGPolarity, uint16_t ExtTRGFilter);// 选择ETR通过外部的时钟模式 2 输入的时钟
 void TIM_ETRConfig(TIM_TypeDef* TIMx, uint16_t TIM_ExtTRGPrescaler, uint16_t TIM_ExtTRGPolarity,
                    uint16_t ExtTRGFilter);// 单独用来配置 ETR 引脚的预分频器 极性 滤波器 这些参数
-void TIM_PrescalerConfig(TIM_TypeDef* TIMx, uint16_t Prescaler, uint16_t TIM_PSCReloadMode);// 单独写 预分频 值 的 ； Prescaler 要卸乳的 预分频值 ； TIM_PSCReloadMode写入的模式； 预分频器有个缓冲器 写入的值是在更新事件后才有效
+void TIM_PrescalerConfig(TIM_TypeDef* TIMx, uint16_t Prescaler, uint16_t TIM_PSCReloadMode);// 单独写 预分频 值 的 ； Prescaler 要写入的 预分频值 ； TIM_PSCReloadMode写入的模式； 预分频器有个缓冲器 写入的值是在更新事件后才有效
 void TIM_CounterModeConfig(TIM_TypeDef* TIMx, uint16_t TIM_CounterMode);// 用来该表计数器的 计数模式； TIM_CounterMode 选择新的计数 模式
-void TIM_SelectInputTrigger(TIM_TypeDef* TIMx, uint16_t TIM_InputTriggerSource);//
+void TIM_SelectInputTrigger(TIM_TypeDef* TIMx, uint16_t TIM_InputTriggerSource);//[IC输出捕获]  选择 输入触发源 TRGI ；从模式的 触发源 选择； eg： TI1FP1
 void TIM_EncoderInterfaceConfig(TIM_TypeDef* TIMx, uint16_t TIM_EncoderMode,
                                 uint16_t TIM_IC1Polarity, uint16_t TIM_IC2Polarity);
 void TIM_ForcedOC1Config(TIM_TypeDef* TIMx, uint16_t TIM_ForcedAction);// [OC输出比较]  配置强制输出模式的； 在运行中 想要 暂停 输出波形 并强制 输出 高 或低电平； 和设置 100% 占空比 同样效果
@@ -1122,27 +1122,28 @@ void TIM_CCxCmd(TIM_TypeDef* TIMx, uint16_t TIM_Channel, uint16_t TIM_CCx);// �
 void TIM_CCxNCmd(TIM_TypeDef* TIMx, uint16_t TIM_Channel, uint16_t TIM_CCxN);//用来单独修改 输出 使能参数的
 void TIM_SelectOCxM(TIM_TypeDef* TIMx, uint16_t TIM_Channel, uint16_t TIM_OCMode);//  [OC输出比较]  用来单独更改 输出比较模式的 函数
 void TIM_UpdateDisableConfig(TIM_TypeDef* TIMx, FunctionalState NewState);//
+void TIM_UpdateDisableConfig(TIM_TypeDef* TIMx, FunctionalState NewState);//
 void TIM_UpdateRequestConfig(TIM_TypeDef* TIMx, uint16_t TIM_UpdateSource);
 void TIM_SelectHallSensor(TIM_TypeDef* TIMx, FunctionalState NewState);
 void TIM_SelectOnePulseMode(TIM_TypeDef* TIMx, uint16_t TIM_OPMode);
-void TIM_SelectOutputTrigger(TIM_TypeDef* TIMx, uint16_t TIM_TRGOSource);
-void TIM_SelectSlaveMode(TIM_TypeDef* TIMx, uint16_t TIM_SlaveMode);
+void TIM_SelectOutputTrigger(TIM_TypeDef* TIMx, uint16_t TIM_TRGOSource);// 选择 输出 触发源  TRGO ； 对应 主模式
+void TIM_SelectSlaveMode(TIM_TypeDef* TIMx, uint16_t TIM_SlaveMode);// 选择 从模式 ； 通过 触发源选择的输出 TRGI
 void TIM_SelectMasterSlaveMode(TIM_TypeDef* TIMx, uint16_t TIM_MasterSlaveMode);
 void TIM_SetCounter(TIM_TypeDef* TIMx, uint16_t Counter);// 给计数器写入一个值 ；如果想手动给一个计数制 就可以 用这个 函数
 void TIM_SetAutoreload(TIM_TypeDef* TIMx, uint16_t Autoreload);// 给自动重装器 各个自动重装值
-void TIM_SetCompare1(TIM_TypeDef* TIMx, uint16_t Compare1);// [OC输出比较] * 用来单独 修改 CCR 寄存器值 的函数；在运行的时候 更改 占空比 就需要用到这个歌
+void TIM_SetCompare1(TIM_TypeDef* TIMx, uint16_t Compare1);// [OC输出比较] * 用来单独 修改 CCR 寄存器值 的函数；在运行的时候 更改 占空比 就需要用到这个； 输出比较模式下 CCR 是 只写 的； 要用 TIM_SetCompare1 写入
 void TIM_SetCompare2(TIM_TypeDef* TIMx, uint16_t Compare2);//  [OC输出比较] 用来单独 修改 CCR 寄存器值 的函数
 void TIM_SetCompare3(TIM_TypeDef* TIMx, uint16_t Compare3);//  [OC输出比较] 用来单独 修改 CCR 寄存器值 的函数
 void TIM_SetCompare4(TIM_TypeDef* TIMx, uint16_t Compare4);//  [OC输出比较] 用来单独 修改 CCR 寄存器值 的函数
-void TIM_SetIC1Prescaler(TIM_TypeDef* TIMx, uint16_t TIM_ICPSC);
-void TIM_SetIC2Prescaler(TIM_TypeDef* TIMx, uint16_t TIM_ICPSC);
-void TIM_SetIC3Prescaler(TIM_TypeDef* TIMx, uint16_t TIM_ICPSC);
-void TIM_SetIC4Prescaler(TIM_TypeDef* TIMx, uint16_t TIM_ICPSC);
+void TIM_SetIC1Prescaler(TIM_TypeDef* TIMx, uint16_t TIM_ICPSC);//[IC输出捕获]  单独配置 通道 1 的分频器 ； 结构体里也可以配置
+void TIM_SetIC2Prescaler(TIM_TypeDef* TIMx, uint16_t TIM_ICPSC);//[IC输出捕获]  单独配置 通道 2 的分频器
+void TIM_SetIC3Prescaler(TIM_TypeDef* TIMx, uint16_t TIM_ICPSC);//[IC输出捕获]  单独配置 通道 3 的分频器
+void TIM_SetIC4Prescaler(TIM_TypeDef* TIMx, uint16_t TIM_ICPSC);//[IC输出捕获]  单独配置 通道 4 的分频器
 void TIM_SetClockDivision(TIM_TypeDef* TIMx, uint16_t TIM_CKD);
-uint16_t TIM_GetCapture1(TIM_TypeDef* TIMx);
-uint16_t TIM_GetCapture2(TIM_TypeDef* TIMx);
-uint16_t TIM_GetCapture3(TIM_TypeDef* TIMx);
-uint16_t TIM_GetCapture4(TIM_TypeDef* TIMx);
+uint16_t TIM_GetCapture1(TIM_TypeDef* TIMx);//[IC输出捕获]  读取四个通道的CCR ； 输入捕获 模式下 CCR 只读 里要用 TIM_GetCapture1 读出
+uint16_t TIM_GetCapture2(TIM_TypeDef* TIMx);//[IC输出捕获]  读取四个通道的CCR
+uint16_t TIM_GetCapture3(TIM_TypeDef* TIMx);//[IC输出捕获]  读取四个通道的CCR
+uint16_t TIM_GetCapture4(TIM_TypeDef* TIMx);//[IC输出捕获]  读取四个通道的CCR
 uint16_t TIM_GetCounter(TIM_TypeDef* TIMx);// 获取当前计数器 的值 ；如果想看当前计数器到哪里了  就可以调用这个函数
 uint16_t TIM_GetPrescaler(TIM_TypeDef* TIMx);//获取当前 预分频器的值
 FlagStatus TIM_GetFlagStatus(TIM_TypeDef* TIMx, uint16_t TIM_FLAG);// 下面四个 是 获取 清除 标志位的 函数
