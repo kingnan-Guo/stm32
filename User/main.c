@@ -18,10 +18,8 @@ int main(void) {
     OLED_Init();
     Motor_Init();
 
-    Speed += 50;
+    Speed += 500;
     Motor_SetSpeed(Speed);
-
-
 	while(1) {
         //keyNum = Key_GetNum();
         OLED_ShowNum(2, 1, Speed,3);

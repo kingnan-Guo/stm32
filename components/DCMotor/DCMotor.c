@@ -30,6 +30,7 @@ void Motor_Init(void){
 }
 
 void Motor_SetSpeed(float speed){
+
     if(speed > 0){
         GPIO_SetBits(GPIOA, GPIO_Pin_4);
         GPIO_ResetBits(GPIOA, GPIO_Pin_5);
