@@ -801,6 +801,30 @@ components/DCMotor/DCMotor.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/stm32F103C8T6Project.elf.dir/build.make CMakeFiles/stm32F103C8T6Project.elf.dir/components/DCMotor/DCMotor.c.s
 .PHONY : components/DCMotor/DCMotor.c.s
 
+components/Encode/Encode.obj: components/Encode/Encode.c.obj
+.PHONY : components/Encode/Encode.obj
+
+# target to build an object file
+components/Encode/Encode.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/stm32F103C8T6Project.elf.dir/build.make CMakeFiles/stm32F103C8T6Project.elf.dir/components/Encode/Encode.c.obj
+.PHONY : components/Encode/Encode.c.obj
+
+components/Encode/Encode.i: components/Encode/Encode.c.i
+.PHONY : components/Encode/Encode.i
+
+# target to preprocess a source file
+components/Encode/Encode.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/stm32F103C8T6Project.elf.dir/build.make CMakeFiles/stm32F103C8T6Project.elf.dir/components/Encode/Encode.c.i
+.PHONY : components/Encode/Encode.c.i
+
+components/Encode/Encode.s: components/Encode/Encode.c.s
+.PHONY : components/Encode/Encode.s
+
+# target to generate assembly for a file
+components/Encode/Encode.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/stm32F103C8T6Project.elf.dir/build.make CMakeFiles/stm32F103C8T6Project.elf.dir/components/Encode/Encode.c.s
+.PHONY : components/Encode/Encode.c.s
+
 components/IC/IC.obj: components/IC/IC.c.obj
 .PHONY : components/IC/IC.obj
 
@@ -1118,6 +1142,9 @@ help:
 	@echo "... components/DCMotor/DCMotor.obj"
 	@echo "... components/DCMotor/DCMotor.i"
 	@echo "... components/DCMotor/DCMotor.s"
+	@echo "... components/Encode/Encode.obj"
+	@echo "... components/Encode/Encode.i"
+	@echo "... components/Encode/Encode.s"
 	@echo "... components/IC/IC.obj"
 	@echo "... components/IC/IC.i"
 	@echo "... components/IC/IC.s"

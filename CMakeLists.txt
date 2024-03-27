@@ -64,6 +64,7 @@ include_directories(
         components/servo
         components/DCMotor
         components/IC
+        components/Encode
 )
 
 

@@ -34,6 +34,7 @@ set(CMAKE_ASM_TARGET_INCLUDE_PATH
   "/Users/kingnan/Documents/github/stm32/components/servo"
   "/Users/kingnan/Documents/github/stm32/components/DCMotor"
   "/Users/kingnan/Documents/github/stm32/components/IC"
+  "/Users/kingnan/Documents/github/stm32/components/Encode"
   )
 
 # The set of dependency files which are needed:
@@ -66,6 +67,7 @@ set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "/Users/kingnan/Documents/github/stm32/User/main.c" "CMakeFiles/stm32F103C8T6Project.elf.dir/User/main.c.obj" "gcc" "CMakeFiles/stm32F103C8T6Project.elf.dir/User/main.c.obj.d"
   "/Users/kingnan/Documents/github/stm32/User/stm32f10x_it.c" "CMakeFiles/stm32F103C8T6Project.elf.dir/User/stm32f10x_it.c.obj" "gcc" "CMakeFiles/stm32F103C8T6Project.elf.dir/User/stm32f10x_it.c.obj.d"
   "/Users/kingnan/Documents/github/stm32/components/DCMotor/DCMotor.c" "CMakeFiles/stm32F103C8T6Project.elf.dir/components/DCMotor/DCMotor.c.obj" "gcc" "CMakeFiles/stm32F103C8T6Project.elf.dir/components/DCMotor/DCMotor.c.obj.d"
+  "/Users/kingnan/Documents/github/stm32/components/Encode/Encode.c" "CMakeFiles/stm32F103C8T6Project.elf.dir/components/Encode/Encode.c.obj" "gcc" "CMakeFiles/stm32F103C8T6Project.elf.dir/components/Encode/Encode.c.obj.d"
   "/Users/kingnan/Documents/github/stm32/components/IC/IC.c" "CMakeFiles/stm32F103C8T6Project.elf.dir/components/IC/IC.c.obj" "gcc" "CMakeFiles/stm32F103C8T6Project.elf.dir/components/IC/IC.c.obj.d"
   "/Users/kingnan/Documents/github/stm32/components/LED/LED.c" "CMakeFiles/stm32F103C8T6Project.elf.dir/components/LED/LED.c.obj" "gcc" "CMakeFiles/stm32F103C8T6Project.elf.dir/components/LED/LED.c.obj.d"
   "/Users/kingnan/Documents/github/stm32/components/PWM/PWM.c" "CMakeFiles/stm32F103C8T6Project.elf.dir/components/PWM/PWM.c.obj" "gcc" "CMakeFiles/stm32F103C8T6Project.elf.dir/components/PWM/PWM.c.obj.d"
