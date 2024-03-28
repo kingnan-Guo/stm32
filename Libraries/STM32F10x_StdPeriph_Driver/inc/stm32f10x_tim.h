@@ -1090,7 +1090,7 @@ void TIM_PrescalerConfig(TIM_TypeDef* TIMx, uint16_t Prescaler, uint16_t TIM_PSC
 void TIM_CounterModeConfig(TIM_TypeDef* TIMx, uint16_t TIM_CounterMode);// 用来该表计数器的 计数模式； TIM_CounterMode 选择新的计数 模式
 void TIM_SelectInputTrigger(TIM_TypeDef* TIMx, uint16_t TIM_InputTriggerSource);//[IC输出捕获]  选择 输入触发源 TRGI ；从模式的 触发源 选择； eg： TI1FP1
 void TIM_EncoderInterfaceConfig(TIM_TypeDef* TIMx, uint16_t TIM_EncoderMode,
-                                uint16_t TIM_IC1Polarity, uint16_t TIM_IC2Polarity);
+                                uint16_t TIM_IC1Polarity, uint16_t TIM_IC2Polarity);//定时器 编码器 配置；TIMx定时器 ；TIM_EncoderMode编码器 模式； TIM_IC1Polarity 通道1 的极性； TIM_IC2Polarity 通道2 极性；
 void TIM_ForcedOC1Config(TIM_TypeDef* TIMx, uint16_t TIM_ForcedAction);// [OC输出比较]  配置强制输出模式的； 在运行中 想要 暂停 输出波形 并强制 输出 高 或低电平； 和设置 100% 占空比 同样效果
 void TIM_ForcedOC2Config(TIM_TypeDef* TIMx, uint16_t TIM_ForcedAction);// [OC输出比较]  配置强制输出模式的
 void TIM_ForcedOC3Config(TIM_TypeDef* TIMx, uint16_t TIM_ForcedAction);// [OC输出比较]  配置强制输出模式的

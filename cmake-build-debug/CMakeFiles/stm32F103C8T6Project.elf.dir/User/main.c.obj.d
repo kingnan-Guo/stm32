@@ -34,10 +34,7 @@ CMakeFiles/stm32F103C8T6Project.elf.dir/User/main.c.obj: \
  /Users/kingnan/Documents/github/stm32/Libraries/STM32F10x_StdPeriph_Driver/inc/stm32f10x_usart.h \
  /Users/kingnan/Documents/github/stm32/Libraries/STM32F10x_StdPeriph_Driver/inc/stm32f10x_wwdg.h \
  /Users/kingnan/Documents/github/stm32/Libraries/STM32F10x_StdPeriph_Driver/inc/misc.h \
- /Users/kingnan/Documents/github/stm32/components/LED/LED.h \
  /Users/kingnan/Documents/github/stm32/components/delay/delay.h \
  /Users/kingnan/Documents/github/stm32/components/oled/OLED.h \
  /Users/kingnan/Documents/github/stm32/components/Timer/Timer.h \
- /Users/kingnan/Documents/github/stm32/components/key/key.h \
- /Users/kingnan/Documents/github/stm32/components/PWM/PWM.h \
- /Users/kingnan/Documents/github/stm32/components/IC/IC.h
+ /Users/kingnan/Documents/github/stm32/components/Encode/Encode.h
