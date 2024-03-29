@@ -424,42 +424,42 @@ typedef struct
   * @{
   */
 
-void ADC_DeInit(ADC_TypeDef* ADCx);
-void ADC_Init(ADC_TypeDef* ADCx, ADC_InitTypeDef* ADC_InitStruct);
-void ADC_StructInit(ADC_InitTypeDef* ADC_InitStruct);
-void ADC_Cmd(ADC_TypeDef* ADCx, FunctionalState NewState);
-void ADC_DMACmd(ADC_TypeDef* ADCx, FunctionalState NewState);
-void ADC_ITConfig(ADC_TypeDef* ADCx, uint16_t ADC_IT, FunctionalState NewState);
-void ADC_ResetCalibration(ADC_TypeDef* ADCx);
-FlagStatus ADC_GetResetCalibrationStatus(ADC_TypeDef* ADCx);
-void ADC_StartCalibration(ADC_TypeDef* ADCx);
-FlagStatus ADC_GetCalibrationStatus(ADC_TypeDef* ADCx);
-void ADC_SoftwareStartConvCmd(ADC_TypeDef* ADCx, FunctionalState NewState);
-FlagStatus ADC_GetSoftwareStartConvStatus(ADC_TypeDef* ADCx);
-void ADC_DiscModeChannelCountConfig(ADC_TypeDef* ADCx, uint8_t Number);
-void ADC_DiscModeCmd(ADC_TypeDef* ADCx, FunctionalState NewState);
-void ADC_RegularChannelConfig(ADC_TypeDef* ADCx, uint8_t ADC_Channel, uint8_t Rank, uint8_t ADC_SampleTime);
-void ADC_ExternalTrigConvCmd(ADC_TypeDef* ADCx, FunctionalState NewState);
-uint16_t ADC_GetConversionValue(ADC_TypeDef* ADCx);
-uint32_t ADC_GetDualModeConversionValue(void);
-void ADC_AutoInjectedConvCmd(ADC_TypeDef* ADCx, FunctionalState NewState);
-void ADC_InjectedDiscModeCmd(ADC_TypeDef* ADCx, FunctionalState NewState);
-void ADC_ExternalTrigInjectedConvConfig(ADC_TypeDef* ADCx, uint32_t ADC_ExternalTrigInjecConv);
-void ADC_ExternalTrigInjectedConvCmd(ADC_TypeDef* ADCx, FunctionalState NewState);
-void ADC_SoftwareStartInjectedConvCmd(ADC_TypeDef* ADCx, FunctionalState NewState);
-FlagStatus ADC_GetSoftwareStartInjectedConvCmdStatus(ADC_TypeDef* ADCx);
-void ADC_InjectedChannelConfig(ADC_TypeDef* ADCx, uint8_t ADC_Channel, uint8_t Rank, uint8_t ADC_SampleTime);
-void ADC_InjectedSequencerLengthConfig(ADC_TypeDef* ADCx, uint8_t Length);
-void ADC_SetInjectedOffset(ADC_TypeDef* ADCx, uint8_t ADC_InjectedChannel, uint16_t Offset);
-uint16_t ADC_GetInjectedConversionValue(ADC_TypeDef* ADCx, uint8_t ADC_InjectedChannel);
-void ADC_AnalogWatchdogCmd(ADC_TypeDef* ADCx, uint32_t ADC_AnalogWatchdog);
-void ADC_AnalogWatchdogThresholdsConfig(ADC_TypeDef* ADCx, uint16_t HighThreshold, uint16_t LowThreshold);
-void ADC_AnalogWatchdogSingleChannelConfig(ADC_TypeDef* ADCx, uint8_t ADC_Channel);
-void ADC_TempSensorVrefintCmd(FunctionalState NewState);
-FlagStatus ADC_GetFlagStatus(ADC_TypeDef* ADCx, uint8_t ADC_FLAG);
-void ADC_ClearFlag(ADC_TypeDef* ADCx, uint8_t ADC_FLAG);
-ITStatus ADC_GetITStatus(ADC_TypeDef* ADCx, uint16_t ADC_IT);
-void ADC_ClearITPendingBit(ADC_TypeDef* ADCx, uint16_t ADC_IT);
+void ADC_DeInit(ADC_TypeDef* ADCx);// [ADC] 恢复 缺省配置
+void ADC_Init(ADC_TypeDef* ADCx, ADC_InitTypeDef* ADC_InitStruct);// [ADC] 初始化
+void ADC_StructInit(ADC_InitTypeDef* ADC_InitStruct);// [ADC]  结构体 初始化
+void ADC_Cmd(ADC_TypeDef* ADCx, FunctionalState NewState);// [ADC] 给 ADC 上电
+void ADC_DMACmd(ADC_TypeDef* ADCx, FunctionalState NewState);// [ADC] 开启DMA 输出信号； 使用 DMA 转运数据
+void ADC_ITConfig(ADC_TypeDef* ADCx, uint16_t ADC_IT, FunctionalState NewState);// [ADC] 中断 输出 控制
+void ADC_ResetCalibration(ADC_TypeDef* ADCx);// [ADC] 复位校准
+FlagStatus ADC_GetResetCalibrationStatus(ADC_TypeDef* ADCx);// [ADC] 获取复位校准状态
+void ADC_StartCalibration(ADC_TypeDef* ADCx);// [ADC] 开始校准
+FlagStatus ADC_GetCalibrationStatus(ADC_TypeDef* ADCx);// [ADC] 获取开始校准 状态
+void ADC_SoftwareStartConvCmd(ADC_TypeDef* ADCx, FunctionalState NewState);// ADC 软件开始转换控制。这个用于软件触发函数； 也就是 触发控制
+FlagStatus ADC_GetSoftwareStartConvStatus(ADC_TypeDef* ADCx);// [ADC]  获取软件开始 转换 状态； 但是 无法判断 软件转换是否结束
+void ADC_DiscModeChannelCountConfig(ADC_TypeDef* ADCx, uint8_t Number);// [ADC] 配置间断模式  每隔几个通道间断一次
+void ADC_DiscModeCmd(ADC_TypeDef* ADCx, FunctionalState NewState);// [ADC] 配置间断模式   是不是启用间断模式
+void ADC_RegularChannelConfig(ADC_TypeDef* ADCx, uint8_t ADC_Channel, uint8_t Rank, uint8_t ADC_SampleTime);// [ADC] ADC 规则组通道配置； 给序列的每隔位置 填写 指定的 通道； 哪个ADCx； ADC_Channel 指定通道；Rank 位置 在第几行； ADC_SampleTime  通道 采样事件
+void ADC_ExternalTrigConvCmd(ADC_TypeDef* ADCx, FunctionalState NewState);// [ADC] 外部触发转换控制 ； 是否允许外部转换
+uint16_t ADC_GetConversionValue(ADC_TypeDef* ADCx);// [ADC] ADC 获取转换值； 获取 AD 转换的数据寄存器； 读取转换结果就要使用这个函数；
+uint32_t ADC_GetDualModeConversionValue(void);// [ADC] ADC 获取双模式转换值
+void ADC_AutoInjectedConvCmd(ADC_TypeDef* ADCx, FunctionalState NewState);// [ADC  Injected 注入组]
+void ADC_InjectedDiscModeCmd(ADC_TypeDef* ADCx, FunctionalState NewState);// [ADC  Injected 注入组]
+void ADC_ExternalTrigInjectedConvConfig(ADC_TypeDef* ADCx, uint32_t ADC_ExternalTrigInjecConv);// [ADC  Injected 注入组]
+void ADC_ExternalTrigInjectedConvCmd(ADC_TypeDef* ADCx, FunctionalState NewState);// [ADC  Injected 注入组]
+void ADC_SoftwareStartInjectedConvCmd(ADC_TypeDef* ADCx, FunctionalState NewState);// [ADC  Injected 注入组]
+FlagStatus ADC_GetSoftwareStartInjectedConvCmdStatus(ADC_TypeDef* ADCx);// [ADC  Injected 注入组]
+void ADC_InjectedChannelConfig(ADC_TypeDef* ADCx, uint8_t ADC_Channel, uint8_t Rank, uint8_t ADC_SampleTime);// [ADC  Injected 注入组]
+void ADC_InjectedSequencerLengthConfig(ADC_TypeDef* ADCx, uint8_t Length);// [ADC  Injected 注入组]
+void ADC_SetInjectedOffset(ADC_TypeDef* ADCx, uint8_t ADC_InjectedChannel, uint16_t Offset);// [ADC  Injected 注入组]
+uint16_t ADC_GetInjectedConversionValue(ADC_TypeDef* ADCx, uint8_t ADC_InjectedChannel);// [ADC  Injected 注入组]
+void ADC_AnalogWatchdogCmd(ADC_TypeDef* ADCx, uint32_t ADC_AnalogWatchdog);// [ADC  Watchdog 模拟看门狗] 是否启动模拟看门狗
+void ADC_AnalogWatchdogThresholdsConfig(ADC_TypeDef* ADCx, uint16_t HighThreshold, uint16_t LowThreshold);// [ADC  Watchdog 模拟看门狗] 配置高低阈值
+void ADC_AnalogWatchdogSingleChannelConfig(ADC_TypeDef* ADCx, uint8_t ADC_Channel);// [ADC  Watchdog 模拟看门狗] 配置看门通道
+void ADC_TempSensorVrefintCmd(FunctionalState NewState);// [ADC  内部]  ADC 温度 传感器 内部参考电压控制； 用来开启内部两个通道的
+FlagStatus ADC_GetFlagStatus(ADC_TypeDef* ADCx, uint8_t ADC_FLAG);// [ADC] 获取标志位状态 ； 参数给 EOC 的标志位 判断是不是 置1了
+void ADC_ClearFlag(ADC_TypeDef* ADCx, uint8_t ADC_FLAG);//  [ADC]  清除标志位
+ITStatus ADC_GetITStatus(ADC_TypeDef* ADCx, uint16_t ADC_IT);//  [ADC]  获取中断 状态
+void ADC_ClearITPendingBit(ADC_TypeDef* ADCx, uint16_t ADC_IT);//  [ADC]  清除中断 挂起
 
 #ifdef __cplusplus
 }
