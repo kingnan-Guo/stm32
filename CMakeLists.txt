@@ -65,6 +65,7 @@ include_directories(
         components/DCMotor
         components/IC
         components/Encode
+        components/AD
 )
 
 
