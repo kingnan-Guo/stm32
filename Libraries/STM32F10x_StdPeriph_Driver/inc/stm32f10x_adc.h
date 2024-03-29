@@ -90,7 +90,7 @@ typedef struct
   * @{
   */
 
-#define ADC_Mode_Independent                       ((uint32_t)0x00000000)
+#define ADC_Mode_Independent                       ((uint32_t)0x00000000)//  独立模式 ADC1 ADC2 各自转换各自的
 #define ADC_Mode_RegInjecSimult                    ((uint32_t)0x00010000)
 #define ADC_Mode_RegSimult_AlterTrig               ((uint32_t)0x00020000)
 #define ADC_Mode_InjecSimult_FastInterl            ((uint32_t)0x00030000)
@@ -438,7 +438,7 @@ void ADC_SoftwareStartConvCmd(ADC_TypeDef* ADCx, FunctionalState NewState);// AD
 FlagStatus ADC_GetSoftwareStartConvStatus(ADC_TypeDef* ADCx);// [ADC]  获取软件开始 转换 状态； 但是 无法判断 软件转换是否结束
 void ADC_DiscModeChannelCountConfig(ADC_TypeDef* ADCx, uint8_t Number);// [ADC] 配置间断模式  每隔几个通道间断一次
 void ADC_DiscModeCmd(ADC_TypeDef* ADCx, FunctionalState NewState);// [ADC] 配置间断模式   是不是启用间断模式
-void ADC_RegularChannelConfig(ADC_TypeDef* ADCx, uint8_t ADC_Channel, uint8_t Rank, uint8_t ADC_SampleTime);// [ADC] ADC 规则组通道配置； 给序列的每隔位置 填写 指定的 通道； 哪个ADCx； ADC_Channel 指定通道；Rank 位置 在第几行； ADC_SampleTime  通道 采样事件
+void ADC_RegularChannelConfig(ADC_TypeDef* ADCx, uint8_t ADC_Channel, uint8_t Rank, uint8_t ADC_SampleTime);// [ADC] ADC 规则组通道配置； 给序列的每隔位置 填写 指定的 通道； 哪个ADCx； ADC_Channel 指定通道；Rank 位置 在第几行； ADC_SampleTime  通道 采样时间
 void ADC_ExternalTrigConvCmd(ADC_TypeDef* ADCx, FunctionalState NewState);// [ADC] 外部触发转换控制 ； 是否允许外部转换
 uint16_t ADC_GetConversionValue(ADC_TypeDef* ADCx);// [ADC] ADC 获取转换值； 获取 AD 转换的数据寄存器； 读取转换结果就要使用这个函数；
 uint32_t ADC_GetDualModeConversionValue(void);// [ADC] ADC 获取双模式转换值

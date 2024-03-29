@@ -777,6 +777,30 @@ User/stm32f10x_it.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/stm32F103C8T6Project.elf.dir/build.make CMakeFiles/stm32F103C8T6Project.elf.dir/User/stm32f10x_it.c.s
 .PHONY : User/stm32f10x_it.c.s
 
+components/AD/AD.obj: components/AD/AD.c.obj
+.PHONY : components/AD/AD.obj
+
+# target to build an object file
+components/AD/AD.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/stm32F103C8T6Project.elf.dir/build.make CMakeFiles/stm32F103C8T6Project.elf.dir/components/AD/AD.c.obj
+.PHONY : components/AD/AD.c.obj
+
+components/AD/AD.i: components/AD/AD.c.i
+.PHONY : components/AD/AD.i
+
+# target to preprocess a source file
+components/AD/AD.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/stm32F103C8T6Project.elf.dir/build.make CMakeFiles/stm32F103C8T6Project.elf.dir/components/AD/AD.c.i
+.PHONY : components/AD/AD.c.i
+
+components/AD/AD.s: components/AD/AD.c.s
+.PHONY : components/AD/AD.s
+
+# target to generate assembly for a file
+components/AD/AD.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/stm32F103C8T6Project.elf.dir/build.make CMakeFiles/stm32F103C8T6Project.elf.dir/components/AD/AD.c.s
+.PHONY : components/AD/AD.c.s
+
 components/DCMotor/DCMotor.obj: components/DCMotor/DCMotor.c.obj
 .PHONY : components/DCMotor/DCMotor.obj
 
@@ -1139,6 +1163,9 @@ help:
 	@echo "... User/stm32f10x_it.obj"
 	@echo "... User/stm32f10x_it.i"
 	@echo "... User/stm32f10x_it.s"
+	@echo "... components/AD/AD.obj"
+	@echo "... components/AD/AD.i"
+	@echo "... components/AD/AD.s"
 	@echo "... components/DCMotor/DCMotor.obj"
 	@echo "... components/DCMotor/DCMotor.i"
 	@echo "... components/DCMotor/DCMotor.s"

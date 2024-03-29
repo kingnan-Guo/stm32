@@ -1184,11 +1184,11 @@ void ADC_TempSensorVrefintCmd(FunctionalState NewState)
   * @param  ADCx: where x can be 1, 2 or 3 to select the ADC peripheral.
   * @param  ADC_FLAG: specifies the flag to check. 
   *   This parameter can be one of the following values:
-  *     @arg ADC_FLAG_AWD: Analog watchdog flag
-  *     @arg ADC_FLAG_EOC: End of conversion flag
-  *     @arg ADC_FLAG_JEOC: End of injected group conversion flag
-  *     @arg ADC_FLAG_JSTRT: Start of injected group conversion flag
-  *     @arg ADC_FLAG_STRT: Start of regular group conversion flag
+  *     @arg ADC_FLAG_AWD: Analog watchdog flag     //  模拟看门狗标志位
+  *     @arg ADC_FLAG_EOC: End of conversion flag   //  规则组转换完成 标志位
+  *     @arg ADC_FLAG_JEOC: End of injected group conversion flag       // JEOC 注入组转换完成标志位
+  *     @arg ADC_FLAG_JSTRT: Start of injected group conversion flag    // 注入组 开始转换 标志位
+  *     @arg ADC_FLAG_STRT: Start of regular group conversion flag      //规则组 开始转换 标志位
   * @retval The new state of ADC_FLAG (SET or RESET).
   */
 FlagStatus ADC_GetFlagStatus(ADC_TypeDef* ADCx, uint8_t ADC_FLAG)
