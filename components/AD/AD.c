@@ -38,14 +38,14 @@ void AD_Init(void){
 
     // GPIO A0  配置 成 模拟输入的引脚
     GPIO_InitTypeDef GPIO_InitStructure;
-    GPIO_InitStructure.GPIO_Pin = GPIO_Pin_0;
+    GPIO_InitStructure.GPIO_Pin = GPIO_Pin_0 | GPIO_Pin_1 | GPIO_Pin_2;
     GPIO_InitStructure.GPIO_Mode = GPIO_Mode_AIN;// GPIO_Mode_AIN 用于 ADC 上； 模拟输入; 在 AIN 模式下 ；GPIO 口 是 无效的； 断开GPIO； 防止GPIO 的输入输出对我 模拟电压造成干扰； AIN 就是 ADC 的专属 模式
     GPIO_InitStructure.GPIO_Speed = GPIO_Speed_50MHz;
     GPIO_Init(GPIOA, &GPIO_InitStructure);
 
-    // 选择 规则组的 输入通道 ; 哪个ADCx； ADC_Channel 指定通道；Rank 位置 在第几行(1~ 16 之间)； ADC_SampleTime  通道 采样时间 ，要求不高 随意选择； 需要更快转换 需要小的参数 但不稳定
-    ADC_RegularChannelConfig(ADC1, ADC_Channel_0, 1, ADC_SampleTime_55Cycles5);// ADC_SampleTime_55Cycles5 =55.5 个采样 周期
-    // ADC_RegularChannelConfig(ADC1, ADC_Channel_1, 2, ADC_SampleTime_55Cycles5); 设置多个通道
+//    // 选择 规则组的 输入通道 ; 哪个ADCx； ADC_Channel 指定通道；Rank 位置 在第几行(1~ 16 之间)； ADC_SampleTime  通道 采样时间 ，要求不高 随意选择； 需要更快转换 需要小的参数 但不稳定
+//    ADC_RegularChannelConfig(ADC1, ADC_Channel_0, 1, ADC_SampleTime_55Cycles5);// ADC_SampleTime_55Cycles5 =55.5 个采样 周期
+//    // ADC_RegularChannelConfig(ADC1, ADC_Channel_1, 2, ADC_SampleTime_55Cycles5); 设置多个通道
 
     ADC_InitTypeDef ADC_InitStructure;
     ADC_InitStructure.ADC_Mode = ADC_Mode_Independent;//  独立模式 ADC1 ADC2 各自转换各自的
@@ -75,9 +75,6 @@ void AD_Init(void){
     while (ADC_GetCalibrationStatus(ADC1) == SET);
 
 
-
-
-
 }
 
 /**
@@ -86,7 +83,12 @@ void AD_Init(void){
  * 3、 对去 ADC 数据 寄存器
  * @return
  */
-uint16_t AD_GetValue(void){
+uint16_t AD_GetValue(uint8_t ADC_Channel){
+    //AD 单通道的 时候 再 初始化时 选择 通道；这里再 在触发转换之前 更改通道； 指定哪个通道 返回值 就是哪个通道的结果
+    // 选择 规则组的 输入通道 ; 哪个ADCx； ADC_Channel 指定通道；Rank 位置 在第几行(1~ 16 之间)； ADC_SampleTime  通道 采样时间 ，要求不高 随意选择； 需要更快转换 需要小的参数 但不稳定
+    ADC_RegularChannelConfig(ADC1, ADC_Channel , 1, ADC_SampleTime_55Cycles5);// ADC_SampleTime_55Cycles5 =55.5 个采样 周期
+
+
     // 软件触发 函数
     ADC_SoftwareStartConvCmd(ADC1, ENABLE);
     // 因为 转换需要一段时间 所以 等待一下

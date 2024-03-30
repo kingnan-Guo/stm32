@@ -1,34 +1,33 @@
 #include "stm32f10x.h"
-//#include "LED.h"
-#include "delay.h"
+
 #include "OLED.h"
-#include "Timer.h"
-//#include "key.h"
-//#include "PWM.h"
-//#include "IC.h"
-#include "Encode.h"
 #include "AD.h"
 
 
 uint16_t ADValue;
 float Voltage;
 
+uint16_t AD0, AD1, AD2;
+
+
+
 int main(void) {
     OLED_Init();
     AD_Init();
 
-    OLED_ShowString(1, 1, "ADValue:");
-    OLED_ShowString(2, 1, "Volatge:0.00V");
+    OLED_ShowString(1, 1, "AD0:");
+    OLED_ShowString(2, 1, "AD1:");
+    OLED_ShowString(3, 1, "AD2:");
     while(1) {
 
-        ADValue = AD_GetValue();
-        Voltage = (float)ADValue / 4095.8 * 3.3; // 4096 对应 AD 的范围值 ；但是比4096 小一点 所以时4095.5
-        OLED_ShowNum(1, 9, ADValue, 4);
+        AD0 = AD_GetValue(ADC_Channel_0);
+        AD1 = AD_GetValue(ADC_Channel_1);
+        AD2 = AD_GetValue(ADC_Channel_2);
 
-//        OLED_ShowNum(2, 9, (uint16_t)(Voltage * 1000) % 1000, 3);
-        OLED_ShowNum(2, 9, Voltage, 1);
-        OLED_ShowNum(2, 11, (uint16_t)(Voltage * 100) % 100, 2);
-//        Delay_ms(100);
+        OLED_ShowNum(1, 5, AD0, 4);
+        OLED_ShowNum(2, 5, AD1, 4);
+        OLED_ShowNum(3, 5, AD2, 4);
+
     }
 }
 
