@@ -55,6 +55,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/stm32F103C8T6Project.elf.dir/User/stm32f10x_it.c.obj.d"
   "CMakeFiles/stm32F103C8T6Project.elf.dir/components/AD/AD.c.obj"
   "CMakeFiles/stm32F103C8T6Project.elf.dir/components/AD/AD.c.obj.d"
+  "CMakeFiles/stm32F103C8T6Project.elf.dir/components/ADC_DMA/ADC_DMA.c.obj"
+  "CMakeFiles/stm32F103C8T6Project.elf.dir/components/ADC_DMA/ADC_DMA.c.obj.d"
   "CMakeFiles/stm32F103C8T6Project.elf.dir/components/DCMotor/DCMotor.c.obj"
   "CMakeFiles/stm32F103C8T6Project.elf.dir/components/DCMotor/DCMotor.c.obj.d"
   "CMakeFiles/stm32F103C8T6Project.elf.dir/components/Encode/Encode.c.obj"

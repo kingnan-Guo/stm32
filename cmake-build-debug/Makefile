@@ -801,6 +801,30 @@ components/AD/AD.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/stm32F103C8T6Project.elf.dir/build.make CMakeFiles/stm32F103C8T6Project.elf.dir/components/AD/AD.c.s
 .PHONY : components/AD/AD.c.s
 
+components/ADC_DMA/ADC_DMA.obj: components/ADC_DMA/ADC_DMA.c.obj
+.PHONY : components/ADC_DMA/ADC_DMA.obj
+
+# target to build an object file
+components/ADC_DMA/ADC_DMA.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/stm32F103C8T6Project.elf.dir/build.make CMakeFiles/stm32F103C8T6Project.elf.dir/components/ADC_DMA/ADC_DMA.c.obj
+.PHONY : components/ADC_DMA/ADC_DMA.c.obj
+
+components/ADC_DMA/ADC_DMA.i: components/ADC_DMA/ADC_DMA.c.i
+.PHONY : components/ADC_DMA/ADC_DMA.i
+
+# target to preprocess a source file
+components/ADC_DMA/ADC_DMA.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/stm32F103C8T6Project.elf.dir/build.make CMakeFiles/stm32F103C8T6Project.elf.dir/components/ADC_DMA/ADC_DMA.c.i
+.PHONY : components/ADC_DMA/ADC_DMA.c.i
+
+components/ADC_DMA/ADC_DMA.s: components/ADC_DMA/ADC_DMA.c.s
+.PHONY : components/ADC_DMA/ADC_DMA.s
+
+# target to generate assembly for a file
+components/ADC_DMA/ADC_DMA.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/stm32F103C8T6Project.elf.dir/build.make CMakeFiles/stm32F103C8T6Project.elf.dir/components/ADC_DMA/ADC_DMA.c.s
+.PHONY : components/ADC_DMA/ADC_DMA.c.s
+
 components/DCMotor/DCMotor.obj: components/DCMotor/DCMotor.c.obj
 .PHONY : components/DCMotor/DCMotor.obj
 
@@ -1190,6 +1214,9 @@ help:
 	@echo "... components/AD/AD.obj"
 	@echo "... components/AD/AD.i"
 	@echo "... components/AD/AD.s"
+	@echo "... components/ADC_DMA/ADC_DMA.obj"
+	@echo "... components/ADC_DMA/ADC_DMA.i"
+	@echo "... components/ADC_DMA/ADC_DMA.s"
 	@echo "... components/DCMotor/DCMotor.obj"
 	@echo "... components/DCMotor/DCMotor.i"
 	@echo "... components/DCMotor/DCMotor.s"
