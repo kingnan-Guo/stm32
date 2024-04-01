@@ -31,6 +31,10 @@
  *
  * ADC的扫描模式 + DNA数据转运
  * 1、首先扫描 PA0～PA2 这三个通道
+ *
+ * 这里 使用 扫描模式 ADC_ContinuousConvMode = ENABLE + 循环模式 DMA_Mode_Circular
+ *
+ * ADC_SoftwareStartConvCmd 软件触发 一次
 */
 #include "stm32f10x.h"
 
@@ -73,7 +77,7 @@ void AD_DMA_Init(void){
     ADC_InitStructure.ADC_Mode = ADC_Mode_Independent;//  独立模式 ADC1 ADC2 各自转换各自的
     ADC_InitStructure.ADC_DataAlign = ADC_DataAlign_Right;// 数据对齐 右对齐
     ADC_InitStructure.ADC_ExternalTrigConv = ADC_ExternalTrigConv_None;// 外部触发选择 ADC_ExternalTrigConv_None  不使用外部出发 使用内部软件触发
-    ADC_InitStructure.ADC_ContinuousConvMode = DISABLE;// 连续转换模式 还是 单次转换； 单次转换； 扫描模式
+    ADC_InitStructure.ADC_ContinuousConvMode = ENABLE;// 连续转换模式 还是 单次转换； 单次转换； 扫描模式
     ADC_InitStructure.ADC_ScanConvMode = ENABLE;// 扫描转换模式 扫描还是 非扫描； 非扫描
     ADC_InitStructure.ADC_NbrOfChannel = 4;// 通道数目 1～16 之间； 放了4跳数据在
 
@@ -92,7 +96,7 @@ void AD_DMA_Init(void){
     DMA_InitStructure.DMA_MemoryInc = DMA_MemoryInc_Enable;// 存储器 站点地址自增
     DMA_InitStructure.DMA_DIR = DMA_DIR_PeripheralSRC;//传输方向 指定外设站点是远端 还是目的地； DMA_DIR_PeripheralDST 外设站点作为DST 目的地，存储器到外设 ；DMA_DIR_PeripheralSRC 外设站点作为src 数据源； 当前案例 外设-> 存储器
     DMA_InitStructure.DMA_BufferSize = 4;// 缓存区大小 ，传输计数器； 外设单元等于外设数据宽度或者存储器数据宽度； 0～65535； 有四个外设通道
-    DMA_InitStructure.DMA_Mode = DMA_Mode_Normal;// 传输模式、是否使用 自动重装；DMA_Mode_Normal：  正常模式 传输计数器不自动重装; DMA_Mode_Circular:循环模式
+    DMA_InitStructure.DMA_Mode = DMA_Mode_Circular;// 传输模式、是否使用 自动重装；DMA_Mode_Normal：  正常模式 传输计数器不自动重装; DMA_Mode_Circular:循环模式
     DMA_InitStructure.DMA_M2M = DMA_M2M_Disable;// 软硬件触发 DMA_M2M_Disable 使用 硬件触发
     DMA_InitStructure.DMA_Priority = DMA_Priority_Medium;//优先级
     // DMAy_Channelx 使用 DMA1 和 通道 1： y： 1～2 ； 写：1～7
@@ -121,33 +125,9 @@ void AD_DMA_Init(void){
     //ADC_GetCalibrationStatus 获取校准标志位
     while (ADC_GetCalibrationStatus(ADC1) == SET);
 
-
-}
-
-/**
- * 1、软件触发 转换 ADC_SoftwareStartConvCmd
- * 2、等待 转换完成 EOC 置 1
- * 3、 对去 ADC 数据 寄存器
- * @return
- */
-uint16_t AD_DMA_GetValue(void){
-    // 在触发ADC 之前 ，需要重新写入一下 传输计数器
-
-    DMA_Cmd(DMA1_Channel1, DISABLE);
-    //DMA1_Channel1 ; 给传输计数器写入的值，这里要获取一下初始化的参数
-    DMA_SetCurrDataCounter(DMA1_Channel1, 4);
-    DMA_Cmd(DMA1_Channel1, ENABLE);
-
     // 软件触发 函数
     ADC_SoftwareStartConvCmd(ADC1, ENABLE);
-
-    // 这里添加 DMA是否完成的 判定
-    // DMA1_FLAG_TC1 转运完成标志位; 转运完成后 标志位置 1
-    while (DMA_GetFlagStatus(DMA1_FLAG_TC1) == RESET);
-    DMA_ClearFlag(DMA1_FLAG_TC1); //需要手动 清除
-
 }
-
 
 
 
