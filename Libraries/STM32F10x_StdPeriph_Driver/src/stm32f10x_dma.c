@@ -379,10 +379,10 @@ uint16_t DMA_GetCurrDataCounter(DMA_Channel_TypeDef* DMAy_Channelx)
   * @brief  Checks whether the specified DMAy Channelx flag is set or not.
   * @param  DMAy_FLAG: specifies the flag to check.
   *   This parameter can be one of the following values:
-  *     @arg DMA1_FLAG_GL1: DMA1 Channel1 global flag.
-  *     @arg DMA1_FLAG_TC1: DMA1 Channel1 transfer complete flag.
-  *     @arg DMA1_FLAG_HT1: DMA1 Channel1 half transfer flag.
-  *     @arg DMA1_FLAG_TE1: DMA1 Channel1 transfer error flag.
+  *     @arg DMA1_FLAG_GL1: DMA1 Channel1 global flag.  // 全局标志位
+  *     @arg DMA1_FLAG_TC1: DMA1 Channel1 transfer complete flag.// 转运完成标志位
+  *     @arg DMA1_FLAG_HT1: DMA1 Channel1 half transfer flag.// 转运 过半标志位
+  *     @arg DMA1_FLAG_TE1: DMA1 Channel1 transfer error flag.// 转运错误标志位
   *     @arg DMA1_FLAG_GL2: DMA1 Channel2 global flag.
   *     @arg DMA1_FLAG_TC2: DMA1 Channel2 transfer complete flag.
   *     @arg DMA1_FLAG_HT2: DMA1 Channel2 half transfer flag.

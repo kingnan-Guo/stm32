@@ -108,7 +108,7 @@ typedef struct
   * @{
   */
 
-#define DMA_DIR_PeripheralDST              ((uint32_t)0x00000010)
+#define DMA_DIR_PeripheralDST              ((uint32_t)0x00000010)// 外设站点作为DST 目的地
 #define DMA_DIR_PeripheralSRC              ((uint32_t)0x00000000)
 #define IS_DMA_DIR(DIR) (((DIR) == DMA_DIR_PeripheralDST) || \
                          ((DIR) == DMA_DIR_PeripheralSRC))
@@ -172,8 +172,8 @@ typedef struct
   * @{
   */
 
-#define DMA_Mode_Circular                  ((uint32_t)0x00000020)
-#define DMA_Mode_Normal                    ((uint32_t)0x00000000)
+#define DMA_Mode_Circular                  ((uint32_t)0x00000020)// 循环模式 计数器自动重装
+#define DMA_Mode_Normal                    ((uint32_t)0x00000000)// 正常模式 传输计数器不自动重装
 #define IS_DMA_MODE(MODE) (((MODE) == DMA_Mode_Circular) || ((MODE) == DMA_Mode_Normal))
 /**
   * @}
@@ -406,17 +406,17 @@ typedef struct
   * @{
   */
 
-void DMA_DeInit(DMA_Channel_TypeDef* DMAy_Channelx);
-void DMA_Init(DMA_Channel_TypeDef* DMAy_Channelx, DMA_InitTypeDef* DMA_InitStruct);
-void DMA_StructInit(DMA_InitTypeDef* DMA_InitStruct);
-void DMA_Cmd(DMA_Channel_TypeDef* DMAy_Channelx, FunctionalState NewState);
-void DMA_ITConfig(DMA_Channel_TypeDef* DMAy_Channelx, uint32_t DMA_IT, FunctionalState NewState);
-void DMA_SetCurrDataCounter(DMA_Channel_TypeDef* DMAy_Channelx, uint16_t DataNumber); 
-uint16_t DMA_GetCurrDataCounter(DMA_Channel_TypeDef* DMAy_Channelx);
-FlagStatus DMA_GetFlagStatus(uint32_t DMAy_FLAG);
-void DMA_ClearFlag(uint32_t DMAy_FLAG);
-ITStatus DMA_GetITStatus(uint32_t DMAy_IT);
-void DMA_ClearITPendingBit(uint32_t DMAy_IT);
+void DMA_DeInit(DMA_Channel_TypeDef* DMAy_Channelx);//
+void DMA_Init(DMA_Channel_TypeDef* DMAy_Channelx, DMA_InitTypeDef* DMA_InitStruct);// DMA初始化
+void DMA_StructInit(DMA_InitTypeDef* DMA_InitStruct);// DMA 结构体 初始化
+void DMA_Cmd(DMA_Channel_TypeDef* DMAy_Channelx, FunctionalState NewState);// 使能
+void DMA_ITConfig(DMA_Channel_TypeDef* DMAy_Channelx, uint32_t DMA_IT, FunctionalState NewState);// 中断输出使能
+void DMA_SetCurrDataCounter(DMA_Channel_TypeDef* DMAy_Channelx, uint16_t DataNumber); //设置当前数据寄存器 ，这个函数就是给传输计数器写数据的；
+uint16_t DMA_GetCurrDataCounter(DMA_Channel_TypeDef* DMAy_Channelx);// DMA 获取当前计数器的值
+FlagStatus DMA_GetFlagStatus(uint32_t DMAy_FLAG);// 获取标志位
+void DMA_ClearFlag(uint32_t DMAy_FLAG);//清除标志位
+ITStatus DMA_GetITStatus(uint32_t DMAy_IT);//获取中断状态
+void DMA_ClearITPendingBit(uint32_t DMAy_IT);// 清除中断挂起位
 
 #ifdef __cplusplus
 }

@@ -66,6 +66,7 @@ include_directories(
         components/IC
         components/Encode
         components/AD
+        components/customDMA
 )
 
 

@@ -36,6 +36,7 @@ set(CMAKE_ASM_TARGET_INCLUDE_PATH
   "/Users/kingnan/Documents/github/stm32/components/IC"
   "/Users/kingnan/Documents/github/stm32/components/Encode"
   "/Users/kingnan/Documents/github/stm32/components/AD"
+  "/Users/kingnan/Documents/github/stm32/components/customDMA"
   )
 
 # The set of dependency files which are needed:
@@ -75,6 +76,7 @@ set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "/Users/kingnan/Documents/github/stm32/components/PWM/PWM.c" "CMakeFiles/stm32F103C8T6Project.elf.dir/components/PWM/PWM.c.obj" "gcc" "CMakeFiles/stm32F103C8T6Project.elf.dir/components/PWM/PWM.c.obj.d"
   "/Users/kingnan/Documents/github/stm32/components/Timer/Timer.c" "CMakeFiles/stm32F103C8T6Project.elf.dir/components/Timer/Timer.c.obj" "gcc" "CMakeFiles/stm32F103C8T6Project.elf.dir/components/Timer/Timer.c.obj.d"
   "/Users/kingnan/Documents/github/stm32/components/countSensor/countSensor.c" "CMakeFiles/stm32F103C8T6Project.elf.dir/components/countSensor/countSensor.c.obj" "gcc" "CMakeFiles/stm32F103C8T6Project.elf.dir/components/countSensor/countSensor.c.obj.d"
+  "/Users/kingnan/Documents/github/stm32/components/customDMA/customDMA.c" "CMakeFiles/stm32F103C8T6Project.elf.dir/components/customDMA/customDMA.c.obj" "gcc" "CMakeFiles/stm32F103C8T6Project.elf.dir/components/customDMA/customDMA.c.obj.d"
   "/Users/kingnan/Documents/github/stm32/components/delay/delay.c" "CMakeFiles/stm32F103C8T6Project.elf.dir/components/delay/delay.c.obj" "gcc" "CMakeFiles/stm32F103C8T6Project.elf.dir/components/delay/delay.c.obj.d"
   "/Users/kingnan/Documents/github/stm32/components/key/key.c" "CMakeFiles/stm32F103C8T6Project.elf.dir/components/key/key.c.obj" "gcc" "CMakeFiles/stm32F103C8T6Project.elf.dir/components/key/key.c.obj.d"
   "/Users/kingnan/Documents/github/stm32/components/oled/OLED.c" "CMakeFiles/stm32F103C8T6Project.elf.dir/components/oled/OLED.c.obj" "gcc" "CMakeFiles/stm32F103C8T6Project.elf.dir/components/oled/OLED.c.obj.d"

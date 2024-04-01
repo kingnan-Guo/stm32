@@ -1286,7 +1286,7 @@ typedef struct
 
 /*!< Peripheral memory map */
 #define APB1PERIPH_BASE       PERIPH_BASE
-#define APB2PERIPH_BASE       (PERIPH_BASE + 0x10000)
+#define APB2PERIPH_BASE       (PERIPH_BASE + 0x10000)// APB2外设基地址 0x4000 0000 + 0x1 0000 = 0x4001 000
 #define AHBPERIPH_BASE        (PERIPH_BASE + 0x20000)
 
 #define TIM2_BASE             (APB1PERIPH_BASE + 0x0000)
@@ -1325,7 +1325,7 @@ typedef struct
 #define GPIOE_BASE            (APB2PERIPH_BASE + 0x1800)
 #define GPIOF_BASE            (APB2PERIPH_BASE + 0x1C00)
 #define GPIOG_BASE            (APB2PERIPH_BASE + 0x2000)
-#define ADC1_BASE             (APB2PERIPH_BASE + 0x2400)
+#define ADC1_BASE             (APB2PERIPH_BASE + 0x2400)// ADC1_BASE ADC1的基地址 ，也是起始地址 40012400
 #define ADC2_BASE             (APB2PERIPH_BASE + 0x2800)
 #define TIM1_BASE             (APB2PERIPH_BASE + 0x2C00)
 #define SPI1_BASE             (APB2PERIPH_BASE + 0x3000)

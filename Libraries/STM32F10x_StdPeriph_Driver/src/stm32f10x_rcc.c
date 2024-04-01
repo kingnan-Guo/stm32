@@ -1034,7 +1034,7 @@ void RCC_GetClocksFreq(RCC_ClocksTypeDef* RCC_Clocks)
   * @brief  Enables or disables the AHB peripheral clock.
   * @param  RCC_AHBPeriph: specifies the AHB peripheral to gates its clock.
   *   
-  *   For @b STM32_Connectivity_line_devices, this parameter can be any combination
+  *   For @b STM32_Connectivity_line_devices, this parameter can be any combination 互联形式的设备 STM32F105/107
   *   of the following values:        
   *     @arg RCC_AHBPeriph_DMA1
   *     @arg RCC_AHBPeriph_DMA2
@@ -1046,7 +1046,7 @@ void RCC_GetClocksFreq(RCC_ClocksTypeDef* RCC_Clocks)
   *     @arg RCC_AHBPeriph_ETH_MAC_Tx
   *     @arg RCC_AHBPeriph_ETH_MAC_Rx
   * 
-  *   For @b other_STM32_devices, this parameter can be any combination of the 
+  *   For @b other_STM32_devices, this parameter can be any combination of the  // 其他 形式的设备 F103
   *   following values:        
   *     @arg RCC_AHBPeriph_DMA1
   *     @arg RCC_AHBPeriph_DMA2

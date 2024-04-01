@@ -969,6 +969,30 @@ components/countSensor/countSensor.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/stm32F103C8T6Project.elf.dir/build.make CMakeFiles/stm32F103C8T6Project.elf.dir/components/countSensor/countSensor.c.s
 .PHONY : components/countSensor/countSensor.c.s
 
+components/customDMA/customDMA.obj: components/customDMA/customDMA.c.obj
+.PHONY : components/customDMA/customDMA.obj
+
+# target to build an object file
+components/customDMA/customDMA.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/stm32F103C8T6Project.elf.dir/build.make CMakeFiles/stm32F103C8T6Project.elf.dir/components/customDMA/customDMA.c.obj
+.PHONY : components/customDMA/customDMA.c.obj
+
+components/customDMA/customDMA.i: components/customDMA/customDMA.c.i
+.PHONY : components/customDMA/customDMA.i
+
+# target to preprocess a source file
+components/customDMA/customDMA.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/stm32F103C8T6Project.elf.dir/build.make CMakeFiles/stm32F103C8T6Project.elf.dir/components/customDMA/customDMA.c.i
+.PHONY : components/customDMA/customDMA.c.i
+
+components/customDMA/customDMA.s: components/customDMA/customDMA.c.s
+.PHONY : components/customDMA/customDMA.s
+
+# target to generate assembly for a file
+components/customDMA/customDMA.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/stm32F103C8T6Project.elf.dir/build.make CMakeFiles/stm32F103C8T6Project.elf.dir/components/customDMA/customDMA.c.s
+.PHONY : components/customDMA/customDMA.c.s
+
 components/delay/delay.obj: components/delay/delay.c.obj
 .PHONY : components/delay/delay.obj
 
@@ -1187,6 +1211,9 @@ help:
 	@echo "... components/countSensor/countSensor.obj"
 	@echo "... components/countSensor/countSensor.i"
 	@echo "... components/countSensor/countSensor.s"
+	@echo "... components/customDMA/customDMA.obj"
+	@echo "... components/customDMA/customDMA.i"
+	@echo "... components/customDMA/customDMA.s"
 	@echo "... components/delay/delay.obj"
 	@echo "... components/delay/delay.i"
 	@echo "... components/delay/delay.s"

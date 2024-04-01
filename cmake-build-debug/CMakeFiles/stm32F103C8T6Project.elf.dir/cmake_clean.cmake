@@ -69,6 +69,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/stm32F103C8T6Project.elf.dir/components/Timer/Timer.c.obj.d"
   "CMakeFiles/stm32F103C8T6Project.elf.dir/components/countSensor/countSensor.c.obj"
   "CMakeFiles/stm32F103C8T6Project.elf.dir/components/countSensor/countSensor.c.obj.d"
+  "CMakeFiles/stm32F103C8T6Project.elf.dir/components/customDMA/customDMA.c.obj"
+  "CMakeFiles/stm32F103C8T6Project.elf.dir/components/customDMA/customDMA.c.obj.d"
   "CMakeFiles/stm32F103C8T6Project.elf.dir/components/delay/delay.c.obj"
   "CMakeFiles/stm32F103C8T6Project.elf.dir/components/delay/delay.c.obj.d"
   "CMakeFiles/stm32F103C8T6Project.elf.dir/components/key/key.c.obj"
