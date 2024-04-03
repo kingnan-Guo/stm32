@@ -1,0 +1,56 @@
+/**
+ * 1、开启时钟 UART和GPIO时钟打开 USART1 APB2 、GPIO APB1
+ * 2、GPIO 初始化、TX配置复用输出、RX 配置输入
+ * 3、配置USART 直接使用一个结构体
+ * 4、如果只需要发送功能 直接开启USART ，初始化结束
+ * 5、如果配置接收的功能，需要配置中断，在开启UART之前 添加 ITConfig 的NVIC的代码
+ *
+ * 6、初始化完成之后 如果要发送，就调发送函数、如果要接收 就调接收函数
+ * 7、如果要获取发送和接收的状态，就调用获取  标志位的函数
+ *
+ *
+ */
+#include "stm32f10x.h"
+
+void Serial_Init(void){
+    // USART1 是 APB2 的外设
+    RCC_APB2PeriphClockCmd(RCC_APB2Periph_USART1, ENABLE);
+
+    // 开启GPIO 的时钟
+    RCC_APB2PeriphClockCmd(RCC_APB2Periph_GPIOA, ENABLE);
+
+    /**
+     * GPIO 初始化
+     *
+     * RX输入：
+     * Rx选择输入模式； 一根线只能有一个输出但可以有多个输入，
+     * 所以输入脚GPIO；外设可以同时用
+     * 一般RX配置为浮空输入或者上拉输入， 因为 串口模式 空闲状态情况下是高电平，所以不能使用下拉输入，
+     *
+     *  TX输出：
+     *      复用推挽输出，供USART的TX使用
+     *
+     * 当前先用输出，所以只初始化 PA9
+     */
+    GPIO_InitTypeDef GPIO_InitStructure;
+    GPIO_InitStructure.GPIO_Mode = GPIO_Mode_AF_PP;// 复用推挽输出
+    GPIO_InitStructure.GPIO_Pin = GPIO_Pin_9;
+    GPIO_InitStructure.GPIO_Speed = GPIO_Speed_50MHz;
+
+    GPIO_Init(GPIOC, &GPIO_InitStructure);
+
+
+    //初始化USART
+    USART_InitTypeDef USART_InitStructure;
+    USART_InitStructure.USART_BaudRate = 9600;// 波特率 USART_Init 会自动算好对应 9600 的分频，然后写到 BRR 寄存器
+    USART_InitStructure.USART_HardwareFlowControl = USART_HardwareFlowControl_None;//流控 不使用 流控
+    USART_InitStructure.USART_Mode = USART_Mode_Tx;//串口模式 人活急需要发送 又需要接收，那么 = USART_Mode_Rx ｜ USART_Mode_Tx
+    USART_InitStructure.USART_Parity = USART_Parity_No;// 校验位 不使用USART_Parity_No
+    USART_InitStructure.USART_StopBits = USART_StopBits_1;// 停止位  USART_StopBits_1 一位
+    USART_InitStructure.USART_WordLength = USART_WordLength_8b;// 字长 位数 8 位
+    USART_Init(USART1, &USART_InitStructure);
+
+    // 串口使能
+    USART_Cmd(USART1,ENABLE);
+
+}

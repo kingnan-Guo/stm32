@@ -375,19 +375,19 @@ typedef struct
 void USART_DeInit(USART_TypeDef* USARTx);
 void USART_Init(USART_TypeDef* USARTx, USART_InitTypeDef* USART_InitStruct);
 void USART_StructInit(USART_InitTypeDef* USART_InitStruct);
-void USART_ClockInit(USART_TypeDef* USARTx, USART_ClockInitTypeDef* USART_ClockInitStruct);
-void USART_ClockStructInit(USART_ClockInitTypeDef* USART_ClockInitStruct);
+void USART_ClockInit(USART_TypeDef* USARTx, USART_ClockInitTypeDef* USART_ClockInitStruct);// 用来配置同步时钟输出
+void USART_ClockStructInit(USART_ClockInitTypeDef* USART_ClockInitStruct);// 用来配置同步时钟输出； 包括时钟是否要输出、时钟极性相位等参数
 void USART_Cmd(USART_TypeDef* USARTx, FunctionalState NewState);
-void USART_ITConfig(USART_TypeDef* USARTx, uint16_t USART_IT, FunctionalState NewState);
-void USART_DMACmd(USART_TypeDef* USARTx, uint16_t USART_DMAReq, FunctionalState NewState);
-void USART_SetAddress(USART_TypeDef* USARTx, uint8_t USART_Address);
-void USART_WakeUpConfig(USART_TypeDef* USARTx, uint16_t USART_WakeUp);
-void USART_ReceiverWakeUpCmd(USART_TypeDef* USARTx, FunctionalState NewState);
-void USART_LINBreakDetectLengthConfig(USART_TypeDef* USARTx, uint16_t USART_LINBreakDetectLength);
-void USART_LINCmd(USART_TypeDef* USARTx, FunctionalState NewState);
-void USART_SendData(USART_TypeDef* USARTx, uint16_t Data);
-uint16_t USART_ReceiveData(USART_TypeDef* USARTx);
-void USART_SendBreak(USART_TypeDef* USARTx);
+void USART_ITConfig(USART_TypeDef* USARTx, uint16_t USART_IT, FunctionalState NewState);// 中断
+void USART_DMACmd(USART_TypeDef* USARTx, uint16_t USART_DMAReq, FunctionalState NewState);// 开启USART到DMA的触发送到
+void USART_SetAddress(USART_TypeDef* USARTx, uint8_t USART_Address);// 地址
+void USART_WakeUpConfig(USART_TypeDef* USARTx, uint16_t USART_WakeUp);// 唤醒
+void USART_ReceiverWakeUpCmd(USART_TypeDef* USARTx, FunctionalState NewState);// 唤醒
+void USART_LINBreakDetectLengthConfig(USART_TypeDef* USARTx, uint16_t USART_LINBreakDetectLength);// LIN
+void USART_LINCmd(USART_TypeDef* USARTx, FunctionalState NewState);// LIN
+void USART_SendData(USART_TypeDef* USARTx, uint16_t Data);//发送数据    写DR寄存器
+uint16_t USART_ReceiveData(USART_TypeDef* USARTx);// 接收数据   读DR寄存器
+void USART_SendBreak(USART_TypeDef* USARTx);//
 void USART_SetGuardTime(USART_TypeDef* USARTx, uint8_t USART_GuardTime);
 void USART_SetPrescaler(USART_TypeDef* USARTx, uint8_t USART_Prescaler);
 void USART_SmartCardCmd(USART_TypeDef* USARTx, FunctionalState NewState);
@@ -397,10 +397,10 @@ void USART_OverSampling8Cmd(USART_TypeDef* USARTx, FunctionalState NewState);
 void USART_OneBitMethodCmd(USART_TypeDef* USARTx, FunctionalState NewState);
 void USART_IrDAConfig(USART_TypeDef* USARTx, uint16_t USART_IrDAMode);
 void USART_IrDACmd(USART_TypeDef* USARTx, FunctionalState NewState);
-FlagStatus USART_GetFlagStatus(USART_TypeDef* USARTx, uint16_t USART_FLAG);
-void USART_ClearFlag(USART_TypeDef* USARTx, uint16_t USART_FLAG);
-ITStatus USART_GetITStatus(USART_TypeDef* USARTx, uint16_t USART_IT);
-void USART_ClearITPendingBit(USART_TypeDef* USARTx, uint16_t USART_IT);
+FlagStatus USART_GetFlagStatus(USART_TypeDef* USARTx, uint16_t USART_FLAG);// 获取标志位
+void USART_ClearFlag(USART_TypeDef* USARTx, uint16_t USART_FLAG);//清除标志位
+ITStatus USART_GetITStatus(USART_TypeDef* USARTx, uint16_t USART_IT);// 应该是中断标志位 相关
+void USART_ClearITPendingBit(USART_TypeDef* USARTx, uint16_t USART_IT);//
 
 #ifdef __cplusplus
 }

@@ -68,6 +68,7 @@ include_directories(
         components/AD
         components/customDMA
         components/ADC_DMA
+        components/Serial
 )
 
 
