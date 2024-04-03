@@ -42,7 +42,7 @@ void AD_DMA_Init(void){
     RCC_APB2PeriphClockCmd(RCC_APB2Periph_ADC1, ENABLE);
 
     // GPIO A
-    RCC_APB1PeriphClockCmd(RCC_APB2Periph_GPIOA, ENABLE);
+    RCC_APB2PeriphClockCmd(RCC_APB2Periph_GPIOA, ENABLE);
 
 
     // 开启DMA的时钟
