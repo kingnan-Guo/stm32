@@ -54,3 +54,9 @@ void Serial_Init(void){
     USART_Cmd(USART1,ENABLE);
 
 }
+
+//发送一个字节的数据
+void Serial_SendByte(uint8_t Byte){
+
+}
+

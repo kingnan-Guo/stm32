@@ -44,7 +44,7 @@
 					<Add directory="/Users/kingnan/Documents/github/stm32/components/AD"/>
 					<Add directory="/Users/kingnan/Documents/github/stm32/components/customDMA"/>
 					<Add directory="/Users/kingnan/Documents/github/stm32/components/ADC_DMA"/>
-					<Add directory="/Users/kingnan/Documents/github/stm32/components/USART"/>
+					<Add directory="/Users/kingnan/Documents/github/stm32/components/Serial"/>
 					<Add directory="/Applications/ArmGNUToolchain/13.2.Rel1/arm-none-eabi/bin/../lib/gcc/arm-none-eabi/13.2.1/../../../../arm-none-eabi/include/c++/13.2.1"/>
 					<Add directory="/Applications/ArmGNUToolchain/13.2.Rel1/arm-none-eabi/bin/../lib/gcc/arm-none-eabi/13.2.1/../../../../arm-none-eabi/include/c++/13.2.1/arm-none-eabi"/>
 					<Add directory="/Applications/ArmGNUToolchain/13.2.Rel1/arm-none-eabi/bin/../lib/gcc/arm-none-eabi/13.2.1/../../../../arm-none-eabi/include/c++/13.2.1/backward"/>
@@ -86,7 +86,7 @@
 					<Add directory="/Users/kingnan/Documents/github/stm32/components/AD"/>
 					<Add directory="/Users/kingnan/Documents/github/stm32/components/customDMA"/>
 					<Add directory="/Users/kingnan/Documents/github/stm32/components/ADC_DMA"/>
-					<Add directory="/Users/kingnan/Documents/github/stm32/components/USART"/>
+					<Add directory="/Users/kingnan/Documents/github/stm32/components/Serial"/>
 					<Add directory="/Applications/ArmGNUToolchain/13.2.Rel1/arm-none-eabi/bin/../lib/gcc/arm-none-eabi/13.2.1/../../../../arm-none-eabi/include/c++/13.2.1"/>
 					<Add directory="/Applications/ArmGNUToolchain/13.2.Rel1/arm-none-eabi/bin/../lib/gcc/arm-none-eabi/13.2.1/../../../../arm-none-eabi/include/c++/13.2.1/arm-none-eabi"/>
 					<Add directory="/Applications/ArmGNUToolchain/13.2.Rel1/arm-none-eabi/bin/../lib/gcc/arm-none-eabi/13.2.1/../../../../arm-none-eabi/include/c++/13.2.1/backward"/>
@@ -335,16 +335,16 @@
 		<Unit filename="/Users/kingnan/Documents/github/stm32/components/PWM/PWM.h">
 			<Option target="stm32F103C8T6Project.elf"/>
 		</Unit>
+		<Unit filename="/Users/kingnan/Documents/github/stm32/components/Serial/Serial.c">
+			<Option target="stm32F103C8T6Project.elf"/>
+		</Unit>
+		<Unit filename="/Users/kingnan/Documents/github/stm32/components/Serial/Serial.h">
+			<Option target="stm32F103C8T6Project.elf"/>
+		</Unit>
 		<Unit filename="/Users/kingnan/Documents/github/stm32/components/Timer/Timer.c">
 			<Option target="stm32F103C8T6Project.elf"/>
 		</Unit>
 		<Unit filename="/Users/kingnan/Documents/github/stm32/components/Timer/Timer.h">
-			<Option target="stm32F103C8T6Project.elf"/>
-		</Unit>
-		<Unit filename="/Users/kingnan/Documents/github/stm32/components/USART/USART.c">
-			<Option target="stm32F103C8T6Project.elf"/>
-		</Unit>
-		<Unit filename="/Users/kingnan/Documents/github/stm32/components/USART/USART.h">
 			<Option target="stm32F103C8T6Project.elf"/>
 		</Unit>
 		<Unit filename="/Users/kingnan/Documents/github/stm32/components/countSensor/countSensor.c">

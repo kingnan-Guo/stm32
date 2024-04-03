@@ -545,10 +545,24 @@ CMakeFiles/stm32F103C8T6Project.elf.dir/components/PWM/PWM.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/stm32F103C8T6Project.elf.dir/components/PWM/PWM.c.s"
 	/usr/local/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/kingnan/Documents/github/stm32/components/PWM/PWM.c -o CMakeFiles/stm32F103C8T6Project.elf.dir/components/PWM/PWM.c.s
 
+CMakeFiles/stm32F103C8T6Project.elf.dir/components/Serial/Serial.c.obj: CMakeFiles/stm32F103C8T6Project.elf.dir/flags.make
+CMakeFiles/stm32F103C8T6Project.elf.dir/components/Serial/Serial.c.obj: /Users/kingnan/Documents/github/stm32/components/Serial/Serial.c
+CMakeFiles/stm32F103C8T6Project.elf.dir/components/Serial/Serial.c.obj: CMakeFiles/stm32F103C8T6Project.elf.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/kingnan/Documents/github/stm32/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_35) "Building C object CMakeFiles/stm32F103C8T6Project.elf.dir/components/Serial/Serial.c.obj"
+	/usr/local/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/stm32F103C8T6Project.elf.dir/components/Serial/Serial.c.obj -MF CMakeFiles/stm32F103C8T6Project.elf.dir/components/Serial/Serial.c.obj.d -o CMakeFiles/stm32F103C8T6Project.elf.dir/components/Serial/Serial.c.obj -c /Users/kingnan/Documents/github/stm32/components/Serial/Serial.c
+
+CMakeFiles/stm32F103C8T6Project.elf.dir/components/Serial/Serial.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/stm32F103C8T6Project.elf.dir/components/Serial/Serial.c.i"
+	/usr/local/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/kingnan/Documents/github/stm32/components/Serial/Serial.c > CMakeFiles/stm32F103C8T6Project.elf.dir/components/Serial/Serial.c.i
+
+CMakeFiles/stm32F103C8T6Project.elf.dir/components/Serial/Serial.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/stm32F103C8T6Project.elf.dir/components/Serial/Serial.c.s"
+	/usr/local/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/kingnan/Documents/github/stm32/components/Serial/Serial.c -o CMakeFiles/stm32F103C8T6Project.elf.dir/components/Serial/Serial.c.s
+
 CMakeFiles/stm32F103C8T6Project.elf.dir/components/Timer/Timer.c.obj: CMakeFiles/stm32F103C8T6Project.elf.dir/flags.make
 CMakeFiles/stm32F103C8T6Project.elf.dir/components/Timer/Timer.c.obj: /Users/kingnan/Documents/github/stm32/components/Timer/Timer.c
 CMakeFiles/stm32F103C8T6Project.elf.dir/components/Timer/Timer.c.obj: CMakeFiles/stm32F103C8T6Project.elf.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/kingnan/Documents/github/stm32/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_35) "Building C object CMakeFiles/stm32F103C8T6Project.elf.dir/components/Timer/Timer.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/kingnan/Documents/github/stm32/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_36) "Building C object CMakeFiles/stm32F103C8T6Project.elf.dir/components/Timer/Timer.c.obj"
 	/usr/local/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/stm32F103C8T6Project.elf.dir/components/Timer/Timer.c.obj -MF CMakeFiles/stm32F103C8T6Project.elf.dir/components/Timer/Timer.c.obj.d -o CMakeFiles/stm32F103C8T6Project.elf.dir/components/Timer/Timer.c.obj -c /Users/kingnan/Documents/github/stm32/components/Timer/Timer.c
 
 CMakeFiles/stm32F103C8T6Project.elf.dir/components/Timer/Timer.c.i: cmake_force
@@ -558,20 +572,6 @@ CMakeFiles/stm32F103C8T6Project.elf.dir/components/Timer/Timer.c.i: cmake_force
 CMakeFiles/stm32F103C8T6Project.elf.dir/components/Timer/Timer.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/stm32F103C8T6Project.elf.dir/components/Timer/Timer.c.s"
 	/usr/local/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/kingnan/Documents/github/stm32/components/Timer/Timer.c -o CMakeFiles/stm32F103C8T6Project.elf.dir/components/Timer/Timer.c.s
-
-CMakeFiles/stm32F103C8T6Project.elf.dir/components/USART/USART.c.obj: CMakeFiles/stm32F103C8T6Project.elf.dir/flags.make
-CMakeFiles/stm32F103C8T6Project.elf.dir/components/USART/USART.c.obj: /Users/kingnan/Documents/github/stm32/components/USART/USART.c
-CMakeFiles/stm32F103C8T6Project.elf.dir/components/USART/USART.c.obj: CMakeFiles/stm32F103C8T6Project.elf.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/kingnan/Documents/github/stm32/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_36) "Building C object CMakeFiles/stm32F103C8T6Project.elf.dir/components/USART/USART.c.obj"
-	/usr/local/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/stm32F103C8T6Project.elf.dir/components/USART/USART.c.obj -MF CMakeFiles/stm32F103C8T6Project.elf.dir/components/USART/USART.c.obj.d -o CMakeFiles/stm32F103C8T6Project.elf.dir/components/USART/USART.c.obj -c /Users/kingnan/Documents/github/stm32/components/USART/USART.c
-
-CMakeFiles/stm32F103C8T6Project.elf.dir/components/USART/USART.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/stm32F103C8T6Project.elf.dir/components/USART/USART.c.i"
-	/usr/local/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/kingnan/Documents/github/stm32/components/USART/USART.c > CMakeFiles/stm32F103C8T6Project.elf.dir/components/USART/USART.c.i
-
-CMakeFiles/stm32F103C8T6Project.elf.dir/components/USART/USART.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/stm32F103C8T6Project.elf.dir/components/USART/USART.c.s"
-	/usr/local/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/kingnan/Documents/github/stm32/components/USART/USART.c -o CMakeFiles/stm32F103C8T6Project.elf.dir/components/USART/USART.c.s
 
 CMakeFiles/stm32F103C8T6Project.elf.dir/components/countSensor/countSensor.c.obj: CMakeFiles/stm32F103C8T6Project.elf.dir/flags.make
 CMakeFiles/stm32F103C8T6Project.elf.dir/components/countSensor/countSensor.c.obj: /Users/kingnan/Documents/github/stm32/components/countSensor/countSensor.c
@@ -706,8 +706,8 @@ stm32F103C8T6Project_elf_OBJECTS = \
 "CMakeFiles/stm32F103C8T6Project.elf.dir/components/IC/IC.c.obj" \
 "CMakeFiles/stm32F103C8T6Project.elf.dir/components/LED/LED.c.obj" \
 "CMakeFiles/stm32F103C8T6Project.elf.dir/components/PWM/PWM.c.obj" \
+"CMakeFiles/stm32F103C8T6Project.elf.dir/components/Serial/Serial.c.obj" \
 "CMakeFiles/stm32F103C8T6Project.elf.dir/components/Timer/Timer.c.obj" \
-"CMakeFiles/stm32F103C8T6Project.elf.dir/components/USART/USART.c.obj" \
 "CMakeFiles/stm32F103C8T6Project.elf.dir/components/countSensor/countSensor.c.obj" \
 "CMakeFiles/stm32F103C8T6Project.elf.dir/components/customDMA/customDMA.c.obj" \
 "CMakeFiles/stm32F103C8T6Project.elf.dir/components/delay/delay.c.obj" \
@@ -753,8 +753,8 @@ stm32F103C8T6Project.elf: CMakeFiles/stm32F103C8T6Project.elf.dir/components/Enc
 stm32F103C8T6Project.elf: CMakeFiles/stm32F103C8T6Project.elf.dir/components/IC/IC.c.obj
 stm32F103C8T6Project.elf: CMakeFiles/stm32F103C8T6Project.elf.dir/components/LED/LED.c.obj
 stm32F103C8T6Project.elf: CMakeFiles/stm32F103C8T6Project.elf.dir/components/PWM/PWM.c.obj
+stm32F103C8T6Project.elf: CMakeFiles/stm32F103C8T6Project.elf.dir/components/Serial/Serial.c.obj
 stm32F103C8T6Project.elf: CMakeFiles/stm32F103C8T6Project.elf.dir/components/Timer/Timer.c.obj
-stm32F103C8T6Project.elf: CMakeFiles/stm32F103C8T6Project.elf.dir/components/USART/USART.c.obj
 stm32F103C8T6Project.elf: CMakeFiles/stm32F103C8T6Project.elf.dir/components/countSensor/countSensor.c.obj
 stm32F103C8T6Project.elf: CMakeFiles/stm32F103C8T6Project.elf.dir/components/customDMA/customDMA.c.obj
 stm32F103C8T6Project.elf: CMakeFiles/stm32F103C8T6Project.elf.dir/components/delay/delay.c.obj

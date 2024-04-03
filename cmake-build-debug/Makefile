@@ -945,6 +945,30 @@ components/PWM/PWM.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/stm32F103C8T6Project.elf.dir/build.make CMakeFiles/stm32F103C8T6Project.elf.dir/components/PWM/PWM.c.s
 .PHONY : components/PWM/PWM.c.s
 
+components/Serial/Serial.obj: components/Serial/Serial.c.obj
+.PHONY : components/Serial/Serial.obj
+
+# target to build an object file
+components/Serial/Serial.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/stm32F103C8T6Project.elf.dir/build.make CMakeFiles/stm32F103C8T6Project.elf.dir/components/Serial/Serial.c.obj
+.PHONY : components/Serial/Serial.c.obj
+
+components/Serial/Serial.i: components/Serial/Serial.c.i
+.PHONY : components/Serial/Serial.i
+
+# target to preprocess a source file
+components/Serial/Serial.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/stm32F103C8T6Project.elf.dir/build.make CMakeFiles/stm32F103C8T6Project.elf.dir/components/Serial/Serial.c.i
+.PHONY : components/Serial/Serial.c.i
+
+components/Serial/Serial.s: components/Serial/Serial.c.s
+.PHONY : components/Serial/Serial.s
+
+# target to generate assembly for a file
+components/Serial/Serial.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/stm32F103C8T6Project.elf.dir/build.make CMakeFiles/stm32F103C8T6Project.elf.dir/components/Serial/Serial.c.s
+.PHONY : components/Serial/Serial.c.s
+
 components/Timer/Timer.obj: components/Timer/Timer.c.obj
 .PHONY : components/Timer/Timer.obj
 
@@ -968,30 +992,6 @@ components/Timer/Timer.s: components/Timer/Timer.c.s
 components/Timer/Timer.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/stm32F103C8T6Project.elf.dir/build.make CMakeFiles/stm32F103C8T6Project.elf.dir/components/Timer/Timer.c.s
 .PHONY : components/Timer/Timer.c.s
-
-components/USART/USART.obj: components/USART/USART.c.obj
-.PHONY : components/USART/USART.obj
-
-# target to build an object file
-components/USART/USART.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/stm32F103C8T6Project.elf.dir/build.make CMakeFiles/stm32F103C8T6Project.elf.dir/components/USART/USART.c.obj
-.PHONY : components/USART/USART.c.obj
-
-components/USART/USART.i: components/USART/USART.c.i
-.PHONY : components/USART/USART.i
-
-# target to preprocess a source file
-components/USART/USART.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/stm32F103C8T6Project.elf.dir/build.make CMakeFiles/stm32F103C8T6Project.elf.dir/components/USART/USART.c.i
-.PHONY : components/USART/USART.c.i
-
-components/USART/USART.s: components/USART/USART.c.s
-.PHONY : components/USART/USART.s
-
-# target to generate assembly for a file
-components/USART/USART.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/stm32F103C8T6Project.elf.dir/build.make CMakeFiles/stm32F103C8T6Project.elf.dir/components/USART/USART.c.s
-.PHONY : components/USART/USART.c.s
 
 components/countSensor/countSensor.obj: components/countSensor/countSensor.c.obj
 .PHONY : components/countSensor/countSensor.obj
@@ -1256,12 +1256,12 @@ help:
 	@echo "... components/PWM/PWM.obj"
 	@echo "... components/PWM/PWM.i"
 	@echo "... components/PWM/PWM.s"
+	@echo "... components/Serial/Serial.obj"
+	@echo "... components/Serial/Serial.i"
+	@echo "... components/Serial/Serial.s"
 	@echo "... components/Timer/Timer.obj"
 	@echo "... components/Timer/Timer.i"
 	@echo "... components/Timer/Timer.s"
-	@echo "... components/USART/USART.obj"
-	@echo "... components/USART/USART.i"
-	@echo "... components/USART/USART.s"
 	@echo "... components/countSensor/countSensor.obj"
 	@echo "... components/countSensor/countSensor.i"
 	@echo "... components/countSensor/countSensor.s"
