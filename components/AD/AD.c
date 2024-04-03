@@ -31,7 +31,7 @@ void AD_Init(void){
     RCC_APB2PeriphClockCmd(RCC_APB2Periph_ADC1, ENABLE);
 
     // GPIO A
-    RCC_APB1PeriphClockCmd(RCC_APB2Periph_GPIOA, ENABLE);
+    RCC_APB2PeriphClockCmd(RCC_APB2Periph_GPIOA, ENABLE);
 
     // ADCClock 需要配置 分频配置
     RCC_ADCCLKConfig(RCC_PCLK2_Div6); // 6分频 12MHZ   ； 72 / 6 = 12
