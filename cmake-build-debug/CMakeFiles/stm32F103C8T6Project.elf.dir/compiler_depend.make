@@ -910,7 +910,7 @@ CMakeFiles/stm32F103C8T6Project.elf.dir/User/main.c.obj: /Users/kingnan/Document
   /Users/kingnan/Documents/github/stm32/Libraries/STM32F10x_StdPeriph_Driver/inc/stm32f10x_wwdg.h \
   /Users/kingnan/Documents/github/stm32/User/stm32f10x_conf.h \
   /Users/kingnan/Documents/github/stm32/components/Serial/Serial.h \
-  /Users/kingnan/Documents/github/stm32/components/Timer/Timer.h \
+  /Users/kingnan/Documents/github/stm32/components/delay/delay.h \
   /Users/kingnan/Documents/github/stm32/components/oled/OLED.h
 
 CMakeFiles/stm32F103C8T6Project.elf.dir/User/stm32f10x_it.c.obj: /Users/kingnan/Documents/github/stm32/User/stm32f10x_it.c \
@@ -1516,8 +1516,6 @@ CMakeFiles/stm32F103C8T6Project.elf.dir/components/servo/servo.c.obj: /Users/kin
 /Users/kingnan/Documents/github/stm32/User/stm32f10x_it.h:
 
 /Users/kingnan/Documents/github/stm32/components/oled/OLED.h:
-
-/Users/kingnan/Documents/github/stm32/components/Timer/Timer.h:
 
 /Users/kingnan/Documents/github/stm32/components/Serial/Serial.h:
 

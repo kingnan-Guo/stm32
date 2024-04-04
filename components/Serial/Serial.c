@@ -37,7 +37,7 @@ void   Serial_Init(void){
     GPIO_InitStructure.GPIO_Pin = GPIO_Pin_9;
     GPIO_InitStructure.GPIO_Speed = GPIO_Speed_50MHz;
 
-    GPIO_Init(GPIOC, &GPIO_InitStructure);
+    GPIO_Init(GPIOA, &GPIO_InitStructure);
 
 
     //初始化USART
