@@ -12,7 +12,7 @@
  */
 #include "stm32f10x.h"
 
-void Serial_Init(void){
+void   Serial_Init(void){
     // USART1 是 APB2 的外设
     RCC_APB2PeriphClockCmd(RCC_APB2Periph_USART1, ENABLE);
 
@@ -55,8 +55,30 @@ void Serial_Init(void){
 
 }
 
-//发送一个字节的数据
-void Serial_SendByte(uint8_t Byte){
 
+/**
+ * 发送一个字节的数据
+ *
+ *
+ *
+ * =========
+ * TXE:发送数据寄存器空 (Transmit data register empty)
+ * 当TDR寄存器中的数据被硬件转移到移位寄存器的时候，该位被硬件置位。
+ *
+ * 如果USART_CR1,寄存器中的TXEIE为1，则产生中断。
+ *
+ * 。对USART_DR的写操作，将该位清零。
+ *      0：数据还没有被转移到移位寄存器；
+ *      1：数据已经被转移到移位寄存器。
+ *      注意：单缓冲器传输中使用该位。
+ *
+ * @param Byte
+ */
+void Serial_SendByte(uint8_t Byte){
+    // byte 数据写如带 TDR
+    USART_SendData(USART1, Byte);
+    // 发送之后我们需要等待一下 标志位 : USART_FLAG_TXE 发送移位寄存器标志位 空
+    // 标志位 置 1 之后不需要手动清零，在下一次 USART_SendData 会自动清零
+    while (USART_GetFlagStatus(USART1, USART_FLAG_TXE) == RESET);
 }
 

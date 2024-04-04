@@ -36,4 +36,4 @@ CMakeFiles/stm32F103C8T6Project.elf.dir/User/main.c.obj: \
  /Users/kingnan/Documents/github/stm32/Libraries/STM32F10x_StdPeriph_Driver/inc/misc.h \
  /Users/kingnan/Documents/github/stm32/components/oled/OLED.h \
  /Users/kingnan/Documents/github/stm32/components/Timer/Timer.h \
- /Users/kingnan/Documents/github/stm32/components/ADC_DMA/ADC_DMA.h
+ /Users/kingnan/Documents/github/stm32/components/Serial/Serial.h
