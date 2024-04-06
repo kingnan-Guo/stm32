@@ -11,6 +11,11 @@
  *
  */
 #include "stm32f10x.h"
+#include <stdio.h>
+#include "stdarg.h"
+//#include <pthread.h>
+
+
 
 void   Serial_Init(void){
     // USART1 是 APB2 的外设
@@ -82,3 +87,92 @@ void Serial_SendByte(uint8_t Byte){
     while (USART_GetFlagStatus(USART1, USART_FLAG_TXE) == RESET);
 }
 
+// 发送数组
+void Serial_SendArr(uint8_t *Array, uint16_t Length){
+    // uint16_t i;
+    for (int j = 0; j < Length; ++j) {
+        Serial_SendByte(Array[j]);
+    }
+}
+//发送字符串
+void Serial_SendString(char *String){
+    // 多硬空字符 ，是字符串结束标志位
+    // 也可以： i < String[i] != '\0';
+    for (int i = 0; i < String[i] != 0; i++) {
+        Serial_SendByte(String[i]);
+    }
+}
+
+
+// 返回 X^Y
+uint32_t Serial_Pow(uint32_t X, uint32_t Y){
+    uint32_t  Result = 1;
+    while (Y--){
+        Result = Result * X;
+    }
+    return  Result;
+}
+
+// 发送数字
+void Serial_SendNumber(uint32_t Number, uint8_t Length){
+    // 将NUmber 以 个位、 十位、 百位 以十进制拆分开， 然后再换成字符数据，依次发送出去
+    // 方法：取某一位就是 ： 数字 / (10^2) % 10
+    uint8_t i;
+    for (i = 0; i < Length; ++i) {
+        // 还要偏移 0x30
+        Serial_SendByte(Number/Serial_Pow(10, Length -i -1) % 10 + '0') ;
+    }
+}
+
+/**
+ *
+ * 要把fputc 重定向到串口
+ *
+ * @param c
+ * @param f
+ * @return
+ */
+//int fputc(int ch, FILE *f){
+//    //要把fputc 重定向到串口
+//    Serial_SendByte(ch);
+//    return ch;
+//}
+int fputc(int ch, FILE *f)
+{
+    Serial_SendByte(ch);
+    return ch;
+}
+
+
+
+///重定向c库函数scanf到串口，重写向后可使用scanf、getchar等函数
+int fgetc(FILE *f)
+{
+    uint8_t ch = 0;
+    while((USART1->SR&0X20)==0);//循环发送,直到发送完毕
+    ch = (uint8_t) USART1->DR;
+    return ch;
+}
+
+
+
+/**
+ * 可变参数 把printf 变成 可变参数
+ * @param format 用来接收 格式化字符串
+ * @param ... 用来接收后面的额可变参数列表
+ *
+ * 1、定义输出的字符串
+ * 2、
+ */
+void Serial_Print(char *format, ...){
+    // 定义输出的字符串
+    char String[100];
+    //定义一个参数列表变量 va_list 类型名 arg变量名
+    va_list arg;
+    // 从 format 位置开始接收参数表， 房子啊arg 里面
+    va_start(arg, format);
+    // vsprintf 打印位置是 String 格式化字符串 format； 参数 arg
+    vsprintf(String, format, arg);
+    va_end(arg);
+    Serial_SendString(String);
+}
