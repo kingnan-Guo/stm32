@@ -22,7 +22,7 @@ set(CMAKE_C_STANDARD 11)
 set(CMAKE_SHARED_LIBRARY_LINK_C_FLAGS "")
 set(CMAKE_SHARED_LIBRARY_LINK_CXX_FLAGS "")
 #CMAKE_EXE_LINKER_FLAGS 用于创建可执行文件的链接器标志； 链接器在创建可执行文件时将使用这些标志
-set(CMAKE_EXE_LINKER_FLAGS " -specs=rdimon.specs -lgcc -lc -lm -lrdimon")
+#set(CMAKE_EXE_LINKER_FLAGS " -specs=rdimon.specs -lgcc -lc -lm -lrdimon")
 
 #Uncomment for hardware floating point
 #add_compile_definitions(ARM_MATH_CM4;ARM_MATH_MATRIX_CHECK;ARM_MATH_ROUNDING)
@@ -75,13 +75,17 @@ include_directories(
         components/customDMA
         components/ADC_DMA
         components/Serial # 与 /Users/kingnan/Documents/github/stm32/components/Serial/ 相同
+
+        # 重定向 相关
+        system/retarget
+        system/syscalls
 )
 
 
 add_definitions(-DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB)
 
 #file(GLOB_RECURSE SOURCES "Core/*.*" "Drivers/*.*")
-file(GLOB_RECURSE SOURCES "startup/*.*" "Libraries/*.*" "User/*.*" "components/*.*")
+file(GLOB_RECURSE SOURCES "startup/*.*" "Libraries/*.*" "User/*.*" "components/*.*" "system/*.*")
 
 set(LINKER_SCRIPT ${CMAKE_SOURCE_DIR}/STM32F103C8TX_FLASH.ld)
 

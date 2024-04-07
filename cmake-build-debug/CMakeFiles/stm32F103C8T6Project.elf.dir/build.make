@@ -684,6 +684,34 @@ CMakeFiles/stm32F103C8T6Project.elf.dir/startup/startup_stm32f103c8tx.s.s: cmake
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling ASM source to assembly CMakeFiles/stm32F103C8T6Project.elf.dir/startup/startup_stm32f103c8tx.s.s"
 	/usr/local/bin/arm-none-eabi-gcc $(ASM_DEFINES) $(ASM_INCLUDES) $(ASM_FLAGS) -S /Users/kingnan/Documents/github/stm32/startup/startup_stm32f103c8tx.s -o CMakeFiles/stm32F103C8T6Project.elf.dir/startup/startup_stm32f103c8tx.s.s
 
+CMakeFiles/stm32F103C8T6Project.elf.dir/system/retarget/retarget.c.obj: CMakeFiles/stm32F103C8T6Project.elf.dir/flags.make
+CMakeFiles/stm32F103C8T6Project.elf.dir/system/retarget/retarget.c.obj: /Users/kingnan/Documents/github/stm32/system/retarget/retarget.c
+CMakeFiles/stm32F103C8T6Project.elf.dir/system/retarget/retarget.c.obj: CMakeFiles/stm32F103C8T6Project.elf.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/kingnan/Documents/github/stm32/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_45) "Building C object CMakeFiles/stm32F103C8T6Project.elf.dir/system/retarget/retarget.c.obj"
+	/usr/local/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/stm32F103C8T6Project.elf.dir/system/retarget/retarget.c.obj -MF CMakeFiles/stm32F103C8T6Project.elf.dir/system/retarget/retarget.c.obj.d -o CMakeFiles/stm32F103C8T6Project.elf.dir/system/retarget/retarget.c.obj -c /Users/kingnan/Documents/github/stm32/system/retarget/retarget.c
+
+CMakeFiles/stm32F103C8T6Project.elf.dir/system/retarget/retarget.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/stm32F103C8T6Project.elf.dir/system/retarget/retarget.c.i"
+	/usr/local/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/kingnan/Documents/github/stm32/system/retarget/retarget.c > CMakeFiles/stm32F103C8T6Project.elf.dir/system/retarget/retarget.c.i
+
+CMakeFiles/stm32F103C8T6Project.elf.dir/system/retarget/retarget.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/stm32F103C8T6Project.elf.dir/system/retarget/retarget.c.s"
+	/usr/local/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/kingnan/Documents/github/stm32/system/retarget/retarget.c -o CMakeFiles/stm32F103C8T6Project.elf.dir/system/retarget/retarget.c.s
+
+CMakeFiles/stm32F103C8T6Project.elf.dir/system/syscalls/syscalls.c.obj: CMakeFiles/stm32F103C8T6Project.elf.dir/flags.make
+CMakeFiles/stm32F103C8T6Project.elf.dir/system/syscalls/syscalls.c.obj: /Users/kingnan/Documents/github/stm32/system/syscalls/syscalls.c
+CMakeFiles/stm32F103C8T6Project.elf.dir/system/syscalls/syscalls.c.obj: CMakeFiles/stm32F103C8T6Project.elf.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/kingnan/Documents/github/stm32/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_46) "Building C object CMakeFiles/stm32F103C8T6Project.elf.dir/system/syscalls/syscalls.c.obj"
+	/usr/local/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/stm32F103C8T6Project.elf.dir/system/syscalls/syscalls.c.obj -MF CMakeFiles/stm32F103C8T6Project.elf.dir/system/syscalls/syscalls.c.obj.d -o CMakeFiles/stm32F103C8T6Project.elf.dir/system/syscalls/syscalls.c.obj -c /Users/kingnan/Documents/github/stm32/system/syscalls/syscalls.c
+
+CMakeFiles/stm32F103C8T6Project.elf.dir/system/syscalls/syscalls.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/stm32F103C8T6Project.elf.dir/system/syscalls/syscalls.c.i"
+	/usr/local/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/kingnan/Documents/github/stm32/system/syscalls/syscalls.c > CMakeFiles/stm32F103C8T6Project.elf.dir/system/syscalls/syscalls.c.i
+
+CMakeFiles/stm32F103C8T6Project.elf.dir/system/syscalls/syscalls.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/stm32F103C8T6Project.elf.dir/system/syscalls/syscalls.c.s"
+	/usr/local/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/kingnan/Documents/github/stm32/system/syscalls/syscalls.c -o CMakeFiles/stm32F103C8T6Project.elf.dir/system/syscalls/syscalls.c.s
+
 # Object files for target stm32F103C8T6Project.elf
 stm32F103C8T6Project_elf_OBJECTS = \
 "CMakeFiles/stm32F103C8T6Project.elf.dir/Libraries/CMSIS/core_cm3.c.obj" \
@@ -729,7 +757,9 @@ stm32F103C8T6Project_elf_OBJECTS = \
 "CMakeFiles/stm32F103C8T6Project.elf.dir/components/oled/OLED.c.obj" \
 "CMakeFiles/stm32F103C8T6Project.elf.dir/components/servo/servo.c.obj" \
 "CMakeFiles/stm32F103C8T6Project.elf.dir/components/unMicroLibRedirect/unMicroLibRedirect.c.obj" \
-"CMakeFiles/stm32F103C8T6Project.elf.dir/startup/startup_stm32f103c8tx.s.obj"
+"CMakeFiles/stm32F103C8T6Project.elf.dir/startup/startup_stm32f103c8tx.s.obj" \
+"CMakeFiles/stm32F103C8T6Project.elf.dir/system/retarget/retarget.c.obj" \
+"CMakeFiles/stm32F103C8T6Project.elf.dir/system/syscalls/syscalls.c.obj"
 
 # External object files for target stm32F103C8T6Project.elf
 stm32F103C8T6Project_elf_EXTERNAL_OBJECTS =
@@ -778,9 +808,11 @@ stm32F103C8T6Project.elf: CMakeFiles/stm32F103C8T6Project.elf.dir/components/ole
 stm32F103C8T6Project.elf: CMakeFiles/stm32F103C8T6Project.elf.dir/components/servo/servo.c.obj
 stm32F103C8T6Project.elf: CMakeFiles/stm32F103C8T6Project.elf.dir/components/unMicroLibRedirect/unMicroLibRedirect.c.obj
 stm32F103C8T6Project.elf: CMakeFiles/stm32F103C8T6Project.elf.dir/startup/startup_stm32f103c8tx.s.obj
+stm32F103C8T6Project.elf: CMakeFiles/stm32F103C8T6Project.elf.dir/system/retarget/retarget.c.obj
+stm32F103C8T6Project.elf: CMakeFiles/stm32F103C8T6Project.elf.dir/system/syscalls/syscalls.c.obj
 stm32F103C8T6Project.elf: CMakeFiles/stm32F103C8T6Project.elf.dir/build.make
 stm32F103C8T6Project.elf: CMakeFiles/stm32F103C8T6Project.elf.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/Users/kingnan/Documents/github/stm32/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_45) "Linking C executable stm32F103C8T6Project.elf"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/Users/kingnan/Documents/github/stm32/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_47) "Linking C executable stm32F103C8T6Project.elf"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/stm32F103C8T6Project.elf.dir/link.txt --verbose=$(VERBOSE)
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold "Building /Users/kingnan/Documents/github/stm32/cmake-build-debug/stm32F103C8T6Project.hex"
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold "Building /Users/kingnan/Documents/github/stm32/cmake-build-debug/stm32F103C8T6Project.bin"

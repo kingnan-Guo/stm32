@@ -1169,6 +1169,54 @@ startup/startup_stm32f103c8tx.s.obj:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/stm32F103C8T6Project.elf.dir/build.make CMakeFiles/stm32F103C8T6Project.elf.dir/startup/startup_stm32f103c8tx.s.obj
 .PHONY : startup/startup_stm32f103c8tx.s.obj
 
+system/retarget/retarget.obj: system/retarget/retarget.c.obj
+.PHONY : system/retarget/retarget.obj
+
+# target to build an object file
+system/retarget/retarget.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/stm32F103C8T6Project.elf.dir/build.make CMakeFiles/stm32F103C8T6Project.elf.dir/system/retarget/retarget.c.obj
+.PHONY : system/retarget/retarget.c.obj
+
+system/retarget/retarget.i: system/retarget/retarget.c.i
+.PHONY : system/retarget/retarget.i
+
+# target to preprocess a source file
+system/retarget/retarget.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/stm32F103C8T6Project.elf.dir/build.make CMakeFiles/stm32F103C8T6Project.elf.dir/system/retarget/retarget.c.i
+.PHONY : system/retarget/retarget.c.i
+
+system/retarget/retarget.s: system/retarget/retarget.c.s
+.PHONY : system/retarget/retarget.s
+
+# target to generate assembly for a file
+system/retarget/retarget.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/stm32F103C8T6Project.elf.dir/build.make CMakeFiles/stm32F103C8T6Project.elf.dir/system/retarget/retarget.c.s
+.PHONY : system/retarget/retarget.c.s
+
+system/syscalls/syscalls.obj: system/syscalls/syscalls.c.obj
+.PHONY : system/syscalls/syscalls.obj
+
+# target to build an object file
+system/syscalls/syscalls.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/stm32F103C8T6Project.elf.dir/build.make CMakeFiles/stm32F103C8T6Project.elf.dir/system/syscalls/syscalls.c.obj
+.PHONY : system/syscalls/syscalls.c.obj
+
+system/syscalls/syscalls.i: system/syscalls/syscalls.c.i
+.PHONY : system/syscalls/syscalls.i
+
+# target to preprocess a source file
+system/syscalls/syscalls.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/stm32F103C8T6Project.elf.dir/build.make CMakeFiles/stm32F103C8T6Project.elf.dir/system/syscalls/syscalls.c.i
+.PHONY : system/syscalls/syscalls.c.i
+
+system/syscalls/syscalls.s: system/syscalls/syscalls.c.s
+.PHONY : system/syscalls/syscalls.s
+
+# target to generate assembly for a file
+system/syscalls/syscalls.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/stm32F103C8T6Project.elf.dir/build.make CMakeFiles/stm32F103C8T6Project.elf.dir/system/syscalls/syscalls.c.s
+.PHONY : system/syscalls/syscalls.c.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -1308,6 +1356,12 @@ help:
 	@echo "... components/unMicroLibRedirect/unMicroLibRedirect.i"
 	@echo "... components/unMicroLibRedirect/unMicroLibRedirect.s"
 	@echo "... startup/startup_stm32f103c8tx.obj"
+	@echo "... system/retarget/retarget.obj"
+	@echo "... system/retarget/retarget.i"
+	@echo "... system/retarget/retarget.s"
+	@echo "... system/syscalls/syscalls.obj"
+	@echo "... system/syscalls/syscalls.i"
+	@echo "... system/syscalls/syscalls.s"
 .PHONY : help
 
 

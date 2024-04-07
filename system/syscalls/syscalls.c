@@ -34,8 +34,12 @@
 #include <time.h>
 #include <sys/time.h>
 #include <sys/times.h>
- 
- 
+
+
+/* 告知连接器不从C库链接使用半主机的函数 */
+#pragma import(__use_no_semihosting)
+
+
 /* Variables */
 //#undef errno
 extern int errno;
@@ -192,3 +196,4 @@ int _execve(char *name, char **argv, char **env)
     errno = ENOMEM;
     return -1;
 }
+
