@@ -38,8 +38,8 @@ int main(void) {
         Serial_SendNumber(200, 3);
         Serial_SendString("\r\n");
 
-//        printf("Hello World!\n");
-         printf("printfNum=%d\r\n",  data);
+        printf("Hello World!\n");
+        printf("printfNum=%d\r\n",  data);
 
         data++;
         Serial_SendByte(data);

@@ -18,11 +18,15 @@ project(stm32F103C8T6Project C CXX ASM)
 set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_C_STANDARD 11)
 
+# ----- start
+# 这段可以 正常打包而不会报错， 但是在这个项目中  syscalls.c 内将报错的 函数 在其内部创建了一遍
 # 添加这段 之后 可以 使用引入的 "stdarg.h"
-set(CMAKE_SHARED_LIBRARY_LINK_C_FLAGS "")
-set(CMAKE_SHARED_LIBRARY_LINK_CXX_FLAGS "")
+#set(CMAKE_SHARED_LIBRARY_LINK_C_FLAGS "")
+#set(CMAKE_SHARED_LIBRARY_LINK_CXX_FLAGS "")
 #CMAKE_EXE_LINKER_FLAGS 用于创建可执行文件的链接器标志； 链接器在创建可执行文件时将使用这些标志
 #set(CMAKE_EXE_LINKER_FLAGS " -specs=rdimon.specs -lgcc -lc -lm -lrdimon")
+# ---------- end
+
 
 #Uncomment for hardware floating point
 #add_compile_definitions(ARM_MATH_CM4;ARM_MATH_MATRIX_CHECK;ARM_MATH_ROUNDING)
