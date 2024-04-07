@@ -3,16 +3,13 @@
 #include "OLED.h"
 #include "delay.h"
 #include "Serial.h"
-//#include "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/stdio.h"
-//#include <stdarg.h>
-
 #include "retarget.h"
 
 uint8_t  data = 0x20;
 int16_t num = 0x11;
 uint8_t Arr[] = {0x41, 0x42, 0x43};
-//uint8_t StringData = 'USART';
 
+uint8_t RxData;
 
 int32_t age;
 int main(void) {
@@ -23,49 +20,34 @@ int main(void) {
      * 当然其他端口也行
      */
     RetargetInit(USART1);
-
-    OLED_ShowString(1, 1, "0x42");
-
+    OLED_ShowString(1, 1, "receive Data");
 
     while(1) {
-        Serial_Print("Num=%d\r\n",  num++);
-        Serial_SendArr(Arr, 3);
-        Serial_SendString("\r\n");
-        // 传输字符串的时候会自动补上 结束标志位
-        Serial_SendString("StringData\r\n");
-        Serial_SendString((char *) &data);
-        Serial_SendString("\r\n");
-        Serial_SendNumber(200, 3);
-        Serial_SendString("\r\n");
+//        Serial_Print("Num=%d\r\n",  num++);
+//        Serial_SendArr(Arr, 3);
+//        Serial_SendString("\r\n");
+//        // 传输字符串的时候会自动补上 结束标志位
+//        Serial_SendString("StringData\r\n");
+//        Serial_SendString((char *) &data);
+//        Serial_SendString("\r\n");
+//        Serial_SendNumber(200, 3);
+//        Serial_SendString("\r\n");
+//
+//        printf("Hello World!\n");
+//        printf("printfNum=%d\r\n",  data);
+//
+//        data++;
+//        Serial_SendByte(data);
+//        OLED_ShowHexNum(2, 1, data, 3);
+//
+//        Delay_ms(1000);
 
-        printf("Hello World!\n");
-        printf("printfNum=%d\r\n",  data);
-
-        data++;
-        Serial_SendByte(data);
-        OLED_ShowHexNum(2, 1, data, 3);
-
-        Delay_ms(1000);
-
+        // 循环判断标志位
+        if (USART_GetFlagStatus(USART1, USART_FLAG_RXNE) == SET){
+            // 读取数据 自动清除 标志位
+            RxData = USART_ReceiveData(USART1);
+            OLED_ShowHexNum(2,1, RxData, 5);
+        }
     }
 }
-
-
-/* 告知连接器不从C库链接使用半主机的函数 */
-#pragma import(__use_no_semihosting)
-
-/* 定义 _sys_exit() 以避免使用半主机模式 */
-void _sys_exit(int x)
-{
-    x = x;
-}
-
-/* 标准库需要的支持类型 */
-struct __FILE
-{
-    int handle;
-};
-
-FILE __stdout;
-
 

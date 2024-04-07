@@ -52,6 +52,15 @@ void   Serial_Init(void){
 
     GPIO_Init(GPIOA, &GPIO_InitStructure);
 
+    /**
+     * 初始化 A10  用于接收数据
+     */
+    GPIO_InitStructure.GPIO_Mode = GPIO_Mode_IPU;// 复用推挽输出
+    GPIO_InitStructure.GPIO_Pin = GPIO_Pin_10;
+    GPIO_InitStructure.GPIO_Speed = GPIO_Speed_50MHz;
+
+    GPIO_Init(GPIOA, &GPIO_InitStructure);
+
 
     //初始化USART
     USART_InitTypeDef USART_InitStructure;
