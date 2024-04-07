@@ -55,10 +55,9 @@ void   Serial_Init(void){
     /**
      * 初始化 A10  用于接收数据
      */
-    GPIO_InitStructure.GPIO_Mode = GPIO_Mode_IPU;// 复用推挽输出
+    GPIO_InitStructure.GPIO_Mode = GPIO_Mode_IPU;
     GPIO_InitStructure.GPIO_Pin = GPIO_Pin_10;
     GPIO_InitStructure.GPIO_Speed = GPIO_Speed_50MHz;
-
     GPIO_Init(GPIOA, &GPIO_InitStructure);
 
 
@@ -66,7 +65,7 @@ void   Serial_Init(void){
     USART_InitTypeDef USART_InitStructure;
     USART_InitStructure.USART_BaudRate = 9600;// 波特率 USART_Init 会自动算好对应 9600 的分频，然后写到 BRR 寄存器
     USART_InitStructure.USART_HardwareFlowControl = USART_HardwareFlowControl_None;//流控 不使用 流控
-    USART_InitStructure.USART_Mode = USART_Mode_Tx;//串口模式 人活急需要发送 又需要接收，那么 = USART_Mode_Rx ｜ USART_Mode_Tx
+    USART_InitStructure.USART_Mode = USART_Mode_Tx | USART_Mode_Rx;//串口模式 如果需要发送 又需要接收，那么 = USART_Mode_Rx ｜ USART_Mode_Tx
     USART_InitStructure.USART_Parity = USART_Parity_No;// 校验位 不使用USART_Parity_No
     USART_InitStructure.USART_StopBits = USART_StopBits_1;// 停止位  USART_StopBits_1 一位
     USART_InitStructure.USART_WordLength = USART_WordLength_8b;// 字长 位数 8 位

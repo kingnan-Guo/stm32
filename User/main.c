@@ -46,8 +46,11 @@ int main(void) {
         if (USART_GetFlagStatus(USART1, USART_FLAG_RXNE) == SET){
             // 读取数据 自动清除 标志位
             RxData = USART_ReceiveData(USART1);
-            OLED_ShowHexNum(2,1, RxData, 5);
+             OLED_ShowHexNum(2,1, RxData, 5);
         }
+
+//        printf("printfNum=%d\r\n",  data);
+//        Delay_ms(1000);
     }
 }
 
