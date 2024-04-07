@@ -29,7 +29,7 @@ int main(void) {
         Serial_SendString("\r\n");
         Serial_SendNumber(200, 3);
         Serial_SendString("\r\n");
-        // printf("Num=%d\r\n",  data);
+         printf("Num=%d\r\n",  data);
         Serial_Print("Num=%d\r\n",  620);
         data++;
         Serial_SendByte(data);
@@ -39,5 +39,23 @@ int main(void) {
 
     }
 }
+
+
+/* 告知连接器不从C库链接使用半主机的函数 */
+#pragma import(__use_no_semihosting)
+
+/* 定义 _sys_exit() 以避免使用半主机模式 */
+void _sys_exit(int x)
+{
+    x = x;
+}
+
+/* 标准库需要的支持类型 */
+struct __FILE
+{
+    int handle;
+};
+
+FILE __stdout;
 
 

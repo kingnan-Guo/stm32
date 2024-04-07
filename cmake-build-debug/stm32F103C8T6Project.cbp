@@ -386,6 +386,12 @@
 		<Unit filename="/Users/kingnan/Documents/github/stm32/components/servo/servo.h">
 			<Option target="stm32F103C8T6Project.elf"/>
 		</Unit>
+		<Unit filename="/Users/kingnan/Documents/github/stm32/components/unMicroLibRedirect/unMicroLibRedirect.c">
+			<Option target="stm32F103C8T6Project.elf"/>
+		</Unit>
+		<Unit filename="/Users/kingnan/Documents/github/stm32/components/unMicroLibRedirect/unMicroLibRedirect.h">
+			<Option target="stm32F103C8T6Project.elf"/>
+		</Unit>
 		<Unit filename="/Users/kingnan/Documents/github/stm32/startup/startup_stm32f103c8tx.s">
 			<Option target="stm32F103C8T6Project.elf"/>
 		</Unit>

@@ -657,9 +657,23 @@ CMakeFiles/stm32F103C8T6Project.elf.dir/components/servo/servo.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/stm32F103C8T6Project.elf.dir/components/servo/servo.c.s"
 	/usr/local/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/kingnan/Documents/github/stm32/components/servo/servo.c -o CMakeFiles/stm32F103C8T6Project.elf.dir/components/servo/servo.c.s
 
+CMakeFiles/stm32F103C8T6Project.elf.dir/components/unMicroLibRedirect/unMicroLibRedirect.c.obj: CMakeFiles/stm32F103C8T6Project.elf.dir/flags.make
+CMakeFiles/stm32F103C8T6Project.elf.dir/components/unMicroLibRedirect/unMicroLibRedirect.c.obj: /Users/kingnan/Documents/github/stm32/components/unMicroLibRedirect/unMicroLibRedirect.c
+CMakeFiles/stm32F103C8T6Project.elf.dir/components/unMicroLibRedirect/unMicroLibRedirect.c.obj: CMakeFiles/stm32F103C8T6Project.elf.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/kingnan/Documents/github/stm32/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_43) "Building C object CMakeFiles/stm32F103C8T6Project.elf.dir/components/unMicroLibRedirect/unMicroLibRedirect.c.obj"
+	/usr/local/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/stm32F103C8T6Project.elf.dir/components/unMicroLibRedirect/unMicroLibRedirect.c.obj -MF CMakeFiles/stm32F103C8T6Project.elf.dir/components/unMicroLibRedirect/unMicroLibRedirect.c.obj.d -o CMakeFiles/stm32F103C8T6Project.elf.dir/components/unMicroLibRedirect/unMicroLibRedirect.c.obj -c /Users/kingnan/Documents/github/stm32/components/unMicroLibRedirect/unMicroLibRedirect.c
+
+CMakeFiles/stm32F103C8T6Project.elf.dir/components/unMicroLibRedirect/unMicroLibRedirect.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/stm32F103C8T6Project.elf.dir/components/unMicroLibRedirect/unMicroLibRedirect.c.i"
+	/usr/local/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/kingnan/Documents/github/stm32/components/unMicroLibRedirect/unMicroLibRedirect.c > CMakeFiles/stm32F103C8T6Project.elf.dir/components/unMicroLibRedirect/unMicroLibRedirect.c.i
+
+CMakeFiles/stm32F103C8T6Project.elf.dir/components/unMicroLibRedirect/unMicroLibRedirect.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/stm32F103C8T6Project.elf.dir/components/unMicroLibRedirect/unMicroLibRedirect.c.s"
+	/usr/local/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/kingnan/Documents/github/stm32/components/unMicroLibRedirect/unMicroLibRedirect.c -o CMakeFiles/stm32F103C8T6Project.elf.dir/components/unMicroLibRedirect/unMicroLibRedirect.c.s
+
 CMakeFiles/stm32F103C8T6Project.elf.dir/startup/startup_stm32f103c8tx.s.obj: CMakeFiles/stm32F103C8T6Project.elf.dir/flags.make
 CMakeFiles/stm32F103C8T6Project.elf.dir/startup/startup_stm32f103c8tx.s.obj: /Users/kingnan/Documents/github/stm32/startup/startup_stm32f103c8tx.s
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/kingnan/Documents/github/stm32/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_43) "Building ASM object CMakeFiles/stm32F103C8T6Project.elf.dir/startup/startup_stm32f103c8tx.s.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/kingnan/Documents/github/stm32/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_44) "Building ASM object CMakeFiles/stm32F103C8T6Project.elf.dir/startup/startup_stm32f103c8tx.s.obj"
 	/usr/local/bin/arm-none-eabi-gcc $(ASM_DEFINES) $(ASM_INCLUDES) $(ASM_FLAGS) -o CMakeFiles/stm32F103C8T6Project.elf.dir/startup/startup_stm32f103c8tx.s.obj -c /Users/kingnan/Documents/github/stm32/startup/startup_stm32f103c8tx.s
 
 CMakeFiles/stm32F103C8T6Project.elf.dir/startup/startup_stm32f103c8tx.s.i: cmake_force
@@ -714,6 +728,7 @@ stm32F103C8T6Project_elf_OBJECTS = \
 "CMakeFiles/stm32F103C8T6Project.elf.dir/components/key/key.c.obj" \
 "CMakeFiles/stm32F103C8T6Project.elf.dir/components/oled/OLED.c.obj" \
 "CMakeFiles/stm32F103C8T6Project.elf.dir/components/servo/servo.c.obj" \
+"CMakeFiles/stm32F103C8T6Project.elf.dir/components/unMicroLibRedirect/unMicroLibRedirect.c.obj" \
 "CMakeFiles/stm32F103C8T6Project.elf.dir/startup/startup_stm32f103c8tx.s.obj"
 
 # External object files for target stm32F103C8T6Project.elf
@@ -761,10 +776,11 @@ stm32F103C8T6Project.elf: CMakeFiles/stm32F103C8T6Project.elf.dir/components/del
 stm32F103C8T6Project.elf: CMakeFiles/stm32F103C8T6Project.elf.dir/components/key/key.c.obj
 stm32F103C8T6Project.elf: CMakeFiles/stm32F103C8T6Project.elf.dir/components/oled/OLED.c.obj
 stm32F103C8T6Project.elf: CMakeFiles/stm32F103C8T6Project.elf.dir/components/servo/servo.c.obj
+stm32F103C8T6Project.elf: CMakeFiles/stm32F103C8T6Project.elf.dir/components/unMicroLibRedirect/unMicroLibRedirect.c.obj
 stm32F103C8T6Project.elf: CMakeFiles/stm32F103C8T6Project.elf.dir/startup/startup_stm32f103c8tx.s.obj
 stm32F103C8T6Project.elf: CMakeFiles/stm32F103C8T6Project.elf.dir/build.make
 stm32F103C8T6Project.elf: CMakeFiles/stm32F103C8T6Project.elf.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/Users/kingnan/Documents/github/stm32/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_44) "Linking C executable stm32F103C8T6Project.elf"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/Users/kingnan/Documents/github/stm32/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_45) "Linking C executable stm32F103C8T6Project.elf"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/stm32F103C8T6Project.elf.dir/link.txt --verbose=$(VERBOSE)
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold "Building /Users/kingnan/Documents/github/stm32/cmake-build-debug/stm32F103C8T6Project.hex"
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold "Building /Users/kingnan/Documents/github/stm32/cmake-build-debug/stm32F103C8T6Project.bin"

@@ -17,6 +17,14 @@
 
 
 
+
+
+
+
+
+
+
+
 void   Serial_Init(void){
     // USART1 是 APB2 的外设
     RCC_APB2PeriphClockCmd(RCC_APB2Periph_USART1, ENABLE);
@@ -132,28 +140,16 @@ void Serial_SendNumber(uint32_t Number, uint8_t Length){
  * @param f
  * @return
  */
-//int fputc(int ch, FILE *f){
-//    //要把fputc 重定向到串口
-//    Serial_SendByte(ch);
-//    return ch;
-//}
-int fputc(int ch, FILE *f)
-{
+int fputc(int ch, FILE *f){
+    //要把fputc 重定向到串口
     Serial_SendByte(ch);
     return ch;
 }
-
-
-
-///重定向c库函数scanf到串口，重写向后可使用scanf、getchar等函数
-int fgetc(FILE *f)
-{
-    uint8_t ch = 0;
-    while((USART1->SR&0X20)==0);//循环发送,直到发送完毕
-    ch = (uint8_t) USART1->DR;
-    return ch;
-}
-
+//int fputc(int ch, FILE *f)
+//{
+//    Serial_SendByte(ch);
+//    return ch;
+//}
 
 
 /**
@@ -176,3 +172,6 @@ void Serial_Print(char *format, ...){
     va_end(arg);
     Serial_SendString(String);
 }
+
+
+
