@@ -12,7 +12,7 @@ uint8_t  data = 0x20;
 int16_t num = 0x11;
 uint8_t Arr[] = {0x41, 0x42, 0x43};
 //uint8_t StringData = 'USART';
-
+char buf[100];
 
 int32_t age;
 int main(void) {
@@ -45,6 +45,8 @@ int main(void) {
         Serial_SendByte(data);
         OLED_ShowHexNum(2, 1, data, 3);
 
+
+        //  scanf("%s", buf);
         Delay_ms(1000);
 
     }

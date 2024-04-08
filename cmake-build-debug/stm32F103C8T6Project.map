@@ -1503,6 +1503,7 @@ Discarded input sections
  .data          0x00000000        0x0 CMakeFiles/stm32F103C8T6Project.elf.dir/User/main.c.obj
  .bss           0x00000000        0x0 CMakeFiles/stm32F103C8T6Project.elf.dir/User/main.c.obj
  .bss.age       0x00000000        0x4 CMakeFiles/stm32F103C8T6Project.elf.dir/User/main.c.obj
+ .bss.buf       0x00000000       0x64 CMakeFiles/stm32F103C8T6Project.elf.dir/User/main.c.obj
  .text          0x00000000        0x0 CMakeFiles/stm32F103C8T6Project.elf.dir/User/stm32f10x_it.c.obj
  .data          0x00000000        0x0 CMakeFiles/stm32F103C8T6Project.elf.dir/User/stm32f10x_it.c.obj
  .bss           0x00000000        0x0 CMakeFiles/stm32F103C8T6Project.elf.dir/User/stm32f10x_it.c.obj
@@ -3299,37 +3300,37 @@ LOAD /Applications/ArmGNUToolchain/13.2.Rel1/arm-none-eabi/bin/../lib/gcc/arm-no
 LOAD /Applications/ArmGNUToolchain/13.2.Rel1/arm-none-eabi/bin/../lib/gcc/arm-none-eabi/13.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libm.a
 LOAD /Applications/ArmGNUToolchain/13.2.Rel1/arm-none-eabi/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v7-m/nofp/libgcc.a
 
-.debug_info     0x00000000     0x6052
+.debug_info     0x00000000     0x6076
  .debug_info    0x00000000      0x439 CMakeFiles/stm32F103C8T6Project.elf.dir/Libraries/CMSIS/system_stm32f10x.c.obj
  .debug_info    0x00000439      0x337 CMakeFiles/stm32F103C8T6Project.elf.dir/Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_exti.c.obj
  .debug_info    0x00000770      0x8be CMakeFiles/stm32F103C8T6Project.elf.dir/Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_gpio.c.obj
  .debug_info    0x0000102e      0x8bc CMakeFiles/stm32F103C8T6Project.elf.dir/Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_rcc.c.obj
  .debug_info    0x000018ea      0xb82 CMakeFiles/stm32F103C8T6Project.elf.dir/Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_usart.c.obj
- .debug_info    0x0000246c      0x491 CMakeFiles/stm32F103C8T6Project.elf.dir/User/main.c.obj
- .debug_info    0x000028fd       0xfd CMakeFiles/stm32F103C8T6Project.elf.dir/User/stm32f10x_it.c.obj
- .debug_info    0x000029fa      0xe5a CMakeFiles/stm32F103C8T6Project.elf.dir/components/Serial/Serial.c.obj
- .debug_info    0x00003854      0x696 CMakeFiles/stm32F103C8T6Project.elf.dir/components/countSensor/countSensor.c.obj
- .debug_info    0x00003eea      0x170 CMakeFiles/stm32F103C8T6Project.elf.dir/components/delay/delay.c.obj
- .debug_info    0x0000405a      0xdd9 CMakeFiles/stm32F103C8T6Project.elf.dir/components/oled/OLED.c.obj
- .debug_info    0x00004e33       0x30 CMakeFiles/stm32F103C8T6Project.elf.dir/startup/startup_stm32f103c8tx.s.obj
- .debug_info    0x00004e63      0x9e0 CMakeFiles/stm32F103C8T6Project.elf.dir/system/retarget/retarget.c.obj
- .debug_info    0x00005843      0x80f CMakeFiles/stm32F103C8T6Project.elf.dir/system/syscalls/syscalls.c.obj
+ .debug_info    0x0000246c      0x4b5 CMakeFiles/stm32F103C8T6Project.elf.dir/User/main.c.obj
+ .debug_info    0x00002921       0xfd CMakeFiles/stm32F103C8T6Project.elf.dir/User/stm32f10x_it.c.obj
+ .debug_info    0x00002a1e      0xe5a CMakeFiles/stm32F103C8T6Project.elf.dir/components/Serial/Serial.c.obj
+ .debug_info    0x00003878      0x696 CMakeFiles/stm32F103C8T6Project.elf.dir/components/countSensor/countSensor.c.obj
+ .debug_info    0x00003f0e      0x170 CMakeFiles/stm32F103C8T6Project.elf.dir/components/delay/delay.c.obj
+ .debug_info    0x0000407e      0xdd9 CMakeFiles/stm32F103C8T6Project.elf.dir/components/oled/OLED.c.obj
+ .debug_info    0x00004e57       0x30 CMakeFiles/stm32F103C8T6Project.elf.dir/startup/startup_stm32f103c8tx.s.obj
+ .debug_info    0x00004e87      0x9e0 CMakeFiles/stm32F103C8T6Project.elf.dir/system/retarget/retarget.c.obj
+ .debug_info    0x00005867      0x80f CMakeFiles/stm32F103C8T6Project.elf.dir/system/syscalls/syscalls.c.obj
 
-.debug_abbrev   0x00000000     0x1874
+.debug_abbrev   0x00000000     0x1873
  .debug_abbrev  0x00000000      0x1c7 CMakeFiles/stm32F103C8T6Project.elf.dir/Libraries/CMSIS/system_stm32f10x.c.obj
  .debug_abbrev  0x000001c7      0x193 CMakeFiles/stm32F103C8T6Project.elf.dir/Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_exti.c.obj
  .debug_abbrev  0x0000035a      0x250 CMakeFiles/stm32F103C8T6Project.elf.dir/Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_gpio.c.obj
  .debug_abbrev  0x000005aa      0x20d CMakeFiles/stm32F103C8T6Project.elf.dir/Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_rcc.c.obj
  .debug_abbrev  0x000007b7      0x209 CMakeFiles/stm32F103C8T6Project.elf.dir/Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_usart.c.obj
- .debug_abbrev  0x000009c0      0x170 CMakeFiles/stm32F103C8T6Project.elf.dir/User/main.c.obj
- .debug_abbrev  0x00000b30       0x45 CMakeFiles/stm32F103C8T6Project.elf.dir/User/stm32f10x_it.c.obj
- .debug_abbrev  0x00000b75      0x334 CMakeFiles/stm32F103C8T6Project.elf.dir/components/Serial/Serial.c.obj
- .debug_abbrev  0x00000ea9      0x1e9 CMakeFiles/stm32F103C8T6Project.elf.dir/components/countSensor/countSensor.c.obj
- .debug_abbrev  0x00001092       0xe6 CMakeFiles/stm32F103C8T6Project.elf.dir/components/delay/delay.c.obj
- .debug_abbrev  0x00001178      0x253 CMakeFiles/stm32F103C8T6Project.elf.dir/components/oled/OLED.c.obj
- .debug_abbrev  0x000013cb       0x24 CMakeFiles/stm32F103C8T6Project.elf.dir/startup/startup_stm32f103c8tx.s.obj
- .debug_abbrev  0x000013ef      0x29f CMakeFiles/stm32F103C8T6Project.elf.dir/system/retarget/retarget.c.obj
- .debug_abbrev  0x0000168e      0x1e6 CMakeFiles/stm32F103C8T6Project.elf.dir/system/syscalls/syscalls.c.obj
+ .debug_abbrev  0x000009c0      0x16f CMakeFiles/stm32F103C8T6Project.elf.dir/User/main.c.obj
+ .debug_abbrev  0x00000b2f       0x45 CMakeFiles/stm32F103C8T6Project.elf.dir/User/stm32f10x_it.c.obj
+ .debug_abbrev  0x00000b74      0x334 CMakeFiles/stm32F103C8T6Project.elf.dir/components/Serial/Serial.c.obj
+ .debug_abbrev  0x00000ea8      0x1e9 CMakeFiles/stm32F103C8T6Project.elf.dir/components/countSensor/countSensor.c.obj
+ .debug_abbrev  0x00001091       0xe6 CMakeFiles/stm32F103C8T6Project.elf.dir/components/delay/delay.c.obj
+ .debug_abbrev  0x00001177      0x253 CMakeFiles/stm32F103C8T6Project.elf.dir/components/oled/OLED.c.obj
+ .debug_abbrev  0x000013ca       0x24 CMakeFiles/stm32F103C8T6Project.elf.dir/startup/startup_stm32f103c8tx.s.obj
+ .debug_abbrev  0x000013ee      0x29f CMakeFiles/stm32F103C8T6Project.elf.dir/system/retarget/retarget.c.obj
+ .debug_abbrev  0x0000168d      0x1e6 CMakeFiles/stm32F103C8T6Project.elf.dir/system/syscalls/syscalls.c.obj
 
 .debug_loclists
                 0x00000000     0x1aa9
@@ -3415,7 +3416,7 @@ LOAD /Applications/ArmGNUToolchain/13.2.Rel1/arm-none-eabi/bin/../lib/gcc/arm-no
  .debug_rnglists
                 0x000003e3       0x7f CMakeFiles/stm32F103C8T6Project.elf.dir/system/syscalls/syscalls.c.obj
 
-.debug_line     0x00000000     0x3e03
+.debug_line     0x00000000     0x3e05
  .debug_line    0x00000000      0x3e1 CMakeFiles/stm32F103C8T6Project.elf.dir/Libraries/CMSIS/system_stm32f10x.c.obj
  .debug_line    0x000003e1      0x3f0 CMakeFiles/stm32F103C8T6Project.elf.dir/Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_exti.c.obj
  .debug_line    0x000007d1      0x723 CMakeFiles/stm32F103C8T6Project.elf.dir/Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_gpio.c.obj
@@ -3428,8 +3429,8 @@ LOAD /Applications/ArmGNUToolchain/13.2.Rel1/arm-none-eabi/bin/../lib/gcc/arm-no
  .debug_line    0x00002d52      0x217 CMakeFiles/stm32F103C8T6Project.elf.dir/components/delay/delay.c.obj
  .debug_line    0x00002f69      0x674 CMakeFiles/stm32F103C8T6Project.elf.dir/components/oled/OLED.c.obj
  .debug_line    0x000035dd       0x78 CMakeFiles/stm32F103C8T6Project.elf.dir/startup/startup_stm32f103c8tx.s.obj
- .debug_line    0x00003655      0x34d CMakeFiles/stm32F103C8T6Project.elf.dir/system/retarget/retarget.c.obj
- .debug_line    0x000039a2      0x461 CMakeFiles/stm32F103C8T6Project.elf.dir/system/syscalls/syscalls.c.obj
+ .debug_line    0x00003655      0x34f CMakeFiles/stm32F103C8T6Project.elf.dir/system/retarget/retarget.c.obj
+ .debug_line    0x000039a4      0x461 CMakeFiles/stm32F103C8T6Project.elf.dir/system/syscalls/syscalls.c.obj
 
 .debug_str      0x00000000     0x202d
  .debug_str     0x00000000     0x202d CMakeFiles/stm32F103C8T6Project.elf.dir/Libraries/CMSIS/system_stm32f10x.c.obj
