@@ -47,7 +47,7 @@ int main(void) {
 
 
         //  scanf("%s", buf);
-        Delay_ms(1000);
+        Delay_ms(2000);
 
     }
 }
