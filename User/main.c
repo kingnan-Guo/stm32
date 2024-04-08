@@ -30,7 +30,7 @@ int main(void) {
             RxData = Serial_GetRxData();
             OLED_ShowHexNum(2,1, RxData, 5);
         }
-
+        // OLED_ShowSignedNum();
         //printf("printfNum=%d\r\n",  data);
         //Delay_ms(1000);
     }
