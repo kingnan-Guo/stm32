@@ -15,8 +15,8 @@
 #include "stdarg.h"
 //#include <pthread.h>
 
-
-
+uint8_t Serial_RxData;
+uint8_t Serial_RxFlag;
 
 
 
@@ -70,6 +70,27 @@ void   Serial_Init(void){
     USART_InitStructure.USART_StopBits = USART_StopBits_1;// 停止位  USART_StopBits_1 一位
     USART_InitStructure.USART_WordLength = USART_WordLength_8b;// 字长 位数 8 位
     USART_Init(USART1, &USART_InitStructure);
+
+
+    /**
+     * 1、当 USART_IT_RXNE 标志位 置 1 就会向 NVIC 申请中断
+     * 2、在中断函数中 接收数据，具体中断函数的名字要在 启动函数中查找
+     *
+     */
+    // 配置串口中断  ; USART_IT_RXNE: Receive Data register not empty interrupt 接收数据寄存器非空中断， 开启USART_IT_RXNE 到中断标志位的输出;
+    USART_ITConfig(USART1, USART_IT_RXNE, ENABLE);
+    // 配置NViV
+    // NVIC_PriorityGroup_2 两位抢占 两位响应
+    NVIC_PriorityGroupConfig(NVIC_PriorityGroup_2);
+
+    // 初始化 NVIC的 USART1 通道
+    // 结构体配置
+    NVIC_InitTypeDef NVIC_InitStructure;
+    NVIC_InitStructure.NVIC_IRQChannel = USART1_IRQn;//指定 中断 通道开启 或 关闭 ； USART1_IRQn 在 Libraries/CMSIS/stm32f10x.h 中 查询； 指定通道
+    NVIC_InitStructure.NVIC_IRQChannelCmd = ENABLE;//指定 中断 通道 是 使能 还是  失能
+    NVIC_InitStructure.NVIC_IRQChannelPreemptionPriority = 1;// 指定 所选通道的抢占 优先级
+    NVIC_InitStructure.NVIC_IRQChannelSubPriority = 1;// 指定 所选通道的  响应优先级
+    NVIC_Init(&NVIC_InitStructure);
 
     // 串口使能
     USART_Cmd(USART1,ENABLE);
@@ -140,24 +161,6 @@ void Serial_SendNumber(uint32_t Number, uint8_t Length){
     }
 }
 
-/**
- *
- * 要把fputc 重定向到串口
- *
- * @param c
- * @param f
- * @return
- */
-int fputc(int ch, FILE *f){
-    //要把fputc 重定向到串口
-    Serial_SendByte(ch);
-    return ch;
-}
-//int fputc(int ch, FILE *f)
-//{
-//    Serial_SendByte(ch);
-//    return ch;
-//}
 
 
 /**
@@ -179,6 +182,31 @@ void Serial_Print(char *format, ...){
     vsprintf(String, format, arg);
     va_end(arg);
     Serial_SendString(String);
+}
+
+//中断 函数  固定的名称
+void USART1_IRQHandler(void){
+    if (USART_GetFlagStatus(USART1, USART_FLAG_RXNE) == SET){
+        // 读取数据 自动清除 标志位
+        Serial_RxData = USART_ReceiveData(USART1);
+        Serial_RxFlag = 1;
+        // 清除  标志位 ；如果 读取的DR 那么就会自动清除，但是这里再次清除一下
+        USART_ClearITPendingBit(USART1, USART_FLAG_RXNE);
+
+    }
+}
+
+uint8_t Serial_GetRxData(void)
+{
+    return Serial_RxData;
+}
+
+uint8_t Serial_GetRxFlag(void){
+    if(Serial_RxFlag == 1){
+        Serial_RxFlag = 0;
+        return 1;
+    }
+    return 0;
 }
 
 
