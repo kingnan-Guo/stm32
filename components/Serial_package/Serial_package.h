@@ -2,7 +2,8 @@
 #define __SERIAL_PACKAGE_H
 #include <stdio.h>
 extern uint8_t Serial_package_TxPacket[];//声明数组外部可调用
-extern uint8_t Serial_package_RxPacket[];
+extern char Serial_package_RxPacket[];
+extern uint8_t Serial_package_RxFlag;
 
 void Serial_package_Init(void);
 void Serial_package_SendByte(uint8_t Byte);

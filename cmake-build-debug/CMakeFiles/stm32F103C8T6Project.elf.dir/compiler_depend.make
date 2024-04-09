@@ -883,7 +883,10 @@ CMakeFiles/stm32F103C8T6Project.elf.dir/User/main.c.obj: /Users/kingnan/Document
   /Applications/ArmGNUToolchain/13.2.Rel1/arm-none-eabi/arm-none-eabi/include/newlib.h \
   /Applications/ArmGNUToolchain/13.2.Rel1/arm-none-eabi/arm-none-eabi/include/stdint.h \
   /Applications/ArmGNUToolchain/13.2.Rel1/arm-none-eabi/arm-none-eabi/include/stdio.h \
+  /Applications/ArmGNUToolchain/13.2.Rel1/arm-none-eabi/arm-none-eabi/include/string.h \
+  /Applications/ArmGNUToolchain/13.2.Rel1/arm-none-eabi/arm-none-eabi/include/strings.h \
   /Applications/ArmGNUToolchain/13.2.Rel1/arm-none-eabi/arm-none-eabi/include/sys/_intsup.h \
+  /Applications/ArmGNUToolchain/13.2.Rel1/arm-none-eabi/arm-none-eabi/include/sys/_locale.h \
   /Applications/ArmGNUToolchain/13.2.Rel1/arm-none-eabi/arm-none-eabi/include/sys/_stdint.h \
   /Applications/ArmGNUToolchain/13.2.Rel1/arm-none-eabi/arm-none-eabi/include/sys/_types.h \
   /Applications/ArmGNUToolchain/13.2.Rel1/arm-none-eabi/arm-none-eabi/include/sys/cdefs.h \
@@ -892,6 +895,7 @@ CMakeFiles/stm32F103C8T6Project.elf.dir/User/main.c.obj: /Users/kingnan/Document
   /Applications/ArmGNUToolchain/13.2.Rel1/arm-none-eabi/arm-none-eabi/include/sys/lock.h \
   /Applications/ArmGNUToolchain/13.2.Rel1/arm-none-eabi/arm-none-eabi/include/sys/reent.h \
   /Applications/ArmGNUToolchain/13.2.Rel1/arm-none-eabi/arm-none-eabi/include/sys/stdio.h \
+  /Applications/ArmGNUToolchain/13.2.Rel1/arm-none-eabi/arm-none-eabi/include/sys/string.h \
   /Applications/ArmGNUToolchain/13.2.Rel1/arm-none-eabi/lib/gcc/arm-none-eabi/13.2.1/include/stdarg.h \
   /Applications/ArmGNUToolchain/13.2.Rel1/arm-none-eabi/lib/gcc/arm-none-eabi/13.2.1/include/stddef.h \
   /Applications/ArmGNUToolchain/13.2.Rel1/arm-none-eabi/lib/gcc/arm-none-eabi/13.2.1/include/stdint.h \
@@ -1689,8 +1693,6 @@ CMakeFiles/stm32F103C8T6Project.elf.dir/system/syscalls/syscalls.c.obj: /Users/k
 
 /Applications/ArmGNUToolchain/13.2.Rel1/arm-none-eabi/arm-none-eabi/include/sys/_pthreadtypes.h:
 
-/Applications/ArmGNUToolchain/13.2.Rel1/arm-none-eabi/arm-none-eabi/include/sys/_locale.h:
-
 /Applications/ArmGNUToolchain/13.2.Rel1/arm-none-eabi/arm-none-eabi/include/signal.h:
 
 /Applications/ArmGNUToolchain/13.2.Rel1/arm-none-eabi/arm-none-eabi/include/machine/types.h:
@@ -1709,13 +1711,7 @@ CMakeFiles/stm32F103C8T6Project.elf.dir/system/syscalls/syscalls.c.obj: /Users/k
 
 /Users/kingnan/Documents/github/stm32/components/servo/servo.c:
 
-/Users/kingnan/Documents/github/stm32/User/stm32f10x_it.h:
-
-/Users/kingnan/Documents/github/stm32/components/oled/OLED_Font.h:
-
-/Applications/ArmGNUToolchain/13.2.Rel1/arm-none-eabi/arm-none-eabi/include/machine/ieeefp.h:
-
-/Users/kingnan/Documents/github/stm32/components/delay/delay.c:
+/Users/kingnan/Documents/github/stm32/components/oled/OLED.c:
 
 /Users/kingnan/Documents/github/stm32/components/Serial/Serial.c:
 
@@ -1735,11 +1731,21 @@ CMakeFiles/stm32F103C8T6Project.elf.dir/system/syscalls/syscalls.c.obj: /Users/k
 
 /Users/kingnan/Documents/github/stm32/components/Serial_package/Serial_package.h:
 
+/Users/kingnan/Documents/github/stm32/components/oled/OLED_Font.h:
+
+/Users/kingnan/Documents/github/stm32/User/stm32f10x_it.h:
+
 /Users/kingnan/Documents/github/stm32/components/oled/OLED.h:
 
 /Applications/ArmGNUToolchain/13.2.Rel1/arm-none-eabi/arm-none-eabi/include/time.h:
 
 /Applications/ArmGNUToolchain/13.2.Rel1/arm-none-eabi/lib/gcc/arm-none-eabi/13.2.1/include/stdarg.h:
+
+/Users/kingnan/Documents/github/stm32/Libraries/STM32F10x_StdPeriph_Driver/inc/stm32f10x_wwdg.h:
+
+/Applications/ArmGNUToolchain/13.2.Rel1/arm-none-eabi/arm-none-eabi/include/sys/string.h:
+
+/Applications/ArmGNUToolchain/13.2.Rel1/arm-none-eabi/arm-none-eabi/include/strings.h:
 
 /Applications/ArmGNUToolchain/13.2.Rel1/arm-none-eabi/arm-none-eabi/include/sys/reent.h:
 
@@ -1752,6 +1758,8 @@ CMakeFiles/stm32F103C8T6Project.elf.dir/system/syscalls/syscalls.c.obj: /Users/k
 /Users/kingnan/Documents/github/stm32/Libraries/STM32F10x_StdPeriph_Driver/inc/stm32f10x_i2c.h:
 
 /Applications/ArmGNUToolchain/13.2.Rel1/arm-none-eabi/arm-none-eabi/include/sys/cdefs.h:
+
+/Applications/ArmGNUToolchain/13.2.Rel1/arm-none-eabi/arm-none-eabi/include/sys/_locale.h:
 
 /Applications/ArmGNUToolchain/13.2.Rel1/arm-none-eabi/arm-none-eabi/include/stdio.h:
 
@@ -1772,12 +1780,6 @@ CMakeFiles/stm32F103C8T6Project.elf.dir/system/syscalls/syscalls.c.obj: /Users/k
 /Applications/ArmGNUToolchain/13.2.Rel1/arm-none-eabi/arm-none-eabi/include/sys/lock.h:
 
 /Users/kingnan/Documents/github/stm32/Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_pwr.c:
-
-/Users/kingnan/Documents/github/stm32/Libraries/STM32F10x_StdPeriph_Driver/inc/stm32f10x_bkp.h:
-
-/Applications/ArmGNUToolchain/13.2.Rel1/arm-none-eabi/arm-none-eabi/include/_newlib_version.h:
-
-/Users/kingnan/Documents/github/stm32/components/key/key.c:
 
 /Users/kingnan/Documents/github/stm32/Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_i2c.c:
 
@@ -1817,13 +1819,9 @@ CMakeFiles/stm32F103C8T6Project.elf.dir/system/syscalls/syscalls.c.obj: /Users/k
 
 /Users/kingnan/Documents/github/stm32/Libraries/STM32F10x_StdPeriph_Driver/src/misc.c:
 
-/Users/kingnan/Documents/github/stm32/Libraries/STM32F10x_StdPeriph_Driver/inc/stm32f10x_wwdg.h:
-
 /Users/kingnan/Documents/github/stm32/components/customDMA/customDMA.c:
 
 /Users/kingnan/Documents/github/stm32/Libraries/STM32F10x_StdPeriph_Driver/inc/stm32f10x_usart.h:
-
-/Users/kingnan/Documents/github/stm32/components/oled/OLED.c:
 
 /Users/kingnan/Documents/github/stm32/components/Encode/Encode.c:
 
@@ -1841,6 +1839,12 @@ CMakeFiles/stm32F103C8T6Project.elf.dir/system/syscalls/syscalls.c.obj: /Users/k
 
 /Users/kingnan/Documents/github/stm32/Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_iwdg.c:
 
+/Users/kingnan/Documents/github/stm32/components/key/key.c:
+
+/Users/kingnan/Documents/github/stm32/Libraries/STM32F10x_StdPeriph_Driver/inc/stm32f10x_bkp.h:
+
+/Applications/ArmGNUToolchain/13.2.Rel1/arm-none-eabi/arm-none-eabi/include/_newlib_version.h:
+
 /Users/kingnan/Documents/github/stm32/Libraries/STM32F10x_StdPeriph_Driver/inc/stm32f10x_iwdg.h:
 
 /Users/kingnan/Documents/github/stm32/User/main.c:
@@ -1848,6 +1852,10 @@ CMakeFiles/stm32F103C8T6Project.elf.dir/system/syscalls/syscalls.c.obj: /Users/k
 /Users/kingnan/Documents/github/stm32/Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_cec.c:
 
 /Users/kingnan/Documents/github/stm32/Libraries/STM32F10x_StdPeriph_Driver/inc/stm32f10x_rcc.h:
+
+/Users/kingnan/Documents/github/stm32/components/delay/delay.c:
+
+/Applications/ArmGNUToolchain/13.2.Rel1/arm-none-eabi/arm-none-eabi/include/machine/ieeefp.h:
 
 /Applications/ArmGNUToolchain/13.2.Rel1/arm-none-eabi/lib/gcc/arm-none-eabi/13.2.1/include/stddef.h:
 
@@ -1916,5 +1924,7 @@ CMakeFiles/stm32F103C8T6Project.elf.dir/system/syscalls/syscalls.c.obj: /Users/k
 /Applications/ArmGNUToolchain/13.2.Rel1/arm-none-eabi/arm-none-eabi/include/alloca.h:
 
 /Users/kingnan/Documents/github/stm32/Libraries/CMSIS/core_cm3.h:
+
+/Applications/ArmGNUToolchain/13.2.Rel1/arm-none-eabi/arm-none-eabi/include/string.h:
 
 /Users/kingnan/Documents/github/stm32/Libraries/CMSIS/core_cm3.c:

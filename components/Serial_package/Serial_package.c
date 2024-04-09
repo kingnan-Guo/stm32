@@ -16,7 +16,7 @@
 //#include <pthread.h>
 
 uint8_t Serial_package_TxPacket[4];// 定义缓存区 只存储发送的载荷数据；不存 包头 包尾
-uint8_t Serial_package_RxPacket[4];// 定义缓存区 只存储接收的载荷数据
+char Serial_package_RxPacket[100];// 定义缓存区 只存储接收的载荷数据； 单条指令最多不能超过100 个字符
 uint8_t Serial_package_RxFlag;// 如果收到一个数据包就 更改RXFlag 状态
 
 
@@ -195,25 +195,34 @@ void USART1_IRQHandler(void){
         uint8_t RxData= USART_ReceiveData(USART1);
         // 等到包头的程序
         if(RxState == 0){
-            if(RxData == 0xFF){
+            if(RxData == '#' && Serial_package_RxFlag == 0){
                 RxState = 1;
+                pRxPacket = 0;
             }
         }
         // 接收数据
+        // Mac系统里，每行结尾是“<回车> \n
         else if(RxState == 1){
-            Serial_package_RxPacket[pRxPacket] = RxData;
-            pRxPacket++;
-            if(pRxPacket >= 4){
+            // 先判断是否为 包尾
+            if (RxData == '#')
+            {
                 RxState = 2;
+            } else {
+                Serial_package_RxPacket[pRxPacket] = RxData;
+                pRxPacket++;
+
             }
         }
+
         // 等待包尾 的程序
         else if (RxState == 2){
-            if(RxData == 0xFE){
+            if(RxData =='\n'){
                 RxState = 0;
-                pRxPacket = 0;
+                //添加 结束标志位 \0 ;方便后续字符串处理； 因为 没有结束标志位 不知道这个字符串到底有多长
+                Serial_package_RxPacket[pRxPacket] = '\0';
                 Serial_package_RxFlag = 1;
             }
+
         }
 
 
