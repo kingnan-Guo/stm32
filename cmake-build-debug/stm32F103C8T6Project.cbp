@@ -45,6 +45,7 @@
 					<Add directory="/Users/kingnan/Documents/github/stm32/components/customDMA"/>
 					<Add directory="/Users/kingnan/Documents/github/stm32/components/ADC_DMA"/>
 					<Add directory="/Users/kingnan/Documents/github/stm32/components/Serial"/>
+					<Add directory="/Users/kingnan/Documents/github/stm32/components/Serial_package"/>
 					<Add directory="/Users/kingnan/Documents/github/stm32/system/retarget"/>
 					<Add directory="/Users/kingnan/Documents/github/stm32/system/syscalls"/>
 					<Add directory="/Applications/ArmGNUToolchain/13.2.Rel1/arm-none-eabi/bin/../lib/gcc/arm-none-eabi/13.2.1/../../../../arm-none-eabi/include/c++/13.2.1"/>
@@ -89,6 +90,7 @@
 					<Add directory="/Users/kingnan/Documents/github/stm32/components/customDMA"/>
 					<Add directory="/Users/kingnan/Documents/github/stm32/components/ADC_DMA"/>
 					<Add directory="/Users/kingnan/Documents/github/stm32/components/Serial"/>
+					<Add directory="/Users/kingnan/Documents/github/stm32/components/Serial_package"/>
 					<Add directory="/Users/kingnan/Documents/github/stm32/system/retarget"/>
 					<Add directory="/Users/kingnan/Documents/github/stm32/system/syscalls"/>
 					<Add directory="/Applications/ArmGNUToolchain/13.2.Rel1/arm-none-eabi/bin/../lib/gcc/arm-none-eabi/13.2.1/../../../../arm-none-eabi/include/c++/13.2.1"/>
@@ -343,6 +345,12 @@
 			<Option target="stm32F103C8T6Project.elf"/>
 		</Unit>
 		<Unit filename="/Users/kingnan/Documents/github/stm32/components/Serial/Serial.h">
+			<Option target="stm32F103C8T6Project.elf"/>
+		</Unit>
+		<Unit filename="/Users/kingnan/Documents/github/stm32/components/Serial_package/Serial_package.c">
+			<Option target="stm32F103C8T6Project.elf"/>
+		</Unit>
+		<Unit filename="/Users/kingnan/Documents/github/stm32/components/Serial_package/Serial_package.h">
 			<Option target="stm32F103C8T6Project.elf"/>
 		</Unit>
 		<Unit filename="/Users/kingnan/Documents/github/stm32/components/Timer/Timer.c">

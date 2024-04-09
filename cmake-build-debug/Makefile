@@ -969,6 +969,30 @@ components/Serial/Serial.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/stm32F103C8T6Project.elf.dir/build.make CMakeFiles/stm32F103C8T6Project.elf.dir/components/Serial/Serial.c.s
 .PHONY : components/Serial/Serial.c.s
 
+components/Serial_package/Serial_package.obj: components/Serial_package/Serial_package.c.obj
+.PHONY : components/Serial_package/Serial_package.obj
+
+# target to build an object file
+components/Serial_package/Serial_package.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/stm32F103C8T6Project.elf.dir/build.make CMakeFiles/stm32F103C8T6Project.elf.dir/components/Serial_package/Serial_package.c.obj
+.PHONY : components/Serial_package/Serial_package.c.obj
+
+components/Serial_package/Serial_package.i: components/Serial_package/Serial_package.c.i
+.PHONY : components/Serial_package/Serial_package.i
+
+# target to preprocess a source file
+components/Serial_package/Serial_package.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/stm32F103C8T6Project.elf.dir/build.make CMakeFiles/stm32F103C8T6Project.elf.dir/components/Serial_package/Serial_package.c.i
+.PHONY : components/Serial_package/Serial_package.c.i
+
+components/Serial_package/Serial_package.s: components/Serial_package/Serial_package.c.s
+.PHONY : components/Serial_package/Serial_package.s
+
+# target to generate assembly for a file
+components/Serial_package/Serial_package.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/stm32F103C8T6Project.elf.dir/build.make CMakeFiles/stm32F103C8T6Project.elf.dir/components/Serial_package/Serial_package.c.s
+.PHONY : components/Serial_package/Serial_package.c.s
+
 components/Timer/Timer.obj: components/Timer/Timer.c.obj
 .PHONY : components/Timer/Timer.obj
 
@@ -1307,6 +1331,9 @@ help:
 	@echo "... components/Serial/Serial.obj"
 	@echo "... components/Serial/Serial.i"
 	@echo "... components/Serial/Serial.s"
+	@echo "... components/Serial_package/Serial_package.obj"
+	@echo "... components/Serial_package/Serial_package.i"
+	@echo "... components/Serial_package/Serial_package.s"
 	@echo "... components/Timer/Timer.obj"
 	@echo "... components/Timer/Timer.i"
 	@echo "... components/Timer/Timer.s"

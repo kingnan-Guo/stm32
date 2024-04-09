@@ -15,8 +15,9 @@
 #include "stdarg.h"
 //#include <pthread.h>
 
-uint8_t Serial_RxData;
-uint8_t Serial_RxFlag;
+uint8_t Serial_package_TxPacket[4];// 定义缓存区 只存储发送的载荷数据；不存 包头 包尾
+uint8_t Serial_package_RxPacket[4];// 定义缓存区 只存储接收的载荷数据
+uint8_t Serial_package_RxFlag;// 如果收到一个数据包就 更改RXFlag 状态
 
 
 
@@ -25,7 +26,7 @@ uint8_t Serial_RxFlag;
 
 
 
-void   Serial_Init(void){
+void   Serial_package_Init(void){
     // USART1 是 APB2 的外设
     RCC_APB2PeriphClockCmd(RCC_APB2Periph_USART1, ENABLE);
 
@@ -116,7 +117,7 @@ void   Serial_Init(void){
  *
  * @param Byte
  */
-void Serial_SendByte(uint8_t Byte){
+void Serial_package_SendByte(uint8_t Byte){
     // byte 数据写如带 TDR
     USART_SendData(USART1, Byte);
     // 发送之后我们需要等待一下 标志位 : USART_FLAG_TXE 发送移位寄存器标志位 空
@@ -125,24 +126,24 @@ void Serial_SendByte(uint8_t Byte){
 }
 
 // 发送数组
-void Serial_SendArr(uint8_t *Array, uint16_t Length){
+void Serial_package_SendArr(uint8_t *Array, uint16_t Length){
     // uint16_t i;
     for (int j = 0; j < Length; ++j) {
-        Serial_SendByte(Array[j]);
+        Serial_package_SendByte(Array[j]);
     }
 }
 //发送字符串
-void Serial_SendString(char *String){
+void Serial_package_SendString(char *String){
     // 多硬空字符 ，是字符串结束标志位
     // 也可以： i < String[i] != '\0';
     for (int i = 0; i < String[i] != 0; i++) {
-        Serial_SendByte(String[i]);
+        Serial_package_SendByte(String[i]);
     }
 }
 
 
 // 返回 X^Y
-uint32_t Serial_Pow(uint32_t X, uint32_t Y){
+uint32_t Serial_package_Pow(uint32_t X, uint32_t Y){
     uint32_t  Result = 1;
     while (Y--){
         Result = Result * X;
@@ -151,13 +152,13 @@ uint32_t Serial_Pow(uint32_t X, uint32_t Y){
 }
 
 // 发送数字
-void Serial_SendNumber(uint32_t Number, uint8_t Length){
+void Serial_package_SendNumber(uint32_t Number, uint8_t Length){
     // 将NUmber 以 个位、 十位、 百位 以十进制拆分开， 然后再换成字符数据，依次发送出去
     // 方法：取某一位就是 ： 数字 / (10^2) % 10
     uint8_t i;
     for (i = 0; i < Length; ++i) {
         // 还要偏移 0x30
-        Serial_SendByte(Number/Serial_Pow(10, Length -i -1) % 10 + '0') ;
+        Serial_package_SendByte(Number/Serial_package_Pow(10, Length -i -1) % 10 + '0') ;
     }
 }
 
@@ -171,7 +172,7 @@ void Serial_SendNumber(uint32_t Number, uint8_t Length){
  * 1、定义输出的字符串
  * 2、
  */
-void Serial_Print(char *format, ...){
+void Serial_package_Print(char *format, ...){
     // 定义输出的字符串
     char String[100];
     //定义一个参数列表变量 va_list 类型名 arg变量名
@@ -181,34 +182,67 @@ void Serial_Print(char *format, ...){
     // vsprintf 打印位置是 String 格式化字符串 format； 参数 arg
     vsprintf(String, format, arg);
     va_end(arg);
-    Serial_SendString(String);
+    Serial_package_SendString(String);
 }
 
 //中断 函数  固定的名称
-// 注意 这里  USART1__IRQHandler 改成 USART1_IRQHandler
-void USART1__IRQHandler(void){
+void USART1_IRQHandler(void){
+    // 此处静态变量 只会初始化一次， 函数退出后仍然有效，类似于全局变量，不过 只能在函数种使用
+    static uint8_t RxState = 0;// 三个状态 0，1，2
+    static uint8_t pRxPacket = 0;
     if (USART_GetFlagStatus(USART1, USART_FLAG_RXNE) == SET){
-        // 读取数据 自动清除 标志位
-        Serial_RxData = USART_ReceiveData(USART1);
-        Serial_RxFlag = 1;
+        // 读取数据会 自动清除 标志位
+        uint8_t RxData= USART_ReceiveData(USART1);
+        // 等到包头的程序
+        if(RxState == 0){
+            if(RxData == 0xFF){
+                RxState = 1;
+            }
+        }
+        // 接收数据
+        else if(RxState == 1){
+            Serial_package_RxPacket[pRxPacket] = RxData;
+            pRxPacket++;
+            if(pRxPacket >= 4){
+                RxState = 2;
+            }
+        }
+        // 等待包尾 的程序
+        else if (RxState == 2){
+            if(RxData == 0xFE){
+                RxState = 0;
+                pRxPacket = 0;
+                Serial_package_RxFlag = 1;
+            }
+        }
+
+
         // 清除  标志位 ；如果 读取的DR 那么就会自动清除，但是这里再次清除一下
         USART_ClearITPendingBit(USART1, USART_FLAG_RXNE);
 
     }
 }
 
-uint8_t Serial_GetRxData(void)
-{
-    return Serial_RxData;
-}
 
-uint8_t Serial_GetRxFlag(void){
-    if(Serial_RxFlag == 1){
-        Serial_RxFlag = 0;
+uint8_t Serial_package_GetRxFlag(void){
+    if(Serial_package_RxFlag == 1){
+        Serial_package_RxFlag = 0;
         return 1;
     }
     return 0;
 }
 
 
+//========
 
+/**
+ * 发送包
+ *  会自动带上 包头 + 数据 + 包尾
+ *            0xFF + data + 0xFE
+ */
+
+void Serial_package_SendPacket(void){
+    Serial_package_SendByte(0xFF);
+    Serial_package_SendArr(Serial_package_TxPacket, 4);
+    Serial_package_SendByte(0xFE);
+}

@@ -79,7 +79,7 @@ include_directories(
         components/customDMA
         components/ADC_DMA
         components/Serial # 与 /Users/kingnan/Documents/github/stm32/components/Serial/ 相同
-
+        components/Serial_package
         # 重定向 相关
         system/retarget
         system/syscalls

@@ -39,6 +39,7 @@ set(CMAKE_ASM_TARGET_INCLUDE_PATH
   "/Users/kingnan/Documents/github/stm32/components/customDMA"
   "/Users/kingnan/Documents/github/stm32/components/ADC_DMA"
   "/Users/kingnan/Documents/github/stm32/components/Serial"
+  "/Users/kingnan/Documents/github/stm32/components/Serial_package"
   "/Users/kingnan/Documents/github/stm32/system/retarget"
   "/Users/kingnan/Documents/github/stm32/system/syscalls"
   )
@@ -80,6 +81,7 @@ set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "/Users/kingnan/Documents/github/stm32/components/LED/LED.c" "CMakeFiles/stm32F103C8T6Project.elf.dir/components/LED/LED.c.obj" "gcc" "CMakeFiles/stm32F103C8T6Project.elf.dir/components/LED/LED.c.obj.d"
   "/Users/kingnan/Documents/github/stm32/components/PWM/PWM.c" "CMakeFiles/stm32F103C8T6Project.elf.dir/components/PWM/PWM.c.obj" "gcc" "CMakeFiles/stm32F103C8T6Project.elf.dir/components/PWM/PWM.c.obj.d"
   "/Users/kingnan/Documents/github/stm32/components/Serial/Serial.c" "CMakeFiles/stm32F103C8T6Project.elf.dir/components/Serial/Serial.c.obj" "gcc" "CMakeFiles/stm32F103C8T6Project.elf.dir/components/Serial/Serial.c.obj.d"
+  "/Users/kingnan/Documents/github/stm32/components/Serial_package/Serial_package.c" "CMakeFiles/stm32F103C8T6Project.elf.dir/components/Serial_package/Serial_package.c.obj" "gcc" "CMakeFiles/stm32F103C8T6Project.elf.dir/components/Serial_package/Serial_package.c.obj.d"
   "/Users/kingnan/Documents/github/stm32/components/Timer/Timer.c" "CMakeFiles/stm32F103C8T6Project.elf.dir/components/Timer/Timer.c.obj" "gcc" "CMakeFiles/stm32F103C8T6Project.elf.dir/components/Timer/Timer.c.obj.d"
   "/Users/kingnan/Documents/github/stm32/components/countSensor/countSensor.c" "CMakeFiles/stm32F103C8T6Project.elf.dir/components/countSensor/countSensor.c.obj" "gcc" "CMakeFiles/stm32F103C8T6Project.elf.dir/components/countSensor/countSensor.c.obj.d"
   "/Users/kingnan/Documents/github/stm32/components/customDMA/customDMA.c" "CMakeFiles/stm32F103C8T6Project.elf.dir/components/customDMA/customDMA.c.obj" "gcc" "CMakeFiles/stm32F103C8T6Project.elf.dir/components/customDMA/customDMA.c.obj.d"
