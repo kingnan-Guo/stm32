@@ -921,6 +921,30 @@ components/LED/LED.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/stm32F103C8T6Project.elf.dir/build.make CMakeFiles/stm32F103C8T6Project.elf.dir/components/LED/LED.c.s
 .PHONY : components/LED/LED.c.s
 
+components/MPU6050/MPU6050.obj: components/MPU6050/MPU6050.c.obj
+.PHONY : components/MPU6050/MPU6050.obj
+
+# target to build an object file
+components/MPU6050/MPU6050.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/stm32F103C8T6Project.elf.dir/build.make CMakeFiles/stm32F103C8T6Project.elf.dir/components/MPU6050/MPU6050.c.obj
+.PHONY : components/MPU6050/MPU6050.c.obj
+
+components/MPU6050/MPU6050.i: components/MPU6050/MPU6050.c.i
+.PHONY : components/MPU6050/MPU6050.i
+
+# target to preprocess a source file
+components/MPU6050/MPU6050.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/stm32F103C8T6Project.elf.dir/build.make CMakeFiles/stm32F103C8T6Project.elf.dir/components/MPU6050/MPU6050.c.i
+.PHONY : components/MPU6050/MPU6050.c.i
+
+components/MPU6050/MPU6050.s: components/MPU6050/MPU6050.c.s
+.PHONY : components/MPU6050/MPU6050.s
+
+# target to generate assembly for a file
+components/MPU6050/MPU6050.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/stm32F103C8T6Project.elf.dir/build.make CMakeFiles/stm32F103C8T6Project.elf.dir/components/MPU6050/MPU6050.c.s
+.PHONY : components/MPU6050/MPU6050.c.s
+
 components/PWM/PWM.obj: components/PWM/PWM.c.obj
 .PHONY : components/PWM/PWM.obj
 
@@ -1064,6 +1088,30 @@ components/customDMA/customDMA.s: components/customDMA/customDMA.c.s
 components/customDMA/customDMA.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/stm32F103C8T6Project.elf.dir/build.make CMakeFiles/stm32F103C8T6Project.elf.dir/components/customDMA/customDMA.c.s
 .PHONY : components/customDMA/customDMA.c.s
+
+components/customI2C/customI2C.obj: components/customI2C/customI2C.c.obj
+.PHONY : components/customI2C/customI2C.obj
+
+# target to build an object file
+components/customI2C/customI2C.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/stm32F103C8T6Project.elf.dir/build.make CMakeFiles/stm32F103C8T6Project.elf.dir/components/customI2C/customI2C.c.obj
+.PHONY : components/customI2C/customI2C.c.obj
+
+components/customI2C/customI2C.i: components/customI2C/customI2C.c.i
+.PHONY : components/customI2C/customI2C.i
+
+# target to preprocess a source file
+components/customI2C/customI2C.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/stm32F103C8T6Project.elf.dir/build.make CMakeFiles/stm32F103C8T6Project.elf.dir/components/customI2C/customI2C.c.i
+.PHONY : components/customI2C/customI2C.c.i
+
+components/customI2C/customI2C.s: components/customI2C/customI2C.c.s
+.PHONY : components/customI2C/customI2C.s
+
+# target to generate assembly for a file
+components/customI2C/customI2C.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/stm32F103C8T6Project.elf.dir/build.make CMakeFiles/stm32F103C8T6Project.elf.dir/components/customI2C/customI2C.c.s
+.PHONY : components/customI2C/customI2C.c.s
 
 components/delay/delay.obj: components/delay/delay.c.obj
 .PHONY : components/delay/delay.obj
@@ -1325,6 +1373,9 @@ help:
 	@echo "... components/LED/LED.obj"
 	@echo "... components/LED/LED.i"
 	@echo "... components/LED/LED.s"
+	@echo "... components/MPU6050/MPU6050.obj"
+	@echo "... components/MPU6050/MPU6050.i"
+	@echo "... components/MPU6050/MPU6050.s"
 	@echo "... components/PWM/PWM.obj"
 	@echo "... components/PWM/PWM.i"
 	@echo "... components/PWM/PWM.s"
@@ -1343,6 +1394,9 @@ help:
 	@echo "... components/customDMA/customDMA.obj"
 	@echo "... components/customDMA/customDMA.i"
 	@echo "... components/customDMA/customDMA.s"
+	@echo "... components/customI2C/customI2C.obj"
+	@echo "... components/customI2C/customI2C.i"
+	@echo "... components/customI2C/customI2C.s"
 	@echo "... components/delay/delay.obj"
 	@echo "... components/delay/delay.i"
 	@echo "... components/delay/delay.s"

@@ -42,6 +42,8 @@ set(CMAKE_ASM_TARGET_INCLUDE_PATH
   "/Users/kingnan/Documents/github/stm32/components/Serial_package"
   "/Users/kingnan/Documents/github/stm32/system/retarget"
   "/Users/kingnan/Documents/github/stm32/system/syscalls"
+  "/Users/kingnan/Documents/github/stm32/components/customI2C"
+  "/Users/kingnan/Documents/github/stm32/components/MPU6050"
   )
 
 # The set of dependency files which are needed:
@@ -79,12 +81,14 @@ set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "/Users/kingnan/Documents/github/stm32/components/Encode/Encode.c" "CMakeFiles/stm32F103C8T6Project.elf.dir/components/Encode/Encode.c.obj" "gcc" "CMakeFiles/stm32F103C8T6Project.elf.dir/components/Encode/Encode.c.obj.d"
   "/Users/kingnan/Documents/github/stm32/components/IC/IC.c" "CMakeFiles/stm32F103C8T6Project.elf.dir/components/IC/IC.c.obj" "gcc" "CMakeFiles/stm32F103C8T6Project.elf.dir/components/IC/IC.c.obj.d"
   "/Users/kingnan/Documents/github/stm32/components/LED/LED.c" "CMakeFiles/stm32F103C8T6Project.elf.dir/components/LED/LED.c.obj" "gcc" "CMakeFiles/stm32F103C8T6Project.elf.dir/components/LED/LED.c.obj.d"
+  "/Users/kingnan/Documents/github/stm32/components/MPU6050/MPU6050.c" "CMakeFiles/stm32F103C8T6Project.elf.dir/components/MPU6050/MPU6050.c.obj" "gcc" "CMakeFiles/stm32F103C8T6Project.elf.dir/components/MPU6050/MPU6050.c.obj.d"
   "/Users/kingnan/Documents/github/stm32/components/PWM/PWM.c" "CMakeFiles/stm32F103C8T6Project.elf.dir/components/PWM/PWM.c.obj" "gcc" "CMakeFiles/stm32F103C8T6Project.elf.dir/components/PWM/PWM.c.obj.d"
   "/Users/kingnan/Documents/github/stm32/components/Serial/Serial.c" "CMakeFiles/stm32F103C8T6Project.elf.dir/components/Serial/Serial.c.obj" "gcc" "CMakeFiles/stm32F103C8T6Project.elf.dir/components/Serial/Serial.c.obj.d"
   "/Users/kingnan/Documents/github/stm32/components/Serial_package/Serial_package.c" "CMakeFiles/stm32F103C8T6Project.elf.dir/components/Serial_package/Serial_package.c.obj" "gcc" "CMakeFiles/stm32F103C8T6Project.elf.dir/components/Serial_package/Serial_package.c.obj.d"
   "/Users/kingnan/Documents/github/stm32/components/Timer/Timer.c" "CMakeFiles/stm32F103C8T6Project.elf.dir/components/Timer/Timer.c.obj" "gcc" "CMakeFiles/stm32F103C8T6Project.elf.dir/components/Timer/Timer.c.obj.d"
   "/Users/kingnan/Documents/github/stm32/components/countSensor/countSensor.c" "CMakeFiles/stm32F103C8T6Project.elf.dir/components/countSensor/countSensor.c.obj" "gcc" "CMakeFiles/stm32F103C8T6Project.elf.dir/components/countSensor/countSensor.c.obj.d"
   "/Users/kingnan/Documents/github/stm32/components/customDMA/customDMA.c" "CMakeFiles/stm32F103C8T6Project.elf.dir/components/customDMA/customDMA.c.obj" "gcc" "CMakeFiles/stm32F103C8T6Project.elf.dir/components/customDMA/customDMA.c.obj.d"
+  "/Users/kingnan/Documents/github/stm32/components/customI2C/customI2C.c" "CMakeFiles/stm32F103C8T6Project.elf.dir/components/customI2C/customI2C.c.obj" "gcc" "CMakeFiles/stm32F103C8T6Project.elf.dir/components/customI2C/customI2C.c.obj.d"
   "/Users/kingnan/Documents/github/stm32/components/delay/delay.c" "CMakeFiles/stm32F103C8T6Project.elf.dir/components/delay/delay.c.obj" "gcc" "CMakeFiles/stm32F103C8T6Project.elf.dir/components/delay/delay.c.obj.d"
   "/Users/kingnan/Documents/github/stm32/components/key/key.c" "CMakeFiles/stm32F103C8T6Project.elf.dir/components/key/key.c.obj" "gcc" "CMakeFiles/stm32F103C8T6Project.elf.dir/components/key/key.c.obj.d"
   "/Users/kingnan/Documents/github/stm32/components/oled/OLED.c" "CMakeFiles/stm32F103C8T6Project.elf.dir/components/oled/OLED.c.obj" "gcc" "CMakeFiles/stm32F103C8T6Project.elf.dir/components/oled/OLED.c.obj.d"

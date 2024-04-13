@@ -83,6 +83,9 @@ include_directories(
         # 重定向 相关
         system/retarget
         system/syscalls
+        #软件 I2C 通信
+        components/customI2C
+        components/MPU6050
 )
 
 
