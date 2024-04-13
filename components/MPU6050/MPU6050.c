@@ -122,7 +122,7 @@ uint8_t MPU6050_ReadReg(uint8_t RegAddress){
  *      1B 27 GYRO_CONFIG R/W
  *          - - - （前三位自测使能）、 FS_SEL [1:0]（满量选择）、 - - -
  *          0 0 0                   11                      0 0 0
- *          不自测                   最大量程                 无关位
+ *          不自测                   最大量程（16 g）          无关位
  *  写入： 0x18 ； 000 11 000
  *
  * 6、加速度计配置寄存器
@@ -131,7 +131,7 @@ uint8_t MPU6050_ReadReg(uint8_t RegAddress){
  *      1C 28 ACCEL_CONFIG R/W
  *          XA_ST YA_ST ZA_ST（前三位自测使能）、 AFS_SEL[1:0]]（满量选择）、 ACCEL_HPF[2:0]（高通滤波器）
  *          0 0 0                               11                      0 0 0
- *          不自测                               最大量程                 用不到所以 000
+ *          不自测                               最大量程  （16 g）        用不到所以 000
  *  写入： 0x18 ； 000 11 000
  *
  *
