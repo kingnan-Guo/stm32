@@ -36,18 +36,18 @@ void customI2C_Init(void){
 // 封装函数 用于拉低抬高电平
 void customI2C_W_SCL(uint8_t BitValue){
     GPIO_WriteBit(SCL_PORT, SCL_PIN, (BitAction)BitValue);// (BitAction)BitValue 非 0 及 1
-    Delay_ms(10);// 延迟10us 是为了可以让数据正确接收到
+    Delay_us(100);// 延迟10us 是为了可以让数据正确接收到
 }
 
 void customI2C_W_SDA(uint8_t BitValue){
     GPIO_WriteBit(SCL_PORT, SDA_PIN, (BitAction)BitValue);
-    Delay_ms(10);// 延迟10us 是为了可以让数据正确接收到
+    Delay_us(100);// 延迟10us 是为了可以让数据正确接收到
 }
 
 uint8_t customI2C_R_SDA(void){
     uint8_t BitValue;
     BitValue = GPIO_ReadInputDataBit(SCL_PORT, SDA_PIN);
-    Delay_ms(10);
+    Delay_us(100);
     return BitValue;
 }
 

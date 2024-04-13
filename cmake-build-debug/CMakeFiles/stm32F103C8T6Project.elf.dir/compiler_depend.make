@@ -910,7 +910,6 @@ CMakeFiles/stm32F103C8T6Project.elf.dir/User/main.c.obj: /Users/kingnan/Document
   /Users/kingnan/Documents/github/stm32/Libraries/STM32F10x_StdPeriph_Driver/inc/stm32f10x_wwdg.h \
   /Users/kingnan/Documents/github/stm32/User/stm32f10x_conf.h \
   /Users/kingnan/Documents/github/stm32/components/MPU6050/MPU6050.h \
-  /Users/kingnan/Documents/github/stm32/components/delay/delay.h \
   /Users/kingnan/Documents/github/stm32/components/oled/OLED.h
 
 CMakeFiles/stm32F103C8T6Project.elf.dir/User/stm32f10x_it.c.obj: /Users/kingnan/Documents/github/stm32/User/stm32f10x_it.c \
@@ -1202,6 +1201,7 @@ CMakeFiles/stm32F103C8T6Project.elf.dir/components/MPU6050/MPU6050.c.obj: /Users
   /Users/kingnan/Documents/github/stm32/Libraries/STM32F10x_StdPeriph_Driver/inc/stm32f10x_usart.h \
   /Users/kingnan/Documents/github/stm32/Libraries/STM32F10x_StdPeriph_Driver/inc/stm32f10x_wwdg.h \
   /Users/kingnan/Documents/github/stm32/User/stm32f10x_conf.h \
+  /Users/kingnan/Documents/github/stm32/components/MPU6050/MPU6050_Reg.h \
   /Users/kingnan/Documents/github/stm32/components/customI2C/customI2C.h \
   /Users/kingnan/Documents/github/stm32/components/delay/delay.h
 
@@ -1771,6 +1771,8 @@ CMakeFiles/stm32F103C8T6Project.elf.dir/system/syscalls/syscalls.c.obj: /Users/k
 
 /Users/kingnan/Documents/github/stm32/components/servo/servo.c:
 
+/Users/kingnan/Documents/github/stm32/components/oled/OLED.c:
+
 /Applications/ArmGNUToolchain/13.2.Rel1/arm-none-eabi/arm-none-eabi/include/machine/ieeefp.h:
 
 /Users/kingnan/Documents/github/stm32/components/delay/delay.c:
@@ -1798,6 +1800,10 @@ CMakeFiles/stm32F103C8T6Project.elf.dir/system/syscalls/syscalls.c.obj: /Users/k
 /Users/kingnan/Documents/github/stm32/Libraries/STM32F10x_StdPeriph_Driver/inc/misc.h:
 
 /Users/kingnan/Documents/github/stm32/components/PWM/PWM.h:
+
+/Users/kingnan/Documents/github/stm32/Libraries/STM32F10x_StdPeriph_Driver/inc/stm32f10x_dbgmcu.h:
+
+/Users/kingnan/Documents/github/stm32/components/MPU6050/MPU6050_Reg.h:
 
 /Users/kingnan/Documents/github/stm32/Libraries/STM32F10x_StdPeriph_Driver/inc/stm32f10x_spi.h:
 
@@ -1891,8 +1897,6 @@ CMakeFiles/stm32F103C8T6Project.elf.dir/system/syscalls/syscalls.c.obj: /Users/k
 
 /Users/kingnan/Documents/github/stm32/Libraries/STM32F10x_StdPeriph_Driver/inc/stm32f10x_usart.h:
 
-/Users/kingnan/Documents/github/stm32/components/oled/OLED.c:
-
 /Users/kingnan/Documents/github/stm32/components/Encode/Encode.c:
 
 /Users/kingnan/Documents/github/stm32/Libraries/STM32F10x_StdPeriph_Driver/inc/stm32f10x_sdio.h:
@@ -1970,8 +1974,6 @@ CMakeFiles/stm32F103C8T6Project.elf.dir/system/syscalls/syscalls.c.obj: /Users/k
 /Users/kingnan/Documents/github/stm32/Libraries/STM32F10x_StdPeriph_Driver/inc/stm32f10x_can.h:
 
 /Users/kingnan/Documents/github/stm32/Libraries/CMSIS/system_stm32f10x.c:
-
-/Users/kingnan/Documents/github/stm32/Libraries/STM32F10x_StdPeriph_Driver/inc/stm32f10x_dbgmcu.h:
 
 /Users/kingnan/Documents/github/stm32/Libraries/STM32F10x_StdPeriph_Driver/inc/stm32f10x_exti.h:
 

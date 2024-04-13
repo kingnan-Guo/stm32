@@ -1,7 +1,7 @@
 #include "stm32f10x.h"
 
 #include "OLED.h"
-#include "delay.h"
+//#include "delay.h"
 #include "MPU6050.h"
 
 int main(void) {
@@ -10,6 +10,7 @@ int main(void) {
 
 
     uint8_t ID;
+    int16_t AX, AY, AZ, GX, GY, GZ;// 用于 记录 加速度计 陀螺仪的值
     MPU6050_Init();
     // 读取 ID 寄存器地址 0x75
     ID = MPU6050_ReadReg(0x75);
@@ -26,7 +27,7 @@ int main(void) {
      *
      *
      */
-    MPU6050_WriteReg(0x6B, 0x00);
+    //MPU6050_WriteReg(0x6B, 0x00);
 
     /**
      * 1、写入 采样分频寄存器 SMPLRT_DIV
@@ -34,13 +35,31 @@ int main(void) {
      *  数据： 0xAA
      * 2、写入后读取， 可以读取 出来 AA
      */
-    MPU6050_WriteReg(0x19, 0xAA);
-    uint8_t SMPLRT_DIV = MPU6050_ReadReg(0x19);
-    OLED_ShowString(2, 1, "SMPLRT_DIV ");
-    OLED_ShowHexNum(2, 12, SMPLRT_DIV, 2);
+    //MPU6050_WriteReg(0x19, 0x01);
+    //uint8_t SMPLRT_DIV = MPU6050_ReadReg(0x19);
+    //OLED_ShowString(2, 1, "SMPLRT_DIV ");
+    //OLED_ShowHexNum(2, 12, SMPLRT_DIV, 2);
+
+
     while(1) {
+        MPU6050_GetData(&AX, &AY, &AZ, &GX, &GY, &GZ);
+
+        OLED_ShowSignedNum(2, 1, AX, 5);
+        OLED_ShowSignedNum(3, 1, AY, 5);
+        OLED_ShowSignedNum(4, 1, AZ, 5);
+        OLED_ShowSignedNum(2, 8, GX, 5);
+        OLED_ShowSignedNum(3, 8, GY, 5);
+        OLED_ShowSignedNum(4, 8, GZ, 5);
+
 
     }
 }
 
+
+
+/**
+ *
+ *
+ *
+ */
 
