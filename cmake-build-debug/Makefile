@@ -1137,30 +1137,6 @@ components/servo/servo.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/stm32F103C8T6Project.elf.dir/build.make CMakeFiles/stm32F103C8T6Project.elf.dir/components/servo/servo.c.s
 .PHONY : components/servo/servo.c.s
 
-components/unMicroLibRedirect/unMicroLibRedirect.obj: components/unMicroLibRedirect/unMicroLibRedirect.c.obj
-.PHONY : components/unMicroLibRedirect/unMicroLibRedirect.obj
-
-# target to build an object file
-components/unMicroLibRedirect/unMicroLibRedirect.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/stm32F103C8T6Project.elf.dir/build.make CMakeFiles/stm32F103C8T6Project.elf.dir/components/unMicroLibRedirect/unMicroLibRedirect.c.obj
-.PHONY : components/unMicroLibRedirect/unMicroLibRedirect.c.obj
-
-components/unMicroLibRedirect/unMicroLibRedirect.i: components/unMicroLibRedirect/unMicroLibRedirect.c.i
-.PHONY : components/unMicroLibRedirect/unMicroLibRedirect.i
-
-# target to preprocess a source file
-components/unMicroLibRedirect/unMicroLibRedirect.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/stm32F103C8T6Project.elf.dir/build.make CMakeFiles/stm32F103C8T6Project.elf.dir/components/unMicroLibRedirect/unMicroLibRedirect.c.i
-.PHONY : components/unMicroLibRedirect/unMicroLibRedirect.c.i
-
-components/unMicroLibRedirect/unMicroLibRedirect.s: components/unMicroLibRedirect/unMicroLibRedirect.c.s
-.PHONY : components/unMicroLibRedirect/unMicroLibRedirect.s
-
-# target to generate assembly for a file
-components/unMicroLibRedirect/unMicroLibRedirect.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/stm32F103C8T6Project.elf.dir/build.make CMakeFiles/stm32F103C8T6Project.elf.dir/components/unMicroLibRedirect/unMicroLibRedirect.c.s
-.PHONY : components/unMicroLibRedirect/unMicroLibRedirect.c.s
-
 startup/startup_stm32f103c8tx.obj: startup/startup_stm32f103c8tx.s.obj
 .PHONY : startup/startup_stm32f103c8tx.obj
 
@@ -1352,9 +1328,6 @@ help:
 	@echo "... components/servo/servo.obj"
 	@echo "... components/servo/servo.i"
 	@echo "... components/servo/servo.s"
-	@echo "... components/unMicroLibRedirect/unMicroLibRedirect.obj"
-	@echo "... components/unMicroLibRedirect/unMicroLibRedirect.i"
-	@echo "... components/unMicroLibRedirect/unMicroLibRedirect.s"
 	@echo "... startup/startup_stm32f103c8tx.obj"
 	@echo "... system/retarget/retarget.obj"
 	@echo "... system/retarget/retarget.i"
