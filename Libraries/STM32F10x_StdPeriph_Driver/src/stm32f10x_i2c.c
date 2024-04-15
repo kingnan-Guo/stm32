@@ -1023,7 +1023,7 @@ void I2C_FastModeDutyCycleConfig(I2C_TypeDef* I2Cx, uint16_t I2C_DutyCycle)
   *    I2C_Events in stm32f10x_i2c.h file.
   *    
   * @retval An ErrorStatus enumeration value:
-  * - SUCCESS: Last event is equal to the I2C_EVENT
+  * - SUCCESS: Last event is equal to the I2C_EVENI2C_EVENT_MASTER_MODE_SELECTT
   * - ERROR: Last event is different from the I2C_EVENT
   */
 ErrorStatus I2C_CheckEvent(I2C_TypeDef* I2Cx, uint32_t I2C_EVENT)
