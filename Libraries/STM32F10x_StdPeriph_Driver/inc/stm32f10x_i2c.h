@@ -533,19 +533,19 @@ typedef struct
 void I2C_DeInit(I2C_TypeDef* I2Cx);
 void I2C_Init(I2C_TypeDef* I2Cx, I2C_InitTypeDef* I2C_InitStruct);
 void I2C_StructInit(I2C_InitTypeDef* I2C_InitStruct);
-void I2C_Cmd(I2C_TypeDef* I2Cx, FunctionalState NewState);
-void I2C_DMACmd(I2C_TypeDef* I2Cx, FunctionalState NewState);
+void I2C_Cmd(I2C_TypeDef* I2Cx, FunctionalState NewState);//使能
+void I2C_DMACmd(I2C_TypeDef* I2Cx, FunctionalState NewState);//
 void I2C_DMALastTransferCmd(I2C_TypeDef* I2Cx, FunctionalState NewState);
-void I2C_GenerateSTART(I2C_TypeDef* I2Cx, FunctionalState NewState);
-void I2C_GenerateSTOP(I2C_TypeDef* I2Cx, FunctionalState NewState);
-void I2C_AcknowledgeConfig(I2C_TypeDef* I2Cx, FunctionalState NewState);
-void I2C_OwnAddress2Config(I2C_TypeDef* I2Cx, uint8_t Address);
+void I2C_GenerateSTART(I2C_TypeDef* I2Cx, FunctionalState NewState);// 生成起始条件； start 置 1 再从模式下 产生起始条件、在主模式 下重复产生起始条件；操作CR1 的START我位
+void I2C_GenerateSTOP(I2C_TypeDef* I2Cx, FunctionalState NewState);// 生成终止条件； 操作CR1 的STOP 位； STOP 位 置 1 ：在主模式下，在当前字节传输或在当前起始条件发出后产生停止条件、再从模式下 在当前字节传输或释放 SCL和SDA；
+void I2C_AcknowledgeConfig(I2C_TypeDef* I2Cx, FunctionalState NewState);// 配置CR1 的ACK 位 ； 0： 无应答； 1 在接受到一个字节后返回一个应答
+void I2C_OwnAddress2Config(I2C_TypeDef* I2Cx, uint8_t Address);//
 void I2C_DualAddressCmd(I2C_TypeDef* I2Cx, FunctionalState NewState);
 void I2C_GeneralCallCmd(I2C_TypeDef* I2Cx, FunctionalState NewState);
 void I2C_ITConfig(I2C_TypeDef* I2Cx, uint16_t I2C_IT, FunctionalState NewState);
-void I2C_SendData(I2C_TypeDef* I2Cx, uint8_t Data);
-uint8_t I2C_ReceiveData(I2C_TypeDef* I2Cx);
-void I2C_Send7bitAddress(I2C_TypeDef* I2Cx, uint8_t Address, uint8_t I2C_Direction);
+void I2C_SendData(I2C_TypeDef* I2Cx, uint8_t Data);// 发送数据； 把 数据写入到 DR 8位数据寄存器
+uint8_t I2C_ReceiveData(I2C_TypeDef* I2Cx);// 接收数据 读取 DR 的数据； 接收到的值 拷贝到 DR 寄存器； RxNE标志位 置1 ： 接收寄存器非空； 在下一个字节接收之前，及时读走
+void I2C_Send7bitAddress(I2C_TypeDef* I2Cx, uint8_t Address, uint8_t I2C_Direction);// 发送7 位 地址的 专用函数；可使用 SendData 发送
 uint16_t I2C_ReadRegister(I2C_TypeDef* I2Cx, uint8_t I2C_Register);
 void I2C_SoftwareResetCmd(I2C_TypeDef* I2Cx, FunctionalState NewState);
 void I2C_NACKPositionConfig(I2C_TypeDef* I2Cx, uint16_t I2C_NACKPosition);
@@ -562,14 +562,14 @@ void I2C_FastModeDutyCycleConfig(I2C_TypeDef* I2Cx, uint16_t I2C_DutyCycle);
  * @brief
  ****************************************************************************************
  *
- *                         I2C State Monitoring Functions
+ *                         I2C State Monitoring Functions // I2C 的状态监控函数 EVn
  *                       
  ****************************************************************************************   
  * This I2C driver provides three different ways for I2C state monitoring
  *  depending on the application requirements and constraints:
  *        
  *  
- * 1) Basic state monitoring:
+ * 1) Basic state monitoring:  // 同时判断一个或者多个标志位，确定 哪个  EVn  发生
  *    Using I2C_CheckEvent() function:
  *    It compares the status registers (SR1 and SR2) content to a given event
  *    (can be the combination of one or more flags).
@@ -599,7 +599,7 @@ void I2C_FastModeDutyCycleConfig(I2C_TypeDef* I2Cx, uint16_t I2C_DutyCycle);
  *            and return to correct communication status.
  *            
  *
- *  2) Advanced state monitoring:
+ *  2) Advanced state monitoring:   // 高级状态监控 I2C_GetLastEvent 函数返回 SR1 和 SR2 两个状态寄存器，拼接成 16位的数据
  *     Using the function I2C_GetLastEvent() which returns the image of both status 
  *     registers in a single word (uint32_t) (Status Register 2 value is shifted left 
  *     by 16 bits and concatenated to Status Register 1).
@@ -620,7 +620,7 @@ void I2C_FastModeDutyCycleConfig(I2C_TypeDef* I2Cx, uint16_t I2C_DutyCycle);
  *         ignores error flags).
  *     
  *
- *  3) Flag-based state monitoring:
+ *  3) Flag-based state monitoring: // 基于标志位的状态监控   I2C_GetFlagStatus 函数 可以判断 某一个标志位 是否置 1；
  *     Using the function I2C_GetFlagStatus() which simply returns the status of 
  *     one single flag (ie. I2C_FLAG_RXNE ...). 
  *     - When to use:
@@ -653,15 +653,15 @@ uint32_t I2C_GetLastEvent(I2C_TypeDef* I2Cx);
  *  3) Flag-based state monitoring
  *******************************************************************************
  */
-FlagStatus I2C_GetFlagStatus(I2C_TypeDef* I2Cx, uint32_t I2C_FLAG);
+FlagStatus I2C_GetFlagStatus(I2C_TypeDef* I2Cx, uint32_t I2C_FLAG);//读取标志位
 /**
  *
  *******************************************************************************
  */
 
-void I2C_ClearFlag(I2C_TypeDef* I2Cx, uint32_t I2C_FLAG);
-ITStatus I2C_GetITStatus(I2C_TypeDef* I2Cx, uint32_t I2C_IT);
-void I2C_ClearITPendingBit(I2C_TypeDef* I2Cx, uint32_t I2C_IT);
+void I2C_ClearFlag(I2C_TypeDef* I2Cx, uint32_t I2C_FLAG);//清除标志位
+ITStatus I2C_GetITStatus(I2C_TypeDef* I2Cx, uint32_t I2C_IT);// 读取中断标志位
+void I2C_ClearITPendingBit(I2C_TypeDef* I2Cx, uint32_t I2C_IT);// 清除中断标志位
 
 #ifdef __cplusplus
 }
