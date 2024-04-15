@@ -21,3 +21,11 @@ i2c
             
 ```
 
+
+
+
+# STM32 外设 I2C 连线
+SCL_PIN 连 PB6 
+SDA_PIN 连 PB7
+
+![I2C外设驱动连线方式.jpeg](I2C%E5%A4%96%E8%AE%BE%E9%A9%B1%E5%8A%A8%E8%BF%9E%E7%BA%BF%E6%96%B9%E5%BC%8F.jpeg)

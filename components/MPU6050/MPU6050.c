@@ -1,6 +1,10 @@
+/**
+ * 使用 SCL_PIN PB6  、SDA_PIN：PB7
+ */
+
 #include "stm32f10x.h"
 #include "delay.h"
-#include "customI2C.h"
+//#include "customI2C.h"
 #include "MPU6050_Reg.h"
 
 

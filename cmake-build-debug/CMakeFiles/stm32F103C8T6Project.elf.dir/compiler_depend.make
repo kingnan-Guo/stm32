@@ -1202,7 +1202,6 @@ CMakeFiles/stm32F103C8T6Project.elf.dir/components/MPU6050/MPU6050.c.obj: /Users
   /Users/kingnan/Documents/github/stm32/Libraries/STM32F10x_StdPeriph_Driver/inc/stm32f10x_wwdg.h \
   /Users/kingnan/Documents/github/stm32/User/stm32f10x_conf.h \
   /Users/kingnan/Documents/github/stm32/components/MPU6050/MPU6050_Reg.h \
-  /Users/kingnan/Documents/github/stm32/components/customI2C/customI2C.h \
   /Users/kingnan/Documents/github/stm32/components/delay/delay.h
 
 CMakeFiles/stm32F103C8T6Project.elf.dir/components/PWM/PWM.c.obj: /Users/kingnan/Documents/github/stm32/components/PWM/PWM.c \
@@ -1771,8 +1770,6 @@ CMakeFiles/stm32F103C8T6Project.elf.dir/system/syscalls/syscalls.c.obj: /Users/k
 
 /Users/kingnan/Documents/github/stm32/components/servo/servo.c:
 
-/Users/kingnan/Documents/github/stm32/components/oled/OLED.c:
-
 /Applications/ArmGNUToolchain/13.2.Rel1/arm-none-eabi/arm-none-eabi/include/machine/ieeefp.h:
 
 /Users/kingnan/Documents/github/stm32/components/delay/delay.c:
@@ -1794,8 +1791,6 @@ CMakeFiles/stm32F103C8T6Project.elf.dir/system/syscalls/syscalls.c.obj: /Users/k
 /Users/kingnan/Documents/github/stm32/components/Serial/Serial.c:
 
 /Users/kingnan/Documents/github/stm32/components/PWM/PWM.c:
-
-/Users/kingnan/Documents/github/stm32/components/customI2C/customI2C.h:
 
 /Users/kingnan/Documents/github/stm32/Libraries/STM32F10x_StdPeriph_Driver/inc/misc.h:
 
@@ -1896,6 +1891,8 @@ CMakeFiles/stm32F103C8T6Project.elf.dir/system/syscalls/syscalls.c.obj: /Users/k
 /Users/kingnan/Documents/github/stm32/components/customDMA/customDMA.c:
 
 /Users/kingnan/Documents/github/stm32/Libraries/STM32F10x_StdPeriph_Driver/inc/stm32f10x_usart.h:
+
+/Users/kingnan/Documents/github/stm32/components/oled/OLED.c:
 
 /Users/kingnan/Documents/github/stm32/components/Encode/Encode.c:
 
