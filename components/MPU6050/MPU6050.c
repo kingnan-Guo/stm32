@@ -8,6 +8,26 @@
 // 使用 宏定 将 寄存器的地址 使用  字符串来表示
 
 
+// 端口 换名字 宏定义
+//#define SCL_PORT    GPIOC
+//#define SCL_PIN     GPIO_Pin_15
+//#define SDA_PIN     GPIO_Pin_14
+
+
+/**
+ * 超时 退出
+ *
+ */
+void MPU6050_WaitEvent(I2C_TypeDef* I2Cx, uint32_t I2C_EVENT){
+    uint32_t TimeOut;
+    TimeOut =1000;
+    while (I2C_CheckEvent(I2Cx, I2C_EVENT) != SUCCESS){
+        TimeOut--;
+        if(TimeOut ==0){
+            break;
+        }
+    };
+}
 
 
 
@@ -28,19 +48,46 @@
  *  8、
  */
 void MPU6050_WriteReg(uint8_t RegAddress, uint8_t Data){
-    uint8_t ACK;
-    customI2C_Start();
-    customI2C_SendByte(MPU6050_ADDRESS);// 1101 0000 写入操作
-    // 接收应答
-    ACK = customI2C_ReceiveAckByte();
-    // 继续发送下一个字节， 寄存器的地址； 进行写入操作
-    customI2C_SendByte(RegAddress);
-    ACK = customI2C_ReceiveAckByte();
-    // 要写如 寄存器 中的数据
-    customI2C_SendByte(Data);
-    ACK = customI2C_ReceiveAckByte();
-    // 停止
-    customI2C_Stop();
+    //uint8_t ACK;
+    //customI2C_Start();
+    //customI2C_SendByte(MPU6050_ADDRESS);// 1101 0000 写入操作
+    //// 接收应答
+    //ACK = customI2C_ReceiveAckByte();
+    //// 继续发送下一个字节， 寄存器的地址； 进行写入操作
+    //customI2C_SendByte(RegAddress);
+    //ACK = customI2C_ReceiveAckByte();
+    //// 要写如 寄存器 中的数据
+    //customI2C_SendByte(Data);
+    //ACK = customI2C_ReceiveAckByte();
+    //// 停止
+    //customI2C_Stop();
+    //=========
+
+
+    //生成起始函数 ； 非阻塞性函数， 执行完成后就结束，不管 标志位 是否改变；也不管是否执行到位
+    I2C_GenerateSTART(I2C2, ENABLE);
+    // 参数2 指定要检查 哪个事件 ;这里是 EV5： I2C_EVENT_MASTER_MODE_SELECT    ； // 主机模式选择； 因为 STM32 默认为从机，发送起始条件后变为主机
+    //while (I2C_CheckEvent(I2C2, I2C_EVENT_MASTER_MODE_SELECT) != SUCCESS);
+    // 有超时等待的  EV5
+    MPU6050_WaitEvent(I2C2, I2C_EVENT_MASTER_MODE_SELECT);
+    //发送从机地址    地上额地址为 方向 发送； I2C_Direction_Transmitter；发送数据都自地带 接收应答的过程
+    I2C_Send7bitAddress(I2C2, MPU6050_ADDRESS,I2C_Direction_Transmitter);
+    //发送地址后 这里会产生 EV6 事件
+    // I2C_EVENT_MASTER_TRANSMITTER_MODE_SELECTED 发送数据已选择
+    while (I2C_CheckEvent(I2C2, I2C_EVENT_MASTER_TRANSMITTER_MODE_SELECTED) != SUCCESS);
+    // EV8_1事件： TXE=1 移位寄存器空 数据寄存器空 ，写DR寄存器； 但是没有 EV8_1；所以直接希尔DR 发送数据
+    I2C_SendData(I2C2,RegAddress);
+    // 这时写入了DR ；DR 的Data 转移到移位 寄存器 发送数据，此时波形产生
+    // 写入数据后 检查 EV8 事件
+    while (I2C_CheckEvent(I2C2, I2C_EVENT_MASTER_BYTE_TRANSMITTING) != SUCCESS);
+    // 因为DATA 的最后一个字节发送完就要终止 了； 如果有 连续的发送时 ，需要等待EV8 事件； 但是要发送完最后一个字节，要等待的是 EV8_2 事件
+    // EV8_2 ： BTF = 1 移位寄存器完成移位；请求设置停止位， TXE 和 BTF 位由硬件产生停止条件时 清除
+
+    //EV8_2 ： I2C_EVENT_MASTER_BYTE_TRANSMITTED
+    while (I2C_CheckEvent(I2C2, I2C_EVENT_MASTER_BYTE_TRANSMITTED) != SUCCESS);
+
+    // 终止 时序
+    I2C_GenerateSTOP(I2C2, ENABLE);
 }
 
 /**
@@ -52,29 +99,81 @@ void MPU6050_WriteReg(uint8_t RegAddress, uint8_t Data){
  *
 */
 uint8_t MPU6050_ReadReg(uint8_t RegAddress){
-    uint8_t ACK;
-    uint8_t Data;
-    customI2C_Start();
-    customI2C_SendByte(MPU6050_ADDRESS);// 1101 0000 写入操作
-    // 接收应答
-    ACK = customI2C_ReceiveAckByte();
-    // 继续发送下一个字节， 寄存器的地址； 进行写入操作
-    customI2C_SendByte(RegAddress);
-    ACK = customI2C_ReceiveAckByte();
+    //uint8_t ACK;
+    //uint8_t Data;
+    //customI2C_Start();
+    //customI2C_SendByte(MPU6050_ADDRESS);// 1101 0000 写入操作
+    //// 接收应答
+    //ACK = customI2C_ReceiveAckByte();
+    //// 继续发送下一个字节， 寄存器的地址； 进行写入操作
+    //customI2C_SendByte(RegAddress);
+    //ACK = customI2C_ReceiveAckByte();
 
-    // ========== 开始 接收数据 ========
+    //// ========== 开始 接收数据 ========
 
-    customI2C_Start();
-    // 寄存器的地址； 进行 读取 入操作; 1101 0001
-    customI2C_SendByte((MPU6050_ADDRESS|0x01));
-    ACK = customI2C_ReceiveAckByte();
-    // 接收应答 之后 总线控制权 就正式交给 从机
-    // 主机 开始接收 数据
-    Data =  customI2C_ReceiveByte();
-    customI2C_SendACK(1);// 主机给 应答 1 ，也就是 释放电平，从机没有收到 低电平 ，所以不会再继续 发送数据
-    customI2C_Stop();
+    //customI2C_Start();
+    //// 寄存器的地址； 进行 读取 入操作; 1101 0001
+    //customI2C_SendByte((MPU6050_ADDRESS|0x01));
+    //ACK = customI2C_ReceiveAckByte();
+    //// 接收应答 之后 总线控制权 就正式交给 从机
+    //// 主机 开始接收 数据
+    //Data =  customI2C_ReceiveByte();
+    //customI2C_SendACK(1);// 主机给 应答 1 ，也就是 释放电平，从机没有收到 低电平 ，所以不会再继续 发送数据
+    //customI2C_Stop();
 
-    return Data;
+    //return Data;
+
+
+    //======== 硬件
+
+
+
+    //生成起始函数 ； 非阻塞性函数， 执行完成后就结束，不管 标志位 是否改变；也不管是否执行到位
+    I2C_GenerateSTART(I2C2, ENABLE);
+    // 参数2 指定要检查 哪个事件 ;这里是 EV5： I2C_EVENT_MASTER_MODE_SELECT    ； // 主机模式选择； 因为 STM32 默认为从机，发送起始条件后变为主机
+    while (I2C_CheckEvent(I2C2, I2C_EVENT_MASTER_MODE_SELECT) != SUCCESS);
+    //发送从机地址    定义地址为 方向 发送； I2C_Direction_Transmitter；发送数据都自地带 接收应答的过程
+    I2C_Send7bitAddress(I2C2, MPU6050_ADDRESS,I2C_Direction_Transmitter);
+    //发送地址后 这里会产生 EV6 事件
+    // I2C_EVENT_MASTER_TRANSMITTER_MODE_SELECTED 发送数据已选择
+    while (I2C_CheckEvent(I2C2, I2C_EVENT_MASTER_TRANSMITTER_MODE_SELECTED) != SUCCESS);
+    // EV8_1事件： TXE=1 移位寄存器空 数据寄存器空 ，写DR寄存器； 但是没有 EV8_1；所以直接希尔DR 发送数据
+    I2C_SendData(I2C2,RegAddress);
+    // 这时写入了DR ；DR 的Data 转移到移位 寄存器 发送数据，此时波形产生
+    // 写入数据后 检查 EV8_2 事件 ; I2C_EVENT_MASTER_BYTE_TRANSMITTED  数据发送结束
+    while (I2C_CheckEvent(I2C2, I2C_EVENT_MASTER_BYTE_TRANSMITTED) != SUCCESS);
+    //指定地址 结束
+
+
+    //  如果 还有数据在发送的 时候，生成起始位 的时机会延后，发送完毕后再 生成
+    // 再 生成起始
+    I2C_GenerateSTART(I2C2, ENABLE);
+    //发送地址位； 使用 I2C_Direction_Receiver  函数自动将 MPU6050_ADDRESS 的最后一位 置 1；不用手动置1
+    I2C_Send7bitAddress(I2C2, MPU6050_ADDRESS,I2C_Direction_Receiver);
+    //寻址后  等待EV6 ； 主机接收的  EV6 ： I2C_EVENT_MASTER_RECEIVER_MODE_SELECTED
+    while (I2C_CheckEvent(I2C2, I2C_EVENT_MASTER_RECEIVER_MODE_SELECTED) != SUCCESS);
+    //开始接收从机发送的波形
+    //在 接收到第一个字节  会有EV6_1 标志位；适合接收 一个字节的情况； 这时 要把ACK置0 ；同时把停止条件生成位 STOP 置1
+    //数据都未接收到，规定就是 就是 要在接收到最后一个 字节之前， 就要提前把 ACK 置 0、 设置停止位 STOP；
+    // 停止位 也不会 截停 数据接收，会等到 接收完成后 再产生终止条件的波形
+
+    // 如果接收多个字节， 会再EV7 那里 把 ACK 置 0、 设置停止位 STOP；
+    // ***** 停止位 设置晚了 就会多一个 时序出来 *****
+
+    I2C_AcknowledgeConfig(I2C2, ENABLE);
+
+    // 配置 停止
+    I2C_GenerateSTOP(I2C2, ENABLE);
+
+    //这时等待 EV7 ： RxNE = 1 读取DR寄存器清除 该事件； 接收到一个字节后会产生
+    while (I2C_CheckEvent(I2C2, I2C_EVENT_MASTER_BYTE_RECEIVED) != SUCCESS);
+
+    // 读取数据 返回值就是 DR 的数据
+    //I2C_ReceiveData(I2C2);
+    uint8_t Data = I2C_ReceiveData(I2C2);
+
+    // 最后要把 ACK 置 回  1； 因为再接收最后一个字节之前 临时 置 0； 接收完成之后 要恢复位1 ； 方便接收多个字节
+
 }
 
 
@@ -158,8 +257,38 @@ uint8_t MPU6050_ReadReg(uint8_t RegAddress){
  *
  *
  */
+ /**
+  * 1、初始化 I2C 时钟；
+  *     RCC_APB1Periph_I2C1、RCC_APB1Periph_I2C2 都是 APB1 的外设；
+  * 2、开启GPIO 的时钟； 这里使用  GPIOC GPIO_Pin_15 GPIO_Pin_14
+  * 3、初始化 GPIO_Pin_15 GPIO_Pin_14
+  * 4、初始化 I2C2 ； 配置 结构体
+  *
+  */
 void MPU6050_Init(void){
-    customI2C_Init();
+    //customI2C_Init();
+
+    RCC_APB1PeriphClockCmd(RCC_APB1Periph_I2C2, ENABLE);
+    RCC_APB2PeriphClockCmd(RCC_APB2Periph_GPIOC, ENABLE);
+
+    GPIO_InitTypeDef GPIO_InitStructure;
+    GPIO_InitStructure.GPIO_Mode = GPIO_Mode_AF_OD;// 复用开漏 输出 ； 开漏输出技能输出 也能输入； 复用是因为 I2C的控制权 交给硬件外设；
+    GPIO_InitStructure.GPIO_Pin = GPIO_Pin_15 | GPIO_Pin_14;
+    GPIO_InitStructure.GPIO_Speed = GPIO_Speed_50MHz;
+    GPIO_Init(GPIOC, &GPIO_InitStructure);
+    //初始化 I2C2
+    I2C_InitTypeDef I2C_InitStructure;
+    I2C_InitStructure.I2C_Mode = I2C_Mode_I2C;//
+    I2C_InitStructure.I2C_ClockSpeed = 50000;//50000 标志速度； 0～100kHZ 标准 100KHZ～ 400kHz 快速
+    I2C_InitStructure.I2C_DutyCycle = I2C_DutyCycle_2;//时钟占空比 I2C_DutyCycle_16_9 （16:9） I2C_DutyCycle_2（2:1）； 快速模式下 增加了低电平 的比例；由于低电平数据变化，需要一定的时间来翻转 波形； 高电平读取；
+    I2C_InitStructure.I2C_Ack = I2C_Ack_Enable;// ACK位
+    I2C_InitStructure.I2C_AcknowledgedAddress = I2C_AcknowledgedAddress_7bit;//作为 从机 响应 几位地址； I2C_AcknowledgedAddress_7bit （7 位）；
+    I2C_InitStructure.I2C_OwnAddress1 = 0x00;//指定 STM32 的自身地址； 作为从机使用；I2C_AcknowledgedAddress = I2C_AcknowledgedAddress_7bit 就要写一个 7位 地址
+
+    I2C_Init(I2C2, &I2C_InitStructure);
+    //使能
+    I2C_Cmd(I2C2, ENABLE);
+    //============
     //配置电源管理寄存器 1
     MPU6050_WriteReg(MPU6050_PWR_MGMT_1, 0x01);
     // 配置电源管理寄存器 1
@@ -219,4 +348,6 @@ void MPU6050_GetData(int16_t *AccX, int16_t *AccY, int16_t *AccZ, int16_t *GyroX
 
 
 }
+
+
 

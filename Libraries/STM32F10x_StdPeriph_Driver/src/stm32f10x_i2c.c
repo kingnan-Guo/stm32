@@ -1011,11 +1011,11 @@ void I2C_FastModeDutyCycleConfig(I2C_TypeDef* I2Cx, uint16_t I2C_DutyCycle)
   *     @arg (I2C_EVENT_SLAVE_BYTE_TRANSMITTED | I2C_FLAG_GENCALL) : EV3
   *     @arg I2C_EVENT_SLAVE_ACK_FAILURE                           : EV3_2
   *     @arg I2C_EVENT_SLAVE_STOP_DETECTED                         : EV4
-  *     @arg I2C_EVENT_MASTER_MODE_SELECT                          : EV5
-  *     @arg I2C_EVENT_MASTER_TRANSMITTER_MODE_SELECTED            : EV6     
-  *     @arg I2C_EVENT_MASTER_RECEIVER_MODE_SELECTED               : EV6
-  *     @arg I2C_EVENT_MASTER_BYTE_RECEIVED                        : EV7
-  *     @arg I2C_EVENT_MASTER_BYTE_TRANSMITTING                    : EV8
+  *     @arg I2C_EVENT_MASTER_MODE_SELECT                          : EV5    // 主机模式选择
+  *     @arg I2C_EVENT_MASTER_TRANSMITTER_MODE_SELECTED            : EV6    // 发送数据 已选择
+  *     @arg I2C_EVENT_MASTER_RECEIVER_MODE_SELECTED               : EV6    // 接收事件已选择
+  *     @arg I2C_EVENT_MASTER_BYTE_RECEIVED                        : EV7    //  RxNE = 1 读取DR寄存器清除 该事件； 接收到一个字节后会产生
+  *     @arg I2C_EVENT_MASTER_BYTE_TRANSMITTING                    : EV8    // 字节正在发送
   *     @arg I2C_EVENT_MASTER_BYTE_TRANSMITTED                     : EV8_2
   *     @arg I2C_EVENT_MASTER_MODE_ADDRESS10                       : EV9
   *     
@@ -1273,7 +1273,7 @@ ITStatus I2C_GetITStatus(I2C_TypeDef* I2Cx, uint32_t I2C_IT)
 }
 
 /**
-  * @brief  Clears the I2Cx�s interrupt pending bits.
+  * @brief  Clears the I2Cx�s interrupt pending bits.
   * @param  I2Cx: where x can be 1 or 2 to select the I2C peripheral.
   * @param  I2C_IT: specifies the interrupt pending bit to clear. 
   *   This parameter can be any combination of the following values:
