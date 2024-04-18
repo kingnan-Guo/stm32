@@ -86,6 +86,7 @@ include_directories(
         #软件 I2C 通信
         components/customI2C
         components/MPU6050
+        components/coustomSPI
 )
 
 

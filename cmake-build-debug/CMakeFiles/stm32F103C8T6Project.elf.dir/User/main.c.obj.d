@@ -34,5 +34,4 @@ CMakeFiles/stm32F103C8T6Project.elf.dir/User/main.c.obj: \
  /Users/kingnan/Documents/github/stm32/Libraries/STM32F10x_StdPeriph_Driver/inc/stm32f10x_usart.h \
  /Users/kingnan/Documents/github/stm32/Libraries/STM32F10x_StdPeriph_Driver/inc/stm32f10x_wwdg.h \
  /Users/kingnan/Documents/github/stm32/Libraries/STM32F10x_StdPeriph_Driver/inc/misc.h \
- /Users/kingnan/Documents/github/stm32/components/oled/OLED.h \
- /Users/kingnan/Documents/github/stm32/components/MPU6050/MPU6050.h
+ /Users/kingnan/Documents/github/stm32/components/oled/OLED.h
