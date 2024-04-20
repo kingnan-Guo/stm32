@@ -2996,9 +2996,9 @@ LOAD /Applications/ArmGNUToolchain/13.2.Rel1/arm-none-eabi/bin/../lib/gcc/arm-no
  .text.W25Q64_PageProgram
                 0x08000676       0x48 CMakeFiles/stm32F103C8T6Project.elf.dir/components/W25Q64/W25Q64.c.obj
                 0x08000676                W25Q64_PageProgram
- .text.W25Q64_SectirErase
+ .text.W25Q64_SectorErase
                 0x080006be       0x32 CMakeFiles/stm32F103C8T6Project.elf.dir/components/W25Q64/W25Q64.c.obj
-                0x080006be                W25Q64_SectirErase
+                0x080006be                W25Q64_SectorErase
  .text.W25Q64_ReadData
                 0x080006f0       0x40 CMakeFiles/stm32F103C8T6Project.elf.dir/components/W25Q64/W25Q64.c.obj
                 0x080006f0                W25Q64_ReadData

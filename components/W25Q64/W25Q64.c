@@ -132,7 +132,7 @@ void W25Q64_PageProgram(uint32_t Address, uint8_t *DataArry, uint16_t Count){
  *
  * 每次写入操作之后，芯片进入 忙状态，所以调用一下W25Q64_WaitBusy
  */
-void W25Q64_SectirErase(uint32_t Address){
+void W25Q64_SectorErase(uint32_t Address){
     W25Q64_WriteEnable();//写使能
     customSPI_Start();
     customSPI_SwapByte(W25Q64_SECTOR_ERASE_4KB);

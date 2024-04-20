@@ -6,7 +6,7 @@
 uint8_t MID;
 uint16_t DID;
 
-uint8_t dataArray_write[] = {0x01, 0x02, 0x03,0x05};
+uint8_t dataArray_write[] = {0x01, 0x02, 0x03,0x07};
 uint8_t dataArr_Read[4];
 
 int main(void) {
@@ -34,7 +34,7 @@ int main(void) {
      *  3、写入数据 再读取
      */
     // 先擦除
-    W25Q64_SectirErase(0x000000);
+    W25Q64_SectorErase(0x000000);
     // 写入数据
     W25Q64_PageProgram(0x000000, dataArray_write, 4);
     // 写入数据 再读取
