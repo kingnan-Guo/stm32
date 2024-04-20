@@ -945,6 +945,30 @@ components/MPU6050/MPU6050.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/stm32F103C8T6Project.elf.dir/build.make CMakeFiles/stm32F103C8T6Project.elf.dir/components/MPU6050/MPU6050.c.s
 .PHONY : components/MPU6050/MPU6050.c.s
 
+components/MySPI/MySPI.obj: components/MySPI/MySPI.c.obj
+.PHONY : components/MySPI/MySPI.obj
+
+# target to build an object file
+components/MySPI/MySPI.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/stm32F103C8T6Project.elf.dir/build.make CMakeFiles/stm32F103C8T6Project.elf.dir/components/MySPI/MySPI.c.obj
+.PHONY : components/MySPI/MySPI.c.obj
+
+components/MySPI/MySPI.i: components/MySPI/MySPI.c.i
+.PHONY : components/MySPI/MySPI.i
+
+# target to preprocess a source file
+components/MySPI/MySPI.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/stm32F103C8T6Project.elf.dir/build.make CMakeFiles/stm32F103C8T6Project.elf.dir/components/MySPI/MySPI.c.i
+.PHONY : components/MySPI/MySPI.c.i
+
+components/MySPI/MySPI.s: components/MySPI/MySPI.c.s
+.PHONY : components/MySPI/MySPI.s
+
+# target to generate assembly for a file
+components/MySPI/MySPI.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/stm32F103C8T6Project.elf.dir/build.make CMakeFiles/stm32F103C8T6Project.elf.dir/components/MySPI/MySPI.c.s
+.PHONY : components/MySPI/MySPI.c.s
+
 components/PWM/PWM.obj: components/PWM/PWM.c.obj
 .PHONY : components/PWM/PWM.obj
 
@@ -1424,6 +1448,9 @@ help:
 	@echo "... components/MPU6050/MPU6050.obj"
 	@echo "... components/MPU6050/MPU6050.i"
 	@echo "... components/MPU6050/MPU6050.s"
+	@echo "... components/MySPI/MySPI.obj"
+	@echo "... components/MySPI/MySPI.i"
+	@echo "... components/MySPI/MySPI.s"
 	@echo "... components/PWM/PWM.obj"
 	@echo "... components/PWM/PWM.i"
 	@echo "... components/PWM/PWM.s"

@@ -52,6 +52,7 @@
 					<Add directory="/Users/kingnan/Documents/github/stm32/components/MPU6050"/>
 					<Add directory="/Users/kingnan/Documents/github/stm32/components/coustomSPI"/>
 					<Add directory="/Users/kingnan/Documents/github/stm32/components/W25Q64"/>
+					<Add directory="/Users/kingnan/Documents/github/stm32/components/MySPI"/>
 					<Add directory="/Applications/ArmGNUToolchain/13.2.Rel1/arm-none-eabi/bin/../lib/gcc/arm-none-eabi/13.2.1/../../../../arm-none-eabi/include/c++/13.2.1"/>
 					<Add directory="/Applications/ArmGNUToolchain/13.2.Rel1/arm-none-eabi/bin/../lib/gcc/arm-none-eabi/13.2.1/../../../../arm-none-eabi/include/c++/13.2.1/arm-none-eabi"/>
 					<Add directory="/Applications/ArmGNUToolchain/13.2.Rel1/arm-none-eabi/bin/../lib/gcc/arm-none-eabi/13.2.1/../../../../arm-none-eabi/include/c++/13.2.1/backward"/>
@@ -101,6 +102,7 @@
 					<Add directory="/Users/kingnan/Documents/github/stm32/components/MPU6050"/>
 					<Add directory="/Users/kingnan/Documents/github/stm32/components/coustomSPI"/>
 					<Add directory="/Users/kingnan/Documents/github/stm32/components/W25Q64"/>
+					<Add directory="/Users/kingnan/Documents/github/stm32/components/MySPI"/>
 					<Add directory="/Applications/ArmGNUToolchain/13.2.Rel1/arm-none-eabi/bin/../lib/gcc/arm-none-eabi/13.2.1/../../../../arm-none-eabi/include/c++/13.2.1"/>
 					<Add directory="/Applications/ArmGNUToolchain/13.2.Rel1/arm-none-eabi/bin/../lib/gcc/arm-none-eabi/13.2.1/../../../../arm-none-eabi/include/c++/13.2.1/arm-none-eabi"/>
 					<Add directory="/Applications/ArmGNUToolchain/13.2.Rel1/arm-none-eabi/bin/../lib/gcc/arm-none-eabi/13.2.1/../../../../arm-none-eabi/include/c++/13.2.1/backward"/>
@@ -358,6 +360,12 @@
 		<Unit filename="/Users/kingnan/Documents/github/stm32/components/MPU6050/RM-MPU-6000A.pdf">
 			<Option target="stm32F103C8T6Project.elf"/>
 		</Unit>
+		<Unit filename="/Users/kingnan/Documents/github/stm32/components/MySPI/MySPI.c">
+			<Option target="stm32F103C8T6Project.elf"/>
+		</Unit>
+		<Unit filename="/Users/kingnan/Documents/github/stm32/components/MySPI/MySPI.h">
+			<Option target="stm32F103C8T6Project.elf"/>
+		</Unit>
 		<Unit filename="/Users/kingnan/Documents/github/stm32/components/PWM/PWM.c">
 			<Option target="stm32F103C8T6Project.elf"/>
 		</Unit>
@@ -386,6 +394,9 @@
 			<Option target="stm32F103C8T6Project.elf"/>
 		</Unit>
 		<Unit filename="/Users/kingnan/Documents/github/stm32/components/W25Q64/W25Q64.h">
+			<Option target="stm32F103C8T6Project.elf"/>
+		</Unit>
+		<Unit filename="/Users/kingnan/Documents/github/stm32/components/W25Q64/W25Q64_Ins.h">
 			<Option target="stm32F103C8T6Project.elf"/>
 		</Unit>
 		<Unit filename="/Users/kingnan/Documents/github/stm32/components/countSensor/countSensor.c">

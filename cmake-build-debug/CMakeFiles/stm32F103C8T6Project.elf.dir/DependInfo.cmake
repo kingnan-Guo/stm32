@@ -46,6 +46,7 @@ set(CMAKE_ASM_TARGET_INCLUDE_PATH
   "/Users/kingnan/Documents/github/stm32/components/MPU6050"
   "/Users/kingnan/Documents/github/stm32/components/coustomSPI"
   "/Users/kingnan/Documents/github/stm32/components/W25Q64"
+  "/Users/kingnan/Documents/github/stm32/components/MySPI"
   )
 
 # The set of dependency files which are needed:
@@ -84,6 +85,7 @@ set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "/Users/kingnan/Documents/github/stm32/components/IC/IC.c" "CMakeFiles/stm32F103C8T6Project.elf.dir/components/IC/IC.c.obj" "gcc" "CMakeFiles/stm32F103C8T6Project.elf.dir/components/IC/IC.c.obj.d"
   "/Users/kingnan/Documents/github/stm32/components/LED/LED.c" "CMakeFiles/stm32F103C8T6Project.elf.dir/components/LED/LED.c.obj" "gcc" "CMakeFiles/stm32F103C8T6Project.elf.dir/components/LED/LED.c.obj.d"
   "/Users/kingnan/Documents/github/stm32/components/MPU6050/MPU6050.c" "CMakeFiles/stm32F103C8T6Project.elf.dir/components/MPU6050/MPU6050.c.obj" "gcc" "CMakeFiles/stm32F103C8T6Project.elf.dir/components/MPU6050/MPU6050.c.obj.d"
+  "/Users/kingnan/Documents/github/stm32/components/MySPI/MySPI.c" "CMakeFiles/stm32F103C8T6Project.elf.dir/components/MySPI/MySPI.c.obj" "gcc" "CMakeFiles/stm32F103C8T6Project.elf.dir/components/MySPI/MySPI.c.obj.d"
   "/Users/kingnan/Documents/github/stm32/components/PWM/PWM.c" "CMakeFiles/stm32F103C8T6Project.elf.dir/components/PWM/PWM.c.obj" "gcc" "CMakeFiles/stm32F103C8T6Project.elf.dir/components/PWM/PWM.c.obj.d"
   "/Users/kingnan/Documents/github/stm32/components/Serial/Serial.c" "CMakeFiles/stm32F103C8T6Project.elf.dir/components/Serial/Serial.c.obj" "gcc" "CMakeFiles/stm32F103C8T6Project.elf.dir/components/Serial/Serial.c.obj.d"
   "/Users/kingnan/Documents/github/stm32/components/Serial_package/Serial_package.c" "CMakeFiles/stm32F103C8T6Project.elf.dir/components/Serial_package/Serial_package.c.obj" "gcc" "CMakeFiles/stm32F103C8T6Project.elf.dir/components/Serial_package/Serial_package.c.obj.d"

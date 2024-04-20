@@ -10,18 +10,21 @@
 void customSPI_W_SS(uint8_t BitValue){
     GPIO_WriteBit(GPIOA, SPI_CS, (BitAction)BitValue);
 }
-//输出
-void customSPI_W_MISO(uint8_t BitValue){
-    GPIO_WriteBit(GPIOA, SPI_D0, (BitAction)BitValue);
-}
+
 //时钟
 void customSPI_W_SCK(uint8_t BitValue){
     GPIO_WriteBit(GPIOA, SPI_SCK, (BitAction)BitValue);
 }
-//输入
-uint8_t customSPI_R_MOSI(void){
+
+// SPI主机输入从机输出 MySPI_R_MISO
+uint8_t customSPI_R_MISO(void){
+    return GPIO_ReadInputDataBit(GPIOA, SPI_D0);
+}
+
+// SPI主机输出从机输入
+void customSPI_W_MOSI(uint8_t BitValue){
     // 读取 GPIOA 的 GPIO_Pin_7 值返回
-    return GPIO_ReadInputDataBit(GPIOA, SPI_D1);
+    GPIO_WriteBit(GPIOA, SPI_D1, (BitAction)BitValue);
 }
 /**
  * 初始化 SPI 通信引脚
@@ -63,7 +66,7 @@ void customSPI_Init(void){
  * 2、
  */
 void customSPI_Start(void){
-    customSPI_W_SS(1);
+    customSPI_W_SS(0);
 
 
 }
@@ -73,7 +76,7 @@ void customSPI_Start(void){
  * 将SS置低电平
  */
 void customSPI_Stop(void){
-    customSPI_W_SS(0);
+    customSPI_W_SS(1);
 }
 
 /**
@@ -82,20 +85,20 @@ void customSPI_Stop(void){
  *
  */
 uint8_t customSPI_SwapByte(uint8_t ByteSend){
-    uint8_t ByteReceive;
+    uint8_t ByteReceive = 0x00;
     uint8_t i;
 
-    for (i = 0; i < 8; ++i) {
+    for (i = 0; i < 8; i ++) {
 
         // 主机移出数据 数据的最高位放放到 MOSI 上 ; 从机移出数据 将数据放到 MISO 上
-        customSPI_W_MISO(ByteSend & (0x80 >> i));
+        customSPI_W_MOSI(ByteSend & (0x80 >> i));
         // SCK 开始上升沿
         customSPI_W_SCK(1);
         //上升沿时 主机 将 放在 MOSI 上的 1 位数据 读出来，放到移位寄存器的最低位； 从机  写入一位数据
         // 这时 理论上要等待一段时间，但是没有标志位，所以判断 是否 有 MISO 的数据
-        if(customSPI_R_MOSI() == 1){
+        if (customSPI_R_MISO() == 1){
             // 接收到了数据
-            ByteReceive |= (0x08 >> i);
+            ByteReceive |= (0x80 >> i);
         }
         //SCK 下降沿
         customSPI_W_SCK(0);
@@ -112,6 +115,25 @@ uint8_t customSPI_SwapByte(uint8_t ByteSend){
 
 
 
+uint8_t customSPI_SwapByte2(uint8_t ByteSend)
+{
+    uint8_t i, ByteReceive = 0x00;
+
+    for (i = 0; i < 8; i ++)
+    {
+        customSPI_W_MOSI(ByteSend & (0x80 >> i));
+        customSPI_W_SCK(1);
+        if (customSPI_R_MISO() == 1){
+            // 接收到了数据
+            ByteReceive |= (0x80 >> i);
+        }
+        customSPI_W_SCK(0);
+    }
+
+    return ByteReceive;
+}
+
+
 
 /**
  * 第二种方法 移位进行数据交换，效率更高； 但是原始数据被改变
@@ -123,16 +145,16 @@ uint8_t customSPI_SwapByte_2(uint8_t ByteSend){
     uint8_t ByteReceive;
     uint8_t i;
 
-    for (i = 0; i < 8; ++i) {
+    for (i = 0; i < 8; i++) {
 
         // 主机移出数据 数据的最高位放放到 MOSI 上 ; 从机移出数据 将数据放到 MISO 上
-        customSPI_W_MISO(ByteSend & 0x80);
+        customSPI_W_MOSI(ByteSend & 0x80);
         ByteSend <<= 1;
         // SCK 开始上升沿
         customSPI_W_SCK(1);
         //上升沿时 主机 将 放在 MOSI 上的 1 位数据 读出来，放到移位寄存器的最低位； 从机  写入一位数据
         // 这时 理论上要等待一段时间，但是没有标志位，所以判断 是否 有 MISO 的数据
-        if(customSPI_R_MOSI() == 1){
+        if(customSPI_R_MISO() == 1){
             // 接收到了数据
             ByteSend |= 0x01;
         }

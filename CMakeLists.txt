@@ -88,6 +88,7 @@ include_directories(
         components/MPU6050
         components/coustomSPI
         components/W25Q64
+        components/MySPI
 )
 
 

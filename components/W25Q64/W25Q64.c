@@ -1,6 +1,7 @@
 #include "stm32f10x.h"
 #include "coustomSPI.h"
 #include "W25Q64_Ins.h"
+#include "MySPI.h"
 
 /**
  * 初始化
@@ -32,7 +33,7 @@ void W25Q64_ReadID(uint8_t *MID, uint16_t *DID){
     //uint8_t ByteReceive;
     customSPI_Start();
     // 交换发送一个字节 W25Q64_MANUFACTURER_DEVICE_ID 0x9F  , 发送指令到 W25Q64
-    customSPI_SwapByte(W25Q64_MANUFACTURER_DEVICE_ID);
+    customSPI_SwapByte(W25Q64_JEDEC_ID);
     // W25Q64 收到指令后 ，想主机发送 字节，之际 通过 W25Q64_DUMMY_BYTE 0xFF 将数据交换过来； 0xFF 没有任何意义
     *MID = customSPI_SwapByte(W25Q64_DUMMY_BYTE);
     // 接收 以时序传过来的数据
@@ -92,6 +93,31 @@ void W25Q64_WaitBusy(void){
      customSPI_Stop();
 }
 
+
+
+
+/**
+ * 擦除的功能
+ * 扇区擦除 W25Q64_SECTOR_ERASE_4KB
+ * 写使能
+ * 发送指令 0x20 再发送 3个字节的地址
+ * 这样指定地址的整个扇区都会被擦除
+ *
+ * 每次写入操作之后，芯片进入 忙状态，所以调用一下W25Q64_WaitBusy
+ */
+void W25Q64_SectorErase(uint32_t Address){
+    W25Q64_WriteEnable();//写使能
+    customSPI_Start();
+    customSPI_SwapByte(W25Q64_SECTOR_ERASE_4KB);
+    customSPI_SwapByte(Address >> 16); // 23:16 位
+    customSPI_SwapByte(Address >> 8);// 15: 8   位
+    customSPI_SwapByte(Address);// 7:0          位
+    customSPI_Stop();
+
+    W25Q64_WaitBusy();
+}
+
+
 /**
  * 页编程  W25Q64_PAGE_PROGRAM
  * （一次 最大256 个字节）
@@ -114,7 +140,7 @@ void W25Q64_PageProgram(uint32_t Address, uint8_t *DataArry, uint16_t Count){
     customSPI_SwapByte(Address >> 16); // 23:16 位
     customSPI_SwapByte(Address >> 8);// 15: 8   位
     customSPI_SwapByte(Address);// 7:0          位
-    for (i = 0; i < Count; ++i) {
+    for (i = 0; i < Count; i++) {
         customSPI_SwapByte(DataArry[i]);
     }
     customSPI_Stop();
@@ -122,27 +148,6 @@ void W25Q64_PageProgram(uint32_t Address, uint8_t *DataArry, uint16_t Count){
     W25Q64_WaitBusy();
 }
 
-
-/**
- * 擦除的功能
- * 扇区擦除 W25Q64_SECTOR_ERASE_4KB
- * 写使能
- * 发送指令 0x20 再发送 3个字节的地址
- * 这样指定地址的整个扇区都会被擦除
- *
- * 每次写入操作之后，芯片进入 忙状态，所以调用一下W25Q64_WaitBusy
- */
-void W25Q64_SectirErase(uint32_t Address){
-    W25Q64_WriteEnable();//写使能
-    customSPI_Start();
-    customSPI_SwapByte(W25Q64_SECTOR_ERASE_4KB);
-    customSPI_SwapByte(Address >> 16); // 23:16 位
-    customSPI_SwapByte(Address >> 8);// 15: 8   位
-    customSPI_SwapByte(Address);// 7:0          位
-    customSPI_Stop();
-
-    W25Q64_WaitBusy();
-}
 
 /**
  * 连续接收数据 可以一直读取    W25Q64_READ_DATA 0x03
@@ -160,7 +165,7 @@ void W25Q64_ReadData(uint32_t Address, uint8_t *DataArry, uint32_t Count){
     customSPI_SwapByte(Address >> 16); // 23:16 位
     customSPI_SwapByte(Address >> 8);// 15: 8   位
     customSPI_SwapByte(Address);// 7:0          位
-    for (i = 0; i < Count; ++i) {
+    for (i = 0; i < Count; i++) {
         DataArry[i] = customSPI_SwapByte(W25Q64_DUMMY_BYTE);
     }
     customSPI_Stop();
