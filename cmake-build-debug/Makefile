@@ -1041,6 +1041,30 @@ components/Timer/Timer.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/stm32F103C8T6Project.elf.dir/build.make CMakeFiles/stm32F103C8T6Project.elf.dir/components/Timer/Timer.c.s
 .PHONY : components/Timer/Timer.c.s
 
+components/W25Q64/W25Q64.obj: components/W25Q64/W25Q64.c.obj
+.PHONY : components/W25Q64/W25Q64.obj
+
+# target to build an object file
+components/W25Q64/W25Q64.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/stm32F103C8T6Project.elf.dir/build.make CMakeFiles/stm32F103C8T6Project.elf.dir/components/W25Q64/W25Q64.c.obj
+.PHONY : components/W25Q64/W25Q64.c.obj
+
+components/W25Q64/W25Q64.i: components/W25Q64/W25Q64.c.i
+.PHONY : components/W25Q64/W25Q64.i
+
+# target to preprocess a source file
+components/W25Q64/W25Q64.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/stm32F103C8T6Project.elf.dir/build.make CMakeFiles/stm32F103C8T6Project.elf.dir/components/W25Q64/W25Q64.c.i
+.PHONY : components/W25Q64/W25Q64.c.i
+
+components/W25Q64/W25Q64.s: components/W25Q64/W25Q64.c.s
+.PHONY : components/W25Q64/W25Q64.s
+
+# target to generate assembly for a file
+components/W25Q64/W25Q64.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/stm32F103C8T6Project.elf.dir/build.make CMakeFiles/stm32F103C8T6Project.elf.dir/components/W25Q64/W25Q64.c.s
+.PHONY : components/W25Q64/W25Q64.c.s
+
 components/countSensor/countSensor.obj: components/countSensor/countSensor.c.obj
 .PHONY : components/countSensor/countSensor.obj
 
@@ -1412,6 +1436,9 @@ help:
 	@echo "... components/Timer/Timer.obj"
 	@echo "... components/Timer/Timer.i"
 	@echo "... components/Timer/Timer.s"
+	@echo "... components/W25Q64/W25Q64.obj"
+	@echo "... components/W25Q64/W25Q64.i"
+	@echo "... components/W25Q64/W25Q64.s"
 	@echo "... components/countSensor/countSensor.obj"
 	@echo "... components/countSensor/countSensor.i"
 	@echo "... components/countSensor/countSensor.s"

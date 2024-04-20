@@ -1,5 +1,5 @@
-#ifndef __CUSTOMSPI_H__
-#define __CUSTOMSPI_H__
+#ifndef __CUSTOMSPI_H
+#define __CUSTOMSPI_H
 void customSPI_Init(void);
 void customSPI_Start(void);
 void customSPI_Stop(void);

@@ -51,6 +51,7 @@
 					<Add directory="/Users/kingnan/Documents/github/stm32/components/customI2C"/>
 					<Add directory="/Users/kingnan/Documents/github/stm32/components/MPU6050"/>
 					<Add directory="/Users/kingnan/Documents/github/stm32/components/coustomSPI"/>
+					<Add directory="/Users/kingnan/Documents/github/stm32/components/W25Q64"/>
 					<Add directory="/Applications/ArmGNUToolchain/13.2.Rel1/arm-none-eabi/bin/../lib/gcc/arm-none-eabi/13.2.1/../../../../arm-none-eabi/include/c++/13.2.1"/>
 					<Add directory="/Applications/ArmGNUToolchain/13.2.Rel1/arm-none-eabi/bin/../lib/gcc/arm-none-eabi/13.2.1/../../../../arm-none-eabi/include/c++/13.2.1/arm-none-eabi"/>
 					<Add directory="/Applications/ArmGNUToolchain/13.2.Rel1/arm-none-eabi/bin/../lib/gcc/arm-none-eabi/13.2.1/../../../../arm-none-eabi/include/c++/13.2.1/backward"/>
@@ -99,6 +100,7 @@
 					<Add directory="/Users/kingnan/Documents/github/stm32/components/customI2C"/>
 					<Add directory="/Users/kingnan/Documents/github/stm32/components/MPU6050"/>
 					<Add directory="/Users/kingnan/Documents/github/stm32/components/coustomSPI"/>
+					<Add directory="/Users/kingnan/Documents/github/stm32/components/W25Q64"/>
 					<Add directory="/Applications/ArmGNUToolchain/13.2.Rel1/arm-none-eabi/bin/../lib/gcc/arm-none-eabi/13.2.1/../../../../arm-none-eabi/include/c++/13.2.1"/>
 					<Add directory="/Applications/ArmGNUToolchain/13.2.Rel1/arm-none-eabi/bin/../lib/gcc/arm-none-eabi/13.2.1/../../../../arm-none-eabi/include/c++/13.2.1/arm-none-eabi"/>
 					<Add directory="/Applications/ArmGNUToolchain/13.2.Rel1/arm-none-eabi/bin/../lib/gcc/arm-none-eabi/13.2.1/../../../../arm-none-eabi/include/c++/13.2.1/backward"/>
@@ -378,6 +380,12 @@
 			<Option target="stm32F103C8T6Project.elf"/>
 		</Unit>
 		<Unit filename="/Users/kingnan/Documents/github/stm32/components/Timer/Timer.h">
+			<Option target="stm32F103C8T6Project.elf"/>
+		</Unit>
+		<Unit filename="/Users/kingnan/Documents/github/stm32/components/W25Q64/W25Q64.c">
+			<Option target="stm32F103C8T6Project.elf"/>
+		</Unit>
+		<Unit filename="/Users/kingnan/Documents/github/stm32/components/W25Q64/W25Q64.h">
 			<Option target="stm32F103C8T6Project.elf"/>
 		</Unit>
 		<Unit filename="/Users/kingnan/Documents/github/stm32/components/countSensor/countSensor.c">

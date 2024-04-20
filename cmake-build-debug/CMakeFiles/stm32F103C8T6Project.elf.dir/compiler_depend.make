@@ -909,6 +909,7 @@ CMakeFiles/stm32F103C8T6Project.elf.dir/User/main.c.obj: /Users/kingnan/Document
   /Users/kingnan/Documents/github/stm32/Libraries/STM32F10x_StdPeriph_Driver/inc/stm32f10x_usart.h \
   /Users/kingnan/Documents/github/stm32/Libraries/STM32F10x_StdPeriph_Driver/inc/stm32f10x_wwdg.h \
   /Users/kingnan/Documents/github/stm32/User/stm32f10x_conf.h \
+  /Users/kingnan/Documents/github/stm32/components/W25Q64/W25Q64.h \
   /Users/kingnan/Documents/github/stm32/components/oled/OLED.h
 
 CMakeFiles/stm32F103C8T6Project.elf.dir/User/stm32f10x_it.c.obj: /Users/kingnan/Documents/github/stm32/User/stm32f10x_it.c \
@@ -1373,6 +1374,44 @@ CMakeFiles/stm32F103C8T6Project.elf.dir/components/Timer/Timer.c.obj: /Users/kin
   /Users/kingnan/Documents/github/stm32/Libraries/STM32F10x_StdPeriph_Driver/inc/stm32f10x_wwdg.h \
   /Users/kingnan/Documents/github/stm32/User/stm32f10x_conf.h
 
+CMakeFiles/stm32F103C8T6Project.elf.dir/components/W25Q64/W25Q64.c.obj: /Users/kingnan/Documents/github/stm32/components/W25Q64/W25Q64.c \
+  /Applications/ArmGNUToolchain/13.2.Rel1/arm-none-eabi/arm-none-eabi/include/_newlib_version.h \
+  /Applications/ArmGNUToolchain/13.2.Rel1/arm-none-eabi/arm-none-eabi/include/machine/_default_types.h \
+  /Applications/ArmGNUToolchain/13.2.Rel1/arm-none-eabi/arm-none-eabi/include/stdint.h \
+  /Applications/ArmGNUToolchain/13.2.Rel1/arm-none-eabi/arm-none-eabi/include/sys/_intsup.h \
+  /Applications/ArmGNUToolchain/13.2.Rel1/arm-none-eabi/arm-none-eabi/include/sys/_stdint.h \
+  /Applications/ArmGNUToolchain/13.2.Rel1/arm-none-eabi/arm-none-eabi/include/sys/features.h \
+  /Applications/ArmGNUToolchain/13.2.Rel1/arm-none-eabi/lib/gcc/arm-none-eabi/13.2.1/include/stdint.h \
+  /Users/kingnan/Documents/github/stm32/Libraries/CMSIS/core_cm3.h \
+  /Users/kingnan/Documents/github/stm32/Libraries/CMSIS/stm32f10x.h \
+  /Users/kingnan/Documents/github/stm32/Libraries/CMSIS/system_stm32f10x.h \
+  /Users/kingnan/Documents/github/stm32/Libraries/STM32F10x_StdPeriph_Driver/inc/misc.h \
+  /Users/kingnan/Documents/github/stm32/Libraries/STM32F10x_StdPeriph_Driver/inc/stm32f10x_adc.h \
+  /Users/kingnan/Documents/github/stm32/Libraries/STM32F10x_StdPeriph_Driver/inc/stm32f10x_bkp.h \
+  /Users/kingnan/Documents/github/stm32/Libraries/STM32F10x_StdPeriph_Driver/inc/stm32f10x_can.h \
+  /Users/kingnan/Documents/github/stm32/Libraries/STM32F10x_StdPeriph_Driver/inc/stm32f10x_cec.h \
+  /Users/kingnan/Documents/github/stm32/Libraries/STM32F10x_StdPeriph_Driver/inc/stm32f10x_crc.h \
+  /Users/kingnan/Documents/github/stm32/Libraries/STM32F10x_StdPeriph_Driver/inc/stm32f10x_dac.h \
+  /Users/kingnan/Documents/github/stm32/Libraries/STM32F10x_StdPeriph_Driver/inc/stm32f10x_dbgmcu.h \
+  /Users/kingnan/Documents/github/stm32/Libraries/STM32F10x_StdPeriph_Driver/inc/stm32f10x_dma.h \
+  /Users/kingnan/Documents/github/stm32/Libraries/STM32F10x_StdPeriph_Driver/inc/stm32f10x_exti.h \
+  /Users/kingnan/Documents/github/stm32/Libraries/STM32F10x_StdPeriph_Driver/inc/stm32f10x_flash.h \
+  /Users/kingnan/Documents/github/stm32/Libraries/STM32F10x_StdPeriph_Driver/inc/stm32f10x_fsmc.h \
+  /Users/kingnan/Documents/github/stm32/Libraries/STM32F10x_StdPeriph_Driver/inc/stm32f10x_gpio.h \
+  /Users/kingnan/Documents/github/stm32/Libraries/STM32F10x_StdPeriph_Driver/inc/stm32f10x_i2c.h \
+  /Users/kingnan/Documents/github/stm32/Libraries/STM32F10x_StdPeriph_Driver/inc/stm32f10x_iwdg.h \
+  /Users/kingnan/Documents/github/stm32/Libraries/STM32F10x_StdPeriph_Driver/inc/stm32f10x_pwr.h \
+  /Users/kingnan/Documents/github/stm32/Libraries/STM32F10x_StdPeriph_Driver/inc/stm32f10x_rcc.h \
+  /Users/kingnan/Documents/github/stm32/Libraries/STM32F10x_StdPeriph_Driver/inc/stm32f10x_rtc.h \
+  /Users/kingnan/Documents/github/stm32/Libraries/STM32F10x_StdPeriph_Driver/inc/stm32f10x_sdio.h \
+  /Users/kingnan/Documents/github/stm32/Libraries/STM32F10x_StdPeriph_Driver/inc/stm32f10x_spi.h \
+  /Users/kingnan/Documents/github/stm32/Libraries/STM32F10x_StdPeriph_Driver/inc/stm32f10x_tim.h \
+  /Users/kingnan/Documents/github/stm32/Libraries/STM32F10x_StdPeriph_Driver/inc/stm32f10x_usart.h \
+  /Users/kingnan/Documents/github/stm32/Libraries/STM32F10x_StdPeriph_Driver/inc/stm32f10x_wwdg.h \
+  /Users/kingnan/Documents/github/stm32/User/stm32f10x_conf.h \
+  /Users/kingnan/Documents/github/stm32/components/W25Q64/W25Q64_Ins.h \
+  /Users/kingnan/Documents/github/stm32/components/coustomSPI/coustomSPI.h
+
 CMakeFiles/stm32F103C8T6Project.elf.dir/components/countSensor/countSensor.c.obj: /Users/kingnan/Documents/github/stm32/components/countSensor/countSensor.c \
   /Applications/ArmGNUToolchain/13.2.Rel1/arm-none-eabi/arm-none-eabi/include/_newlib_version.h \
   /Applications/ArmGNUToolchain/13.2.Rel1/arm-none-eabi/arm-none-eabi/include/machine/_default_types.h \
@@ -1803,13 +1842,13 @@ CMakeFiles/stm32F103C8T6Project.elf.dir/system/syscalls/syscalls.c.obj: /Users/k
 
 /Users/kingnan/Documents/github/stm32/components/servo/servo.c:
 
-/Applications/ArmGNUToolchain/13.2.Rel1/arm-none-eabi/arm-none-eabi/include/machine/ieeefp.h:
-
-/Users/kingnan/Documents/github/stm32/components/delay/delay.c:
+/Users/kingnan/Documents/github/stm32/components/oled/OLED.c:
 
 /Applications/ArmGNUToolchain/13.2.Rel1/arm-none-eabi/arm-none-eabi/include/errno.h:
 
 /Users/kingnan/Documents/github/stm32/components/coustomSPI/coustomSPI.c:
+
+/Users/kingnan/Documents/github/stm32/components/W25Q64/W25Q64_Ins.h:
 
 /Applications/ArmGNUToolchain/13.2.Rel1/arm-none-eabi/arm-none-eabi/include/sys/reent.h:
 
@@ -1841,10 +1880,6 @@ CMakeFiles/stm32F103C8T6Project.elf.dir/system/syscalls/syscalls.c.obj: /Users/k
 
 /Users/kingnan/Documents/github/stm32/components/DCMotor/DCMotor.c:
 
-/Users/kingnan/Documents/github/stm32/Libraries/STM32F10x_StdPeriph_Driver/inc/stm32f10x_wwdg.h:
-
-/Users/kingnan/Documents/github/stm32/components/customI2C/customI2C.c:
-
 /Users/kingnan/Documents/github/stm32/User/stm32f10x_it.c:
 
 /Applications/ArmGNUToolchain/13.2.Rel1/arm-none-eabi/arm-none-eabi/include/time.h:
@@ -1856,6 +1891,8 @@ CMakeFiles/stm32F103C8T6Project.elf.dir/system/syscalls/syscalls.c.obj: /Users/k
 /Users/kingnan/Documents/github/stm32/User/stm32f10x_it.h:
 
 /Users/kingnan/Documents/github/stm32/components/oled/OLED.h:
+
+/Users/kingnan/Documents/github/stm32/components/W25Q64/W25Q64.h:
 
 /Users/kingnan/Documents/github/stm32/components/ADC_DMA/ADC_DMA.c:
 
@@ -1874,12 +1911,6 @@ CMakeFiles/stm32F103C8T6Project.elf.dir/system/syscalls/syscalls.c.obj: /Users/k
 /Applications/ArmGNUToolchain/13.2.Rel1/arm-none-eabi/arm-none-eabi/include/sys/lock.h:
 
 /Users/kingnan/Documents/github/stm32/Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_pwr.c:
-
-/Users/kingnan/Documents/github/stm32/Libraries/STM32F10x_StdPeriph_Driver/inc/stm32f10x_bkp.h:
-
-/Applications/ArmGNUToolchain/13.2.Rel1/arm-none-eabi/arm-none-eabi/include/_newlib_version.h:
-
-/Users/kingnan/Documents/github/stm32/components/key/key.c:
 
 /Users/kingnan/Documents/github/stm32/Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_i2c.c:
 
@@ -1905,6 +1936,8 @@ CMakeFiles/stm32F103C8T6Project.elf.dir/system/syscalls/syscalls.c.obj: /Users/k
 
 /Users/kingnan/Documents/github/stm32/components/countSensor/countSensor.c:
 
+/Users/kingnan/Documents/github/stm32/components/W25Q64/W25Q64.c:
+
 /Applications/ArmGNUToolchain/13.2.Rel1/arm-none-eabi/arm-none-eabi/include/newlib.h:
 
 /Applications/ArmGNUToolchain/13.2.Rel1/arm-none-eabi/arm-none-eabi/include/sys/times.h:
@@ -1917,13 +1950,17 @@ CMakeFiles/stm32F103C8T6Project.elf.dir/system/syscalls/syscalls.c.obj: /Users/k
 
 /Users/kingnan/Documents/github/stm32/Libraries/STM32F10x_StdPeriph_Driver/src/misc.c:
 
+/Users/kingnan/Documents/github/stm32/components/coustomSPI/coustomSPI.h:
+
 /Users/kingnan/Documents/github/stm32/components/MPU6050/MPU6050.c:
+
+/Users/kingnan/Documents/github/stm32/components/customI2C/customI2C.c:
+
+/Users/kingnan/Documents/github/stm32/Libraries/STM32F10x_StdPeriph_Driver/inc/stm32f10x_wwdg.h:
 
 /Users/kingnan/Documents/github/stm32/components/customDMA/customDMA.c:
 
 /Users/kingnan/Documents/github/stm32/Libraries/STM32F10x_StdPeriph_Driver/inc/stm32f10x_usart.h:
-
-/Users/kingnan/Documents/github/stm32/components/oled/OLED.c:
 
 /Users/kingnan/Documents/github/stm32/components/Encode/Encode.c:
 
@@ -1941,6 +1978,12 @@ CMakeFiles/stm32F103C8T6Project.elf.dir/system/syscalls/syscalls.c.obj: /Users/k
 
 /Users/kingnan/Documents/github/stm32/Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_iwdg.c:
 
+/Users/kingnan/Documents/github/stm32/components/key/key.c:
+
+/Users/kingnan/Documents/github/stm32/Libraries/STM32F10x_StdPeriph_Driver/inc/stm32f10x_bkp.h:
+
+/Applications/ArmGNUToolchain/13.2.Rel1/arm-none-eabi/arm-none-eabi/include/_newlib_version.h:
+
 /Users/kingnan/Documents/github/stm32/Libraries/STM32F10x_StdPeriph_Driver/inc/stm32f10x_iwdg.h:
 
 /Users/kingnan/Documents/github/stm32/User/main.c:
@@ -1948,6 +1991,10 @@ CMakeFiles/stm32F103C8T6Project.elf.dir/system/syscalls/syscalls.c.obj: /Users/k
 /Users/kingnan/Documents/github/stm32/Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_cec.c:
 
 /Users/kingnan/Documents/github/stm32/Libraries/STM32F10x_StdPeriph_Driver/inc/stm32f10x_rcc.h:
+
+/Users/kingnan/Documents/github/stm32/components/delay/delay.c:
+
+/Applications/ArmGNUToolchain/13.2.Rel1/arm-none-eabi/arm-none-eabi/include/machine/ieeefp.h:
 
 /Applications/ArmGNUToolchain/13.2.Rel1/arm-none-eabi/lib/gcc/arm-none-eabi/13.2.1/include/stddef.h:
 

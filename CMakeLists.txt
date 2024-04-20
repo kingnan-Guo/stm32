@@ -87,6 +87,7 @@ include_directories(
         components/customI2C
         components/MPU6050
         components/coustomSPI
+        components/W25Q64
 )
 
 

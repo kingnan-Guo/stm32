@@ -75,6 +75,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/stm32F103C8T6Project.elf.dir/components/Serial_package/Serial_package.c.obj.d"
   "CMakeFiles/stm32F103C8T6Project.elf.dir/components/Timer/Timer.c.obj"
   "CMakeFiles/stm32F103C8T6Project.elf.dir/components/Timer/Timer.c.obj.d"
+  "CMakeFiles/stm32F103C8T6Project.elf.dir/components/W25Q64/W25Q64.c.obj"
+  "CMakeFiles/stm32F103C8T6Project.elf.dir/components/W25Q64/W25Q64.c.obj.d"
   "CMakeFiles/stm32F103C8T6Project.elf.dir/components/countSensor/countSensor.c.obj"
   "CMakeFiles/stm32F103C8T6Project.elf.dir/components/countSensor/countSensor.c.obj.d"
   "CMakeFiles/stm32F103C8T6Project.elf.dir/components/coustomSPI/coustomSPI.c.obj"
