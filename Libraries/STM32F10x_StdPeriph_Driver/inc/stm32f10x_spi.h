@@ -124,7 +124,7 @@ typedef struct
   * @{
   */
   
-#define SPI_Direction_2Lines_FullDuplex ((uint16_t)0x0000)
+#define SPI_Direction_2Lines_FullDuplex ((uint16_t)0x0000)  // 标准模式 双线全双工
 #define SPI_Direction_2Lines_RxOnly     ((uint16_t)0x0400)
 #define SPI_Direction_1Line_Rx          ((uint16_t)0x8000)
 #define SPI_Direction_1Line_Tx          ((uint16_t)0xC000)
@@ -442,29 +442,29 @@ typedef struct
   * @{
   */
 
-void SPI_I2S_DeInit(SPI_TypeDef* SPIx);
-void SPI_Init(SPI_TypeDef* SPIx, SPI_InitTypeDef* SPI_InitStruct);
-void I2S_Init(SPI_TypeDef* SPIx, I2S_InitTypeDef* I2S_InitStruct);
-void SPI_StructInit(SPI_InitTypeDef* SPI_InitStruct);
-void I2S_StructInit(I2S_InitTypeDef* I2S_InitStruct);
-void SPI_Cmd(SPI_TypeDef* SPIx, FunctionalState NewState);
+void SPI_I2S_DeInit(SPI_TypeDef* SPIx);// 恢复缺省配置
+void SPI_Init(SPI_TypeDef* SPIx, SPI_InitTypeDef* SPI_InitStruct);// 初始化
+void I2S_Init(SPI_TypeDef* SPIx, I2S_InitTypeDef* I2S_InitStruct);// I2S 初始化
+void SPI_StructInit(SPI_InitTypeDef* SPI_InitStruct);//SPI 结构体初始化
+void I2S_StructInit(I2S_InitTypeDef* I2S_InitStruct);//I2S 结构体初始化
+void SPI_Cmd(SPI_TypeDef* SPIx, FunctionalState NewState);//SPI 使能
 void I2S_Cmd(SPI_TypeDef* SPIx, FunctionalState NewState);
-void SPI_I2S_ITConfig(SPI_TypeDef* SPIx, uint8_t SPI_I2S_IT, FunctionalState NewState);
-void SPI_I2S_DMACmd(SPI_TypeDef* SPIx, uint16_t SPI_I2S_DMAReq, FunctionalState NewState);
-void SPI_I2S_SendData(SPI_TypeDef* SPIx, uint16_t Data);
-uint16_t SPI_I2S_ReceiveData(SPI_TypeDef* SPIx);
-void SPI_NSSInternalSoftwareConfig(SPI_TypeDef* SPIx, uint16_t SPI_NSSInternalSoft);
+void SPI_I2S_ITConfig(SPI_TypeDef* SPIx, uint8_t SPI_I2S_IT, FunctionalState NewState);//SPI 中断使能
+void SPI_I2S_DMACmd(SPI_TypeDef* SPIx, uint16_t SPI_I2S_DMAReq, FunctionalState NewState);//SPI DMA使能
+void SPI_I2S_SendData(SPI_TypeDef* SPIx, uint16_t Data);//SPI 写DR 寄存器； 发送的数据 到 TDR
+uint16_t SPI_I2S_ReceiveData(SPI_TypeDef* SPIx);//SPI 读DR寄存器 读取 RDR； 返回值是 接收数据的 DRD
+void SPI_NSSInternalSoftwareConfig(SPI_TypeDef* SPIx, uint16_t SPI_NSSInternalSoft);//SPI NSS  引脚的配置
 void SPI_SSOutputCmd(SPI_TypeDef* SPIx, FunctionalState NewState);
-void SPI_DataSizeConfig(SPI_TypeDef* SPIx, uint16_t SPI_DataSize);
-void SPI_TransmitCRC(SPI_TypeDef* SPIx);
-void SPI_CalculateCRC(SPI_TypeDef* SPIx, FunctionalState NewState);
-uint16_t SPI_GetCRC(SPI_TypeDef* SPIx, uint8_t SPI_CRC);
-uint16_t SPI_GetCRCPolynomial(SPI_TypeDef* SPIx);
-void SPI_BiDirectionalLineConfig(SPI_TypeDef* SPIx, uint16_t SPI_Direction);
-FlagStatus SPI_I2S_GetFlagStatus(SPI_TypeDef* SPIx, uint16_t SPI_I2S_FLAG);
-void SPI_I2S_ClearFlag(SPI_TypeDef* SPIx, uint16_t SPI_I2S_FLAG);
-ITStatus SPI_I2S_GetITStatus(SPI_TypeDef* SPIx, uint8_t SPI_I2S_IT);
-void SPI_I2S_ClearITPendingBit(SPI_TypeDef* SPIx, uint8_t SPI_I2S_IT);
+void SPI_DataSizeConfig(SPI_TypeDef* SPIx, uint16_t SPI_DataSize);//SPI 8 位或 16 位数据帧的配置
+void SPI_TransmitCRC(SPI_TypeDef* SPIx);//SPI CRC 校验配置
+void SPI_CalculateCRC(SPI_TypeDef* SPIx, FunctionalState NewState);//SPI CRC 校验配置
+uint16_t SPI_GetCRC(SPI_TypeDef* SPIx, uint8_t SPI_CRC);//SPI CRC 校验配置
+uint16_t SPI_GetCRCPolynomial(SPI_TypeDef* SPIx);//SPI CRC 校验配置
+void SPI_BiDirectionalLineConfig(SPI_TypeDef* SPIx, uint16_t SPI_Direction);//SPI 半双工时，双向线的方向配置
+FlagStatus SPI_I2S_GetFlagStatus(SPI_TypeDef* SPIx, uint16_t SPI_I2S_FLAG);//SPI 获取标志位      获取 TXE 和 RXNE标志位的状态；再配合写DR 读DR的函数 ，控制 时序 的产生
+void SPI_I2S_ClearFlag(SPI_TypeDef* SPIx, uint16_t SPI_I2S_FLAG);//SPI  清除 标志位
+ITStatus SPI_I2S_GetITStatus(SPI_TypeDef* SPIx, uint8_t SPI_I2S_IT);//SPI  获取中断标志位
+void SPI_I2S_ClearITPendingBit(SPI_TypeDef* SPIx, uint8_t SPI_I2S_IT);//SPI  清除 中断 标志位
 
 #ifdef __cplusplus
 }

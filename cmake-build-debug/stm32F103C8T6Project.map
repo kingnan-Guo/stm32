@@ -793,6 +793,8 @@ Discarded input sections
                 0x00000000       0x14 CMakeFiles/stm32F103C8T6Project.elf.dir/Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_gpio.c.obj
  .text.GPIO_StructInit
                 0x00000000       0x10 CMakeFiles/stm32F103C8T6Project.elf.dir/Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_gpio.c.obj
+ .text.GPIO_ReadInputDataBit
+                0x00000000        0xe CMakeFiles/stm32F103C8T6Project.elf.dir/Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_gpio.c.obj
  .text.GPIO_ReadInputData
                 0x00000000        0x6 CMakeFiles/stm32F103C8T6Project.elf.dir/Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_gpio.c.obj
  .text.GPIO_ReadOutputDataBit
@@ -1159,24 +1161,17 @@ Discarded input sections
  .bss           0x00000000        0x0 CMakeFiles/stm32F103C8T6Project.elf.dir/Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_spi.c.obj
  .text.SPI_I2S_DeInit
                 0x00000000       0x64 CMakeFiles/stm32F103C8T6Project.elf.dir/Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_spi.c.obj
- .text.SPI_Init
-                0x00000000       0x4e CMakeFiles/stm32F103C8T6Project.elf.dir/Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_spi.c.obj
  .text.I2S_Init
                 0x00000000       0xb8 CMakeFiles/stm32F103C8T6Project.elf.dir/Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_spi.c.obj
  .text.SPI_StructInit
                 0x00000000       0x18 CMakeFiles/stm32F103C8T6Project.elf.dir/Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_spi.c.obj
  .text.I2S_StructInit
                 0x00000000       0x12 CMakeFiles/stm32F103C8T6Project.elf.dir/Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_spi.c.obj
- .text.SPI_Cmd  0x00000000       0x1c CMakeFiles/stm32F103C8T6Project.elf.dir/Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_spi.c.obj
  .text.I2S_Cmd  0x00000000       0x1c CMakeFiles/stm32F103C8T6Project.elf.dir/Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_spi.c.obj
  .text.SPI_I2S_ITConfig
                 0x00000000       0x20 CMakeFiles/stm32F103C8T6Project.elf.dir/Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_spi.c.obj
  .text.SPI_I2S_DMACmd
                 0x00000000       0x18 CMakeFiles/stm32F103C8T6Project.elf.dir/Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_spi.c.obj
- .text.SPI_I2S_SendData
-                0x00000000        0x4 CMakeFiles/stm32F103C8T6Project.elf.dir/Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_spi.c.obj
- .text.SPI_I2S_ReceiveData
-                0x00000000        0x6 CMakeFiles/stm32F103C8T6Project.elf.dir/Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_spi.c.obj
  .text.SPI_NSSInternalSoftwareConfig
                 0x00000000       0x22 CMakeFiles/stm32F103C8T6Project.elf.dir/Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_spi.c.obj
  .text.SPI_SSOutputCmd
@@ -1193,28 +1188,12 @@ Discarded input sections
                 0x00000000        0x6 CMakeFiles/stm32F103C8T6Project.elf.dir/Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_spi.c.obj
  .text.SPI_BiDirectionalLineConfig
                 0x00000000       0x20 CMakeFiles/stm32F103C8T6Project.elf.dir/Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_spi.c.obj
- .text.SPI_I2S_GetFlagStatus
-                0x00000000        0xe CMakeFiles/stm32F103C8T6Project.elf.dir/Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_spi.c.obj
  .text.SPI_I2S_ClearFlag
                 0x00000000        0x8 CMakeFiles/stm32F103C8T6Project.elf.dir/Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_spi.c.obj
  .text.SPI_I2S_GetITStatus
                 0x00000000       0x2c CMakeFiles/stm32F103C8T6Project.elf.dir/Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_spi.c.obj
  .text.SPI_I2S_ClearITPendingBit
                 0x00000000       0x12 CMakeFiles/stm32F103C8T6Project.elf.dir/Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_spi.c.obj
- .debug_info    0x00000000      0xa23 CMakeFiles/stm32F103C8T6Project.elf.dir/Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_spi.c.obj
- .debug_abbrev  0x00000000      0x222 CMakeFiles/stm32F103C8T6Project.elf.dir/Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_spi.c.obj
- .debug_loclists
-                0x00000000      0x507 CMakeFiles/stm32F103C8T6Project.elf.dir/Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_spi.c.obj
- .debug_aranges
-                0x00000000       0xd0 CMakeFiles/stm32F103C8T6Project.elf.dir/Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_spi.c.obj
- .debug_rnglists
-                0x00000000       0x98 CMakeFiles/stm32F103C8T6Project.elf.dir/Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_spi.c.obj
- .debug_line    0x00000000      0x7f1 CMakeFiles/stm32F103C8T6Project.elf.dir/Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_spi.c.obj
- .debug_str     0x00000000      0x6b1 CMakeFiles/stm32F103C8T6Project.elf.dir/Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_spi.c.obj
- .comment       0x00000000       0x45 CMakeFiles/stm32F103C8T6Project.elf.dir/Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_spi.c.obj
- .debug_frame   0x00000000      0x1b0 CMakeFiles/stm32F103C8T6Project.elf.dir/Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_spi.c.obj
- .ARM.attributes
-                0x00000000       0x2d CMakeFiles/stm32F103C8T6Project.elf.dir/Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_spi.c.obj
  .text          0x00000000        0x0 CMakeFiles/stm32F103C8T6Project.elf.dir/Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_tim.c.obj
  .data          0x00000000        0x0 CMakeFiles/stm32F103C8T6Project.elf.dir/Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_tim.c.obj
  .bss           0x00000000        0x0 CMakeFiles/stm32F103C8T6Project.elf.dir/Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_tim.c.obj
@@ -1778,8 +1757,6 @@ Discarded input sections
  .text          0x00000000        0x0 CMakeFiles/stm32F103C8T6Project.elf.dir/components/coustomSPI/coustomSPI.c.obj
  .data          0x00000000        0x0 CMakeFiles/stm32F103C8T6Project.elf.dir/components/coustomSPI/coustomSPI.c.obj
  .bss           0x00000000        0x0 CMakeFiles/stm32F103C8T6Project.elf.dir/components/coustomSPI/coustomSPI.c.obj
- .text.customSPI_SwapByte_2
-                0x00000000       0x3a CMakeFiles/stm32F103C8T6Project.elf.dir/components/coustomSPI/coustomSPI.c.obj
  .text          0x00000000        0x0 CMakeFiles/stm32F103C8T6Project.elf.dir/components/customDMA/customDMA.c.obj
  .data          0x00000000        0x0 CMakeFiles/stm32F103C8T6Project.elf.dir/components/customDMA/customDMA.c.obj
  .bss           0x00000000        0x0 CMakeFiles/stm32F103C8T6Project.elf.dir/components/customDMA/customDMA.c.obj
@@ -2913,7 +2890,7 @@ LOAD /Applications/ArmGNUToolchain/13.2.Rel1/arm-none-eabi/bin/../lib/gcc/arm-no
                 0x08000000                g_pfnVectors
                 0x0800010c                        . = ALIGN (0x4)
 
-.text           0x0800010c      0xb98
+.text           0x0800010c      0xc28
                 0x0800010c                        . = ALIGN (0x4)
  *(.text)
  *(.text*)
@@ -2941,294 +2918,295 @@ LOAD /Applications/ArmGNUToolchain/13.2.Rel1/arm-none-eabi/bin/../lib/gcc/arm-no
  .text.GPIO_Init
                 0x080002e0       0xb0 CMakeFiles/stm32F103C8T6Project.elf.dir/Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_gpio.c.obj
                 0x080002e0                GPIO_Init
- .text.GPIO_ReadInputDataBit
-                0x08000390        0xe CMakeFiles/stm32F103C8T6Project.elf.dir/Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_gpio.c.obj
-                0x08000390                GPIO_ReadInputDataBit
  .text.GPIO_WriteBit
-                0x0800039e        0xa CMakeFiles/stm32F103C8T6Project.elf.dir/Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_gpio.c.obj
-                0x0800039e                GPIO_WriteBit
+                0x08000390        0xa CMakeFiles/stm32F103C8T6Project.elf.dir/Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_gpio.c.obj
+                0x08000390                GPIO_WriteBit
+ *fill*         0x0800039a        0x2 
  .text.RCC_APB2PeriphClockCmd
-                0x080003a8       0x1c CMakeFiles/stm32F103C8T6Project.elf.dir/Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_rcc.c.obj
-                0x080003a8                RCC_APB2PeriphClockCmd
+                0x0800039c       0x1c CMakeFiles/stm32F103C8T6Project.elf.dir/Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_rcc.c.obj
+                0x0800039c                RCC_APB2PeriphClockCmd
+ .text.SPI_Init
+                0x080003b8       0x4e CMakeFiles/stm32F103C8T6Project.elf.dir/Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_spi.c.obj
+                0x080003b8                SPI_Init
+ .text.SPI_Cmd  0x08000406       0x1c CMakeFiles/stm32F103C8T6Project.elf.dir/Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_spi.c.obj
+                0x08000406                SPI_Cmd
+ .text.SPI_I2S_SendData
+                0x08000422        0x4 CMakeFiles/stm32F103C8T6Project.elf.dir/Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_spi.c.obj
+                0x08000422                SPI_I2S_SendData
+ .text.SPI_I2S_ReceiveData
+                0x08000426        0x6 CMakeFiles/stm32F103C8T6Project.elf.dir/Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_spi.c.obj
+                0x08000426                SPI_I2S_ReceiveData
+ .text.SPI_I2S_GetFlagStatus
+                0x0800042c        0xe CMakeFiles/stm32F103C8T6Project.elf.dir/Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_spi.c.obj
+                0x0800042c                SPI_I2S_GetFlagStatus
  .text.USART_ReceiveData
-                0x080003c4        0x8 CMakeFiles/stm32F103C8T6Project.elf.dir/Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_usart.c.obj
-                0x080003c4                USART_ReceiveData
+                0x0800043a        0x8 CMakeFiles/stm32F103C8T6Project.elf.dir/Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_usart.c.obj
+                0x0800043a                USART_ReceiveData
  .text.USART_GetFlagStatus
-                0x080003cc        0xe CMakeFiles/stm32F103C8T6Project.elf.dir/Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_usart.c.obj
-                0x080003cc                USART_GetFlagStatus
+                0x08000442        0xe CMakeFiles/stm32F103C8T6Project.elf.dir/Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_usart.c.obj
+                0x08000442                USART_GetFlagStatus
  .text.USART_ClearITPendingBit
-                0x080003da       0x10 CMakeFiles/stm32F103C8T6Project.elf.dir/Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_usart.c.obj
-                0x080003da                USART_ClearITPendingBit
- *fill*         0x080003ea        0x2 
- .text.main     0x080003ec       0xf8 CMakeFiles/stm32F103C8T6Project.elf.dir/User/main.c.obj
-                0x080003ec                main
+                0x08000450       0x10 CMakeFiles/stm32F103C8T6Project.elf.dir/Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_usart.c.obj
+                0x08000450                USART_ClearITPendingBit
+ .text.main     0x08000460       0xf8 CMakeFiles/stm32F103C8T6Project.elf.dir/User/main.c.obj
+                0x08000460                main
  .text.NMI_Handler
-                0x080004e4        0x2 CMakeFiles/stm32F103C8T6Project.elf.dir/User/stm32f10x_it.c.obj
-                0x080004e4                NMI_Handler
+                0x08000558        0x2 CMakeFiles/stm32F103C8T6Project.elf.dir/User/stm32f10x_it.c.obj
+                0x08000558                NMI_Handler
  .text.HardFault_Handler
-                0x080004e6        0x2 CMakeFiles/stm32F103C8T6Project.elf.dir/User/stm32f10x_it.c.obj
-                0x080004e6                HardFault_Handler
+                0x0800055a        0x2 CMakeFiles/stm32F103C8T6Project.elf.dir/User/stm32f10x_it.c.obj
+                0x0800055a                HardFault_Handler
  .text.MemManage_Handler
-                0x080004e8        0x2 CMakeFiles/stm32F103C8T6Project.elf.dir/User/stm32f10x_it.c.obj
-                0x080004e8                MemManage_Handler
+                0x0800055c        0x2 CMakeFiles/stm32F103C8T6Project.elf.dir/User/stm32f10x_it.c.obj
+                0x0800055c                MemManage_Handler
  .text.BusFault_Handler
-                0x080004ea        0x2 CMakeFiles/stm32F103C8T6Project.elf.dir/User/stm32f10x_it.c.obj
-                0x080004ea                BusFault_Handler
+                0x0800055e        0x2 CMakeFiles/stm32F103C8T6Project.elf.dir/User/stm32f10x_it.c.obj
+                0x0800055e                BusFault_Handler
  .text.UsageFault_Handler
-                0x080004ec        0x2 CMakeFiles/stm32F103C8T6Project.elf.dir/User/stm32f10x_it.c.obj
-                0x080004ec                UsageFault_Handler
+                0x08000560        0x2 CMakeFiles/stm32F103C8T6Project.elf.dir/User/stm32f10x_it.c.obj
+                0x08000560                UsageFault_Handler
  .text.SVC_Handler
-                0x080004ee        0x2 CMakeFiles/stm32F103C8T6Project.elf.dir/User/stm32f10x_it.c.obj
-                0x080004ee                SVC_Handler
+                0x08000562        0x2 CMakeFiles/stm32F103C8T6Project.elf.dir/User/stm32f10x_it.c.obj
+                0x08000562                SVC_Handler
  .text.DebugMon_Handler
-                0x080004f0        0x2 CMakeFiles/stm32F103C8T6Project.elf.dir/User/stm32f10x_it.c.obj
-                0x080004f0                DebugMon_Handler
+                0x08000564        0x2 CMakeFiles/stm32F103C8T6Project.elf.dir/User/stm32f10x_it.c.obj
+                0x08000564                DebugMon_Handler
  .text.PendSV_Handler
-                0x080004f2        0x2 CMakeFiles/stm32F103C8T6Project.elf.dir/User/stm32f10x_it.c.obj
-                0x080004f2                PendSV_Handler
+                0x08000566        0x2 CMakeFiles/stm32F103C8T6Project.elf.dir/User/stm32f10x_it.c.obj
+                0x08000566                PendSV_Handler
  .text.SysTick_Handler
-                0x080004f4        0x2 CMakeFiles/stm32F103C8T6Project.elf.dir/User/stm32f10x_it.c.obj
-                0x080004f4                SysTick_Handler
- *fill*         0x080004f6        0x2 
+                0x08000568        0x2 CMakeFiles/stm32F103C8T6Project.elf.dir/User/stm32f10x_it.c.obj
+                0x08000568                SysTick_Handler
+ *fill*         0x0800056a        0x2 
  .text.USART1_IRQHandler
-                0x080004f8       0x94 CMakeFiles/stm32F103C8T6Project.elf.dir/components/Serial_package/Serial_package.c.obj
-                0x080004f8                USART1_IRQHandler
+                0x0800056c       0x94 CMakeFiles/stm32F103C8T6Project.elf.dir/components/Serial_package/Serial_package.c.obj
+                0x0800056c                USART1_IRQHandler
  .text.W25Q64_Init
-                0x0800058c        0x8 CMakeFiles/stm32F103C8T6Project.elf.dir/components/W25Q64/W25Q64.c.obj
-                0x0800058c                W25Q64_Init
+                0x08000600        0x8 CMakeFiles/stm32F103C8T6Project.elf.dir/components/W25Q64/W25Q64.c.obj
+                0x08000600                W25Q64_Init
  .text.W25Q64_ReadID
-                0x08000594       0x36 CMakeFiles/stm32F103C8T6Project.elf.dir/components/W25Q64/W25Q64.c.obj
-                0x08000594                W25Q64_ReadID
+                0x08000608       0x36 CMakeFiles/stm32F103C8T6Project.elf.dir/components/W25Q64/W25Q64.c.obj
+                0x08000608                W25Q64_ReadID
  .text.W25Q64_WriteEnable
-                0x080005ca       0x12 CMakeFiles/stm32F103C8T6Project.elf.dir/components/W25Q64/W25Q64.c.obj
-                0x080005ca                W25Q64_WriteEnable
+                0x0800063e       0x12 CMakeFiles/stm32F103C8T6Project.elf.dir/components/W25Q64/W25Q64.c.obj
+                0x0800063e                W25Q64_WriteEnable
  .text.W25Q64_WaitBusy
-                0x080005dc       0x26 CMakeFiles/stm32F103C8T6Project.elf.dir/components/W25Q64/W25Q64.c.obj
-                0x080005dc                W25Q64_WaitBusy
+                0x08000650       0x26 CMakeFiles/stm32F103C8T6Project.elf.dir/components/W25Q64/W25Q64.c.obj
+                0x08000650                W25Q64_WaitBusy
  .text.W25Q64_PageProgram
-                0x08000602       0x48 CMakeFiles/stm32F103C8T6Project.elf.dir/components/W25Q64/W25Q64.c.obj
-                0x08000602                W25Q64_PageProgram
+                0x08000676       0x48 CMakeFiles/stm32F103C8T6Project.elf.dir/components/W25Q64/W25Q64.c.obj
+                0x08000676                W25Q64_PageProgram
  .text.W25Q64_SectirErase
-                0x0800064a       0x32 CMakeFiles/stm32F103C8T6Project.elf.dir/components/W25Q64/W25Q64.c.obj
-                0x0800064a                W25Q64_SectirErase
+                0x080006be       0x32 CMakeFiles/stm32F103C8T6Project.elf.dir/components/W25Q64/W25Q64.c.obj
+                0x080006be                W25Q64_SectirErase
  .text.W25Q64_ReadData
-                0x0800067c       0x40 CMakeFiles/stm32F103C8T6Project.elf.dir/components/W25Q64/W25Q64.c.obj
-                0x0800067c                W25Q64_ReadData
+                0x080006f0       0x40 CMakeFiles/stm32F103C8T6Project.elf.dir/components/W25Q64/W25Q64.c.obj
+                0x080006f0                W25Q64_ReadData
  .text.EXTI15_10_IRQHandler
-                0x080006bc       0x28 CMakeFiles/stm32F103C8T6Project.elf.dir/components/countSensor/countSensor.c.obj
-                0x080006bc                EXTI15_10_IRQHandler
+                0x08000730       0x28 CMakeFiles/stm32F103C8T6Project.elf.dir/components/countSensor/countSensor.c.obj
+                0x08000730                EXTI15_10_IRQHandler
  .text.customSPI_W_SS
-                0x080006e4       0x14 CMakeFiles/stm32F103C8T6Project.elf.dir/components/coustomSPI/coustomSPI.c.obj
-                0x080006e4                customSPI_W_SS
- .text.customSPI_W_MISO
-                0x080006f8       0x14 CMakeFiles/stm32F103C8T6Project.elf.dir/components/coustomSPI/coustomSPI.c.obj
-                0x080006f8                customSPI_W_MISO
- .text.customSPI_W_SCK
-                0x0800070c       0x14 CMakeFiles/stm32F103C8T6Project.elf.dir/components/coustomSPI/coustomSPI.c.obj
-                0x0800070c                customSPI_W_SCK
- .text.customSPI_R_MOSI
-                0x08000720       0x10 CMakeFiles/stm32F103C8T6Project.elf.dir/components/coustomSPI/coustomSPI.c.obj
-                0x08000720                customSPI_R_MOSI
+                0x08000758       0x14 CMakeFiles/stm32F103C8T6Project.elf.dir/components/coustomSPI/coustomSPI.c.obj
+                0x08000758                customSPI_W_SS
  .text.customSPI_Init
-                0x08000730       0x54 CMakeFiles/stm32F103C8T6Project.elf.dir/components/coustomSPI/coustomSPI.c.obj
-                0x08000730                customSPI_Init
+                0x0800076c       0xb4 CMakeFiles/stm32F103C8T6Project.elf.dir/components/coustomSPI/coustomSPI.c.obj
+                0x0800076c                customSPI_Init
  .text.customSPI_Start
-                0x08000784        0xa CMakeFiles/stm32F103C8T6Project.elf.dir/components/coustomSPI/coustomSPI.c.obj
-                0x08000784                customSPI_Start
+                0x08000820        0xa CMakeFiles/stm32F103C8T6Project.elf.dir/components/coustomSPI/coustomSPI.c.obj
+                0x08000820                customSPI_Start
  .text.customSPI_Stop
-                0x0800078e        0xa CMakeFiles/stm32F103C8T6Project.elf.dir/components/coustomSPI/coustomSPI.c.obj
-                0x0800078e                customSPI_Stop
+                0x0800082a        0xa CMakeFiles/stm32F103C8T6Project.elf.dir/components/coustomSPI/coustomSPI.c.obj
+                0x0800082a                customSPI_Stop
  .text.customSPI_SwapByte
-                0x08000798       0x3e CMakeFiles/stm32F103C8T6Project.elf.dir/components/coustomSPI/coustomSPI.c.obj
-                0x08000798                customSPI_SwapByte
- *fill*         0x080007d6        0x2 
+                0x08000834       0x34 CMakeFiles/stm32F103C8T6Project.elf.dir/components/coustomSPI/coustomSPI.c.obj
+                0x08000834                customSPI_SwapByte
  .text.OLED_I2C_Init
-                0x080007d8       0x58 CMakeFiles/stm32F103C8T6Project.elf.dir/components/oled/OLED.c.obj
-                0x080007d8                OLED_I2C_Init
+                0x08000868       0x58 CMakeFiles/stm32F103C8T6Project.elf.dir/components/oled/OLED.c.obj
+                0x08000868                OLED_I2C_Init
  .text.OLED_I2C_Start
-                0x08000830       0x3c CMakeFiles/stm32F103C8T6Project.elf.dir/components/oled/OLED.c.obj
-                0x08000830                OLED_I2C_Start
+                0x080008c0       0x3c CMakeFiles/stm32F103C8T6Project.elf.dir/components/oled/OLED.c.obj
+                0x080008c0                OLED_I2C_Start
  .text.OLED_I2C_Stop
-                0x0800086c       0x30 CMakeFiles/stm32F103C8T6Project.elf.dir/components/oled/OLED.c.obj
-                0x0800086c                OLED_I2C_Stop
+                0x080008fc       0x30 CMakeFiles/stm32F103C8T6Project.elf.dir/components/oled/OLED.c.obj
+                0x080008fc                OLED_I2C_Stop
  .text.OLED_I2C_SendByte
-                0x0800089c       0x5c CMakeFiles/stm32F103C8T6Project.elf.dir/components/oled/OLED.c.obj
-                0x0800089c                OLED_I2C_SendByte
+                0x0800092c       0x5c CMakeFiles/stm32F103C8T6Project.elf.dir/components/oled/OLED.c.obj
+                0x0800092c                OLED_I2C_SendByte
  .text.OLED_WriteCommand
-                0x080008f8       0x20 CMakeFiles/stm32F103C8T6Project.elf.dir/components/oled/OLED.c.obj
-                0x080008f8                OLED_WriteCommand
+                0x08000988       0x20 CMakeFiles/stm32F103C8T6Project.elf.dir/components/oled/OLED.c.obj
+                0x08000988                OLED_WriteCommand
  .text.OLED_WriteData
-                0x08000918       0x20 CMakeFiles/stm32F103C8T6Project.elf.dir/components/oled/OLED.c.obj
-                0x08000918                OLED_WriteData
+                0x080009a8       0x20 CMakeFiles/stm32F103C8T6Project.elf.dir/components/oled/OLED.c.obj
+                0x080009a8                OLED_WriteData
  .text.OLED_SetCursor
-                0x08000938       0x20 CMakeFiles/stm32F103C8T6Project.elf.dir/components/oled/OLED.c.obj
-                0x08000938                OLED_SetCursor
+                0x080009c8       0x20 CMakeFiles/stm32F103C8T6Project.elf.dir/components/oled/OLED.c.obj
+                0x080009c8                OLED_SetCursor
  .text.OLED_Clear
-                0x08000958       0x2c CMakeFiles/stm32F103C8T6Project.elf.dir/components/oled/OLED.c.obj
-                0x08000958                OLED_Clear
+                0x080009e8       0x2c CMakeFiles/stm32F103C8T6Project.elf.dir/components/oled/OLED.c.obj
+                0x080009e8                OLED_Clear
  .text.OLED_ShowChar
-                0x08000984       0x6c CMakeFiles/stm32F103C8T6Project.elf.dir/components/oled/OLED.c.obj
-                0x08000984                OLED_ShowChar
+                0x08000a14       0x6c CMakeFiles/stm32F103C8T6Project.elf.dir/components/oled/OLED.c.obj
+                0x08000a14                OLED_ShowChar
  .text.OLED_ShowString
-                0x080009f0       0x22 CMakeFiles/stm32F103C8T6Project.elf.dir/components/oled/OLED.c.obj
-                0x080009f0                OLED_ShowString
+                0x08000a80       0x22 CMakeFiles/stm32F103C8T6Project.elf.dir/components/oled/OLED.c.obj
+                0x08000a80                OLED_ShowString
  .text.OLED_Pow
-                0x08000a12       0x14 CMakeFiles/stm32F103C8T6Project.elf.dir/components/oled/OLED.c.obj
-                0x08000a12                OLED_Pow
+                0x08000aa2       0x14 CMakeFiles/stm32F103C8T6Project.elf.dir/components/oled/OLED.c.obj
+                0x08000aa2                OLED_Pow
  .text.OLED_ShowHexNum
-                0x08000a26       0x4c CMakeFiles/stm32F103C8T6Project.elf.dir/components/oled/OLED.c.obj
-                0x08000a26                OLED_ShowHexNum
+                0x08000ab6       0x4c CMakeFiles/stm32F103C8T6Project.elf.dir/components/oled/OLED.c.obj
+                0x08000ab6                OLED_ShowHexNum
  .text.OLED_Init
-                0x08000a72       0xae CMakeFiles/stm32F103C8T6Project.elf.dir/components/oled/OLED.c.obj
-                0x08000a72                OLED_Init
+                0x08000b02       0xae CMakeFiles/stm32F103C8T6Project.elf.dir/components/oled/OLED.c.obj
+                0x08000b02                OLED_Init
  .text.Reset_Handler
-                0x08000b20       0x48 CMakeFiles/stm32F103C8T6Project.elf.dir/startup/startup_stm32f103c8tx.s.obj
-                0x08000b20                Reset_Handler
+                0x08000bb0       0x48 CMakeFiles/stm32F103C8T6Project.elf.dir/startup/startup_stm32f103c8tx.s.obj
+                0x08000bb0                Reset_Handler
  .text.Default_Handler
-                0x08000b68        0x2 CMakeFiles/stm32F103C8T6Project.elf.dir/startup/startup_stm32f103c8tx.s.obj
-                0x08000b68                USBWakeUp_IRQHandler
-                0x08000b68                EXTI2_IRQHandler
-                0x08000b68                TIM1_CC_IRQHandler
-                0x08000b68                PVD_IRQHandler
-                0x08000b68                EXTI3_IRQHandler
-                0x08000b68                EXTI0_IRQHandler
-                0x08000b68                I2C2_EV_IRQHandler
-                0x08000b68                ADC1_2_IRQHandler
-                0x08000b68                SPI1_IRQHandler
-                0x08000b68                TAMPER_IRQHandler
-                0x08000b68                DMA1_Channel4_IRQHandler
-                0x08000b68                USART3_IRQHandler
-                0x08000b68                RTC_IRQHandler
-                0x08000b68                DMA1_Channel7_IRQHandler
-                0x08000b68                CAN1_RX1_IRQHandler
-                0x08000b68                TIM4_IRQHandler
-                0x08000b68                I2C1_EV_IRQHandler
-                0x08000b68                DMA1_Channel6_IRQHandler
-                0x08000b68                TIM3_IRQHandler
-                0x08000b68                RCC_IRQHandler
-                0x08000b68                TIM1_TRG_COM_IRQHandler
-                0x08000b68                DMA1_Channel1_IRQHandler
-                0x08000b68                Default_Handler
-                0x08000b68                EXTI9_5_IRQHandler
-                0x08000b68                SPI2_IRQHandler
-                0x08000b68                DMA1_Channel5_IRQHandler
-                0x08000b68                EXTI4_IRQHandler
-                0x08000b68                USB_LP_CAN1_RX0_IRQHandler
-                0x08000b68                USB_HP_CAN1_TX_IRQHandler
-                0x08000b68                DMA1_Channel3_IRQHandler
-                0x08000b68                TIM1_UP_IRQHandler
-                0x08000b68                WWDG_IRQHandler
-                0x08000b68                TIM2_IRQHandler
-                0x08000b68                TIM1_BRK_IRQHandler
-                0x08000b68                EXTI1_IRQHandler
-                0x08000b68                USART2_IRQHandler
-                0x08000b68                I2C2_ER_IRQHandler
-                0x08000b68                DMA1_Channel2_IRQHandler
-                0x08000b68                CAN1_SCE_IRQHandler
-                0x08000b68                FLASH_IRQHandler
-                0x08000b68                I2C1_ER_IRQHandler
-                0x08000b68                RTC_Alarm_IRQHandler
- *fill*         0x08000b6a        0x2 
+                0x08000bf8        0x2 CMakeFiles/stm32F103C8T6Project.elf.dir/startup/startup_stm32f103c8tx.s.obj
+                0x08000bf8                USBWakeUp_IRQHandler
+                0x08000bf8                EXTI2_IRQHandler
+                0x08000bf8                TIM1_CC_IRQHandler
+                0x08000bf8                PVD_IRQHandler
+                0x08000bf8                EXTI3_IRQHandler
+                0x08000bf8                EXTI0_IRQHandler
+                0x08000bf8                I2C2_EV_IRQHandler
+                0x08000bf8                ADC1_2_IRQHandler
+                0x08000bf8                SPI1_IRQHandler
+                0x08000bf8                TAMPER_IRQHandler
+                0x08000bf8                DMA1_Channel4_IRQHandler
+                0x08000bf8                USART3_IRQHandler
+                0x08000bf8                RTC_IRQHandler
+                0x08000bf8                DMA1_Channel7_IRQHandler
+                0x08000bf8                CAN1_RX1_IRQHandler
+                0x08000bf8                TIM4_IRQHandler
+                0x08000bf8                I2C1_EV_IRQHandler
+                0x08000bf8                DMA1_Channel6_IRQHandler
+                0x08000bf8                TIM3_IRQHandler
+                0x08000bf8                RCC_IRQHandler
+                0x08000bf8                TIM1_TRG_COM_IRQHandler
+                0x08000bf8                DMA1_Channel1_IRQHandler
+                0x08000bf8                Default_Handler
+                0x08000bf8                EXTI9_5_IRQHandler
+                0x08000bf8                SPI2_IRQHandler
+                0x08000bf8                DMA1_Channel5_IRQHandler
+                0x08000bf8                EXTI4_IRQHandler
+                0x08000bf8                USB_LP_CAN1_RX0_IRQHandler
+                0x08000bf8                USB_HP_CAN1_TX_IRQHandler
+                0x08000bf8                DMA1_Channel3_IRQHandler
+                0x08000bf8                TIM1_UP_IRQHandler
+                0x08000bf8                WWDG_IRQHandler
+                0x08000bf8                TIM2_IRQHandler
+                0x08000bf8                TIM1_BRK_IRQHandler
+                0x08000bf8                EXTI1_IRQHandler
+                0x08000bf8                USART2_IRQHandler
+                0x08000bf8                I2C2_ER_IRQHandler
+                0x08000bf8                DMA1_Channel2_IRQHandler
+                0x08000bf8                CAN1_SCE_IRQHandler
+                0x08000bf8                FLASH_IRQHandler
+                0x08000bf8                I2C1_ER_IRQHandler
+                0x08000bf8                RTC_Alarm_IRQHandler
+ *fill*         0x08000bfa        0x2 
  .text.__libc_init_array
-                0x08000b6c       0x50 /Applications/ArmGNUToolchain/13.2.Rel1/arm-none-eabi/bin/../lib/gcc/arm-none-eabi/13.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libg.a(libc_a-init.o)
-                0x08000b6c                __libc_init_array
+                0x08000bfc       0x50 /Applications/ArmGNUToolchain/13.2.Rel1/arm-none-eabi/bin/../lib/gcc/arm-none-eabi/13.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libg.a(libc_a-init.o)
+                0x08000bfc                __libc_init_array
  .text.__retarget_lock_acquire_recursive
-                0x08000bbc        0x4 /Applications/ArmGNUToolchain/13.2.Rel1/arm-none-eabi/bin/../lib/gcc/arm-none-eabi/13.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libg.a(libc_a-lock.o)
-                0x08000bbc                __retarget_lock_acquire_recursive
+                0x08000c4c        0x4 /Applications/ArmGNUToolchain/13.2.Rel1/arm-none-eabi/bin/../lib/gcc/arm-none-eabi/13.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libg.a(libc_a-lock.o)
+                0x08000c4c                __retarget_lock_acquire_recursive
  .text.__retarget_lock_release_recursive
-                0x08000bc0        0x4 /Applications/ArmGNUToolchain/13.2.Rel1/arm-none-eabi/bin/../lib/gcc/arm-none-eabi/13.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libg.a(libc_a-lock.o)
-                0x08000bc0                __retarget_lock_release_recursive
+                0x08000c50        0x4 /Applications/ArmGNUToolchain/13.2.Rel1/arm-none-eabi/bin/../lib/gcc/arm-none-eabi/13.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libg.a(libc_a-lock.o)
+                0x08000c50                __retarget_lock_release_recursive
  .text.startup.register_fini
-                0x08000bc4       0x14 /Applications/ArmGNUToolchain/13.2.Rel1/arm-none-eabi/bin/../lib/gcc/arm-none-eabi/13.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libg.a(libc_a-__call_atexit.o)
- .text.atexit   0x08000bd8        0xc /Applications/ArmGNUToolchain/13.2.Rel1/arm-none-eabi/bin/../lib/gcc/arm-none-eabi/13.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libg.a(libc_a-atexit.o)
-                0x08000bd8                atexit
+                0x08000c54       0x14 /Applications/ArmGNUToolchain/13.2.Rel1/arm-none-eabi/bin/../lib/gcc/arm-none-eabi/13.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libg.a(libc_a-__call_atexit.o)
+ .text.atexit   0x08000c68        0xc /Applications/ArmGNUToolchain/13.2.Rel1/arm-none-eabi/bin/../lib/gcc/arm-none-eabi/13.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libg.a(libc_a-atexit.o)
+                0x08000c68                atexit
  .text.__libc_fini_array
-                0x08000be4       0x28 /Applications/ArmGNUToolchain/13.2.Rel1/arm-none-eabi/bin/../lib/gcc/arm-none-eabi/13.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libg.a(libc_a-fini.o)
-                0x08000be4                __libc_fini_array
+                0x08000c74       0x28 /Applications/ArmGNUToolchain/13.2.Rel1/arm-none-eabi/bin/../lib/gcc/arm-none-eabi/13.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libg.a(libc_a-fini.o)
+                0x08000c74                __libc_fini_array
  .text.__register_exitproc
-                0x08000c0c       0x80 /Applications/ArmGNUToolchain/13.2.Rel1/arm-none-eabi/bin/../lib/gcc/arm-none-eabi/13.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libg.a(libc_a-__atexit.o)
-                0x08000c0c                __register_exitproc
+                0x08000c9c       0x80 /Applications/ArmGNUToolchain/13.2.Rel1/arm-none-eabi/bin/../lib/gcc/arm-none-eabi/13.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libg.a(libc_a-__atexit.o)
+                0x08000c9c                __register_exitproc
  *(.glue_7)
- .glue_7        0x08000c8c        0x0 linker stubs
+ .glue_7        0x08000d1c        0x0 linker stubs
  *(.glue_7t)
- .glue_7t       0x08000c8c        0x0 linker stubs
+ .glue_7t       0x08000d1c        0x0 linker stubs
  *(.eh_frame)
- .eh_frame      0x08000c8c        0x0 /Applications/ArmGNUToolchain/13.2.Rel1/arm-none-eabi/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v7-m/nofp/crtbegin.o
+ .eh_frame      0x08000d1c        0x0 /Applications/ArmGNUToolchain/13.2.Rel1/arm-none-eabi/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v7-m/nofp/crtbegin.o
  *(.init)
- .init          0x08000c8c        0x4 /Applications/ArmGNUToolchain/13.2.Rel1/arm-none-eabi/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v7-m/nofp/crti.o
-                0x08000c8c                _init
- .init          0x08000c90        0x8 /Applications/ArmGNUToolchain/13.2.Rel1/arm-none-eabi/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v7-m/nofp/crtn.o
+ .init          0x08000d1c        0x4 /Applications/ArmGNUToolchain/13.2.Rel1/arm-none-eabi/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v7-m/nofp/crti.o
+                0x08000d1c                _init
+ .init          0x08000d20        0x8 /Applications/ArmGNUToolchain/13.2.Rel1/arm-none-eabi/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v7-m/nofp/crtn.o
  *(.fini)
- .fini          0x08000c98        0x4 /Applications/ArmGNUToolchain/13.2.Rel1/arm-none-eabi/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v7-m/nofp/crti.o
-                0x08000c98                _fini
- .fini          0x08000c9c        0x8 /Applications/ArmGNUToolchain/13.2.Rel1/arm-none-eabi/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v7-m/nofp/crtn.o
-                0x08000ca4                        . = ALIGN (0x4)
-                0x08000ca4                        _etext = .
+ .fini          0x08000d28        0x4 /Applications/ArmGNUToolchain/13.2.Rel1/arm-none-eabi/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v7-m/nofp/crti.o
+                0x08000d28                _fini
+ .fini          0x08000d2c        0x8 /Applications/ArmGNUToolchain/13.2.Rel1/arm-none-eabi/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v7-m/nofp/crtn.o
+                0x08000d34                        . = ALIGN (0x4)
+                0x08000d34                        _etext = .
 
-.vfp11_veneer   0x08000ca4        0x0
- .vfp11_veneer  0x08000ca4        0x0 linker stubs
+.vfp11_veneer   0x08000d34        0x0
+ .vfp11_veneer  0x08000d34        0x0 linker stubs
 
-.v4_bx          0x08000ca4        0x0
- .v4_bx         0x08000ca4        0x0 linker stubs
+.v4_bx          0x08000d34        0x0
+ .v4_bx         0x08000d34        0x0 linker stubs
 
-.iplt           0x08000ca4        0x0
- .iplt          0x08000ca4        0x0 /Applications/ArmGNUToolchain/13.2.Rel1/arm-none-eabi/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v7-m/nofp/crtbegin.o
+.iplt           0x08000d34        0x0
+ .iplt          0x08000d34        0x0 /Applications/ArmGNUToolchain/13.2.Rel1/arm-none-eabi/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v7-m/nofp/crtbegin.o
 
-.rodata         0x08000ca4      0x608
-                0x08000ca4                        . = ALIGN (0x4)
+.rodata         0x08000d34      0x608
+                0x08000d34                        . = ALIGN (0x4)
  *(.rodata)
  *(.rodata*)
  .rodata.main.str1.4
-                0x08000ca4       0x18 CMakeFiles/stm32F103C8T6Project.elf.dir/User/main.c.obj
+                0x08000d34       0x18 CMakeFiles/stm32F103C8T6Project.elf.dir/User/main.c.obj
  .rodata.OLED_F8x16
-                0x08000cbc      0x5f0 CMakeFiles/stm32F103C8T6Project.elf.dir/components/oled/OLED.c.obj
-                0x08000cbc                OLED_F8x16
-                0x080012ac                        . = ALIGN (0x4)
+                0x08000d4c      0x5f0 CMakeFiles/stm32F103C8T6Project.elf.dir/components/oled/OLED.c.obj
+                0x08000d4c                OLED_F8x16
+                0x0800133c                        . = ALIGN (0x4)
 
-.rel.dyn        0x080012ac        0x0
- .rel.iplt      0x080012ac        0x0 /Applications/ArmGNUToolchain/13.2.Rel1/arm-none-eabi/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v7-m/nofp/crtbegin.o
+.rel.dyn        0x0800133c        0x0
+ .rel.iplt      0x0800133c        0x0 /Applications/ArmGNUToolchain/13.2.Rel1/arm-none-eabi/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v7-m/nofp/crtbegin.o
 
-.ARM.extab      0x080012ac        0x0
-                0x080012ac                        . = ALIGN (0x4)
+.ARM.extab      0x0800133c        0x0
+                0x0800133c                        . = ALIGN (0x4)
  *(.ARM.extab* .gnu.linkonce.armextab.*)
-                0x080012ac                        . = ALIGN (0x4)
+                0x0800133c                        . = ALIGN (0x4)
 
-.ARM            0x080012ac        0x0
-                0x080012ac                        . = ALIGN (0x4)
-                0x080012ac                        __exidx_start = .
+.ARM            0x0800133c        0x0
+                0x0800133c                        . = ALIGN (0x4)
+                0x0800133c                        __exidx_start = .
  *(.ARM.exidx*)
-                0x080012ac                        __exidx_end = .
-                0x080012ac                        . = ALIGN (0x4)
+                0x0800133c                        __exidx_end = .
+                0x0800133c                        . = ALIGN (0x4)
 
-.preinit_array  0x080012ac        0x0
-                0x080012ac                        . = ALIGN (0x4)
-                0x080012ac                        PROVIDE (__preinit_array_start = .)
+.preinit_array  0x0800133c        0x0
+                0x0800133c                        . = ALIGN (0x4)
+                0x0800133c                        PROVIDE (__preinit_array_start = .)
  *(.preinit_array*)
-                0x080012ac                        PROVIDE (__preinit_array_end = .)
-                0x080012ac                        . = ALIGN (0x4)
+                0x0800133c                        PROVIDE (__preinit_array_end = .)
+                0x0800133c                        . = ALIGN (0x4)
 
-.init_array     0x080012ac        0x8
-                0x080012ac                        . = ALIGN (0x4)
-                0x080012ac                        PROVIDE (__init_array_start = .)
+.init_array     0x0800133c        0x8
+                0x0800133c                        . = ALIGN (0x4)
+                0x0800133c                        PROVIDE (__init_array_start = .)
  *(SORT_BY_NAME(.init_array.*))
  .init_array.00000
-                0x080012ac        0x4 /Applications/ArmGNUToolchain/13.2.Rel1/arm-none-eabi/bin/../lib/gcc/arm-none-eabi/13.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libg.a(libc_a-__call_atexit.o)
+                0x0800133c        0x4 /Applications/ArmGNUToolchain/13.2.Rel1/arm-none-eabi/bin/../lib/gcc/arm-none-eabi/13.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libg.a(libc_a-__call_atexit.o)
  *(.init_array*)
- .init_array    0x080012b0        0x4 /Applications/ArmGNUToolchain/13.2.Rel1/arm-none-eabi/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v7-m/nofp/crtbegin.o
-                0x080012b4                        PROVIDE (__init_array_end = .)
-                0x080012b4                        . = ALIGN (0x4)
+ .init_array    0x08001340        0x4 /Applications/ArmGNUToolchain/13.2.Rel1/arm-none-eabi/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v7-m/nofp/crtbegin.o
+                0x08001344                        PROVIDE (__init_array_end = .)
+                0x08001344                        . = ALIGN (0x4)
 
-.fini_array     0x080012b4        0x4
-                0x080012b4                        . = ALIGN (0x4)
-                0x080012b4                        PROVIDE (__fini_array_start = .)
+.fini_array     0x08001344        0x4
+                0x08001344                        . = ALIGN (0x4)
+                0x08001344                        PROVIDE (__fini_array_start = .)
  *(SORT_BY_NAME(.fini_array.*))
  *(.fini_array*)
- .fini_array    0x080012b4        0x4 /Applications/ArmGNUToolchain/13.2.Rel1/arm-none-eabi/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v7-m/nofp/crtbegin.o
-                0x080012b8                        PROVIDE (__fini_array_end = .)
-                0x080012b8                        . = ALIGN (0x4)
-                0x080012b8                        _sidata = LOADADDR (.data)
+ .fini_array    0x08001344        0x4 /Applications/ArmGNUToolchain/13.2.Rel1/arm-none-eabi/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v7-m/nofp/crtbegin.o
+                0x08001348                        PROVIDE (__fini_array_end = .)
+                0x08001348                        . = ALIGN (0x4)
+                0x08001348                        _sidata = LOADADDR (.data)
 
-.data           0x20000000        0xc load address 0x080012b8
+.data           0x20000000        0xc load address 0x08001348
                 0x20000000                        . = ALIGN (0x4)
                 0x20000000                        _sdata = .
  *(.data)
@@ -3249,17 +3227,17 @@ LOAD /Applications/ArmGNUToolchain/13.2.Rel1/arm-none-eabi/bin/../lib/gcc/arm-no
                 0x2000000c                        _edata = .
 
 .tm_clone_table
-                0x2000000c        0x0 load address 0x080012c4
+                0x2000000c        0x0 load address 0x08001354
  .tm_clone_table
                 0x2000000c        0x0 /Applications/ArmGNUToolchain/13.2.Rel1/arm-none-eabi/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v7-m/nofp/crtbegin.o
  .tm_clone_table
                 0x2000000c        0x0 /Applications/ArmGNUToolchain/13.2.Rel1/arm-none-eabi/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v7-m/nofp/crtend.o
 
-.igot.plt       0x2000000c        0x0 load address 0x080012c4
+.igot.plt       0x2000000c        0x0 load address 0x08001354
  .igot.plt      0x2000000c        0x0 /Applications/ArmGNUToolchain/13.2.Rel1/arm-none-eabi/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v7-m/nofp/crtbegin.o
                 0x2000000c                        . = ALIGN (0x4)
 
-.bss            0x2000000c      0x224 load address 0x080012c4
+.bss            0x2000000c      0x224 load address 0x08001354
                 0x2000000c                        _sbss = .
                 0x2000000c                        __bss_start__ = _sbss
  *(.bss)
@@ -3301,7 +3279,7 @@ LOAD /Applications/ArmGNUToolchain/13.2.Rel1/arm-none-eabi/bin/../lib/gcc/arm-no
                 0x20000230                        __bss_end__ = _ebss
 
 ._user_heap_stack
-                0x20000230      0x600 load address 0x080012c4
+                0x20000230      0x600 load address 0x08001354
                 0x20000230                        . = ALIGN (0x8)
                 0x20000230                        PROVIDE (end = .)
                 [!provide]                        PROVIDE (_end = .)
@@ -3332,77 +3310,81 @@ LOAD /Applications/ArmGNUToolchain/13.2.Rel1/arm-none-eabi/bin/../lib/gcc/arm-no
  .ARM.attributes
                 0x000000d1       0x2d CMakeFiles/stm32F103C8T6Project.elf.dir/Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_rcc.c.obj
  .ARM.attributes
-                0x000000fe       0x2d CMakeFiles/stm32F103C8T6Project.elf.dir/Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_usart.c.obj
+                0x000000fe       0x2d CMakeFiles/stm32F103C8T6Project.elf.dir/Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_spi.c.obj
  .ARM.attributes
-                0x0000012b       0x2d CMakeFiles/stm32F103C8T6Project.elf.dir/User/main.c.obj
+                0x0000012b       0x2d CMakeFiles/stm32F103C8T6Project.elf.dir/Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_usart.c.obj
  .ARM.attributes
-                0x00000158       0x2d CMakeFiles/stm32F103C8T6Project.elf.dir/User/stm32f10x_it.c.obj
+                0x00000158       0x2d CMakeFiles/stm32F103C8T6Project.elf.dir/User/main.c.obj
  .ARM.attributes
-                0x00000185       0x2d CMakeFiles/stm32F103C8T6Project.elf.dir/components/Serial_package/Serial_package.c.obj
+                0x00000185       0x2d CMakeFiles/stm32F103C8T6Project.elf.dir/User/stm32f10x_it.c.obj
  .ARM.attributes
-                0x000001b2       0x2d CMakeFiles/stm32F103C8T6Project.elf.dir/components/W25Q64/W25Q64.c.obj
+                0x000001b2       0x2d CMakeFiles/stm32F103C8T6Project.elf.dir/components/Serial_package/Serial_package.c.obj
  .ARM.attributes
-                0x000001df       0x2d CMakeFiles/stm32F103C8T6Project.elf.dir/components/countSensor/countSensor.c.obj
+                0x000001df       0x2d CMakeFiles/stm32F103C8T6Project.elf.dir/components/W25Q64/W25Q64.c.obj
  .ARM.attributes
-                0x0000020c       0x2d CMakeFiles/stm32F103C8T6Project.elf.dir/components/coustomSPI/coustomSPI.c.obj
+                0x0000020c       0x2d CMakeFiles/stm32F103C8T6Project.elf.dir/components/countSensor/countSensor.c.obj
  .ARM.attributes
-                0x00000239       0x2d CMakeFiles/stm32F103C8T6Project.elf.dir/components/oled/OLED.c.obj
+                0x00000239       0x2d CMakeFiles/stm32F103C8T6Project.elf.dir/components/coustomSPI/coustomSPI.c.obj
  .ARM.attributes
-                0x00000266       0x21 CMakeFiles/stm32F103C8T6Project.elf.dir/startup/startup_stm32f103c8tx.s.obj
+                0x00000266       0x2d CMakeFiles/stm32F103C8T6Project.elf.dir/components/oled/OLED.c.obj
  .ARM.attributes
-                0x00000287       0x2d /Applications/ArmGNUToolchain/13.2.Rel1/arm-none-eabi/bin/../lib/gcc/arm-none-eabi/13.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libg.a(libc_a-init.o)
+                0x00000293       0x21 CMakeFiles/stm32F103C8T6Project.elf.dir/startup/startup_stm32f103c8tx.s.obj
  .ARM.attributes
-                0x000002b4       0x2d /Applications/ArmGNUToolchain/13.2.Rel1/arm-none-eabi/bin/../lib/gcc/arm-none-eabi/13.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libg.a(libc_a-lock.o)
+                0x000002b4       0x2d /Applications/ArmGNUToolchain/13.2.Rel1/arm-none-eabi/bin/../lib/gcc/arm-none-eabi/13.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libg.a(libc_a-init.o)
  .ARM.attributes
-                0x000002e1       0x2d /Applications/ArmGNUToolchain/13.2.Rel1/arm-none-eabi/bin/../lib/gcc/arm-none-eabi/13.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libg.a(libc_a-__call_atexit.o)
+                0x000002e1       0x2d /Applications/ArmGNUToolchain/13.2.Rel1/arm-none-eabi/bin/../lib/gcc/arm-none-eabi/13.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libg.a(libc_a-lock.o)
  .ARM.attributes
-                0x0000030e       0x2d /Applications/ArmGNUToolchain/13.2.Rel1/arm-none-eabi/bin/../lib/gcc/arm-none-eabi/13.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libg.a(libc_a-atexit.o)
+                0x0000030e       0x2d /Applications/ArmGNUToolchain/13.2.Rel1/arm-none-eabi/bin/../lib/gcc/arm-none-eabi/13.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libg.a(libc_a-__call_atexit.o)
  .ARM.attributes
-                0x0000033b       0x2d /Applications/ArmGNUToolchain/13.2.Rel1/arm-none-eabi/bin/../lib/gcc/arm-none-eabi/13.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libg.a(libc_a-fini.o)
+                0x0000033b       0x2d /Applications/ArmGNUToolchain/13.2.Rel1/arm-none-eabi/bin/../lib/gcc/arm-none-eabi/13.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libg.a(libc_a-atexit.o)
  .ARM.attributes
-                0x00000368       0x2d /Applications/ArmGNUToolchain/13.2.Rel1/arm-none-eabi/bin/../lib/gcc/arm-none-eabi/13.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libg.a(libc_a-__atexit.o)
+                0x00000368       0x2d /Applications/ArmGNUToolchain/13.2.Rel1/arm-none-eabi/bin/../lib/gcc/arm-none-eabi/13.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libg.a(libc_a-fini.o)
  .ARM.attributes
-                0x00000395       0x2d /Applications/ArmGNUToolchain/13.2.Rel1/arm-none-eabi/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v7-m/nofp/crtend.o
+                0x00000395       0x2d /Applications/ArmGNUToolchain/13.2.Rel1/arm-none-eabi/bin/../lib/gcc/arm-none-eabi/13.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libg.a(libc_a-__atexit.o)
  .ARM.attributes
-                0x000003c2       0x1d /Applications/ArmGNUToolchain/13.2.Rel1/arm-none-eabi/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v7-m/nofp/crtn.o
+                0x000003c2       0x2d /Applications/ArmGNUToolchain/13.2.Rel1/arm-none-eabi/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v7-m/nofp/crtend.o
+ .ARM.attributes
+                0x000003ef       0x1d /Applications/ArmGNUToolchain/13.2.Rel1/arm-none-eabi/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v7-m/nofp/crtn.o
 OUTPUT(stm32F103C8T6Project.elf elf32-littlearm)
 LOAD linker stubs
 LOAD /Applications/ArmGNUToolchain/13.2.Rel1/arm-none-eabi/bin/../lib/gcc/arm-none-eabi/13.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libc.a
 LOAD /Applications/ArmGNUToolchain/13.2.Rel1/arm-none-eabi/bin/../lib/gcc/arm-none-eabi/13.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libm.a
 LOAD /Applications/ArmGNUToolchain/13.2.Rel1/arm-none-eabi/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v7-m/nofp/libgcc.a
 
-.debug_info     0x00000000     0x53c3
+.debug_info     0x00000000     0x5f0a
  .debug_info    0x00000000      0x439 CMakeFiles/stm32F103C8T6Project.elf.dir/Libraries/CMSIS/system_stm32f10x.c.obj
  .debug_info    0x00000439      0x337 CMakeFiles/stm32F103C8T6Project.elf.dir/Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_exti.c.obj
  .debug_info    0x00000770      0x8be CMakeFiles/stm32F103C8T6Project.elf.dir/Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_gpio.c.obj
  .debug_info    0x0000102e      0x8bc CMakeFiles/stm32F103C8T6Project.elf.dir/Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_rcc.c.obj
- .debug_info    0x000018ea      0xb82 CMakeFiles/stm32F103C8T6Project.elf.dir/Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_usart.c.obj
- .debug_info    0x0000246c      0x3f7 CMakeFiles/stm32F103C8T6Project.elf.dir/User/main.c.obj
- .debug_info    0x00002863       0xfd CMakeFiles/stm32F103C8T6Project.elf.dir/User/stm32f10x_it.c.obj
- .debug_info    0x00002960      0xb79 CMakeFiles/stm32F103C8T6Project.elf.dir/components/Serial_package/Serial_package.c.obj
- .debug_info    0x000034d9      0x4a7 CMakeFiles/stm32F103C8T6Project.elf.dir/components/W25Q64/W25Q64.c.obj
- .debug_info    0x00003980      0x696 CMakeFiles/stm32F103C8T6Project.elf.dir/components/countSensor/countSensor.c.obj
- .debug_info    0x00004016      0x5a4 CMakeFiles/stm32F103C8T6Project.elf.dir/components/coustomSPI/coustomSPI.c.obj
- .debug_info    0x000045ba      0xdd9 CMakeFiles/stm32F103C8T6Project.elf.dir/components/oled/OLED.c.obj
- .debug_info    0x00005393       0x30 CMakeFiles/stm32F103C8T6Project.elf.dir/startup/startup_stm32f103c8tx.s.obj
+ .debug_info    0x000018ea      0xa23 CMakeFiles/stm32F103C8T6Project.elf.dir/Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_spi.c.obj
+ .debug_info    0x0000230d      0xb82 CMakeFiles/stm32F103C8T6Project.elf.dir/Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_usart.c.obj
+ .debug_info    0x00002e8f      0x3f7 CMakeFiles/stm32F103C8T6Project.elf.dir/User/main.c.obj
+ .debug_info    0x00003286       0xfd CMakeFiles/stm32F103C8T6Project.elf.dir/User/stm32f10x_it.c.obj
+ .debug_info    0x00003383      0xb79 CMakeFiles/stm32F103C8T6Project.elf.dir/components/Serial_package/Serial_package.c.obj
+ .debug_info    0x00003efc      0x4a7 CMakeFiles/stm32F103C8T6Project.elf.dir/components/W25Q64/W25Q64.c.obj
+ .debug_info    0x000043a3      0x696 CMakeFiles/stm32F103C8T6Project.elf.dir/components/countSensor/countSensor.c.obj
+ .debug_info    0x00004a39      0x6c8 CMakeFiles/stm32F103C8T6Project.elf.dir/components/coustomSPI/coustomSPI.c.obj
+ .debug_info    0x00005101      0xdd9 CMakeFiles/stm32F103C8T6Project.elf.dir/components/oled/OLED.c.obj
+ .debug_info    0x00005eda       0x30 CMakeFiles/stm32F103C8T6Project.elf.dir/startup/startup_stm32f103c8tx.s.obj
 
-.debug_abbrev   0x00000000     0x155a
+.debug_abbrev   0x00000000     0x175c
  .debug_abbrev  0x00000000      0x1c7 CMakeFiles/stm32F103C8T6Project.elf.dir/Libraries/CMSIS/system_stm32f10x.c.obj
  .debug_abbrev  0x000001c7      0x193 CMakeFiles/stm32F103C8T6Project.elf.dir/Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_exti.c.obj
  .debug_abbrev  0x0000035a      0x250 CMakeFiles/stm32F103C8T6Project.elf.dir/Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_gpio.c.obj
  .debug_abbrev  0x000005aa      0x20d CMakeFiles/stm32F103C8T6Project.elf.dir/Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_rcc.c.obj
- .debug_abbrev  0x000007b7      0x209 CMakeFiles/stm32F103C8T6Project.elf.dir/Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_usart.c.obj
- .debug_abbrev  0x000009c0       0xf0 CMakeFiles/stm32F103C8T6Project.elf.dir/User/main.c.obj
- .debug_abbrev  0x00000ab0       0x45 CMakeFiles/stm32F103C8T6Project.elf.dir/User/stm32f10x_it.c.obj
- .debug_abbrev  0x00000af5      0x2f6 CMakeFiles/stm32F103C8T6Project.elf.dir/components/Serial_package/Serial_package.c.obj
- .debug_abbrev  0x00000deb      0x11e CMakeFiles/stm32F103C8T6Project.elf.dir/components/W25Q64/W25Q64.c.obj
- .debug_abbrev  0x00000f09      0x1e9 CMakeFiles/stm32F103C8T6Project.elf.dir/components/countSensor/countSensor.c.obj
- .debug_abbrev  0x000010f2      0x1f1 CMakeFiles/stm32F103C8T6Project.elf.dir/components/coustomSPI/coustomSPI.c.obj
- .debug_abbrev  0x000012e3      0x253 CMakeFiles/stm32F103C8T6Project.elf.dir/components/oled/OLED.c.obj
- .debug_abbrev  0x00001536       0x24 CMakeFiles/stm32F103C8T6Project.elf.dir/startup/startup_stm32f103c8tx.s.obj
+ .debug_abbrev  0x000007b7      0x222 CMakeFiles/stm32F103C8T6Project.elf.dir/Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_spi.c.obj
+ .debug_abbrev  0x000009d9      0x209 CMakeFiles/stm32F103C8T6Project.elf.dir/Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_usart.c.obj
+ .debug_abbrev  0x00000be2       0xf0 CMakeFiles/stm32F103C8T6Project.elf.dir/User/main.c.obj
+ .debug_abbrev  0x00000cd2       0x45 CMakeFiles/stm32F103C8T6Project.elf.dir/User/stm32f10x_it.c.obj
+ .debug_abbrev  0x00000d17      0x2f6 CMakeFiles/stm32F103C8T6Project.elf.dir/components/Serial_package/Serial_package.c.obj
+ .debug_abbrev  0x0000100d      0x11e CMakeFiles/stm32F103C8T6Project.elf.dir/components/W25Q64/W25Q64.c.obj
+ .debug_abbrev  0x0000112b      0x1e9 CMakeFiles/stm32F103C8T6Project.elf.dir/components/countSensor/countSensor.c.obj
+ .debug_abbrev  0x00001314      0x1d1 CMakeFiles/stm32F103C8T6Project.elf.dir/components/coustomSPI/coustomSPI.c.obj
+ .debug_abbrev  0x000014e5      0x253 CMakeFiles/stm32F103C8T6Project.elf.dir/components/oled/OLED.c.obj
+ .debug_abbrev  0x00001738       0x24 CMakeFiles/stm32F103C8T6Project.elf.dir/startup/startup_stm32f103c8tx.s.obj
 
 .debug_loclists
-                0x00000000     0x1901
+                0x00000000     0x1d6b
  .debug_loclists
                 0x00000000       0xb7 CMakeFiles/stm32F103C8T6Project.elf.dir/Libraries/CMSIS/system_stm32f10x.c.obj
  .debug_loclists
@@ -3412,17 +3394,19 @@ LOAD /Applications/ArmGNUToolchain/13.2.Rel1/arm-none-eabi/bin/../lib/gcc/arm-no
  .debug_loclists
                 0x00000699      0x33f CMakeFiles/stm32F103C8T6Project.elf.dir/Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_rcc.c.obj
  .debug_loclists
-                0x000009d8      0x62d CMakeFiles/stm32F103C8T6Project.elf.dir/Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_usart.c.obj
+                0x000009d8      0x507 CMakeFiles/stm32F103C8T6Project.elf.dir/Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_spi.c.obj
  .debug_loclists
-                0x00001005      0x162 CMakeFiles/stm32F103C8T6Project.elf.dir/components/Serial_package/Serial_package.c.obj
+                0x00000edf      0x62d CMakeFiles/stm32F103C8T6Project.elf.dir/Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_usart.c.obj
  .debug_loclists
-                0x00001167      0x151 CMakeFiles/stm32F103C8T6Project.elf.dir/components/W25Q64/W25Q64.c.obj
+                0x0000150c      0x162 CMakeFiles/stm32F103C8T6Project.elf.dir/components/Serial_package/Serial_package.c.obj
  .debug_loclists
-                0x000012b8       0xfc CMakeFiles/stm32F103C8T6Project.elf.dir/components/coustomSPI/coustomSPI.c.obj
+                0x0000166e      0x151 CMakeFiles/stm32F103C8T6Project.elf.dir/components/W25Q64/W25Q64.c.obj
  .debug_loclists
-                0x000013b4      0x54d CMakeFiles/stm32F103C8T6Project.elf.dir/components/oled/OLED.c.obj
+                0x000017bf       0x5f CMakeFiles/stm32F103C8T6Project.elf.dir/components/coustomSPI/coustomSPI.c.obj
+ .debug_loclists
+                0x0000181e      0x54d CMakeFiles/stm32F103C8T6Project.elf.dir/components/oled/OLED.c.obj
 
-.debug_aranges  0x00000000      0x5d8
+.debug_aranges  0x00000000      0x688
  .debug_aranges
                 0x00000000       0x38 CMakeFiles/stm32F103C8T6Project.elf.dir/Libraries/CMSIS/system_stm32f10x.c.obj
  .debug_aranges
@@ -3432,26 +3416,28 @@ LOAD /Applications/ArmGNUToolchain/13.2.Rel1/arm-none-eabi/bin/../lib/gcc/arm-no
  .debug_aranges
                 0x00000138      0x118 CMakeFiles/stm32F103C8T6Project.elf.dir/Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_rcc.c.obj
  .debug_aranges
-                0x00000250      0x100 CMakeFiles/stm32F103C8T6Project.elf.dir/Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_usart.c.obj
+                0x00000250       0xd0 CMakeFiles/stm32F103C8T6Project.elf.dir/Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_spi.c.obj
  .debug_aranges
-                0x00000350       0x20 CMakeFiles/stm32F103C8T6Project.elf.dir/User/main.c.obj
+                0x00000320      0x100 CMakeFiles/stm32F103C8T6Project.elf.dir/Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_usart.c.obj
  .debug_aranges
-                0x00000370       0x60 CMakeFiles/stm32F103C8T6Project.elf.dir/User/stm32f10x_it.c.obj
+                0x00000420       0x20 CMakeFiles/stm32F103C8T6Project.elf.dir/User/main.c.obj
  .debug_aranges
-                0x000003d0       0x68 CMakeFiles/stm32F103C8T6Project.elf.dir/components/Serial_package/Serial_package.c.obj
+                0x00000440       0x60 CMakeFiles/stm32F103C8T6Project.elf.dir/User/stm32f10x_it.c.obj
  .debug_aranges
-                0x00000438       0x50 CMakeFiles/stm32F103C8T6Project.elf.dir/components/W25Q64/W25Q64.c.obj
+                0x000004a0       0x68 CMakeFiles/stm32F103C8T6Project.elf.dir/components/Serial_package/Serial_package.c.obj
  .debug_aranges
-                0x00000488       0x30 CMakeFiles/stm32F103C8T6Project.elf.dir/components/countSensor/countSensor.c.obj
+                0x00000508       0x50 CMakeFiles/stm32F103C8T6Project.elf.dir/components/W25Q64/W25Q64.c.obj
  .debug_aranges
-                0x000004b8       0x60 CMakeFiles/stm32F103C8T6Project.elf.dir/components/coustomSPI/coustomSPI.c.obj
+                0x00000558       0x30 CMakeFiles/stm32F103C8T6Project.elf.dir/components/countSensor/countSensor.c.obj
  .debug_aranges
-                0x00000518       0x98 CMakeFiles/stm32F103C8T6Project.elf.dir/components/oled/OLED.c.obj
+                0x00000588       0x40 CMakeFiles/stm32F103C8T6Project.elf.dir/components/coustomSPI/coustomSPI.c.obj
  .debug_aranges
-                0x000005b0       0x28 CMakeFiles/stm32F103C8T6Project.elf.dir/startup/startup_stm32f103c8tx.s.obj
+                0x000005c8       0x98 CMakeFiles/stm32F103C8T6Project.elf.dir/components/oled/OLED.c.obj
+ .debug_aranges
+                0x00000660       0x28 CMakeFiles/stm32F103C8T6Project.elf.dir/startup/startup_stm32f103c8tx.s.obj
 
 .debug_rnglists
-                0x00000000      0x43a
+                0x00000000      0x4bb
  .debug_rnglists
                 0x00000000       0x27 CMakeFiles/stm32F103C8T6Project.elf.dir/Libraries/CMSIS/system_stm32f10x.c.obj
  .debug_rnglists
@@ -3461,54 +3447,58 @@ LOAD /Applications/ArmGNUToolchain/13.2.Rel1/arm-none-eabi/bin/../lib/gcc/arm-no
  .debug_rnglists
                 0x000000e0       0xce CMakeFiles/stm32F103C8T6Project.elf.dir/Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_rcc.c.obj
  .debug_rnglists
-                0x000001ae       0xbd CMakeFiles/stm32F103C8T6Project.elf.dir/Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_usart.c.obj
+                0x000001ae       0x98 CMakeFiles/stm32F103C8T6Project.elf.dir/Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_spi.c.obj
  .debug_rnglists
-                0x0000026b       0x14 CMakeFiles/stm32F103C8T6Project.elf.dir/User/main.c.obj
+                0x00000246       0xbd CMakeFiles/stm32F103C8T6Project.elf.dir/Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_usart.c.obj
  .debug_rnglists
-                0x0000027f       0x43 CMakeFiles/stm32F103C8T6Project.elf.dir/User/stm32f10x_it.c.obj
+                0x00000303       0x14 CMakeFiles/stm32F103C8T6Project.elf.dir/User/main.c.obj
  .debug_rnglists
-                0x000002c2       0x58 CMakeFiles/stm32F103C8T6Project.elf.dir/components/Serial_package/Serial_package.c.obj
+                0x00000317       0x43 CMakeFiles/stm32F103C8T6Project.elf.dir/User/stm32f10x_it.c.obj
  .debug_rnglists
-                0x0000031a       0x37 CMakeFiles/stm32F103C8T6Project.elf.dir/components/W25Q64/W25Q64.c.obj
+                0x0000035a       0x58 CMakeFiles/stm32F103C8T6Project.elf.dir/components/Serial_package/Serial_package.c.obj
  .debug_rnglists
-                0x00000351       0x1f CMakeFiles/stm32F103C8T6Project.elf.dir/components/countSensor/countSensor.c.obj
+                0x000003b2       0x37 CMakeFiles/stm32F103C8T6Project.elf.dir/components/W25Q64/W25Q64.c.obj
  .debug_rnglists
-                0x00000370       0x43 CMakeFiles/stm32F103C8T6Project.elf.dir/components/coustomSPI/coustomSPI.c.obj
+                0x000003e9       0x1f CMakeFiles/stm32F103C8T6Project.elf.dir/components/countSensor/countSensor.c.obj
  .debug_rnglists
-                0x000003b3       0x6e CMakeFiles/stm32F103C8T6Project.elf.dir/components/oled/OLED.c.obj
+                0x00000408       0x2c CMakeFiles/stm32F103C8T6Project.elf.dir/components/coustomSPI/coustomSPI.c.obj
  .debug_rnglists
-                0x00000421       0x19 CMakeFiles/stm32F103C8T6Project.elf.dir/startup/startup_stm32f103c8tx.s.obj
+                0x00000434       0x6e CMakeFiles/stm32F103C8T6Project.elf.dir/components/oled/OLED.c.obj
+ .debug_rnglists
+                0x000004a2       0x19 CMakeFiles/stm32F103C8T6Project.elf.dir/startup/startup_stm32f103c8tx.s.obj
 
-.debug_line     0x00000000     0x3abd
+.debug_line     0x00000000     0x425c
  .debug_line    0x00000000      0x3e1 CMakeFiles/stm32F103C8T6Project.elf.dir/Libraries/CMSIS/system_stm32f10x.c.obj
  .debug_line    0x000003e1      0x3f0 CMakeFiles/stm32F103C8T6Project.elf.dir/Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_exti.c.obj
  .debug_line    0x000007d1      0x723 CMakeFiles/stm32F103C8T6Project.elf.dir/Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_gpio.c.obj
  .debug_line    0x00000ef4      0x90e CMakeFiles/stm32F103C8T6Project.elf.dir/Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_rcc.c.obj
- .debug_line    0x00001802      0x978 CMakeFiles/stm32F103C8T6Project.elf.dir/Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_usart.c.obj
- .debug_line    0x0000217a      0x1c9 CMakeFiles/stm32F103C8T6Project.elf.dir/User/main.c.obj
- .debug_line    0x00002343      0x11b CMakeFiles/stm32F103C8T6Project.elf.dir/User/stm32f10x_it.c.obj
- .debug_line    0x0000245e      0x60b CMakeFiles/stm32F103C8T6Project.elf.dir/components/Serial_package/Serial_package.c.obj
- .debug_line    0x00002a69      0x2ee CMakeFiles/stm32F103C8T6Project.elf.dir/components/W25Q64/W25Q64.c.obj
- .debug_line    0x00002d57      0x2d1 CMakeFiles/stm32F103C8T6Project.elf.dir/components/countSensor/countSensor.c.obj
- .debug_line    0x00003028      0x3a9 CMakeFiles/stm32F103C8T6Project.elf.dir/components/coustomSPI/coustomSPI.c.obj
- .debug_line    0x000033d1      0x674 CMakeFiles/stm32F103C8T6Project.elf.dir/components/oled/OLED.c.obj
- .debug_line    0x00003a45       0x78 CMakeFiles/stm32F103C8T6Project.elf.dir/startup/startup_stm32f103c8tx.s.obj
+ .debug_line    0x00001802      0x7f1 CMakeFiles/stm32F103C8T6Project.elf.dir/Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_spi.c.obj
+ .debug_line    0x00001ff3      0x978 CMakeFiles/stm32F103C8T6Project.elf.dir/Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_usart.c.obj
+ .debug_line    0x0000296b      0x1c9 CMakeFiles/stm32F103C8T6Project.elf.dir/User/main.c.obj
+ .debug_line    0x00002b34      0x11b CMakeFiles/stm32F103C8T6Project.elf.dir/User/stm32f10x_it.c.obj
+ .debug_line    0x00002c4f      0x60b CMakeFiles/stm32F103C8T6Project.elf.dir/components/Serial_package/Serial_package.c.obj
+ .debug_line    0x0000325a      0x2ee CMakeFiles/stm32F103C8T6Project.elf.dir/components/W25Q64/W25Q64.c.obj
+ .debug_line    0x00003548      0x2d1 CMakeFiles/stm32F103C8T6Project.elf.dir/components/countSensor/countSensor.c.obj
+ .debug_line    0x00003819      0x357 CMakeFiles/stm32F103C8T6Project.elf.dir/components/coustomSPI/coustomSPI.c.obj
+ .debug_line    0x00003b70      0x674 CMakeFiles/stm32F103C8T6Project.elf.dir/components/oled/OLED.c.obj
+ .debug_line    0x000041e4       0x78 CMakeFiles/stm32F103C8T6Project.elf.dir/startup/startup_stm32f103c8tx.s.obj
 
-.debug_str      0x00000000     0x1cb9
- .debug_str     0x00000000     0x1cb9 CMakeFiles/stm32F103C8T6Project.elf.dir/Libraries/CMSIS/system_stm32f10x.c.obj
+.debug_str      0x00000000     0x2011
+ .debug_str     0x00000000     0x2011 CMakeFiles/stm32F103C8T6Project.elf.dir/Libraries/CMSIS/system_stm32f10x.c.obj
                                 0x33b (size before relaxing)
- .debug_str     0x00001cb9      0x3bd CMakeFiles/stm32F103C8T6Project.elf.dir/Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_exti.c.obj
- .debug_str     0x00001cb9      0x5a4 CMakeFiles/stm32F103C8T6Project.elf.dir/Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_gpio.c.obj
- .debug_str     0x00001cb9      0x68e CMakeFiles/stm32F103C8T6Project.elf.dir/Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_rcc.c.obj
- .debug_str     0x00001cb9      0x744 CMakeFiles/stm32F103C8T6Project.elf.dir/Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_usart.c.obj
- .debug_str     0x00001cb9      0x283 CMakeFiles/stm32F103C8T6Project.elf.dir/User/main.c.obj
- .debug_str     0x00001cb9      0x240 CMakeFiles/stm32F103C8T6Project.elf.dir/User/stm32f10x_it.c.obj
- .debug_str     0x00001cb9      0xad9 CMakeFiles/stm32F103C8T6Project.elf.dir/components/Serial_package/Serial_package.c.obj
- .debug_str     0x00001cb9      0x2c4 CMakeFiles/stm32F103C8T6Project.elf.dir/components/W25Q64/W25Q64.c.obj
- .debug_str     0x00001cb9      0x931 CMakeFiles/stm32F103C8T6Project.elf.dir/components/countSensor/countSensor.c.obj
- .debug_str     0x00001cb9      0x45e CMakeFiles/stm32F103C8T6Project.elf.dir/components/coustomSPI/coustomSPI.c.obj
- .debug_str     0x00001cb9      0x4e6 CMakeFiles/stm32F103C8T6Project.elf.dir/components/oled/OLED.c.obj
- .debug_str     0x00001cb9       0x9a CMakeFiles/stm32F103C8T6Project.elf.dir/startup/startup_stm32f103c8tx.s.obj
+ .debug_str     0x00002011      0x3bd CMakeFiles/stm32F103C8T6Project.elf.dir/Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_exti.c.obj
+ .debug_str     0x00002011      0x5a4 CMakeFiles/stm32F103C8T6Project.elf.dir/Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_gpio.c.obj
+ .debug_str     0x00002011      0x68e CMakeFiles/stm32F103C8T6Project.elf.dir/Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_rcc.c.obj
+ .debug_str     0x00002011      0x6b1 CMakeFiles/stm32F103C8T6Project.elf.dir/Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_spi.c.obj
+ .debug_str     0x00002011      0x744 CMakeFiles/stm32F103C8T6Project.elf.dir/Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_usart.c.obj
+ .debug_str     0x00002011      0x283 CMakeFiles/stm32F103C8T6Project.elf.dir/User/main.c.obj
+ .debug_str     0x00002011      0x240 CMakeFiles/stm32F103C8T6Project.elf.dir/User/stm32f10x_it.c.obj
+ .debug_str     0x00002011      0xad9 CMakeFiles/stm32F103C8T6Project.elf.dir/components/Serial_package/Serial_package.c.obj
+ .debug_str     0x00002011      0x2c4 CMakeFiles/stm32F103C8T6Project.elf.dir/components/W25Q64/W25Q64.c.obj
+ .debug_str     0x00002011      0x931 CMakeFiles/stm32F103C8T6Project.elf.dir/components/countSensor/countSensor.c.obj
+ .debug_str     0x00002011      0x57b CMakeFiles/stm32F103C8T6Project.elf.dir/components/coustomSPI/coustomSPI.c.obj
+ .debug_str     0x00002011      0x4e6 CMakeFiles/stm32F103C8T6Project.elf.dir/components/oled/OLED.c.obj
+ .debug_str     0x00002011       0x9a CMakeFiles/stm32F103C8T6Project.elf.dir/startup/startup_stm32f103c8tx.s.obj
 
 .comment        0x00000000       0x44
  .comment       0x00000000       0x44 CMakeFiles/stm32F103C8T6Project.elf.dir/Libraries/CMSIS/system_stm32f10x.c.obj
@@ -3516,6 +3506,7 @@ LOAD /Applications/ArmGNUToolchain/13.2.Rel1/arm-none-eabi/bin/../lib/gcc/arm-no
  .comment       0x00000044       0x45 CMakeFiles/stm32F103C8T6Project.elf.dir/Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_exti.c.obj
  .comment       0x00000044       0x45 CMakeFiles/stm32F103C8T6Project.elf.dir/Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_gpio.c.obj
  .comment       0x00000044       0x45 CMakeFiles/stm32F103C8T6Project.elf.dir/Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_rcc.c.obj
+ .comment       0x00000044       0x45 CMakeFiles/stm32F103C8T6Project.elf.dir/Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_spi.c.obj
  .comment       0x00000044       0x45 CMakeFiles/stm32F103C8T6Project.elf.dir/Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_usart.c.obj
  .comment       0x00000044       0x45 CMakeFiles/stm32F103C8T6Project.elf.dir/User/main.c.obj
  .comment       0x00000044       0x45 CMakeFiles/stm32F103C8T6Project.elf.dir/User/stm32f10x_it.c.obj
@@ -3525,25 +3516,26 @@ LOAD /Applications/ArmGNUToolchain/13.2.Rel1/arm-none-eabi/bin/../lib/gcc/arm-no
  .comment       0x00000044       0x45 CMakeFiles/stm32F103C8T6Project.elf.dir/components/coustomSPI/coustomSPI.c.obj
  .comment       0x00000044       0x45 CMakeFiles/stm32F103C8T6Project.elf.dir/components/oled/OLED.c.obj
 
-.debug_frame    0x00000000      0xe34
+.debug_frame    0x00000000      0xf7c
  .debug_frame   0x00000000       0x6c CMakeFiles/stm32F103C8T6Project.elf.dir/Libraries/CMSIS/system_stm32f10x.c.obj
  .debug_frame   0x0000006c       0xa0 CMakeFiles/stm32F103C8T6Project.elf.dir/Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_exti.c.obj
  .debug_frame   0x0000010c      0x168 CMakeFiles/stm32F103C8T6Project.elf.dir/Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_gpio.c.obj
  .debug_frame   0x00000274      0x228 CMakeFiles/stm32F103C8T6Project.elf.dir/Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_rcc.c.obj
- .debug_frame   0x0000049c      0x204 CMakeFiles/stm32F103C8T6Project.elf.dir/Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_usart.c.obj
- .debug_frame   0x000006a0       0x28 CMakeFiles/stm32F103C8T6Project.elf.dir/User/main.c.obj
- .debug_frame   0x000006c8       0xa0 CMakeFiles/stm32F103C8T6Project.elf.dir/User/stm32f10x_it.c.obj
- .debug_frame   0x00000768      0x120 CMakeFiles/stm32F103C8T6Project.elf.dir/components/Serial_package/Serial_package.c.obj
- .debug_frame   0x00000888       0xc4 CMakeFiles/stm32F103C8T6Project.elf.dir/components/W25Q64/W25Q64.c.obj
- .debug_frame   0x0000094c       0x58 CMakeFiles/stm32F103C8T6Project.elf.dir/components/countSensor/countSensor.c.obj
- .debug_frame   0x000009a4       0xf8 CMakeFiles/stm32F103C8T6Project.elf.dir/components/coustomSPI/coustomSPI.c.obj
- .debug_frame   0x00000a9c      0x1d8 CMakeFiles/stm32F103C8T6Project.elf.dir/components/oled/OLED.c.obj
- .debug_frame   0x00000c74       0x2c /Applications/ArmGNUToolchain/13.2.Rel1/arm-none-eabi/bin/../lib/gcc/arm-none-eabi/13.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libg.a(libc_a-init.o)
- .debug_frame   0x00000ca0       0xb0 /Applications/ArmGNUToolchain/13.2.Rel1/arm-none-eabi/bin/../lib/gcc/arm-none-eabi/13.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libg.a(libc_a-lock.o)
- .debug_frame   0x00000d50       0x5c /Applications/ArmGNUToolchain/13.2.Rel1/arm-none-eabi/bin/../lib/gcc/arm-none-eabi/13.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libg.a(libc_a-__call_atexit.o)
- .debug_frame   0x00000dac       0x20 /Applications/ArmGNUToolchain/13.2.Rel1/arm-none-eabi/bin/../lib/gcc/arm-none-eabi/13.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libg.a(libc_a-atexit.o)
- .debug_frame   0x00000dcc       0x34 /Applications/ArmGNUToolchain/13.2.Rel1/arm-none-eabi/bin/../lib/gcc/arm-none-eabi/13.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libg.a(libc_a-fini.o)
- .debug_frame   0x00000e00       0x34 /Applications/ArmGNUToolchain/13.2.Rel1/arm-none-eabi/bin/../lib/gcc/arm-none-eabi/13.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libg.a(libc_a-__atexit.o)
+ .debug_frame   0x0000049c      0x1b0 CMakeFiles/stm32F103C8T6Project.elf.dir/Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_spi.c.obj
+ .debug_frame   0x0000064c      0x204 CMakeFiles/stm32F103C8T6Project.elf.dir/Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_usart.c.obj
+ .debug_frame   0x00000850       0x28 CMakeFiles/stm32F103C8T6Project.elf.dir/User/main.c.obj
+ .debug_frame   0x00000878       0xa0 CMakeFiles/stm32F103C8T6Project.elf.dir/User/stm32f10x_it.c.obj
+ .debug_frame   0x00000918      0x120 CMakeFiles/stm32F103C8T6Project.elf.dir/components/Serial_package/Serial_package.c.obj
+ .debug_frame   0x00000a38       0xc4 CMakeFiles/stm32F103C8T6Project.elf.dir/components/W25Q64/W25Q64.c.obj
+ .debug_frame   0x00000afc       0x58 CMakeFiles/stm32F103C8T6Project.elf.dir/components/countSensor/countSensor.c.obj
+ .debug_frame   0x00000b54       0x90 CMakeFiles/stm32F103C8T6Project.elf.dir/components/coustomSPI/coustomSPI.c.obj
+ .debug_frame   0x00000be4      0x1d8 CMakeFiles/stm32F103C8T6Project.elf.dir/components/oled/OLED.c.obj
+ .debug_frame   0x00000dbc       0x2c /Applications/ArmGNUToolchain/13.2.Rel1/arm-none-eabi/bin/../lib/gcc/arm-none-eabi/13.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libg.a(libc_a-init.o)
+ .debug_frame   0x00000de8       0xb0 /Applications/ArmGNUToolchain/13.2.Rel1/arm-none-eabi/bin/../lib/gcc/arm-none-eabi/13.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libg.a(libc_a-lock.o)
+ .debug_frame   0x00000e98       0x5c /Applications/ArmGNUToolchain/13.2.Rel1/arm-none-eabi/bin/../lib/gcc/arm-none-eabi/13.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libg.a(libc_a-__call_atexit.o)
+ .debug_frame   0x00000ef4       0x20 /Applications/ArmGNUToolchain/13.2.Rel1/arm-none-eabi/bin/../lib/gcc/arm-none-eabi/13.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libg.a(libc_a-atexit.o)
+ .debug_frame   0x00000f14       0x34 /Applications/ArmGNUToolchain/13.2.Rel1/arm-none-eabi/bin/../lib/gcc/arm-none-eabi/13.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libg.a(libc_a-fini.o)
+ .debug_frame   0x00000f48       0x34 /Applications/ArmGNUToolchain/13.2.Rel1/arm-none-eabi/bin/../lib/gcc/arm-none-eabi/13.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libg.a(libc_a-__atexit.o)
 
 .debug_line_str
                 0x00000000       0x7e
