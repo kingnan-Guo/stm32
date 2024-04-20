@@ -31,8 +31,8 @@ void W25Q64_Init(void){
 void W25Q64_ReadID(uint8_t *MID, uint16_t *DID){
     //uint8_t ByteReceive;
     customSPI_Start();
-    // 交换发送一个字节 W25Q64_MANUFACTURER_DEVICE_ID 0x9F  , 发送指令到 W25Q64
-    customSPI_SwapByte(W25Q64_MANUFACTURER_DEVICE_ID);
+    // 交换发送一个字节 W25Q64_JEDEC_ID 0x9F  , 发送指令到 W25Q64
+    customSPI_SwapByte(W25Q64_JEDEC_ID);
     // W25Q64 收到指令后 ，想主机发送 字节，之际 通过 W25Q64_DUMMY_BYTE 0xFF 将数据交换过来； 0xFF 没有任何意义
     *MID = customSPI_SwapByte(W25Q64_DUMMY_BYTE);
     // 接收 以时序传过来的数据

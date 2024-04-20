@@ -39,15 +39,15 @@ int main(void) {
     W25Q64_PageProgram(0x000000, dataArray_write, 4);
     // 写入数据 再读取
     W25Q64_ReadData(0x000000, dataArr_Read, 4);
-    OLED_ShowHexNum(3, 3, dataArray_write[0], 4);
-    OLED_ShowHexNum(3, 6, dataArray_write[1], 4);
-    OLED_ShowHexNum(3, 9, dataArray_write[2], 4);
-    OLED_ShowHexNum(3, 12, dataArray_write[3], 4);
+    OLED_ShowHexNum(3, 3, dataArray_write[0], 2);
+    OLED_ShowHexNum(3, 6, dataArray_write[1], 2);
+    OLED_ShowHexNum(3, 9, dataArray_write[2], 2);
+    OLED_ShowHexNum(3, 12, dataArray_write[3], 2);
 
-    OLED_ShowHexNum(4, 3, dataArr_Read[0], 4);
-    OLED_ShowHexNum(4, 6, dataArr_Read[1], 4);
-    OLED_ShowHexNum(4, 9, dataArr_Read[2], 4);
-    OLED_ShowHexNum(4, 12, dataArr_Read[3], 4);
+    OLED_ShowHexNum(4, 3, dataArr_Read[0], 2);
+    OLED_ShowHexNum(4, 6, dataArr_Read[1], 2);
+    OLED_ShowHexNum(4, 9, dataArr_Read[2], 2);
+    OLED_ShowHexNum(4, 12, dataArr_Read[3], 2);
 
     while(1) {
 

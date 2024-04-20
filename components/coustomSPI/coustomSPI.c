@@ -98,7 +98,7 @@ void customSPI_Init(void){
  * 2、
  */
 void customSPI_Start(void){
-    customSPI_W_SS(1);
+    customSPI_W_SS(0);
 
 
 }
@@ -108,7 +108,7 @@ void customSPI_Start(void){
  * 将SS置低电平
  */
 void customSPI_Stop(void){
-    customSPI_W_SS(0);
+    customSPI_W_SS(1);
 }
 
 /**

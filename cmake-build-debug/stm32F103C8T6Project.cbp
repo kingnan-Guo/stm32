@@ -388,6 +388,9 @@
 		<Unit filename="/Users/kingnan/Documents/github/stm32/components/W25Q64/W25Q64.h">
 			<Option target="stm32F103C8T6Project.elf"/>
 		</Unit>
+		<Unit filename="/Users/kingnan/Documents/github/stm32/components/W25Q64/W25Q64_Ins.h">
+			<Option target="stm32F103C8T6Project.elf"/>
+		</Unit>
 		<Unit filename="/Users/kingnan/Documents/github/stm32/components/countSensor/countSensor.c">
 			<Option target="stm32F103C8T6Project.elf"/>
 		</Unit>
