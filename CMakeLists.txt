@@ -89,38 +89,44 @@ include_directories(
         # 重定向 相关
         system/retarget
         system/syscalls
-        # RTOS
-
-        #官网版
-        #FreeRTOS/include
-        #FreeRTOS/portable/GCC/ARM_CM3
-        #FreeRTOS/config
-
-        # cubeMX 版
-        Middlewares/Third_Party/FreeRTOS/Source/config
-        Middlewares/Third_Party/FreeRTOS/Source/include
-        Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM3
-        #Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2
 )
 
 add_definitions(-DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB)
 
 #file(GLOB_RECURSE SOURCES "Core/*.*" "Drivers/*.*")
 #官网版
-#file(GLOB_RECURSE SOURCES "startup/*.*" "Libraries/*.*" "User/*.*" "components/*.*" "system/*.*" "FreeRTOS/*.*")
-# cubeMX 版
-file(GLOB_RECURSE SOURCES "startup/*.*" "Libraries/*.*" "User/*.*" "components/*.*" "system/*.*" "Middlewares/*.*")
+file(GLOB_RECURSE SOURCES "startup/*.*" "Libraries/*.*" "User/*.*" "components/*.*" "system/*.*")
 
-#set(MY_VAR "cubeMX_FreeRTOS")
-## 使用if语句判定MY_VAR的值
-#if(MY_VAR STREQUAL "cubeMX_FreeRTOS")
-#    message("cubeMX_FreeRTOS")
-#    include_directories()
-#elseif(MY_VAR STREQUAL "FreeRTOS")
-#    message("FreeRTOS")
-#else()
-#    message("不使用 FreeRTOS")
-#endif()
+file(GLOB_RECURSE SOURCES_RTOS  "")
+# RTOS
+set(MY_VAR "FreeRTOS")
+# 使用if语句判定MY_VAR的值
+if(MY_VAR STREQUAL "cubeMX_FreeRTOS")
+    message("cubeMX_FreeRTOS")
+    # 添加 .h
+    include_directories(
+            # cubeMX 版
+            Middlewares/Third_Party/FreeRTOS/Source/config
+            Middlewares/Third_Party/FreeRTOS/Source/include
+            Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM3
+            #Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2
+    )
+    file(GLOB_RECURSE SOURCES_RTOS  "Middlewares/*.*")
+
+
+elseif(MY_VAR STREQUAL "FreeRTOS")
+    message("FreeRTOS")
+    # 添加 .h
+    include_directories(
+            #官网版
+            FreeRTOS/include
+            FreeRTOS/portable/GCC/ARM_CM3
+            FreeRTOS/config
+    )
+    file(GLOB_RECURSE SOURCES_RTOS  "FreeRTOS/*.*")
+else()
+    message("不使用 FreeRTOS")
+endif()
 
 set(LINKER_SCRIPT ${CMAKE_SOURCE_DIR}/STM32F103C8TX_FLASH.ld)
 
@@ -128,7 +134,7 @@ add_link_options(-Wl,-gc-sections,--print-memory-usage,-Map=${PROJECT_BINARY_DIR
 add_link_options(-mcpu=cortex-m3 -mthumb -mthumb-interwork)
 add_link_options(-T ${LINKER_SCRIPT})
 
-add_executable(${PROJECT_NAME}.elf ${SOURCES} ${LINKER_SCRIPT})
+add_executable(${PROJECT_NAME}.elf ${SOURCES} ${LINKER_SCRIPT} ${SOURCES_RTOS})
 
 set(HEX_FILE ${PROJECT_BINARY_DIR}/${PROJECT_NAME}.hex)
 set(BIN_FILE ${PROJECT_BINARY_DIR}/${PROJECT_NAME}.bin)

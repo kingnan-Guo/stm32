@@ -129,6 +129,222 @@ stm32F103C8T6Project.elf/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/stm32F103C8T6Project.elf.dir/build.make CMakeFiles/stm32F103C8T6Project.elf.dir/build
 .PHONY : stm32F103C8T6Project.elf/fast
 
+FreeRTOS/croutine.obj: FreeRTOS/croutine.c.obj
+.PHONY : FreeRTOS/croutine.obj
+
+# target to build an object file
+FreeRTOS/croutine.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/stm32F103C8T6Project.elf.dir/build.make CMakeFiles/stm32F103C8T6Project.elf.dir/FreeRTOS/croutine.c.obj
+.PHONY : FreeRTOS/croutine.c.obj
+
+FreeRTOS/croutine.i: FreeRTOS/croutine.c.i
+.PHONY : FreeRTOS/croutine.i
+
+# target to preprocess a source file
+FreeRTOS/croutine.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/stm32F103C8T6Project.elf.dir/build.make CMakeFiles/stm32F103C8T6Project.elf.dir/FreeRTOS/croutine.c.i
+.PHONY : FreeRTOS/croutine.c.i
+
+FreeRTOS/croutine.s: FreeRTOS/croutine.c.s
+.PHONY : FreeRTOS/croutine.s
+
+# target to generate assembly for a file
+FreeRTOS/croutine.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/stm32F103C8T6Project.elf.dir/build.make CMakeFiles/stm32F103C8T6Project.elf.dir/FreeRTOS/croutine.c.s
+.PHONY : FreeRTOS/croutine.c.s
+
+FreeRTOS/event_groups.obj: FreeRTOS/event_groups.c.obj
+.PHONY : FreeRTOS/event_groups.obj
+
+# target to build an object file
+FreeRTOS/event_groups.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/stm32F103C8T6Project.elf.dir/build.make CMakeFiles/stm32F103C8T6Project.elf.dir/FreeRTOS/event_groups.c.obj
+.PHONY : FreeRTOS/event_groups.c.obj
+
+FreeRTOS/event_groups.i: FreeRTOS/event_groups.c.i
+.PHONY : FreeRTOS/event_groups.i
+
+# target to preprocess a source file
+FreeRTOS/event_groups.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/stm32F103C8T6Project.elf.dir/build.make CMakeFiles/stm32F103C8T6Project.elf.dir/FreeRTOS/event_groups.c.i
+.PHONY : FreeRTOS/event_groups.c.i
+
+FreeRTOS/event_groups.s: FreeRTOS/event_groups.c.s
+.PHONY : FreeRTOS/event_groups.s
+
+# target to generate assembly for a file
+FreeRTOS/event_groups.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/stm32F103C8T6Project.elf.dir/build.make CMakeFiles/stm32F103C8T6Project.elf.dir/FreeRTOS/event_groups.c.s
+.PHONY : FreeRTOS/event_groups.c.s
+
+FreeRTOS/list.obj: FreeRTOS/list.c.obj
+.PHONY : FreeRTOS/list.obj
+
+# target to build an object file
+FreeRTOS/list.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/stm32F103C8T6Project.elf.dir/build.make CMakeFiles/stm32F103C8T6Project.elf.dir/FreeRTOS/list.c.obj
+.PHONY : FreeRTOS/list.c.obj
+
+FreeRTOS/list.i: FreeRTOS/list.c.i
+.PHONY : FreeRTOS/list.i
+
+# target to preprocess a source file
+FreeRTOS/list.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/stm32F103C8T6Project.elf.dir/build.make CMakeFiles/stm32F103C8T6Project.elf.dir/FreeRTOS/list.c.i
+.PHONY : FreeRTOS/list.c.i
+
+FreeRTOS/list.s: FreeRTOS/list.c.s
+.PHONY : FreeRTOS/list.s
+
+# target to generate assembly for a file
+FreeRTOS/list.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/stm32F103C8T6Project.elf.dir/build.make CMakeFiles/stm32F103C8T6Project.elf.dir/FreeRTOS/list.c.s
+.PHONY : FreeRTOS/list.c.s
+
+FreeRTOS/portable/GCC/ARM_CM3/port.obj: FreeRTOS/portable/GCC/ARM_CM3/port.c.obj
+.PHONY : FreeRTOS/portable/GCC/ARM_CM3/port.obj
+
+# target to build an object file
+FreeRTOS/portable/GCC/ARM_CM3/port.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/stm32F103C8T6Project.elf.dir/build.make CMakeFiles/stm32F103C8T6Project.elf.dir/FreeRTOS/portable/GCC/ARM_CM3/port.c.obj
+.PHONY : FreeRTOS/portable/GCC/ARM_CM3/port.c.obj
+
+FreeRTOS/portable/GCC/ARM_CM3/port.i: FreeRTOS/portable/GCC/ARM_CM3/port.c.i
+.PHONY : FreeRTOS/portable/GCC/ARM_CM3/port.i
+
+# target to preprocess a source file
+FreeRTOS/portable/GCC/ARM_CM3/port.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/stm32F103C8T6Project.elf.dir/build.make CMakeFiles/stm32F103C8T6Project.elf.dir/FreeRTOS/portable/GCC/ARM_CM3/port.c.i
+.PHONY : FreeRTOS/portable/GCC/ARM_CM3/port.c.i
+
+FreeRTOS/portable/GCC/ARM_CM3/port.s: FreeRTOS/portable/GCC/ARM_CM3/port.c.s
+.PHONY : FreeRTOS/portable/GCC/ARM_CM3/port.s
+
+# target to generate assembly for a file
+FreeRTOS/portable/GCC/ARM_CM3/port.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/stm32F103C8T6Project.elf.dir/build.make CMakeFiles/stm32F103C8T6Project.elf.dir/FreeRTOS/portable/GCC/ARM_CM3/port.c.s
+.PHONY : FreeRTOS/portable/GCC/ARM_CM3/port.c.s
+
+FreeRTOS/portable/MemMang/heap_4.obj: FreeRTOS/portable/MemMang/heap_4.c.obj
+.PHONY : FreeRTOS/portable/MemMang/heap_4.obj
+
+# target to build an object file
+FreeRTOS/portable/MemMang/heap_4.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/stm32F103C8T6Project.elf.dir/build.make CMakeFiles/stm32F103C8T6Project.elf.dir/FreeRTOS/portable/MemMang/heap_4.c.obj
+.PHONY : FreeRTOS/portable/MemMang/heap_4.c.obj
+
+FreeRTOS/portable/MemMang/heap_4.i: FreeRTOS/portable/MemMang/heap_4.c.i
+.PHONY : FreeRTOS/portable/MemMang/heap_4.i
+
+# target to preprocess a source file
+FreeRTOS/portable/MemMang/heap_4.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/stm32F103C8T6Project.elf.dir/build.make CMakeFiles/stm32F103C8T6Project.elf.dir/FreeRTOS/portable/MemMang/heap_4.c.i
+.PHONY : FreeRTOS/portable/MemMang/heap_4.c.i
+
+FreeRTOS/portable/MemMang/heap_4.s: FreeRTOS/portable/MemMang/heap_4.c.s
+.PHONY : FreeRTOS/portable/MemMang/heap_4.s
+
+# target to generate assembly for a file
+FreeRTOS/portable/MemMang/heap_4.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/stm32F103C8T6Project.elf.dir/build.make CMakeFiles/stm32F103C8T6Project.elf.dir/FreeRTOS/portable/MemMang/heap_4.c.s
+.PHONY : FreeRTOS/portable/MemMang/heap_4.c.s
+
+FreeRTOS/queue.obj: FreeRTOS/queue.c.obj
+.PHONY : FreeRTOS/queue.obj
+
+# target to build an object file
+FreeRTOS/queue.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/stm32F103C8T6Project.elf.dir/build.make CMakeFiles/stm32F103C8T6Project.elf.dir/FreeRTOS/queue.c.obj
+.PHONY : FreeRTOS/queue.c.obj
+
+FreeRTOS/queue.i: FreeRTOS/queue.c.i
+.PHONY : FreeRTOS/queue.i
+
+# target to preprocess a source file
+FreeRTOS/queue.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/stm32F103C8T6Project.elf.dir/build.make CMakeFiles/stm32F103C8T6Project.elf.dir/FreeRTOS/queue.c.i
+.PHONY : FreeRTOS/queue.c.i
+
+FreeRTOS/queue.s: FreeRTOS/queue.c.s
+.PHONY : FreeRTOS/queue.s
+
+# target to generate assembly for a file
+FreeRTOS/queue.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/stm32F103C8T6Project.elf.dir/build.make CMakeFiles/stm32F103C8T6Project.elf.dir/FreeRTOS/queue.c.s
+.PHONY : FreeRTOS/queue.c.s
+
+FreeRTOS/stream_buffer.obj: FreeRTOS/stream_buffer.c.obj
+.PHONY : FreeRTOS/stream_buffer.obj
+
+# target to build an object file
+FreeRTOS/stream_buffer.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/stm32F103C8T6Project.elf.dir/build.make CMakeFiles/stm32F103C8T6Project.elf.dir/FreeRTOS/stream_buffer.c.obj
+.PHONY : FreeRTOS/stream_buffer.c.obj
+
+FreeRTOS/stream_buffer.i: FreeRTOS/stream_buffer.c.i
+.PHONY : FreeRTOS/stream_buffer.i
+
+# target to preprocess a source file
+FreeRTOS/stream_buffer.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/stm32F103C8T6Project.elf.dir/build.make CMakeFiles/stm32F103C8T6Project.elf.dir/FreeRTOS/stream_buffer.c.i
+.PHONY : FreeRTOS/stream_buffer.c.i
+
+FreeRTOS/stream_buffer.s: FreeRTOS/stream_buffer.c.s
+.PHONY : FreeRTOS/stream_buffer.s
+
+# target to generate assembly for a file
+FreeRTOS/stream_buffer.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/stm32F103C8T6Project.elf.dir/build.make CMakeFiles/stm32F103C8T6Project.elf.dir/FreeRTOS/stream_buffer.c.s
+.PHONY : FreeRTOS/stream_buffer.c.s
+
+FreeRTOS/tasks.obj: FreeRTOS/tasks.c.obj
+.PHONY : FreeRTOS/tasks.obj
+
+# target to build an object file
+FreeRTOS/tasks.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/stm32F103C8T6Project.elf.dir/build.make CMakeFiles/stm32F103C8T6Project.elf.dir/FreeRTOS/tasks.c.obj
+.PHONY : FreeRTOS/tasks.c.obj
+
+FreeRTOS/tasks.i: FreeRTOS/tasks.c.i
+.PHONY : FreeRTOS/tasks.i
+
+# target to preprocess a source file
+FreeRTOS/tasks.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/stm32F103C8T6Project.elf.dir/build.make CMakeFiles/stm32F103C8T6Project.elf.dir/FreeRTOS/tasks.c.i
+.PHONY : FreeRTOS/tasks.c.i
+
+FreeRTOS/tasks.s: FreeRTOS/tasks.c.s
+.PHONY : FreeRTOS/tasks.s
+
+# target to generate assembly for a file
+FreeRTOS/tasks.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/stm32F103C8T6Project.elf.dir/build.make CMakeFiles/stm32F103C8T6Project.elf.dir/FreeRTOS/tasks.c.s
+.PHONY : FreeRTOS/tasks.c.s
+
+FreeRTOS/timers.obj: FreeRTOS/timers.c.obj
+.PHONY : FreeRTOS/timers.obj
+
+# target to build an object file
+FreeRTOS/timers.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/stm32F103C8T6Project.elf.dir/build.make CMakeFiles/stm32F103C8T6Project.elf.dir/FreeRTOS/timers.c.obj
+.PHONY : FreeRTOS/timers.c.obj
+
+FreeRTOS/timers.i: FreeRTOS/timers.c.i
+.PHONY : FreeRTOS/timers.i
+
+# target to preprocess a source file
+FreeRTOS/timers.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/stm32F103C8T6Project.elf.dir/build.make CMakeFiles/stm32F103C8T6Project.elf.dir/FreeRTOS/timers.c.i
+.PHONY : FreeRTOS/timers.c.i
+
+FreeRTOS/timers.s: FreeRTOS/timers.c.s
+.PHONY : FreeRTOS/timers.s
+
+# target to generate assembly for a file
+FreeRTOS/timers.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/stm32F103C8T6Project.elf.dir/build.make CMakeFiles/stm32F103C8T6Project.elf.dir/FreeRTOS/timers.c.s
+.PHONY : FreeRTOS/timers.c.s
+
 Libraries/CMSIS/core_cm3.obj: Libraries/CMSIS/core_cm3.c.obj
 .PHONY : Libraries/CMSIS/core_cm3.obj
 
@@ -729,246 +945,6 @@ Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_wwdg.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/stm32F103C8T6Project.elf.dir/build.make CMakeFiles/stm32F103C8T6Project.elf.dir/Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_wwdg.c.s
 .PHONY : Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_wwdg.c.s
 
-Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2/cmsis_os2.obj: Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2/cmsis_os2.c.obj
-.PHONY : Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2/cmsis_os2.obj
-
-# target to build an object file
-Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2/cmsis_os2.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/stm32F103C8T6Project.elf.dir/build.make CMakeFiles/stm32F103C8T6Project.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2/cmsis_os2.c.obj
-.PHONY : Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2/cmsis_os2.c.obj
-
-Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2/cmsis_os2.i: Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2/cmsis_os2.c.i
-.PHONY : Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2/cmsis_os2.i
-
-# target to preprocess a source file
-Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2/cmsis_os2.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/stm32F103C8T6Project.elf.dir/build.make CMakeFiles/stm32F103C8T6Project.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2/cmsis_os2.c.i
-.PHONY : Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2/cmsis_os2.c.i
-
-Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2/cmsis_os2.s: Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2/cmsis_os2.c.s
-.PHONY : Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2/cmsis_os2.s
-
-# target to generate assembly for a file
-Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2/cmsis_os2.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/stm32F103C8T6Project.elf.dir/build.make CMakeFiles/stm32F103C8T6Project.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2/cmsis_os2.c.s
-.PHONY : Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2/cmsis_os2.c.s
-
-Middlewares/Third_Party/FreeRTOS/Source/croutine.obj: Middlewares/Third_Party/FreeRTOS/Source/croutine.c.obj
-.PHONY : Middlewares/Third_Party/FreeRTOS/Source/croutine.obj
-
-# target to build an object file
-Middlewares/Third_Party/FreeRTOS/Source/croutine.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/stm32F103C8T6Project.elf.dir/build.make CMakeFiles/stm32F103C8T6Project.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/croutine.c.obj
-.PHONY : Middlewares/Third_Party/FreeRTOS/Source/croutine.c.obj
-
-Middlewares/Third_Party/FreeRTOS/Source/croutine.i: Middlewares/Third_Party/FreeRTOS/Source/croutine.c.i
-.PHONY : Middlewares/Third_Party/FreeRTOS/Source/croutine.i
-
-# target to preprocess a source file
-Middlewares/Third_Party/FreeRTOS/Source/croutine.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/stm32F103C8T6Project.elf.dir/build.make CMakeFiles/stm32F103C8T6Project.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/croutine.c.i
-.PHONY : Middlewares/Third_Party/FreeRTOS/Source/croutine.c.i
-
-Middlewares/Third_Party/FreeRTOS/Source/croutine.s: Middlewares/Third_Party/FreeRTOS/Source/croutine.c.s
-.PHONY : Middlewares/Third_Party/FreeRTOS/Source/croutine.s
-
-# target to generate assembly for a file
-Middlewares/Third_Party/FreeRTOS/Source/croutine.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/stm32F103C8T6Project.elf.dir/build.make CMakeFiles/stm32F103C8T6Project.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/croutine.c.s
-.PHONY : Middlewares/Third_Party/FreeRTOS/Source/croutine.c.s
-
-Middlewares/Third_Party/FreeRTOS/Source/event_groups.obj: Middlewares/Third_Party/FreeRTOS/Source/event_groups.c.obj
-.PHONY : Middlewares/Third_Party/FreeRTOS/Source/event_groups.obj
-
-# target to build an object file
-Middlewares/Third_Party/FreeRTOS/Source/event_groups.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/stm32F103C8T6Project.elf.dir/build.make CMakeFiles/stm32F103C8T6Project.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/event_groups.c.obj
-.PHONY : Middlewares/Third_Party/FreeRTOS/Source/event_groups.c.obj
-
-Middlewares/Third_Party/FreeRTOS/Source/event_groups.i: Middlewares/Third_Party/FreeRTOS/Source/event_groups.c.i
-.PHONY : Middlewares/Third_Party/FreeRTOS/Source/event_groups.i
-
-# target to preprocess a source file
-Middlewares/Third_Party/FreeRTOS/Source/event_groups.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/stm32F103C8T6Project.elf.dir/build.make CMakeFiles/stm32F103C8T6Project.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/event_groups.c.i
-.PHONY : Middlewares/Third_Party/FreeRTOS/Source/event_groups.c.i
-
-Middlewares/Third_Party/FreeRTOS/Source/event_groups.s: Middlewares/Third_Party/FreeRTOS/Source/event_groups.c.s
-.PHONY : Middlewares/Third_Party/FreeRTOS/Source/event_groups.s
-
-# target to generate assembly for a file
-Middlewares/Third_Party/FreeRTOS/Source/event_groups.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/stm32F103C8T6Project.elf.dir/build.make CMakeFiles/stm32F103C8T6Project.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/event_groups.c.s
-.PHONY : Middlewares/Third_Party/FreeRTOS/Source/event_groups.c.s
-
-Middlewares/Third_Party/FreeRTOS/Source/list.obj: Middlewares/Third_Party/FreeRTOS/Source/list.c.obj
-.PHONY : Middlewares/Third_Party/FreeRTOS/Source/list.obj
-
-# target to build an object file
-Middlewares/Third_Party/FreeRTOS/Source/list.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/stm32F103C8T6Project.elf.dir/build.make CMakeFiles/stm32F103C8T6Project.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/list.c.obj
-.PHONY : Middlewares/Third_Party/FreeRTOS/Source/list.c.obj
-
-Middlewares/Third_Party/FreeRTOS/Source/list.i: Middlewares/Third_Party/FreeRTOS/Source/list.c.i
-.PHONY : Middlewares/Third_Party/FreeRTOS/Source/list.i
-
-# target to preprocess a source file
-Middlewares/Third_Party/FreeRTOS/Source/list.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/stm32F103C8T6Project.elf.dir/build.make CMakeFiles/stm32F103C8T6Project.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/list.c.i
-.PHONY : Middlewares/Third_Party/FreeRTOS/Source/list.c.i
-
-Middlewares/Third_Party/FreeRTOS/Source/list.s: Middlewares/Third_Party/FreeRTOS/Source/list.c.s
-.PHONY : Middlewares/Third_Party/FreeRTOS/Source/list.s
-
-# target to generate assembly for a file
-Middlewares/Third_Party/FreeRTOS/Source/list.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/stm32F103C8T6Project.elf.dir/build.make CMakeFiles/stm32F103C8T6Project.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/list.c.s
-.PHONY : Middlewares/Third_Party/FreeRTOS/Source/list.c.s
-
-Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM3/port.obj: Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM3/port.c.obj
-.PHONY : Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM3/port.obj
-
-# target to build an object file
-Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM3/port.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/stm32F103C8T6Project.elf.dir/build.make CMakeFiles/stm32F103C8T6Project.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM3/port.c.obj
-.PHONY : Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM3/port.c.obj
-
-Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM3/port.i: Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM3/port.c.i
-.PHONY : Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM3/port.i
-
-# target to preprocess a source file
-Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM3/port.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/stm32F103C8T6Project.elf.dir/build.make CMakeFiles/stm32F103C8T6Project.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM3/port.c.i
-.PHONY : Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM3/port.c.i
-
-Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM3/port.s: Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM3/port.c.s
-.PHONY : Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM3/port.s
-
-# target to generate assembly for a file
-Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM3/port.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/stm32F103C8T6Project.elf.dir/build.make CMakeFiles/stm32F103C8T6Project.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM3/port.c.s
-.PHONY : Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM3/port.c.s
-
-Middlewares/Third_Party/FreeRTOS/Source/portable/MemMang/heap_4.obj: Middlewares/Third_Party/FreeRTOS/Source/portable/MemMang/heap_4.c.obj
-.PHONY : Middlewares/Third_Party/FreeRTOS/Source/portable/MemMang/heap_4.obj
-
-# target to build an object file
-Middlewares/Third_Party/FreeRTOS/Source/portable/MemMang/heap_4.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/stm32F103C8T6Project.elf.dir/build.make CMakeFiles/stm32F103C8T6Project.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/portable/MemMang/heap_4.c.obj
-.PHONY : Middlewares/Third_Party/FreeRTOS/Source/portable/MemMang/heap_4.c.obj
-
-Middlewares/Third_Party/FreeRTOS/Source/portable/MemMang/heap_4.i: Middlewares/Third_Party/FreeRTOS/Source/portable/MemMang/heap_4.c.i
-.PHONY : Middlewares/Third_Party/FreeRTOS/Source/portable/MemMang/heap_4.i
-
-# target to preprocess a source file
-Middlewares/Third_Party/FreeRTOS/Source/portable/MemMang/heap_4.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/stm32F103C8T6Project.elf.dir/build.make CMakeFiles/stm32F103C8T6Project.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/portable/MemMang/heap_4.c.i
-.PHONY : Middlewares/Third_Party/FreeRTOS/Source/portable/MemMang/heap_4.c.i
-
-Middlewares/Third_Party/FreeRTOS/Source/portable/MemMang/heap_4.s: Middlewares/Third_Party/FreeRTOS/Source/portable/MemMang/heap_4.c.s
-.PHONY : Middlewares/Third_Party/FreeRTOS/Source/portable/MemMang/heap_4.s
-
-# target to generate assembly for a file
-Middlewares/Third_Party/FreeRTOS/Source/portable/MemMang/heap_4.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/stm32F103C8T6Project.elf.dir/build.make CMakeFiles/stm32F103C8T6Project.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/portable/MemMang/heap_4.c.s
-.PHONY : Middlewares/Third_Party/FreeRTOS/Source/portable/MemMang/heap_4.c.s
-
-Middlewares/Third_Party/FreeRTOS/Source/queue.obj: Middlewares/Third_Party/FreeRTOS/Source/queue.c.obj
-.PHONY : Middlewares/Third_Party/FreeRTOS/Source/queue.obj
-
-# target to build an object file
-Middlewares/Third_Party/FreeRTOS/Source/queue.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/stm32F103C8T6Project.elf.dir/build.make CMakeFiles/stm32F103C8T6Project.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/queue.c.obj
-.PHONY : Middlewares/Third_Party/FreeRTOS/Source/queue.c.obj
-
-Middlewares/Third_Party/FreeRTOS/Source/queue.i: Middlewares/Third_Party/FreeRTOS/Source/queue.c.i
-.PHONY : Middlewares/Third_Party/FreeRTOS/Source/queue.i
-
-# target to preprocess a source file
-Middlewares/Third_Party/FreeRTOS/Source/queue.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/stm32F103C8T6Project.elf.dir/build.make CMakeFiles/stm32F103C8T6Project.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/queue.c.i
-.PHONY : Middlewares/Third_Party/FreeRTOS/Source/queue.c.i
-
-Middlewares/Third_Party/FreeRTOS/Source/queue.s: Middlewares/Third_Party/FreeRTOS/Source/queue.c.s
-.PHONY : Middlewares/Third_Party/FreeRTOS/Source/queue.s
-
-# target to generate assembly for a file
-Middlewares/Third_Party/FreeRTOS/Source/queue.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/stm32F103C8T6Project.elf.dir/build.make CMakeFiles/stm32F103C8T6Project.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/queue.c.s
-.PHONY : Middlewares/Third_Party/FreeRTOS/Source/queue.c.s
-
-Middlewares/Third_Party/FreeRTOS/Source/stream_buffer.obj: Middlewares/Third_Party/FreeRTOS/Source/stream_buffer.c.obj
-.PHONY : Middlewares/Third_Party/FreeRTOS/Source/stream_buffer.obj
-
-# target to build an object file
-Middlewares/Third_Party/FreeRTOS/Source/stream_buffer.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/stm32F103C8T6Project.elf.dir/build.make CMakeFiles/stm32F103C8T6Project.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/stream_buffer.c.obj
-.PHONY : Middlewares/Third_Party/FreeRTOS/Source/stream_buffer.c.obj
-
-Middlewares/Third_Party/FreeRTOS/Source/stream_buffer.i: Middlewares/Third_Party/FreeRTOS/Source/stream_buffer.c.i
-.PHONY : Middlewares/Third_Party/FreeRTOS/Source/stream_buffer.i
-
-# target to preprocess a source file
-Middlewares/Third_Party/FreeRTOS/Source/stream_buffer.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/stm32F103C8T6Project.elf.dir/build.make CMakeFiles/stm32F103C8T6Project.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/stream_buffer.c.i
-.PHONY : Middlewares/Third_Party/FreeRTOS/Source/stream_buffer.c.i
-
-Middlewares/Third_Party/FreeRTOS/Source/stream_buffer.s: Middlewares/Third_Party/FreeRTOS/Source/stream_buffer.c.s
-.PHONY : Middlewares/Third_Party/FreeRTOS/Source/stream_buffer.s
-
-# target to generate assembly for a file
-Middlewares/Third_Party/FreeRTOS/Source/stream_buffer.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/stm32F103C8T6Project.elf.dir/build.make CMakeFiles/stm32F103C8T6Project.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/stream_buffer.c.s
-.PHONY : Middlewares/Third_Party/FreeRTOS/Source/stream_buffer.c.s
-
-Middlewares/Third_Party/FreeRTOS/Source/tasks.obj: Middlewares/Third_Party/FreeRTOS/Source/tasks.c.obj
-.PHONY : Middlewares/Third_Party/FreeRTOS/Source/tasks.obj
-
-# target to build an object file
-Middlewares/Third_Party/FreeRTOS/Source/tasks.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/stm32F103C8T6Project.elf.dir/build.make CMakeFiles/stm32F103C8T6Project.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/tasks.c.obj
-.PHONY : Middlewares/Third_Party/FreeRTOS/Source/tasks.c.obj
-
-Middlewares/Third_Party/FreeRTOS/Source/tasks.i: Middlewares/Third_Party/FreeRTOS/Source/tasks.c.i
-.PHONY : Middlewares/Third_Party/FreeRTOS/Source/tasks.i
-
-# target to preprocess a source file
-Middlewares/Third_Party/FreeRTOS/Source/tasks.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/stm32F103C8T6Project.elf.dir/build.make CMakeFiles/stm32F103C8T6Project.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/tasks.c.i
-.PHONY : Middlewares/Third_Party/FreeRTOS/Source/tasks.c.i
-
-Middlewares/Third_Party/FreeRTOS/Source/tasks.s: Middlewares/Third_Party/FreeRTOS/Source/tasks.c.s
-.PHONY : Middlewares/Third_Party/FreeRTOS/Source/tasks.s
-
-# target to generate assembly for a file
-Middlewares/Third_Party/FreeRTOS/Source/tasks.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/stm32F103C8T6Project.elf.dir/build.make CMakeFiles/stm32F103C8T6Project.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/tasks.c.s
-.PHONY : Middlewares/Third_Party/FreeRTOS/Source/tasks.c.s
-
-Middlewares/Third_Party/FreeRTOS/Source/timers.obj: Middlewares/Third_Party/FreeRTOS/Source/timers.c.obj
-.PHONY : Middlewares/Third_Party/FreeRTOS/Source/timers.obj
-
-# target to build an object file
-Middlewares/Third_Party/FreeRTOS/Source/timers.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/stm32F103C8T6Project.elf.dir/build.make CMakeFiles/stm32F103C8T6Project.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/timers.c.obj
-.PHONY : Middlewares/Third_Party/FreeRTOS/Source/timers.c.obj
-
-Middlewares/Third_Party/FreeRTOS/Source/timers.i: Middlewares/Third_Party/FreeRTOS/Source/timers.c.i
-.PHONY : Middlewares/Third_Party/FreeRTOS/Source/timers.i
-
-# target to preprocess a source file
-Middlewares/Third_Party/FreeRTOS/Source/timers.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/stm32F103C8T6Project.elf.dir/build.make CMakeFiles/stm32F103C8T6Project.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/timers.c.i
-.PHONY : Middlewares/Third_Party/FreeRTOS/Source/timers.c.i
-
-Middlewares/Third_Party/FreeRTOS/Source/timers.s: Middlewares/Third_Party/FreeRTOS/Source/timers.c.s
-.PHONY : Middlewares/Third_Party/FreeRTOS/Source/timers.s
-
-# target to generate assembly for a file
-Middlewares/Third_Party/FreeRTOS/Source/timers.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/stm32F103C8T6Project.elf.dir/build.make CMakeFiles/stm32F103C8T6Project.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/timers.c.s
-.PHONY : Middlewares/Third_Party/FreeRTOS/Source/timers.c.s
-
 User/main.obj: User/main.c.obj
 .PHONY : User/main.obj
 
@@ -1562,6 +1538,33 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... stm32F103C8T6Project.elf"
+	@echo "... FreeRTOS/croutine.obj"
+	@echo "... FreeRTOS/croutine.i"
+	@echo "... FreeRTOS/croutine.s"
+	@echo "... FreeRTOS/event_groups.obj"
+	@echo "... FreeRTOS/event_groups.i"
+	@echo "... FreeRTOS/event_groups.s"
+	@echo "... FreeRTOS/list.obj"
+	@echo "... FreeRTOS/list.i"
+	@echo "... FreeRTOS/list.s"
+	@echo "... FreeRTOS/portable/GCC/ARM_CM3/port.obj"
+	@echo "... FreeRTOS/portable/GCC/ARM_CM3/port.i"
+	@echo "... FreeRTOS/portable/GCC/ARM_CM3/port.s"
+	@echo "... FreeRTOS/portable/MemMang/heap_4.obj"
+	@echo "... FreeRTOS/portable/MemMang/heap_4.i"
+	@echo "... FreeRTOS/portable/MemMang/heap_4.s"
+	@echo "... FreeRTOS/queue.obj"
+	@echo "... FreeRTOS/queue.i"
+	@echo "... FreeRTOS/queue.s"
+	@echo "... FreeRTOS/stream_buffer.obj"
+	@echo "... FreeRTOS/stream_buffer.i"
+	@echo "... FreeRTOS/stream_buffer.s"
+	@echo "... FreeRTOS/tasks.obj"
+	@echo "... FreeRTOS/tasks.i"
+	@echo "... FreeRTOS/tasks.s"
+	@echo "... FreeRTOS/timers.obj"
+	@echo "... FreeRTOS/timers.i"
+	@echo "... FreeRTOS/timers.s"
 	@echo "... Libraries/CMSIS/core_cm3.obj"
 	@echo "... Libraries/CMSIS/core_cm3.i"
 	@echo "... Libraries/CMSIS/core_cm3.s"
@@ -1637,36 +1640,6 @@ help:
 	@echo "... Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_wwdg.obj"
 	@echo "... Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_wwdg.i"
 	@echo "... Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_wwdg.s"
-	@echo "... Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2/cmsis_os2.obj"
-	@echo "... Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2/cmsis_os2.i"
-	@echo "... Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2/cmsis_os2.s"
-	@echo "... Middlewares/Third_Party/FreeRTOS/Source/croutine.obj"
-	@echo "... Middlewares/Third_Party/FreeRTOS/Source/croutine.i"
-	@echo "... Middlewares/Third_Party/FreeRTOS/Source/croutine.s"
-	@echo "... Middlewares/Third_Party/FreeRTOS/Source/event_groups.obj"
-	@echo "... Middlewares/Third_Party/FreeRTOS/Source/event_groups.i"
-	@echo "... Middlewares/Third_Party/FreeRTOS/Source/event_groups.s"
-	@echo "... Middlewares/Third_Party/FreeRTOS/Source/list.obj"
-	@echo "... Middlewares/Third_Party/FreeRTOS/Source/list.i"
-	@echo "... Middlewares/Third_Party/FreeRTOS/Source/list.s"
-	@echo "... Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM3/port.obj"
-	@echo "... Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM3/port.i"
-	@echo "... Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM3/port.s"
-	@echo "... Middlewares/Third_Party/FreeRTOS/Source/portable/MemMang/heap_4.obj"
-	@echo "... Middlewares/Third_Party/FreeRTOS/Source/portable/MemMang/heap_4.i"
-	@echo "... Middlewares/Third_Party/FreeRTOS/Source/portable/MemMang/heap_4.s"
-	@echo "... Middlewares/Third_Party/FreeRTOS/Source/queue.obj"
-	@echo "... Middlewares/Third_Party/FreeRTOS/Source/queue.i"
-	@echo "... Middlewares/Third_Party/FreeRTOS/Source/queue.s"
-	@echo "... Middlewares/Third_Party/FreeRTOS/Source/stream_buffer.obj"
-	@echo "... Middlewares/Third_Party/FreeRTOS/Source/stream_buffer.i"
-	@echo "... Middlewares/Third_Party/FreeRTOS/Source/stream_buffer.s"
-	@echo "... Middlewares/Third_Party/FreeRTOS/Source/tasks.obj"
-	@echo "... Middlewares/Third_Party/FreeRTOS/Source/tasks.i"
-	@echo "... Middlewares/Third_Party/FreeRTOS/Source/tasks.s"
-	@echo "... Middlewares/Third_Party/FreeRTOS/Source/timers.obj"
-	@echo "... Middlewares/Third_Party/FreeRTOS/Source/timers.i"
-	@echo "... Middlewares/Third_Party/FreeRTOS/Source/timers.s"
 	@echo "... User/main.obj"
 	@echo "... User/main.i"
 	@echo "... User/main.s"

@@ -419,150 +419,10 @@ CMakeFiles/stm32F103C8T6Project.elf.dir/Libraries/STM32F10x_StdPeriph_Driver/src
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/stm32F103C8T6Project.elf.dir/Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_wwdg.c.s"
 	/usr/local/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/kingnan/Documents/github/stm32/Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_wwdg.c -o CMakeFiles/stm32F103C8T6Project.elf.dir/Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_wwdg.c.s
 
-CMakeFiles/stm32F103C8T6Project.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2/cmsis_os2.c.obj: CMakeFiles/stm32F103C8T6Project.elf.dir/flags.make
-CMakeFiles/stm32F103C8T6Project.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2/cmsis_os2.c.obj: /Users/kingnan/Documents/github/stm32/Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2/cmsis_os2.c
-CMakeFiles/stm32F103C8T6Project.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2/cmsis_os2.c.obj: CMakeFiles/stm32F103C8T6Project.elf.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/kingnan/Documents/github/stm32/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_26) "Building C object CMakeFiles/stm32F103C8T6Project.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2/cmsis_os2.c.obj"
-	/usr/local/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/stm32F103C8T6Project.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2/cmsis_os2.c.obj -MF CMakeFiles/stm32F103C8T6Project.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2/cmsis_os2.c.obj.d -o CMakeFiles/stm32F103C8T6Project.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2/cmsis_os2.c.obj -c /Users/kingnan/Documents/github/stm32/Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2/cmsis_os2.c
-
-CMakeFiles/stm32F103C8T6Project.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2/cmsis_os2.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/stm32F103C8T6Project.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2/cmsis_os2.c.i"
-	/usr/local/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/kingnan/Documents/github/stm32/Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2/cmsis_os2.c > CMakeFiles/stm32F103C8T6Project.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2/cmsis_os2.c.i
-
-CMakeFiles/stm32F103C8T6Project.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2/cmsis_os2.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/stm32F103C8T6Project.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2/cmsis_os2.c.s"
-	/usr/local/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/kingnan/Documents/github/stm32/Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2/cmsis_os2.c -o CMakeFiles/stm32F103C8T6Project.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2/cmsis_os2.c.s
-
-CMakeFiles/stm32F103C8T6Project.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/croutine.c.obj: CMakeFiles/stm32F103C8T6Project.elf.dir/flags.make
-CMakeFiles/stm32F103C8T6Project.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/croutine.c.obj: /Users/kingnan/Documents/github/stm32/Middlewares/Third_Party/FreeRTOS/Source/croutine.c
-CMakeFiles/stm32F103C8T6Project.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/croutine.c.obj: CMakeFiles/stm32F103C8T6Project.elf.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/kingnan/Documents/github/stm32/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_27) "Building C object CMakeFiles/stm32F103C8T6Project.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/croutine.c.obj"
-	/usr/local/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/stm32F103C8T6Project.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/croutine.c.obj -MF CMakeFiles/stm32F103C8T6Project.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/croutine.c.obj.d -o CMakeFiles/stm32F103C8T6Project.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/croutine.c.obj -c /Users/kingnan/Documents/github/stm32/Middlewares/Third_Party/FreeRTOS/Source/croutine.c
-
-CMakeFiles/stm32F103C8T6Project.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/croutine.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/stm32F103C8T6Project.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/croutine.c.i"
-	/usr/local/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/kingnan/Documents/github/stm32/Middlewares/Third_Party/FreeRTOS/Source/croutine.c > CMakeFiles/stm32F103C8T6Project.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/croutine.c.i
-
-CMakeFiles/stm32F103C8T6Project.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/croutine.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/stm32F103C8T6Project.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/croutine.c.s"
-	/usr/local/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/kingnan/Documents/github/stm32/Middlewares/Third_Party/FreeRTOS/Source/croutine.c -o CMakeFiles/stm32F103C8T6Project.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/croutine.c.s
-
-CMakeFiles/stm32F103C8T6Project.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/event_groups.c.obj: CMakeFiles/stm32F103C8T6Project.elf.dir/flags.make
-CMakeFiles/stm32F103C8T6Project.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/event_groups.c.obj: /Users/kingnan/Documents/github/stm32/Middlewares/Third_Party/FreeRTOS/Source/event_groups.c
-CMakeFiles/stm32F103C8T6Project.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/event_groups.c.obj: CMakeFiles/stm32F103C8T6Project.elf.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/kingnan/Documents/github/stm32/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_28) "Building C object CMakeFiles/stm32F103C8T6Project.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/event_groups.c.obj"
-	/usr/local/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/stm32F103C8T6Project.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/event_groups.c.obj -MF CMakeFiles/stm32F103C8T6Project.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/event_groups.c.obj.d -o CMakeFiles/stm32F103C8T6Project.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/event_groups.c.obj -c /Users/kingnan/Documents/github/stm32/Middlewares/Third_Party/FreeRTOS/Source/event_groups.c
-
-CMakeFiles/stm32F103C8T6Project.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/event_groups.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/stm32F103C8T6Project.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/event_groups.c.i"
-	/usr/local/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/kingnan/Documents/github/stm32/Middlewares/Third_Party/FreeRTOS/Source/event_groups.c > CMakeFiles/stm32F103C8T6Project.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/event_groups.c.i
-
-CMakeFiles/stm32F103C8T6Project.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/event_groups.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/stm32F103C8T6Project.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/event_groups.c.s"
-	/usr/local/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/kingnan/Documents/github/stm32/Middlewares/Third_Party/FreeRTOS/Source/event_groups.c -o CMakeFiles/stm32F103C8T6Project.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/event_groups.c.s
-
-CMakeFiles/stm32F103C8T6Project.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/list.c.obj: CMakeFiles/stm32F103C8T6Project.elf.dir/flags.make
-CMakeFiles/stm32F103C8T6Project.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/list.c.obj: /Users/kingnan/Documents/github/stm32/Middlewares/Third_Party/FreeRTOS/Source/list.c
-CMakeFiles/stm32F103C8T6Project.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/list.c.obj: CMakeFiles/stm32F103C8T6Project.elf.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/kingnan/Documents/github/stm32/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_29) "Building C object CMakeFiles/stm32F103C8T6Project.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/list.c.obj"
-	/usr/local/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/stm32F103C8T6Project.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/list.c.obj -MF CMakeFiles/stm32F103C8T6Project.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/list.c.obj.d -o CMakeFiles/stm32F103C8T6Project.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/list.c.obj -c /Users/kingnan/Documents/github/stm32/Middlewares/Third_Party/FreeRTOS/Source/list.c
-
-CMakeFiles/stm32F103C8T6Project.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/list.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/stm32F103C8T6Project.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/list.c.i"
-	/usr/local/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/kingnan/Documents/github/stm32/Middlewares/Third_Party/FreeRTOS/Source/list.c > CMakeFiles/stm32F103C8T6Project.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/list.c.i
-
-CMakeFiles/stm32F103C8T6Project.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/list.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/stm32F103C8T6Project.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/list.c.s"
-	/usr/local/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/kingnan/Documents/github/stm32/Middlewares/Third_Party/FreeRTOS/Source/list.c -o CMakeFiles/stm32F103C8T6Project.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/list.c.s
-
-CMakeFiles/stm32F103C8T6Project.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM3/port.c.obj: CMakeFiles/stm32F103C8T6Project.elf.dir/flags.make
-CMakeFiles/stm32F103C8T6Project.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM3/port.c.obj: /Users/kingnan/Documents/github/stm32/Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM3/port.c
-CMakeFiles/stm32F103C8T6Project.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM3/port.c.obj: CMakeFiles/stm32F103C8T6Project.elf.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/kingnan/Documents/github/stm32/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_30) "Building C object CMakeFiles/stm32F103C8T6Project.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM3/port.c.obj"
-	/usr/local/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/stm32F103C8T6Project.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM3/port.c.obj -MF CMakeFiles/stm32F103C8T6Project.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM3/port.c.obj.d -o CMakeFiles/stm32F103C8T6Project.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM3/port.c.obj -c /Users/kingnan/Documents/github/stm32/Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM3/port.c
-
-CMakeFiles/stm32F103C8T6Project.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM3/port.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/stm32F103C8T6Project.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM3/port.c.i"
-	/usr/local/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/kingnan/Documents/github/stm32/Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM3/port.c > CMakeFiles/stm32F103C8T6Project.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM3/port.c.i
-
-CMakeFiles/stm32F103C8T6Project.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM3/port.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/stm32F103C8T6Project.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM3/port.c.s"
-	/usr/local/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/kingnan/Documents/github/stm32/Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM3/port.c -o CMakeFiles/stm32F103C8T6Project.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM3/port.c.s
-
-CMakeFiles/stm32F103C8T6Project.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/portable/MemMang/heap_4.c.obj: CMakeFiles/stm32F103C8T6Project.elf.dir/flags.make
-CMakeFiles/stm32F103C8T6Project.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/portable/MemMang/heap_4.c.obj: /Users/kingnan/Documents/github/stm32/Middlewares/Third_Party/FreeRTOS/Source/portable/MemMang/heap_4.c
-CMakeFiles/stm32F103C8T6Project.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/portable/MemMang/heap_4.c.obj: CMakeFiles/stm32F103C8T6Project.elf.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/kingnan/Documents/github/stm32/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_31) "Building C object CMakeFiles/stm32F103C8T6Project.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/portable/MemMang/heap_4.c.obj"
-	/usr/local/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/stm32F103C8T6Project.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/portable/MemMang/heap_4.c.obj -MF CMakeFiles/stm32F103C8T6Project.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/portable/MemMang/heap_4.c.obj.d -o CMakeFiles/stm32F103C8T6Project.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/portable/MemMang/heap_4.c.obj -c /Users/kingnan/Documents/github/stm32/Middlewares/Third_Party/FreeRTOS/Source/portable/MemMang/heap_4.c
-
-CMakeFiles/stm32F103C8T6Project.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/portable/MemMang/heap_4.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/stm32F103C8T6Project.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/portable/MemMang/heap_4.c.i"
-	/usr/local/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/kingnan/Documents/github/stm32/Middlewares/Third_Party/FreeRTOS/Source/portable/MemMang/heap_4.c > CMakeFiles/stm32F103C8T6Project.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/portable/MemMang/heap_4.c.i
-
-CMakeFiles/stm32F103C8T6Project.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/portable/MemMang/heap_4.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/stm32F103C8T6Project.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/portable/MemMang/heap_4.c.s"
-	/usr/local/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/kingnan/Documents/github/stm32/Middlewares/Third_Party/FreeRTOS/Source/portable/MemMang/heap_4.c -o CMakeFiles/stm32F103C8T6Project.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/portable/MemMang/heap_4.c.s
-
-CMakeFiles/stm32F103C8T6Project.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/queue.c.obj: CMakeFiles/stm32F103C8T6Project.elf.dir/flags.make
-CMakeFiles/stm32F103C8T6Project.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/queue.c.obj: /Users/kingnan/Documents/github/stm32/Middlewares/Third_Party/FreeRTOS/Source/queue.c
-CMakeFiles/stm32F103C8T6Project.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/queue.c.obj: CMakeFiles/stm32F103C8T6Project.elf.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/kingnan/Documents/github/stm32/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_32) "Building C object CMakeFiles/stm32F103C8T6Project.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/queue.c.obj"
-	/usr/local/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/stm32F103C8T6Project.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/queue.c.obj -MF CMakeFiles/stm32F103C8T6Project.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/queue.c.obj.d -o CMakeFiles/stm32F103C8T6Project.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/queue.c.obj -c /Users/kingnan/Documents/github/stm32/Middlewares/Third_Party/FreeRTOS/Source/queue.c
-
-CMakeFiles/stm32F103C8T6Project.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/queue.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/stm32F103C8T6Project.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/queue.c.i"
-	/usr/local/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/kingnan/Documents/github/stm32/Middlewares/Third_Party/FreeRTOS/Source/queue.c > CMakeFiles/stm32F103C8T6Project.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/queue.c.i
-
-CMakeFiles/stm32F103C8T6Project.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/queue.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/stm32F103C8T6Project.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/queue.c.s"
-	/usr/local/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/kingnan/Documents/github/stm32/Middlewares/Third_Party/FreeRTOS/Source/queue.c -o CMakeFiles/stm32F103C8T6Project.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/queue.c.s
-
-CMakeFiles/stm32F103C8T6Project.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/stream_buffer.c.obj: CMakeFiles/stm32F103C8T6Project.elf.dir/flags.make
-CMakeFiles/stm32F103C8T6Project.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/stream_buffer.c.obj: /Users/kingnan/Documents/github/stm32/Middlewares/Third_Party/FreeRTOS/Source/stream_buffer.c
-CMakeFiles/stm32F103C8T6Project.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/stream_buffer.c.obj: CMakeFiles/stm32F103C8T6Project.elf.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/kingnan/Documents/github/stm32/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_33) "Building C object CMakeFiles/stm32F103C8T6Project.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/stream_buffer.c.obj"
-	/usr/local/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/stm32F103C8T6Project.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/stream_buffer.c.obj -MF CMakeFiles/stm32F103C8T6Project.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/stream_buffer.c.obj.d -o CMakeFiles/stm32F103C8T6Project.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/stream_buffer.c.obj -c /Users/kingnan/Documents/github/stm32/Middlewares/Third_Party/FreeRTOS/Source/stream_buffer.c
-
-CMakeFiles/stm32F103C8T6Project.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/stream_buffer.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/stm32F103C8T6Project.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/stream_buffer.c.i"
-	/usr/local/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/kingnan/Documents/github/stm32/Middlewares/Third_Party/FreeRTOS/Source/stream_buffer.c > CMakeFiles/stm32F103C8T6Project.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/stream_buffer.c.i
-
-CMakeFiles/stm32F103C8T6Project.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/stream_buffer.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/stm32F103C8T6Project.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/stream_buffer.c.s"
-	/usr/local/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/kingnan/Documents/github/stm32/Middlewares/Third_Party/FreeRTOS/Source/stream_buffer.c -o CMakeFiles/stm32F103C8T6Project.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/stream_buffer.c.s
-
-CMakeFiles/stm32F103C8T6Project.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/tasks.c.obj: CMakeFiles/stm32F103C8T6Project.elf.dir/flags.make
-CMakeFiles/stm32F103C8T6Project.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/tasks.c.obj: /Users/kingnan/Documents/github/stm32/Middlewares/Third_Party/FreeRTOS/Source/tasks.c
-CMakeFiles/stm32F103C8T6Project.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/tasks.c.obj: CMakeFiles/stm32F103C8T6Project.elf.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/kingnan/Documents/github/stm32/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_34) "Building C object CMakeFiles/stm32F103C8T6Project.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/tasks.c.obj"
-	/usr/local/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/stm32F103C8T6Project.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/tasks.c.obj -MF CMakeFiles/stm32F103C8T6Project.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/tasks.c.obj.d -o CMakeFiles/stm32F103C8T6Project.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/tasks.c.obj -c /Users/kingnan/Documents/github/stm32/Middlewares/Third_Party/FreeRTOS/Source/tasks.c
-
-CMakeFiles/stm32F103C8T6Project.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/tasks.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/stm32F103C8T6Project.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/tasks.c.i"
-	/usr/local/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/kingnan/Documents/github/stm32/Middlewares/Third_Party/FreeRTOS/Source/tasks.c > CMakeFiles/stm32F103C8T6Project.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/tasks.c.i
-
-CMakeFiles/stm32F103C8T6Project.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/tasks.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/stm32F103C8T6Project.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/tasks.c.s"
-	/usr/local/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/kingnan/Documents/github/stm32/Middlewares/Third_Party/FreeRTOS/Source/tasks.c -o CMakeFiles/stm32F103C8T6Project.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/tasks.c.s
-
-CMakeFiles/stm32F103C8T6Project.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/timers.c.obj: CMakeFiles/stm32F103C8T6Project.elf.dir/flags.make
-CMakeFiles/stm32F103C8T6Project.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/timers.c.obj: /Users/kingnan/Documents/github/stm32/Middlewares/Third_Party/FreeRTOS/Source/timers.c
-CMakeFiles/stm32F103C8T6Project.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/timers.c.obj: CMakeFiles/stm32F103C8T6Project.elf.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/kingnan/Documents/github/stm32/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_35) "Building C object CMakeFiles/stm32F103C8T6Project.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/timers.c.obj"
-	/usr/local/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/stm32F103C8T6Project.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/timers.c.obj -MF CMakeFiles/stm32F103C8T6Project.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/timers.c.obj.d -o CMakeFiles/stm32F103C8T6Project.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/timers.c.obj -c /Users/kingnan/Documents/github/stm32/Middlewares/Third_Party/FreeRTOS/Source/timers.c
-
-CMakeFiles/stm32F103C8T6Project.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/timers.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/stm32F103C8T6Project.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/timers.c.i"
-	/usr/local/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/kingnan/Documents/github/stm32/Middlewares/Third_Party/FreeRTOS/Source/timers.c > CMakeFiles/stm32F103C8T6Project.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/timers.c.i
-
-CMakeFiles/stm32F103C8T6Project.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/timers.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/stm32F103C8T6Project.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/timers.c.s"
-	/usr/local/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/kingnan/Documents/github/stm32/Middlewares/Third_Party/FreeRTOS/Source/timers.c -o CMakeFiles/stm32F103C8T6Project.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/timers.c.s
-
 CMakeFiles/stm32F103C8T6Project.elf.dir/User/main.c.obj: CMakeFiles/stm32F103C8T6Project.elf.dir/flags.make
 CMakeFiles/stm32F103C8T6Project.elf.dir/User/main.c.obj: /Users/kingnan/Documents/github/stm32/User/main.c
 CMakeFiles/stm32F103C8T6Project.elf.dir/User/main.c.obj: CMakeFiles/stm32F103C8T6Project.elf.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/kingnan/Documents/github/stm32/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_36) "Building C object CMakeFiles/stm32F103C8T6Project.elf.dir/User/main.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/kingnan/Documents/github/stm32/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_26) "Building C object CMakeFiles/stm32F103C8T6Project.elf.dir/User/main.c.obj"
 	/usr/local/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/stm32F103C8T6Project.elf.dir/User/main.c.obj -MF CMakeFiles/stm32F103C8T6Project.elf.dir/User/main.c.obj.d -o CMakeFiles/stm32F103C8T6Project.elf.dir/User/main.c.obj -c /Users/kingnan/Documents/github/stm32/User/main.c
 
 CMakeFiles/stm32F103C8T6Project.elf.dir/User/main.c.i: cmake_force
@@ -576,7 +436,7 @@ CMakeFiles/stm32F103C8T6Project.elf.dir/User/main.c.s: cmake_force
 CMakeFiles/stm32F103C8T6Project.elf.dir/User/stm32f10x_it.c.obj: CMakeFiles/stm32F103C8T6Project.elf.dir/flags.make
 CMakeFiles/stm32F103C8T6Project.elf.dir/User/stm32f10x_it.c.obj: /Users/kingnan/Documents/github/stm32/User/stm32f10x_it.c
 CMakeFiles/stm32F103C8T6Project.elf.dir/User/stm32f10x_it.c.obj: CMakeFiles/stm32F103C8T6Project.elf.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/kingnan/Documents/github/stm32/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_37) "Building C object CMakeFiles/stm32F103C8T6Project.elf.dir/User/stm32f10x_it.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/kingnan/Documents/github/stm32/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_27) "Building C object CMakeFiles/stm32F103C8T6Project.elf.dir/User/stm32f10x_it.c.obj"
 	/usr/local/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/stm32F103C8T6Project.elf.dir/User/stm32f10x_it.c.obj -MF CMakeFiles/stm32F103C8T6Project.elf.dir/User/stm32f10x_it.c.obj.d -o CMakeFiles/stm32F103C8T6Project.elf.dir/User/stm32f10x_it.c.obj -c /Users/kingnan/Documents/github/stm32/User/stm32f10x_it.c
 
 CMakeFiles/stm32F103C8T6Project.elf.dir/User/stm32f10x_it.c.i: cmake_force
@@ -590,7 +450,7 @@ CMakeFiles/stm32F103C8T6Project.elf.dir/User/stm32f10x_it.c.s: cmake_force
 CMakeFiles/stm32F103C8T6Project.elf.dir/components/AD/AD.c.obj: CMakeFiles/stm32F103C8T6Project.elf.dir/flags.make
 CMakeFiles/stm32F103C8T6Project.elf.dir/components/AD/AD.c.obj: /Users/kingnan/Documents/github/stm32/components/AD/AD.c
 CMakeFiles/stm32F103C8T6Project.elf.dir/components/AD/AD.c.obj: CMakeFiles/stm32F103C8T6Project.elf.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/kingnan/Documents/github/stm32/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_38) "Building C object CMakeFiles/stm32F103C8T6Project.elf.dir/components/AD/AD.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/kingnan/Documents/github/stm32/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_28) "Building C object CMakeFiles/stm32F103C8T6Project.elf.dir/components/AD/AD.c.obj"
 	/usr/local/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/stm32F103C8T6Project.elf.dir/components/AD/AD.c.obj -MF CMakeFiles/stm32F103C8T6Project.elf.dir/components/AD/AD.c.obj.d -o CMakeFiles/stm32F103C8T6Project.elf.dir/components/AD/AD.c.obj -c /Users/kingnan/Documents/github/stm32/components/AD/AD.c
 
 CMakeFiles/stm32F103C8T6Project.elf.dir/components/AD/AD.c.i: cmake_force
@@ -604,7 +464,7 @@ CMakeFiles/stm32F103C8T6Project.elf.dir/components/AD/AD.c.s: cmake_force
 CMakeFiles/stm32F103C8T6Project.elf.dir/components/ADC_DMA/ADC_DMA.c.obj: CMakeFiles/stm32F103C8T6Project.elf.dir/flags.make
 CMakeFiles/stm32F103C8T6Project.elf.dir/components/ADC_DMA/ADC_DMA.c.obj: /Users/kingnan/Documents/github/stm32/components/ADC_DMA/ADC_DMA.c
 CMakeFiles/stm32F103C8T6Project.elf.dir/components/ADC_DMA/ADC_DMA.c.obj: CMakeFiles/stm32F103C8T6Project.elf.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/kingnan/Documents/github/stm32/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_39) "Building C object CMakeFiles/stm32F103C8T6Project.elf.dir/components/ADC_DMA/ADC_DMA.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/kingnan/Documents/github/stm32/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_29) "Building C object CMakeFiles/stm32F103C8T6Project.elf.dir/components/ADC_DMA/ADC_DMA.c.obj"
 	/usr/local/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/stm32F103C8T6Project.elf.dir/components/ADC_DMA/ADC_DMA.c.obj -MF CMakeFiles/stm32F103C8T6Project.elf.dir/components/ADC_DMA/ADC_DMA.c.obj.d -o CMakeFiles/stm32F103C8T6Project.elf.dir/components/ADC_DMA/ADC_DMA.c.obj -c /Users/kingnan/Documents/github/stm32/components/ADC_DMA/ADC_DMA.c
 
 CMakeFiles/stm32F103C8T6Project.elf.dir/components/ADC_DMA/ADC_DMA.c.i: cmake_force
@@ -618,7 +478,7 @@ CMakeFiles/stm32F103C8T6Project.elf.dir/components/ADC_DMA/ADC_DMA.c.s: cmake_fo
 CMakeFiles/stm32F103C8T6Project.elf.dir/components/DCMotor/DCMotor.c.obj: CMakeFiles/stm32F103C8T6Project.elf.dir/flags.make
 CMakeFiles/stm32F103C8T6Project.elf.dir/components/DCMotor/DCMotor.c.obj: /Users/kingnan/Documents/github/stm32/components/DCMotor/DCMotor.c
 CMakeFiles/stm32F103C8T6Project.elf.dir/components/DCMotor/DCMotor.c.obj: CMakeFiles/stm32F103C8T6Project.elf.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/kingnan/Documents/github/stm32/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_40) "Building C object CMakeFiles/stm32F103C8T6Project.elf.dir/components/DCMotor/DCMotor.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/kingnan/Documents/github/stm32/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_30) "Building C object CMakeFiles/stm32F103C8T6Project.elf.dir/components/DCMotor/DCMotor.c.obj"
 	/usr/local/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/stm32F103C8T6Project.elf.dir/components/DCMotor/DCMotor.c.obj -MF CMakeFiles/stm32F103C8T6Project.elf.dir/components/DCMotor/DCMotor.c.obj.d -o CMakeFiles/stm32F103C8T6Project.elf.dir/components/DCMotor/DCMotor.c.obj -c /Users/kingnan/Documents/github/stm32/components/DCMotor/DCMotor.c
 
 CMakeFiles/stm32F103C8T6Project.elf.dir/components/DCMotor/DCMotor.c.i: cmake_force
@@ -632,7 +492,7 @@ CMakeFiles/stm32F103C8T6Project.elf.dir/components/DCMotor/DCMotor.c.s: cmake_fo
 CMakeFiles/stm32F103C8T6Project.elf.dir/components/Encode/Encode.c.obj: CMakeFiles/stm32F103C8T6Project.elf.dir/flags.make
 CMakeFiles/stm32F103C8T6Project.elf.dir/components/Encode/Encode.c.obj: /Users/kingnan/Documents/github/stm32/components/Encode/Encode.c
 CMakeFiles/stm32F103C8T6Project.elf.dir/components/Encode/Encode.c.obj: CMakeFiles/stm32F103C8T6Project.elf.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/kingnan/Documents/github/stm32/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_41) "Building C object CMakeFiles/stm32F103C8T6Project.elf.dir/components/Encode/Encode.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/kingnan/Documents/github/stm32/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_31) "Building C object CMakeFiles/stm32F103C8T6Project.elf.dir/components/Encode/Encode.c.obj"
 	/usr/local/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/stm32F103C8T6Project.elf.dir/components/Encode/Encode.c.obj -MF CMakeFiles/stm32F103C8T6Project.elf.dir/components/Encode/Encode.c.obj.d -o CMakeFiles/stm32F103C8T6Project.elf.dir/components/Encode/Encode.c.obj -c /Users/kingnan/Documents/github/stm32/components/Encode/Encode.c
 
 CMakeFiles/stm32F103C8T6Project.elf.dir/components/Encode/Encode.c.i: cmake_force
@@ -646,7 +506,7 @@ CMakeFiles/stm32F103C8T6Project.elf.dir/components/Encode/Encode.c.s: cmake_forc
 CMakeFiles/stm32F103C8T6Project.elf.dir/components/IC/IC.c.obj: CMakeFiles/stm32F103C8T6Project.elf.dir/flags.make
 CMakeFiles/stm32F103C8T6Project.elf.dir/components/IC/IC.c.obj: /Users/kingnan/Documents/github/stm32/components/IC/IC.c
 CMakeFiles/stm32F103C8T6Project.elf.dir/components/IC/IC.c.obj: CMakeFiles/stm32F103C8T6Project.elf.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/kingnan/Documents/github/stm32/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_42) "Building C object CMakeFiles/stm32F103C8T6Project.elf.dir/components/IC/IC.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/kingnan/Documents/github/stm32/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_32) "Building C object CMakeFiles/stm32F103C8T6Project.elf.dir/components/IC/IC.c.obj"
 	/usr/local/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/stm32F103C8T6Project.elf.dir/components/IC/IC.c.obj -MF CMakeFiles/stm32F103C8T6Project.elf.dir/components/IC/IC.c.obj.d -o CMakeFiles/stm32F103C8T6Project.elf.dir/components/IC/IC.c.obj -c /Users/kingnan/Documents/github/stm32/components/IC/IC.c
 
 CMakeFiles/stm32F103C8T6Project.elf.dir/components/IC/IC.c.i: cmake_force
@@ -660,7 +520,7 @@ CMakeFiles/stm32F103C8T6Project.elf.dir/components/IC/IC.c.s: cmake_force
 CMakeFiles/stm32F103C8T6Project.elf.dir/components/LED/LED.c.obj: CMakeFiles/stm32F103C8T6Project.elf.dir/flags.make
 CMakeFiles/stm32F103C8T6Project.elf.dir/components/LED/LED.c.obj: /Users/kingnan/Documents/github/stm32/components/LED/LED.c
 CMakeFiles/stm32F103C8T6Project.elf.dir/components/LED/LED.c.obj: CMakeFiles/stm32F103C8T6Project.elf.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/kingnan/Documents/github/stm32/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_43) "Building C object CMakeFiles/stm32F103C8T6Project.elf.dir/components/LED/LED.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/kingnan/Documents/github/stm32/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_33) "Building C object CMakeFiles/stm32F103C8T6Project.elf.dir/components/LED/LED.c.obj"
 	/usr/local/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/stm32F103C8T6Project.elf.dir/components/LED/LED.c.obj -MF CMakeFiles/stm32F103C8T6Project.elf.dir/components/LED/LED.c.obj.d -o CMakeFiles/stm32F103C8T6Project.elf.dir/components/LED/LED.c.obj -c /Users/kingnan/Documents/github/stm32/components/LED/LED.c
 
 CMakeFiles/stm32F103C8T6Project.elf.dir/components/LED/LED.c.i: cmake_force
@@ -674,7 +534,7 @@ CMakeFiles/stm32F103C8T6Project.elf.dir/components/LED/LED.c.s: cmake_force
 CMakeFiles/stm32F103C8T6Project.elf.dir/components/MPU6050/MPU6050.c.obj: CMakeFiles/stm32F103C8T6Project.elf.dir/flags.make
 CMakeFiles/stm32F103C8T6Project.elf.dir/components/MPU6050/MPU6050.c.obj: /Users/kingnan/Documents/github/stm32/components/MPU6050/MPU6050.c
 CMakeFiles/stm32F103C8T6Project.elf.dir/components/MPU6050/MPU6050.c.obj: CMakeFiles/stm32F103C8T6Project.elf.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/kingnan/Documents/github/stm32/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_44) "Building C object CMakeFiles/stm32F103C8T6Project.elf.dir/components/MPU6050/MPU6050.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/kingnan/Documents/github/stm32/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_34) "Building C object CMakeFiles/stm32F103C8T6Project.elf.dir/components/MPU6050/MPU6050.c.obj"
 	/usr/local/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/stm32F103C8T6Project.elf.dir/components/MPU6050/MPU6050.c.obj -MF CMakeFiles/stm32F103C8T6Project.elf.dir/components/MPU6050/MPU6050.c.obj.d -o CMakeFiles/stm32F103C8T6Project.elf.dir/components/MPU6050/MPU6050.c.obj -c /Users/kingnan/Documents/github/stm32/components/MPU6050/MPU6050.c
 
 CMakeFiles/stm32F103C8T6Project.elf.dir/components/MPU6050/MPU6050.c.i: cmake_force
@@ -688,7 +548,7 @@ CMakeFiles/stm32F103C8T6Project.elf.dir/components/MPU6050/MPU6050.c.s: cmake_fo
 CMakeFiles/stm32F103C8T6Project.elf.dir/components/PWM/PWM.c.obj: CMakeFiles/stm32F103C8T6Project.elf.dir/flags.make
 CMakeFiles/stm32F103C8T6Project.elf.dir/components/PWM/PWM.c.obj: /Users/kingnan/Documents/github/stm32/components/PWM/PWM.c
 CMakeFiles/stm32F103C8T6Project.elf.dir/components/PWM/PWM.c.obj: CMakeFiles/stm32F103C8T6Project.elf.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/kingnan/Documents/github/stm32/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_45) "Building C object CMakeFiles/stm32F103C8T6Project.elf.dir/components/PWM/PWM.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/kingnan/Documents/github/stm32/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_35) "Building C object CMakeFiles/stm32F103C8T6Project.elf.dir/components/PWM/PWM.c.obj"
 	/usr/local/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/stm32F103C8T6Project.elf.dir/components/PWM/PWM.c.obj -MF CMakeFiles/stm32F103C8T6Project.elf.dir/components/PWM/PWM.c.obj.d -o CMakeFiles/stm32F103C8T6Project.elf.dir/components/PWM/PWM.c.obj -c /Users/kingnan/Documents/github/stm32/components/PWM/PWM.c
 
 CMakeFiles/stm32F103C8T6Project.elf.dir/components/PWM/PWM.c.i: cmake_force
@@ -702,7 +562,7 @@ CMakeFiles/stm32F103C8T6Project.elf.dir/components/PWM/PWM.c.s: cmake_force
 CMakeFiles/stm32F103C8T6Project.elf.dir/components/Serial/Serial.c.obj: CMakeFiles/stm32F103C8T6Project.elf.dir/flags.make
 CMakeFiles/stm32F103C8T6Project.elf.dir/components/Serial/Serial.c.obj: /Users/kingnan/Documents/github/stm32/components/Serial/Serial.c
 CMakeFiles/stm32F103C8T6Project.elf.dir/components/Serial/Serial.c.obj: CMakeFiles/stm32F103C8T6Project.elf.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/kingnan/Documents/github/stm32/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_46) "Building C object CMakeFiles/stm32F103C8T6Project.elf.dir/components/Serial/Serial.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/kingnan/Documents/github/stm32/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_36) "Building C object CMakeFiles/stm32F103C8T6Project.elf.dir/components/Serial/Serial.c.obj"
 	/usr/local/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/stm32F103C8T6Project.elf.dir/components/Serial/Serial.c.obj -MF CMakeFiles/stm32F103C8T6Project.elf.dir/components/Serial/Serial.c.obj.d -o CMakeFiles/stm32F103C8T6Project.elf.dir/components/Serial/Serial.c.obj -c /Users/kingnan/Documents/github/stm32/components/Serial/Serial.c
 
 CMakeFiles/stm32F103C8T6Project.elf.dir/components/Serial/Serial.c.i: cmake_force
@@ -716,7 +576,7 @@ CMakeFiles/stm32F103C8T6Project.elf.dir/components/Serial/Serial.c.s: cmake_forc
 CMakeFiles/stm32F103C8T6Project.elf.dir/components/Serial_package/Serial_package.c.obj: CMakeFiles/stm32F103C8T6Project.elf.dir/flags.make
 CMakeFiles/stm32F103C8T6Project.elf.dir/components/Serial_package/Serial_package.c.obj: /Users/kingnan/Documents/github/stm32/components/Serial_package/Serial_package.c
 CMakeFiles/stm32F103C8T6Project.elf.dir/components/Serial_package/Serial_package.c.obj: CMakeFiles/stm32F103C8T6Project.elf.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/kingnan/Documents/github/stm32/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_47) "Building C object CMakeFiles/stm32F103C8T6Project.elf.dir/components/Serial_package/Serial_package.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/kingnan/Documents/github/stm32/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_37) "Building C object CMakeFiles/stm32F103C8T6Project.elf.dir/components/Serial_package/Serial_package.c.obj"
 	/usr/local/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/stm32F103C8T6Project.elf.dir/components/Serial_package/Serial_package.c.obj -MF CMakeFiles/stm32F103C8T6Project.elf.dir/components/Serial_package/Serial_package.c.obj.d -o CMakeFiles/stm32F103C8T6Project.elf.dir/components/Serial_package/Serial_package.c.obj -c /Users/kingnan/Documents/github/stm32/components/Serial_package/Serial_package.c
 
 CMakeFiles/stm32F103C8T6Project.elf.dir/components/Serial_package/Serial_package.c.i: cmake_force
@@ -730,7 +590,7 @@ CMakeFiles/stm32F103C8T6Project.elf.dir/components/Serial_package/Serial_package
 CMakeFiles/stm32F103C8T6Project.elf.dir/components/Timer/Timer.c.obj: CMakeFiles/stm32F103C8T6Project.elf.dir/flags.make
 CMakeFiles/stm32F103C8T6Project.elf.dir/components/Timer/Timer.c.obj: /Users/kingnan/Documents/github/stm32/components/Timer/Timer.c
 CMakeFiles/stm32F103C8T6Project.elf.dir/components/Timer/Timer.c.obj: CMakeFiles/stm32F103C8T6Project.elf.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/kingnan/Documents/github/stm32/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_48) "Building C object CMakeFiles/stm32F103C8T6Project.elf.dir/components/Timer/Timer.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/kingnan/Documents/github/stm32/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_38) "Building C object CMakeFiles/stm32F103C8T6Project.elf.dir/components/Timer/Timer.c.obj"
 	/usr/local/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/stm32F103C8T6Project.elf.dir/components/Timer/Timer.c.obj -MF CMakeFiles/stm32F103C8T6Project.elf.dir/components/Timer/Timer.c.obj.d -o CMakeFiles/stm32F103C8T6Project.elf.dir/components/Timer/Timer.c.obj -c /Users/kingnan/Documents/github/stm32/components/Timer/Timer.c
 
 CMakeFiles/stm32F103C8T6Project.elf.dir/components/Timer/Timer.c.i: cmake_force
@@ -744,7 +604,7 @@ CMakeFiles/stm32F103C8T6Project.elf.dir/components/Timer/Timer.c.s: cmake_force
 CMakeFiles/stm32F103C8T6Project.elf.dir/components/W25Q64/W25Q64.c.obj: CMakeFiles/stm32F103C8T6Project.elf.dir/flags.make
 CMakeFiles/stm32F103C8T6Project.elf.dir/components/W25Q64/W25Q64.c.obj: /Users/kingnan/Documents/github/stm32/components/W25Q64/W25Q64.c
 CMakeFiles/stm32F103C8T6Project.elf.dir/components/W25Q64/W25Q64.c.obj: CMakeFiles/stm32F103C8T6Project.elf.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/kingnan/Documents/github/stm32/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_49) "Building C object CMakeFiles/stm32F103C8T6Project.elf.dir/components/W25Q64/W25Q64.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/kingnan/Documents/github/stm32/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_39) "Building C object CMakeFiles/stm32F103C8T6Project.elf.dir/components/W25Q64/W25Q64.c.obj"
 	/usr/local/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/stm32F103C8T6Project.elf.dir/components/W25Q64/W25Q64.c.obj -MF CMakeFiles/stm32F103C8T6Project.elf.dir/components/W25Q64/W25Q64.c.obj.d -o CMakeFiles/stm32F103C8T6Project.elf.dir/components/W25Q64/W25Q64.c.obj -c /Users/kingnan/Documents/github/stm32/components/W25Q64/W25Q64.c
 
 CMakeFiles/stm32F103C8T6Project.elf.dir/components/W25Q64/W25Q64.c.i: cmake_force
@@ -758,7 +618,7 @@ CMakeFiles/stm32F103C8T6Project.elf.dir/components/W25Q64/W25Q64.c.s: cmake_forc
 CMakeFiles/stm32F103C8T6Project.elf.dir/components/countSensor/countSensor.c.obj: CMakeFiles/stm32F103C8T6Project.elf.dir/flags.make
 CMakeFiles/stm32F103C8T6Project.elf.dir/components/countSensor/countSensor.c.obj: /Users/kingnan/Documents/github/stm32/components/countSensor/countSensor.c
 CMakeFiles/stm32F103C8T6Project.elf.dir/components/countSensor/countSensor.c.obj: CMakeFiles/stm32F103C8T6Project.elf.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/kingnan/Documents/github/stm32/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_50) "Building C object CMakeFiles/stm32F103C8T6Project.elf.dir/components/countSensor/countSensor.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/kingnan/Documents/github/stm32/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_40) "Building C object CMakeFiles/stm32F103C8T6Project.elf.dir/components/countSensor/countSensor.c.obj"
 	/usr/local/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/stm32F103C8T6Project.elf.dir/components/countSensor/countSensor.c.obj -MF CMakeFiles/stm32F103C8T6Project.elf.dir/components/countSensor/countSensor.c.obj.d -o CMakeFiles/stm32F103C8T6Project.elf.dir/components/countSensor/countSensor.c.obj -c /Users/kingnan/Documents/github/stm32/components/countSensor/countSensor.c
 
 CMakeFiles/stm32F103C8T6Project.elf.dir/components/countSensor/countSensor.c.i: cmake_force
@@ -772,7 +632,7 @@ CMakeFiles/stm32F103C8T6Project.elf.dir/components/countSensor/countSensor.c.s: 
 CMakeFiles/stm32F103C8T6Project.elf.dir/components/coustomSPI/coustomSPI.c.obj: CMakeFiles/stm32F103C8T6Project.elf.dir/flags.make
 CMakeFiles/stm32F103C8T6Project.elf.dir/components/coustomSPI/coustomSPI.c.obj: /Users/kingnan/Documents/github/stm32/components/coustomSPI/coustomSPI.c
 CMakeFiles/stm32F103C8T6Project.elf.dir/components/coustomSPI/coustomSPI.c.obj: CMakeFiles/stm32F103C8T6Project.elf.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/kingnan/Documents/github/stm32/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_51) "Building C object CMakeFiles/stm32F103C8T6Project.elf.dir/components/coustomSPI/coustomSPI.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/kingnan/Documents/github/stm32/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_41) "Building C object CMakeFiles/stm32F103C8T6Project.elf.dir/components/coustomSPI/coustomSPI.c.obj"
 	/usr/local/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/stm32F103C8T6Project.elf.dir/components/coustomSPI/coustomSPI.c.obj -MF CMakeFiles/stm32F103C8T6Project.elf.dir/components/coustomSPI/coustomSPI.c.obj.d -o CMakeFiles/stm32F103C8T6Project.elf.dir/components/coustomSPI/coustomSPI.c.obj -c /Users/kingnan/Documents/github/stm32/components/coustomSPI/coustomSPI.c
 
 CMakeFiles/stm32F103C8T6Project.elf.dir/components/coustomSPI/coustomSPI.c.i: cmake_force
@@ -786,7 +646,7 @@ CMakeFiles/stm32F103C8T6Project.elf.dir/components/coustomSPI/coustomSPI.c.s: cm
 CMakeFiles/stm32F103C8T6Project.elf.dir/components/customDMA/customDMA.c.obj: CMakeFiles/stm32F103C8T6Project.elf.dir/flags.make
 CMakeFiles/stm32F103C8T6Project.elf.dir/components/customDMA/customDMA.c.obj: /Users/kingnan/Documents/github/stm32/components/customDMA/customDMA.c
 CMakeFiles/stm32F103C8T6Project.elf.dir/components/customDMA/customDMA.c.obj: CMakeFiles/stm32F103C8T6Project.elf.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/kingnan/Documents/github/stm32/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_52) "Building C object CMakeFiles/stm32F103C8T6Project.elf.dir/components/customDMA/customDMA.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/kingnan/Documents/github/stm32/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_42) "Building C object CMakeFiles/stm32F103C8T6Project.elf.dir/components/customDMA/customDMA.c.obj"
 	/usr/local/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/stm32F103C8T6Project.elf.dir/components/customDMA/customDMA.c.obj -MF CMakeFiles/stm32F103C8T6Project.elf.dir/components/customDMA/customDMA.c.obj.d -o CMakeFiles/stm32F103C8T6Project.elf.dir/components/customDMA/customDMA.c.obj -c /Users/kingnan/Documents/github/stm32/components/customDMA/customDMA.c
 
 CMakeFiles/stm32F103C8T6Project.elf.dir/components/customDMA/customDMA.c.i: cmake_force
@@ -800,7 +660,7 @@ CMakeFiles/stm32F103C8T6Project.elf.dir/components/customDMA/customDMA.c.s: cmak
 CMakeFiles/stm32F103C8T6Project.elf.dir/components/customI2C/customI2C.c.obj: CMakeFiles/stm32F103C8T6Project.elf.dir/flags.make
 CMakeFiles/stm32F103C8T6Project.elf.dir/components/customI2C/customI2C.c.obj: /Users/kingnan/Documents/github/stm32/components/customI2C/customI2C.c
 CMakeFiles/stm32F103C8T6Project.elf.dir/components/customI2C/customI2C.c.obj: CMakeFiles/stm32F103C8T6Project.elf.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/kingnan/Documents/github/stm32/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_53) "Building C object CMakeFiles/stm32F103C8T6Project.elf.dir/components/customI2C/customI2C.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/kingnan/Documents/github/stm32/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_43) "Building C object CMakeFiles/stm32F103C8T6Project.elf.dir/components/customI2C/customI2C.c.obj"
 	/usr/local/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/stm32F103C8T6Project.elf.dir/components/customI2C/customI2C.c.obj -MF CMakeFiles/stm32F103C8T6Project.elf.dir/components/customI2C/customI2C.c.obj.d -o CMakeFiles/stm32F103C8T6Project.elf.dir/components/customI2C/customI2C.c.obj -c /Users/kingnan/Documents/github/stm32/components/customI2C/customI2C.c
 
 CMakeFiles/stm32F103C8T6Project.elf.dir/components/customI2C/customI2C.c.i: cmake_force
@@ -814,7 +674,7 @@ CMakeFiles/stm32F103C8T6Project.elf.dir/components/customI2C/customI2C.c.s: cmak
 CMakeFiles/stm32F103C8T6Project.elf.dir/components/delay/delay.c.obj: CMakeFiles/stm32F103C8T6Project.elf.dir/flags.make
 CMakeFiles/stm32F103C8T6Project.elf.dir/components/delay/delay.c.obj: /Users/kingnan/Documents/github/stm32/components/delay/delay.c
 CMakeFiles/stm32F103C8T6Project.elf.dir/components/delay/delay.c.obj: CMakeFiles/stm32F103C8T6Project.elf.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/kingnan/Documents/github/stm32/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_54) "Building C object CMakeFiles/stm32F103C8T6Project.elf.dir/components/delay/delay.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/kingnan/Documents/github/stm32/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_44) "Building C object CMakeFiles/stm32F103C8T6Project.elf.dir/components/delay/delay.c.obj"
 	/usr/local/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/stm32F103C8T6Project.elf.dir/components/delay/delay.c.obj -MF CMakeFiles/stm32F103C8T6Project.elf.dir/components/delay/delay.c.obj.d -o CMakeFiles/stm32F103C8T6Project.elf.dir/components/delay/delay.c.obj -c /Users/kingnan/Documents/github/stm32/components/delay/delay.c
 
 CMakeFiles/stm32F103C8T6Project.elf.dir/components/delay/delay.c.i: cmake_force
@@ -828,7 +688,7 @@ CMakeFiles/stm32F103C8T6Project.elf.dir/components/delay/delay.c.s: cmake_force
 CMakeFiles/stm32F103C8T6Project.elf.dir/components/key/key.c.obj: CMakeFiles/stm32F103C8T6Project.elf.dir/flags.make
 CMakeFiles/stm32F103C8T6Project.elf.dir/components/key/key.c.obj: /Users/kingnan/Documents/github/stm32/components/key/key.c
 CMakeFiles/stm32F103C8T6Project.elf.dir/components/key/key.c.obj: CMakeFiles/stm32F103C8T6Project.elf.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/kingnan/Documents/github/stm32/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_55) "Building C object CMakeFiles/stm32F103C8T6Project.elf.dir/components/key/key.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/kingnan/Documents/github/stm32/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_45) "Building C object CMakeFiles/stm32F103C8T6Project.elf.dir/components/key/key.c.obj"
 	/usr/local/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/stm32F103C8T6Project.elf.dir/components/key/key.c.obj -MF CMakeFiles/stm32F103C8T6Project.elf.dir/components/key/key.c.obj.d -o CMakeFiles/stm32F103C8T6Project.elf.dir/components/key/key.c.obj -c /Users/kingnan/Documents/github/stm32/components/key/key.c
 
 CMakeFiles/stm32F103C8T6Project.elf.dir/components/key/key.c.i: cmake_force
@@ -842,7 +702,7 @@ CMakeFiles/stm32F103C8T6Project.elf.dir/components/key/key.c.s: cmake_force
 CMakeFiles/stm32F103C8T6Project.elf.dir/components/oled/OLED.c.obj: CMakeFiles/stm32F103C8T6Project.elf.dir/flags.make
 CMakeFiles/stm32F103C8T6Project.elf.dir/components/oled/OLED.c.obj: /Users/kingnan/Documents/github/stm32/components/oled/OLED.c
 CMakeFiles/stm32F103C8T6Project.elf.dir/components/oled/OLED.c.obj: CMakeFiles/stm32F103C8T6Project.elf.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/kingnan/Documents/github/stm32/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_56) "Building C object CMakeFiles/stm32F103C8T6Project.elf.dir/components/oled/OLED.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/kingnan/Documents/github/stm32/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_46) "Building C object CMakeFiles/stm32F103C8T6Project.elf.dir/components/oled/OLED.c.obj"
 	/usr/local/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/stm32F103C8T6Project.elf.dir/components/oled/OLED.c.obj -MF CMakeFiles/stm32F103C8T6Project.elf.dir/components/oled/OLED.c.obj.d -o CMakeFiles/stm32F103C8T6Project.elf.dir/components/oled/OLED.c.obj -c /Users/kingnan/Documents/github/stm32/components/oled/OLED.c
 
 CMakeFiles/stm32F103C8T6Project.elf.dir/components/oled/OLED.c.i: cmake_force
@@ -856,7 +716,7 @@ CMakeFiles/stm32F103C8T6Project.elf.dir/components/oled/OLED.c.s: cmake_force
 CMakeFiles/stm32F103C8T6Project.elf.dir/components/servo/servo.c.obj: CMakeFiles/stm32F103C8T6Project.elf.dir/flags.make
 CMakeFiles/stm32F103C8T6Project.elf.dir/components/servo/servo.c.obj: /Users/kingnan/Documents/github/stm32/components/servo/servo.c
 CMakeFiles/stm32F103C8T6Project.elf.dir/components/servo/servo.c.obj: CMakeFiles/stm32F103C8T6Project.elf.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/kingnan/Documents/github/stm32/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_57) "Building C object CMakeFiles/stm32F103C8T6Project.elf.dir/components/servo/servo.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/kingnan/Documents/github/stm32/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_47) "Building C object CMakeFiles/stm32F103C8T6Project.elf.dir/components/servo/servo.c.obj"
 	/usr/local/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/stm32F103C8T6Project.elf.dir/components/servo/servo.c.obj -MF CMakeFiles/stm32F103C8T6Project.elf.dir/components/servo/servo.c.obj.d -o CMakeFiles/stm32F103C8T6Project.elf.dir/components/servo/servo.c.obj -c /Users/kingnan/Documents/github/stm32/components/servo/servo.c
 
 CMakeFiles/stm32F103C8T6Project.elf.dir/components/servo/servo.c.i: cmake_force
@@ -869,7 +729,7 @@ CMakeFiles/stm32F103C8T6Project.elf.dir/components/servo/servo.c.s: cmake_force
 
 CMakeFiles/stm32F103C8T6Project.elf.dir/startup/startup_stm32f103c8tx.s.obj: CMakeFiles/stm32F103C8T6Project.elf.dir/flags.make
 CMakeFiles/stm32F103C8T6Project.elf.dir/startup/startup_stm32f103c8tx.s.obj: /Users/kingnan/Documents/github/stm32/startup/startup_stm32f103c8tx.s
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/kingnan/Documents/github/stm32/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_58) "Building ASM object CMakeFiles/stm32F103C8T6Project.elf.dir/startup/startup_stm32f103c8tx.s.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/kingnan/Documents/github/stm32/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_48) "Building ASM object CMakeFiles/stm32F103C8T6Project.elf.dir/startup/startup_stm32f103c8tx.s.obj"
 	/usr/local/bin/arm-none-eabi-gcc $(ASM_DEFINES) $(ASM_INCLUDES) $(ASM_FLAGS) -o CMakeFiles/stm32F103C8T6Project.elf.dir/startup/startup_stm32f103c8tx.s.obj -c /Users/kingnan/Documents/github/stm32/startup/startup_stm32f103c8tx.s
 
 CMakeFiles/stm32F103C8T6Project.elf.dir/startup/startup_stm32f103c8tx.s.i: cmake_force
@@ -883,7 +743,7 @@ CMakeFiles/stm32F103C8T6Project.elf.dir/startup/startup_stm32f103c8tx.s.s: cmake
 CMakeFiles/stm32F103C8T6Project.elf.dir/system/retarget/retarget.c.obj: CMakeFiles/stm32F103C8T6Project.elf.dir/flags.make
 CMakeFiles/stm32F103C8T6Project.elf.dir/system/retarget/retarget.c.obj: /Users/kingnan/Documents/github/stm32/system/retarget/retarget.c
 CMakeFiles/stm32F103C8T6Project.elf.dir/system/retarget/retarget.c.obj: CMakeFiles/stm32F103C8T6Project.elf.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/kingnan/Documents/github/stm32/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_59) "Building C object CMakeFiles/stm32F103C8T6Project.elf.dir/system/retarget/retarget.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/kingnan/Documents/github/stm32/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_49) "Building C object CMakeFiles/stm32F103C8T6Project.elf.dir/system/retarget/retarget.c.obj"
 	/usr/local/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/stm32F103C8T6Project.elf.dir/system/retarget/retarget.c.obj -MF CMakeFiles/stm32F103C8T6Project.elf.dir/system/retarget/retarget.c.obj.d -o CMakeFiles/stm32F103C8T6Project.elf.dir/system/retarget/retarget.c.obj -c /Users/kingnan/Documents/github/stm32/system/retarget/retarget.c
 
 CMakeFiles/stm32F103C8T6Project.elf.dir/system/retarget/retarget.c.i: cmake_force
@@ -897,7 +757,7 @@ CMakeFiles/stm32F103C8T6Project.elf.dir/system/retarget/retarget.c.s: cmake_forc
 CMakeFiles/stm32F103C8T6Project.elf.dir/system/syscalls/syscalls.c.obj: CMakeFiles/stm32F103C8T6Project.elf.dir/flags.make
 CMakeFiles/stm32F103C8T6Project.elf.dir/system/syscalls/syscalls.c.obj: /Users/kingnan/Documents/github/stm32/system/syscalls/syscalls.c
 CMakeFiles/stm32F103C8T6Project.elf.dir/system/syscalls/syscalls.c.obj: CMakeFiles/stm32F103C8T6Project.elf.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/kingnan/Documents/github/stm32/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_60) "Building C object CMakeFiles/stm32F103C8T6Project.elf.dir/system/syscalls/syscalls.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/kingnan/Documents/github/stm32/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_50) "Building C object CMakeFiles/stm32F103C8T6Project.elf.dir/system/syscalls/syscalls.c.obj"
 	/usr/local/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/stm32F103C8T6Project.elf.dir/system/syscalls/syscalls.c.obj -MF CMakeFiles/stm32F103C8T6Project.elf.dir/system/syscalls/syscalls.c.obj.d -o CMakeFiles/stm32F103C8T6Project.elf.dir/system/syscalls/syscalls.c.obj -c /Users/kingnan/Documents/github/stm32/system/syscalls/syscalls.c
 
 CMakeFiles/stm32F103C8T6Project.elf.dir/system/syscalls/syscalls.c.i: cmake_force
@@ -907,6 +767,132 @@ CMakeFiles/stm32F103C8T6Project.elf.dir/system/syscalls/syscalls.c.i: cmake_forc
 CMakeFiles/stm32F103C8T6Project.elf.dir/system/syscalls/syscalls.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/stm32F103C8T6Project.elf.dir/system/syscalls/syscalls.c.s"
 	/usr/local/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/kingnan/Documents/github/stm32/system/syscalls/syscalls.c -o CMakeFiles/stm32F103C8T6Project.elf.dir/system/syscalls/syscalls.c.s
+
+CMakeFiles/stm32F103C8T6Project.elf.dir/FreeRTOS/croutine.c.obj: CMakeFiles/stm32F103C8T6Project.elf.dir/flags.make
+CMakeFiles/stm32F103C8T6Project.elf.dir/FreeRTOS/croutine.c.obj: /Users/kingnan/Documents/github/stm32/FreeRTOS/croutine.c
+CMakeFiles/stm32F103C8T6Project.elf.dir/FreeRTOS/croutine.c.obj: CMakeFiles/stm32F103C8T6Project.elf.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/kingnan/Documents/github/stm32/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_51) "Building C object CMakeFiles/stm32F103C8T6Project.elf.dir/FreeRTOS/croutine.c.obj"
+	/usr/local/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/stm32F103C8T6Project.elf.dir/FreeRTOS/croutine.c.obj -MF CMakeFiles/stm32F103C8T6Project.elf.dir/FreeRTOS/croutine.c.obj.d -o CMakeFiles/stm32F103C8T6Project.elf.dir/FreeRTOS/croutine.c.obj -c /Users/kingnan/Documents/github/stm32/FreeRTOS/croutine.c
+
+CMakeFiles/stm32F103C8T6Project.elf.dir/FreeRTOS/croutine.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/stm32F103C8T6Project.elf.dir/FreeRTOS/croutine.c.i"
+	/usr/local/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/kingnan/Documents/github/stm32/FreeRTOS/croutine.c > CMakeFiles/stm32F103C8T6Project.elf.dir/FreeRTOS/croutine.c.i
+
+CMakeFiles/stm32F103C8T6Project.elf.dir/FreeRTOS/croutine.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/stm32F103C8T6Project.elf.dir/FreeRTOS/croutine.c.s"
+	/usr/local/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/kingnan/Documents/github/stm32/FreeRTOS/croutine.c -o CMakeFiles/stm32F103C8T6Project.elf.dir/FreeRTOS/croutine.c.s
+
+CMakeFiles/stm32F103C8T6Project.elf.dir/FreeRTOS/event_groups.c.obj: CMakeFiles/stm32F103C8T6Project.elf.dir/flags.make
+CMakeFiles/stm32F103C8T6Project.elf.dir/FreeRTOS/event_groups.c.obj: /Users/kingnan/Documents/github/stm32/FreeRTOS/event_groups.c
+CMakeFiles/stm32F103C8T6Project.elf.dir/FreeRTOS/event_groups.c.obj: CMakeFiles/stm32F103C8T6Project.elf.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/kingnan/Documents/github/stm32/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_52) "Building C object CMakeFiles/stm32F103C8T6Project.elf.dir/FreeRTOS/event_groups.c.obj"
+	/usr/local/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/stm32F103C8T6Project.elf.dir/FreeRTOS/event_groups.c.obj -MF CMakeFiles/stm32F103C8T6Project.elf.dir/FreeRTOS/event_groups.c.obj.d -o CMakeFiles/stm32F103C8T6Project.elf.dir/FreeRTOS/event_groups.c.obj -c /Users/kingnan/Documents/github/stm32/FreeRTOS/event_groups.c
+
+CMakeFiles/stm32F103C8T6Project.elf.dir/FreeRTOS/event_groups.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/stm32F103C8T6Project.elf.dir/FreeRTOS/event_groups.c.i"
+	/usr/local/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/kingnan/Documents/github/stm32/FreeRTOS/event_groups.c > CMakeFiles/stm32F103C8T6Project.elf.dir/FreeRTOS/event_groups.c.i
+
+CMakeFiles/stm32F103C8T6Project.elf.dir/FreeRTOS/event_groups.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/stm32F103C8T6Project.elf.dir/FreeRTOS/event_groups.c.s"
+	/usr/local/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/kingnan/Documents/github/stm32/FreeRTOS/event_groups.c -o CMakeFiles/stm32F103C8T6Project.elf.dir/FreeRTOS/event_groups.c.s
+
+CMakeFiles/stm32F103C8T6Project.elf.dir/FreeRTOS/list.c.obj: CMakeFiles/stm32F103C8T6Project.elf.dir/flags.make
+CMakeFiles/stm32F103C8T6Project.elf.dir/FreeRTOS/list.c.obj: /Users/kingnan/Documents/github/stm32/FreeRTOS/list.c
+CMakeFiles/stm32F103C8T6Project.elf.dir/FreeRTOS/list.c.obj: CMakeFiles/stm32F103C8T6Project.elf.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/kingnan/Documents/github/stm32/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_53) "Building C object CMakeFiles/stm32F103C8T6Project.elf.dir/FreeRTOS/list.c.obj"
+	/usr/local/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/stm32F103C8T6Project.elf.dir/FreeRTOS/list.c.obj -MF CMakeFiles/stm32F103C8T6Project.elf.dir/FreeRTOS/list.c.obj.d -o CMakeFiles/stm32F103C8T6Project.elf.dir/FreeRTOS/list.c.obj -c /Users/kingnan/Documents/github/stm32/FreeRTOS/list.c
+
+CMakeFiles/stm32F103C8T6Project.elf.dir/FreeRTOS/list.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/stm32F103C8T6Project.elf.dir/FreeRTOS/list.c.i"
+	/usr/local/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/kingnan/Documents/github/stm32/FreeRTOS/list.c > CMakeFiles/stm32F103C8T6Project.elf.dir/FreeRTOS/list.c.i
+
+CMakeFiles/stm32F103C8T6Project.elf.dir/FreeRTOS/list.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/stm32F103C8T6Project.elf.dir/FreeRTOS/list.c.s"
+	/usr/local/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/kingnan/Documents/github/stm32/FreeRTOS/list.c -o CMakeFiles/stm32F103C8T6Project.elf.dir/FreeRTOS/list.c.s
+
+CMakeFiles/stm32F103C8T6Project.elf.dir/FreeRTOS/portable/GCC/ARM_CM3/port.c.obj: CMakeFiles/stm32F103C8T6Project.elf.dir/flags.make
+CMakeFiles/stm32F103C8T6Project.elf.dir/FreeRTOS/portable/GCC/ARM_CM3/port.c.obj: /Users/kingnan/Documents/github/stm32/FreeRTOS/portable/GCC/ARM_CM3/port.c
+CMakeFiles/stm32F103C8T6Project.elf.dir/FreeRTOS/portable/GCC/ARM_CM3/port.c.obj: CMakeFiles/stm32F103C8T6Project.elf.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/kingnan/Documents/github/stm32/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_54) "Building C object CMakeFiles/stm32F103C8T6Project.elf.dir/FreeRTOS/portable/GCC/ARM_CM3/port.c.obj"
+	/usr/local/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/stm32F103C8T6Project.elf.dir/FreeRTOS/portable/GCC/ARM_CM3/port.c.obj -MF CMakeFiles/stm32F103C8T6Project.elf.dir/FreeRTOS/portable/GCC/ARM_CM3/port.c.obj.d -o CMakeFiles/stm32F103C8T6Project.elf.dir/FreeRTOS/portable/GCC/ARM_CM3/port.c.obj -c /Users/kingnan/Documents/github/stm32/FreeRTOS/portable/GCC/ARM_CM3/port.c
+
+CMakeFiles/stm32F103C8T6Project.elf.dir/FreeRTOS/portable/GCC/ARM_CM3/port.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/stm32F103C8T6Project.elf.dir/FreeRTOS/portable/GCC/ARM_CM3/port.c.i"
+	/usr/local/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/kingnan/Documents/github/stm32/FreeRTOS/portable/GCC/ARM_CM3/port.c > CMakeFiles/stm32F103C8T6Project.elf.dir/FreeRTOS/portable/GCC/ARM_CM3/port.c.i
+
+CMakeFiles/stm32F103C8T6Project.elf.dir/FreeRTOS/portable/GCC/ARM_CM3/port.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/stm32F103C8T6Project.elf.dir/FreeRTOS/portable/GCC/ARM_CM3/port.c.s"
+	/usr/local/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/kingnan/Documents/github/stm32/FreeRTOS/portable/GCC/ARM_CM3/port.c -o CMakeFiles/stm32F103C8T6Project.elf.dir/FreeRTOS/portable/GCC/ARM_CM3/port.c.s
+
+CMakeFiles/stm32F103C8T6Project.elf.dir/FreeRTOS/portable/MemMang/heap_4.c.obj: CMakeFiles/stm32F103C8T6Project.elf.dir/flags.make
+CMakeFiles/stm32F103C8T6Project.elf.dir/FreeRTOS/portable/MemMang/heap_4.c.obj: /Users/kingnan/Documents/github/stm32/FreeRTOS/portable/MemMang/heap_4.c
+CMakeFiles/stm32F103C8T6Project.elf.dir/FreeRTOS/portable/MemMang/heap_4.c.obj: CMakeFiles/stm32F103C8T6Project.elf.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/kingnan/Documents/github/stm32/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_55) "Building C object CMakeFiles/stm32F103C8T6Project.elf.dir/FreeRTOS/portable/MemMang/heap_4.c.obj"
+	/usr/local/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/stm32F103C8T6Project.elf.dir/FreeRTOS/portable/MemMang/heap_4.c.obj -MF CMakeFiles/stm32F103C8T6Project.elf.dir/FreeRTOS/portable/MemMang/heap_4.c.obj.d -o CMakeFiles/stm32F103C8T6Project.elf.dir/FreeRTOS/portable/MemMang/heap_4.c.obj -c /Users/kingnan/Documents/github/stm32/FreeRTOS/portable/MemMang/heap_4.c
+
+CMakeFiles/stm32F103C8T6Project.elf.dir/FreeRTOS/portable/MemMang/heap_4.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/stm32F103C8T6Project.elf.dir/FreeRTOS/portable/MemMang/heap_4.c.i"
+	/usr/local/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/kingnan/Documents/github/stm32/FreeRTOS/portable/MemMang/heap_4.c > CMakeFiles/stm32F103C8T6Project.elf.dir/FreeRTOS/portable/MemMang/heap_4.c.i
+
+CMakeFiles/stm32F103C8T6Project.elf.dir/FreeRTOS/portable/MemMang/heap_4.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/stm32F103C8T6Project.elf.dir/FreeRTOS/portable/MemMang/heap_4.c.s"
+	/usr/local/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/kingnan/Documents/github/stm32/FreeRTOS/portable/MemMang/heap_4.c -o CMakeFiles/stm32F103C8T6Project.elf.dir/FreeRTOS/portable/MemMang/heap_4.c.s
+
+CMakeFiles/stm32F103C8T6Project.elf.dir/FreeRTOS/queue.c.obj: CMakeFiles/stm32F103C8T6Project.elf.dir/flags.make
+CMakeFiles/stm32F103C8T6Project.elf.dir/FreeRTOS/queue.c.obj: /Users/kingnan/Documents/github/stm32/FreeRTOS/queue.c
+CMakeFiles/stm32F103C8T6Project.elf.dir/FreeRTOS/queue.c.obj: CMakeFiles/stm32F103C8T6Project.elf.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/kingnan/Documents/github/stm32/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_56) "Building C object CMakeFiles/stm32F103C8T6Project.elf.dir/FreeRTOS/queue.c.obj"
+	/usr/local/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/stm32F103C8T6Project.elf.dir/FreeRTOS/queue.c.obj -MF CMakeFiles/stm32F103C8T6Project.elf.dir/FreeRTOS/queue.c.obj.d -o CMakeFiles/stm32F103C8T6Project.elf.dir/FreeRTOS/queue.c.obj -c /Users/kingnan/Documents/github/stm32/FreeRTOS/queue.c
+
+CMakeFiles/stm32F103C8T6Project.elf.dir/FreeRTOS/queue.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/stm32F103C8T6Project.elf.dir/FreeRTOS/queue.c.i"
+	/usr/local/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/kingnan/Documents/github/stm32/FreeRTOS/queue.c > CMakeFiles/stm32F103C8T6Project.elf.dir/FreeRTOS/queue.c.i
+
+CMakeFiles/stm32F103C8T6Project.elf.dir/FreeRTOS/queue.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/stm32F103C8T6Project.elf.dir/FreeRTOS/queue.c.s"
+	/usr/local/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/kingnan/Documents/github/stm32/FreeRTOS/queue.c -o CMakeFiles/stm32F103C8T6Project.elf.dir/FreeRTOS/queue.c.s
+
+CMakeFiles/stm32F103C8T6Project.elf.dir/FreeRTOS/stream_buffer.c.obj: CMakeFiles/stm32F103C8T6Project.elf.dir/flags.make
+CMakeFiles/stm32F103C8T6Project.elf.dir/FreeRTOS/stream_buffer.c.obj: /Users/kingnan/Documents/github/stm32/FreeRTOS/stream_buffer.c
+CMakeFiles/stm32F103C8T6Project.elf.dir/FreeRTOS/stream_buffer.c.obj: CMakeFiles/stm32F103C8T6Project.elf.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/kingnan/Documents/github/stm32/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_57) "Building C object CMakeFiles/stm32F103C8T6Project.elf.dir/FreeRTOS/stream_buffer.c.obj"
+	/usr/local/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/stm32F103C8T6Project.elf.dir/FreeRTOS/stream_buffer.c.obj -MF CMakeFiles/stm32F103C8T6Project.elf.dir/FreeRTOS/stream_buffer.c.obj.d -o CMakeFiles/stm32F103C8T6Project.elf.dir/FreeRTOS/stream_buffer.c.obj -c /Users/kingnan/Documents/github/stm32/FreeRTOS/stream_buffer.c
+
+CMakeFiles/stm32F103C8T6Project.elf.dir/FreeRTOS/stream_buffer.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/stm32F103C8T6Project.elf.dir/FreeRTOS/stream_buffer.c.i"
+	/usr/local/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/kingnan/Documents/github/stm32/FreeRTOS/stream_buffer.c > CMakeFiles/stm32F103C8T6Project.elf.dir/FreeRTOS/stream_buffer.c.i
+
+CMakeFiles/stm32F103C8T6Project.elf.dir/FreeRTOS/stream_buffer.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/stm32F103C8T6Project.elf.dir/FreeRTOS/stream_buffer.c.s"
+	/usr/local/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/kingnan/Documents/github/stm32/FreeRTOS/stream_buffer.c -o CMakeFiles/stm32F103C8T6Project.elf.dir/FreeRTOS/stream_buffer.c.s
+
+CMakeFiles/stm32F103C8T6Project.elf.dir/FreeRTOS/tasks.c.obj: CMakeFiles/stm32F103C8T6Project.elf.dir/flags.make
+CMakeFiles/stm32F103C8T6Project.elf.dir/FreeRTOS/tasks.c.obj: /Users/kingnan/Documents/github/stm32/FreeRTOS/tasks.c
+CMakeFiles/stm32F103C8T6Project.elf.dir/FreeRTOS/tasks.c.obj: CMakeFiles/stm32F103C8T6Project.elf.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/kingnan/Documents/github/stm32/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_58) "Building C object CMakeFiles/stm32F103C8T6Project.elf.dir/FreeRTOS/tasks.c.obj"
+	/usr/local/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/stm32F103C8T6Project.elf.dir/FreeRTOS/tasks.c.obj -MF CMakeFiles/stm32F103C8T6Project.elf.dir/FreeRTOS/tasks.c.obj.d -o CMakeFiles/stm32F103C8T6Project.elf.dir/FreeRTOS/tasks.c.obj -c /Users/kingnan/Documents/github/stm32/FreeRTOS/tasks.c
+
+CMakeFiles/stm32F103C8T6Project.elf.dir/FreeRTOS/tasks.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/stm32F103C8T6Project.elf.dir/FreeRTOS/tasks.c.i"
+	/usr/local/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/kingnan/Documents/github/stm32/FreeRTOS/tasks.c > CMakeFiles/stm32F103C8T6Project.elf.dir/FreeRTOS/tasks.c.i
+
+CMakeFiles/stm32F103C8T6Project.elf.dir/FreeRTOS/tasks.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/stm32F103C8T6Project.elf.dir/FreeRTOS/tasks.c.s"
+	/usr/local/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/kingnan/Documents/github/stm32/FreeRTOS/tasks.c -o CMakeFiles/stm32F103C8T6Project.elf.dir/FreeRTOS/tasks.c.s
+
+CMakeFiles/stm32F103C8T6Project.elf.dir/FreeRTOS/timers.c.obj: CMakeFiles/stm32F103C8T6Project.elf.dir/flags.make
+CMakeFiles/stm32F103C8T6Project.elf.dir/FreeRTOS/timers.c.obj: /Users/kingnan/Documents/github/stm32/FreeRTOS/timers.c
+CMakeFiles/stm32F103C8T6Project.elf.dir/FreeRTOS/timers.c.obj: CMakeFiles/stm32F103C8T6Project.elf.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/kingnan/Documents/github/stm32/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_59) "Building C object CMakeFiles/stm32F103C8T6Project.elf.dir/FreeRTOS/timers.c.obj"
+	/usr/local/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/stm32F103C8T6Project.elf.dir/FreeRTOS/timers.c.obj -MF CMakeFiles/stm32F103C8T6Project.elf.dir/FreeRTOS/timers.c.obj.d -o CMakeFiles/stm32F103C8T6Project.elf.dir/FreeRTOS/timers.c.obj -c /Users/kingnan/Documents/github/stm32/FreeRTOS/timers.c
+
+CMakeFiles/stm32F103C8T6Project.elf.dir/FreeRTOS/timers.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/stm32F103C8T6Project.elf.dir/FreeRTOS/timers.c.i"
+	/usr/local/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/kingnan/Documents/github/stm32/FreeRTOS/timers.c > CMakeFiles/stm32F103C8T6Project.elf.dir/FreeRTOS/timers.c.i
+
+CMakeFiles/stm32F103C8T6Project.elf.dir/FreeRTOS/timers.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/stm32F103C8T6Project.elf.dir/FreeRTOS/timers.c.s"
+	/usr/local/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/kingnan/Documents/github/stm32/FreeRTOS/timers.c -o CMakeFiles/stm32F103C8T6Project.elf.dir/FreeRTOS/timers.c.s
 
 # Object files for target stm32F103C8T6Project.elf
 stm32F103C8T6Project_elf_OBJECTS = \
@@ -935,16 +921,6 @@ stm32F103C8T6Project_elf_OBJECTS = \
 "CMakeFiles/stm32F103C8T6Project.elf.dir/Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_tim.c.obj" \
 "CMakeFiles/stm32F103C8T6Project.elf.dir/Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_usart.c.obj" \
 "CMakeFiles/stm32F103C8T6Project.elf.dir/Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_wwdg.c.obj" \
-"CMakeFiles/stm32F103C8T6Project.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2/cmsis_os2.c.obj" \
-"CMakeFiles/stm32F103C8T6Project.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/croutine.c.obj" \
-"CMakeFiles/stm32F103C8T6Project.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/event_groups.c.obj" \
-"CMakeFiles/stm32F103C8T6Project.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/list.c.obj" \
-"CMakeFiles/stm32F103C8T6Project.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM3/port.c.obj" \
-"CMakeFiles/stm32F103C8T6Project.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/portable/MemMang/heap_4.c.obj" \
-"CMakeFiles/stm32F103C8T6Project.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/queue.c.obj" \
-"CMakeFiles/stm32F103C8T6Project.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/stream_buffer.c.obj" \
-"CMakeFiles/stm32F103C8T6Project.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/tasks.c.obj" \
-"CMakeFiles/stm32F103C8T6Project.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/timers.c.obj" \
 "CMakeFiles/stm32F103C8T6Project.elf.dir/User/main.c.obj" \
 "CMakeFiles/stm32F103C8T6Project.elf.dir/User/stm32f10x_it.c.obj" \
 "CMakeFiles/stm32F103C8T6Project.elf.dir/components/AD/AD.c.obj" \
@@ -969,7 +945,16 @@ stm32F103C8T6Project_elf_OBJECTS = \
 "CMakeFiles/stm32F103C8T6Project.elf.dir/components/servo/servo.c.obj" \
 "CMakeFiles/stm32F103C8T6Project.elf.dir/startup/startup_stm32f103c8tx.s.obj" \
 "CMakeFiles/stm32F103C8T6Project.elf.dir/system/retarget/retarget.c.obj" \
-"CMakeFiles/stm32F103C8T6Project.elf.dir/system/syscalls/syscalls.c.obj"
+"CMakeFiles/stm32F103C8T6Project.elf.dir/system/syscalls/syscalls.c.obj" \
+"CMakeFiles/stm32F103C8T6Project.elf.dir/FreeRTOS/croutine.c.obj" \
+"CMakeFiles/stm32F103C8T6Project.elf.dir/FreeRTOS/event_groups.c.obj" \
+"CMakeFiles/stm32F103C8T6Project.elf.dir/FreeRTOS/list.c.obj" \
+"CMakeFiles/stm32F103C8T6Project.elf.dir/FreeRTOS/portable/GCC/ARM_CM3/port.c.obj" \
+"CMakeFiles/stm32F103C8T6Project.elf.dir/FreeRTOS/portable/MemMang/heap_4.c.obj" \
+"CMakeFiles/stm32F103C8T6Project.elf.dir/FreeRTOS/queue.c.obj" \
+"CMakeFiles/stm32F103C8T6Project.elf.dir/FreeRTOS/stream_buffer.c.obj" \
+"CMakeFiles/stm32F103C8T6Project.elf.dir/FreeRTOS/tasks.c.obj" \
+"CMakeFiles/stm32F103C8T6Project.elf.dir/FreeRTOS/timers.c.obj"
 
 # External object files for target stm32F103C8T6Project.elf
 stm32F103C8T6Project_elf_EXTERNAL_OBJECTS =
@@ -999,16 +984,6 @@ stm32F103C8T6Project.elf: CMakeFiles/stm32F103C8T6Project.elf.dir/Libraries/STM3
 stm32F103C8T6Project.elf: CMakeFiles/stm32F103C8T6Project.elf.dir/Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_tim.c.obj
 stm32F103C8T6Project.elf: CMakeFiles/stm32F103C8T6Project.elf.dir/Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_usart.c.obj
 stm32F103C8T6Project.elf: CMakeFiles/stm32F103C8T6Project.elf.dir/Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_wwdg.c.obj
-stm32F103C8T6Project.elf: CMakeFiles/stm32F103C8T6Project.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2/cmsis_os2.c.obj
-stm32F103C8T6Project.elf: CMakeFiles/stm32F103C8T6Project.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/croutine.c.obj
-stm32F103C8T6Project.elf: CMakeFiles/stm32F103C8T6Project.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/event_groups.c.obj
-stm32F103C8T6Project.elf: CMakeFiles/stm32F103C8T6Project.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/list.c.obj
-stm32F103C8T6Project.elf: CMakeFiles/stm32F103C8T6Project.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM3/port.c.obj
-stm32F103C8T6Project.elf: CMakeFiles/stm32F103C8T6Project.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/portable/MemMang/heap_4.c.obj
-stm32F103C8T6Project.elf: CMakeFiles/stm32F103C8T6Project.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/queue.c.obj
-stm32F103C8T6Project.elf: CMakeFiles/stm32F103C8T6Project.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/stream_buffer.c.obj
-stm32F103C8T6Project.elf: CMakeFiles/stm32F103C8T6Project.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/tasks.c.obj
-stm32F103C8T6Project.elf: CMakeFiles/stm32F103C8T6Project.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/timers.c.obj
 stm32F103C8T6Project.elf: CMakeFiles/stm32F103C8T6Project.elf.dir/User/main.c.obj
 stm32F103C8T6Project.elf: CMakeFiles/stm32F103C8T6Project.elf.dir/User/stm32f10x_it.c.obj
 stm32F103C8T6Project.elf: CMakeFiles/stm32F103C8T6Project.elf.dir/components/AD/AD.c.obj
@@ -1034,9 +1009,18 @@ stm32F103C8T6Project.elf: CMakeFiles/stm32F103C8T6Project.elf.dir/components/ser
 stm32F103C8T6Project.elf: CMakeFiles/stm32F103C8T6Project.elf.dir/startup/startup_stm32f103c8tx.s.obj
 stm32F103C8T6Project.elf: CMakeFiles/stm32F103C8T6Project.elf.dir/system/retarget/retarget.c.obj
 stm32F103C8T6Project.elf: CMakeFiles/stm32F103C8T6Project.elf.dir/system/syscalls/syscalls.c.obj
+stm32F103C8T6Project.elf: CMakeFiles/stm32F103C8T6Project.elf.dir/FreeRTOS/croutine.c.obj
+stm32F103C8T6Project.elf: CMakeFiles/stm32F103C8T6Project.elf.dir/FreeRTOS/event_groups.c.obj
+stm32F103C8T6Project.elf: CMakeFiles/stm32F103C8T6Project.elf.dir/FreeRTOS/list.c.obj
+stm32F103C8T6Project.elf: CMakeFiles/stm32F103C8T6Project.elf.dir/FreeRTOS/portable/GCC/ARM_CM3/port.c.obj
+stm32F103C8T6Project.elf: CMakeFiles/stm32F103C8T6Project.elf.dir/FreeRTOS/portable/MemMang/heap_4.c.obj
+stm32F103C8T6Project.elf: CMakeFiles/stm32F103C8T6Project.elf.dir/FreeRTOS/queue.c.obj
+stm32F103C8T6Project.elf: CMakeFiles/stm32F103C8T6Project.elf.dir/FreeRTOS/stream_buffer.c.obj
+stm32F103C8T6Project.elf: CMakeFiles/stm32F103C8T6Project.elf.dir/FreeRTOS/tasks.c.obj
+stm32F103C8T6Project.elf: CMakeFiles/stm32F103C8T6Project.elf.dir/FreeRTOS/timers.c.obj
 stm32F103C8T6Project.elf: CMakeFiles/stm32F103C8T6Project.elf.dir/build.make
 stm32F103C8T6Project.elf: CMakeFiles/stm32F103C8T6Project.elf.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/Users/kingnan/Documents/github/stm32/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_61) "Linking C executable stm32F103C8T6Project.elf"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/Users/kingnan/Documents/github/stm32/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_60) "Linking C executable stm32F103C8T6Project.elf"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/stm32F103C8T6Project.elf.dir/link.txt --verbose=$(VERBOSE)
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold "Building /Users/kingnan/Documents/github/stm32/cmake-build-debug/stm32F103C8T6Project.hex"
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold "Building /Users/kingnan/Documents/github/stm32/cmake-build-debug/stm32F103C8T6Project.bin"
