@@ -52,8 +52,8 @@
 					<Add directory="/Users/kingnan/Documents/github/stm32/components/W25Q64"/>
 					<Add directory="/Users/kingnan/Documents/github/stm32/system/retarget"/>
 					<Add directory="/Users/kingnan/Documents/github/stm32/system/syscalls"/>
-					<Add directory="/Users/kingnan/Documents/github/stm32/Middlewares/Third_Party/FreeRTOS/Source/include"/>
-					<Add directory="/Users/kingnan/Documents/github/stm32/Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM3"/>
+					<Add directory="/Users/kingnan/Documents/github/stm32/FreeRTOS/include"/>
+					<Add directory="/Users/kingnan/Documents/github/stm32/FreeRTOS/portable/GCC/ARM_CM3"/>
 					<Add directory="/Applications/ArmGNUToolchain/13.2.Rel1/arm-none-eabi/bin/../lib/gcc/arm-none-eabi/13.2.1/../../../../arm-none-eabi/include/c++/13.2.1"/>
 					<Add directory="/Applications/ArmGNUToolchain/13.2.Rel1/arm-none-eabi/bin/../lib/gcc/arm-none-eabi/13.2.1/../../../../arm-none-eabi/include/c++/13.2.1/arm-none-eabi"/>
 					<Add directory="/Applications/ArmGNUToolchain/13.2.Rel1/arm-none-eabi/bin/../lib/gcc/arm-none-eabi/13.2.1/../../../../arm-none-eabi/include/c++/13.2.1/backward"/>
@@ -103,8 +103,8 @@
 					<Add directory="/Users/kingnan/Documents/github/stm32/components/W25Q64"/>
 					<Add directory="/Users/kingnan/Documents/github/stm32/system/retarget"/>
 					<Add directory="/Users/kingnan/Documents/github/stm32/system/syscalls"/>
-					<Add directory="/Users/kingnan/Documents/github/stm32/Middlewares/Third_Party/FreeRTOS/Source/include"/>
-					<Add directory="/Users/kingnan/Documents/github/stm32/Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM3"/>
+					<Add directory="/Users/kingnan/Documents/github/stm32/FreeRTOS/include"/>
+					<Add directory="/Users/kingnan/Documents/github/stm32/FreeRTOS/portable/GCC/ARM_CM3"/>
 					<Add directory="/Applications/ArmGNUToolchain/13.2.Rel1/arm-none-eabi/bin/../lib/gcc/arm-none-eabi/13.2.1/../../../../arm-none-eabi/include/c++/13.2.1"/>
 					<Add directory="/Applications/ArmGNUToolchain/13.2.Rel1/arm-none-eabi/bin/../lib/gcc/arm-none-eabi/13.2.1/../../../../arm-none-eabi/include/c++/13.2.1/arm-none-eabi"/>
 					<Add directory="/Applications/ArmGNUToolchain/13.2.Rel1/arm-none-eabi/bin/../lib/gcc/arm-none-eabi/13.2.1/../../../../arm-none-eabi/include/c++/13.2.1/backward"/>
@@ -140,6 +140,141 @@
 				</MakeCommands>
 			</Target>
 		</Build>
+		<Unit filename="/Users/kingnan/Documents/github/stm32/FreeRTOS/CMakeLists.txt">
+			<Option target="stm32F103C8T6Project.elf"/>
+		</Unit>
+		<Unit filename="/Users/kingnan/Documents/github/stm32/FreeRTOS/GitHub-FreeRTOS-Kernel-Home.url">
+			<Option target="stm32F103C8T6Project.elf"/>
+		</Unit>
+		<Unit filename="/Users/kingnan/Documents/github/stm32/FreeRTOS/History.txt">
+			<Option target="stm32F103C8T6Project.elf"/>
+		</Unit>
+		<Unit filename="/Users/kingnan/Documents/github/stm32/FreeRTOS/LICENSE.md">
+			<Option target="stm32F103C8T6Project.elf"/>
+		</Unit>
+		<Unit filename="/Users/kingnan/Documents/github/stm32/FreeRTOS/MISRA.md">
+			<Option target="stm32F103C8T6Project.elf"/>
+		</Unit>
+		<Unit filename="/Users/kingnan/Documents/github/stm32/FreeRTOS/Quick_Start_Guide.url">
+			<Option target="stm32F103C8T6Project.elf"/>
+		</Unit>
+		<Unit filename="/Users/kingnan/Documents/github/stm32/FreeRTOS/README.md">
+			<Option target="stm32F103C8T6Project.elf"/>
+		</Unit>
+		<Unit filename="/Users/kingnan/Documents/github/stm32/FreeRTOS/croutine.c">
+			<Option target="stm32F103C8T6Project.elf"/>
+		</Unit>
+		<Unit filename="/Users/kingnan/Documents/github/stm32/FreeRTOS/cspell.config.yaml">
+			<Option target="stm32F103C8T6Project.elf"/>
+		</Unit>
+		<Unit filename="/Users/kingnan/Documents/github/stm32/FreeRTOS/event_groups.c">
+			<Option target="stm32F103C8T6Project.elf"/>
+		</Unit>
+		<Unit filename="/Users/kingnan/Documents/github/stm32/FreeRTOS/include/CMakeLists.txt">
+			<Option target="stm32F103C8T6Project.elf"/>
+		</Unit>
+		<Unit filename="/Users/kingnan/Documents/github/stm32/FreeRTOS/include/FreeRTOS.h">
+			<Option target="stm32F103C8T6Project.elf"/>
+		</Unit>
+		<Unit filename="/Users/kingnan/Documents/github/stm32/FreeRTOS/include/StackMacros.h">
+			<Option target="stm32F103C8T6Project.elf"/>
+		</Unit>
+		<Unit filename="/Users/kingnan/Documents/github/stm32/FreeRTOS/include/atomic.h">
+			<Option target="stm32F103C8T6Project.elf"/>
+		</Unit>
+		<Unit filename="/Users/kingnan/Documents/github/stm32/FreeRTOS/include/croutine.h">
+			<Option target="stm32F103C8T6Project.elf"/>
+		</Unit>
+		<Unit filename="/Users/kingnan/Documents/github/stm32/FreeRTOS/include/deprecated_definitions.h">
+			<Option target="stm32F103C8T6Project.elf"/>
+		</Unit>
+		<Unit filename="/Users/kingnan/Documents/github/stm32/FreeRTOS/include/event_groups.h">
+			<Option target="stm32F103C8T6Project.elf"/>
+		</Unit>
+		<Unit filename="/Users/kingnan/Documents/github/stm32/FreeRTOS/include/list.h">
+			<Option target="stm32F103C8T6Project.elf"/>
+		</Unit>
+		<Unit filename="/Users/kingnan/Documents/github/stm32/FreeRTOS/include/message_buffer.h">
+			<Option target="stm32F103C8T6Project.elf"/>
+		</Unit>
+		<Unit filename="/Users/kingnan/Documents/github/stm32/FreeRTOS/include/mpu_prototypes.h">
+			<Option target="stm32F103C8T6Project.elf"/>
+		</Unit>
+		<Unit filename="/Users/kingnan/Documents/github/stm32/FreeRTOS/include/mpu_syscall_numbers.h">
+			<Option target="stm32F103C8T6Project.elf"/>
+		</Unit>
+		<Unit filename="/Users/kingnan/Documents/github/stm32/FreeRTOS/include/mpu_wrappers.h">
+			<Option target="stm32F103C8T6Project.elf"/>
+		</Unit>
+		<Unit filename="/Users/kingnan/Documents/github/stm32/FreeRTOS/include/newlib-freertos.h">
+			<Option target="stm32F103C8T6Project.elf"/>
+		</Unit>
+		<Unit filename="/Users/kingnan/Documents/github/stm32/FreeRTOS/include/picolibc-freertos.h">
+			<Option target="stm32F103C8T6Project.elf"/>
+		</Unit>
+		<Unit filename="/Users/kingnan/Documents/github/stm32/FreeRTOS/include/portable.h">
+			<Option target="stm32F103C8T6Project.elf"/>
+		</Unit>
+		<Unit filename="/Users/kingnan/Documents/github/stm32/FreeRTOS/include/projdefs.h">
+			<Option target="stm32F103C8T6Project.elf"/>
+		</Unit>
+		<Unit filename="/Users/kingnan/Documents/github/stm32/FreeRTOS/include/queue.h">
+			<Option target="stm32F103C8T6Project.elf"/>
+		</Unit>
+		<Unit filename="/Users/kingnan/Documents/github/stm32/FreeRTOS/include/semphr.h">
+			<Option target="stm32F103C8T6Project.elf"/>
+		</Unit>
+		<Unit filename="/Users/kingnan/Documents/github/stm32/FreeRTOS/include/stack_macros.h">
+			<Option target="stm32F103C8T6Project.elf"/>
+		</Unit>
+		<Unit filename="/Users/kingnan/Documents/github/stm32/FreeRTOS/include/stdint.readme">
+			<Option target="stm32F103C8T6Project.elf"/>
+		</Unit>
+		<Unit filename="/Users/kingnan/Documents/github/stm32/FreeRTOS/include/stream_buffer.h">
+			<Option target="stm32F103C8T6Project.elf"/>
+		</Unit>
+		<Unit filename="/Users/kingnan/Documents/github/stm32/FreeRTOS/include/task.h">
+			<Option target="stm32F103C8T6Project.elf"/>
+		</Unit>
+		<Unit filename="/Users/kingnan/Documents/github/stm32/FreeRTOS/include/timers.h">
+			<Option target="stm32F103C8T6Project.elf"/>
+		</Unit>
+		<Unit filename="/Users/kingnan/Documents/github/stm32/FreeRTOS/list.c">
+			<Option target="stm32F103C8T6Project.elf"/>
+		</Unit>
+		<Unit filename="/Users/kingnan/Documents/github/stm32/FreeRTOS/manifest.yml">
+			<Option target="stm32F103C8T6Project.elf"/>
+		</Unit>
+		<Unit filename="/Users/kingnan/Documents/github/stm32/FreeRTOS/portable/CMakeLists.txt">
+			<Option target="stm32F103C8T6Project.elf"/>
+		</Unit>
+		<Unit filename="/Users/kingnan/Documents/github/stm32/FreeRTOS/portable/GCC/ARM_CM3/port.c">
+			<Option target="stm32F103C8T6Project.elf"/>
+		</Unit>
+		<Unit filename="/Users/kingnan/Documents/github/stm32/FreeRTOS/portable/GCC/ARM_CM3/portmacro.h">
+			<Option target="stm32F103C8T6Project.elf"/>
+		</Unit>
+		<Unit filename="/Users/kingnan/Documents/github/stm32/FreeRTOS/portable/MemMang/ReadMe.url">
+			<Option target="stm32F103C8T6Project.elf"/>
+		</Unit>
+		<Unit filename="/Users/kingnan/Documents/github/stm32/FreeRTOS/portable/MemMang/heap_4.c">
+			<Option target="stm32F103C8T6Project.elf"/>
+		</Unit>
+		<Unit filename="/Users/kingnan/Documents/github/stm32/FreeRTOS/portable/readme.txt">
+			<Option target="stm32F103C8T6Project.elf"/>
+		</Unit>
+		<Unit filename="/Users/kingnan/Documents/github/stm32/FreeRTOS/queue.c">
+			<Option target="stm32F103C8T6Project.elf"/>
+		</Unit>
+		<Unit filename="/Users/kingnan/Documents/github/stm32/FreeRTOS/stream_buffer.c">
+			<Option target="stm32F103C8T6Project.elf"/>
+		</Unit>
+		<Unit filename="/Users/kingnan/Documents/github/stm32/FreeRTOS/tasks.c">
+			<Option target="stm32F103C8T6Project.elf"/>
+		</Unit>
+		<Unit filename="/Users/kingnan/Documents/github/stm32/FreeRTOS/timers.c">
+			<Option target="stm32F103C8T6Project.elf"/>
+		</Unit>
 		<Unit filename="/Users/kingnan/Documents/github/stm32/Libraries/CMSIS/cmsis_compiler.h">
 			<Option target="stm32F103C8T6Project.elf"/>
 		</Unit>
@@ -300,96 +435,6 @@
 			<Option target="stm32F103C8T6Project.elf"/>
 		</Unit>
 		<Unit filename="/Users/kingnan/Documents/github/stm32/Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_wwdg.c">
-			<Option target="stm32F103C8T6Project.elf"/>
-		</Unit>
-		<Unit filename="/Users/kingnan/Documents/github/stm32/Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2/cmsis_os.h">
-			<Option target="stm32F103C8T6Project.elf"/>
-		</Unit>
-		<Unit filename="/Users/kingnan/Documents/github/stm32/Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2/cmsis_os2.c">
-			<Option target="stm32F103C8T6Project.elf"/>
-		</Unit>
-		<Unit filename="/Users/kingnan/Documents/github/stm32/Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2/cmsis_os2.h">
-			<Option target="stm32F103C8T6Project.elf"/>
-		</Unit>
-		<Unit filename="/Users/kingnan/Documents/github/stm32/Middlewares/Third_Party/FreeRTOS/Source/croutine.c">
-			<Option target="stm32F103C8T6Project.elf"/>
-		</Unit>
-		<Unit filename="/Users/kingnan/Documents/github/stm32/Middlewares/Third_Party/FreeRTOS/Source/event_groups.c">
-			<Option target="stm32F103C8T6Project.elf"/>
-		</Unit>
-		<Unit filename="/Users/kingnan/Documents/github/stm32/Middlewares/Third_Party/FreeRTOS/Source/include/FreeRTOS.h">
-			<Option target="stm32F103C8T6Project.elf"/>
-		</Unit>
-		<Unit filename="/Users/kingnan/Documents/github/stm32/Middlewares/Third_Party/FreeRTOS/Source/include/StackMacros.h">
-			<Option target="stm32F103C8T6Project.elf"/>
-		</Unit>
-		<Unit filename="/Users/kingnan/Documents/github/stm32/Middlewares/Third_Party/FreeRTOS/Source/include/croutine.h">
-			<Option target="stm32F103C8T6Project.elf"/>
-		</Unit>
-		<Unit filename="/Users/kingnan/Documents/github/stm32/Middlewares/Third_Party/FreeRTOS/Source/include/deprecated_definitions.h">
-			<Option target="stm32F103C8T6Project.elf"/>
-		</Unit>
-		<Unit filename="/Users/kingnan/Documents/github/stm32/Middlewares/Third_Party/FreeRTOS/Source/include/event_groups.h">
-			<Option target="stm32F103C8T6Project.elf"/>
-		</Unit>
-		<Unit filename="/Users/kingnan/Documents/github/stm32/Middlewares/Third_Party/FreeRTOS/Source/include/list.h">
-			<Option target="stm32F103C8T6Project.elf"/>
-		</Unit>
-		<Unit filename="/Users/kingnan/Documents/github/stm32/Middlewares/Third_Party/FreeRTOS/Source/include/message_buffer.h">
-			<Option target="stm32F103C8T6Project.elf"/>
-		</Unit>
-		<Unit filename="/Users/kingnan/Documents/github/stm32/Middlewares/Third_Party/FreeRTOS/Source/include/mpu_prototypes.h">
-			<Option target="stm32F103C8T6Project.elf"/>
-		</Unit>
-		<Unit filename="/Users/kingnan/Documents/github/stm32/Middlewares/Third_Party/FreeRTOS/Source/include/mpu_wrappers.h">
-			<Option target="stm32F103C8T6Project.elf"/>
-		</Unit>
-		<Unit filename="/Users/kingnan/Documents/github/stm32/Middlewares/Third_Party/FreeRTOS/Source/include/portable.h">
-			<Option target="stm32F103C8T6Project.elf"/>
-		</Unit>
-		<Unit filename="/Users/kingnan/Documents/github/stm32/Middlewares/Third_Party/FreeRTOS/Source/include/projdefs.h">
-			<Option target="stm32F103C8T6Project.elf"/>
-		</Unit>
-		<Unit filename="/Users/kingnan/Documents/github/stm32/Middlewares/Third_Party/FreeRTOS/Source/include/queue.h">
-			<Option target="stm32F103C8T6Project.elf"/>
-		</Unit>
-		<Unit filename="/Users/kingnan/Documents/github/stm32/Middlewares/Third_Party/FreeRTOS/Source/include/semphr.h">
-			<Option target="stm32F103C8T6Project.elf"/>
-		</Unit>
-		<Unit filename="/Users/kingnan/Documents/github/stm32/Middlewares/Third_Party/FreeRTOS/Source/include/stack_macros.h">
-			<Option target="stm32F103C8T6Project.elf"/>
-		</Unit>
-		<Unit filename="/Users/kingnan/Documents/github/stm32/Middlewares/Third_Party/FreeRTOS/Source/include/stream_buffer.h">
-			<Option target="stm32F103C8T6Project.elf"/>
-		</Unit>
-		<Unit filename="/Users/kingnan/Documents/github/stm32/Middlewares/Third_Party/FreeRTOS/Source/include/task.h">
-			<Option target="stm32F103C8T6Project.elf"/>
-		</Unit>
-		<Unit filename="/Users/kingnan/Documents/github/stm32/Middlewares/Third_Party/FreeRTOS/Source/include/timers.h">
-			<Option target="stm32F103C8T6Project.elf"/>
-		</Unit>
-		<Unit filename="/Users/kingnan/Documents/github/stm32/Middlewares/Third_Party/FreeRTOS/Source/list.c">
-			<Option target="stm32F103C8T6Project.elf"/>
-		</Unit>
-		<Unit filename="/Users/kingnan/Documents/github/stm32/Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM3/port.c">
-			<Option target="stm32F103C8T6Project.elf"/>
-		</Unit>
-		<Unit filename="/Users/kingnan/Documents/github/stm32/Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM3/portmacro.h">
-			<Option target="stm32F103C8T6Project.elf"/>
-		</Unit>
-		<Unit filename="/Users/kingnan/Documents/github/stm32/Middlewares/Third_Party/FreeRTOS/Source/portable/MemMang/heap_4.c">
-			<Option target="stm32F103C8T6Project.elf"/>
-		</Unit>
-		<Unit filename="/Users/kingnan/Documents/github/stm32/Middlewares/Third_Party/FreeRTOS/Source/queue.c">
-			<Option target="stm32F103C8T6Project.elf"/>
-		</Unit>
-		<Unit filename="/Users/kingnan/Documents/github/stm32/Middlewares/Third_Party/FreeRTOS/Source/stream_buffer.c">
-			<Option target="stm32F103C8T6Project.elf"/>
-		</Unit>
-		<Unit filename="/Users/kingnan/Documents/github/stm32/Middlewares/Third_Party/FreeRTOS/Source/tasks.c">
-			<Option target="stm32F103C8T6Project.elf"/>
-		</Unit>
-		<Unit filename="/Users/kingnan/Documents/github/stm32/Middlewares/Third_Party/FreeRTOS/Source/timers.c">
 			<Option target="stm32F103C8T6Project.elf"/>
 		</Unit>
 		<Unit filename="/Users/kingnan/Documents/github/stm32/STM32F103C8TX_FLASH.ld">

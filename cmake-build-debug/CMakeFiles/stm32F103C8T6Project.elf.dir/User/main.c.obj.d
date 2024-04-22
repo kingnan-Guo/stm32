@@ -35,13 +35,13 @@ CMakeFiles/stm32F103C8T6Project.elf.dir/User/main.c.obj: \
  /Users/kingnan/Documents/github/stm32/Libraries/STM32F10x_StdPeriph_Driver/inc/stm32f10x_wwdg.h \
  /Users/kingnan/Documents/github/stm32/Libraries/STM32F10x_StdPeriph_Driver/inc/misc.h \
  /Users/kingnan/Documents/github/stm32/components/oled/OLED.h \
- /Users/kingnan/Documents/github/stm32/Middlewares/Third_Party/FreeRTOS/Source/include/FreeRTOS.h \
+ /Users/kingnan/Documents/github/stm32/FreeRTOS/include/FreeRTOS.h \
  /Applications/ArmGNUToolchain/13.2.Rel1/arm-none-eabi/lib/gcc/arm-none-eabi/13.2.1/include/stddef.h \
  /Users/kingnan/Documents/github/stm32/User/FreeRTOSConfig.h \
- /Users/kingnan/Documents/github/stm32/Middlewares/Third_Party/FreeRTOS/Source/include/projdefs.h \
- /Users/kingnan/Documents/github/stm32/Middlewares/Third_Party/FreeRTOS/Source/include/portable.h \
- /Users/kingnan/Documents/github/stm32/Middlewares/Third_Party/FreeRTOS/Source/include/deprecated_definitions.h \
- /Users/kingnan/Documents/github/stm32/Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM3/portmacro.h \
- /Users/kingnan/Documents/github/stm32/Middlewares/Third_Party/FreeRTOS/Source/include/mpu_wrappers.h \
- /Users/kingnan/Documents/github/stm32/Middlewares/Third_Party/FreeRTOS/Source/include/task.h \
- /Users/kingnan/Documents/github/stm32/Middlewares/Third_Party/FreeRTOS/Source/include/list.h
+ /Users/kingnan/Documents/github/stm32/FreeRTOS/include/projdefs.h \
+ /Users/kingnan/Documents/github/stm32/FreeRTOS/include/portable.h \
+ /Users/kingnan/Documents/github/stm32/FreeRTOS/include/deprecated_definitions.h \
+ /Users/kingnan/Documents/github/stm32/FreeRTOS/portable/GCC/ARM_CM3/portmacro.h \
+ /Users/kingnan/Documents/github/stm32/FreeRTOS/include/mpu_wrappers.h \
+ /Users/kingnan/Documents/github/stm32/FreeRTOS/include/task.h \
+ /Users/kingnan/Documents/github/stm32/FreeRTOS/include/list.h

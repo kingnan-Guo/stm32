@@ -146,4 +146,7 @@ standard names. */
 /* Section where parameter definitions can be added (for instance, to override default ones in FreeRTOS.h) */
 /* USER CODE END Defines */
 
+// FreeRTOS 需要这个 要不会报错// FreeRTOS 需要这个 要不会报错； 动静态内存分配相关
+#define configKERNEL_PROVIDED_STATIC_MEMORY 1
+
 #endif /* FREERTOS_CONFIG_H */

@@ -91,19 +91,20 @@ include_directories(
         system/syscalls
         # RTOS
 
-#        FreeRTOS/Source/include
-#        FreeRTOS/Source/portable/GCC/ARM_CM3
+        FreeRTOS/include
+        FreeRTOS/portable/GCC/ARM_CM3
+#        FreeRTOS/portable/GCC/ARM_CM23/non_secure
 #        Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2
 
-        Middlewares/Third_Party/FreeRTOS/Source/include
-        Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM3
+#        Middlewares/Third_Party/FreeRTOS/Source/include
+#        Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM3
 #        Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2
 )
 
 add_definitions(-DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB)
 
 #file(GLOB_RECURSE SOURCES "Core/*.*" "Drivers/*.*")
-file(GLOB_RECURSE SOURCES "startup/*.*" "Libraries/*.*" "User/*.*" "components/*.*" "system/*.*" "Middlewares/*.*")
+file(GLOB_RECURSE SOURCES "startup/*.*" "Libraries/*.*" "User/*.*" "components/*.*" "system/*.*" "FreeRTOS/*.*")
 
 set(LINKER_SCRIPT ${CMAKE_SOURCE_DIR}/STM32F103C8TX_FLASH.ld)
 
