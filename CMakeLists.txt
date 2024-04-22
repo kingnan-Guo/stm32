@@ -97,9 +97,9 @@ add_definitions(-DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB)
 #官网版
 file(GLOB_RECURSE SOURCES "startup/*.*" "Libraries/*.*" "User/*.*" "components/*.*" "system/*.*")
 
-file(GLOB_RECURSE SOURCES_RTOS  "")
+
 # RTOS
-set(MY_VAR "FreeRTOS")
+set(MY_VAR "cubeMX_FreeRTOS")
 # 使用if语句判定MY_VAR的值
 if(MY_VAR STREQUAL "cubeMX_FreeRTOS")
     message("cubeMX_FreeRTOS")
@@ -126,6 +126,7 @@ elseif(MY_VAR STREQUAL "FreeRTOS")
     file(GLOB_RECURSE SOURCES_RTOS  "FreeRTOS/*.*")
 else()
     message("不使用 FreeRTOS")
+    file(GLOB_RECURSE SOURCES_RTOS  "")
 endif()
 
 set(LINKER_SCRIPT ${CMAKE_SOURCE_DIR}/STM32F103C8TX_FLASH.ld)
