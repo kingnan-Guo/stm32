@@ -1194,15 +1194,6 @@ CMakeFiles/stm32F103C8T6Project.elf.dir/User/main.c.obj: /Users/kingnan/Document
   /Applications/ArmGNUToolchain/13.2.Rel1/arm-none-eabi/arm-none-eabi/include/sys/features.h \
   /Applications/ArmGNUToolchain/13.2.Rel1/arm-none-eabi/lib/gcc/arm-none-eabi/13.2.1/include/stddef.h \
   /Applications/ArmGNUToolchain/13.2.Rel1/arm-none-eabi/lib/gcc/arm-none-eabi/13.2.1/include/stdint.h \
-  /Users/kingnan/Documents/github/stm32/FreeRTOS/config/FreeRTOSConfig.h \
-  /Users/kingnan/Documents/github/stm32/FreeRTOS/include/FreeRTOS.h \
-  /Users/kingnan/Documents/github/stm32/FreeRTOS/include/deprecated_definitions.h \
-  /Users/kingnan/Documents/github/stm32/FreeRTOS/include/list.h \
-  /Users/kingnan/Documents/github/stm32/FreeRTOS/include/mpu_wrappers.h \
-  /Users/kingnan/Documents/github/stm32/FreeRTOS/include/portable.h \
-  /Users/kingnan/Documents/github/stm32/FreeRTOS/include/projdefs.h \
-  /Users/kingnan/Documents/github/stm32/FreeRTOS/include/task.h \
-  /Users/kingnan/Documents/github/stm32/FreeRTOS/portable/GCC/ARM_CM3/portmacro.h \
   /Users/kingnan/Documents/github/stm32/Libraries/CMSIS/core_cm3.h \
   /Users/kingnan/Documents/github/stm32/Libraries/CMSIS/stm32f10x.h \
   /Users/kingnan/Documents/github/stm32/Libraries/CMSIS/system_stm32f10x.h \
@@ -1229,6 +1220,15 @@ CMakeFiles/stm32F103C8T6Project.elf.dir/User/main.c.obj: /Users/kingnan/Document
   /Users/kingnan/Documents/github/stm32/Libraries/STM32F10x_StdPeriph_Driver/inc/stm32f10x_tim.h \
   /Users/kingnan/Documents/github/stm32/Libraries/STM32F10x_StdPeriph_Driver/inc/stm32f10x_usart.h \
   /Users/kingnan/Documents/github/stm32/Libraries/STM32F10x_StdPeriph_Driver/inc/stm32f10x_wwdg.h \
+  /Users/kingnan/Documents/github/stm32/Middlewares/Third_Party/FreeRTOS/Source/config/FreeRTOSConfig.h \
+  /Users/kingnan/Documents/github/stm32/Middlewares/Third_Party/FreeRTOS/Source/include/FreeRTOS.h \
+  /Users/kingnan/Documents/github/stm32/Middlewares/Third_Party/FreeRTOS/Source/include/deprecated_definitions.h \
+  /Users/kingnan/Documents/github/stm32/Middlewares/Third_Party/FreeRTOS/Source/include/list.h \
+  /Users/kingnan/Documents/github/stm32/Middlewares/Third_Party/FreeRTOS/Source/include/mpu_wrappers.h \
+  /Users/kingnan/Documents/github/stm32/Middlewares/Third_Party/FreeRTOS/Source/include/portable.h \
+  /Users/kingnan/Documents/github/stm32/Middlewares/Third_Party/FreeRTOS/Source/include/projdefs.h \
+  /Users/kingnan/Documents/github/stm32/Middlewares/Third_Party/FreeRTOS/Source/include/task.h \
+  /Users/kingnan/Documents/github/stm32/Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM3/portmacro.h \
   /Users/kingnan/Documents/github/stm32/User/stm32f10x_conf.h \
   /Users/kingnan/Documents/github/stm32/components/oled/OLED.h
 
@@ -2128,6 +2128,8 @@ CMakeFiles/stm32F103C8T6Project.elf.dir/system/syscalls/syscalls.c.obj: /Users/k
 
 /Applications/ArmGNUToolchain/13.2.Rel1/arm-none-eabi/arm-none-eabi/include/sys/signal.h:
 
+/Applications/ArmGNUToolchain/13.2.Rel1/arm-none-eabi/arm-none-eabi/include/sys/select.h:
+
 /Applications/ArmGNUToolchain/13.2.Rel1/arm-none-eabi/arm-none-eabi/include/sys/sched.h:
 
 /Applications/ArmGNUToolchain/13.2.Rel1/arm-none-eabi/arm-none-eabi/include/sys/errno.h:
@@ -2145,6 +2147,10 @@ CMakeFiles/stm32F103C8T6Project.elf.dir/system/syscalls/syscalls.c.obj: /Users/k
 /Applications/ArmGNUToolchain/13.2.Rel1/arm-none-eabi/arm-none-eabi/include/machine/_endian.h:
 
 /Users/kingnan/Documents/github/stm32/system/retarget/retarget.h:
+
+/Users/kingnan/Documents/github/stm32/system/retarget/retarget.c:
+
+/Users/kingnan/Documents/github/stm32/components/servo/servo.c:
 
 /Users/kingnan/Documents/github/stm32/components/oled/OLED.c:
 
@@ -2194,22 +2200,6 @@ CMakeFiles/stm32F103C8T6Project.elf.dir/system/syscalls/syscalls.c.obj: /Users/k
 
 /Users/kingnan/Documents/github/stm32/components/oled/OLED.h:
 
-/Applications/ArmGNUToolchain/13.2.Rel1/arm-none-eabi/arm-none-eabi/include/sys/select.h:
-
-/Users/kingnan/Documents/github/stm32/FreeRTOS/portable/GCC/ARM_CM3/portmacro.h:
-
-/Users/kingnan/Documents/github/stm32/FreeRTOS/include/projdefs.h:
-
-/Users/kingnan/Documents/github/stm32/components/servo/servo.c:
-
-/Users/kingnan/Documents/github/stm32/FreeRTOS/include/mpu_wrappers.h:
-
-/Users/kingnan/Documents/github/stm32/FreeRTOS/include/list.h:
-
-/Users/kingnan/Documents/github/stm32/system/retarget/retarget.c:
-
-/Users/kingnan/Documents/github/stm32/FreeRTOS/config/FreeRTOSConfig.h:
-
 /Users/kingnan/Documents/github/stm32/User/main.c:
 
 /Users/kingnan/Documents/github/stm32/Middlewares/Third_Party/FreeRTOS/Source/timers.c:
@@ -2243,8 +2233,6 @@ CMakeFiles/stm32F103C8T6Project.elf.dir/system/syscalls/syscalls.c.obj: /Users/k
 /Users/kingnan/Documents/github/stm32/Middlewares/Third_Party/FreeRTOS/Source/include/semphr.h:
 
 /Users/kingnan/Documents/github/stm32/Middlewares/Third_Party/FreeRTOS/Source/include/projdefs.h:
-
-/Users/kingnan/Documents/github/stm32/FreeRTOS/include/FreeRTOS.h:
 
 /Users/kingnan/Documents/github/stm32/Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_dbgmcu.c:
 
@@ -2400,8 +2388,6 @@ CMakeFiles/stm32F103C8T6Project.elf.dir/system/syscalls/syscalls.c.obj: /Users/k
 
 /Users/kingnan/Documents/github/stm32/Libraries/STM32F10x_StdPeriph_Driver/inc/stm32f10x_pwr.h:
 
-/Users/kingnan/Documents/github/stm32/FreeRTOS/include/portable.h:
-
 /Users/kingnan/Documents/github/stm32/Middlewares/Third_Party/FreeRTOS/Source/include/queue.h:
 
 /Applications/ArmGNUToolchain/13.2.Rel1/arm-none-eabi/arm-none-eabi/include/sys/_intsup.h:
@@ -2434,11 +2420,7 @@ CMakeFiles/stm32F103C8T6Project.elf.dir/system/syscalls/syscalls.c.obj: /Users/k
 
 /Users/kingnan/Documents/github/stm32/Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2/cmsis_os2.c:
 
-/Users/kingnan/Documents/github/stm32/FreeRTOS/include/task.h:
-
 /Users/kingnan/Documents/github/stm32/Libraries/STM32F10x_StdPeriph_Driver/inc/stm32f10x_dac.h:
-
-/Users/kingnan/Documents/github/stm32/FreeRTOS/include/deprecated_definitions.h:
 
 /Applications/ArmGNUToolchain/13.2.Rel1/arm-none-eabi/arm-none-eabi/include/sys/_stdint.h:
 

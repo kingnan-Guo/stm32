@@ -99,9 +99,9 @@ file(GLOB_RECURSE SOURCES "startup/*.*" "Libraries/*.*" "User/*.*" "components/*
 
 
 # RTOS
-set(MY_VAR "cubeMX_FreeRTOS")
+set(cubeMX_original "cubeMX_FreeRTOS")
 # 使用if语句判定MY_VAR的值
-if(MY_VAR STREQUAL "cubeMX_FreeRTOS")
+if(cubeMX_original STREQUAL "cubeMX_FreeRTOS")
     message("cubeMX_FreeRTOS")
     # 添加 .h
     include_directories(
@@ -114,7 +114,7 @@ if(MY_VAR STREQUAL "cubeMX_FreeRTOS")
     file(GLOB_RECURSE SOURCES_RTOS  "Middlewares/*.*")
 
 
-elseif(MY_VAR STREQUAL "FreeRTOS")
+elseif(cubeMX_original STREQUAL "original_FreeRTOS")
     message("FreeRTOS")
     # 添加 .h
     include_directories(

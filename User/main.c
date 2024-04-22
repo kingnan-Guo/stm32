@@ -32,7 +32,7 @@ void vTask2(void *pvParameters) {
 int main(void) {
     // 初始化 I2C 的引脚
     OLED_Init();
-    OLED_ShowString(1, 1, "FreeRtos start");
+    OLED_ShowString(1, 1, "cubeMX_original");
     // Create tasks
     xTaskCreate(vTask1, "Task 1", configMINIMAL_STACK_SIZE, NULL, tskIDLE_PRIORITY + 1, NULL);
     xTaskCreate(vTask2, "Task 2", configMINIMAL_STACK_SIZE, NULL, tskIDLE_PRIORITY + 1, NULL);
