@@ -91,20 +91,36 @@ include_directories(
         system/syscalls
         # RTOS
 
-        FreeRTOS/include
-        FreeRTOS/portable/GCC/ARM_CM3
-#        FreeRTOS/portable/GCC/ARM_CM23/non_secure
-#        Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2
+        #官网版
+        #FreeRTOS/include
+        #FreeRTOS/portable/GCC/ARM_CM3
+        #FreeRTOS/config
 
-#        Middlewares/Third_Party/FreeRTOS/Source/include
-#        Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM3
-#        Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2
+        # cubeMX 版
+        Middlewares/Third_Party/FreeRTOS/Source/config
+        Middlewares/Third_Party/FreeRTOS/Source/include
+        Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM3
+        #Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2
 )
 
 add_definitions(-DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB)
 
 #file(GLOB_RECURSE SOURCES "Core/*.*" "Drivers/*.*")
-file(GLOB_RECURSE SOURCES "startup/*.*" "Libraries/*.*" "User/*.*" "components/*.*" "system/*.*" "FreeRTOS/*.*")
+#官网版
+#file(GLOB_RECURSE SOURCES "startup/*.*" "Libraries/*.*" "User/*.*" "components/*.*" "system/*.*" "FreeRTOS/*.*")
+# cubeMX 版
+file(GLOB_RECURSE SOURCES "startup/*.*" "Libraries/*.*" "User/*.*" "components/*.*" "system/*.*" "Middlewares/*.*")
+
+#set(MY_VAR "cubeMX_FreeRTOS")
+## 使用if语句判定MY_VAR的值
+#if(MY_VAR STREQUAL "cubeMX_FreeRTOS")
+#    message("cubeMX_FreeRTOS")
+#    include_directories()
+#elseif(MY_VAR STREQUAL "FreeRTOS")
+#    message("FreeRTOS")
+#else()
+#    message("不使用 FreeRTOS")
+#endif()
 
 set(LINKER_SCRIPT ${CMAKE_SOURCE_DIR}/STM32F103C8TX_FLASH.ld)
 
