@@ -1,5 +1,6 @@
 ## 标准库开发 stm32
 # RTOS 移植
+源自于 STM32CubeMX 内的 FreeRTOS 
 
 1、 引入 Liaraies 文件夹
     内部依赖文件
