@@ -59,7 +59,7 @@ else ()
     add_compile_options(-Og -g)
 endif ()
 
-#include_directories(Core/Inc Drivers/STM32F1xx_HAL_Driver/Inc Drivers/STM32F1xx_HAL_Driver/Inc/Legacy Drivers/CMSIS/Device/ST/STM32F1xx/Include Drivers/CMSIS/Include)
+
 include_directories(
         Libraries/CMSIS
         Libraries/STM32F10x_StdPeriph_Driver/inc
@@ -80,21 +80,30 @@ include_directories(
         components/ADC_DMA
         components/Serial # 与 /Users/kingnan/Documents/github/stm32/components/Serial/ 相同
         components/Serial_package
-        # 重定向 相关
-        system/retarget
-        system/syscalls
         #软件 I2C 通信
         components/customI2C
         components/MPU6050
+        #软件 SPI 通信
         components/coustomSPI
         components/W25Q64
-)
+        # 重定向 相关
+        system/retarget
+        system/syscalls
+        # RTOS
 
+#        FreeRTOS/Source/include
+#        FreeRTOS/Source/portable/GCC/ARM_CM3
+#        Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2
+
+        Middlewares/Third_Party/FreeRTOS/Source/include
+        Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM3
+#        Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2
+)
 
 add_definitions(-DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB)
 
 #file(GLOB_RECURSE SOURCES "Core/*.*" "Drivers/*.*")
-file(GLOB_RECURSE SOURCES "startup/*.*" "Libraries/*.*" "User/*.*" "components/*.*" "system/*.*")
+file(GLOB_RECURSE SOURCES "startup/*.*" "Libraries/*.*" "User/*.*" "components/*.*" "system/*.*" "Middlewares/*.*")
 
 set(LINKER_SCRIPT ${CMAKE_SOURCE_DIR}/STM32F103C8TX_FLASH.ld)
 
