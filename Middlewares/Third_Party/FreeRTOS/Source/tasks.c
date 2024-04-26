@@ -725,9 +725,9 @@ static void prvAddNewTaskToReadyList( TCB_t *pxNewTCB ) PRIVILEGED_FUNCTION;
 
 	BaseType_t xTaskCreate(	TaskFunction_t pxTaskCode,
 							const char * const pcName,		/*lint !e971 Unqualified char types are allowed for strings and single characters only. */
-							const configSTACK_DEPTH_TYPE usStackDepth,
-							void * const pvParameters,
-							UBaseType_t uxPriority,
+							const configSTACK_DEPTH_TYPE usStackDepth,//  栈的深度
+							void * const pvParameters,// 参数
+							UBaseType_t uxPriority,// 优先级
 							TaskHandle_t * const pxCreatedTask )
 	{
 	TCB_t *pxNewTCB;

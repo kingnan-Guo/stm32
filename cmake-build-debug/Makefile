@@ -1113,6 +1113,30 @@ components/Encode/Encode.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/stm32F103C8T6Project.elf.dir/build.make CMakeFiles/stm32F103C8T6Project.elf.dir/components/Encode/Encode.c.s
 .PHONY : components/Encode/Encode.c.s
 
+components/FreeRTOSDemo/FreeRTOSDemo.obj: components/FreeRTOSDemo/FreeRTOSDemo.c.obj
+.PHONY : components/FreeRTOSDemo/FreeRTOSDemo.obj
+
+# target to build an object file
+components/FreeRTOSDemo/FreeRTOSDemo.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/stm32F103C8T6Project.elf.dir/build.make CMakeFiles/stm32F103C8T6Project.elf.dir/components/FreeRTOSDemo/FreeRTOSDemo.c.obj
+.PHONY : components/FreeRTOSDemo/FreeRTOSDemo.c.obj
+
+components/FreeRTOSDemo/FreeRTOSDemo.i: components/FreeRTOSDemo/FreeRTOSDemo.c.i
+.PHONY : components/FreeRTOSDemo/FreeRTOSDemo.i
+
+# target to preprocess a source file
+components/FreeRTOSDemo/FreeRTOSDemo.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/stm32F103C8T6Project.elf.dir/build.make CMakeFiles/stm32F103C8T6Project.elf.dir/components/FreeRTOSDemo/FreeRTOSDemo.c.i
+.PHONY : components/FreeRTOSDemo/FreeRTOSDemo.c.i
+
+components/FreeRTOSDemo/FreeRTOSDemo.s: components/FreeRTOSDemo/FreeRTOSDemo.c.s
+.PHONY : components/FreeRTOSDemo/FreeRTOSDemo.s
+
+# target to generate assembly for a file
+components/FreeRTOSDemo/FreeRTOSDemo.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/stm32F103C8T6Project.elf.dir/build.make CMakeFiles/stm32F103C8T6Project.elf.dir/components/FreeRTOSDemo/FreeRTOSDemo.c.s
+.PHONY : components/FreeRTOSDemo/FreeRTOSDemo.c.s
+
 components/IC/IC.obj: components/IC/IC.c.obj
 .PHONY : components/IC/IC.obj
 
@@ -1685,6 +1709,9 @@ help:
 	@echo "... components/Encode/Encode.obj"
 	@echo "... components/Encode/Encode.i"
 	@echo "... components/Encode/Encode.s"
+	@echo "... components/FreeRTOSDemo/FreeRTOSDemo.obj"
+	@echo "... components/FreeRTOSDemo/FreeRTOSDemo.i"
+	@echo "... components/FreeRTOSDemo/FreeRTOSDemo.s"
 	@echo "... components/IC/IC.obj"
 	@echo "... components/IC/IC.i"
 	@echo "... components/IC/IC.s"

@@ -89,6 +89,8 @@ include_directories(
         # 重定向 相关
         system/retarget
         system/syscalls
+        # FreeRTSO 使用 组建
+        components/FreeRTOSDemo
 )
 
 add_definitions(-DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB)

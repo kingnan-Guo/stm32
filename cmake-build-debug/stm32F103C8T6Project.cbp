@@ -52,6 +52,7 @@
 					<Add directory="/Users/kingnan/Documents/github/stm32/components/W25Q64"/>
 					<Add directory="/Users/kingnan/Documents/github/stm32/system/retarget"/>
 					<Add directory="/Users/kingnan/Documents/github/stm32/system/syscalls"/>
+					<Add directory="/Users/kingnan/Documents/github/stm32/components/FreeRTOSDemo"/>
 					<Add directory="/Users/kingnan/Documents/github/stm32/Middlewares/Third_Party/FreeRTOS/Source/config"/>
 					<Add directory="/Users/kingnan/Documents/github/stm32/Middlewares/Third_Party/FreeRTOS/Source/include"/>
 					<Add directory="/Users/kingnan/Documents/github/stm32/Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM3"/>
@@ -104,6 +105,7 @@
 					<Add directory="/Users/kingnan/Documents/github/stm32/components/W25Q64"/>
 					<Add directory="/Users/kingnan/Documents/github/stm32/system/retarget"/>
 					<Add directory="/Users/kingnan/Documents/github/stm32/system/syscalls"/>
+					<Add directory="/Users/kingnan/Documents/github/stm32/components/FreeRTOSDemo"/>
 					<Add directory="/Users/kingnan/Documents/github/stm32/Middlewares/Third_Party/FreeRTOS/Source/config"/>
 					<Add directory="/Users/kingnan/Documents/github/stm32/Middlewares/Third_Party/FreeRTOS/Source/include"/>
 					<Add directory="/Users/kingnan/Documents/github/stm32/Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM3"/>
@@ -437,6 +439,12 @@
 			<Option target="stm32F103C8T6Project.elf"/>
 		</Unit>
 		<Unit filename="/Users/kingnan/Documents/github/stm32/components/Encode/Encode.h">
+			<Option target="stm32F103C8T6Project.elf"/>
+		</Unit>
+		<Unit filename="/Users/kingnan/Documents/github/stm32/components/FreeRTOSDemo/FreeRTOSDemo.c">
+			<Option target="stm32F103C8T6Project.elf"/>
+		</Unit>
+		<Unit filename="/Users/kingnan/Documents/github/stm32/components/FreeRTOSDemo/FreeRTOSDemo.h">
 			<Option target="stm32F103C8T6Project.elf"/>
 		</Unit>
 		<Unit filename="/Users/kingnan/Documents/github/stm32/components/IC/IC.c">
