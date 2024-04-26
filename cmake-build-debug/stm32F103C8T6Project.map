@@ -4270,7 +4270,7 @@ LOAD /Applications/ArmGNUToolchain/13.2.Rel1/arm-none-eabi/bin/../lib/gcc/arm-no
  .debug_rnglists
                 0x000009c5       0xa4 CMakeFiles/stm32F103C8T6Project.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/timers.c.obj
 
-.debug_line     0x00000000     0xca24
+.debug_line     0x00000000     0xca26
  .debug_line    0x00000000      0x3e1 CMakeFiles/stm32F103C8T6Project.elf.dir/Libraries/CMSIS/system_stm32f10x.c.obj
  .debug_line    0x000003e1      0x3f0 CMakeFiles/stm32F103C8T6Project.elf.dir/Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_exti.c.obj
  .debug_line    0x000007d1      0x723 CMakeFiles/stm32F103C8T6Project.elf.dir/Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_gpio.c.obj
@@ -4278,18 +4278,18 @@ LOAD /Applications/ArmGNUToolchain/13.2.Rel1/arm-none-eabi/bin/../lib/gcc/arm-no
  .debug_line    0x00001802      0x978 CMakeFiles/stm32F103C8T6Project.elf.dir/Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_usart.c.obj
  .debug_line    0x0000217a      0x1c0 CMakeFiles/stm32F103C8T6Project.elf.dir/User/main.c.obj
  .debug_line    0x0000233a       0xe2 CMakeFiles/stm32F103C8T6Project.elf.dir/User/stm32f10x_it.c.obj
- .debug_line    0x0000241c      0x2b2 CMakeFiles/stm32F103C8T6Project.elf.dir/components/FreeRTOSDemo/FreeRTOSDemo.c.obj
- .debug_line    0x000026ce      0x60b CMakeFiles/stm32F103C8T6Project.elf.dir/components/Serial_package/Serial_package.c.obj
- .debug_line    0x00002cd9      0x2d1 CMakeFiles/stm32F103C8T6Project.elf.dir/components/countSensor/countSensor.c.obj
- .debug_line    0x00002faa      0x674 CMakeFiles/stm32F103C8T6Project.elf.dir/components/oled/OLED.c.obj
- .debug_line    0x0000361e       0x78 CMakeFiles/stm32F103C8T6Project.elf.dir/startup/startup_stm32f103c8tx.s.obj
- .debug_line    0x00003696     0x314a CMakeFiles/stm32F103C8T6Project.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2/cmsis_os2.c.obj
- .debug_line    0x000067e0      0x3d0 CMakeFiles/stm32F103C8T6Project.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/list.c.obj
- .debug_line    0x00006bb0      0x62c CMakeFiles/stm32F103C8T6Project.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM3/port.c.obj
- .debug_line    0x000071dc      0x6ac CMakeFiles/stm32F103C8T6Project.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/portable/MemMang/heap_4.c.obj
- .debug_line    0x00007888     0x1d6c CMakeFiles/stm32F103C8T6Project.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/queue.c.obj
- .debug_line    0x000095f4     0x270a CMakeFiles/stm32F103C8T6Project.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/tasks.c.obj
- .debug_line    0x0000bcfe      0xd26 CMakeFiles/stm32F103C8T6Project.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/timers.c.obj
+ .debug_line    0x0000241c      0x2b4 CMakeFiles/stm32F103C8T6Project.elf.dir/components/FreeRTOSDemo/FreeRTOSDemo.c.obj
+ .debug_line    0x000026d0      0x60b CMakeFiles/stm32F103C8T6Project.elf.dir/components/Serial_package/Serial_package.c.obj
+ .debug_line    0x00002cdb      0x2d1 CMakeFiles/stm32F103C8T6Project.elf.dir/components/countSensor/countSensor.c.obj
+ .debug_line    0x00002fac      0x674 CMakeFiles/stm32F103C8T6Project.elf.dir/components/oled/OLED.c.obj
+ .debug_line    0x00003620       0x78 CMakeFiles/stm32F103C8T6Project.elf.dir/startup/startup_stm32f103c8tx.s.obj
+ .debug_line    0x00003698     0x314a CMakeFiles/stm32F103C8T6Project.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2/cmsis_os2.c.obj
+ .debug_line    0x000067e2      0x3d0 CMakeFiles/stm32F103C8T6Project.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/list.c.obj
+ .debug_line    0x00006bb2      0x62c CMakeFiles/stm32F103C8T6Project.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM3/port.c.obj
+ .debug_line    0x000071de      0x6ac CMakeFiles/stm32F103C8T6Project.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/portable/MemMang/heap_4.c.obj
+ .debug_line    0x0000788a     0x1d6c CMakeFiles/stm32F103C8T6Project.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/queue.c.obj
+ .debug_line    0x000095f6     0x270a CMakeFiles/stm32F103C8T6Project.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/tasks.c.obj
+ .debug_line    0x0000bd00      0xd26 CMakeFiles/stm32F103C8T6Project.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/timers.c.obj
 
 .debug_str      0x00000000     0x4ba6
  .debug_str     0x00000000     0x4ba6 CMakeFiles/stm32F103C8T6Project.elf.dir/Libraries/CMSIS/system_stm32f10x.c.obj
