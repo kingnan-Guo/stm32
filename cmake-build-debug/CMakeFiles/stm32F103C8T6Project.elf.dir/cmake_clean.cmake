@@ -83,6 +83,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/stm32F103C8T6Project.elf.dir/components/Encode/Encode.c.obj.d"
   "CMakeFiles/stm32F103C8T6Project.elf.dir/components/FreeRTOSDemo/FreeRTOSDemo.c.obj"
   "CMakeFiles/stm32F103C8T6Project.elf.dir/components/FreeRTOSDemo/FreeRTOSDemo.c.obj.d"
+  "CMakeFiles/stm32F103C8T6Project.elf.dir/components/FreeRTOSTech/xTaskCreateFun/xTaskCreateFun.c.obj"
+  "CMakeFiles/stm32F103C8T6Project.elf.dir/components/FreeRTOSTech/xTaskCreateFun/xTaskCreateFun.c.obj.d"
   "CMakeFiles/stm32F103C8T6Project.elf.dir/components/IC/IC.c.obj"
   "CMakeFiles/stm32F103C8T6Project.elf.dir/components/IC/IC.c.obj.d"
   "CMakeFiles/stm32F103C8T6Project.elf.dir/components/LED/LED.c.obj"

@@ -91,6 +91,8 @@ include_directories(
         system/syscalls
         # FreeRTSO 使用 组建
         components/FreeRTOSDemo
+        # 开始学习 rtos
+        components/FreeRTOSTech/xTaskCreateFun
 )
 
 add_definitions(-DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB)

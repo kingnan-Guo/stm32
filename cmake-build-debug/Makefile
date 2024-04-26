@@ -1137,6 +1137,30 @@ components/FreeRTOSDemo/FreeRTOSDemo.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/stm32F103C8T6Project.elf.dir/build.make CMakeFiles/stm32F103C8T6Project.elf.dir/components/FreeRTOSDemo/FreeRTOSDemo.c.s
 .PHONY : components/FreeRTOSDemo/FreeRTOSDemo.c.s
 
+components/FreeRTOSTech/xTaskCreateFun/xTaskCreateFun.obj: components/FreeRTOSTech/xTaskCreateFun/xTaskCreateFun.c.obj
+.PHONY : components/FreeRTOSTech/xTaskCreateFun/xTaskCreateFun.obj
+
+# target to build an object file
+components/FreeRTOSTech/xTaskCreateFun/xTaskCreateFun.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/stm32F103C8T6Project.elf.dir/build.make CMakeFiles/stm32F103C8T6Project.elf.dir/components/FreeRTOSTech/xTaskCreateFun/xTaskCreateFun.c.obj
+.PHONY : components/FreeRTOSTech/xTaskCreateFun/xTaskCreateFun.c.obj
+
+components/FreeRTOSTech/xTaskCreateFun/xTaskCreateFun.i: components/FreeRTOSTech/xTaskCreateFun/xTaskCreateFun.c.i
+.PHONY : components/FreeRTOSTech/xTaskCreateFun/xTaskCreateFun.i
+
+# target to preprocess a source file
+components/FreeRTOSTech/xTaskCreateFun/xTaskCreateFun.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/stm32F103C8T6Project.elf.dir/build.make CMakeFiles/stm32F103C8T6Project.elf.dir/components/FreeRTOSTech/xTaskCreateFun/xTaskCreateFun.c.i
+.PHONY : components/FreeRTOSTech/xTaskCreateFun/xTaskCreateFun.c.i
+
+components/FreeRTOSTech/xTaskCreateFun/xTaskCreateFun.s: components/FreeRTOSTech/xTaskCreateFun/xTaskCreateFun.c.s
+.PHONY : components/FreeRTOSTech/xTaskCreateFun/xTaskCreateFun.s
+
+# target to generate assembly for a file
+components/FreeRTOSTech/xTaskCreateFun/xTaskCreateFun.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/stm32F103C8T6Project.elf.dir/build.make CMakeFiles/stm32F103C8T6Project.elf.dir/components/FreeRTOSTech/xTaskCreateFun/xTaskCreateFun.c.s
+.PHONY : components/FreeRTOSTech/xTaskCreateFun/xTaskCreateFun.c.s
+
 components/IC/IC.obj: components/IC/IC.c.obj
 .PHONY : components/IC/IC.obj
 
@@ -1712,6 +1736,9 @@ help:
 	@echo "... components/FreeRTOSDemo/FreeRTOSDemo.obj"
 	@echo "... components/FreeRTOSDemo/FreeRTOSDemo.i"
 	@echo "... components/FreeRTOSDemo/FreeRTOSDemo.s"
+	@echo "... components/FreeRTOSTech/xTaskCreateFun/xTaskCreateFun.obj"
+	@echo "... components/FreeRTOSTech/xTaskCreateFun/xTaskCreateFun.i"
+	@echo "... components/FreeRTOSTech/xTaskCreateFun/xTaskCreateFun.s"
 	@echo "... components/IC/IC.obj"
 	@echo "... components/IC/IC.i"
 	@echo "... components/IC/IC.s"
