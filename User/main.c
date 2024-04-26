@@ -3,14 +3,10 @@
 #include "FreeRTOS.h"
 #include "task.h"
 
-#define LED1_PIN GPIO_Pin_13
-#define LED2_PIN GPIO_Pin_14
-#define LED_PORT GPIOC
 
-// Task function to toggle LED1
+
 void vTask1(void *pvParameters) {
     for (;;) {
-        // Toggle LED1
         OLED_ShowString(3, 1, "FreeRtos 0");
         vTaskDelay(500 / portTICK_PERIOD_MS); // Delay for 500 milliseconds
         OLED_ShowString(3, 1, "FreeRtos 1");
@@ -18,7 +14,6 @@ void vTask1(void *pvParameters) {
     }
 }
 
-// Task function to toggle LED2
 void vTask2(void *pvParameters) {
     for (;;) {
         // Toggle LED2
@@ -33,6 +28,7 @@ int main(void) {
     // 初始化 I2C 的引脚
     OLED_Init();
     OLED_ShowString(1, 1, "cubeMX_original");
+
     // Create tasks
     xTaskCreate(vTask1, "Task 1", configMINIMAL_STACK_SIZE, NULL, tskIDLE_PRIORITY + 1, NULL);
     xTaskCreate(vTask2, "Task 2", configMINIMAL_STACK_SIZE, NULL, tskIDLE_PRIORITY + 1, NULL);

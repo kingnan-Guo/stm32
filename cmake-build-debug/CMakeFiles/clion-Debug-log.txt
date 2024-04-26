@@ -1,4 +1,4 @@
-/Applications/CLion.app/Contents/bin/cmake/mac/x64/bin/cmake -DCMAKE_BUILD_TYPE=Debug -DCMAKE_MAKE_PROGRAM=/usr/bin/make -DCMAKE_C_COMPILER=/usr/local/bin/arm-none-eabi-gcc -DCMAKE_CXX_COMPILER=/usr/local/bin/arm-none-eabi-g++ -G "CodeBlocks - Unix Makefiles" -S /Users/kingnan/Documents/github/stm32 -B /Users/kingnan/Documents/github/stm32/cmake-build-debug
+/Applications/CLion.app/Contents/bin/cmake/mac/x64/bin/cmake -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - Unix Makefiles" -S /Users/kingnan/Documents/github/stm32 -B /Users/kingnan/Documents/github/stm32/cmake-build-debug
 CMake Deprecation Warning:
   Support for "Extra Generators" like
 
@@ -10,6 +10,6 @@ CMake Deprecation Warning:
 
 -- Minimal optimization, debug info included
 cubeMX_FreeRTOS
--- Configuring done (0.0s)
--- Generating done (0.0s)
+-- Configuring done (0.1s)
+-- Generating done (0.1s)
 -- Build files have been written to: /Users/kingnan/Documents/github/stm32/cmake-build-debug
