@@ -51,6 +51,11 @@
 #include <stdint.h>
 extern uint32_t SystemCoreClock;
 #endif
+
+/** ==========================================================================================================
+ * 基础配置项
+ * ==========================================================================================================
+ */
 #define configUSE_PREEMPTION                     1
 #define configSUPPORT_STATIC_ALLOCATION          1
 #define configSUPPORT_DYNAMIC_ALLOCATION         1
@@ -80,6 +85,10 @@ extern uint32_t SystemCoreClock;
 #define configTIMER_QUEUE_LENGTH                 10
 #define configTIMER_TASK_STACK_DEPTH             256
 
+/** ==========================================================================================================
+ * 可选函数 配置选项
+ * ==========================================================================================================
+ */
 /* Set the following definitions to 1 to include the API function, or zero
 to exclude the API function. */
 #define INCLUDE_vTaskPrioritySet            1
@@ -99,9 +108,13 @@ to exclude the API function. */
  * The CMSIS-RTOS V2 FreeRTOS wrapper is dependent on the heap implementation used
  * by the application thus the correct define need to be enabled below
  */
-#define USE_FreeRTOS_HEAP_4
+#define USE_FreeRTOS_HEAP_4     // 这里配置是 使用 heap_4
 
-/* Cortex-M specific definitions. */
+/** ==========================================================================================================
+ * 中断相关的配置选项
+ * ==========================================================================================================
+ */
+/* Cortex-M specific definitions. */        //
 #ifdef __NVIC_PRIO_BITS
 /* __BVIC_PRIO_BITS will be specified when CMSIS is being used. */
  #define configPRIO_BITS         __NVIC_PRIO_BITS
@@ -132,6 +145,10 @@ header file. */
 #define configASSERT( x ) if ((x) == 0) {taskDISABLE_INTERRUPTS(); for( ;; );}
 /* USER CODE END 1 */
 
+/** ==========================================================================================================
+ * 中断服务函数 相关的配置选项
+ * ==========================================================================================================
+ */
 /* Definitions that map the FreeRTOS port interrupt handlers to their CMSIS
 standard names. */
 #define vPortSVCHandler    SVC_Handler

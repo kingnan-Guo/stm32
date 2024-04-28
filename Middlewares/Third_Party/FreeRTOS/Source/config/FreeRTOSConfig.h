@@ -51,6 +51,10 @@
 #include <stdint.h>
 extern uint32_t SystemCoreClock;
 #endif
+/** ==========================================================================================================
+ * 基础配置项
+ * ==========================================================================================================
+ */
 #define configUSE_PREEMPTION                     1                              // 此宏用于设置系统的调度方式。当宏 configUSE_PREEMPTION 设置为 1 时，系统使用抢占式调度；当宏 configUSE_PREEMPTION 设置为 0 时，系统使用协程式调度。抢占式调度和协程式调度的区别在于，协程式调度是正在运行的任务主动释放 CPU 后才能切换到下一个任务，任务切换的时机完全取决于正在运行的任务。协程式的优点在于可以节省开销，但是功能比较有限，现在的 MCU 性能都比较强大，建议使用抢占式调度
 #define configSUPPORT_STATIC_ALLOCATION          1                              //
 #define configSUPPORT_DYNAMIC_ALLOCATION         1

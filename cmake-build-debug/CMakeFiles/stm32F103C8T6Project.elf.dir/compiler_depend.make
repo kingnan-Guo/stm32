@@ -1460,6 +1460,7 @@ CMakeFiles/stm32F103C8T6Project.elf.dir/components/FreeRTOSTech/xTaskCreateFun/x
   /Applications/ArmGNUToolchain/13.2.Rel1/arm-none-eabi/arm-none-eabi/include/sys/_intsup.h \
   /Applications/ArmGNUToolchain/13.2.Rel1/arm-none-eabi/arm-none-eabi/include/sys/_stdint.h \
   /Applications/ArmGNUToolchain/13.2.Rel1/arm-none-eabi/arm-none-eabi/include/sys/features.h \
+  /Applications/ArmGNUToolchain/13.2.Rel1/arm-none-eabi/lib/gcc/arm-none-eabi/13.2.1/include/stddef.h \
   /Applications/ArmGNUToolchain/13.2.Rel1/arm-none-eabi/lib/gcc/arm-none-eabi/13.2.1/include/stdint.h \
   /Users/kingnan/Documents/github/stm32/Libraries/CMSIS/core_cm3.h \
   /Users/kingnan/Documents/github/stm32/Libraries/CMSIS/stm32f10x.h \
@@ -1487,6 +1488,15 @@ CMakeFiles/stm32F103C8T6Project.elf.dir/components/FreeRTOSTech/xTaskCreateFun/x
   /Users/kingnan/Documents/github/stm32/Libraries/STM32F10x_StdPeriph_Driver/inc/stm32f10x_tim.h \
   /Users/kingnan/Documents/github/stm32/Libraries/STM32F10x_StdPeriph_Driver/inc/stm32f10x_usart.h \
   /Users/kingnan/Documents/github/stm32/Libraries/STM32F10x_StdPeriph_Driver/inc/stm32f10x_wwdg.h \
+  /Users/kingnan/Documents/github/stm32/Middlewares/Third_Party/FreeRTOS/Source/config/FreeRTOSConfig.h \
+  /Users/kingnan/Documents/github/stm32/Middlewares/Third_Party/FreeRTOS/Source/include/FreeRTOS.h \
+  /Users/kingnan/Documents/github/stm32/Middlewares/Third_Party/FreeRTOS/Source/include/deprecated_definitions.h \
+  /Users/kingnan/Documents/github/stm32/Middlewares/Third_Party/FreeRTOS/Source/include/list.h \
+  /Users/kingnan/Documents/github/stm32/Middlewares/Third_Party/FreeRTOS/Source/include/mpu_wrappers.h \
+  /Users/kingnan/Documents/github/stm32/Middlewares/Third_Party/FreeRTOS/Source/include/portable.h \
+  /Users/kingnan/Documents/github/stm32/Middlewares/Third_Party/FreeRTOS/Source/include/projdefs.h \
+  /Users/kingnan/Documents/github/stm32/Middlewares/Third_Party/FreeRTOS/Source/include/task.h \
+  /Users/kingnan/Documents/github/stm32/Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM3/portmacro.h \
   /Users/kingnan/Documents/github/stm32/User/stm32f10x_conf.h \
   /Users/kingnan/Documents/github/stm32/components/oled/OLED.h
 

@@ -10,7 +10,7 @@ int main(void) {
 
     xTaskCreateFunMain();
 
-    FreeRTOSDemoMain();
+//    FreeRTOSDemoMain();
     while(1) {
 
     }
