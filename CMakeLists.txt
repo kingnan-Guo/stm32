@@ -103,7 +103,7 @@ file(GLOB_RECURSE SOURCES "startup/*.*" "Libraries/*.*" "User/*.*" "components/*
 
 
 # RTOS
-set(cubeMX_original "cubeMX_FreeRTOS")
+set(cubeMX_original "original_FreeRTOS")
 # 使用if语句判定MY_VAR的值
 if(cubeMX_original STREQUAL "cubeMX_FreeRTOS")
     message("cubeMX_FreeRTOS")
