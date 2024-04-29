@@ -70,16 +70,16 @@ extern uint32_t SystemCoreClock;// 只是声明一下系统时钟 ，后面要�
 #define configCPU_CLOCK_HZ                       ( SystemCoreClock )        // CPU频率 ； 告诉 FreeRTOS 当前MCU 的主频时多少； 在库函数中 Libraries/CMSIS/system_stm32f10x.c 下定义的 72MHZ ； 配置系统时钟的时候可被更改
 #define configTICK_RATE_HZ                       ((TickType_t)1000)         // FreeRTOS 这个系统的节拍频率；  时钟节拍频率，这里设置为1000， 一秒跳动1000次，周期就是1ms； 在 FreeRTOS/portable/GCC/ARM_CM3/portmacro.h 文件中 定义 TickType_t ； uint16_t
 #define configMAX_PRIORITIES                     ( 32 )                     // 可使用的最大优先级 ； 数字越大 执行的优先级 越高 ；理论上来说支持的优先级时不限制的 ；之前设置 56 ；只有当 configUSE_PORT_OPTIMISED_TASK_SELECTION 为 0 时 可以设置 32 以上的数；硬件指令最大支持 32 位；
-#define configMINIMAL_STACK_SIZE                 ((uint16_t)128)
+#define configMINIMAL_STACK_SIZE                 ((uint16_t)128)            // 最小堆栈大小；空闲任务使用的堆栈大小；（堆栈保存运行任务的运行环境，每一个任务都有一个堆栈，堆栈的大小）； 最小堆栈大小只有两个地方 用到，创建空闲任务的时候 FreeRTOS/tasks.c
 #define configTOTAL_HEAP_SIZE                    ((size_t)3072)
-#define configMAX_TASK_NAME_LEN                  ( 16 )
+#define configMAX_TASK_NAME_LEN                  ( 16 )                     // 任务名字字符串长度 16 个字符
 #define configUSE_TRACE_FACILITY                 1
-#define configUSE_16_BIT_TICKS                   0
+#define configUSE_16_BIT_TICKS                   0                          // 系统节拍计数器变量数据类型（用来表示变量类型 在FreeRTOS 中 configUSE_16_BIT_TICKS 为 1 会定义 configTICK_TYPE_WIDTH_IN_BITS 的类型 为 TICK_TYPE_WIDTH_32_BITS， configTICK_TYPE_WIDTH_IN_BITS 会 定义 TickType_t 的类型， 也就是 间接 定义了 系统节拍计数器变量数据类型， 当前使用stm32 所以时32 位的，所以 TickType_t 是 uint32_t ）（FreeRTOS/portable/GCC/ARM_CM3/portmacro.h）
 #define configUSE_MUTEXES                        1
 #define configQUEUE_REGISTRY_SIZE                8
 #define configUSE_RECURSIVE_MUTEXES              1
 #define configUSE_COUNTING_SEMAPHORES            1
-#define configUSE_PORT_OPTIMISED_TASK_SELECTION  1                              //1 启用特殊方法来选择下一个要运行的任务； 一般是硬件计算前导零指令，如果所使用的MCU没有这些硬件指令的话此宏应该设置为 0 使用软件区计算，但是有个前提是，当 configUSE_PORT_OPTIMISED_TASK_SELECTION  置 1 时； configMAX_PRIORITIES 只能小于 32； STM32 支持 硬件计算 所以可以配置成 1；
+#define configUSE_PORT_OPTIMISED_TASK_SELECTION  1                            //1 启用特殊方法来选择下一个要运行的任务； 一般是硬件计算前导零指令，如果所使用的MCU没有这些硬件指令的话此宏应该设置为 0 使用软件区计算，但是有个前提是，当 configUSE_PORT_OPTIMISED_TASK_SELECTION  置 1 时； configMAX_PRIORITIES 只能小于 32； STM32 支持 硬件计算 所以可以配置成 1；
 
 /* Co-routine definitions. */
 #define configUSE_CO_ROUTINES                    0
