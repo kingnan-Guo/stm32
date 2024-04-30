@@ -6,6 +6,8 @@ Archive member included to satisfy reference by file (symbol)
                               /Applications/ArmGNUToolchain/13.2.Rel1/arm-none-eabi/bin/../lib/gcc/arm-none-eabi/13.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/crt0.o (exit)
 /Applications/ArmGNUToolchain/13.2.Rel1/arm-none-eabi/bin/../lib/gcc/arm-none-eabi/13.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libg.a(libc_a-setvbuf.o)
                               CMakeFiles/stm32F103C8T6Project.elf.dir/system/retarget/retarget.c.obj (setvbuf)
+/Applications/ArmGNUToolchain/13.2.Rel1/arm-none-eabi/bin/../lib/gcc/arm-none-eabi/13.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libg.a(libc_a-snprintf.o)
+                              CMakeFiles/stm32F103C8T6Project.elf.dir/FreeRTOS/tasks.c.obj (snprintf)
 /Applications/ArmGNUToolchain/13.2.Rel1/arm-none-eabi/bin/../lib/gcc/arm-none-eabi/13.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libg.a(libc_a-fflush.o)
                               /Applications/ArmGNUToolchain/13.2.Rel1/arm-none-eabi/bin/../lib/gcc/arm-none-eabi/13.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libg.a(libc_a-setvbuf.o) (_fflush_r)
 /Applications/ArmGNUToolchain/13.2.Rel1/arm-none-eabi/bin/../lib/gcc/arm-none-eabi/13.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libg.a(libc_a-findfp.o)
@@ -20,12 +22,16 @@ Archive member included to satisfy reference by file (symbol)
                               CMakeFiles/stm32F103C8T6Project.elf.dir/system/retarget/retarget.c.obj (_impure_ptr)
 /Applications/ArmGNUToolchain/13.2.Rel1/arm-none-eabi/bin/../lib/gcc/arm-none-eabi/13.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libg.a(libc_a-errno.o)
                               CMakeFiles/stm32F103C8T6Project.elf.dir/system/syscalls/syscalls.c.obj (__errno)
+/Applications/ArmGNUToolchain/13.2.Rel1/arm-none-eabi/bin/../lib/gcc/arm-none-eabi/13.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libg.a(libc_a-strcpy.o)
+                              CMakeFiles/stm32F103C8T6Project.elf.dir/FreeRTOS/tasks.c.obj (strcpy)
 /Applications/ArmGNUToolchain/13.2.Rel1/arm-none-eabi/bin/../lib/gcc/arm-none-eabi/13.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libg.a(libc_a-init.o)
                               /Applications/ArmGNUToolchain/13.2.Rel1/arm-none-eabi/bin/../lib/gcc/arm-none-eabi/13.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/crt0.o (__libc_init_array)
 /Applications/ArmGNUToolchain/13.2.Rel1/arm-none-eabi/bin/../lib/gcc/arm-none-eabi/13.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libg.a(libc_a-lock.o)
                               /Applications/ArmGNUToolchain/13.2.Rel1/arm-none-eabi/bin/../lib/gcc/arm-none-eabi/13.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libg.a(libc_a-findfp.o) (__retarget_lock_init_recursive)
 /Applications/ArmGNUToolchain/13.2.Rel1/arm-none-eabi/bin/../lib/gcc/arm-none-eabi/13.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libg.a(libc_a-memcpy.o)
                               CMakeFiles/stm32F103C8T6Project.elf.dir/FreeRTOS/queue.c.obj (memcpy)
+/Applications/ArmGNUToolchain/13.2.Rel1/arm-none-eabi/bin/../lib/gcc/arm-none-eabi/13.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libg.a(libc_a-strlen-stub.o)
+                              CMakeFiles/stm32F103C8T6Project.elf.dir/FreeRTOS/tasks.c.obj (strlen)
 /Applications/ArmGNUToolchain/13.2.Rel1/arm-none-eabi/bin/../lib/gcc/arm-none-eabi/13.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libg.a(libc_a-__call_atexit.o)
                               /Applications/ArmGNUToolchain/13.2.Rel1/arm-none-eabi/bin/../lib/gcc/arm-none-eabi/13.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libg.a(libc_a-exit.o) (__call_exitprocs)
 /Applications/ArmGNUToolchain/13.2.Rel1/arm-none-eabi/bin/../lib/gcc/arm-none-eabi/13.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libg.a(libc_a-atexit.o)
@@ -37,7 +43,7 @@ Archive member included to satisfy reference by file (symbol)
 /Applications/ArmGNUToolchain/13.2.Rel1/arm-none-eabi/bin/../lib/gcc/arm-none-eabi/13.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libg.a(libc_a-mallocr.o)
                               /Applications/ArmGNUToolchain/13.2.Rel1/arm-none-eabi/bin/../lib/gcc/arm-none-eabi/13.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libg.a(libc_a-findfp.o) (_malloc_r)
 /Applications/ArmGNUToolchain/13.2.Rel1/arm-none-eabi/bin/../lib/gcc/arm-none-eabi/13.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libg.a(libc_a-svfprintf.o)
-                              /Applications/ArmGNUToolchain/13.2.Rel1/arm-none-eabi/bin/../lib/gcc/arm-none-eabi/13.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libg.a(libc_a-vsprintf.o) (_svfprintf_r)
+                              /Applications/ArmGNUToolchain/13.2.Rel1/arm-none-eabi/bin/../lib/gcc/arm-none-eabi/13.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libg.a(libc_a-snprintf.o) (_svfprintf_r)
 /Applications/ArmGNUToolchain/13.2.Rel1/arm-none-eabi/bin/../lib/gcc/arm-none-eabi/13.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libg.a(libc_a-makebuf.o)
                               /Applications/ArmGNUToolchain/13.2.Rel1/arm-none-eabi/bin/../lib/gcc/arm-none-eabi/13.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libg.a(libc_a-setvbuf.o) (__swhatbuf_r)
 /Applications/ArmGNUToolchain/13.2.Rel1/arm-none-eabi/bin/../lib/gcc/arm-none-eabi/13.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libg.a(libc_a-mlock.o)
@@ -72,14 +78,10 @@ Archive member included to satisfy reference by file (symbol)
                               /Applications/ArmGNUToolchain/13.2.Rel1/arm-none-eabi/bin/../lib/gcc/arm-none-eabi/13.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libg.a(libc_a-freer.o) (sysconf)
 /Applications/ArmGNUToolchain/13.2.Rel1/arm-none-eabi/bin/../lib/gcc/arm-none-eabi/13.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libg.a(libc_a-strcmp.o)
                               /Applications/ArmGNUToolchain/13.2.Rel1/arm-none-eabi/bin/../lib/gcc/arm-none-eabi/13.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libg.a(libc_a-locale.o) (strcmp)
-/Applications/ArmGNUToolchain/13.2.Rel1/arm-none-eabi/bin/../lib/gcc/arm-none-eabi/13.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libg.a(libc_a-strcpy.o)
-                              /Applications/ArmGNUToolchain/13.2.Rel1/arm-none-eabi/bin/../lib/gcc/arm-none-eabi/13.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libg.a(libc_a-locale.o) (strcpy)
 /Applications/ArmGNUToolchain/13.2.Rel1/arm-none-eabi/bin/../lib/gcc/arm-none-eabi/13.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libg.a(libc_a-fini.o)
                               /Applications/ArmGNUToolchain/13.2.Rel1/arm-none-eabi/bin/../lib/gcc/arm-none-eabi/13.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libg.a(libc_a-__call_atexit.o) (__libc_fini_array)
 /Applications/ArmGNUToolchain/13.2.Rel1/arm-none-eabi/bin/../lib/gcc/arm-none-eabi/13.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libg.a(libc_a-memchr-stub.o)
                               /Applications/ArmGNUToolchain/13.2.Rel1/arm-none-eabi/bin/../lib/gcc/arm-none-eabi/13.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libg.a(libc_a-svfprintf.o) (memchr)
-/Applications/ArmGNUToolchain/13.2.Rel1/arm-none-eabi/bin/../lib/gcc/arm-none-eabi/13.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libg.a(libc_a-strlen-stub.o)
-                              /Applications/ArmGNUToolchain/13.2.Rel1/arm-none-eabi/bin/../lib/gcc/arm-none-eabi/13.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libg.a(libc_a-svfprintf.o) (strlen)
 /Applications/ArmGNUToolchain/13.2.Rel1/arm-none-eabi/bin/../lib/gcc/arm-none-eabi/13.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libg.a(libc_a-wcrtomb.o)
                               /Applications/ArmGNUToolchain/13.2.Rel1/arm-none-eabi/bin/../lib/gcc/arm-none-eabi/13.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libg.a(libc_a-svfprintf.o) (_wcrtomb_r)
 /Applications/ArmGNUToolchain/13.2.Rel1/arm-none-eabi/bin/../lib/gcc/arm-none-eabi/13.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libg.a(libc_a-wcsrtombs.o)
@@ -2307,10 +2309,14 @@ Discarded input sections
  .text          0x00000000        0x0 CMakeFiles/stm32F103C8T6Project.elf.dir/FreeRTOS/tasks.c.obj
  .data          0x00000000        0x0 CMakeFiles/stm32F103C8T6Project.elf.dir/FreeRTOS/tasks.c.obj
  .bss           0x00000000        0x0 CMakeFiles/stm32F103C8T6Project.elf.dir/FreeRTOS/tasks.c.obj
+ .text.prvSnprintfReturnValueToCharsWritten
+                0x00000000       0x10 CMakeFiles/stm32F103C8T6Project.elf.dir/FreeRTOS/tasks.c.obj
  .text.prvTaskIsTaskSuspended
                 0x00000000       0x5c CMakeFiles/stm32F103C8T6Project.elf.dir/FreeRTOS/tasks.c.obj
  .text.prvTaskCheckFreeStackSpace
                 0x00000000       0x12 CMakeFiles/stm32F103C8T6Project.elf.dir/FreeRTOS/tasks.c.obj
+ .text.prvWriteNameToBuffer
+                0x00000000       0x22 CMakeFiles/stm32F103C8T6Project.elf.dir/FreeRTOS/tasks.c.obj
  .text.vTaskDelete
                 0x00000000       0xf0 CMakeFiles/stm32F103C8T6Project.elf.dir/FreeRTOS/tasks.c.obj
  .text.eTaskGetState
@@ -2369,6 +2375,10 @@ Discarded input sections
                 0x00000000       0xc8 CMakeFiles/stm32F103C8T6Project.elf.dir/FreeRTOS/tasks.c.obj
  .text.vTaskPriorityDisinheritAfterTimeout
                 0x00000000       0xd4 CMakeFiles/stm32F103C8T6Project.elf.dir/FreeRTOS/tasks.c.obj
+ .rodata.vTaskListTasks.str1.4
+                0x00000000        0xf CMakeFiles/stm32F103C8T6Project.elf.dir/FreeRTOS/tasks.c.obj
+ .text.vTaskListTasks
+                0x00000000       0xf0 CMakeFiles/stm32F103C8T6Project.elf.dir/FreeRTOS/tasks.c.obj
  .text.uxTaskResetEventItemValue
                 0x00000000       0x18 CMakeFiles/stm32F103C8T6Project.elf.dir/FreeRTOS/tasks.c.obj
  .text.pvTaskIncrementMutexHeldCount
@@ -2456,6 +2466,16 @@ Discarded input sections
  .debug_frame   0x00000000       0x3c /Applications/ArmGNUToolchain/13.2.Rel1/arm-none-eabi/bin/../lib/gcc/arm-none-eabi/13.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libg.a(libc_a-setvbuf.o)
  .ARM.attributes
                 0x00000000       0x2d /Applications/ArmGNUToolchain/13.2.Rel1/arm-none-eabi/bin/../lib/gcc/arm-none-eabi/13.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libg.a(libc_a-setvbuf.o)
+ .text          0x00000000        0x0 /Applications/ArmGNUToolchain/13.2.Rel1/arm-none-eabi/bin/../lib/gcc/arm-none-eabi/13.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libg.a(libc_a-snprintf.o)
+ .data          0x00000000        0x0 /Applications/ArmGNUToolchain/13.2.Rel1/arm-none-eabi/bin/../lib/gcc/arm-none-eabi/13.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libg.a(libc_a-snprintf.o)
+ .bss           0x00000000        0x0 /Applications/ArmGNUToolchain/13.2.Rel1/arm-none-eabi/bin/../lib/gcc/arm-none-eabi/13.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libg.a(libc_a-snprintf.o)
+ .text._snprintf_r
+                0x00000000       0x7c /Applications/ArmGNUToolchain/13.2.Rel1/arm-none-eabi/bin/../lib/gcc/arm-none-eabi/13.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libg.a(libc_a-snprintf.o)
+ .text.snprintf
+                0x00000000       0x84 /Applications/ArmGNUToolchain/13.2.Rel1/arm-none-eabi/bin/../lib/gcc/arm-none-eabi/13.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libg.a(libc_a-snprintf.o)
+ .debug_frame   0x00000000       0x94 /Applications/ArmGNUToolchain/13.2.Rel1/arm-none-eabi/bin/../lib/gcc/arm-none-eabi/13.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libg.a(libc_a-snprintf.o)
+ .ARM.attributes
+                0x00000000       0x2d /Applications/ArmGNUToolchain/13.2.Rel1/arm-none-eabi/bin/../lib/gcc/arm-none-eabi/13.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libg.a(libc_a-snprintf.o)
  .text          0x00000000        0x0 /Applications/ArmGNUToolchain/13.2.Rel1/arm-none-eabi/bin/../lib/gcc/arm-none-eabi/13.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libg.a(libc_a-fflush.o)
  .data          0x00000000        0x0 /Applications/ArmGNUToolchain/13.2.Rel1/arm-none-eabi/bin/../lib/gcc/arm-none-eabi/13.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libg.a(libc_a-fflush.o)
  .bss           0x00000000        0x0 /Applications/ArmGNUToolchain/13.2.Rel1/arm-none-eabi/bin/../lib/gcc/arm-none-eabi/13.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libg.a(libc_a-fflush.o)
@@ -2534,6 +2554,13 @@ Discarded input sections
  .debug_frame   0x00000000       0x20 /Applications/ArmGNUToolchain/13.2.Rel1/arm-none-eabi/bin/../lib/gcc/arm-none-eabi/13.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libg.a(libc_a-errno.o)
  .ARM.attributes
                 0x00000000       0x2d /Applications/ArmGNUToolchain/13.2.Rel1/arm-none-eabi/bin/../lib/gcc/arm-none-eabi/13.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libg.a(libc_a-errno.o)
+ .text          0x00000000        0x0 /Applications/ArmGNUToolchain/13.2.Rel1/arm-none-eabi/bin/../lib/gcc/arm-none-eabi/13.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libg.a(libc_a-strcpy.o)
+ .data          0x00000000        0x0 /Applications/ArmGNUToolchain/13.2.Rel1/arm-none-eabi/bin/../lib/gcc/arm-none-eabi/13.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libg.a(libc_a-strcpy.o)
+ .bss           0x00000000        0x0 /Applications/ArmGNUToolchain/13.2.Rel1/arm-none-eabi/bin/../lib/gcc/arm-none-eabi/13.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libg.a(libc_a-strcpy.o)
+ .text.strcpy   0x00000000       0xbc /Applications/ArmGNUToolchain/13.2.Rel1/arm-none-eabi/bin/../lib/gcc/arm-none-eabi/13.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libg.a(libc_a-strcpy.o)
+ .debug_frame   0x00000000       0x20 /Applications/ArmGNUToolchain/13.2.Rel1/arm-none-eabi/bin/../lib/gcc/arm-none-eabi/13.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libg.a(libc_a-strcpy.o)
+ .ARM.attributes
+                0x00000000       0x2d /Applications/ArmGNUToolchain/13.2.Rel1/arm-none-eabi/bin/../lib/gcc/arm-none-eabi/13.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libg.a(libc_a-strcpy.o)
  .text          0x00000000        0x0 /Applications/ArmGNUToolchain/13.2.Rel1/arm-none-eabi/bin/../lib/gcc/arm-none-eabi/13.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libg.a(libc_a-init.o)
  .data          0x00000000        0x0 /Applications/ArmGNUToolchain/13.2.Rel1/arm-none-eabi/bin/../lib/gcc/arm-none-eabi/13.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libg.a(libc_a-init.o)
  .bss           0x00000000        0x0 /Applications/ArmGNUToolchain/13.2.Rel1/arm-none-eabi/bin/../lib/gcc/arm-none-eabi/13.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libg.a(libc_a-init.o)
@@ -2574,6 +2601,13 @@ Discarded input sections
  .bss           0x00000000        0x0 /Applications/ArmGNUToolchain/13.2.Rel1/arm-none-eabi/bin/../lib/gcc/arm-none-eabi/13.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libg.a(libc_a-memcpy.o)
  .ARM.extab     0x00000000        0x0 /Applications/ArmGNUToolchain/13.2.Rel1/arm-none-eabi/bin/../lib/gcc/arm-none-eabi/13.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libg.a(libc_a-memcpy.o)
  .eh_frame      0x00000000       0x2c /Applications/ArmGNUToolchain/13.2.Rel1/arm-none-eabi/bin/../lib/gcc/arm-none-eabi/13.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libg.a(libc_a-memcpy.o)
+ .text          0x00000000        0x0 /Applications/ArmGNUToolchain/13.2.Rel1/arm-none-eabi/bin/../lib/gcc/arm-none-eabi/13.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libg.a(libc_a-strlen-stub.o)
+ .data          0x00000000        0x0 /Applications/ArmGNUToolchain/13.2.Rel1/arm-none-eabi/bin/../lib/gcc/arm-none-eabi/13.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libg.a(libc_a-strlen-stub.o)
+ .bss           0x00000000        0x0 /Applications/ArmGNUToolchain/13.2.Rel1/arm-none-eabi/bin/../lib/gcc/arm-none-eabi/13.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libg.a(libc_a-strlen-stub.o)
+ .text.strlen   0x00000000       0x5c /Applications/ArmGNUToolchain/13.2.Rel1/arm-none-eabi/bin/../lib/gcc/arm-none-eabi/13.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libg.a(libc_a-strlen-stub.o)
+ .debug_frame   0x00000000       0x20 /Applications/ArmGNUToolchain/13.2.Rel1/arm-none-eabi/bin/../lib/gcc/arm-none-eabi/13.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libg.a(libc_a-strlen-stub.o)
+ .ARM.attributes
+                0x00000000       0x2d /Applications/ArmGNUToolchain/13.2.Rel1/arm-none-eabi/bin/../lib/gcc/arm-none-eabi/13.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libg.a(libc_a-strlen-stub.o)
  .text          0x00000000        0x0 /Applications/ArmGNUToolchain/13.2.Rel1/arm-none-eabi/bin/../lib/gcc/arm-none-eabi/13.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libg.a(libc_a-__call_atexit.o)
  .data          0x00000000        0x0 /Applications/ArmGNUToolchain/13.2.Rel1/arm-none-eabi/bin/../lib/gcc/arm-none-eabi/13.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libg.a(libc_a-__call_atexit.o)
  .bss           0x00000000        0x0 /Applications/ArmGNUToolchain/13.2.Rel1/arm-none-eabi/bin/../lib/gcc/arm-none-eabi/13.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libg.a(libc_a-__call_atexit.o)
@@ -2819,13 +2853,6 @@ Discarded input sections
  .debug_frame   0x00000000       0x3c /Applications/ArmGNUToolchain/13.2.Rel1/arm-none-eabi/bin/../lib/gcc/arm-none-eabi/13.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libg.a(libc_a-strcmp.o)
  .ARM.attributes
                 0x00000000       0x1b /Applications/ArmGNUToolchain/13.2.Rel1/arm-none-eabi/bin/../lib/gcc/arm-none-eabi/13.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libg.a(libc_a-strcmp.o)
- .text          0x00000000        0x0 /Applications/ArmGNUToolchain/13.2.Rel1/arm-none-eabi/bin/../lib/gcc/arm-none-eabi/13.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libg.a(libc_a-strcpy.o)
- .data          0x00000000        0x0 /Applications/ArmGNUToolchain/13.2.Rel1/arm-none-eabi/bin/../lib/gcc/arm-none-eabi/13.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libg.a(libc_a-strcpy.o)
- .bss           0x00000000        0x0 /Applications/ArmGNUToolchain/13.2.Rel1/arm-none-eabi/bin/../lib/gcc/arm-none-eabi/13.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libg.a(libc_a-strcpy.o)
- .text.strcpy   0x00000000       0xbc /Applications/ArmGNUToolchain/13.2.Rel1/arm-none-eabi/bin/../lib/gcc/arm-none-eabi/13.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libg.a(libc_a-strcpy.o)
- .debug_frame   0x00000000       0x20 /Applications/ArmGNUToolchain/13.2.Rel1/arm-none-eabi/bin/../lib/gcc/arm-none-eabi/13.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libg.a(libc_a-strcpy.o)
- .ARM.attributes
-                0x00000000       0x2d /Applications/ArmGNUToolchain/13.2.Rel1/arm-none-eabi/bin/../lib/gcc/arm-none-eabi/13.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libg.a(libc_a-strcpy.o)
  .text          0x00000000        0x0 /Applications/ArmGNUToolchain/13.2.Rel1/arm-none-eabi/bin/../lib/gcc/arm-none-eabi/13.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libg.a(libc_a-fini.o)
  .data          0x00000000        0x0 /Applications/ArmGNUToolchain/13.2.Rel1/arm-none-eabi/bin/../lib/gcc/arm-none-eabi/13.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libg.a(libc_a-fini.o)
  .bss           0x00000000        0x0 /Applications/ArmGNUToolchain/13.2.Rel1/arm-none-eabi/bin/../lib/gcc/arm-none-eabi/13.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libg.a(libc_a-fini.o)
@@ -2836,13 +2863,6 @@ Discarded input sections
  .debug_frame   0x00000000       0x2c /Applications/ArmGNUToolchain/13.2.Rel1/arm-none-eabi/bin/../lib/gcc/arm-none-eabi/13.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libg.a(libc_a-memchr-stub.o)
  .ARM.attributes
                 0x00000000       0x2d /Applications/ArmGNUToolchain/13.2.Rel1/arm-none-eabi/bin/../lib/gcc/arm-none-eabi/13.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libg.a(libc_a-memchr-stub.o)
- .text          0x00000000        0x0 /Applications/ArmGNUToolchain/13.2.Rel1/arm-none-eabi/bin/../lib/gcc/arm-none-eabi/13.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libg.a(libc_a-strlen-stub.o)
- .data          0x00000000        0x0 /Applications/ArmGNUToolchain/13.2.Rel1/arm-none-eabi/bin/../lib/gcc/arm-none-eabi/13.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libg.a(libc_a-strlen-stub.o)
- .bss           0x00000000        0x0 /Applications/ArmGNUToolchain/13.2.Rel1/arm-none-eabi/bin/../lib/gcc/arm-none-eabi/13.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libg.a(libc_a-strlen-stub.o)
- .text.strlen   0x00000000       0x5c /Applications/ArmGNUToolchain/13.2.Rel1/arm-none-eabi/bin/../lib/gcc/arm-none-eabi/13.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libg.a(libc_a-strlen-stub.o)
- .debug_frame   0x00000000       0x20 /Applications/ArmGNUToolchain/13.2.Rel1/arm-none-eabi/bin/../lib/gcc/arm-none-eabi/13.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libg.a(libc_a-strlen-stub.o)
- .ARM.attributes
-                0x00000000       0x2d /Applications/ArmGNUToolchain/13.2.Rel1/arm-none-eabi/bin/../lib/gcc/arm-none-eabi/13.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libg.a(libc_a-strlen-stub.o)
  .text          0x00000000        0x0 /Applications/ArmGNUToolchain/13.2.Rel1/arm-none-eabi/bin/../lib/gcc/arm-none-eabi/13.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libg.a(libc_a-wcrtomb.o)
  .data          0x00000000        0x0 /Applications/ArmGNUToolchain/13.2.Rel1/arm-none-eabi/bin/../lib/gcc/arm-none-eabi/13.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libg.a(libc_a-wcrtomb.o)
  .bss           0x00000000        0x0 /Applications/ArmGNUToolchain/13.2.Rel1/arm-none-eabi/bin/../lib/gcc/arm-none-eabi/13.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libg.a(libc_a-wcrtomb.o)
@@ -4072,7 +4092,7 @@ LOAD /Applications/ArmGNUToolchain/13.2.Rel1/arm-none-eabi/bin/../lib/gcc/arm-no
 LOAD /Applications/ArmGNUToolchain/13.2.Rel1/arm-none-eabi/bin/../lib/gcc/arm-none-eabi/13.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libm.a
 LOAD /Applications/ArmGNUToolchain/13.2.Rel1/arm-none-eabi/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v7-m/nofp/libgcc.a
 
-.debug_info     0x00000000     0xdf82
+.debug_info     0x00000000     0xe212
  .debug_info    0x00000000      0x439 CMakeFiles/stm32F103C8T6Project.elf.dir/Libraries/CMSIS/system_stm32f10x.c.obj
  .debug_info    0x00000439      0x337 CMakeFiles/stm32F103C8T6Project.elf.dir/Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_exti.c.obj
  .debug_info    0x00000770      0x8be CMakeFiles/stm32F103C8T6Project.elf.dir/Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_gpio.c.obj
@@ -4089,10 +4109,10 @@ LOAD /Applications/ArmGNUToolchain/13.2.Rel1/arm-none-eabi/bin/../lib/gcc/arm-no
  .debug_info    0x00004c7b      0x5a8 CMakeFiles/stm32F103C8T6Project.elf.dir/FreeRTOS/portable/GCC/ARM_CM3/port.c.obj
  .debug_info    0x00005223      0x707 CMakeFiles/stm32F103C8T6Project.elf.dir/FreeRTOS/portable/MemMang/heap_4.c.obj
  .debug_info    0x0000592a     0x2db4 CMakeFiles/stm32F103C8T6Project.elf.dir/FreeRTOS/queue.c.obj
- .debug_info    0x000086de     0x3c2e CMakeFiles/stm32F103C8T6Project.elf.dir/FreeRTOS/tasks.c.obj
- .debug_info    0x0000c30c     0x1c76 CMakeFiles/stm32F103C8T6Project.elf.dir/FreeRTOS/timers.c.obj
+ .debug_info    0x000086de     0x3ebe CMakeFiles/stm32F103C8T6Project.elf.dir/FreeRTOS/tasks.c.obj
+ .debug_info    0x0000c59c     0x1c76 CMakeFiles/stm32F103C8T6Project.elf.dir/FreeRTOS/timers.c.obj
 
-.debug_abbrev   0x00000000     0x24cd
+.debug_abbrev   0x00000000     0x24e3
  .debug_abbrev  0x00000000      0x1c7 CMakeFiles/stm32F103C8T6Project.elf.dir/Libraries/CMSIS/system_stm32f10x.c.obj
  .debug_abbrev  0x000001c7      0x193 CMakeFiles/stm32F103C8T6Project.elf.dir/Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_exti.c.obj
  .debug_abbrev  0x0000035a      0x250 CMakeFiles/stm32F103C8T6Project.elf.dir/Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_gpio.c.obj
@@ -4109,11 +4129,11 @@ LOAD /Applications/ArmGNUToolchain/13.2.Rel1/arm-none-eabi/bin/../lib/gcc/arm-no
  .debug_abbrev  0x00001438      0x2a9 CMakeFiles/stm32F103C8T6Project.elf.dir/FreeRTOS/portable/GCC/ARM_CM3/port.c.obj
  .debug_abbrev  0x000016e1      0x2d2 CMakeFiles/stm32F103C8T6Project.elf.dir/FreeRTOS/portable/MemMang/heap_4.c.obj
  .debug_abbrev  0x000019b3      0x3b8 CMakeFiles/stm32F103C8T6Project.elf.dir/FreeRTOS/queue.c.obj
- .debug_abbrev  0x00001d6b      0x3c8 CMakeFiles/stm32F103C8T6Project.elf.dir/FreeRTOS/tasks.c.obj
- .debug_abbrev  0x00002133      0x39a CMakeFiles/stm32F103C8T6Project.elf.dir/FreeRTOS/timers.c.obj
+ .debug_abbrev  0x00001d6b      0x3de CMakeFiles/stm32F103C8T6Project.elf.dir/FreeRTOS/tasks.c.obj
+ .debug_abbrev  0x00002149      0x39a CMakeFiles/stm32F103C8T6Project.elf.dir/FreeRTOS/timers.c.obj
 
 .debug_loclists
-                0x00000000     0x5cf1
+                0x00000000     0x5eaf
  .debug_loclists
                 0x00000000       0xb7 CMakeFiles/stm32F103C8T6Project.elf.dir/Libraries/CMSIS/system_stm32f10x.c.obj
  .debug_loclists
@@ -4139,11 +4159,11 @@ LOAD /Applications/ArmGNUToolchain/13.2.Rel1/arm-none-eabi/bin/../lib/gcc/arm-no
  .debug_loclists
                 0x00001b84     0x14bc CMakeFiles/stm32F103C8T6Project.elf.dir/FreeRTOS/queue.c.obj
  .debug_loclists
-                0x00003040     0x200b CMakeFiles/stm32F103C8T6Project.elf.dir/FreeRTOS/tasks.c.obj
+                0x00003040     0x21c9 CMakeFiles/stm32F103C8T6Project.elf.dir/FreeRTOS/tasks.c.obj
  .debug_loclists
-                0x0000504b      0xca6 CMakeFiles/stm32F103C8T6Project.elf.dir/FreeRTOS/timers.c.obj
+                0x00005209      0xca6 CMakeFiles/stm32F103C8T6Project.elf.dir/FreeRTOS/timers.c.obj
 
-.debug_aranges  0x00000000      0xb70
+.debug_aranges  0x00000000      0xb88
  .debug_aranges
                 0x00000000       0x38 CMakeFiles/stm32F103C8T6Project.elf.dir/Libraries/CMSIS/system_stm32f10x.c.obj
  .debug_aranges
@@ -4177,12 +4197,12 @@ LOAD /Applications/ArmGNUToolchain/13.2.Rel1/arm-none-eabi/bin/../lib/gcc/arm-no
  .debug_aranges
                 0x00000660      0x1a0 CMakeFiles/stm32F103C8T6Project.elf.dir/FreeRTOS/queue.c.obj
  .debug_aranges
-                0x00000800      0x258 CMakeFiles/stm32F103C8T6Project.elf.dir/FreeRTOS/tasks.c.obj
+                0x00000800      0x270 CMakeFiles/stm32F103C8T6Project.elf.dir/FreeRTOS/tasks.c.obj
  .debug_aranges
-                0x00000a58      0x118 CMakeFiles/stm32F103C8T6Project.elf.dir/FreeRTOS/timers.c.obj
+                0x00000a70      0x118 CMakeFiles/stm32F103C8T6Project.elf.dir/FreeRTOS/timers.c.obj
 
 .debug_rnglists
-                0x00000000      0xaa3
+                0x00000000      0xab6
  .debug_rnglists
                 0x00000000       0x27 CMakeFiles/stm32F103C8T6Project.elf.dir/Libraries/CMSIS/system_stm32f10x.c.obj
  .debug_rnglists
@@ -4216,11 +4236,11 @@ LOAD /Applications/ArmGNUToolchain/13.2.Rel1/arm-none-eabi/bin/../lib/gcc/arm-no
  .debug_rnglists
                 0x000004b5      0x1dd CMakeFiles/stm32F103C8T6Project.elf.dir/FreeRTOS/queue.c.obj
  .debug_rnglists
-                0x00000692      0x343 CMakeFiles/stm32F103C8T6Project.elf.dir/FreeRTOS/tasks.c.obj
+                0x00000692      0x356 CMakeFiles/stm32F103C8T6Project.elf.dir/FreeRTOS/tasks.c.obj
  .debug_rnglists
-                0x000009d5       0xce CMakeFiles/stm32F103C8T6Project.elf.dir/FreeRTOS/timers.c.obj
+                0x000009e8       0xce CMakeFiles/stm32F103C8T6Project.elf.dir/FreeRTOS/timers.c.obj
 
-.debug_line     0x00000000     0xaf10
+.debug_line     0x00000000     0xb0cf
  .debug_line    0x00000000      0x3e1 CMakeFiles/stm32F103C8T6Project.elf.dir/Libraries/CMSIS/system_stm32f10x.c.obj
  .debug_line    0x000003e1      0x3f0 CMakeFiles/stm32F103C8T6Project.elf.dir/Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_exti.c.obj
  .debug_line    0x000007d1      0x723 CMakeFiles/stm32F103C8T6Project.elf.dir/Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_gpio.c.obj
@@ -4237,29 +4257,29 @@ LOAD /Applications/ArmGNUToolchain/13.2.Rel1/arm-none-eabi/bin/../lib/gcc/arm-no
  .debug_line    0x000039ff      0x675 CMakeFiles/stm32F103C8T6Project.elf.dir/FreeRTOS/portable/GCC/ARM_CM3/port.c.obj
  .debug_line    0x00004074      0x980 CMakeFiles/stm32F103C8T6Project.elf.dir/FreeRTOS/portable/MemMang/heap_4.c.obj
  .debug_line    0x000049f4     0x2309 CMakeFiles/stm32F103C8T6Project.elf.dir/FreeRTOS/queue.c.obj
- .debug_line    0x00006cfd     0x3244 CMakeFiles/stm32F103C8T6Project.elf.dir/FreeRTOS/tasks.c.obj
- .debug_line    0x00009f41      0xfcf CMakeFiles/stm32F103C8T6Project.elf.dir/FreeRTOS/timers.c.obj
+ .debug_line    0x00006cfd     0x3403 CMakeFiles/stm32F103C8T6Project.elf.dir/FreeRTOS/tasks.c.obj
+ .debug_line    0x0000a100      0xfcf CMakeFiles/stm32F103C8T6Project.elf.dir/FreeRTOS/timers.c.obj
 
-.debug_str      0x00000000     0x4201
- .debug_str     0x00000000     0x4201 CMakeFiles/stm32F103C8T6Project.elf.dir/Libraries/CMSIS/system_stm32f10x.c.obj
+.debug_str      0x00000000     0x42ed
+ .debug_str     0x00000000     0x42ed CMakeFiles/stm32F103C8T6Project.elf.dir/Libraries/CMSIS/system_stm32f10x.c.obj
                                 0x33b (size before relaxing)
- .debug_str     0x00004201      0x3bd CMakeFiles/stm32F103C8T6Project.elf.dir/Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_exti.c.obj
- .debug_str     0x00004201      0x5a4 CMakeFiles/stm32F103C8T6Project.elf.dir/Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_gpio.c.obj
- .debug_str     0x00004201      0x68e CMakeFiles/stm32F103C8T6Project.elf.dir/Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_rcc.c.obj
- .debug_str     0x00004201      0x744 CMakeFiles/stm32F103C8T6Project.elf.dir/Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_usart.c.obj
- .debug_str     0x00004201      0x1ef CMakeFiles/stm32F103C8T6Project.elf.dir/User/main.c.obj
- .debug_str     0x00004201      0x215 CMakeFiles/stm32F103C8T6Project.elf.dir/User/stm32f10x_it.c.obj
- .debug_str     0x00004201      0x2d3 CMakeFiles/stm32F103C8T6Project.elf.dir/components/FreeRTOSDemo/FreeRTOSDemo.c.obj
- .debug_str     0x00004201      0xad9 CMakeFiles/stm32F103C8T6Project.elf.dir/components/Serial_package/Serial_package.c.obj
- .debug_str     0x00004201      0x931 CMakeFiles/stm32F103C8T6Project.elf.dir/components/countSensor/countSensor.c.obj
- .debug_str     0x00004201      0x4e6 CMakeFiles/stm32F103C8T6Project.elf.dir/components/oled/OLED.c.obj
- .debug_str     0x00004201       0x9a CMakeFiles/stm32F103C8T6Project.elf.dir/startup/startup_stm32f103c8tx.s.obj
- .debug_str     0x00004201      0x310 CMakeFiles/stm32F103C8T6Project.elf.dir/FreeRTOS/list.c.obj
- .debug_str     0x00004201      0x4aa CMakeFiles/stm32F103C8T6Project.elf.dir/FreeRTOS/portable/GCC/ARM_CM3/port.c.obj
- .debug_str     0x00004201      0x575 CMakeFiles/stm32F103C8T6Project.elf.dir/FreeRTOS/portable/MemMang/heap_4.c.obj
- .debug_str     0x00004201      0xecc CMakeFiles/stm32F103C8T6Project.elf.dir/FreeRTOS/queue.c.obj
- .debug_str     0x00004201     0x15ed CMakeFiles/stm32F103C8T6Project.elf.dir/FreeRTOS/tasks.c.obj
- .debug_str     0x00004201      0xcd4 CMakeFiles/stm32F103C8T6Project.elf.dir/FreeRTOS/timers.c.obj
+ .debug_str     0x000042ed      0x3bd CMakeFiles/stm32F103C8T6Project.elf.dir/Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_exti.c.obj
+ .debug_str     0x000042ed      0x5a4 CMakeFiles/stm32F103C8T6Project.elf.dir/Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_gpio.c.obj
+ .debug_str     0x000042ed      0x68e CMakeFiles/stm32F103C8T6Project.elf.dir/Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_rcc.c.obj
+ .debug_str     0x000042ed      0x744 CMakeFiles/stm32F103C8T6Project.elf.dir/Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_usart.c.obj
+ .debug_str     0x000042ed      0x1ef CMakeFiles/stm32F103C8T6Project.elf.dir/User/main.c.obj
+ .debug_str     0x000042ed      0x215 CMakeFiles/stm32F103C8T6Project.elf.dir/User/stm32f10x_it.c.obj
+ .debug_str     0x000042ed      0x2d3 CMakeFiles/stm32F103C8T6Project.elf.dir/components/FreeRTOSDemo/FreeRTOSDemo.c.obj
+ .debug_str     0x000042ed      0xad9 CMakeFiles/stm32F103C8T6Project.elf.dir/components/Serial_package/Serial_package.c.obj
+ .debug_str     0x000042ed      0x931 CMakeFiles/stm32F103C8T6Project.elf.dir/components/countSensor/countSensor.c.obj
+ .debug_str     0x000042ed      0x4e6 CMakeFiles/stm32F103C8T6Project.elf.dir/components/oled/OLED.c.obj
+ .debug_str     0x000042ed       0x9a CMakeFiles/stm32F103C8T6Project.elf.dir/startup/startup_stm32f103c8tx.s.obj
+ .debug_str     0x000042ed      0x310 CMakeFiles/stm32F103C8T6Project.elf.dir/FreeRTOS/list.c.obj
+ .debug_str     0x000042ed      0x4aa CMakeFiles/stm32F103C8T6Project.elf.dir/FreeRTOS/portable/GCC/ARM_CM3/port.c.obj
+ .debug_str     0x000042ed      0x575 CMakeFiles/stm32F103C8T6Project.elf.dir/FreeRTOS/portable/MemMang/heap_4.c.obj
+ .debug_str     0x000042ed      0xecc CMakeFiles/stm32F103C8T6Project.elf.dir/FreeRTOS/queue.c.obj
+ .debug_str     0x000042ed     0x16e1 CMakeFiles/stm32F103C8T6Project.elf.dir/FreeRTOS/tasks.c.obj
+ .debug_str     0x000042ed      0xcd4 CMakeFiles/stm32F103C8T6Project.elf.dir/FreeRTOS/timers.c.obj
 
 .comment        0x00000000       0x44
  .comment       0x00000000       0x44 CMakeFiles/stm32F103C8T6Project.elf.dir/Libraries/CMSIS/system_stm32f10x.c.obj
@@ -4281,7 +4301,7 @@ LOAD /Applications/ArmGNUToolchain/13.2.Rel1/arm-none-eabi/bin/../lib/gcc/arm-no
  .comment       0x00000044       0x45 CMakeFiles/stm32F103C8T6Project.elf.dir/FreeRTOS/tasks.c.obj
  .comment       0x00000044       0x45 CMakeFiles/stm32F103C8T6Project.elf.dir/FreeRTOS/timers.c.obj
 
-.debug_frame    0x00000000     0x1fa0
+.debug_frame    0x00000000     0x1ff4
  .debug_frame   0x00000000       0x6c CMakeFiles/stm32F103C8T6Project.elf.dir/Libraries/CMSIS/system_stm32f10x.c.obj
  .debug_frame   0x0000006c       0xa0 CMakeFiles/stm32F103C8T6Project.elf.dir/Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_exti.c.obj
  .debug_frame   0x0000010c      0x168 CMakeFiles/stm32F103C8T6Project.elf.dir/Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_gpio.c.obj
@@ -4297,15 +4317,15 @@ LOAD /Applications/ArmGNUToolchain/13.2.Rel1/arm-none-eabi/bin/../lib/gcc/arm-no
  .debug_frame   0x00000b58       0xf4 CMakeFiles/stm32F103C8T6Project.elf.dir/FreeRTOS/portable/GCC/ARM_CM3/port.c.obj
  .debug_frame   0x00000c4c       0xfc CMakeFiles/stm32F103C8T6Project.elf.dir/FreeRTOS/portable/MemMang/heap_4.c.obj
  .debug_frame   0x00000d48      0x568 CMakeFiles/stm32F103C8T6Project.elf.dir/FreeRTOS/queue.c.obj
- .debug_frame   0x000012b0      0x78c CMakeFiles/stm32F103C8T6Project.elf.dir/FreeRTOS/tasks.c.obj
- .debug_frame   0x00001a3c      0x378 CMakeFiles/stm32F103C8T6Project.elf.dir/FreeRTOS/timers.c.obj
- .debug_frame   0x00001db4       0x2c /Applications/ArmGNUToolchain/13.2.Rel1/arm-none-eabi/bin/../lib/gcc/arm-none-eabi/13.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libg.a(libc_a-memset.o)
- .debug_frame   0x00001de0       0x2c /Applications/ArmGNUToolchain/13.2.Rel1/arm-none-eabi/bin/../lib/gcc/arm-none-eabi/13.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libg.a(libc_a-init.o)
- .debug_frame   0x00001e0c       0xb0 /Applications/ArmGNUToolchain/13.2.Rel1/arm-none-eabi/bin/../lib/gcc/arm-none-eabi/13.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libg.a(libc_a-lock.o)
- .debug_frame   0x00001ebc       0x5c /Applications/ArmGNUToolchain/13.2.Rel1/arm-none-eabi/bin/../lib/gcc/arm-none-eabi/13.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libg.a(libc_a-__call_atexit.o)
- .debug_frame   0x00001f18       0x20 /Applications/ArmGNUToolchain/13.2.Rel1/arm-none-eabi/bin/../lib/gcc/arm-none-eabi/13.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libg.a(libc_a-atexit.o)
- .debug_frame   0x00001f38       0x34 /Applications/ArmGNUToolchain/13.2.Rel1/arm-none-eabi/bin/../lib/gcc/arm-none-eabi/13.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libg.a(libc_a-fini.o)
- .debug_frame   0x00001f6c       0x34 /Applications/ArmGNUToolchain/13.2.Rel1/arm-none-eabi/bin/../lib/gcc/arm-none-eabi/13.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libg.a(libc_a-__atexit.o)
+ .debug_frame   0x000012b0      0x7e0 CMakeFiles/stm32F103C8T6Project.elf.dir/FreeRTOS/tasks.c.obj
+ .debug_frame   0x00001a90      0x378 CMakeFiles/stm32F103C8T6Project.elf.dir/FreeRTOS/timers.c.obj
+ .debug_frame   0x00001e08       0x2c /Applications/ArmGNUToolchain/13.2.Rel1/arm-none-eabi/bin/../lib/gcc/arm-none-eabi/13.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libg.a(libc_a-memset.o)
+ .debug_frame   0x00001e34       0x2c /Applications/ArmGNUToolchain/13.2.Rel1/arm-none-eabi/bin/../lib/gcc/arm-none-eabi/13.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libg.a(libc_a-init.o)
+ .debug_frame   0x00001e60       0xb0 /Applications/ArmGNUToolchain/13.2.Rel1/arm-none-eabi/bin/../lib/gcc/arm-none-eabi/13.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libg.a(libc_a-lock.o)
+ .debug_frame   0x00001f10       0x5c /Applications/ArmGNUToolchain/13.2.Rel1/arm-none-eabi/bin/../lib/gcc/arm-none-eabi/13.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libg.a(libc_a-__call_atexit.o)
+ .debug_frame   0x00001f6c       0x20 /Applications/ArmGNUToolchain/13.2.Rel1/arm-none-eabi/bin/../lib/gcc/arm-none-eabi/13.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libg.a(libc_a-atexit.o)
+ .debug_frame   0x00001f8c       0x34 /Applications/ArmGNUToolchain/13.2.Rel1/arm-none-eabi/bin/../lib/gcc/arm-none-eabi/13.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libg.a(libc_a-fini.o)
+ .debug_frame   0x00001fc0       0x34 /Applications/ArmGNUToolchain/13.2.Rel1/arm-none-eabi/bin/../lib/gcc/arm-none-eabi/13.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/nofp/libg.a(libc_a-__atexit.o)
 
 .debug_line_str
                 0x00000000      0x166

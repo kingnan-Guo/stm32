@@ -217,6 +217,7 @@ CMakeFiles/stm32F103C8T6Project.elf.dir/FreeRTOS/tasks.c.obj: /Users/kingnan/Doc
   /Applications/ArmGNUToolchain/13.2.Rel1/arm-none-eabi/arm-none-eabi/include/machine/stdlib.h \
   /Applications/ArmGNUToolchain/13.2.Rel1/arm-none-eabi/arm-none-eabi/include/newlib.h \
   /Applications/ArmGNUToolchain/13.2.Rel1/arm-none-eabi/arm-none-eabi/include/stdint.h \
+  /Applications/ArmGNUToolchain/13.2.Rel1/arm-none-eabi/arm-none-eabi/include/stdio.h \
   /Applications/ArmGNUToolchain/13.2.Rel1/arm-none-eabi/arm-none-eabi/include/stdlib.h \
   /Applications/ArmGNUToolchain/13.2.Rel1/arm-none-eabi/arm-none-eabi/include/string.h \
   /Applications/ArmGNUToolchain/13.2.Rel1/arm-none-eabi/arm-none-eabi/include/strings.h \
@@ -229,7 +230,9 @@ CMakeFiles/stm32F103C8T6Project.elf.dir/FreeRTOS/tasks.c.obj: /Users/kingnan/Doc
   /Applications/ArmGNUToolchain/13.2.Rel1/arm-none-eabi/arm-none-eabi/include/sys/features.h \
   /Applications/ArmGNUToolchain/13.2.Rel1/arm-none-eabi/arm-none-eabi/include/sys/lock.h \
   /Applications/ArmGNUToolchain/13.2.Rel1/arm-none-eabi/arm-none-eabi/include/sys/reent.h \
+  /Applications/ArmGNUToolchain/13.2.Rel1/arm-none-eabi/arm-none-eabi/include/sys/stdio.h \
   /Applications/ArmGNUToolchain/13.2.Rel1/arm-none-eabi/arm-none-eabi/include/sys/string.h \
+  /Applications/ArmGNUToolchain/13.2.Rel1/arm-none-eabi/lib/gcc/arm-none-eabi/13.2.1/include/stdarg.h \
   /Applications/ArmGNUToolchain/13.2.Rel1/arm-none-eabi/lib/gcc/arm-none-eabi/13.2.1/include/stddef.h \
   /Applications/ArmGNUToolchain/13.2.Rel1/arm-none-eabi/lib/gcc/arm-none-eabi/13.2.1/include/stdint.h \
   /Users/kingnan/Documents/github/stm32/FreeRTOS/config/FreeRTOSConfig.h \
@@ -2217,12 +2220,6 @@ CMakeFiles/stm32F103C8T6Project.elf.dir/system/syscalls/syscalls.c.obj: /Users/k
 
 /Users/kingnan/Documents/github/stm32/components/Serial_package/Serial_package.c:
 
-/Applications/ArmGNUToolchain/13.2.Rel1/arm-none-eabi/arm-none-eabi/include/time.h:
-
-/Applications/ArmGNUToolchain/13.2.Rel1/arm-none-eabi/lib/gcc/arm-none-eabi/13.2.1/include/stdarg.h:
-
-/Applications/ArmGNUToolchain/13.2.Rel1/arm-none-eabi/arm-none-eabi/include/stdio.h:
-
 /Users/kingnan/Documents/github/stm32/components/Serial/Serial.c:
 
 /Users/kingnan/Documents/github/stm32/components/PWM/PWM.c:
@@ -2255,11 +2252,7 @@ CMakeFiles/stm32F103C8T6Project.elf.dir/system/syscalls/syscalls.c.obj: /Users/k
 
 /Users/kingnan/Documents/github/stm32/Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_usart.c:
 
-/Users/kingnan/Documents/github/stm32/Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_exti.c:
-
-/Users/kingnan/Documents/github/stm32/Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_spi.c:
-
-/Users/kingnan/Documents/github/stm32/Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_sdio.c:
+/Users/kingnan/Documents/github/stm32/Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_rtc.c:
 
 /Users/kingnan/Documents/github/stm32/Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_i2c.c:
 
@@ -2277,9 +2270,9 @@ CMakeFiles/stm32F103C8T6Project.elf.dir/system/syscalls/syscalls.c.obj: /Users/k
 
 /Users/kingnan/Documents/github/stm32/components/coustomSPI/coustomSPI.h:
 
-/Applications/ArmGNUToolchain/13.2.Rel1/arm-none-eabi/arm-none-eabi/include/sys/stdio.h:
-
 /Users/kingnan/Documents/github/stm32/FreeRTOS/list.c:
+
+/Applications/ArmGNUToolchain/13.2.Rel1/arm-none-eabi/arm-none-eabi/include/sys/stdio.h:
 
 /Users/kingnan/Documents/github/stm32/Libraries/STM32F10x_StdPeriph_Driver/src/misc.c:
 
@@ -2341,9 +2334,15 @@ CMakeFiles/stm32F103C8T6Project.elf.dir/system/syscalls/syscalls.c.obj: /Users/k
 
 /Users/kingnan/Documents/github/stm32/FreeRTOS/include/stack_macros.h:
 
+/Applications/ArmGNUToolchain/13.2.Rel1/arm-none-eabi/arm-none-eabi/include/time.h:
+
+/Applications/ArmGNUToolchain/13.2.Rel1/arm-none-eabi/lib/gcc/arm-none-eabi/13.2.1/include/stdarg.h:
+
 /Applications/ArmGNUToolchain/13.2.Rel1/arm-none-eabi/arm-none-eabi/include/sys/reent.h:
 
 /Applications/ArmGNUToolchain/13.2.Rel1/arm-none-eabi/arm-none-eabi/include/strings.h:
+
+/Applications/ArmGNUToolchain/13.2.Rel1/arm-none-eabi/arm-none-eabi/include/stdio.h:
 
 /Users/kingnan/Documents/github/stm32/Libraries/CMSIS/core_cm3.c:
 
@@ -2413,6 +2412,12 @@ CMakeFiles/stm32F103C8T6Project.elf.dir/system/syscalls/syscalls.c.obj: /Users/k
 
 /Users/kingnan/Documents/github/stm32/FreeRTOS/include/portable.h:
 
+/Users/kingnan/Documents/github/stm32/Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_spi.c:
+
+/Users/kingnan/Documents/github/stm32/Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_sdio.c:
+
+/Users/kingnan/Documents/github/stm32/Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_exti.c:
+
 /Users/kingnan/Documents/github/stm32/Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_wwdg.c:
 
 /Applications/ArmGNUToolchain/13.2.Rel1/arm-none-eabi/arm-none-eabi/include/sys/config.h:
@@ -2456,8 +2461,6 @@ CMakeFiles/stm32F103C8T6Project.elf.dir/system/syscalls/syscalls.c.obj: /Users/k
 /Users/kingnan/Documents/github/stm32/Libraries/STM32F10x_StdPeriph_Driver/inc/stm32f10x_gpio.h:
 
 /Applications/ArmGNUToolchain/13.2.Rel1/arm-none-eabi/lib/gcc/arm-none-eabi/13.2.1/include/stddef.h:
-
-/Users/kingnan/Documents/github/stm32/Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_rtc.c:
 
 /Users/kingnan/Documents/github/stm32/Libraries/STM32F10x_StdPeriph_Driver/src/stm32f10x_iwdg.c:
 
