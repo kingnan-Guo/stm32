@@ -375,53 +375,53 @@ typedef struct tskTaskControlBlock       /* The old naming convention is used to
         volatile BaseType_t xTaskRunState;      /**< Used to identify the core the task is running on, if the task is running. Otherwise, identifies the task's state - not running or yielding. */
         UBaseType_t uxTaskAttributes;           /**< Task's attributes - currently used to identify the idle tasks. */
     #endif
-    char pcTaskName[ configMAX_TASK_NAME_LEN ]; /**< Descriptive name given to the task when created.  Facilitates debugging only. */
+    char pcTaskName[ configMAX_TASK_NAME_LEN ]; /**< Descriptive name given to the task when created.  Facilitates debugging only. */   // 任务名字
 
     #if ( configUSE_TASK_PREEMPTION_DISABLE == 1 )
         BaseType_t xPreemptionDisable; /**< Used to prevent the task from being preempted. */
     #endif
 
     #if ( ( portSTACK_GROWTH > 0 ) || ( configRECORD_STACK_HIGH_ADDRESS == 1 ) )
-        StackType_t * pxEndOfStack; /**< Points to the highest valid address for the stack. */
+        StackType_t * pxEndOfStack; /**< Points to the highest valid address for the stack. */      //任务堆栈栈底
     #endif
 
     #if ( portCRITICAL_NESTING_IN_TCB == 1 )
-        UBaseType_t uxCriticalNesting; /**< Holds the critical section nesting depth for ports that do not maintain their own count in the port layer. */
+        UBaseType_t uxCriticalNesting; /**< Holds the critical section nesting depth for ports that do not maintain their own count in the port layer. */       //临界区嵌套深度
     #endif
 
-    #if ( configUSE_TRACE_FACILITY == 1 )
+    #if ( configUSE_TRACE_FACILITY == 1 )       //trace 或到 debug 的时候用到
         UBaseType_t uxTCBNumber;  /**< Stores a number that increments each time a TCB is created.  It allows debuggers to determine when a task has been deleted and then recreated. */
         UBaseType_t uxTaskNumber; /**< Stores a number specifically for use by third party trace code. */
     #endif
 
     #if ( configUSE_MUTEXES == 1 )
-        UBaseType_t uxBasePriority; /**< The priority last assigned to the task - used by the priority inheritance mechanism. */
-        UBaseType_t uxMutexesHeld;
+        UBaseType_t uxBasePriority; /**< The priority last assigned to the task - used by the priority inheritance mechanism. */    //任务基础优先级,优先级反转的时候用到
+        UBaseType_t uxMutexesHeld;                                                                                                  //任务获取到的互斥信号量个数
     #endif
 
     #if ( configUSE_APPLICATION_TASK_TAG == 1 )
         TaskHookFunction_t pxTaskTag;
     #endif
 
-    #if ( configNUM_THREAD_LOCAL_STORAGE_POINTERS > 0 )
+    #if ( configNUM_THREAD_LOCAL_STORAGE_POINTERS > 0 ) //与本地存储有关
         void * pvThreadLocalStoragePointers[ configNUM_THREAD_LOCAL_STORAGE_POINTERS ];
     #endif
 
-    #if ( configGENERATE_RUN_TIME_STATS == 1 )
+    #if ( configGENERATE_RUN_TIME_STATS == 1 )  //用来记录任务运行总时间
         configRUN_TIME_COUNTER_TYPE ulRunTimeCounter; /**< Stores the amount of time the task has spent in the Running state. */
     #endif
 
-    #if ( configUSE_C_RUNTIME_TLS_SUPPORT == 1 )
+    #if ( configUSE_C_RUNTIME_TLS_SUPPORT == 1 )    //定义一个 newlib 结构体变量
         configTLS_BLOCK_TYPE xTLSBlock; /**< Memory block used as Thread Local Storage (TLS) Block for the task. */
     #endif
 
-    #if ( configUSE_TASK_NOTIFICATIONS == 1 )
-        volatile uint32_t ulNotifiedValue[ configTASK_NOTIFICATION_ARRAY_ENTRIES ];
-        volatile uint8_t ucNotifyState[ configTASK_NOTIFICATION_ARRAY_ENTRIES ];
+    #if ( configUSE_TASK_NOTIFICATIONS == 1 )   //任务通知相关变量
+        volatile uint32_t ulNotifiedValue[ configTASK_NOTIFICATION_ARRAY_ENTRIES ]; //任务通知值
+        volatile uint8_t ucNotifyState[ configTASK_NOTIFICATION_ARRAY_ENTRIES ];    //任务通知状态
     #endif
 
     /* See the comments in FreeRTOS.h with the definition of
-     * tskSTATIC_AND_DYNAMIC_ALLOCATION_POSSIBLE. */
+     * tskSTATIC_AND_DYNAMIC_ALLOCATION_POSSIBLE. */    //用来标记任务是动态创建的还是静态创建的，如果是静态创建的此变量就为 pdTURE，如果是动态创建的就为 pdFALSE
     #if ( tskSTATIC_AND_DYNAMIC_ALLOCATION_POSSIBLE != 0 )
         uint8_t ucStaticallyAllocated; /**< Set to pdTRUE if the task is a statically allocated to ensure no attempt is made to free the memory. */
     #endif
