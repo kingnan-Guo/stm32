@@ -357,20 +357,20 @@
  */
 typedef struct tskTaskControlBlock       /* The old naming convention is used to prevent breaking kernel aware debuggers. */
 {
-    volatile StackType_t * pxTopOfStack; /**< Points to the location of the last item placed on the tasks stack.  THIS MUST BE THE FIRST MEMBER OF THE TCB STRUCT. */
+    volatile StackType_t * pxTopOfStack; /**< Points to the location of the last item placed on the tasks stack.  THIS MUST BE THE FIRST MEMBER OF THE TCB STRUCT. */       // 任务堆栈 栈顶
 
     #if ( portUSING_MPU_WRAPPERS == 1 )
-        xMPU_SETTINGS xMPUSettings; /**< The MPU settings are defined as part of the port layer.  THIS MUST BE THE SECOND MEMBER OF THE TCB STRUCT. */
+        xMPU_SETTINGS xMPUSettings; /**< The MPU settings are defined as part of the port layer.  THIS MUST BE THE SECOND MEMBER OF THE TCB STRUCT. */      // MPU 相关设置
     #endif
 
     #if ( configUSE_CORE_AFFINITY == 1 ) && ( configNUMBER_OF_CORES > 1 )
         UBaseType_t uxCoreAffinityMask; /**< Used to link the task to certain cores.  UBaseType_t must have greater than or equal to the number of bits as configNUMBER_OF_CORES. */
     #endif
 
-    ListItem_t xStateListItem;                  /**< The list that the state list item of a task is reference from denotes the state of that task (Ready, Blocked, Suspended ). */
-    ListItem_t xEventListItem;                  /**< Used to reference a task from an event list. */
-    UBaseType_t uxPriority;                     /**< The priority of the task.  0 is the lowest priority. */
-    StackType_t * pxStack;                      /**< Points to the start of the stack. */
+    ListItem_t xStateListItem;                  /**< The list that the state list item of a task is reference from denotes the state of that task (Ready, Blocked, Suspended ). */      // 状态列表项
+    ListItem_t xEventListItem;                  /**< Used to reference a task from an event list. */            // 事件列表项
+    UBaseType_t uxPriority;                     /**< The priority of the task.  0 is the lowest priority. */    // 任务优先级
+    StackType_t * pxStack;                      /**< Points to the start of the stack. */                       // 任务堆栈起始地址
     #if ( configNUMBER_OF_CORES > 1 )
         volatile BaseType_t xTaskRunState;      /**< Used to identify the core the task is running on, if the task is running. Otherwise, identifies the task's state - not running or yielding. */
         UBaseType_t uxTaskAttributes;           /**< Task's attributes - currently used to identify the idle tasks. */
