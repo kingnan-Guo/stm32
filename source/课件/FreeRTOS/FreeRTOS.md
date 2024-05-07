@@ -161,4 +161,26 @@ FreeRTOS/tasks.c 文件内的   `typedef struct tskTaskControlBlock {} tskTCB`  
 
 
 
+一般在创建任务的时候  
+1、xTaskCreate 如果使用的是 动态内存申请的话，会自动的为 任务控制块 申请一块内存，会自动调用 pvPortMalloc； 动态创建只需给一个 任务堆栈的大小 ，比如说是100 ，那么意味着 是 100 * 4 个字节
+2、xTaskCreateStatic 如果使用 静态方法创建的 话，就需要自己手动指定；xTaskCreateStatic 这个方法 需要 将 任务控制块的一段内存传递进来（pxTaskBuffer）
+
+
+
+*** 在学习 过程中 遇到 条件编译 的 可以先不用看 
+
+
+# 任务堆栈
+任务堆栈 用来 保存任务现场 （CPU  寄存器值），创建任务的时候需要 指定任务堆栈， 任务 堆栈的变量类型为 StackType_t ,此变量类型如下：
+    
+```c
+#define portSTACK_TYPE    uint32_t
+typedef portSTACK_TYPE   StackType_t;
+```
+
+在创建任务的时候， 我们指定 
+```c
+#define data_STK_SIZE 50
+```
+的 50 是 ,50 个 StackType_t； 一个 StackType_t 是 32 位  4 个字节
 
