@@ -184,3 +184,56 @@ typedef portSTACK_TYPE   StackType_t;
 ```
 的 50 是 ,50 个 StackType_t； 一个 StackType_t 是 32 位  4 个字节
 
+======================================
+
+
+```c
+BaseType_t xTaskCreate( 
+    TaskFunction_t pxTaskCode, // 任务函数
+    const char * const pcName,// 函数 名称， 任务名称长度不要超过  configMAX_TASK_NAME_LEN。
+    const configSTACK_DEPTH_TYPE uxStackDepth,// 任务堆栈大小 ，注意 ： 实际申请到的堆栈是 uxStackDepth 的 4 倍（ 一个 StackType_t 是 32 位  4 个字节）， 其中空闲任务 的堆栈大小为    configMINIMAL_STACK_SIZE。
+    void * const pvParameters,// 传递给任务函数的参数
+    UBaseType_t uxPriority,// 任务优先级 范围 0～ configMAX_PRIORITIES-1
+    TaskHandle_t * const pxCreatedTask // 任务句柄，任务创建成功以后会返回次惹怒我的任务句柄， 这个 句柄其实就是任务的 任务堆栈，此参数 就用来保存这个任务句柄；其他API函数可能会使用到这个 句柄
+) PRIVILEGED_FUNCTION;
+
+
+//返回值
+//pdPASS： 任务创建成功
+//errCOULD_NOT_ALLOCATE_REQUIRED_MEMORY：  任务 创建 失败，因为堆内存不足
+
+
+//这个函数 会申请 任务控制块 （pxNewTCB = ( TCB_t * ) pvPortMalloc( sizeof( TCB_t ) )）  和 任务堆栈   pxNewTCB->pxStack = ( StackType_t * ) pvPortMallocStack( ( ( ( size_t ) uxStackDepth ) * sizeof( StackType_t ) ) );
+
+
+
+```
+
+
+```c
+
+TaskHandle_t xTaskCreateStatic( 
+    TaskFunction_t pxTaskCode,
+    const char * const pcName,
+    const configSTACK_DEPTH_TYPE uxStackDepth,// 任务堆栈大小，由于本函数 是 静态方法创建任务， 所以任务堆栈 由 用户给出，一本是个数组 ，此参数就是这个数组的大小
+    void * const pvParameters,
+    UBaseType_t uxPriority,
+    StackType_t * const puxStackBuffer,// 任务肚子喊 一般为 数组 数组类型要 为 StackType_t
+    StaticTask_t * const pxTaskBuffer 
+) PRIVILEGED_FUNCTION;
+
+
+```
+
+```c
+void vTaskDelete( TaskHandle_t xTaskToDelete )
+// xTaskToDelete 在任务 创建的时候 生成的 任务句柄 用于 删除
+
+```
+
+
+
+```c
+vTaskStartScheduler();// 开启任务调度器;  会自动创建  一个 空闲任务，优先级 ； 
+
+```

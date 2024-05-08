@@ -8,9 +8,9 @@ int main(void) {
     OLED_Init();
     OLED_ShowString(1, 1, "cubeMX_original");
 
-//    xTaskCreateFunMain();
+    xTaskCreateFunMain();
 
-    FreeRTOSDemoMain();
+//    FreeRTOSDemoMain();
     while(1) {
 
     }

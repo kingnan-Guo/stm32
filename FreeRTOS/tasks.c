@@ -326,7 +326,7 @@
 #define taskBITS_PER_BYTE    ( ( size_t ) 8 )
 
 #if ( configNUMBER_OF_CORES > 1 )
-
+4
 /* Yields the given core. This must be called from a critical section and xCoreID
  * must be valid. This macro is not required in single core since there is only
  * one core to yield. */
