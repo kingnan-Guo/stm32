@@ -1422,12 +1422,24 @@ CMakeFiles/stm32F103C8T6Project.elf.dir/components/FreeRTOSDemo/FreeRTOSDemo.c.o
   /Users/kingnan/Documents/github/stm32/components/oled/OLED.h
 
 CMakeFiles/stm32F103C8T6Project.elf.dir/components/FreeRTOSTech/xTaskCreateFun/xTaskCreateFun.c.obj: /Users/kingnan/Documents/github/stm32/components/FreeRTOSTech/xTaskCreateFun/xTaskCreateFun.c \
+  /Applications/ArmGNUToolchain/13.2.Rel1/arm-none-eabi/arm-none-eabi/include/_ansi.h \
   /Applications/ArmGNUToolchain/13.2.Rel1/arm-none-eabi/arm-none-eabi/include/_newlib_version.h \
   /Applications/ArmGNUToolchain/13.2.Rel1/arm-none-eabi/arm-none-eabi/include/machine/_default_types.h \
+  /Applications/ArmGNUToolchain/13.2.Rel1/arm-none-eabi/arm-none-eabi/include/machine/_types.h \
+  /Applications/ArmGNUToolchain/13.2.Rel1/arm-none-eabi/arm-none-eabi/include/machine/ieeefp.h \
+  /Applications/ArmGNUToolchain/13.2.Rel1/arm-none-eabi/arm-none-eabi/include/newlib.h \
   /Applications/ArmGNUToolchain/13.2.Rel1/arm-none-eabi/arm-none-eabi/include/stdint.h \
+  /Applications/ArmGNUToolchain/13.2.Rel1/arm-none-eabi/arm-none-eabi/include/stdio.h \
   /Applications/ArmGNUToolchain/13.2.Rel1/arm-none-eabi/arm-none-eabi/include/sys/_intsup.h \
   /Applications/ArmGNUToolchain/13.2.Rel1/arm-none-eabi/arm-none-eabi/include/sys/_stdint.h \
+  /Applications/ArmGNUToolchain/13.2.Rel1/arm-none-eabi/arm-none-eabi/include/sys/_types.h \
+  /Applications/ArmGNUToolchain/13.2.Rel1/arm-none-eabi/arm-none-eabi/include/sys/cdefs.h \
+  /Applications/ArmGNUToolchain/13.2.Rel1/arm-none-eabi/arm-none-eabi/include/sys/config.h \
   /Applications/ArmGNUToolchain/13.2.Rel1/arm-none-eabi/arm-none-eabi/include/sys/features.h \
+  /Applications/ArmGNUToolchain/13.2.Rel1/arm-none-eabi/arm-none-eabi/include/sys/lock.h \
+  /Applications/ArmGNUToolchain/13.2.Rel1/arm-none-eabi/arm-none-eabi/include/sys/reent.h \
+  /Applications/ArmGNUToolchain/13.2.Rel1/arm-none-eabi/arm-none-eabi/include/sys/stdio.h \
+  /Applications/ArmGNUToolchain/13.2.Rel1/arm-none-eabi/lib/gcc/arm-none-eabi/13.2.1/include/stdarg.h \
   /Applications/ArmGNUToolchain/13.2.Rel1/arm-none-eabi/lib/gcc/arm-none-eabi/13.2.1/include/stddef.h \
   /Applications/ArmGNUToolchain/13.2.Rel1/arm-none-eabi/lib/gcc/arm-none-eabi/13.2.1/include/stdint.h \
   /Users/kingnan/Documents/github/stm32/FreeRTOS/config/FreeRTOSConfig.h \
@@ -1466,7 +1478,9 @@ CMakeFiles/stm32F103C8T6Project.elf.dir/components/FreeRTOSTech/xTaskCreateFun/x
   /Users/kingnan/Documents/github/stm32/Libraries/STM32F10x_StdPeriph_Driver/inc/stm32f10x_usart.h \
   /Users/kingnan/Documents/github/stm32/Libraries/STM32F10x_StdPeriph_Driver/inc/stm32f10x_wwdg.h \
   /Users/kingnan/Documents/github/stm32/User/stm32f10x_conf.h \
-  /Users/kingnan/Documents/github/stm32/components/oled/OLED.h
+  /Users/kingnan/Documents/github/stm32/components/Serial/Serial.h \
+  /Users/kingnan/Documents/github/stm32/components/oled/OLED.h \
+  /Users/kingnan/Documents/github/stm32/system/retarget/retarget.h
 
 CMakeFiles/stm32F103C8T6Project.elf.dir/components/IC/IC.c.obj: /Users/kingnan/Documents/github/stm32/components/IC/IC.c \
   /Applications/ArmGNUToolchain/13.2.Rel1/arm-none-eabi/arm-none-eabi/include/_newlib_version.h \
@@ -2186,8 +2200,6 @@ CMakeFiles/stm32F103C8T6Project.elf.dir/system/syscalls/syscalls.c.obj: /Users/k
 
 /Applications/ArmGNUToolchain/13.2.Rel1/arm-none-eabi/arm-none-eabi/include/sys/sched.h:
 
-/Applications/ArmGNUToolchain/13.2.Rel1/arm-none-eabi/arm-none-eabi/include/sys/_timeval.h:
-
 /Applications/ArmGNUToolchain/13.2.Rel1/arm-none-eabi/arm-none-eabi/include/sys/_sigset.h:
 
 /Applications/ArmGNUToolchain/13.2.Rel1/arm-none-eabi/arm-none-eabi/include/sys/_pthreadtypes.h:
@@ -2201,8 +2213,6 @@ CMakeFiles/stm32F103C8T6Project.elf.dir/system/syscalls/syscalls.c.obj: /Users/k
 /Applications/ArmGNUToolchain/13.2.Rel1/arm-none-eabi/arm-none-eabi/include/machine/_endian.h:
 
 /Users/kingnan/Documents/github/stm32/system/syscalls/syscalls.c:
-
-/Users/kingnan/Documents/github/stm32/system/retarget/retarget.h:
 
 /Users/kingnan/Documents/github/stm32/components/oled/OLED.c:
 
@@ -2235,6 +2245,12 @@ CMakeFiles/stm32F103C8T6Project.elf.dir/system/syscalls/syscalls.c.obj: /Users/k
 /Users/kingnan/Documents/github/stm32/components/LED/LED.c:
 
 /Users/kingnan/Documents/github/stm32/components/IC/IC.c:
+
+/Users/kingnan/Documents/github/stm32/system/retarget/retarget.h:
+
+/Applications/ArmGNUToolchain/13.2.Rel1/arm-none-eabi/arm-none-eabi/include/sys/_timeval.h:
+
+/Users/kingnan/Documents/github/stm32/components/Serial/Serial.h:
 
 /Users/kingnan/Documents/github/stm32/components/FreeRTOSTech/xTaskCreateFun/xTaskCreateFun.c:
 
