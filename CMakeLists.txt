@@ -93,6 +93,7 @@ include_directories(
         components/FreeRTOSDemo
         # 开始学习 rtos
         components/FreeRTOSTech/xTaskCreateFun
+        components/FreeRTOSTech/xTaskCreateFun2
 )
 
 add_definitions(-DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB)

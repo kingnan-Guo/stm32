@@ -1137,6 +1137,30 @@ components/FreeRTOSTech/xTaskCreateFun/xTaskCreateFun.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/stm32F103C8T6Project.elf.dir/build.make CMakeFiles/stm32F103C8T6Project.elf.dir/components/FreeRTOSTech/xTaskCreateFun/xTaskCreateFun.c.s
 .PHONY : components/FreeRTOSTech/xTaskCreateFun/xTaskCreateFun.c.s
 
+components/FreeRTOSTech/xTaskCreateFun2/xTaskCreateFun2.obj: components/FreeRTOSTech/xTaskCreateFun2/xTaskCreateFun2.c.obj
+.PHONY : components/FreeRTOSTech/xTaskCreateFun2/xTaskCreateFun2.obj
+
+# target to build an object file
+components/FreeRTOSTech/xTaskCreateFun2/xTaskCreateFun2.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/stm32F103C8T6Project.elf.dir/build.make CMakeFiles/stm32F103C8T6Project.elf.dir/components/FreeRTOSTech/xTaskCreateFun2/xTaskCreateFun2.c.obj
+.PHONY : components/FreeRTOSTech/xTaskCreateFun2/xTaskCreateFun2.c.obj
+
+components/FreeRTOSTech/xTaskCreateFun2/xTaskCreateFun2.i: components/FreeRTOSTech/xTaskCreateFun2/xTaskCreateFun2.c.i
+.PHONY : components/FreeRTOSTech/xTaskCreateFun2/xTaskCreateFun2.i
+
+# target to preprocess a source file
+components/FreeRTOSTech/xTaskCreateFun2/xTaskCreateFun2.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/stm32F103C8T6Project.elf.dir/build.make CMakeFiles/stm32F103C8T6Project.elf.dir/components/FreeRTOSTech/xTaskCreateFun2/xTaskCreateFun2.c.i
+.PHONY : components/FreeRTOSTech/xTaskCreateFun2/xTaskCreateFun2.c.i
+
+components/FreeRTOSTech/xTaskCreateFun2/xTaskCreateFun2.s: components/FreeRTOSTech/xTaskCreateFun2/xTaskCreateFun2.c.s
+.PHONY : components/FreeRTOSTech/xTaskCreateFun2/xTaskCreateFun2.s
+
+# target to generate assembly for a file
+components/FreeRTOSTech/xTaskCreateFun2/xTaskCreateFun2.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/stm32F103C8T6Project.elf.dir/build.make CMakeFiles/stm32F103C8T6Project.elf.dir/components/FreeRTOSTech/xTaskCreateFun2/xTaskCreateFun2.c.s
+.PHONY : components/FreeRTOSTech/xTaskCreateFun2/xTaskCreateFun2.c.s
+
 components/IC/IC.obj: components/IC/IC.c.obj
 .PHONY : components/IC/IC.obj
 
@@ -1712,6 +1736,9 @@ help:
 	@echo "... components/FreeRTOSTech/xTaskCreateFun/xTaskCreateFun.obj"
 	@echo "... components/FreeRTOSTech/xTaskCreateFun/xTaskCreateFun.i"
 	@echo "... components/FreeRTOSTech/xTaskCreateFun/xTaskCreateFun.s"
+	@echo "... components/FreeRTOSTech/xTaskCreateFun2/xTaskCreateFun2.obj"
+	@echo "... components/FreeRTOSTech/xTaskCreateFun2/xTaskCreateFun2.i"
+	@echo "... components/FreeRTOSTech/xTaskCreateFun2/xTaskCreateFun2.s"
 	@echo "... components/IC/IC.obj"
 	@echo "... components/IC/IC.i"
 	@echo "... components/IC/IC.s"

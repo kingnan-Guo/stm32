@@ -237,3 +237,7 @@ void vTaskDelete( TaskHandle_t xTaskToDelete )
 vTaskStartScheduler();// 开启任务调度器;  会自动创建  一个 空闲任务，优先级 ； 
 
 ```
+
+
+这里解释了为什么 for循环函数 执行了一次就被阻塞到了
+![为什么for循环的函数只执行一次就阻塞到了.png](%E4%B8%BA%E4%BB%80%E4%B9%88for%E5%BE%AA%E7%8E%AF%E7%9A%84%E5%87%BD%E6%95%B0%E5%8F%AA%E6%89%A7%E8%A1%8C%E4%B8%80%E6%AC%A1%E5%B0%B1%E9%98%BB%E5%A1%9E%E5%88%B0%E4%BA%86.png)

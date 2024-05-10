@@ -54,6 +54,7 @@
 					<Add directory="/Users/kingnan/Documents/github/stm32/system/syscalls"/>
 					<Add directory="/Users/kingnan/Documents/github/stm32/components/FreeRTOSDemo"/>
 					<Add directory="/Users/kingnan/Documents/github/stm32/components/FreeRTOSTech/xTaskCreateFun"/>
+					<Add directory="/Users/kingnan/Documents/github/stm32/components/FreeRTOSTech/xTaskCreateFun2"/>
 					<Add directory="/Users/kingnan/Documents/github/stm32/FreeRTOS/include"/>
 					<Add directory="/Users/kingnan/Documents/github/stm32/FreeRTOS/portable/GCC/ARM_CM3"/>
 					<Add directory="/Users/kingnan/Documents/github/stm32/FreeRTOS/config"/>
@@ -108,6 +109,7 @@
 					<Add directory="/Users/kingnan/Documents/github/stm32/system/syscalls"/>
 					<Add directory="/Users/kingnan/Documents/github/stm32/components/FreeRTOSDemo"/>
 					<Add directory="/Users/kingnan/Documents/github/stm32/components/FreeRTOSTech/xTaskCreateFun"/>
+					<Add directory="/Users/kingnan/Documents/github/stm32/components/FreeRTOSTech/xTaskCreateFun2"/>
 					<Add directory="/Users/kingnan/Documents/github/stm32/FreeRTOS/include"/>
 					<Add directory="/Users/kingnan/Documents/github/stm32/FreeRTOS/portable/GCC/ARM_CM3"/>
 					<Add directory="/Users/kingnan/Documents/github/stm32/FreeRTOS/config"/>
@@ -498,6 +500,12 @@
 			<Option target="stm32F103C8T6Project.elf"/>
 		</Unit>
 		<Unit filename="/Users/kingnan/Documents/github/stm32/components/FreeRTOSTech/xTaskCreateFun/xTaskCreateFun.h">
+			<Option target="stm32F103C8T6Project.elf"/>
+		</Unit>
+		<Unit filename="/Users/kingnan/Documents/github/stm32/components/FreeRTOSTech/xTaskCreateFun2/xTaskCreateFun2.c">
+			<Option target="stm32F103C8T6Project.elf"/>
+		</Unit>
+		<Unit filename="/Users/kingnan/Documents/github/stm32/components/FreeRTOSTech/xTaskCreateFun2/xTaskCreateFun2.h">
 			<Option target="stm32F103C8T6Project.elf"/>
 		</Unit>
 		<Unit filename="/Users/kingnan/Documents/github/stm32/components/IC/IC.c">
