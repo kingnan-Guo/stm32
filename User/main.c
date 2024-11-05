@@ -1,5 +1,6 @@
 #include "stm32f10x.h"
 #include "OLED.h"
+#include "delay.h"
 
 #include "xTaskCreateFun2.h"
 
@@ -12,16 +13,19 @@ int main(void) {
 
     GPIO_InitTypeDef GPIO_InitStruct;
     GPIO_InitStruct.GPIO_Mode = GPIO_Mode_Out_PP;
-    GPIO_InitStruct.GPIO_Pin = GPIO_Pin_13;
+    GPIO_InitStruct.GPIO_Pin = GPIO_Pin_14;
     GPIO_InitStruct.GPIO_Speed = GPIO_Speed_50MHz;
     GPIO_Init(GPIOC, &GPIO_InitStruct);
 
-    GPIO_ResetBits(GPIOA, GPIO_Pin_13);
+
 
 
 //    xTaskCreateFun2Main();
     while(1) {
-
+        GPIO_WriteBit(GPIOC, GPIO_Pin_14, Bit_RESET);
+        Delay_s(1);
+        GPIO_WriteBit(GPIOC, GPIO_Pin_14, Bit_SET);
+        Delay_s(1);
     }
 }
 

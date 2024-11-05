@@ -1189,6 +1189,7 @@ CMakeFiles/stm32F103C8T6Project.elf.dir/User/main.c.obj: /Users/kingnan/Document
   /Users/kingnan/Documents/github/stm32/Libraries/STM32F10x_StdPeriph_Driver/inc/stm32f10x_wwdg.h \
   /Users/kingnan/Documents/github/stm32/User/stm32f10x_conf.h \
   /Users/kingnan/Documents/github/stm32/components/FreeRTOSTech/xTaskCreateFun2/xTaskCreateFun2.h \
+  /Users/kingnan/Documents/github/stm32/components/delay/delay.h \
   /Users/kingnan/Documents/github/stm32/components/oled/OLED.h
 
 CMakeFiles/stm32F103C8T6Project.elf.dir/User/stm32f10x_it.c.obj: /Users/kingnan/Documents/github/stm32/User/stm32f10x_it.c \
@@ -2295,10 +2296,6 @@ CMakeFiles/stm32F103C8T6Project.elf.dir/system/syscalls/syscalls.c.obj: /Users/k
 
 /Users/kingnan/Documents/github/stm32/components/PWM/PWM.c:
 
-/Applications/ArmGNUToolchain/13.2.Rel1/arm-none-eabi/arm-none-eabi/include/sys/timespec.h:
-
-/Users/kingnan/Documents/github/stm32/components/delay/delay.h:
-
 /Users/kingnan/Documents/github/stm32/components/MPU6050/MPU6050.c:
 
 /Applications/ArmGNUToolchain/13.2.Rel1/arm-none-eabi/arm-none-eabi/include/sys/_timespec.h:
@@ -2324,6 +2321,10 @@ CMakeFiles/stm32F103C8T6Project.elf.dir/system/syscalls/syscalls.c.obj: /Users/k
 /Users/kingnan/Documents/github/stm32/User/stm32f10x_it.h:
 
 /Users/kingnan/Documents/github/stm32/components/oled/OLED.h:
+
+/Applications/ArmGNUToolchain/13.2.Rel1/arm-none-eabi/arm-none-eabi/include/sys/timespec.h:
+
+/Users/kingnan/Documents/github/stm32/components/delay/delay.h:
 
 /Users/kingnan/Documents/github/stm32/User/main.c:
 
