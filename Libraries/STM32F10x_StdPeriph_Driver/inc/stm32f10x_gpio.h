@@ -353,10 +353,10 @@ uint8_t GPIO_ReadInputDataBit(GPIO_TypeDef* GPIOx, uint16_t GPIO_Pin);
 uint16_t GPIO_ReadInputData(GPIO_TypeDef* GPIOx);
 uint8_t GPIO_ReadOutputDataBit(GPIO_TypeDef* GPIOx, uint16_t GPIO_Pin);
 uint16_t GPIO_ReadOutputData(GPIO_TypeDef* GPIOx);
-void GPIO_SetBits(GPIO_TypeDef* GPIOx, uint16_t GPIO_Pin);
-void GPIO_ResetBits(GPIO_TypeDef* GPIOx, uint16_t GPIO_Pin);
-void GPIO_WriteBit(GPIO_TypeDef* GPIOx, uint16_t GPIO_Pin, BitAction BitVal);
-void GPIO_Write(GPIO_TypeDef* GPIOx, uint16_t PortVal);
+void GPIO_SetBits(GPIO_TypeDef* GPIOx, uint16_t GPIO_Pin);//  把 指定的端口 设置成高电平
+void GPIO_ResetBits(GPIO_TypeDef* GPIOx, uint16_t GPIO_Pin);// 吧指定的端口设置成低电平
+void GPIO_WriteBit(GPIO_TypeDef* GPIOx, uint16_t GPIO_Pin, BitAction BitVal);// 根据第三个参数 设置 指定的端口
+void GPIO_Write(GPIO_TypeDef* GPIOx, uint16_t PortVal);// 同时对 16 个端口进行写入 操作
 void GPIO_PinLockConfig(GPIO_TypeDef* GPIOx, uint16_t GPIO_Pin);//锁定GPIO配置的 防止意外串改
 void GPIO_EventOutputConfig(uint8_t GPIO_PortSource, uint8_t GPIO_PinSource);// GPIO 事件输出功能
 void GPIO_EventOutputCmd(FunctionalState NewState);// GPIO 事件输出功能
