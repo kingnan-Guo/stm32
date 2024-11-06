@@ -26,6 +26,10 @@ int main(void) {
         Delay_s(1);
         GPIO_WriteBit(GPIOC, GPIO_Pin_14, Bit_SET);
         Delay_s(1);
+
+        if(GPIO_ReadInputDataBit(GPIOC, GPIO_Pin_13) == 0){
+            
+        }
     }
 }
 
