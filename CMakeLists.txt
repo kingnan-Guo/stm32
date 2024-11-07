@@ -94,13 +94,17 @@ include_directories(
         # 开始学习 rtos
         components/FreeRTOSTech/xTaskCreateFun
         components/FreeRTOSTech/xTaskCreateFun2
+
+        restarComponets/LED_R
+        restarComponets/KEY_R
+        restarComponets/customizeInterrupt
 )
 
 add_definitions(-DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB)
 
 #file(GLOB_RECURSE SOURCES "Core/*.*" "Drivers/*.*")
 #官网版
-file(GLOB_RECURSE SOURCES "startup/*.*" "Libraries/*.*" "User/*.*" "components/*.*" "system/*.*")
+file(GLOB_RECURSE SOURCES "startup/*.*" "Libraries/*.*" "User/*.*" "components/*.*" "system/*.*" "restarComponets/*.*")
 
 
 # RTOS

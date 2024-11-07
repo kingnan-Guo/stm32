@@ -1,0 +1,10 @@
+//
+// Created by 90175 on 2024/11/7.
+//
+#ifndef STM32F103C8T6PROJECT_LER_R_H
+#define STM32F103C8T6PROJECT_LER_R_H
+
+void LED_R_Init(void);
+void LED_R_RESET();
+void LED_R_SET();
+#endif //STM32F103C8T6PROJECT_LER_R_H
