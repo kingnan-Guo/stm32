@@ -4,6 +4,7 @@
 
 #include "LER_R.h"
 #include "stm32f10x.h"
+#include <iostream>
 
 
 void LED_R_Init() {
@@ -22,5 +23,15 @@ void LED_R_RESET(){
 
 void LED_R_SET(){
     GPIO_WriteBit(GPIOC, GPIO_Pin_14, Bit_SET);
+}
+
+void LED_R_test(){
+//    new LED_R().run();
+    LED_R().run();
+}
+
+
+void LED_R::run() {
+    LED_R_RESET();
 }
 
