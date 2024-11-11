@@ -2,14 +2,13 @@
 #include "OLED.h"
 #include "delay.h"
 #include <stdio.h>
-#include "timer_r.h"
+#include "EXTI_Interrup.h"
 
 
 int main(void) {
     // 初始化 I2C 的引脚
     OLED_Init();
     while(1) {
-
     }
 }
 
