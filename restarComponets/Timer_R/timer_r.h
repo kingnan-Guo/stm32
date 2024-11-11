@@ -4,8 +4,6 @@
 
 #ifndef STM32F103C8T6PROJECT_TIMER_R_H
 #define STM32F103C8T6PROJECT_TIMER_R_H
-
-
-
-
+void Timer_R_Init();
+uint16_t getTime2InterruptCount();
 #endif //STM32F103C8T6PROJECT_TIMER_R_H
