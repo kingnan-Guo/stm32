@@ -71,6 +71,7 @@ void PWM_R_SetPrescaler(uint16_t Prescaler){
 //    OLED_Init();
 //    PWM_R_Init();
 //    int i;
+//    OLED_ShowNum(1,1,0, 5);
 //    while(1) {
 //        for ( i = 0; i < 100; ++i) {
 //            PWM_R_SetCompare1(i);
