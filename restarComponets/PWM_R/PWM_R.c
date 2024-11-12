@@ -10,7 +10,7 @@ void PWM_R_Init(void){
 
     // 初始化  引脚 推挽输出
     GPIO_InitTypeDef GPIO_InitStruct;
-    GPIO_InitStruct.GPIO_Mode = GPIO_Mode_AF_PP;// 复用推挽输出
+    GPIO_InitStruct.GPIO_Mode = GPIO_Mode_AF_PP;// 复用推挽输出； 因为这样的输出 是 由 片上 外设 控制的，GPIO 的 输出数据寄存器这时 是断开的
     GPIO_InitStruct.GPIO_Speed = GPIO_Speed_50MHz;
     GPIO_InitStruct.GPIO_Pin = GPIO_Pin_0 | GPIO_Pin_1;
     GPIO_Init(GPIOA, &GPIO_InitStruct);
@@ -39,9 +39,9 @@ void PWM_R_Init(void){
     TIM_OCInitTypeDef TIM_OCInitStructure;
     TIM_OCStructInit(&TIM_OCInitStructure);// 初始化默认参数
     TIM_OCInitStructure.TIM_OCMode = TIM_OCMode_PWM1;// 选择 PWM1 模式
-    TIM_OCInitStructure.TIM_OCNPolarity = TIM_OCPolarity_High;// 输出比较极性 ; OC1 ref
+    TIM_OCInitStructure.TIM_OCNPolarity = TIM_OCPolarity_High;// 输出比较极性 ; OC1 ref 会 传入到DTG 然后到 输出控制器，
     TIM_OCInitStructure.TIM_OutputState = TIM_OutputState_Enable;// 输出使能 开启
-    TIM_OCInitStructure.TIM_Pulse = 100;// CCR
+    TIM_OCInitStructure.TIM_Pulse = 0;// CCR
 
     TIM_OC1Init(TIM2, &TIM_OCInitStructure);
     TIM_OC2Init(TIM2, &TIM_OCInitStructure);
