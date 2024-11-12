@@ -1,10 +1,8 @@
 //
 // Created by 90175 on 2024/11/12.
 //
-
-#include "PWM_R.h"
 #include "stm32f10x.h"
-
+#include "PWM_R.h"
 
 void PWM_R_Init(void){
     RCC_APB1PeriphClockCmd(RCC_APB1Periph_TIM2, ENABLE);
@@ -43,10 +41,46 @@ void PWM_R_Init(void){
     TIM_OCInitStructure.TIM_OCMode = TIM_OCMode_PWM1;// 选择 PWM1 模式
     TIM_OCInitStructure.TIM_OCNPolarity = TIM_OCPolarity_High;// 输出比较极性 ; OC1 ref
     TIM_OCInitStructure.TIM_OutputState = TIM_OutputState_Enable;// 输出使能 开启
-    TIM_OCInitStructure.TIM_Pulse = 10;// CCR
+    TIM_OCInitStructure.TIM_Pulse = 100;// CCR
     TIM_OC1Init(TIM2, &TIM_OCInitStructure);
 
     //启动定时器
     TIM_Cmd(TIM2, ENABLE);
 
 }
+
+//  改变 通道 1 的占空比
+void PWM_R_SetCompare1(uint16_t Compare){
+    TIM_SetCompare1(TIM2, Compare);
+}
+
+//单独写 预分频 的 值 ; 改变频率
+void PWM_R_SetPrescaler(uint16_t Prescaler){
+    TIM_PrescalerConfig(TIM2, Prescaler, TIM_PSCReloadMode_Update);
+}
+
+
+
+
+//#include "PWM_R.h"
+//int main(void) {
+//    // 初始化 I2C 的引脚
+//    OLED_Init();
+//    OLED_ShowNum(1,1,2, 5);
+//    PWM_R_Init();
+//    int i;
+//    while(1) {
+//        // OLED_ShowNum(1,1,getTIM2Count(), 5);
+//        // OLED_ShowNum(2,1,getExtiInterruptCount(), 5);
+//        for ( i = 0; i < 100; ++i) {
+//            PWM_R_SetCompare1(i);
+//            Delay_ms(10);
+//        }
+//        for (i = 0; i <= 100; i++)
+//        {
+//            PWM_R_SetCompare1(100 - i);
+//            Delay_ms(10);
+//        }
+//    }
+//}
+
