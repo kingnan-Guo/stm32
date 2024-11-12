@@ -99,7 +99,7 @@ include_directories(
         restarComponets/KEY_R
         restarComponets/customizeInterrupt
         restarComponets/Timer_R
-        restarComponets/EXTI_Interrup
+        restarComponets/EXTI_Interrupt
 )
 
 add_definitions(-DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB)
