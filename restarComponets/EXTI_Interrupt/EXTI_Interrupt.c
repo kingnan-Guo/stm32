@@ -21,15 +21,17 @@ void EXTI_Interrup_R_Init(){
     GPIO_InitStruct.GPIO_Speed = GPIO_Speed_50MHz;
     GPIO_Init(GPIOC, &GPIO_InitStruct);
 
+    // 通过 ETR 外部时钟 引脚 的 外部时钟模式 2 配置
+    // TIM_ExtTRGPSC_OFF 不需要 分频
+    // TIM_ExtTRGPolarity_NonInverted 不反向 ； 高电平或上升沿有效
+    // ExtTRGFilter 外部触发滤波器 ;  采样 ， 当前 不使用 滤波器
+    TIM_ETRClockMode2Config(TIM2, TIM_ExtTRGPSC_OFF, TIM_ExtTRGPolarity_NonInverted, 0x00);
 
 
 
 
-
-
-    // 选择时机单元的时钟 :  内部时钟
-    // 定时器 上电 后 默认 就是内部时钟 ，所以 可以不写
-    TIM_InternalClockConfig(TIM2); // TIM2 的时机单元由  内部时钟 来驱动
+    // 这里 去掉这段 ，因为 不需要 选择 内部时钟
+    //TIM_InternalClockConfig(TIM2); // TIM2 的时机单元由  内部时钟 来驱动;
 
 
 
@@ -66,8 +68,24 @@ void EXTI_Interrup_R_Init(){
 }
 
 
+uint16_t getTIM2Count(){
+    return TIM_GetCounter(TIM2);
+}
+
+
 uint16_t getExtiInterruptCount(){
     return extiInterruptCount;
+}
+
+
+
+void TIM2_IRQHandler(void){
+    /// TIM_IT_Update 代表 要看 哪个中断标志位
+    if(TIM_GetITStatus(TIM2, TIM_IT_Update) == SET){
+        extiInterruptCount++;
+        // 清除标志位
+        TIM_ClearITPendingBit(TIM2, TIM_IT_Update);
+    }
 }
 
 
@@ -77,8 +95,10 @@ uint16_t getExtiInterruptCount(){
 //    // 初始化 I2C 的引脚
 //    OLED_Init();
 //    EXTI_Interrup_R_Init();
+//
 //    while(1) {
-//        OLED_ShowNum(1,1,getExtiInterruptCount(), 5);
+//        OLED_ShowNum(1,1,getTIM2Count(), 5);
+//        OLED_ShowNum(2,1,getExtiInterruptCount(), 5);
 //    }
 //}
 
