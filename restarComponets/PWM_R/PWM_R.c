@@ -12,7 +12,7 @@ void PWM_R_Init(void){
     GPIO_InitTypeDef GPIO_InitStruct;
     GPIO_InitStruct.GPIO_Mode = GPIO_Mode_AF_PP;// 复用推挽输出
     GPIO_InitStruct.GPIO_Speed = GPIO_Speed_50MHz;
-    GPIO_InitStruct.GPIO_Pin = GPIO_Pin_0;
+    GPIO_InitStruct.GPIO_Pin = GPIO_Pin_0 | GPIO_Pin_1;
     GPIO_Init(GPIOA, &GPIO_InitStruct);
 
 
@@ -42,7 +42,10 @@ void PWM_R_Init(void){
     TIM_OCInitStructure.TIM_OCNPolarity = TIM_OCPolarity_High;// 输出比较极性 ; OC1 ref
     TIM_OCInitStructure.TIM_OutputState = TIM_OutputState_Enable;// 输出使能 开启
     TIM_OCInitStructure.TIM_Pulse = 100;// CCR
+
     TIM_OC1Init(TIM2, &TIM_OCInitStructure);
+    TIM_OC2Init(TIM2, &TIM_OCInitStructure);
+
 
     //启动定时器
     TIM_Cmd(TIM2, ENABLE);
@@ -52,6 +55,7 @@ void PWM_R_Init(void){
 //  改变 通道 1 的占空比
 void PWM_R_SetCompare1(uint16_t Compare){
     TIM_SetCompare1(TIM2, Compare);
+    TIM_SetCompare2(TIM2, Compare);
 }
 
 //单独写 预分频 的 值 ; 改变频率
@@ -64,23 +68,22 @@ void PWM_R_SetPrescaler(uint16_t Prescaler){
 
 //#include "PWM_R.h"
 //int main(void) {
-//    // 初始化 I2C 的引脚
 //    OLED_Init();
-//    OLED_ShowNum(1,1,2, 5);
 //    PWM_R_Init();
 //    int i;
 //    while(1) {
-//        // OLED_ShowNum(1,1,getTIM2Count(), 5);
-//        // OLED_ShowNum(2,1,getExtiInterruptCount(), 5);
 //        for ( i = 0; i < 100; ++i) {
 //            PWM_R_SetCompare1(i);
+//            OLED_ShowNum(1,1,i, 5);
 //            Delay_ms(10);
 //        }
 //        for (i = 0; i <= 100; i++)
 //        {
 //            PWM_R_SetCompare1(100 - i);
+//            OLED_ShowNum(1,1,100 - i, 5);
 //            Delay_ms(10);
 //        }
 //    }
 //}
+
 
