@@ -285,7 +285,7 @@ typedef struct
   */
 /**
 *  TIM_ForcedAction_Active  强制输出模式
-*  TIM_ForcedAction_InActive 强制输出模式
+*  TIM_ForcedAction_InActive 强制输入模式
 *  但这两种模式 不允许初始化时 使用
 */
 

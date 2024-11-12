@@ -100,6 +100,7 @@ include_directories(
         restarComponets/customizeInterrupt
         restarComponets/Timer_R
         restarComponets/EXTI_Interrupt
+        restarComponets/PWM_R
 )
 
 add_definitions(-DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB)

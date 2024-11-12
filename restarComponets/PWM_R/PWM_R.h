@@ -1,0 +1,12 @@
+//
+// Created by 90175 on 2024/11/12.
+//
+
+#ifndef STM32F103C8T6PROJECT_PWM_R_H
+#define STM32F103C8T6PROJECT_PWM_R_H
+
+void PWM_R_Init();
+
+
+
+#endif //STM32F103C8T6PROJECT_PWM_R_H
