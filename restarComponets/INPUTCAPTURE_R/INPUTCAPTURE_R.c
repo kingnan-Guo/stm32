@@ -32,7 +32,7 @@ void INPUTCAPTURE_R_INIT(){
     RCC_APB1PeriphClockCmd(RCC_APB1Periph_TIM3, ENABLE);
 
     // 选择 时基单元 (如果 不写 也是默认使用内部时钟)
-    TIM_InternalClockConfig(TIM2);// 选择内部时钟 TIM2
+    TIM_InternalClockConfig(TIM3);// 选择内部时钟 TIM3
 
 
     TIM_TimeBaseInitTypeDef TIM_TimeBaseInitStruct;
@@ -40,10 +40,10 @@ void INPUTCAPTURE_R_INIT(){
     TIM_TimeBaseInitStruct.TIM_ClockDivision = TIM_CKD_DIV1;// 指定时钟划分频  TIM_CKD_DIV1 一分频，
     TIM_TimeBaseInitStruct.TIM_CounterMode = TIM_CounterMode_Up;// 计数 模式， 向上计数
     TIM_TimeBaseInitStruct.TIM_Period = 65536 -1 ;//ARR 计数器 重装 器的值； 要在  0~ 65535 以内
-    TIM_TimeBaseInitStruct.TIM_Prescaler = 72 - 1;//PSC  预分频器 的值; 这里目的 是 定时 一秒钟；  要在 0~ 65535 以内
+    TIM_TimeBaseInitStruct.TIM_Prescaler = 720 - 1;//PSC  预分频器 的值; 这里目的 是 定时 一秒钟；  要在 0~ 65535 以内
     TIM_TimeBaseInitStruct.TIM_RepetitionCounter = 0;// 指定重复计数器值； 高级计数器 才有的 给 0
     //配置时机 单元
-    TIM_TimeBaseInit(TIM2, &TIM_TimeBaseInitStruct);
+    TIM_TimeBaseInit(TIM3, &TIM_TimeBaseInitStruct);
 
 
 
@@ -56,19 +56,20 @@ void INPUTCAPTURE_R_INIT(){
     TIM_ICInitStruct.TIM_ICFilter = 0xF;// 捕获过滤 应该是 第一个 滤波边沿触发器
     TIM_ICInitStruct.TIM_ICPolarity = TIM_ICPolarity_Rising;// 触发方式
     TIM_ICInitStruct.TIM_ICPrescaler = TIM_ICPSC_DIV1;// 分频 ： TIM_ICPSC_DIV1不分频
-    TIM_ICInitStruct.TIM_ICSelection = TIM_ICSelection_DirectTI;// 交叉通道  直连通道
+    TIM_ICInitStruct.TIM_ICSelection = TIM_ICSelection_DirectTI;//   直连通道
 
-    TIM_ICInit(TIM2, &TIM_ICInitStruct);
+    TIM_ICInit(TIM3, &TIM_ICInitStruct);
 
     // 配置 通道 2
     TIM_ICInitStruct.TIM_Channel = TIM_Channel_2;//  通道 2  向下，
     TIM_ICInitStruct.TIM_ICFilter = 0xF;// 捕获过滤 应该是 第一个 滤波边沿触发器
     TIM_ICInitStruct.TIM_ICPolarity = TIM_ICPolarity_Falling;// 触发方式
     TIM_ICInitStruct.TIM_ICPrescaler = TIM_ICPSC_DIV1;// 分频 ： TIM_ICPSC_DIV1不分频
-    TIM_ICInitStruct.TIM_ICSelection = TIM_ICSelection_IndirectTI;// 交叉通道  直连通道
+    TIM_ICInitStruct.TIM_ICSelection = TIM_ICSelection_IndirectTI;// 交叉通道
+    TIM_ICInit(TIM3, &TIM_ICInitStruct);
 
-    TIM_ICInit(TIM2, &TIM_ICInitStruct);
 
+//    TIM_PWMIConfig(TIM3, &TIM_ICInitStruct);
 
     // 主从 模式配置 ，这里 TI1FP1 输出到 从模式 经过 选择器后 变成 TRGI ，TRGI 会触发 Reset 把 CNT 设置为 0
 
@@ -79,16 +80,38 @@ void INPUTCAPTURE_R_INIT(){
     TIM_SelectSlaveMode(TIM3, TIM_SlaveMode_Reset);
 
 
-    TIM_Cmd(TIM2, ENABLE);
+    TIM_Cmd(TIM3, ENABLE);
 
 }
 
 // 频率 Fc/N
 uint32_t getICFreq(){
-    return 1 / (TIM_GetCapture1(TIM3) +  1);
+    // 1 MHZ
+    return 1000000 / (TIM_GetCapture1(TIM3) +  1);
 }
 
 //占空比 INT ; CCR2 / CCR1;
 uint32_t getICDuty(){
-    return (TIM_GetCapture2(TIM3) + 1) /  (TIM_GetCapture1(TIM3) + 1);
+    return (TIM_GetCapture2(TIM3) + 1) * 100 /  (TIM_GetCapture1(TIM3) + 1);
 }
+
+
+
+
+//#include "PWM_R.h"
+//#include "INPUTCAPTURE_R.h"
+//
+//int main(void) {
+//    OLED_Init();
+//    PWM_R_Init();
+//    INPUTCAPTURE_R_INIT();
+//    PWM_R_SetPrescaler(720 -1); // 频率 Freq = 72M / (PSC + 1) / 100
+//    PWM_R_SetCompare1(40); // 占空比 Duty = 50;
+//    OLED_ShowNum(1,1, TIM_GetCapture1(TIM2), 5);
+//    OLED_ShowNum(2,1, TIM_GetPrescaler(TIM2), 5);
+//    while(1) {
+//        OLED_ShowNum(3,1,getICFreq(), 10);
+//        OLED_ShowNum(4,1,getICDuty(), 10);
+//    }
+//}
+
