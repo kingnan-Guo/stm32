@@ -26,21 +26,21 @@
 void ADC_R_INIT(){
     // GPIO_A  初始化
     RCC_APB2PeriphClockCmd(RCC_APB2Periph_GPIOA, ENABLE);
+
     GPIO_InitTypeDef GPIO_InitStructure;
-    GPIO_InitStructure.GPIO_Pin = GPIO_Pin_0;
+    GPIO_InitStructure.GPIO_Pin = GPIO_Pin_0 | GPIO_Pin_1 | GPIO_Pin_2;
     GPIO_InitStructure.GPIO_Mode = GPIO_Mode_AIN;//  模拟输入
     GPIO_InitStructure.GPIO_Speed = GPIO_Speed_50MHz;
     GPIO_Init(GPIOA, &GPIO_InitStructure);
-
 
 
     // ADC 配置 时钟
     RCC_APB2PeriphClockCmd(RCC_APB2Periph_ADC1, ENABLE);
     // RCC ADC Clock 传进 ADC 模拟数字转换器的分频，6分频 12 MHZ
     RCC_ADCCLKConfig(RCC_PCLK2_Div6);
-
     // 配置 规则组的 输入通道
-    ADC_RegularChannelConfig(ADC1, ADC_Channel_1, 1, ADC_SampleTime_55Cycles5);
+    ADC_RegularChannelConfig(ADC1, ADC_Channel_0, 1, ADC_SampleTime_55Cycles5);
+
 
     //ADC_Init
     ADC_InitTypeDef ADC_InitStruct;
@@ -70,9 +70,6 @@ void ADC_R_INIT(){
 
 
 uint16_t ADC_R_GetValue(){
-
-    // ADC_RegularChannelConfig();
-
     // 软件触发 转换
     ADC_SoftwareStartConvCmd(ADC1, ENABLE);
     // 等大 EOC 标志位
@@ -80,3 +77,28 @@ uint16_t ADC_R_GetValue(){
     // 读取寄存器的值
     return ADC_GetConversionValue(ADC1);// 读取 ADCx 的寄存器 会自动清除 EOC 标志位
 }
+
+
+
+// ==============
+
+//#include "stm32f10x.h"
+//#include "OLED.h"
+//#include "delay.h"
+//#include <stdio.h>
+//#include "ADC_R.h"
+//uint16_t ADValue;
+//float Voltage;
+//int main(void) {
+//    OLED_Init();
+//    ADC_R_INIT();
+//    OLED_ShowString(1, 1, "ADValue:");
+//    OLED_ShowString(2, 1, "Volatge:0.00V");
+//    while(1) {
+//        ADValue = ADC_R_GetValue();
+//        Voltage = (float)ADValue / 4095.8 * 3.3;
+//        OLED_ShowNum(1, 9, ADValue, 4);
+//        OLED_ShowNum(2, 9, Voltage, 1);
+//        OLED_ShowNum(2, 11, (uint16_t)(Voltage * 100) % 100, 2);
+//    }
+//}

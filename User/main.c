@@ -2,18 +2,20 @@
 #include "OLED.h"
 #include "delay.h"
 #include <stdio.h>
-#include "ENCODE_R.h"
-#include "timer_r.h"
+#include "ADC_R.h"
 
-
+uint16_t ADValue;
+float Voltage;
 int main(void) {
     OLED_Init();
-    Timer_R_Init();
-    ENCODE_R_INIT();
-
+    ADC_R_INIT();
+    OLED_ShowString(1, 1, "ADValue:");
+    OLED_ShowString(2, 1, "Volatge:0.00V");
     while(1) {
-        OLED_ShowSignedNum(2,5, ENCODE_R_Get_INC(TIM3), 5);
-        OLED_ShowSignedNum(3,5, ENCODE_R_GET_Speed(), 5);
-        OLED_ShowNum(4, 1, TIM_GetCounter(TIM2), 5);
+        ADValue = ADC_R_GetValue();
+        Voltage = (float)ADValue / 4095.8 * 3.3;
+        OLED_ShowNum(1, 9, ADValue, 4);
+        OLED_ShowNum(2, 9, Voltage, 1);
+        OLED_ShowNum(2, 11, (uint16_t)(Voltage * 100) % 100, 2);
     }
 }
