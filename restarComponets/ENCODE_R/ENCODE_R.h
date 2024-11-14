@@ -6,6 +6,10 @@
 #define STM32F103C8T6PROJECT_ENCODE_R_H
 
 void ENCODE_R_INIT();
-int16_t ENCODE_Get_INC();
+int16_t ENCODE_R_Get_INC();
+void ENCODE_R_ClearnCnt();
+int16_t ENCODE_R_GET_Difference();
+int16_t ENCODE_R_GET_Speed();
+
 
 #endif //STM32F103C8T6PROJECT_ENCODE_R_H

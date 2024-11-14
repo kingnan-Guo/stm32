@@ -11,6 +11,7 @@
 #include "stm32f10x.h"
 #include "ENCODE_R.h"
 
+int8_t Speed;
 void ENCODE_R_INIT(){
     RCC_APB2PeriphClockCmd(RCC_APB2Periph_GPIOA, ENABLE);
     GPIO_InitTypeDef GPIO_InitStructure;
@@ -69,8 +70,42 @@ void ENCODE_R_INIT(){
 
 // 获取当前计数器的值 就是 获取以下 CNT 内值
 // int16 在 65535 时 负数
-int16_t ENCODE_Get_INC(){
+int16_t ENCODE_R_Get_INC(){
     return TIM_GetCounter(TIM3);
 }
 
+void ENCODE_R_ClearnCnt(){
+    TIM_SetCounter(TIM3, 0);
+}
 
+
+int16_t LastTimeTIM3_INTC = 0;// 记录上一次的 CNT 的值
+int16_t ENCODE_R_GET_Difference(){
+    int16_t TEMP;
+    int16_t TIM3_INTC = TIM_GetCounter(TIM3);
+
+    TEMP = TIM3_INTC - LastTimeTIM3_INTC;// 当前值  和 上一次的 差值
+    LastTimeTIM3_INTC = TIM3_INTC;
+
+    return TEMP;
+}
+
+int16_t ENCODE_R_GET_Speed(){
+    return Speed;
+}
+
+
+/**
+ * 配合 TIM2 定时器中断才能使用， 要引入 Timer_r.h
+ * 定时器 2 的中断 每秒执行一次
+ */
+void TIM2_IRQHandler(void){
+    // 检测中断标志位 ; TIM_GetITStatus 获取中断标志位 ； TIM2 选择的时钟； TIM_IT_Update 哪种 中断方式
+    if (TIM_GetITStatus(TIM2, TIM_IT_Update) == SET){
+        // 每隔一秒读取一下速度
+        Speed = GET_Difference();
+        // 清除 中断 标志位
+        TIM_ClearITPendingBit(TIM2, TIM_IT_Update);
+    }
+
+}
