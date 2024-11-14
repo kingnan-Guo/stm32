@@ -456,7 +456,7 @@ void ADC_AnalogWatchdogCmd(ADC_TypeDef* ADCx, uint32_t ADC_AnalogWatchdog);// [A
 void ADC_AnalogWatchdogThresholdsConfig(ADC_TypeDef* ADCx, uint16_t HighThreshold, uint16_t LowThreshold);// [ADC  Watchdog 模拟看门狗] 配置高低阈值
 void ADC_AnalogWatchdogSingleChannelConfig(ADC_TypeDef* ADCx, uint8_t ADC_Channel);// [ADC  Watchdog 模拟看门狗] 配置看门通道
 void ADC_TempSensorVrefintCmd(FunctionalState NewState);// [ADC  内部]  ADC 温度 传感器 内部参考电压控制； 用来开启内部两个通道的
-FlagStatus ADC_GetFlagStatus(ADC_TypeDef* ADCx, uint8_t ADC_FLAG);// [ADC] 获取标志位状态 ； 参数给 EOC 的标志位 判断是不是 置1了
+FlagStatus ADC_GetFlagStatus(ADC_TypeDef* ADCx, uint8_t ADC_FLAG);// [ADC] 获取标志位状态 ； 参数给 EOC 的标志位 判断是不是 置1了； EOC 标志位 置 1 转换结束
 void ADC_ClearFlag(ADC_TypeDef* ADCx, uint8_t ADC_FLAG);//  [ADC]  清除标志位
 ITStatus ADC_GetITStatus(ADC_TypeDef* ADCx, uint16_t ADC_IT);//  [ADC]  获取中断 状态
 void ADC_ClearITPendingBit(ADC_TypeDef* ADCx, uint16_t ADC_IT);//  [ADC]  清除中断 挂起

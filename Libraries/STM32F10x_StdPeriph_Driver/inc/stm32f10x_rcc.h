@@ -676,7 +676,7 @@ void RCC_ITConfig(uint8_t RCC_IT, FunctionalState NewState);
  void RCC_OTGFSCLKConfig(uint32_t RCC_OTGFSCLKSource);
 #endif /* STM32F10X_CL */ 
 
-void RCC_ADCCLKConfig(uint32_t RCC_PCLK2);
+void RCC_ADCCLKConfig(uint32_t RCC_PCLK2);// 用来配置 ADC_CLK 分频器，可以对 RCC_APB2  72MH 时钟进行 2、4、6、8 分频
 
 #ifdef STM32F10X_CL
  void RCC_I2S2CLKConfig(uint32_t RCC_I2S2CLKSource);                                  
