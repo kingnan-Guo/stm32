@@ -103,9 +103,24 @@ void TIM2_IRQHandler(void){
     // 检测中断标志位 ; TIM_GetITStatus 获取中断标志位 ； TIM2 选择的时钟； TIM_IT_Update 哪种 中断方式
     if (TIM_GetITStatus(TIM2, TIM_IT_Update) == SET){
         // 每隔一秒读取一下速度
-        Speed = GET_Difference();
+        Speed = ENCODE_R_GET_Difference();
         // 清除 中断 标志位
         TIM_ClearITPendingBit(TIM2, TIM_IT_Update);
     }
 
 }
+
+
+//#include "ENCODE_R.h"
+//
+//
+//int main(void) {
+//    OLED_Init();
+//
+//    ENCODE_R_INIT();
+//    OLED_ShowNum(1,1, 0, 5);
+//    while(1) {
+//        OLED_ShowNum(2,1, ENCODE_R_Get_INC(), 5);
+//        OLED_ShowNum(3,1, ENCODE_R_GET_Speed(), 5);
+//    }
+//}
