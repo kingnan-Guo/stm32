@@ -100,16 +100,16 @@ int16_t ENCODE_R_GET_Speed(){
  * 配合 TIM2 定时器中断才能使用， 要引入 Timer_r.h
  * 定时器 2 的中断 每秒执行一次
  */
-void TIM2_IRQHandler(void){
-    // 检测中断标志位 ; TIM_GetITStatus 获取中断标志位 ； TIM2 选择的时钟； TIM_IT_Update 哪种 中断方式
-    if (TIM_GetITStatus(TIM2, TIM_IT_Update) == SET){
-        // 每隔一秒读取一下速度
-        Speed = ENCODE_R_GET_Difference();
-        // 清除 中断 标志位
-        TIM_ClearITPendingBit(TIM2, TIM_IT_Update);
-    }
-
-}
+//void TIM2_IRQHandler(void){
+//    // 检测中断标志位 ; TIM_GetITStatus 获取中断标志位 ； TIM2 选择的时钟； TIM_IT_Update 哪种 中断方式
+//    if (TIM_GetITStatus(TIM2, TIM_IT_Update) == SET){
+//        // 每隔一秒读取一下速度
+//        Speed = ENCODE_R_GET_Difference();
+//        // 清除 中断 标志位
+//        TIM_ClearITPendingBit(TIM2, TIM_IT_Update);
+//    }
+//
+//}
 
 
 
