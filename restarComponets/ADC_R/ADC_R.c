@@ -32,6 +32,16 @@ void ADC_R_INIT(){
     GPIO_InitStructure.GPIO_Speed = GPIO_Speed_50MHz;
     GPIO_Init(GPIOA, &GPIO_InitStructure);
 
+
+
+    // ADC 配置 时钟
+    RCC_APB2PeriphClockCmd(RCC_APB2Periph_ADC1, ENABLE);
+    // RCC ADC Clock 传进 ADC 模拟数字转换器的分频，6分频 12 MHZ
+    RCC_ADCCLKConfig(RCC_PCLK2_Div6);
+
+    // 配置 规则组的 输入通道
+    ADC_RegularChannelConfig(ADC1, ADC_Channel_1, 1, ADC_SampleTime_55Cycles5);
+
     //ADC_Init
     ADC_InitTypeDef ADC_InitStruct;
     ADC_StructInit(&ADC_InitStruct);
@@ -61,7 +71,7 @@ void ADC_R_INIT(){
 
 uint16_t ADC_R_GetValue(){
 
-//    ADC_RegularChannelConfig();
+    // ADC_RegularChannelConfig();
 
     // 软件触发 转换
     ADC_SoftwareStartConvCmd(ADC1, ENABLE);

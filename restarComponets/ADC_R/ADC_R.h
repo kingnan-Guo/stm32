@@ -6,5 +6,6 @@
 #define STM32F103C8T6PROJECT_ADC_R_H
 
 void ADC_R_INIT();
+uint16_t ADC_R_GetValue();
 
 #endif //STM32F103C8T6PROJECT_ADC_R_H
