@@ -7,7 +7,7 @@
 
 void ENCODE_R_INIT();
 int16_t ENCODE_R_Get_INC();
-//void ENCODE_R_ClearnCnt();
+void ENCODE_R_ClearnCnt();
 int16_t ENCODE_R_GET_Difference();
 int16_t ENCODE_R_GET_Speed();
 

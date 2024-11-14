@@ -75,9 +75,9 @@ int16_t ENCODE_R_Get_INC(){
 }
 
 
-//void ENCODE_R_ClearnCnt(){
-//    TIM_SetCounter(TIM3, 0);
-//}
+void ENCODE_R_ClearnCnt(){
+    TIM_SetCounter(TIM3, 0);
+}
 
 
 int16_t LastTimeTIM3_INTC = 0;// 记录上一次的 CNT 的值
@@ -104,7 +104,7 @@ void TIM2_IRQHandler(void){
     // 检测中断标志位 ; TIM_GetITStatus 获取中断标志位 ； TIM2 选择的时钟； TIM_IT_Update 哪种 中断方式
     if (TIM_GetITStatus(TIM2, TIM_IT_Update) == SET){
         // 每隔一秒读取一下速度
-//        Speed = ENCODE_R_GET_Difference();
+        Speed = ENCODE_R_GET_Difference();
         // 清除 中断 标志位
         TIM_ClearITPendingBit(TIM2, TIM_IT_Update);
     }
@@ -121,16 +121,22 @@ void TIM2_IRQHandler(void){
 
 // ==================
 
+//#include "stm32f10x.h"
+//#include "OLED.h"
+//#include "delay.h"
+//#include <stdio.h>
 //#include "ENCODE_R.h"
-//
+//#include "timer_r.h"
 //
 //int main(void) {
 //    OLED_Init();
-//
+//    Timer_R_Init();
 //    ENCODE_R_INIT();
-//    OLED_ShowNum(1,1, 0, 5);
+//
 //    while(1) {
-//        OLED_ShowNum(2,1, ENCODE_R_Get_INC(), 5);
-//        OLED_ShowNum(3,1, ENCODE_R_GET_Speed(), 5);
+//        OLED_ShowSignedNum(2,5, ENCODE_R_Get_INC(TIM3), 5);
+//        OLED_ShowSignedNum(3,5, ENCODE_R_GET_Speed(), 5);
+//        OLED_ShowNum(4, 1, TIM_GetCounter(TIM2), 5);
 //    }
 //}
+
