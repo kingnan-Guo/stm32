@@ -79,15 +79,23 @@ uint16_t getExtiInterruptCount(){
 
 
 
-void TIM2_IRQHandler(void){
-    /// TIM_IT_Update 代表 要看 哪个中断标志位
-    if(TIM_GetITStatus(TIM2, TIM_IT_Update) == SET){
-        extiInterruptCount++;
-        // 清除标志位
-        TIM_ClearITPendingBit(TIM2, TIM_IT_Update);
-    }
-}
+//void TIM2_IRQHandler(void){
+//    /// TIM_IT_Update 代表 要看 哪个中断标志位
+//    if(TIM_GetITStatus(TIM2, TIM_IT_Update) == SET){
+//        extiInterruptCount++;
+//        // 清除标志位
+//        TIM_ClearITPendingBit(TIM2, TIM_IT_Update);
+//    }
+//}
+//
+//
 
+
+
+
+
+
+// ===================
 
 //#include "EXTI_Interrupt.h"
 //// RCC_APB2Periph_GPIOA pin14 接口  下降沿触发

@@ -97,7 +97,7 @@ uint32_t getICDuty(){
 
 
 
-
+// 连线 A1 ---- A6
 //#include "PWM_R.h"
 //#include "INPUTCAPTURE_R.h"
 //

@@ -13,6 +13,7 @@
 
 int8_t Speed;
 void ENCODE_R_INIT(){
+    RCC_APB1PeriphClockCmd(RCC_APB1Periph_TIM3, ENABLE);
     RCC_APB2PeriphClockCmd(RCC_APB2Periph_GPIOA, ENABLE);
     GPIO_InitTypeDef GPIO_InitStructure;
     GPIO_InitStructure.GPIO_Pin = GPIO_Pin_6 | GPIO_Pin_7;
@@ -22,14 +23,14 @@ void ENCODE_R_INIT(){
 
 
     // TIM 初始化
-    RCC_APB1PeriphClockCmd(RCC_APB1Periph_TIM3, ENABLE);
+
 
     TIM_TimeBaseInitTypeDef TIM_TimeBaseInitStruct;
     // 由于要对 信号 进行采样 判定， 所以 使用 内部时钟的频率 作为采样的 频率， 而 TIM_ClockDivision 就是 将采样频率分频 划分，采样次数越多 精度越高，但是 延时 增加
     TIM_TimeBaseInitStruct.TIM_ClockDivision = TIM_CKD_DIV1;// 指定时钟划分频  TIM_CKD_DIV1 一分频，
     TIM_TimeBaseInitStruct.TIM_CounterMode = TIM_CounterMode_Up;// 计数 模式， 向上计数
     TIM_TimeBaseInitStruct.TIM_Period = 65536 -1 ;//ARR 计数器 重装 器的值； 要在  0~ 65535 以内
-    TIM_TimeBaseInitStruct.TIM_Prescaler = 720 - 1;//PSC  预分频器 的值; 这里目的 是 定时 一秒钟；  要在 0~ 65535 以内
+    TIM_TimeBaseInitStruct.TIM_Prescaler = 1 - 1;//PSC  预分频器 的值; 这里目的 是 定时 一秒钟；  要在 0~ 65535 以内
     TIM_TimeBaseInitStruct.TIM_RepetitionCounter = 0;// 指定重复计数器值； 高级计数器 才有的 给 0
     //配置时机 单元
     TIM_TimeBaseInit(TIM3, &TIM_TimeBaseInitStruct);
@@ -42,18 +43,17 @@ void ENCODE_R_INIT(){
     TIM_ICStructInit(&TIM_ICInitStruct);
     TIM_ICInitStruct.TIM_Channel = TIM_Channel_1;//  通道 1  向上，
     TIM_ICInitStruct.TIM_ICFilter = 0xF;// 捕获过滤 应该是 第一个 滤波边沿触发器
-    TIM_ICInitStruct.TIM_ICPolarity = TIM_ICPolarity_Rising;// 触发方式
-    TIM_ICInitStruct.TIM_ICPrescaler = TIM_ICPSC_DIV1;// 分频 ： TIM_ICPSC_DIV1不分频
-    TIM_ICInitStruct.TIM_ICSelection = TIM_ICSelection_DirectTI;//   直连通道
+//    TIM_ICInitStruct.TIM_ICPolarity = TIM_ICPolarity_Rising;// 触发方式
+//    TIM_ICInitStruct.TIM_ICPrescaler = TIM_ICPSC_DIV1;// 分频 ： TIM_ICPSC_DIV1不分频
 
     TIM_ICInit(TIM3, &TIM_ICInitStruct);
 
     // 配置 通道 2
     TIM_ICInitStruct.TIM_Channel = TIM_Channel_2;//  通道 2  向下，
     TIM_ICInitStruct.TIM_ICFilter = 0xF;// 捕获过滤 应该是 第一个 滤波边沿触发器
-    TIM_ICInitStruct.TIM_ICPolarity = TIM_ICPolarity_Rising;// 触发方式
-    TIM_ICInitStruct.TIM_ICPrescaler = TIM_ICPSC_DIV1;// 分频 ： TIM_ICPSC_DIV1不分频
-    TIM_ICInitStruct.TIM_ICSelection = TIM_ICSelection_IndirectTI;// 交叉通道
+//    TIM_ICInitStruct.TIM_ICPolarity = TIM_ICPolarity_Rising;// 触发方式
+//    TIM_ICInitStruct.TIM_ICPrescaler = TIM_ICPSC_DIV1;// 分频 ： TIM_ICPSC_DIV1不分频
+//    TIM_ICInitStruct.TIM_ICSelection = TIM_ICSelection_IndirectTI;// 交叉通道
     TIM_ICInit(TIM3, &TIM_ICInitStruct);
 
     // 配置编码器  (计数器， 编码器模式， CH1 的极性，CH2 的极性)
@@ -74,9 +74,10 @@ int16_t ENCODE_R_Get_INC(){
     return TIM_GetCounter(TIM3);
 }
 
-void ENCODE_R_ClearnCnt(){
-    TIM_SetCounter(TIM3, 0);
-}
+
+//void ENCODE_R_ClearnCnt(){
+//    TIM_SetCounter(TIM3, 0);
+//}
 
 
 int16_t LastTimeTIM3_INTC = 0;// 记录上一次的 CNT 的值
@@ -103,13 +104,22 @@ void TIM2_IRQHandler(void){
     // 检测中断标志位 ; TIM_GetITStatus 获取中断标志位 ； TIM2 选择的时钟； TIM_IT_Update 哪种 中断方式
     if (TIM_GetITStatus(TIM2, TIM_IT_Update) == SET){
         // 每隔一秒读取一下速度
-        Speed = ENCODE_R_GET_Difference();
+//        Speed = ENCODE_R_GET_Difference();
         // 清除 中断 标志位
         TIM_ClearITPendingBit(TIM2, TIM_IT_Update);
     }
 
 }
 
+
+
+
+
+
+
+
+
+// ==================
 
 //#include "ENCODE_R.h"
 //

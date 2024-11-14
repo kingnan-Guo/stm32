@@ -63,7 +63,7 @@ uint16_t getTime2InterruptCount(){
 //}
 
 
-//
+// ===============
 //#include "timer_r.h"
 //int main(void) {
 //    // 初始化 I2C 的引脚
