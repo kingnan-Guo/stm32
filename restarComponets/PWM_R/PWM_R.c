@@ -88,3 +88,8 @@ void PWM_R_SetPrescaler(uint16_t Prescaler){
 //}
 
 
+
+//舵机驱动
+//PWM_R_Init();
+//PWM_R_SetPrescaler(720 -1); // 频率 Freq = 72M / (PSC + 1) / 100
+//PWM_R_SetCompare1(42); // 占空比 Duty = 50;
