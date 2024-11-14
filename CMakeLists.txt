@@ -102,6 +102,7 @@ include_directories(
         restarComponets/EXTI_Interrupt
         restarComponets/PWM_R
         restarComponets/INPUTCAPTURE_R
+        restarComponets/ENCODE_R
 )
 
 add_definitions(-DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB)
