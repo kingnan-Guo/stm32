@@ -81,7 +81,7 @@ int16_t Encode_Get(void){
 }
 
 /**
- * 每次 闸门时间段 获取完 CNT 后
+ * 每次 闸门时间段 获取完 CN T 后
  * CNT清零
  * @return
  */
