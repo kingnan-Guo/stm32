@@ -105,6 +105,7 @@ include_directories(
         restarComponets/ENCODE_R
         restarComponets/ADC_R
         restarComponets/ADC_MULTI_CHANNEL
+        restarComponets/DMA_R
 )
 
 add_definitions(-DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB)
