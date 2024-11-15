@@ -106,6 +106,7 @@ include_directories(
         restarComponets/ADC_R
         restarComponets/ADC_MULTI_CHANNEL
         restarComponets/DMA_R
+        restarComponets/USART_R
 
 
         restarComponets/DATA_REGISTER_EXPLORE # 探索 寄存器
