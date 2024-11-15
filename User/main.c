@@ -2,11 +2,12 @@
 #include "OLED.h"
 #include "delay.h"
 #include <stdio.h>
-
+#include "DMA_R.h"
 
 int main(void) {
     OLED_Init();
+    SHOW_DATA_INIT();
     while(1) {
-        OLED_ShowNum(1, 1, 0, 9);
+        SHOW_DATA_WHILE();
     }
 }
