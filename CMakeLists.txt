@@ -106,6 +106,9 @@ include_directories(
         restarComponets/ADC_R
         restarComponets/ADC_MULTI_CHANNEL
         restarComponets/DMA_R
+
+
+        restarComponets/DATA_REGISTER_EXPLORE # 探索 寄存器
 )
 
 add_definitions(-DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB)
