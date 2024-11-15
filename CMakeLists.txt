@@ -109,6 +109,7 @@ include_directories(
 
 
         restarComponets/DATA_REGISTER_EXPLORE # 探索 寄存器
+        restarComponets/CLASS_EXPLORE # 探索在 项目使用 C++
 )
 
 add_definitions(-DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB)
