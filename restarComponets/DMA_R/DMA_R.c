@@ -44,8 +44,8 @@ void DMA_R_INIT(uint32_t AddrStar, uint32_t AddrEnd, uint16_t size){
     DMA_InitStruct.DMA_PeripheralInc = DMA_PeripheralInc_Enable;//  是否自增
     DMA_InitStruct.DMA_MemoryBaseAddr = AddrEnd;//寄存器地址
     DMA_InitStruct.DMA_MemoryDataSize = DMA_PeripheralDataSize_Byte;//
-    DMA_InitStruct.DMA_MemoryInc = DMA_PeripheralInc_Enable;// 是否自增
-    DMA_InitStruct.DMA_DIR = DMA_DIR_PeripheralDST;// 转运方向  外设站点作为DST 目的地
+    DMA_InitStruct.DMA_MemoryInc = DMA_MemoryInc_Enable;// 是否自增
+    DMA_InitStruct.DMA_DIR = DMA_DIR_PeripheralSRC;// 转运方向 /传输方向 指定外设站点是远端 还是目的地； DMA_DIR_PeripheralDST 外设站点作为DST 目的地，存储器到外设 ；DMA_DIR_PeripheralSRC 外设站点作为src 数据源； 当前案例 外设-> 存储器
     DMA_InitStruct.DMA_BufferSize = size;// 转运计数器
     DMA_InitStruct.DMA_Mode = DMA_Mode_Normal;// 是否 自动重装
     DMA_InitStruct.DMA_M2M = DMA_M2M_Enable;// DMA_M2M_Enable 软件触发 ； DMA_M2M_Disable  硬件触发
@@ -123,3 +123,17 @@ void SHOW_DATA_INIT(){
 
      Delay_ms(1000);
 }
+
+
+
+
+//#include "DMA_R.h"
+//
+//int main(void) {
+//    OLED_Init();
+//    SHOW_DATA_INIT();
+//    while(1) {
+//        SHOW_DATA_WHILE();
+//    }
+//}
+
