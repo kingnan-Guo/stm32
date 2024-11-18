@@ -10,6 +10,9 @@
 #include "stm32f10x.h"
 #include "USART_R.h"
 
+#include <stdio.h>
+#include "stdarg.h"
+
 uint8_t USART_R_RXDATA;
 uint8_t USART_R_RXFLAG; // 自定义标志位
 
@@ -117,4 +120,47 @@ void _____USART1_IRQHandler(void){
     }
 }
 
+
+// 重定向 Printf 到串口
+// printf 的 原理 就是 不断调用 fputc
+int fputc(int ch, FILE *f){
+    USART_R_SEND_BYTE(ch);
+    return ch;
+}
+
+////可变参数 把printf 变成 可变参数
+void USART_R_Printf(char *format, ...){
+    char string[100];
+    va_list arg;//
+
+    va_start(arg, format);// 从 format 里接收参数
+
+    vsprintf(string, format, arg);
+
+    va_end(arg);// 释放
+
+    USART_R_SEND_STRING(string);
+}
+
+
+
+
+
+
+void main_test(){
+    USART_R_INIT();
+
+    USART_R_SEND_BYTE('A');
+    uint8_t array[] = {0x42, 0x42, 0x43};
+    USART_R_SEND_ARRAY(array, 3);
+    USART_R_SEND_STRING("Hellow");
+
+    USART_R_SEND_NUMBER(123, 3);
+
+    printf("Num = %d\r\n", 12345);
+
+
+    USART_R_Printf("Num = %d\r\n", 778899);
+
+}
 
