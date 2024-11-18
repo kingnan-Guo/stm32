@@ -107,10 +107,13 @@ include_directories(
         restarComponets/ADC_MULTI_CHANNEL
         restarComponets/DMA_R
         restarComponets/USART_R
+        restarComponets/SOFTWARE_CONTROL_MPU6050
+        restarComponets/SOFTWARE_I2C
 
 
         restarComponets/DATA_REGISTER_EXPLORE # 探索 寄存器
         restarComponets/CLASS_EXPLORE # 探索在 项目使用 C++
+
 )
 
 add_definitions(-DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB)
