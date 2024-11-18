@@ -186,7 +186,7 @@ void Serial_package_Print(char *format, ...){
 }
 
 //中断 函数  固定的名称
-void USART1_IRQHandler(void){
+void __USART1_IRQHandler(void){
     // 此处静态变量 只会初始化一次， 函数退出后仍然有效，类似于全局变量，不过 只能在函数种使用
     static uint8_t RxState = 0;// 三个状态 0，1，2
     static uint8_t pRxPacket = 0;

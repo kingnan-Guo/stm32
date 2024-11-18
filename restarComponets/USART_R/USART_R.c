@@ -21,7 +21,7 @@ void USART_R_INIT(){
 
     GPIO_InitTypeDef GPIO_InitStructure;
     GPIO_InitStructure.GPIO_Pin = GPIO_Pin_9;
-    GPIO_InitStructure.GPIO_Mode = GPIO_Mode_AF_OD;// 复用推挽输出， 带上拉或者下拉
+    GPIO_InitStructure.GPIO_Mode = GPIO_Mode_AF_PP;// 复用推挽输出， 带上拉或者下拉
     GPIO_InitStructure.GPIO_Speed = GPIO_Speed_50MHz;
     GPIO_Init(GPIOA, &GPIO_InitStructure);
 
@@ -46,8 +46,10 @@ void USART_R_INIT(){
 
 
 
-    // 配置 中断; E
-    USART_ITConfig(USART1, USART_IT_TXE, ENABLE);
+    // 配置 中断; USART_IT_RXNE 配置错误
+    USART_ITConfig(USART1, USART_IT_RXNE, ENABLE);
+
+    NVIC_PriorityGroupConfig(NVIC_PriorityGroup_2);// 优先级分组 忘记配置
 
     NVIC_InitTypeDef NVIC_InitStruct;
     NVIC_InitStruct.NVIC_IRQChannelSubPriority = 1;
@@ -64,7 +66,7 @@ void USART_R_INIT(){
 void USART_R_SEND_BYTE(uint8_t byte){
     USART_SendData(USART1, byte);
     // 判断 TXE 中断标志位， 在 下一次 USART_SendData 会自动清除
-    while (USART_GetFlagStatus(USART1, USART_FLAG_TXE));
+    while (USART_GetFlagStatus(USART1, USART_FLAG_TXE) == RESET);
 }
 
 void USART_R_SEND_ARRAY(uint8_t * Array, uint16_t Length){
@@ -89,10 +91,10 @@ uint32_t _Pow(uint32_t X, uint32_t Y){
 }
 
 void USART_R_SEND_NUMBER(uint32_t Number, uint8_t Length){
-    uint8_t i;
-    for (int j = 0; j < Length; ++j) {
+    uint8_t j;
+    for ( j = 0; j < Length; ++j) {
         USART_R_SEND_BYTE(
-            Number/_Pow(10, Length -i -1) % 10 + '0'
+            Number/_Pow(10, Length - j -1) % 10 + '0'
         );
     }
 }
@@ -111,7 +113,7 @@ uint8_t GET_USART_R_RXFLAG(){
 
 
 // 运行时  _____USART1_IRQHandler 改成 USART1_IRQHandler
-void _____USART1_IRQHandler(void){
+void USART1_IRQHandler(void){
     if(USART_GetFlagStatus(USART1, USART_FLAG_TXE) == SET){
         USART_R_RXDATA = USART_ReceiveData(USART1);
         USART_R_RXFLAG = 1;
@@ -149,16 +151,17 @@ void USART_R_Printf(char *format, ...){
 
 void main_test(){
     USART_R_INIT();
-
     USART_R_SEND_BYTE('A');
+    USART_R_Printf("\r\n");
     uint8_t array[] = {0x42, 0x42, 0x43};
     USART_R_SEND_ARRAY(array, 3);
+    USART_R_Printf("\r\n");
     USART_R_SEND_STRING("Hellow");
-
+    USART_R_Printf("\r\n");
     USART_R_SEND_NUMBER(123, 3);
 
-    printf("Num = %d\r\n", 12345);
-
+//    printf("Num = %d\r\n", 12345);
+    USART_R_Printf("\r\n");
 
     USART_R_Printf("Num = %d\r\n", 778899);
 
