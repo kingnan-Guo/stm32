@@ -3,14 +3,13 @@
 #include "delay.h"
 #include <stdio.h>
 #include "USART_R.h"
+#include "SOFTWARE_I2C.h"
 
 int main(void) {
     OLED_Init();
 
-    main_test();
-
-
-    OLED_ShowNum(2,5, 1, 5);
+//    main_test();
+    SOFTWARE_I2C_main();
     while(1) {
     }
 }

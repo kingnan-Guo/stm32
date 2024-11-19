@@ -112,6 +112,7 @@ uint8_t SOFTWARE_I2C_SEND_RECEIVE_ACK(){
 
 
 void SOFTWARE_I2C_main(){
+    uint8_t ID;
     SOFTWARE_I2C_INIT();
     SOFTWARE_I2C_START();
 
@@ -119,23 +120,12 @@ void SOFTWARE_I2C_main(){
     SOFTWARE_I2C_SEND_BYTE(0xD2);
     // 接收 ACK
     uint8_t ACK_0 = SOFTWARE_I2C_SEND_RECEIVE_ACK();
-    // 指定地址 写
-//    SOFTWARE_I2C_SEND_BYTE(11001001);
-    // 接收 ACK
-//    uint8_t ACK_1 = SOFTWARE_I2C_SEND_RECEIVE_ACK();
 
+    ID = SOFTWARE_I2C_SEND_RECEIVE_BYTE(0x75);
     SOFTWARE_I2C_STOP();
 
-    OLED_ShowNum(1,1, ACK_0, 5);
-
-//    SOFTWARE_I2C_START();
-//    // 指定地址 读 流程
-//    // 指定地址 写 (调整 指针) 之后 ， SOFTWARE_I2C_START 然后  直接开始读
-//    SOFTWARE_I2C_SEND_BYTE();
-//    // 发送 ACK
-//    SOFTWARE_I2C_SEND_ACK();
-//    SOFTWARE_I2C_STOP();
-
-
+    OLED_ShowString(1,1, "ID ");
+    OLED_ShowHexNum(1,4, ID, 6);
+    OLED_ShowNum(2,1, ACK_0, 5);
 
 }
