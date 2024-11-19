@@ -593,8 +593,8 @@ uint8_t I2C_ReceiveData(I2C_TypeDef* I2Cx)
   * @param  Address: specifies the slave address which will be transmitted
   * @param  I2C_Direction: specifies whether the I2C device will be a
   *   Transmitter or a Receiver. This parameter can be one of the following values
-  *     @arg I2C_Direction_Transmitter: Transmitter mode
-  *     @arg I2C_Direction_Receiver: Receiver mode
+  *     @arg I2C_Direction_Transmitter: Transmitter mode // 地址最低位 清零
+  *     @arg I2C_Direction_Receiver: Receiver mode // 地址最低为 置 1
   * @retval None.
   */
 void I2C_Send7bitAddress(I2C_TypeDef* I2Cx, uint8_t Address, uint8_t I2C_Direction)
