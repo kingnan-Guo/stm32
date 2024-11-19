@@ -2,14 +2,17 @@
 #include "OLED.h"
 #include "delay.h"
 #include <stdio.h>
-#include "USART_R.h"
-#include "SOFTWARE_I2C.h"
+#include "SOFTWARE_CONTROL_MPU6050.h"
+
 
 int main(void) {
     OLED_Init();
 
-//    main_test();
-    SOFTWARE_I2C_main();
+
+
+    SOFTWARE_CONTROL_MAIN();
+
+
     while(1) {
     }
 }
