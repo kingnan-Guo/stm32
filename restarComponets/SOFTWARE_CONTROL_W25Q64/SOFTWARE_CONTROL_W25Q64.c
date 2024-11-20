@@ -132,7 +132,7 @@ void SOFTWARE_CONTROL_W25Q64_MAIN(){
 
     uint8_t MID;
     uint16_t DID;
-    uint8_t dataArray_write[] = {0x01, 0x03, 0x05,0x07};
+    uint8_t dataArray_write[] = {0x01, 0x03, 0x05,0x08};
     uint8_t dataArr_Read[4];
 
     uint32_t startAddr = 0x000000;
