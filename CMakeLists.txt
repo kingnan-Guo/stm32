@@ -111,6 +111,9 @@ include_directories(
         restarComponets/SOFTWARE_I2C
         restarComponets/HARDWARE_I2C
         restarComponets/HARDWARE_CONTROL_MPU6050
+        restarComponets/SOFTWARE_SPI
+        restarComponets/SOFTWARE_CONTROL_W25Q64
+
 
 
         restarComponets/DATA_REGISTER_EXPLORE # 探索 寄存器
