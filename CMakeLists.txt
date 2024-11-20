@@ -114,6 +114,7 @@ include_directories(
         restarComponets/SOFTWARE_SPI
         restarComponets/SOFTWARE_CONTROL_W25Q64
         restarComponets/HARDWARE_CONTROL_W25Q64
+        restarComponets/HARDWARE_SPI
 
 
         restarComponets/DATA_REGISTER_EXPLORE # 探索 寄存器

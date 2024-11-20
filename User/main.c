@@ -2,7 +2,7 @@
 #include "OLED.h"
 #include "delay.h"
 #include <stdio.h>
-#include "SOFTWARE_CONTROL_MPU6050.h"
+#include "SOFTWARE_CONTROL_W25Q64.h"
 
 
 int main(void) {
@@ -10,7 +10,7 @@ int main(void) {
 
 
 
-    SOFTWARE_CONTROL_MAIN();
+    SOFTWARE_CONTROL_W25Q64_MAIN();
 
 
     while(1) {

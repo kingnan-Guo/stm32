@@ -22,15 +22,15 @@ void SOFTWARE_SPI_INIT(){
     GPIO_InitTypeDef GPIO_InitStructure;
     // 开漏输出 有输入能力
     GPIO_InitStructure.GPIO_Mode = GPIO_Mode_Out_PP;
-    GPIO_InitStructure.GPIO_Pin = GPIO_Pin_4 | GPIO_Pin_5 | GPIO_Pin_7;
+    GPIO_InitStructure.GPIO_Pin = SPI_CS | SPI_SCK | SPI_D1;
     GPIO_InitStructure.GPIO_Speed = GPIO_Speed_50MHz;
-    GPIO_Init(GPIOA, &GPIO_InitStructure);
+    GPIO_Init(SPI_PORT, &GPIO_InitStructure);
 
     // 主机输入到从机 要有 一定的 驱动能力
     GPIO_InitStructure.GPIO_Mode = GPIO_Mode_IPU;
-    GPIO_InitStructure.GPIO_Pin = GPIO_Pin_6;
+    GPIO_InitStructure.GPIO_Pin = SPI_D0;
     GPIO_InitStructure.GPIO_Speed = GPIO_Speed_50MHz;
-    GPIO_Init(GPIOA, &GPIO_InitStructure);
+    GPIO_Init(SPI_PORT, &GPIO_InitStructure);
 
     SOFTWARE_SPI_W_CS(1);
 
