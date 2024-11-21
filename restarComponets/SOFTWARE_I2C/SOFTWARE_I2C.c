@@ -21,12 +21,12 @@ void SOFTWARE_I2C_INIT(){
 
     GPIO_InitTypeDef GPIO_InitStruct;
     GPIO_InitStruct.GPIO_Mode = GPIO_Mode_Out_OD;// 开漏 输出 可以输入
-    GPIO_InitStruct.GPIO_Pin = GPIO_Pin_6 | GPIO_Pin_7;
+    GPIO_InitStruct.GPIO_Pin = SCL_PIN | SDA_PIN;
     GPIO_InitStruct.GPIO_Speed = GPIO_Speed_50MHz;
-    GPIO_Init(GPIOB, &GPIO_InitStruct);
+    GPIO_Init(I2C_PORT, &GPIO_InitStruct);
 
     // 设置 GPIO 高电平，此时 输入 空闲状态
-    GPIO_SetBits(GPIOB, GPIO_Pin_6 | GPIO_Pin_7);
+    GPIO_SetBits(I2C_PORT, SCL_PIN | SDA_PIN);
 }
 
 
@@ -36,7 +36,7 @@ void SOFTWARE_I2C_W_SCL(uint8_t bitValue){
 }
 
 void SOFTWARE_I2C_W_SDA(uint8_t bitValue){
-    GPIO_WriteBit(I2C_PORT, SDA_PIN, (BitAction)bitValue);
+    GPIO_WriteBit(GPIOB, SDA_PIN, (BitAction)bitValue);
     Delay_us(10);
 }
 

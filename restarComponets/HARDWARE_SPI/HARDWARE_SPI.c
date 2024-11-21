@@ -13,7 +13,7 @@
 
 
 void HARDWARE_SPI_W_CS(uint8_t BitValue){
-    GPIO_WriteBit(GPIOA, SPI_CS, (BitAction)BitValue);
+    GPIO_WriteBit(SPI_PORT, SPI_CS, (BitAction)BitValue);
 }
 
 void HARDWARE_SPI_INIT(){
@@ -28,21 +28,21 @@ void HARDWARE_SPI_INIT(){
     GPIO_InitStructure.GPIO_Mode = GPIO_Mode_Out_PP;
     GPIO_InitStructure.GPIO_Pin = SPI_CS;
     GPIO_InitStructure.GPIO_Speed = GPIO_Speed_50MHz;
-    GPIO_Init(GPIOA, &GPIO_InitStructure);
+    GPIO_Init(SPI_PORT, &GPIO_InitStructure);
 
 
     // 初始化 SCK 和 MOSI 复用 推挽 输出 ，直接 连接 外设
     GPIO_InitStructure.GPIO_Mode = GPIO_Mode_AF_PP;
     GPIO_InitStructure.GPIO_Pin = SPI_SCK | SPI_D1;
     GPIO_InitStructure.GPIO_Speed = GPIO_Speed_50MHz;
-    GPIO_Init(GPIOA, &GPIO_InitStructure);
+    GPIO_Init(SPI_PORT, &GPIO_InitStructure);
 
 
     // 主机输入到从机 要有 一定的 驱动能力;  初始化 MISO 引脚  上拉输入
     GPIO_InitStructure.GPIO_Mode = GPIO_Mode_IPU;
     GPIO_InitStructure.GPIO_Pin = SPI_D0;
     GPIO_InitStructure.GPIO_Speed = GPIO_Speed_50MHz;
-    GPIO_Init(GPIOA, &GPIO_InitStructure);
+    GPIO_Init(SPI_PORT, &GPIO_InitStructure);
 
 
 
