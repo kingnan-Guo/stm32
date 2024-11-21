@@ -47,14 +47,24 @@ void HARDWARE_SPI_INIT(){
     RCC_APB2PeriphClockCmd(RCC_APB2Periph_SPI1, ENABLE);
 
 
+    // 初始化 SPI 外设
+    SPI_InitTypeDef SPI_InitStruct;
+    SPI_StructInit(&SPI_InitStruct);
+    SPI_InitStruct.SPI_Mode = SPI_Mode_Master;// 作为 主机
+    SPI_InitStruct.SPI_Direction = SPI_Direction_2Lines_FullDuplex;// 标准模式 双线全双工
+    SPI_InitStruct.SPI_DataSize = SPI_DataSize_8b;// 发送 8 位 数据帧
+    SPI_InitStruct.SPI_FirstBit = SPI_FirstBit_MSB;// 高位先行
+    SPI_InitStruct.SPI_BaudRatePrescaler = SPI_BaudRatePrescaler_2;//  SPI_BaudRatePrescaler_2  分频
+    SPI_InitStruct.SPI_CPHA = SPI_CPHA_1Edge;// 指定捕获时钟  边沿； 捕获 1 个边沿
+    SPI_InitStruct.SPI_CPOL = SPI_CPOL_Low;// 时钟相位 0 模式
+    SPI_InitStruct.SPI_NSS = SPI_NSS_Soft;// 这个 暂时不用
+    SPI_InitStruct.SPI_CRCPolynomial = 7;//CRC 校验模式
 
-    SPI_InitTypeDef* SPI_InitStruct;
-    SPI_StructInit(SPI_InitStruct);
-    SPI_InitStruct->SPI_BaudRatePrescaler = ;
     SPI_Init(SPI1, &SPI_InitStruct);
-
     SPI_Cmd(SPI1, ENABLE);
 
+
+    HARDWARE_SPI_W_CS(1);
 }
 
 void HARDWARE_SPI_START(){
@@ -76,7 +86,7 @@ uint8_t HARDWARE_SPI_SWAPBYTE(uint8_t BYTE){
     SPI_I2S_SendData(SPI1, BYTE);
 
 
-    // RXNE 接收寄存器 不为空, 读取数据 
+    // RXNE 接收寄存器 不为空, 读取数据
     while (SPI_I2S_GetFlagStatus(SPI1, SPI_I2S_FLAG_RXNE) != SET);
     RECEIVE_BYTE = SPI_I2S_ReceiveData(SPI1);
 
