@@ -109,7 +109,7 @@ void HARDWARE_CONTROL_W25Q64_SECTOR_ERASE(uint32_t Address){
 
 // 读取 ID
 void HARDWARE_CONTROL_W25Q64_READ_ID(uint8_t *MID, uint16_t *DID){
-    HARDWARE_CONTROL_W25Q64_WRITE_ENABLE();// 写使能
+//    HARDWARE_CONTROL_W25Q64_WRITE_ENABLE();// 写使能
     HARDWARE_SPI_START();
 
     // 发送指令
@@ -127,7 +127,7 @@ void HARDWARE_CONTROL_W25Q64_READ_ID(uint8_t *MID, uint16_t *DID){
 
 
     HARDWARE_SPI_STOP();
-    HARDWARE_CONTROL_W25Q64_WAIT_BUSY();// 等待 BUSY
+//    HARDWARE_CONTROL_W25Q64_WAIT_BUSY();// 等待 BUSY
 }
 
 
@@ -137,7 +137,7 @@ void HARDWARE_CONTROL_W25Q64_MAIN(){
 
     uint8_t MID;
     uint16_t DID;
-    uint8_t dataArray_write[] = {0x01, 0x03, 0x05,0x08};
+    uint8_t dataArray_write[] = {0x02, 0x03, 0x05,0x08};
     uint8_t dataArr_Read[4];
 
     uint32_t startAddr = 0x000000;
