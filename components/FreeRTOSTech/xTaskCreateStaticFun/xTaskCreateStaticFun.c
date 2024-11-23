@@ -39,15 +39,19 @@ StaticTask_t StaticTaskTCB2;// 任务 控制块
 void static_task1(void * pvParameters){
     int16_t num = 0x00;
     while (1) {
-
+        if(num == 5){
+            vTaskDelete(StaticTask_Handler2);
+            printf("printf delete task2 \r\n");
+        }
         printf("printf task1=%d\r\n",  num++);
         vTaskDelay(1000);
 
     }
 }
 void static_task2(void * pvParameters){
-    int16_t num = 0x00;
+    int num = 0;
     while (1) {
+
         OLED_ShowString(1, 1, "static_task2");
         OLED_ShowNum(2, 1, num++, 5);
         vTaskDelay(2000);
