@@ -119,6 +119,7 @@ include_directories(
 
 
         components/FreeRTOSTech/xTaskCreateStaticFun
+        components/FreeRTOSTech/xTaskSuspendResume
 
 
         restarComponets/DATA_REGISTER_EXPLORE # 探索 寄存器
