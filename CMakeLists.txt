@@ -95,6 +95,7 @@ include_directories(
         components/FreeRTOSTech/xTaskCreateFun
         components/FreeRTOSTech/xTaskCreateFun2
 
+
         restarComponets/LED_R
         restarComponets/KEY_R
         restarComponets/customizeInterrupt
@@ -115,6 +116,9 @@ include_directories(
         restarComponets/SOFTWARE_CONTROL_W25Q64
         restarComponets/HARDWARE_CONTROL_W25Q64
         restarComponets/HARDWARE_SPI
+
+
+        components/FreeRTOSTech/xTaskCreateStaticFun
 
 
         restarComponets/DATA_REGISTER_EXPLORE # 探索 寄存器

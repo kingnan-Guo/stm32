@@ -63,7 +63,7 @@ extern uint32_t SystemCoreClock;// 只是声明一下系统时钟 ，后面要�
  * ==========================================================================================================
  */
 #define configUSE_PREEMPTION                     1                          // 1 使用抢占式内核， 高优先级可以抢占低优先级 0 使用协程 （不再更新）
-#define configSUPPORT_STATIC_ALLOCATION          1
+#define configSUPPORT_STATIC_ALLOCATION          1                          // 创建 静态任务 的 宏
 //#define configSUPPORT_DYNAMIC_ALLOCATION         1
 //#define configUSE_IDLE_HOOK                      0
 //#define configUSE_TICK_HOOK                      0
