@@ -2,11 +2,11 @@
 #include "OLED.h"
 #include "delay.h"
 #include <stdio.h>
-#include "xTaskCreateStaticFun.h"
+#include "xTaskSuspendResume.h"
 
 int main(void) {
     OLED_Init();
-    xTaskCreateStaticFun_Main();
+    xTaskSuspendResume_MAIN();
 
     while(1) {
     }
