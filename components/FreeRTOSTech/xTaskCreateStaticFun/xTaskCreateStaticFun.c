@@ -41,9 +41,11 @@ void static_task1(void * pvParameters){
     while (1) {
         if(num == 5){
             vTaskDelete(StaticTask_Handler2);
-            printf("printf delete task2 \r\n");
+            printf("printf delete task2\r\n");
         }
-        printf("printf task1=%d\r\n",  num++);
+        printf("printf task1 =%d\r\n",  num++);
+
+        OLED_ShowNum(3, 1, num, 5);
         vTaskDelay(1000);
 
     }

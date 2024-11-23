@@ -2,11 +2,11 @@
 #include "OLED.h"
 #include "delay.h"
 #include <stdio.h>
-#include "FreeRTOSDemo.h"
+#include "xTaskCreateStaticFun.h"
 
 int main(void) {
     OLED_Init();
-    FreeRTOSDemoMain();
+    xTaskCreateStaticFun_Main();
 
     while(1) {
     }
