@@ -8,7 +8,7 @@
 
 #include "stm32f10x.h"
 #include "customizeInterrupt.h"
-
+#include "OLED.h"
 uint16_t InterruptCount = 0;
 void Interrupt_Init(){
     RCC_APB2PeriphClockCmd(RCC_APB2Periph_GPIOB, ENABLE);
@@ -80,11 +80,12 @@ void EXTI9_5_IRQHandler(void) {
 
 
 
-
-//OLED_Init();
-//Interrupt_Init();
-//OLED_ShowNum(1, 1,  1, 5);
-//while(1) {
-//OLED_ShowNum(3, 1,  getNum(), 5);
-//}
+void Interrupt_MAIN(){
+    OLED_Init();
+    Interrupt_Init();
+    OLED_ShowNum(1, 1,  1, 5);
+}
+void Interrupt_WHILE(){
+    OLED_ShowNum(3, 1,  getNum(), 5);
+}
 
