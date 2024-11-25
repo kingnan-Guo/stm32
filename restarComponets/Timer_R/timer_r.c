@@ -3,6 +3,7 @@
 //
 #include "stm32f10x.h"
 #include "timer_r.h"
+#include "OLED.h"
 
 uint16_t time2InterruptCount = 0;
 void Timer_R_Init(){
@@ -53,26 +54,28 @@ uint16_t getTime2InterruptCount(){
 }
 
 // 跟  restarComponets/EXTI_Interrupt/EXTI_Interrupt.c 和 components/Timer/Timer.c 的 中断函数 重复了 所以 ，这里注掉
-//void TIM2_IRQHandler(void){
-//    /// TIM_IT_Update 代表 要看 哪个中断标志位
-//    if(TIM_GetITStatus(TIM2, TIM_IT_Update) == SET){
-//        time2InterruptCount++;
-//        // 清除标志位
-//        TIM_ClearITPendingBit(TIM2, TIM_IT_Update);
-//    }
-//}
+void __TIM2_IRQHandler(void){
+    /// TIM_IT_Update 代表 要看 哪个中断标志位
+    if(TIM_GetITStatus(TIM2, TIM_IT_Update) == SET){
+        time2InterruptCount++;
+        // 清除标志位
+        TIM_ClearITPendingBit(TIM2, TIM_IT_Update);
+    }
+}
 
 
 // ===============
-//#include "timer_r.h"
-//int main(void) {
-//    // 初始化 I2C 的引脚
-//    OLED_Init();
-//    Timer_R_Init();
+
+void Timer_R_MAIN(void) {
+    // 初始化 I2C 的引脚
+    Timer_R_Init();
 //    while(1) {
 //        OLED_ShowNum(1,1,getTime2InterruptCount(), 5);
 //        OLED_ShowNum(4,1,TIM_GetCounter(TIM2), 5);
 //    }
-//}
+}
 
-
+void Timer_R_MAIN_WHILE(void) {
+    OLED_ShowNum(1,1,getTime2InterruptCount(), 5);
+    OLED_ShowNum(4,1,TIM_GetCounter(TIM2), 5);
+}
