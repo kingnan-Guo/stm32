@@ -33,13 +33,13 @@ void Timer_R_Init(){
     TIM_ITConfig(TIM2, TIM_IT_Update, ENABLE);// TIM_IT_Update 更新中断
 
     // 接下来 配置  NVIC
-    NVIC_PriorityGroupConfig(NVIC_PriorityGroup_2);
+    NVIC_PriorityGroupConfig(NVIC_PriorityGroup_4);
 
     NVIC_InitTypeDef NVIC_InitStruct;
     NVIC_InitStruct.NVIC_IRQChannel = TIM2_IRQn;// 指定通道; 在stm32f10x.h文件中，找到 对应的通道，定时器 2 在 NVIC 里的通道 TIM2_IRQn
     NVIC_InitStruct.NVIC_IRQChannelCmd = ENABLE;// 指定中断通道 使能
-    NVIC_InitStruct.NVIC_IRQChannelPreemptionPriority = 2;// 抢占 优先级
-    NVIC_InitStruct.NVIC_IRQChannelSubPriority = 1;// 响应 优先级
+    NVIC_InitStruct.NVIC_IRQChannelPreemptionPriority = 5;// 抢占 优先级
+    NVIC_InitStruct.NVIC_IRQChannelSubPriority = 2;// 响应 优先级
     NVIC_Init(&NVIC_InitStruct);
 
 
