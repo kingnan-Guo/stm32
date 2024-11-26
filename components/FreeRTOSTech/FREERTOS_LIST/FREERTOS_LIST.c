@@ -48,7 +48,7 @@ void vTASK2_LIST(void *pvParameters){
         printf("printf task2= \r\n");
         // printf("printf data=%d\r\n", data);
         // printf("printf task2=%d\r\n",  num);
-        OLED_ShowString(2, 1, "task2 0");
+        OLED_ShowString(2, 1, "task2");
         OLED_ShowNum(2, 9, num++, 5);
         vTaskDelay(1000); // Delay for 500 milliseconds
     }
@@ -75,7 +75,14 @@ void vTASK3_LIST(void *pvParameters){
     printf("TEST_LIST_ITEM2       %#x       \r\n", (int)&TEST_LIST_ITEM2);
     printf("TEST_LIST_ITEM3       %#x       \r\n", (int)&TEST_LIST_ITEM3);
 
-
+    vListInsert(&TEST_LIST, &TEST_LIST_ITEM1);
+    printf(" TEST_LIST_ITEM1  \r\n");
+    printf("项目                             地址        \r\n");
+//    printf("TEST_LIST->pxIndex              %#x       \r\n", (int)&TEST_LIST.pxIndex);
+//    printf("TEST_LIST->xListEnd.pxNext      %#x       \r\n", (int)&TEST_LIST.xListEnd.pxNext);
+//    printf("TEST_LIST_ITEM1                 %#x       \r\n", (int)&TEST_LIST_ITEM1);
+//    printf("TEST_LIST_ITEM2                 %#x       \r\n", (int)&TEST_LIST_ITEM2);
+//    printf("TEST_LIST_ITEM3                 %#x       \r\n", (int)&TEST_LIST_ITEM3);
 
 }
 
