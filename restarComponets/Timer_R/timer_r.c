@@ -38,8 +38,8 @@ void Timer_R_Init(){
     NVIC_InitTypeDef NVIC_InitStruct;
     NVIC_InitStruct.NVIC_IRQChannel = TIM2_IRQn;// 指定通道; 在stm32f10x.h文件中，找到 对应的通道，定时器 2 在 NVIC 里的通道 TIM2_IRQn
     NVIC_InitStruct.NVIC_IRQChannelCmd = ENABLE;// 指定中断通道 使能
-    NVIC_InitStruct.NVIC_IRQChannelPreemptionPriority = 5;// 抢占 优先级
-    NVIC_InitStruct.NVIC_IRQChannelSubPriority = 2;// 响应 优先级
+    NVIC_InitStruct.NVIC_IRQChannelPreemptionPriority = 6;// 抢占 优先级
+    NVIC_InitStruct.NVIC_IRQChannelSubPriority = 0;// 响应 优先级
     NVIC_Init(&NVIC_InitStruct);
 
 
@@ -76,6 +76,6 @@ void Timer_R_MAIN(void) {
 }
 
 void Timer_R_MAIN_WHILE(void) {
-    OLED_ShowNum(1,1,getTime2InterruptCount(), 5);
+    OLED_ShowNum(3,1,getTime2InterruptCount(), 5);
     OLED_ShowNum(4,1,TIM_GetCounter(TIM2), 5);
 }
