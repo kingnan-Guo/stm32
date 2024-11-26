@@ -122,6 +122,7 @@ include_directories(
         components/FreeRTOSTech/xTaskSuspendResume
         components/FreeRTOSTech/FreeRTOS_NVIC
         components/FreeRTOSTech/FREERTOS_LIST
+        components/FreeRTOSTech/FREERTOS_TEMP
 
 
         restarComponets/DATA_REGISTER_EXPLORE # 探索 寄存器
