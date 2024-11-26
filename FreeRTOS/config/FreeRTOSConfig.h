@@ -235,7 +235,7 @@ standard names. */
  * 20241126 添加的额 列表 和列表项 相关的  宏定义
  * ==========================================================================================================
  */
-#define configUSE_LIST_DATA_INTEGRITY_CHECK_BYTES   0;// 列表 完整性
+#define configUSE_LIST_DATA_INTEGRITY_CHECK_BYTES   0// 列表 完整性
 
 
 #endif /* FREERTOS_CONFIG_H */
