@@ -125,7 +125,7 @@ extern uint32_t SystemCoreClock;// 只是声明一下系统时钟 ，后面要�
  *  ==========================================================================================================
  */
 #define configGENERATE_RUN_TIME_STATS	        0                       //为1时启用运行时间统计功能 ； 可以查看任务运行多久；（新增  未启用）
-#define configUSE_TRACE_FACILITY				1                       //为1启用可视化跟踪调试
+#define configUSE_TRACE_FACILITY				1                       //为1启用可视化跟踪调试; 获取 系统所有的 任务状态 uxTaskGetSystemState
 #define configUSE_STATS_FORMATTING_FUNCTIONS	1                       //与宏 configUSE_TRACE_FACILITY 同时为1时会编译下面3个函数 prvWriteNameToBuffer(),vTaskList(), vTaskGetRunTimeStats() ；  （新增  启用）
 
 
@@ -161,10 +161,10 @@ to exclude the API function. */
 #define INCLUDE_vTaskSuspend                1
 #define INCLUDE_vTaskDelayUntil             1
 #define INCLUDE_vTaskDelay                  1
-#define INCLUDE_xTaskGetSchedulerState      1
+#define INCLUDE_xTaskGetSchedulerState      1       // 获取 任务调度器的 运行 状态 xTaskGetSchedulerState
 #define INCLUDE_xTimerPendFunctionCall      1
 #define INCLUDE_xQueueGetMutexHolder        1
-#define INCLUDE_uxTaskGetStackHighWaterMark 1
+#define INCLUDE_uxTaskGetStackHighWaterMark 1       // uxTaskGetStackHighWaterMark 的 宏定义，用来 获取某个任务的 堆栈 使用 时 最多占用了多少的情况
 #define INCLUDE_eTaskGetState               1
 
 /*
@@ -236,6 +236,14 @@ standard names. */
  * ==========================================================================================================
  */
 #define configUSE_LIST_DATA_INTEGRITY_CHECK_BYTES   0// 列表 完整性
+
+
+
+/*** ==========================================================================================================
+ * 20241127 添加的 其他的宏定义
+ * ==========================================================================================================
+ */
+#define INCLUDE_xTaskGetHandle          1// 根据 任务 名称 获取 任务句柄的 Handle : xTaskGetHandle
 
 
 #endif /* FREERTOS_CONFIG_H */
