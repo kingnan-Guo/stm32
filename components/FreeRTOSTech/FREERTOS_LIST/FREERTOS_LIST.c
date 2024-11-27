@@ -77,12 +77,71 @@ void vTASK3_LIST(void *pvParameters){
 
     vListInsert(&TEST_LIST, &TEST_LIST_ITEM1);
     printf(" TEST_LIST_ITEM1  \r\n");
-    printf("项目                             地址        \r\n");
-//    printf("TEST_LIST->pxIndex              %#x       \r\n", (int)&TEST_LIST.pxIndex);
-//    printf("TEST_LIST->xListEnd.pxNext      %#x       \r\n", (int)&TEST_LIST.xListEnd.pxNext);
-//    printf("TEST_LIST_ITEM1                 %#x       \r\n", (int)&TEST_LIST_ITEM1);
-//    printf("TEST_LIST_ITEM2                 %#x       \r\n", (int)&TEST_LIST_ITEM2);
-//    printf("TEST_LIST_ITEM3                 %#x       \r\n", (int)&TEST_LIST_ITEM3);
+    printf("项目                             地址       \r\n");
+    printf("TEST_LIST->xListEnd->pxNext     %#x       \r\n", (int)&TEST_LIST.xListEnd.pxNext);
+    printf("TEST_LIST_ITEM1->pxNext         %#x       \r\n", (int)&TEST_LIST_ITEM1.pxNext);
+    printf("TEST_LIST->xListEnd->pxPrevious %#x       \r\n", (int)&TEST_LIST.xListEnd.pxPrevious);
+    printf("TEST_LIST_ITEM1->pxPrevious     %#x       \r\n", (int)&TEST_LIST_ITEM1.pxPrevious);
+    printf("TEST_LIST_ITEM2->pxPrevious     %#x       \r\n", (int)&TEST_LIST_ITEM2.pxPrevious);
+    printf("TEST_LIST_ITEM3->pxPrevious     %#x       \r\n", (int)&TEST_LIST_ITEM3.pxPrevious);
+;
+
+
+
+
+    vListInsert(&TEST_LIST, &TEST_LIST_ITEM2);
+    printf(" TEST_LIST_ITEM3  \r\n");
+    printf("项目                             地址       \r\n");
+    printf("TEST_LIST->xListEnd->pxNext     %#x       \r\n", (int)&TEST_LIST.xListEnd.pxNext);
+    printf("TEST_LIST_ITEM1->pxNext         %#x       \r\n", (int)&TEST_LIST_ITEM1.pxNext);
+    printf("TEST_LIST_ITEM2->pxNext         %#x       \r\n", (int)&TEST_LIST_ITEM2.pxNext);
+
+    printf("TEST_LIST->xListEnd->pxPrevious %#x       \r\n", (int)&TEST_LIST.xListEnd.pxPrevious);
+    printf("TEST_LIST_ITEM1->pxPrevious     %#x       \r\n", (int)&TEST_LIST_ITEM1.pxPrevious);
+    printf("TEST_LIST_ITEM2->pxPrevious     %#x       \r\n", (int)&TEST_LIST_ITEM2.pxPrevious);
+
+
+
+    vListInsert(&TEST_LIST, &TEST_LIST_ITEM3);
+
+    printf(" TEST_LIST_ITEM3  \r\n");
+    printf("项目                             地址       \r\n");
+    printf("TEST_LIST->xListEnd->pxNext     %#x       \r\n", (int)&TEST_LIST.xListEnd.pxNext);
+    printf("TEST_LIST_ITEM1->pxNext         %#x       \r\n", (int)&TEST_LIST_ITEM1.pxNext);
+    printf("TEST_LIST_ITEM2->pxNext         %#x       \r\n", (int)&TEST_LIST_ITEM2.pxNext);
+    printf("TEST_LIST_ITEM3->pxNext         %#x       \r\n", (int)&TEST_LIST_ITEM3.pxNext);
+    printf("TEST_LIST->xListEnd->pxPrevious %#x       \r\n", (int)&TEST_LIST.xListEnd.pxPrevious);
+    printf("TEST_LIST_ITEM1->pxPrevious     %#x       \r\n", (int)&TEST_LIST_ITEM1.pxPrevious);
+    printf("TEST_LIST_ITEM2->pxPrevious     %#x       \r\n", (int)&TEST_LIST_ITEM2.pxPrevious);
+    printf("TEST_LIST_ITEM3->pxPrevious     %#x       \r\n", (int)&TEST_LIST_ITEM3.pxPrevious);
+
+
+    // 移除 2
+    uxListRemove(&TEST_LIST_ITEM2);
+
+    printf(" TEST_LIST_ITEM3  \r\n");
+    printf("项目                             地址       \r\n");
+    printf("TEST_LIST->xListEnd->pxNext     %#x       \r\n", (int)&TEST_LIST.xListEnd.pxNext);
+    printf("TEST_LIST_ITEM1->pxNext         %#x       \r\n", (int)&TEST_LIST_ITEM1.pxNext);
+    printf("TEST_LIST_ITEM3->pxNext         %#x       \r\n", (int)&TEST_LIST_ITEM3.pxNext);
+    printf("TEST_LIST->xListEnd->pxPrevious %#x       \r\n", (int)&TEST_LIST.xListEnd.pxPrevious);
+    printf("TEST_LIST_ITEM1->pxPrevious     %#x       \r\n", (int)&TEST_LIST_ITEM1.pxPrevious);
+    printf("TEST_LIST_ITEM3->pxPrevious     %#x       \r\n", (int)&TEST_LIST_ITEM3.pxPrevious);
+
+    // 末尾插入 ，末尾插入 不是从 最后 插入， 二十要 先找打 pxIndex 的 前一个，但是 pxIndex 是可以修改的
+    TEST_LIST.pxIndex = TEST_LIST.pxIndex -> pxNext; //修改 pxIndex 位置
+    vListInsertEnd(&TEST_LIST, &TEST_LIST_ITEM2);
+
+    printf("vListInsertEnd TEST_LIST_ITEM2  \r\n");
+    printf("项目                             地址       \r\n");
+    printf("TEST_LIST->xListEnd->pxNext     %#x       \r\n", (int)&TEST_LIST.xListEnd.pxNext);
+    printf("TEST_LIST_ITEM1->pxNext         %#x       \r\n", (int)&TEST_LIST_ITEM1.pxNext);
+    printf("TEST_LIST_ITEM2->pxNext         %#x       \r\n", (int)&TEST_LIST_ITEM2.pxNext);
+    printf("TEST_LIST_ITEM3->pxNext         %#x       \r\n", (int)&TEST_LIST_ITEM3.pxNext);
+    printf("TEST_LIST->xListEnd->pxPrevious %#x       \r\n", (int)&TEST_LIST.xListEnd.pxPrevious);
+    printf("TEST_LIST_ITEM1->pxPrevious     %#x       \r\n", (int)&TEST_LIST_ITEM1.pxPrevious);
+    printf("TEST_LIST_ITEM2->pxPrevious     %#x       \r\n", (int)&TEST_LIST_ITEM2.pxPrevious);
+    printf("TEST_LIST_ITEM3->pxPrevious     %#x       \r\n", (int)&TEST_LIST_ITEM3.pxPrevious);
 
 }
 
