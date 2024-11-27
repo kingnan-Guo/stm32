@@ -17,9 +17,9 @@
 //任务堆栈大小
 #define START_STK_SIZE 		                                 128
 
-#define vTASK1_FREERTOS_OTHER_API_FUNCTION__uxStackDepth      128
+#define vTASK1_FREERTOS_OTHER_API_FUNCTION__uxStackDepth      256
 #define vTASK1_FREERTOS_OTHER_API_FUNCTION_uxPriority         3
-#define vTASK2_FREERTOS_OTHER_API_FUNCTION__uxStackDepth      128
+#define vTASK2_FREERTOS_OTHER_API_FUNCTION__uxStackDepth      256
 #define vTASK2_FREERTOS_OTHER_API_FUNCTION_uxPriority         3
 #define vTASK3_FREERTOS_OTHER_API_FUNCTION__uxStackDepth      256
 #define vTASK3_FREERTOS_OTHER_API_FUNCTION_uxPriority         3
