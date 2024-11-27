@@ -40,7 +40,8 @@ void vTASK1_TEMP(void *pvParameters){
         if(num == 10){
             vTaskResume(TASK2_HANDLER_TEMP);// 重
         }
-        printf("printf task1=%d\r\n",  num);
+        // printf(" vTASK1_TEMP =%d\r\n",  num);
+        printf(" vTASK2_TEMP\r\n");
         OLED_ShowString(1, 1, "task1 = ");
         OLED_ShowNum(1, 8, num, 5);
         num++;
@@ -53,7 +54,8 @@ void vTASK1_TEMP(void *pvParameters){
 void vTASK2_TEMP(void *pvParameters){
     int16_t num = 0x00;
     while (1) {
-        printf("printf test2\r\n");
+        // printf(" vTASK2_TEMP =%d\r\n",  num);
+        printf(" vTASK2_TEMP\r\n");
         OLED_ShowString(3, 1, "task2 = ");
         OLED_ShowNum(3, 8 , num++, 5);
         vTaskDelay(1500); // Delay for 500 milliseconds

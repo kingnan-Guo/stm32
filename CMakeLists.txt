@@ -123,6 +123,7 @@ include_directories(
         components/FreeRTOSTech/FreeRTOS_NVIC
         components/FreeRTOSTech/FREERTOS_LIST
         components/FreeRTOSTech/FREERTOS_TEMP
+        components/FreeRTOSTech/FREERTOS_OTHER_API
 
 
         restarComponets/DATA_REGISTER_EXPLORE # 探索 寄存器
