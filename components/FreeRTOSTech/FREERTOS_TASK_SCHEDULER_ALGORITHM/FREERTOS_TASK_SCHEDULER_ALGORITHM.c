@@ -15,7 +15,7 @@
 //任务优先级
 #define START_TASK_TASK_SCHEDULER_ALGORITHM_PRIO		            1
 //任务堆栈大小
-#define START_STK_SIZE 		                    128
+#define START_STK_SIZE 		                                        128
 
 #define vTASK1_TASK_SCHEDULER_ALGORITHM_FUNCTION_uxStackDepth      128
 #define vTASK1_TASK_SCHEDULER_ALGORITHM_FUNCTION_uxPriority         3

@@ -19,7 +19,7 @@
 
 #define vTASK1_TEMP_FUNCTION_uxStackDepth      128
 #define vTASK1_TEMP_FUNCTION_uxPriority         3
-#define vTASK2_TEMP_FUNCTION__uxStackDepth      128
+#define vTASK2_TEMP_FUNCTION_uxStackDepth      128
 #define vTASK2_TEMP_FUNCTION_uxPriority         3
 
 
@@ -89,7 +89,7 @@ void START_TASK_TEMP(void *pvParameters)
     xTaskCreate(
             (TaskFunction_t)                           vTASK2_TEMP, // 任务函数
             (char *  )                                    "vTask2",// 函数 名称， 任务名称长度不要超过  configMAX_TASK_NAME_LEN。
-            (const configSTACK_DEPTH_TYPE)            vTASK2_TEMP_FUNCTION__uxStackDepth,// 任务堆栈大小 ，注意 ： 实际申请到的堆栈是 uxStackDepth 的 4 倍（ 一个 StackType_t 是 32 位  4 个字节）， 其中空闲任务 的堆栈大小为    configMINIMAL_STACK_SIZE。
+            (const configSTACK_DEPTH_TYPE)            vTASK2_TEMP_FUNCTION_uxStackDepth,// 任务堆栈大小 ，注意 ： 实际申请到的堆栈是 uxStackDepth 的 4 倍（ 一个 StackType_t 是 32 位  4 个字节）， 其中空闲任务 的堆栈大小为    configMINIMAL_STACK_SIZE。
             // (uint32_t)                                         vTask2F_uxStackDepth,
             (void *  )                                "free2 0",// 传递给任务函数的参数
             (UBaseType_t)                                vTASK2_TEMP_FUNCTION_uxPriority,// 任务优先级 范围 0～ configMAX_PRIORITIES-1
