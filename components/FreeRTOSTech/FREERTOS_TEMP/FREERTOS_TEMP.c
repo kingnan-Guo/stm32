@@ -52,14 +52,17 @@ void vTASK1_TEMP(void *pvParameters){
 
 
 void vTASK2_TEMP(void *pvParameters){
+    char *pcTaskName;
     int16_t num = 0x00;
     const TickType_t xDelay5ms = pdMS_TO_TICKS( 5UL );
+    pcTaskName = ( char * ) pvParameters;
     while (1) {
         // printf(" vTASK2_TEMP =%d\r\n",  num);
         printf(" vTASK2_TEMP\r\n");
         OLED_ShowString(2, 1, "task2 = ");
         OLED_ShowNum(2, 8 , num, 5);
         num++;
+        //printf( pcTaskName ); //打印字符串
         vTaskDelay(xDelay5ms); // Delay for 500 milliseconds
     }
 }
