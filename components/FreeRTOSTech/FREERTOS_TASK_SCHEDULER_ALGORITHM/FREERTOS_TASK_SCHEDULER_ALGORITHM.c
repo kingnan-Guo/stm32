@@ -33,13 +33,6 @@ TaskHandle_t    DELETE_HANDLER_TASK_SCHEDULER_ALGORITHM;
 void vTASK1_TASK_SCHEDULER_ALGORITHM(void *pvParameters){
     int16_t num = 0x00;
     while (1) {
-        if(num == 5){
-            printf("printf delete task2\r\n");
-            vTaskSuspend(TASK2_HANDLER_TASK_SCHEDULER_ALGORITHM);// 挂起
-        }
-        if(num == 10){
-            vTaskResume(TASK2_HANDLER_TASK_SCHEDULER_ALGORITHM);// 重
-        }
         // printf(" vTASK1_TASK_SCHEDULER_ALGORITHM =%d\r\n",  num);
         printf(" vTASK2_TASK_SCHEDULER_ALGORITHM\r\n");
         OLED_ShowString(1, 1, "task1 = ");
