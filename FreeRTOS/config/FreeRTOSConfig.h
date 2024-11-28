@@ -159,7 +159,7 @@ to exclude the API function. */
 #define INCLUDE_vTaskDelete                 1
 #define INCLUDE_vTaskCleanUpResources       0
 #define INCLUDE_vTaskSuspend                1
-#define INCLUDE_vTaskDelayUntil             1
+#define INCLUDE_vTaskDelayUntil             1       // vTaskDelayUntil() : API函数vTaskDelayUntil()可用于固定频率的延时，它用来延时一个绝对时间
 #define INCLUDE_vTaskDelay                  1
 #define INCLUDE_xTaskGetSchedulerState      1       // 获取 任务调度器的 运行 状态 xTaskGetSchedulerState
 #define INCLUDE_xTimerPendFunctionCall      1
