@@ -17,7 +17,7 @@
 //任务堆栈大小
 #define START_STK_SIZE 		                    128
 
-#define vTASK1_TEMP_FUNCTION__uxStackDepth      128
+#define vTASK1_TEMP_FUNCTION_uxStackDepth      128
 #define vTASK1_TEMP_FUNCTION_uxPriority         3
 #define vTASK2_TEMP_FUNCTION__uxStackDepth      128
 #define vTASK2_TEMP_FUNCTION_uxPriority         3
@@ -80,7 +80,7 @@ void START_TASK_TEMP(void *pvParameters)
     xTaskCreate(
             vTASK1_TEMP,
             "Task1",
-            vTASK1_TEMP_FUNCTION__uxStackDepth,
+            vTASK1_TEMP_FUNCTION_uxStackDepth,
             NULL,
             vTASK1_TEMP_FUNCTION_uxPriority,
             &TASK1_HANDLER_TEMP
