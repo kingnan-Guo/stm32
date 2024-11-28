@@ -28,12 +28,21 @@
 #define vTASK2_QUEUE_FUNCTION_uxStackDepth      128
 #define vTASK2_QUEUE_FUNCTION_uxPriority         3
 
+#define vTASK3_QUEUE_FUNCTION_uxStackDepth      256
+#define vTASK3_QUEUE_FUNCTION_uxPriority         4
+
+#define vTASK4_QUEUE_FUNCTION_uxStackDepth      256
+#define vTASK4_QUEUE_FUNCTION_uxPriority         4
 
 //任务句柄
 TaskHandle_t    START_TASK_HANDLER_QUEUE;
 TaskHandle_t    TASK1_HANDLER_QUEUE;
 TaskHandle_t    TASK2_HANDLER_QUEUE; // 存放任务句柄
+TaskHandle_t    TASK3_HANDLER_QUEUE; // 存放任务句柄
+TaskHandle_t    TASK4_HANDLER_QUEUE; // 存放任务句柄
 TaskHandle_t    DELETE_HANDLER_QUEUE;
+
+static QueueHandle_t xQueue_Handle;// 创建 队列 的 句柄
 
 
 void vTASK1_QUEUE(void *pvParameters){
@@ -73,13 +82,37 @@ void vTASK2_QUEUE(void *pvParameters){
     }
 }
 
+static int sum = 0;
+static volatile int flagCalcEnd = 0;
+void vTASK3_QUEUE(void *pvParameters){
 
-void vTASK3_QUEUE(void *pvParameters)
-    // 创建队列
-    xQueueCreate();
-    while (1) {
-
+    volatile int i = 0;
+    flagCalcEnd = 0;
+    while (1){
+        for (i = 0; i < 1000; ++i) {
+            sum++;
+        }
+        xQueueSend(xQueue_Handle, &sum, portMAX_DELAY);// &sum 要把地址 发给 队列 ; portMAX_DELAY 一直等待
+        sum = 0;
     }
+
+}
+
+
+
+void vTASK4_QUEUE(void *pvParameters){
+
+    volatile int value;
+
+    while (1){
+        //添加标记
+        flagCalcEnd = 0;
+        // 读取队列 把值放到 value
+        xQueueReceive(xQueue_Handle, &value, portMAX_DELAY);
+        flagCalcEnd = 1;
+        printf("%d", sum);
+    }
+
 }
 
 void vDELETE_QUEUE(void *pvParameters){
@@ -113,6 +146,26 @@ void START_TASK_QUEUE(void *pvParameters)
             (TaskHandle_t *)                         &TASK2_HANDLER_QUEUE // 任务句柄，任务创建成功以后会返回次惹怒我的任务句柄， 这个 句柄其实就是任务的 任务堆栈，此参数 就用来保存这个任务句柄；其他API函数可能会使用到这个 句柄
     );
 
+    xTaskCreate(
+            (TaskFunction_t)                           vTASK3_QUEUE, // 任务函数
+            (char *  )                                    "vTask3",// 函数 名称， 任务名称长度不要超过  configMAX_TASK_NAME_LEN。
+            (const configSTACK_DEPTH_TYPE)            vTASK3_QUEUE_FUNCTION_uxStackDepth,// 任务堆栈大小 ，注意 ： 实际申请到的堆栈是 uxStackDepth 的 4 倍（ 一个 StackType_t 是 32 位  4 个字节）， 其中空闲任务 的堆栈大小为    configMINIMAL_STACK_SIZE。
+            (void *  )                                "free2 0",// 传递给任务函数的参数
+            (UBaseType_t)                                vTASK3_QUEUE_FUNCTION_uxPriority,// 任务优先级 范围 0～ configMAX_PRIORITIES-1
+            (TaskHandle_t *)                         &TASK3_HANDLER_QUEUE // 任务句柄，任务创建成功以后会返回次惹怒我的任务句柄， 这个 句柄其实就是任务的 任务堆栈，此参数 就用来保存这个任务句柄；其他API函数可能会使用到这个 句柄
+    );
+
+    xTaskCreate(
+            (TaskFunction_t)                           vTASK4_QUEUE, // 任务函数
+            (char *  )                                    "vTask4",// 函数 名称， 任务名称长度不要超过  configMAX_TASK_NAME_LEN。
+            (const configSTACK_DEPTH_TYPE)            vTASK4_QUEUE_FUNCTION_uxStackDepth,// 任务堆栈大小 ，注意 ： 实际申请到的堆栈是 uxStackDepth 的 4 倍（ 一个 StackType_t 是 32 位  4 个字节）， 其中空闲任务 的堆栈大小为    configMINIMAL_STACK_SIZE。
+            (void *  )                                "free42 0",// 传递给任务函数的参数
+            (UBaseType_t)                                vTASK4_QUEUE_FUNCTION_uxPriority,// 任务优先级 范围 0～ configMAX_PRIORITIES-1
+            (TaskHandle_t *)                         &TASK4_HANDLER_QUEUE // 任务句柄，任务创建成功以后会返回次惹怒我的任务句柄， 这个 句柄其实就是任务的 任务堆栈，此参数 就用来保存这个任务句柄；其他API函数可能会使用到这个 句柄
+    );
+
+
+
     vTaskDelete(START_TASK_HANDLER_QUEUE); //删除开始任务;  为什么执行完成要删除？？？
     //taskEXIT_CRITICAL();            //退出临界区
 }
@@ -122,6 +175,13 @@ void START_TASK_QUEUE(void *pvParameters)
 void FREERTOS_QUEUE_MAIN(){
     Serial_Init();
     RetargetInit(USART1);
+
+    // 创建 队列
+    xQueue_Handle = xQueueCreate(2, sizeof(int));
+    if(xQueue_Handle == NULL){
+        printf("can not create Queue");
+    }
+
     xTaskCreate(
             START_TASK_QUEUE,
             "START_TASK_QUEUE",
@@ -130,6 +190,7 @@ void FREERTOS_QUEUE_MAIN(){
             START_TASK_QUEUE_PRIO,
             &START_TASK_HANDLER_QUEUE
     );
+
 
     vTaskStartScheduler();// 开启任务调度器;
 }
