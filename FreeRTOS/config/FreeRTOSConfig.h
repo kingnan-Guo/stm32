@@ -98,7 +98,7 @@ extern uint32_t SystemCoreClock;// 只是声明一下系统时钟 ，后面要�
 #define configUSE_TIME_SLICING					 1						    // 1 使能时间片调度(默认式使能的) （同优先级的 任务 使用这个 时间片 调度）; 时间片轮转; 同优先级的 任务 交替执行了设置 成0 的化，就会是先到先得; 但是 更高优先级可以 抢占优先级可以将 抢占执行；
 #define configUSE_TICKLESS_IDLE					 0                          // 1 启用 低功耗 tickless 模式  ； 自带的 tickless 模式
 #define configUSE_QUEUE_SETS					 1                          // 1 为1时启用队列集
-#define configIDLE_SHOULD_YIELD					 1                          // 1 为1时空闲任务放弃CPU使用权给其他同优先级的用户任务（其他任务）； FreeRTOS 一个优先级下由多个任务； 空闲任务也是一样，所以 FreeRTOS 最少也会有一个任务，叫做 空闲任务； 在CPU没有其他任务要执行的时候，就去执行这个空闲任务； 所以这里可以配置 把应用任务 的 优先级 排到空闲 任务之前（空闲的时候 给CPU 找点事 做，没有任何特殊的需求）； 空闲任务 应该礼让别人 ; YIELD 礼让
+#define configIDLE_SHOULD_YIELD					 1                          // 1 为1时空闲任务放弃CPU使用权给其他同优先级的用户任务（其他任务）； FreeRTOS 一个优先级下由多个任务； 空闲任务也是一样，所以 FreeRTOS 最少也会有一个任务，叫做 空闲任务； 在CPU没有其他任务要执行的时候，就去执行这个空闲任务； 所以这里可以配置 把应用任务 的 优先级 排到空闲 任务之前（空闲的时候 给CPU 找点事 做，没有任何特殊的需求）； 空闲任务 应该礼让别人 ; YIELD 礼让； 在 while 里加 vTaskDelay 会进行调度其他任务
 #define configUSE_TASK_NOTIFICATIONS             1                          // 1 为1时开启任务通知功能，默认开启
 #define configCHECK_FOR_STACK_OVERFLOW			 0                          // 0 大于0时启用堆栈溢出检测功能，如果使用此功能用户必须提供一个栈移出钩子函数每如果使用的话，辞职可以位 1或者 2 ，因为由两种栈溢出检测方法（一般调试阶段会使用）
 #define configUSE_MALLOC_FAILED_HOOK			 0                          // 1 使用内存申请失败钩子函数； 具体函数需要用户 自己 定义，当前未启用
