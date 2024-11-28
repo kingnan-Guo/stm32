@@ -34,7 +34,7 @@ void vTASK1_TEMP(void *pvParameters){
     int16_t num = 0x00;
     while (1) {
         if(num == 5){
-            printf("printf delete task2\r\n");
+            printf(" delete task2\r\n");
             vTaskSuspend(TASK2_HANDLER_TEMP);// 挂起
         }
         if(num == 10){
