@@ -129,6 +129,8 @@ void vTASK4_QUEUE(void *pvParameters){
     }
 }
 
+
+
 // Lock 独占 互斥的 串口 锁  函数
 int XQUEUE_UART_LOCK_INIT(){
     int val = 1;
@@ -273,9 +275,6 @@ void FREERTOS_QUEUE_MAIN(){
     }
 
 //    int val = XQUEUE_UART_LOCK_INIT();// 初始化  互斥 相关队列
-
-
-
 
     xTaskCreate(
             START_TASK_QUEUE,
