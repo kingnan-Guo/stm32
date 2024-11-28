@@ -101,7 +101,7 @@ void START_TASK_TEMP(void *pvParameters)
 
 
 
-void FREERTOS_TEMP_INIT_MAIN(){
+void FREERTOS_TEMP_MAIN(){
     Serial_Init();
     RetargetInit(USART1);
     xTaskCreate(
