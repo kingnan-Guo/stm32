@@ -56,8 +56,9 @@ void vTASK2_TEMP(void *pvParameters){
     while (1) {
         // printf(" vTASK2_TEMP =%d\r\n",  num);
         printf(" vTASK2_TEMP\r\n");
-        OLED_ShowString(3, 1, "task2 = ");
-        OLED_ShowNum(3, 8 , num++, 5);
+        OLED_ShowString(2, 1, "task2 = ");
+        OLED_ShowNum(2, 8 , num, 5);
+        num++;
         vTaskDelay(1500); // Delay for 500 milliseconds
     }
 }
