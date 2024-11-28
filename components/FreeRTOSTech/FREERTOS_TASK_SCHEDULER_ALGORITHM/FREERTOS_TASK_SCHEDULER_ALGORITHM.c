@@ -51,7 +51,8 @@ void vTASK2_TASK_SCHEDULER_ALGORITHM(void *pvParameters){
         printf(" vTASK2_TASK_SCHEDULER_ALGORITHM\r\n");
         OLED_ShowString(3, 1, "task2 = ");
         OLED_ShowNum(3, 8 , num++, 5);
-        vTaskDelay(xDelay5ms); // Delay for 500 milliseconds
+        //vTaskDelay(xDelay5ms); // Delay for 500 milliseconds
+        vTaskDelay(500);
     }
 }
 
@@ -65,7 +66,7 @@ void vDELETE_TASK_SCHEDULER_ALGORITHM(void *pvParameters){
 
 // 空闲 钩子函数； task1 task2 执行 空闲后会进入到 空闲钩子函数
 void vApplicationIdleHook(){
-    printf("vApplicationIdleHook");
+//    printf("vApplicationIdleHook");
 }
 
 // 同步  互斥 Synchronization Mutual Exclusion； 等我用完 ，你再用 ，可以添加 用完 提醒
