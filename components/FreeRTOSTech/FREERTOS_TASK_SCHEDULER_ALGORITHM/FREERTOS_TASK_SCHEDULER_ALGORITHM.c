@@ -94,7 +94,7 @@ void START_TASK_TASK_SCHEDULER_ALGORITHM(void *pvParameters)
 
 
 
-void FREERTOS_TASK_SCHEDULER_ALGORITHM_INIT_MAIN(){
+void FREERTOS_TASK_SCHEDULER_ALGORITHM_MAIN(){
     Serial_Init();
     RetargetInit(USART1);
     xTaskCreate(
