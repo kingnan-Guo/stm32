@@ -46,12 +46,13 @@ void vTASK1_TASK_SCHEDULER_ALGORITHM(void *pvParameters){
 
 void vTASK2_TASK_SCHEDULER_ALGORITHM(void *pvParameters){
     int16_t num = 0x00;
+    const TickType_t xDelay5ms = pdMS_TO_TICKS( 5UL );
     while (1) {
         // printf(" vTASK2_TASK_SCHEDULER_ALGORITHM =%d\r\n",  num);
         printf(" vTASK2_TASK_SCHEDULER_ALGORITHM\r\n");
         OLED_ShowString(3, 1, "task2 = ");
         OLED_ShowNum(3, 8 , num++, 5);
-        vTaskDelay(1500); // Delay for 500 milliseconds
+        vTaskDelay(xDelay5ms); // Delay for 500 milliseconds
     }
 }
 

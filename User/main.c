@@ -9,7 +9,7 @@
 
 int main(void) {
     OLED_Init();
-    FREERTOS_TEMP_INIT_MAIN();
+    FREERTOS_TEMP_MAIN();
     while(1) {
 
 
