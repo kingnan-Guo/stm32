@@ -8,7 +8,7 @@
 #include "task.h"
 #include "Serial.h"
 #include "retarget.h"
-#include "FREERTOS_TASK_SCHEDULER_ALGORITHM.h.h"
+#include "FREERTOS_TASK_SCHEDULER_ALGORITHM.h"
 
 
 
