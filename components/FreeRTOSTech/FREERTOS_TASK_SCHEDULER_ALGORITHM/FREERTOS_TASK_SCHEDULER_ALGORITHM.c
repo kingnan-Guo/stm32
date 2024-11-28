@@ -24,7 +24,8 @@
 //任务句柄
 TaskHandle_t    START_TASK_HANDLER_TASK_SCHEDULER_ALGORITHM;
 TaskHandle_t    TASK1_HANDLER_TASK_SCHEDULER_ALGORITHM;
-TaskHandle_t    TASK2_HANDLER_TASK_SCHEDULER_ALGORITHM; // 存放任务句柄
+TaskHandle_t    TASK2_HANDLER_TASK_SCHEDULER_ALGORITHM;
+TaskHandle_t    TASK_A_HANDLER_TASK_SCHEDULER_ALGORITHM;
 TaskHandle_t    DELETE_HANDLER_TASK_SCHEDULER_ALGORITHM;
 
 
@@ -62,6 +63,24 @@ void vDELETE_TASK_SCHEDULER_ALGORITHM(void *pvParameters){
 }
 
 
+// 空闲 钩子函数； task1 task2 执行 空闲后会进入到 空闲钩子函数
+void vApplicationIdleHook(){
+    printf("vApplicationIdleHook");
+}
+
+// 同步  互斥 Synchronization Mutual Exclusion； 等我用完 ，你再用 ，可以添加 用完 提醒
+// 执行过程 是 A 任务执行， B任务要执行但是发现 A任务在执行，所以 进入  Block 状态; A 执行完毕 发出提醒 通知 B; B 开始 执行
+// 任务 A 执行一个 计算量比较大的 函数
+
+// 任务 A
+void vTASK_A_TASK_SCHEDULER_ALGORITHM(void *pvParameters){
+    volatile int  j = 0x00;// volatile 在执行的时候 让 系统 不会优化 这里
+    for ( j = 0; j < 10000; ++j) {
+
+    }
+    vTaskDelete(TASK_A_HANDLER_TASK_SCHEDULER_ALGORITHM);
+}
+
 
 
 
@@ -86,7 +105,14 @@ void START_TASK_TASK_SCHEDULER_ALGORITHM(void *pvParameters)
             (UBaseType_t)                                vTASK2_TASK_SCHEDULER_ALGORITHM_FUNCTION_uxPriority,// 任务优先级 范围 0～ configMAX_PRIORITIES-1
             (TaskHandle_t *)                         &TASK2_HANDLER_TASK_SCHEDULER_ALGORITHM // 任务句柄，任务创建成功以后会返回次惹怒我的任务句柄， 这个 句柄其实就是任务的 任务堆栈，此参数 就用来保存这个任务句柄；其他API函数可能会使用到这个 句柄
     );
-
+    xTaskCreate(
+            vTASK_A_TASK_SCHEDULER_ALGORITHM,
+            "Task_A",
+            128,
+            NULL,
+            3,
+            &TASK_A_HANDLER_TASK_SCHEDULER_ALGORITHM
+    );
     vTaskDelete(START_TASK_HANDLER_TASK_SCHEDULER_ALGORITHM); //删除开始任务;  为什么执行完成要删除？？？
     //taskEXIT_CRITICAL();            //退出临界区
 }
