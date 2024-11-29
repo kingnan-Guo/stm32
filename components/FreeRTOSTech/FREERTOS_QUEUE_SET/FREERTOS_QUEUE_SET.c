@@ -44,7 +44,8 @@ void vTASK1_QUEUE_SET(void *pvParameters){
     while (1) {
         i++;
         xQueueSend(xQUEUE1_HANDLE, &i, portMAX_DELAY);
-//        printf("Task 1 \r\n");
+        // printf("Task 1 \r\n");
+        printf("Task 1 %d\r\n", i);
         vTaskDelay(500);
     }
 }
@@ -56,6 +57,7 @@ void vTASK2_QUEUE_SET(void *pvParameters){
         i--;
         xQueueSend(xQUEUE2_HANDLE, &i, portMAX_DELAY);
 //        printf("Task 2 \r\n");
+        printf("Task 2 %d\r\n", i);
         vTaskDelay(500);
 
     }
@@ -70,7 +72,6 @@ void vTASK3_QUEUE_SET(void *pvParameters){
         if (handle == xQUEUE1_HANDLE || handle == xQUEUE2_HANDLE) {
             xQueueReceive(handle, &i, portMAX_DELAY);
             printf("Task 3: %d\r\n", i);
-
         }
     }
 }
@@ -86,16 +87,16 @@ void START_TASK_QUEUE_SET(void *pvParameters)
 {
 
     // 创建两个队列
-    xQUEUE1_HANDLE = xQueueCreate(1, sizeof(int));
+    xQUEUE1_HANDLE = xQueueCreate(2, sizeof(int));
     if(xQUEUE1_HANDLE == NULL){
         printf("can not create Queue 1");
     }
-    xQUEUE2_HANDLE = xQueueCreate(1, sizeof(int));
+    xQUEUE2_HANDLE = xQueueCreate(2, sizeof(int));
     if(xQUEUE2_HANDLE == NULL){
         printf("can not create Queue 2");
     }
     // 传参 是 队列容量， 4 是因为  每个队列里有两个 item
-    xQUEUE_SET_HANDLE = xQueueCreateSet(2);
+    xQUEUE_SET_HANDLE = xQueueCreateSet(20);
     if(xQUEUE_SET_HANDLE == NULL){
         printf("can not create Queue Set");
     }
