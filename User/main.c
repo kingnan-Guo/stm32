@@ -3,15 +3,14 @@
 #include "delay.h"
 #include <stdio.h>
 #include "timer_r.h"
-#include "FREERTOS_QUEUE.h"
-
-
+#include "FREERTOS_QUEUE_SET.h"
+//#include "FREERTOS_TEMP.h"
 
 int main(void) {
     OLED_Init();
-    FREERTOS_QUEUE_MAIN();
+//    OLED_ShowString(1,1,"abc");
+    FREERTOS_QUEUE_SET_MAIN();
+//FREERTOS_TEMP_MAIN();
     while(1) {
-
-
     }
 }

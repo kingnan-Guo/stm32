@@ -33,15 +33,15 @@ TaskHandle_t    DELETE_HANDLER_TEMP;
 void vTASK1_TEMP(void *pvParameters){
     int16_t num = 0x00;
     while (1) {
-        if(num == 5){
-            printf(" delete task2\r\n");
-            vTaskSuspend(TASK2_HANDLER_TEMP);// 挂起
-        }
-        if(num == 10){
-            vTaskResume(TASK2_HANDLER_TEMP);// 重
-        }
+//        if(num == 5){
+//            printf(" delete task2\r\n");
+//            vTaskSuspend(TASK2_HANDLER_TEMP);// 挂起
+//        }
+//        if(num == 10){
+//            vTaskResume(TASK2_HANDLER_TEMP);// 重
+//        }
         // printf(" vTASK1_TEMP =%d\r\n",  num);
-        printf(" vTASK2_TEMP\r\n");
+        printf(" vTASK1_TEMP\r\n");
         OLED_ShowString(1, 1, "task1 = ");
         OLED_ShowNum(1, 8, num, 5);
         num++;
@@ -63,7 +63,8 @@ void vTASK2_TEMP(void *pvParameters){
         OLED_ShowNum(2, 8 , num, 5);
         num++;
         //printf( pcTaskName ); //打印字符串
-        vTaskDelay(xDelay5ms); // Delay for 500 milliseconds
+//        vTaskDelay(xDelay5ms); // Delay for 500 milliseconds
+        vTaskDelay(1000);
     }
 }
 
@@ -73,8 +74,11 @@ void vDELETE_TEMP(void *pvParameters){
     while (1) {
     }
 }
-
-
+//
+//void vApplicationMallocFailedHook(void) {
+//    printf("内存分配失败！\r\n");
+//    while (1); // 卡住，方便调试
+//}
 
 
 
