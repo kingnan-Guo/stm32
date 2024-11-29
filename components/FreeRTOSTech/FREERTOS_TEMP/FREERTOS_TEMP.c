@@ -17,9 +17,9 @@
 //任务堆栈大小
 #define START_STK_SIZE 		                    128
 
-#define vTASK1_TEMP_FUNCTION_uxStackDepth      128
+#define vTASK1_TEMP_FUNCTION_uxStackDepth       512
 #define vTASK1_TEMP_FUNCTION_uxPriority         3
-#define vTASK2_TEMP_FUNCTION_uxStackDepth      128
+#define vTASK2_TEMP_FUNCTION_uxStackDepth       512
 #define vTASK2_TEMP_FUNCTION_uxPriority         3
 
 
@@ -33,15 +33,15 @@ TaskHandle_t    DELETE_HANDLER_TEMP;
 void vTASK1_TEMP(void *pvParameters){
     int16_t num = 0x00;
     while (1) {
-//        if(num == 5){
-//            printf(" delete task2\r\n");
-//            vTaskSuspend(TASK2_HANDLER_TEMP);// 挂起
-//        }
-//        if(num == 10){
-//            vTaskResume(TASK2_HANDLER_TEMP);// 重
-//        }
-        // printf(" vTASK1_TEMP =%d\r\n",  num);
-        printf(" vTASK1_TEMP\r\n");
+        if(num == 5){
+            printf(" delete task2\r\n");
+            vTaskSuspend(TASK2_HANDLER_TEMP);// 挂起
+        }
+        if(num == 10){
+            vTaskResume(TASK2_HANDLER_TEMP);// 重
+        }
+         printf(" vTASK1_TEMP =%d\r\n",  num);
+        //printf(" vTASK1_TEMP\r\n");
         OLED_ShowString(1, 1, "task1 = ");
         OLED_ShowNum(1, 8, num, 5);
         num++;
@@ -57,8 +57,8 @@ void vTASK2_TEMP(void *pvParameters){
     const TickType_t xDelay5ms = pdMS_TO_TICKS( 5UL );
     pcTaskName = ( char * ) pvParameters;
     while (1) {
-        // printf(" vTASK2_TEMP =%d\r\n",  num);
-        printf(" vTASK2_TEMP\r\n");
+         printf(" vTASK2_TEMP =%d\r\n",  num);
+        //printf(" vTASK2_TEMP\r\n");
         OLED_ShowString(2, 1, "task2 = ");
         OLED_ShowNum(2, 8 , num, 5);
         num++;
