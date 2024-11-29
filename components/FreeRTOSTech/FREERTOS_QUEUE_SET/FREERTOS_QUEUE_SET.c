@@ -1,12 +1,16 @@
 //
 // Created by 90175 on 2024/11/29.
 //
+
+// 队列集
+
 #include "stm32f10x.h"
 #include "OLED.h"
 #include "FreeRTOS.h"
 #include "task.h"
 #include "Serial.h"
 #include "retarget.h"
+#include "queue.h"
 #include "FREERTOS_QUEUE_SET.h"
 
 #define START_TASK_QUEUE_SET_PRIO		            1 //任务优先级
@@ -17,19 +21,52 @@
 #define vTASK2_QUEUE_SET_FUNCTION_uxStackDepth      128
 #define vTASK2_QUEUE_SET_FUNCTION_uxPriority        3
 
+#define vTASK3_QUEUE_SET_FUNCTION_uxStackDepth      128
+#define vTASK3_QUEUE_SET_FUNCTION_uxPriority        3
+
 //任务句柄
 TaskHandle_t    START_TASK_HANDLER_QUEUE_SET;
 TaskHandle_t    TASK1_HANDLER_QUEUE_SET;
-TaskHandle_t    TASK2_HANDLER_QUEUE_SET; // 存放任务句柄
+TaskHandle_t    TASK2_HANDLER_QUEUE_SET;
+TaskHandle_t    TASK3_HANDLER_QUEUE_SET;
 TaskHandle_t    DELETE_HANDLER_QUEUE_SET;
 
+// 创建 队列 的 句柄
+static QueueHandle_t xQUEUE1_HANDLE;
+static QueueHandle_t xQUEUE2_HANDLE;
+
+// 创建队列集 句柄
+static QueueSetHandle_t xQUEUE_SET_HANDLE;
+
+// 将数据存放到 队列 1
 void vTASK1_QUEUE_SET(void *pvParameters){
+    volatile int i = 0;
     while (1) {
+        xQueueSend(xQUEUE1_HANDLE, &i, portMAX_DELAY);
+        i++;
+        vTaskDelay(10);
+    }
+}
+// 将数据存放到 队列 2
+void vTASK2_QUEUE_SET(void *pvParameters){
+    volatile int i = 0;
+    while (1) {
+        xQueueSend(xQUEUE1_HANDLE, &i, portMAX_DELAY);
+        i--;
+        vTaskDelay(10);
     }
 }
 
-void vTASK2_QUEUE_SET(void *pvParameters){
+// 从队列集 中 读取数据
+void vTASK3_QUEUE_SET(void *pvParameters){
+    QueueSetMemberHandle_t handle;
+    int i;
     while (1) {
+        handle = xQueueSelectFromSet(xQUEUE_SET_HANDLE, portMAX_DELAY);
+
+        xQueueReceive(handle, &i, 0);
+
+        printf("vTASK3_QUEUE_SET data %d\r\n", i);
     }
 }
 
@@ -41,6 +78,29 @@ void vDELETE_QUEUE_SET(void *pvParameters){
 //开始任务任务函数
 void START_TASK_QUEUE_SET(void *pvParameters)
 {
+    // 传参 是 队列容量， 4 是因为  每个队列里有两个 item
+    xQUEUE_SET_HANDLE = xQueueCreateSet(4);
+    if(xQUEUE_SET_HANDLE == NULL){
+        printf("can not create Queue Set");
+    }
+
+    // 创建两个队列
+    xQUEUE1_HANDLE = xQueueCreate(2, sizeof(int));
+    if(xQUEUE1_HANDLE == NULL){
+        printf("can not create Queue 1");
+    }
+    xQUEUE2_HANDLE = xQueueCreate(2, sizeof(int));
+    if(xQUEUE2_HANDLE == NULL){
+        printf("can not create Queue 2");
+    }
+
+    // 把两个 queue 他添加到 queue set
+    xQueueAddToSet(xQUEUE1_HANDLE, xQUEUE_SET_HANDLE);
+    xQueueAddToSet(xQUEUE2_HANDLE, xQUEUE_SET_HANDLE);
+
+    // 创建 3 个任务
+
+
     //taskENTER_CRITICAL();           //进入临界区
     xTaskCreate(
             vTASK1_QUEUE_SET,
@@ -58,6 +118,14 @@ void START_TASK_QUEUE_SET(void *pvParameters)
             (void *  )                                "free2 0",// 传递给任务函数的参数
             (UBaseType_t)                                vTASK2_QUEUE_SET_FUNCTION_uxPriority,// 任务优先级 范围 0～ configMAX_PRIORITIES-1
             (TaskHandle_t *)                         &TASK2_HANDLER_QUEUE_SET // 任务句柄，任务创建成功以后会返回次惹怒我的任务句柄， 这个 句柄其实就是任务的 任务堆栈，此参数 就用来保存这个任务句柄；其他API函数可能会使用到这个 句柄
+    );
+    xTaskCreate(
+            vTASK3_QUEUE_SET,
+            "Task3",
+            vTASK3_QUEUE_SET_FUNCTION_uxStackDepth,
+            NULL,
+            vTASK3_QUEUE_SET_FUNCTION_uxPriority,
+            &TASK3_HANDLER_QUEUE_SET
     );
     vTaskDelete(START_TASK_HANDLER_QUEUE_SET); //删除开始任务;  为什么执行完成要删除？？？
     //taskEXIT_CRITICAL();            //退出临界区
