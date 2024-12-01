@@ -127,6 +127,7 @@ include_directories(
         components/FreeRTOSTech/FREERTOS_TASK_SCHEDULER_ALGORITHM
         components/FreeRTOSTech/FREERTOS_QUEUE
         components/FreeRTOSTech/FREERTOS_QUEUE_SET
+        components/FreeRTOSTech/FREERTOS_SEMAPHORE
 
 
         restarComponets/DATA_REGISTER_EXPLORE # 探索 寄存器
