@@ -94,7 +94,7 @@ void vTASK3_MUTEX_PRIORITY_INVERSION(void *pvParameters){
         // 获取 信号量
         xSemaphoreTake(xSEMAPHORE_HANDLE_MUTEX_PRIORITY_INVERSION, portMAX_DELAY);
         // 处理任务
-//        vTaskDelay(3000);
+        // vTaskDelay(3000);
         printf("vTASK3 DONE");
         // 放开锁
         //xSemaphoreGive(xSEMAPHORE_HANDLE_MUTEX_PRIORITY_INVERSION);
@@ -136,9 +136,9 @@ void START_TASK_MUTEX_PRIORITY_INVERSION(void *pvParameters)
         // 4、task3  继续执行，这时 经过 printf 后 遇到了 xSemaphoreTake ，但是 这个值 当前 被 task1 占用，所以 task3 进入到 阻塞状态
         // 5、由于 task1 并没有执行完成，所以 继续执行 for 循环， 这时 task2 的 vtaskDelay(30) 30ms 到了， 但是这次并没有 被 task2 的抢占 , 即便 task2 的优先级更高
         // 6、这时  task1 继承了 task3 的优先级 变成了 3， 开始进行 执行 task1， 等到 for 循环 1000 次 以后， 释放了任务  xSemaphoreGive ，优先级 由 3 变成了 1
-        // 7、task3 从阻塞状态 变成 执行状态，  task3 拿到了 锁 开始 执行
+        // 7、task3 从阻塞状态 变成 执行状态，  task3 拿到了 锁 开始 执行； 然后 开始 循环执行 任务2
 
-        // 8、 task3 执行完任务  ，然后 释放锁， 这时 是 执行 task2 还是  继续执行  task3，，我觉得 大概率执行 task3
+        // 8、 task3 执行完任务  ，然后 释放锁， 这时 是 执行 task2 还是  继续执行  task3，，我觉得 大概率执行 task3 ， 猜对了
 
 
 
@@ -202,3 +202,20 @@ void FREERTOS_MUTEX_PRIORITY_INVERSION_MAIN(){
 
     START_TASK_MUTEX_PRIORITY_INVERSION("pvParameters");
 }
+
+
+
+//原因分析
+//        任务创建后立即准备就绪
+//在FreeRTOS中，当一个任务被创建时，如果调度器已经启动，那么根据任务的优先级，调度器会立即切换到优先级最高的任务执行。然而，在你的代码中，任务创建发生在START_TASK_MUTEX_PRIORITY_INVERSION中，这个函数本身是一个任务，优先级为1。
+//
+//当START_TASK_MUTEX_PRIORITY_INVERSION依次创建任务1、任务2和任务3时，调度器并不会立即切换到新创建的最高优先级任务，而是等待当前任务（即START_TASK_MUTEX_PRIORITY_INVERSION）执行完成并调用vTaskDelete()后才重新调度。
+//
+//任务就绪和运行的时间窗口
+//        创建任务时，任务1（优先级2）、任务2（优先级3）和任务3（优先级4）都进入了“就绪状态”。当START_TASK_MUTEX_PRIORITY_INVERSION删除自身后，调度器会挑选优先级最高的任务运行。然而，此时任务3中调用了vTaskDelay(30ms)，进入了“延迟阻塞”状态，任务2也调用了vTaskDelay(100ms)，只有任务1没有阻塞，因此任务1被调度执行。
+//
+//任务阻塞和调度器的决定
+//        任务3虽然优先级最高，但由于在初始化时调用了vTaskDelay(30ms)，它进入了阻塞态；任务2也类似。因此，在延迟时间未到达之前，任务3和任务2都不会运行，调度器只能选择运行没有阻塞的任务1。
+//
+//互斥信号量的影响
+//        任务1在运行时获取了互斥信号量。根据代码中的逻辑，当任务3尝试获取信号量时，会被阻塞，导致任务3无法执行。这种情况加剧了任务1先执行的现象。
