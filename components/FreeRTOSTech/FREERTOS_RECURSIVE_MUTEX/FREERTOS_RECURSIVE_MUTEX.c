@@ -30,11 +30,11 @@
 #define vTASK1_RECURSIVE_MUTEX_FUNCTION_uxPriority         3
 #define vTASK2_RECURSIVE_MUTEX_FUNCTION_uxStackDepth       512
 #define vTASK2_RECURSIVE_MUTEX_FUNCTION_uxPriority         3
-#define vTASK3_RECURSIVE_MUTEX_FUNCTION_uxStackDepth       512
+#define vTASK3_RECURSIVE_MUTEX_FUNCTION_uxStackDepth       640
 #define vTASK3_RECURSIVE_MUTEX_FUNCTION_uxPriority         3
-#define vTASK4_RECURSIVE_MUTEX_FUNCTION_uxStackDepth       512
+#define vTASK4_RECURSIVE_MUTEX_FUNCTION_uxStackDepth       640
 #define vTASK4_RECURSIVE_MUTEX_FUNCTION_uxPriority         3
-#define vTASK5_RECURSIVE_MUTEX_FUNCTION_uxStackDepth       512
+#define vTASK5_RECURSIVE_MUTEX_FUNCTION_uxStackDepth       640
 #define vTASK5_RECURSIVE_MUTEX_FUNCTION_uxPriority         3
 
 //任务句柄
@@ -91,16 +91,16 @@ void vTASK3_RECURSIVE_MUTEX(void *pvParameters){
 
         // 递归锁  === === 谁 持有 谁 才能 解锁 ===============
         xSemaphoreTakeRecursive(xSEMAPHORE_HANDLE_RECURSIVE_MUTEX, portMAX_DELAY);
-        printf(" hold %s\r\n", (char *)pvParameters);// 持有中
+        printf("hold %s\r\n", (char *)pvParameters);// 持有中
 
-        for (int i = 0; i < 10; ++i) {
-            xSemaphoreTakeRecursive(xSEMAPHORE_HANDLE_RECURSIVE_MUTEX, portMAX_DELAY); // 再加锁
-            printf("loop    %s\r\n", (char *)pvParameters, i);
-            xSemaphoreGiveRecursive(xSEMAPHORE_HANDLE_RECURSIVE_MUTEX); // 解锁
-        }
+//        for (int i = 0; i < 2; ++i) {
+//            xSemaphoreTakeRecursive(xSEMAPHORE_HANDLE_RECURSIVE_MUTEX, portMAX_DELAY); // 再加锁
+//            printf("%s loop %d  \r\n", (char *)pvParameters, i);
+//            xSemaphoreGiveRecursive(xSEMAPHORE_HANDLE_RECURSIVE_MUTEX); // 解锁
+//        }
 
         xSemaphoreGiveRecursive(xSEMAPHORE_HANDLE_RECURSIVE_MUTEX);
-        vTaskDelay(1);
+        vTaskDelay(1000);
     }
 }
 
@@ -136,8 +136,8 @@ void vTASK5_RECURSIVE_MUTEX(void *pvParameters){
             }
         }
         xSemaphoreGiveRecursive(xSEMAPHORE_HANDLE_RECURSIVE_MUTEX);
-        printf("%s\r\n", (char *)pvParameters);
-        vTaskDelay(1);
+        printf("%s  DONE\r\n", (char *)pvParameters);
+        vTaskDelay(1000);
 
     }
 }
@@ -177,7 +177,7 @@ void START_TASK_RECURSIVE_MUTEX(void *pvParameters)
             vTASK3_RECURSIVE_MUTEX,
             "vTask3",
             vTASK3_RECURSIVE_MUTEX_FUNCTION_uxStackDepth,
-            "vTask3 param",
+            "vTask3",
             vTASK3_RECURSIVE_MUTEX_FUNCTION_uxPriority,
             &TASK3_HANDLER_RECURSIVE_MUTEX
     );
@@ -185,7 +185,7 @@ void START_TASK_RECURSIVE_MUTEX(void *pvParameters)
             vTASK3_RECURSIVE_MUTEX,
             "vTask4",
             vTASK4_RECURSIVE_MUTEX_FUNCTION_uxStackDepth,
-            "vTask4 param",
+            "vTask4",
             vTASK4_RECURSIVE_MUTEX_FUNCTION_uxPriority,
             &TASK4_HANDLER_RECURSIVE_MUTEX
     );
@@ -193,12 +193,14 @@ void START_TASK_RECURSIVE_MUTEX(void *pvParameters)
             vTASK5_RECURSIVE_MUTEX,
             "vTask5",
             vTASK5_RECURSIVE_MUTEX_FUNCTION_uxStackDepth,
-            "vTask5 param",
+            "vTask5",
             vTASK5_RECURSIVE_MUTEX_FUNCTION_uxPriority,
             &TASK5_HANDLER_RECURSIVE_MUTEX
     );
-    vTaskDelete(START_TASK_HANDLER_RECURSIVE_MUTEX); //删除开始任务;  为什么执行完成要删除？？？
+    //vTaskDelete(START_TASK_HANDLER_RECURSIVE_MUTEX); //删除开始任务;  为什么执行完成要删除？？？
     //taskEXIT_CRITICAL();            //退出临界区
+
+    vTaskStartScheduler();// 开启任务调度器;
 }
 
 
@@ -206,14 +208,15 @@ void START_TASK_RECURSIVE_MUTEX(void *pvParameters)
 void FREERTOS_RECURSIVE_MUTEX_MAIN(){
     Serial_Init();
     RetargetInit(USART1);
-    xTaskCreate(
-            START_TASK_RECURSIVE_MUTEX,
-            "START_TASK_RECURSIVE_MUTEX",
-            START_STK_SIZE,
-            NULL,
-            START_TASK_RECURSIVE_MUTEX_PRIO,
-            &START_TASK_HANDLER_RECURSIVE_MUTEX
-    );
+//    xTaskCreate(
+//            START_TASK_RECURSIVE_MUTEX,
+//            "START_TASK_RECURSIVE_MUTEX",
+//            START_STK_SIZE,
+//            NULL,
+//            START_TASK_RECURSIVE_MUTEX_PRIO,
+//            &START_TASK_HANDLER_RECURSIVE_MUTEX
+//    );
+    START_TASK_RECURSIVE_MUTEX("pvParameters");
 
-    vTaskStartScheduler();// 开启任务调度器;
+
 }
