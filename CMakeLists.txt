@@ -130,6 +130,7 @@ include_directories(
         components/FreeRTOSTech/FREERTOS_SEMAPHORE # 计数信号量  二进制信号量
         components/FreeRTOSTech/FREERTOS_MUTEX # 互斥信号量
         components/FreeRTOSTech/FREERTOS_MUTEX_PRIORITY_INVERSION #互斥信号量 优先级 反转
+        components/FreeRTOSTech/FREERTOS_RECURSIVE_MUTEX # 互斥信号 递归锁
 
 
         restarComponets/DATA_REGISTER_EXPLORE # 探索 寄存器
