@@ -123,49 +123,49 @@ void START_TASK_SEMAPHORE(void *pvParameters)
     xSemaphoreGive(xSEMAPHORE_HANDLE_BIN);// 二进制信号量 默认 创建 是 0 ，所以这里传入 1
 
 
-//
-//    xTaskCreate(
-//            (TaskFunction_t)                           vTASK2_SEMAPHORE, // 任务函数
-//            (char *  )                                    "vTask2",// 函数 名称， 任务名称长度不要超过  configMAX_TASK_NAME_LEN。
-//            (const configSTACK_DEPTH_TYPE)            vTASK2_SEMAPHORE_FUNCTION_uxStackDepth,// 任务堆栈大小 ，注意 ： 实际申请到的堆栈是 uxStackDepth 的 4 倍（ 一个 StackType_t 是 32 位  4 个字节）， 其中空闲任务 的堆栈大小为    configMINIMAL_STACK_SIZE。
-//            // (uint32_t)                                         vTask2F_uxStackDepth,
-//            (void *  )                                "free2 0",// 传递给任务函数的参数
-//            (UBaseType_t)                                vTASK2_SEMAPHORE_FUNCTION_uxPriority,// 任务优先级 范围 0～ configMAX_PRIORITIES-1
-//            (TaskHandle_t *)                         &TASK2_HANDLER_SEMAPHORE // 任务句柄，任务创建成功以后会返回次惹怒我的任务句柄， 这个 句柄其实就是任务的 任务堆栈，此参数 就用来保存这个任务句柄；其他API函数可能会使用到这个 句柄
-//    );
-//
-//    xTaskCreate(
-//            vTASK1_SEMAPHORE,
-//            "Task1",
-//            vTASK1_SEMAPHORE_FUNCTION_uxStackDepth,
-//            NULL,
-//            vTASK1_SEMAPHORE_FUNCTION_uxPriority,
-//            &TASK1_HANDLER_SEMAPHORE
-//    );
+
+    xTaskCreate(
+            (TaskFunction_t)                           vTASK2_SEMAPHORE, // 任务函数
+            (char *  )                                    "vTask2",// 函数 名称， 任务名称长度不要超过  configMAX_TASK_NAME_LEN。
+            (const configSTACK_DEPTH_TYPE)            vTASK2_SEMAPHORE_FUNCTION_uxStackDepth,// 任务堆栈大小 ，注意 ： 实际申请到的堆栈是 uxStackDepth 的 4 倍（ 一个 StackType_t 是 32 位  4 个字节）， 其中空闲任务 的堆栈大小为    configMINIMAL_STACK_SIZE。
+            // (uint32_t)                                         vTask2F_uxStackDepth,
+            (void *  )                                "free2 0",// 传递给任务函数的参数
+            (UBaseType_t)                                vTASK2_SEMAPHORE_FUNCTION_uxPriority,// 任务优先级 范围 0～ configMAX_PRIORITIES-1
+            (TaskHandle_t *)                         &TASK2_HANDLER_SEMAPHORE // 任务句柄，任务创建成功以后会返回次惹怒我的任务句柄， 这个 句柄其实就是任务的 任务堆栈，此参数 就用来保存这个任务句柄；其他API函数可能会使用到这个 句柄
+    );
+
+    xTaskCreate(
+            vTASK1_SEMAPHORE,
+            "Task1",
+            vTASK1_SEMAPHORE_FUNCTION_uxStackDepth,
+            NULL,
+            vTASK1_SEMAPHORE_FUNCTION_uxPriority,
+            &TASK1_HANDLER_SEMAPHORE
+    );
 
 
 
     // 任务 3  4 与   任务 1 2  要分开执行
     // 信号量  互斥
-    xTaskCreate(
-            vTASK3_SEMAPHORE,
-            "vTask3",
-            640,
-            "vTask3 param",
-            3,
-            &TASK3_HANDLER_SEMAPHORE
-    );
-    xTaskCreate(
-            vTASK3_SEMAPHORE,
-            "vTask4",
-            640,
-            "vTask4 param",
-            3,
-            &TASK4_HANDLER_SEMAPHORE
-    );
+//    xTaskCreate(
+//            vTASK3_SEMAPHORE,
+//            "vTask3",
+//            640,
+//            "vTask3 param",
+//            3,
+//            &TASK3_HANDLER_SEMAPHORE
+//    );
+//    xTaskCreate(
+//            vTASK3_SEMAPHORE,
+//            "vTask4",
+//            640,
+//            "vTask4 param",
+//            3,
+//            &TASK4_HANDLER_SEMAPHORE
+//    );
 
-
-    vTaskDelete(START_TASK_HANDLER_SEMAPHORE); //删除开始任务;  为什么执行完成要删除？？？
+    vTaskStartScheduler();// 开启任务调度器;
+    //vTaskDelete(START_TASK_HANDLER_SEMAPHORE); //删除开始任务;  为什么执行完成要删除？？？
     //taskEXIT_CRITICAL();            //退出临界区
 }
 
@@ -174,16 +174,18 @@ void START_TASK_SEMAPHORE(void *pvParameters)
 void FREERTOS_SEMAPHORE_MAIN(){
     Serial_Init();
     RetargetInit(USART1);
-    xTaskCreate(
-            START_TASK_SEMAPHORE,
-            "START_TASK_SEMAPHORE",
-            START_STK_SIZE,
-            NULL,
-            START_TASK_SEMAPHORE_PRIO,
-            &START_TASK_HANDLER_SEMAPHORE
-    );
+//    xTaskCreate(
+//            START_TASK_SEMAPHORE,
+//            "START_TASK_SEMAPHORE",
+//            START_STK_SIZE,
+//            NULL,
+//            START_TASK_SEMAPHORE_PRIO,
+//            &START_TASK_HANDLER_SEMAPHORE
+//    );
+//
+//    vTaskStartScheduler();// 开启任务调度器;
 
-    vTaskStartScheduler();// 开启任务调度器;
+    START_TASK_SEMAPHORE("pvParameters");
 }
 
 
