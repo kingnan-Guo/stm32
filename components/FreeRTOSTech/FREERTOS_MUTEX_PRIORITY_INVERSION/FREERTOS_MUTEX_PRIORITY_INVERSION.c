@@ -4,6 +4,8 @@
 // 互斥量 优先级反转
 // 解决 优先级反转 方法 是  优先级继承
 
+// 问题主要出现在   vTaskDelay 延时 时间  太短，增加 后 程序正常运行 ，当前不清楚 原因
+
 #include "stm32f10x.h"
 #include "OLED.h"
 #include "FreeRTOS.h"
@@ -20,11 +22,11 @@
 //任务堆栈大小
 #define START_STK_SIZE 		                                        128
 
-#define vTASK1_MUTEX_PRIORITY_INVERSION_FUNCTION_uxStackDepth       512
+#define vTASK1_MUTEX_PRIORITY_INVERSION_FUNCTION_uxStackDepth       1024
 #define vTASK1_MUTEX_PRIORITY_INVERSION_FUNCTION_uxPriority         1
-#define vTASK2_MUTEX_PRIORITY_INVERSION_FUNCTION_uxStackDepth       512
+#define vTASK2_MUTEX_PRIORITY_INVERSION_FUNCTION_uxStackDepth       128
 #define vTASK2_MUTEX_PRIORITY_INVERSION_FUNCTION_uxPriority         2
-#define vTASK3_MUTEX_PRIORITY_INVERSION_FUNCTION_uxStackDepth       512
+#define vTASK3_MUTEX_PRIORITY_INVERSION_FUNCTION_uxStackDepth       128
 #define vTASK3_MUTEX_PRIORITY_INVERSION_FUNCTION_uxPriority         3
 
 //任务句柄
@@ -44,18 +46,18 @@ void vTASK1_MUTEX_PRIORITY_INVERSION(void *pvParameters){
     int16_t num = 0x00;
     volatile int i = 0;
 
-    printf(" vTASK1_MUTEX_PRIORITY_INVERSION start\r\n");
+    printf(" vTASK1 start\r\n");
     while (1) {
         // 获得 互斥信号量 二进制信号
         xSemaphoreTake(xSEMAPHORE_HANDLE_MUTEX_PRIORITY_INVERSION, portMAX_DELAY);
 
 
-        printf(" vTASK1_MUTEX_PRIORITY_INVERSION long time task\r\n");
+        printf(" vTASK1  long time task\r\n");
         // 耗时久 的任务
         for (i = 0; i < 1000; ++i) {
-            OLED_ShowNum(1, 2, sum, 5);
+            OLED_ShowNum(1, 2, sum++, 5);
         }
-        printf(" vTASK2_TEMP =%d\r\n",  num++);
+        printf(" vTASK1  =%d\r\n",  num++);
 
         // 释放
         xSemaphoreGive(xSEMAPHORE_HANDLE_MUTEX_PRIORITY_INVERSION);
@@ -66,10 +68,13 @@ void vTASK1_MUTEX_PRIORITY_INVERSION(void *pvParameters){
 // 中 优先级任务
 void vTASK2_MUTEX_PRIORITY_INVERSION(void *pvParameters){
     const TickType_t xDelay30ms = pdMS_TO_TICKS( 30UL );
-    printf(" vTASK2_MUTEX_PRIORITY_INVERSION start\r\n");
-    vTaskDelay(xDelay30ms);
-    while (1) {
+    printf(" vTASK2  start\r\n");
+    vTaskDelay(300);
+    while (1){
+        printf(" vTASK2  while\r\n");
+        vTaskDelay(1000);
     }
+
 }
 
 
@@ -81,37 +86,29 @@ void vTASK2_MUTEX_PRIORITY_INVERSION(void *pvParameters){
 void vTASK3_MUTEX_PRIORITY_INVERSION(void *pvParameters){
     const TickType_t xDelay10ms = pdMS_TO_TICKS( 10UL );
 
-    printf(" vTASK3_MUTEX_PRIORITY_INVERSION start\r\n");
-    vTaskDelay(xDelay10ms);// 这时会切换任务
+    printf(" vTASK3  start\r\n");
+    vTaskDelay(200);// 这时会切换任务
     while (1) {
-        printf(" vTASK3_MUTEX_PRIORITY_INVERSION wating for Lock\r\n");
+        printf(" vTASK3  wating for Lock\r\n");
         // 等待
         // 获取 信号量
         xSemaphoreTake(xSEMAPHORE_HANDLE_MUTEX_PRIORITY_INVERSION, portMAX_DELAY);
         // 处理任务
-
+//        vTaskDelay(3000);
+        printf("vTASK3 DONE");
         // 放开锁
-       // xSemaphoreGive(xSEMAPHORE_HANDLE_MUTEX_PRIORITY_INVERSION);
+        //xSemaphoreGive(xSEMAPHORE_HANDLE_MUTEX_PRIORITY_INVERSION);
     }
 }
 
 
-//void vDELETE_MUTEX_PRIORITY_INVERSION(void *pvParameters){
-//    while (1) {
-//    }
-//}
-
-//void vApplicationMallocFailedHook(void) {
-//    printf("内存分配失败！\r\n");
-//    while (1); // 卡住，方便调试
-//}
 
 
 //开始任务任务函数
 void START_TASK_MUTEX_PRIORITY_INVERSION(void *pvParameters)
 {
     //taskENTER_CRITICAL();           //进入临界区
-    int a = 1; // a = 1 时  是有问题的代码
+    int a = 0;// 1 没有 优先级继承 ， 0 有 优先级 继承
     if(a == 1){
 
         // 优先级反转 的运行过程
@@ -153,7 +150,9 @@ void START_TASK_MUTEX_PRIORITY_INVERSION(void *pvParameters)
 
 
 
+
     // 创建 三个 优先级的任务
+
     xTaskCreate(
             vTASK1_MUTEX_PRIORITY_INVERSION,
             "vTask1",
@@ -170,6 +169,7 @@ void START_TASK_MUTEX_PRIORITY_INVERSION(void *pvParameters)
             vTASK2_MUTEX_PRIORITY_INVERSION_FUNCTION_uxPriority,// 任务优先级 范围 0～ configMAX_PRIORITIES-1
             &TASK2_HANDLER_MUTEX_PRIORITY_INVERSION // 任务句柄，任务创建成功以后会返回次惹怒我的任务句柄， 这个 句柄其实就是任务的 任务堆栈，此参数 就用来保存这个任务句柄；其他API函数可能会使用到这个 句柄
     );
+
     xTaskCreate(
             vTASK3_MUTEX_PRIORITY_INVERSION,
             "vTask3",
@@ -179,8 +179,8 @@ void START_TASK_MUTEX_PRIORITY_INVERSION(void *pvParameters)
             &TASK3_HANDLER_MUTEX_PRIORITY_INVERSION
     );
 
-
-    vTaskDelete(START_TASK_HANDLER_MUTEX_PRIORITY_INVERSION); //删除开始任务;  为什么执行完成要删除？？？
+    vTaskStartScheduler();// 开启任务调度器;
+    //vTaskDelete(START_TASK_HANDLER_MUTEX_PRIORITY_INVERSION); //删除开始任务;  为什么执行完成要删除？？？
     //taskEXIT_CRITICAL();            //退出临界区
 }
 
@@ -189,14 +189,16 @@ void START_TASK_MUTEX_PRIORITY_INVERSION(void *pvParameters)
 void FREERTOS_MUTEX_PRIORITY_INVERSION_MAIN(){
     Serial_Init();
     RetargetInit(USART1);
-    xTaskCreate(
-            START_TASK_MUTEX_PRIORITY_INVERSION,
-            "START_TASK_MUTEX_PRIORITY_INVERSION",
-            START_STK_SIZE,
-            NULL,
-            START_TASK_MUTEX_PRIORITY_INVERSION_PRIO,
-            &START_TASK_HANDLER_MUTEX_PRIORITY_INVERSION
-    );
+//    xTaskCreate(
+//            START_TASK_MUTEX_PRIORITY_INVERSION,
+//            "START_TASK_MUTEX_PRIORITY_INVERSION",
+//            START_STK_SIZE,
+//            NULL,
+//            START_TASK_MUTEX_PRIORITY_INVERSION_PRIO,
+//            &START_TASK_HANDLER_MUTEX_PRIORITY_INVERSION
+//    );
 
-    vTaskStartScheduler();// 开启任务调度器;
+    //vTaskStartScheduler();// 开启任务调度器;
+
+    START_TASK_MUTEX_PRIORITY_INVERSION("pvParameters");
 }
