@@ -2,7 +2,11 @@
 // Created by 90175 on 2024/11/26.
 // 事件组 同步点 的使用
 
-
+// 任务1
+// 任务2
+// 任务3
+// 每个任务 要等到 其他任务 都做完 才 最终打印
+// 三个任务 优先级 不同， 第一个执行的 是 任务 3
 
 #include "stm32f10x.h"
 #include "OLED.h"
@@ -47,8 +51,7 @@ static EventGroupHandle_t EVENT_GROUP_CALC;
 #define THREE (1<<2)
 #define ALL (ONE | TWO | THREE)
 
-static int sum = 0;
-static int dec = 0;
+
 
 
 void vTASK1_EVENT_GROUP_SYNC(void *pvParameters){
@@ -103,11 +106,6 @@ void START_TASK_EVENT_GROUP_SYNC(void *pvParameters)
     //taskENTER_CRITICAL();           //进入临界区
     // 创建 事件组
     EVENT_GROUP_CALC = xEventGroupCreate();
-    // 创建 队列
-    xQueue_Handle = xQueueCreate(2, sizeof(int));
-    if(xQueue_Handle == NULL){
-        printf("can not create Queue");
-    }
 
     // 创建三个任务
     xTaskCreate(
