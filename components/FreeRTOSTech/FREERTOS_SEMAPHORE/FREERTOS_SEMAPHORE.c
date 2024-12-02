@@ -149,7 +149,7 @@ void START_TASK_SEMAPHORE(void *pvParameters)
             512,
             "vTask4 param",
             2,
-            &TASK3_HANDLER_SEMAPHORE
+            &TASK4_HANDLER_SEMAPHORE
     );
 
 
