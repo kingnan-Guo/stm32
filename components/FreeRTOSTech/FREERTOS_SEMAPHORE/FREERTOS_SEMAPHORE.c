@@ -110,7 +110,7 @@ void START_TASK_SEMAPHORE(void *pvParameters)
     // 创建 计数型 信号量
     xSEMAPHORE_HANDLE_COUNT = xSemaphoreCreateCounting(10, 0);// 最大值 是 10， 初始值 是 0
 
-    // 创建 计数 信号量
+    // 创建 二进制 信号量
     xSEMAPHORE_HANDLE_BIN = xSemaphoreCreateBinary();
     xSemaphoreGive(xSEMAPHORE_HANDLE_BIN);// 二进制信号量 默认 创建 是 0 ，所以这里传入 1
 
