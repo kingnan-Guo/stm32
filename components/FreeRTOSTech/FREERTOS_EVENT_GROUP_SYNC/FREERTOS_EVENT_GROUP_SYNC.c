@@ -1,13 +1,8 @@
 //
 // Created by 90175 on 2024/11/26.
-// 事件组 的使用
+// 事件组 同步点 的使用
 
-// 创建 3个任务
-// 任务 1 累加 n 次 ， 设置 事件 bit 0
-// 任务 2 累减 n 次 ， 设置 事件 bit 1
-// 任务 3 等待
-//        事件 0  和 事件 1
-//        事件 0  或 事件 1
+
 
 #include "stm32f10x.h"
 #include "OLED.h"
@@ -61,10 +56,10 @@ void vTASK1_EVENT_GROUP_SYNC(void *pvParameters){
     int i = 0;
     while (1) {
         // 开始 做
-        printf("%s is do  one  \r\n", (char * ) pvParameters);
+        printf("%s is do  one %d \r\n", (char * ) pvParameters, i);
         // 我已经做好 ，要等 所有人 都做好
         xEventGroupSync(EVENT_GROUP_CALC, ONE, ALL, portMAX_DELAY);
-        printf("%s is all Done  \r\n", (char * ) pvParameters, i++);
+        printf("%s is all Done  %d  \r\n", (char * ) pvParameters, i++);
         vTaskDelay(xDelay100ms);
     }
 }
@@ -76,10 +71,10 @@ void vTASK2_EVENT_GROUP_SYNC(void *pvParameters){
     int i = 0;
     while (1) {
         // 开始 做
-        printf("%s is do  one  \r\n", (char * ) pvParameters);
+        printf("%s is do  one %d \r\n", (char * ) pvParameters, i);
         // 我已经做好 ，要等 所有人 都做好
         xEventGroupSync(EVENT_GROUP_CALC, TWO, ALL, portMAX_DELAY);
-        printf("%s is all Done  \r\n", (char * ) pvParameters, i++);
+        printf("%s is all Done  %d  \r\n", (char * ) pvParameters, i++);
         vTaskDelay(xDelay100ms);
     }
 }
@@ -91,10 +86,10 @@ void vTASK3_EVENT_GROUP_SYNC(void *pvParameters){
     int i = 0;
     while (1) {
         // 开始 做
-        printf("%s is do  one  \r\n", (char * ) pvParameters);
+        printf("%s is do  one %d \r\n", (char * ) pvParameters, i);
         // 我已经做好 ，要等 所有人 都做好
         xEventGroupSync(EVENT_GROUP_CALC, THREE, ALL, portMAX_DELAY);
-        printf("%s is all Done  \r\n", (char * ) pvParameters, i++);
+        printf("%s is all Done  %d  \r\n", (char * ) pvParameters, i++);
         vTaskDelay(xDelay100ms);
     }
 }
