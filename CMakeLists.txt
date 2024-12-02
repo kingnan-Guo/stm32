@@ -118,12 +118,12 @@ include_directories(
         restarComponets/HARDWARE_SPI
 
 
-        components/FreeRTOSTech/xTaskCreateStaticFun
+        components/FreeRTOSTech/xTaskCreateStaticFun    # 静态任务
         components/FreeRTOSTech/xTaskSuspendResume
-        components/FreeRTOSTech/FreeRTOS_NVIC
-        components/FreeRTOSTech/FREERTOS_LIST
-        components/FreeRTOSTech/FREERTOS_TEMP
-        components/FreeRTOSTech/FREERTOS_OTHER_API
+        components/FreeRTOSTech/FreeRTOS_NVIC   # 中断
+        components/FreeRTOSTech/FREERTOS_LIST   # 列表 列表项
+        components/FreeRTOSTech/FREERTOS_TEMP   # 模板
+        components/FreeRTOSTech/FREERTOS_OTHER_API      # 一些获取 任务信息的 API
         components/FreeRTOSTech/FREERTOS_TASK_SCHEDULER_ALGORITHM   #任务调度
         components/FreeRTOSTech/FREERTOS_QUEUE      #队列
         components/FreeRTOSTech/FREERTOS_QUEUE_SET  # 队列集
