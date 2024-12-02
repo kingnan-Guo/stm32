@@ -26,7 +26,7 @@
 //任务句柄
 TaskHandle_t    START_TASK_HANDLER_TEMP;
 TaskHandle_t    TASK1_HANDLER_TEMP;
-TaskHandle_t    TASK2_HANDLER_TEMP; // 存放任务句柄
+TaskHandle_t    TASK2_HANDLER_TEMP;
 TaskHandle_t    DELETE_HANDLER_TEMP;
 
 

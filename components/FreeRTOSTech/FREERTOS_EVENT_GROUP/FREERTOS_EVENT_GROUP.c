@@ -26,7 +26,7 @@
 //任务句柄
 TaskHandle_t    START_TASK_HANDLER_EVENT_GROUP;
 TaskHandle_t    TASK1_HANDLER_EVENT_GROUP;
-TaskHandle_t    TASK2_HANDLER_EVENT_GROUP; // 存放任务句柄
+TaskHandle_t    TASK2_HANDLER_EVENT_GROUP;
 TaskHandle_t    DELETE_HANDLER_EVENT_GROUP;
 
 
