@@ -72,6 +72,7 @@ void vTASK3_MUTEX(void *pvParameters){
         xSemaphoreTake(xSEMAPHORE_HANDLE_MUTEX, portMAX_DELAY);
         printf("%s\r\n", (char *)pvParameters);
         xSemaphoreGive(xSEMAPHORE_HANDLE_MUTEX);
+        vTaskDelay(1000);// 不添加 延时 不切换 任务
     }
 }
 
@@ -85,31 +86,31 @@ void START_TASK_MUTEX(void *pvParameters)
 
     // 创建 互斥信号量; 创建完互斥信号量 会 自动 添加值 1
     xSEMAPHORE_HANDLE_MUTEX = xSemaphoreCreateMutex();
-
-    xTaskCreate(
-            vTASK1_MUTEX,
-            "Task1",
-            vTASK1_MUTEX_FUNCTION_uxStackDepth,
-            NULL,
-            vTASK1_MUTEX_FUNCTION_uxPriority,
-            &TASK1_HANDLER_MUTEX
-    );
-    xTaskCreate(
-            (TaskFunction_t)                           vTASK2_MUTEX, // 任务函数
-            (char *  )                                    "vTask2",// 函数 名称， 任务名称长度不要超过  configMAX_TASK_NAME_LEN。
-            (const configSTACK_DEPTH_TYPE)            vTASK2_MUTEX_FUNCTION_uxStackDepth,// 任务堆栈大小 ，注意 ： 实际申请到的堆栈是 uxStackDepth 的 4 倍（ 一个 StackType_t 是 32 位  4 个字节）， 其中空闲任务 的堆栈大小为    configMINIMAL_STACK_SIZE。
-            // (uint32_t)                                         vTask2F_uxStackDepth,
-            (void *  )                                "free2 0",// 传递给任务函数的参数
-            (UBaseType_t)                                vTASK2_MUTEX_FUNCTION_uxPriority,// 任务优先级 范围 0～ configMAX_PRIORITIES-1
-            (TaskHandle_t *)                         &TASK2_HANDLER_MUTEX // 任务句柄，任务创建成功以后会返回次惹怒我的任务句柄， 这个 句柄其实就是任务的 任务堆栈，此参数 就用来保存这个任务句柄；其他API函数可能会使用到这个 句柄
-    );
+//
+//    xTaskCreate(
+//            vTASK1_MUTEX,
+//            "Task1",
+//            vTASK1_MUTEX_FUNCTION_uxStackDepth,
+//            NULL,
+//            vTASK1_MUTEX_FUNCTION_uxPriority,
+//            &TASK1_HANDLER_MUTEX
+//    );
+//    xTaskCreate(
+//            (TaskFunction_t)                           vTASK2_MUTEX, // 任务函数
+//            (char *  )                                    "vTask2",// 函数 名称， 任务名称长度不要超过  configMAX_TASK_NAME_LEN。
+//            (const configSTACK_DEPTH_TYPE)            vTASK2_MUTEX_FUNCTION_uxStackDepth,// 任务堆栈大小 ，注意 ： 实际申请到的堆栈是 uxStackDepth 的 4 倍（ 一个 StackType_t 是 32 位  4 个字节）， 其中空闲任务 的堆栈大小为    configMINIMAL_STACK_SIZE。
+//            // (uint32_t)                                         vTask2F_uxStackDepth,
+//            (void *  )                                "free2 0",// 传递给任务函数的参数
+//            (UBaseType_t)                                vTASK2_MUTEX_FUNCTION_uxPriority,// 任务优先级 范围 0～ configMAX_PRIORITIES-1
+//            (TaskHandle_t *)                         &TASK2_HANDLER_MUTEX // 任务句柄，任务创建成功以后会返回次惹怒我的任务句柄， 这个 句柄其实就是任务的 任务堆栈，此参数 就用来保存这个任务句柄；其他API函数可能会使用到这个 句柄
+//    );
 
 
     // 信号量  互斥
     xTaskCreate(
             vTASK3_MUTEX,
             "vTask3",
-            512,
+            1024,
             "vTask3 param",
             2,
             &TASK3_HANDLER_MUTEX
@@ -117,7 +118,7 @@ void START_TASK_MUTEX(void *pvParameters)
     xTaskCreate(
             vTASK3_MUTEX,
             "vTask4",
-            512,
+            1024,
             "vTask4 param",
             2,
             &TASK4_HANDLER_MUTEX
