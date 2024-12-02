@@ -128,6 +128,7 @@ include_directories(
         components/FreeRTOSTech/FREERTOS_QUEUE
         components/FreeRTOSTech/FREERTOS_QUEUE_SET
         components/FreeRTOSTech/FREERTOS_SEMAPHORE
+        components/FreeRTOSTech/FREERTOS_MUTEX # 互斥信号量
 
 
         restarComponets/DATA_REGISTER_EXPLORE # 探索 寄存器

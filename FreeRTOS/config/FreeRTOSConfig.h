@@ -75,7 +75,7 @@ extern uint32_t SystemCoreClock;// 只是声明一下系统时钟 ，后面要�
 #define configMAX_TASK_NAME_LEN                  ( 16 )                     // 任务名字字符串长度 16 个字符
 //#define configUSE_TRACE_FACILITY                 1
 #define configUSE_16_BIT_TICKS                   0                          // 系统节拍计数器变量数据类型； 1表示为16位无符号整形，0表示为32位无符号整形；（用来表示变量类型 在FreeRTOS 中 configUSE_16_BIT_TICKS 为 1 会定义 configTICK_TYPE_WIDTH_IN_BITS 的类型 为 TICK_TYPE_WIDTH_32_BITS， configTICK_TYPE_WIDTH_IN_BITS 会 定义 TickType_t 的类型， 也就是 间接 定义了 系统节拍计数器变量数据类型， 当前使用stm32 所以时32 位的，所以 TickType_t 是 uint32_t ）（FreeRTOS/portable/GCC/ARM_CM3/portmacro.h）
-#define configUSE_MUTEXES                        1                          // 为 1 时 使用互斥信号量
+#define configUSE_MUTEXES                        1                          // 为 1 时 使用互斥信号量;  函数 xSemaphoreCreateMutex()
 #define configQUEUE_REGISTRY_SIZE                8                          // 不为 0 时表示启用队列记录，具体的值是可以 记录的队列和 信号量最大 数目； 队列注册的大小； （跟调试相关）
 #define configUSE_RECURSIVE_MUTEXES              1                          // 1 递归互斥信号量 （具体啥用法 之后再 理解）
 #define configUSE_COUNTING_SEMAPHORES            1                          //  1 计数型信号量； 使用计数信号量;  同步信号量 xSemaphoreCreateCounting()
