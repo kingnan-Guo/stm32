@@ -127,7 +127,7 @@ void vTASK5_RECURSIVE_MUTEX(void *pvParameters){
         // 使用 递归锁 ============== ======================
         // 谁 能获取到 持有 谁才可以解锁
         while (1){
-            // 如果 拿不到
+            // 如果 拿不到 这里 不会执行， 因为 拿不到的 也无法解锁
             if(xSemaphoreTakeRecursive(xSEMAPHORE_HANDLE_RECURSIVE_MUTEX, 0) != pdTRUE){
                 // 直接  释放
                 xSemaphoreGiveRecursive(xSEMAPHORE_HANDLE_RECURSIVE_MUTEX);
