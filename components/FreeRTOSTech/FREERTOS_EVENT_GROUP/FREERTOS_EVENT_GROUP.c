@@ -32,7 +32,7 @@
 #define vTASK1_EVENT_GROUP_FUNCTION_uxPriority          3
 #define vTASK2_EVENT_GROUP_FUNCTION_uxStackDepth        512
 #define vTASK2_EVENT_GROUP_FUNCTION_uxPriority          3
-#define vTASK3_EVENT_GROUP_FUNCTION_uxStackDepth        512
+#define vTASK3_EVENT_GROUP_FUNCTION_uxStackDepth        1024
 #define vTASK3_EVENT_GROUP_FUNCTION_uxPriority          3
 
 //任务句柄
@@ -54,6 +54,7 @@ static int dec = 0;
 void vTASK1_EVENT_GROUP(void *pvParameters){
     int i = 0;
     while (1) {
+        printf("vTASK1 start\r\n");
         for (i = 0; i < 1000000; ++i) {
             sum++;
         }
@@ -70,6 +71,7 @@ void vTASK1_EVENT_GROUP(void *pvParameters){
 void vTASK2_EVENT_GROUP(void *pvParameters){
     const TickType_t xDelay5ms = pdMS_TO_TICKS( 5UL );
     while (1) {
+        printf("vTASK2 start\r\n");
         for (int i = 1000000; i >0 ; i--) {
             dec--;
         }
@@ -142,7 +144,9 @@ void START_TASK_EVENT_GROUP(void *pvParameters)
             vTASK3_EVENT_GROUP_FUNCTION_uxPriority,// 任务优先级 范围 0～ configMAX_PRIORITIES-1
             &TASK3_HANDLER_EVENT_GROUP // 任务句柄，任务创建成功以后会返回次惹怒我的任务句柄， 这个 句柄其实就是任务的 任务堆栈，此参数 就用来保存这个任务句柄；其他API函数可能会使用到这个 句柄
     );
-    vTaskDelete(START_TASK_HANDLER_EVENT_GROUP); //删除开始任务;  为什么执行完成要删除？？？
+
+    vTaskStartScheduler();// 开启任务调度器;
+    //vTaskDelete(START_TASK_HANDLER_EVENT_GROUP); //删除开始任务;  为什么执行完成要删除？？？
     //taskEXIT_CRITICAL();            //退出临界区
 }
 
@@ -151,14 +155,17 @@ void START_TASK_EVENT_GROUP(void *pvParameters)
 void FREERTOS_EVENT_GROUP_MAIN(){
     Serial_Init();
     RetargetInit(USART1);
-    xTaskCreate(
-            START_TASK_EVENT_GROUP,
-            "START_TASK_EVENT_GROUP",
-            START_STK_SIZE,
-            NULL,
-            START_TASK_EVENT_GROUP_PRIO,
-            &START_TASK_HANDLER_EVENT_GROUP
-    );
+//    xTaskCreate(
+//            START_TASK_EVENT_GROUP,
+//            "START_TASK_EVENT_GROUP",
+//            START_STK_SIZE,
+//            NULL,
+//            START_TASK_EVENT_GROUP_PRIO,
+//            &START_TASK_HANDLER_EVENT_GROUP
+//    );
+//
+//  vTaskStartScheduler();// 开启任务调度器;
+    START_TASK_EVENT_GROUP("pvParameters");
 
-    vTaskStartScheduler();// 开启任务调度器;
+
 }
