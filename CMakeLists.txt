@@ -132,6 +132,7 @@ include_directories(
         components/FreeRTOSTech/FREERTOS_MUTEX_PRIORITY_INVERSION #互斥信号量 优先级 反转
         components/FreeRTOSTech/FREERTOS_RECURSIVE_MUTEX # 互斥信号 递归锁
         components/FreeRTOSTech/FREERTOS_EVENT_GROUP #事件组
+        components/FreeRTOSTech/FREERTOS_EVENT_GROUP_SYNC # 同步点
 
 
         restarComponets/DATA_REGISTER_EXPLORE # 探索 寄存器
