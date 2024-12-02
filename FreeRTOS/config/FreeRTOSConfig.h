@@ -78,7 +78,7 @@ extern uint32_t SystemCoreClock;// 只是声明一下系统时钟 ，后面要�
 #define configUSE_MUTEXES                        1                          // 为 1 时 使用互斥信号量
 #define configQUEUE_REGISTRY_SIZE                8                          // 不为 0 时表示启用队列记录，具体的值是可以 记录的队列和 信号量最大 数目； 队列注册的大小； （跟调试相关）
 #define configUSE_RECURSIVE_MUTEXES              1                          // 1 递归互斥信号量 （具体啥用法 之后再 理解）
-#define configUSE_COUNTING_SEMAPHORES            1                          //  1 计数型信号量； 使用计数信号量
+#define configUSE_COUNTING_SEMAPHORES            1                          //  1 计数型信号量； 使用计数信号量;  同步信号量 xSemaphoreCreateCounting()
 #define configUSE_PORT_OPTIMISED_TASK_SELECTION  1                          // 1 启用特殊方法来选择下一个要运行的任务； 一般是硬件计算前导零指令，如果所使用的MCU没有这些硬件指令的话此宏应该设置为 0 使用软件区计算，但是有个前提是，当 configUSE_PORT_OPTIMISED_TASK_SELECTION  置 1 时； configMAX_PRIORITIES 只能小于 32； STM32 支持 硬件计算 所以可以配置成 1；
 
 /* Co-routine definitions. FreeRTOS与协程有关的配置选项 （不使用协程） */
