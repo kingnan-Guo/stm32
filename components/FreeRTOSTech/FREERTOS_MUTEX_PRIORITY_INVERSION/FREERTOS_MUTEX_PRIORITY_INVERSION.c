@@ -141,8 +141,8 @@ void START_TASK_MUTEX_PRIORITY_INVERSION(void *pvParameters)
         // 6、这时  task1 继承了 task3 的优先级 变成了 3， 开始进行 执行 task1， 等到 for 循环 1000 次 以后， 释放了任务  xSemaphoreGive ，优先级 由 3 变成了 1
         // 7、task3 从阻塞状态 变成 执行状态，  task3 拿到了 锁 开始 执行
 
-        // 8、 task3 执行完任务  ，然后 释放锁， 这时 是 执行 task2 还是  继续执行  tash3
-        
+        // 8、 task3 执行完任务  ，然后 释放锁， 这时 是 执行 task2 还是  继续执行  task3，，我觉得 大概率执行 task3
+
 
 
         // 解决 优先级 反转的  方法 是 优先级 继承
