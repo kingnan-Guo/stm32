@@ -124,11 +124,12 @@ include_directories(
         components/FreeRTOSTech/FREERTOS_LIST
         components/FreeRTOSTech/FREERTOS_TEMP
         components/FreeRTOSTech/FREERTOS_OTHER_API
-        components/FreeRTOSTech/FREERTOS_TASK_SCHEDULER_ALGORITHM
-        components/FreeRTOSTech/FREERTOS_QUEUE
-        components/FreeRTOSTech/FREERTOS_QUEUE_SET
-        components/FreeRTOSTech/FREERTOS_SEMAPHORE
+        components/FreeRTOSTech/FREERTOS_TASK_SCHEDULER_ALGORITHM   #任务调度
+        components/FreeRTOSTech/FREERTOS_QUEUE      #队列
+        components/FreeRTOSTech/FREERTOS_QUEUE_SET  # 队列集
+        components/FreeRTOSTech/FREERTOS_SEMAPHORE # 计数信号量  二进制信号量
         components/FreeRTOSTech/FREERTOS_MUTEX # 互斥信号量
+        components/FreeRTOSTech/FREERTOS_MUTEX_PRIORITY_INVERSION #互斥信号量 优先级 反转
 
 
         restarComponets/DATA_REGISTER_EXPLORE # 探索 寄存器
