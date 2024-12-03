@@ -4,6 +4,7 @@
 
 
 #include "stm32f10x.h"
+#include "OLED.h"
 #include "EXTI_Interrupt.h"
 
 uint16_t extiInterruptCount = 0;
@@ -79,14 +80,14 @@ uint16_t getExtiInterruptCount(){
 
 
 
-//void TIM2_IRQHandler(void){
-//    /// TIM_IT_Update 代表 要看 哪个中断标志位
-//    if(TIM_GetITStatus(TIM2, TIM_IT_Update) == SET){
-//        extiInterruptCount++;
-//        // 清除标志位
-//        TIM_ClearITPendingBit(TIM2, TIM_IT_Update);
-//    }
-//}
+void ____TIM2_IRQHandler(void){
+    /// TIM_IT_Update 代表 要看 哪个中断标志位
+    if(TIM_GetITStatus(TIM2, TIM_IT_Update) == SET){
+        extiInterruptCount++;
+        // 清除标志位
+        TIM_ClearITPendingBit(TIM2, TIM_IT_Update);
+    }
+}
 //
 //
 
@@ -110,5 +111,13 @@ uint16_t getExtiInterruptCount(){
 //    }
 //}
 
+
+void EXTI_Interrup_R_MAIN(){
+    EXTI_Interrup_R_Init();
+    while(1) {
+        OLED_ShowNum(1,1,getTIM2Count(), 5);
+        OLED_ShowNum(2,1,getExtiInterruptCount(), 5);
+    }
+}
 
 
