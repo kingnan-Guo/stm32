@@ -56,9 +56,9 @@ void vTASK1_TASK_NOTIFY(void *pvParameters){
             xTaskNotifyGive(TASK2_HANDLER_TASK_NOTIFY);
         }
         vTASK1_NUM++;
-        printf("vTASK1_TASK_NOTIFY %d\r\n", vTASK1_NUM);
+        printf("vTASK1 = %d\r\n", vTASK1_NUM);
         OLED_ShowNum(1, 8, vTASK1_NUM, 5);
-
+        // vTaskDelay(10);
         vTaskDelete(NULL);//
     }
 }
@@ -66,13 +66,13 @@ void vTASK1_TASK_NOTIFY(void *pvParameters){
 
 // 任务 2  接收 任务以 通知 的数据
 void vTASK2_TASK_NOTIFY(void *pvParameters){
-    printf("vTASK2_TASK_NOTIFY start \r\n");
+    printf("vTASK2 start \r\n");
     //vTaskDelay(1);
     int value;
     while (1) {
 
         // 接收 来自  task1  的 通知 分为 获取 多次 和 获取 一次
-        int type  = 0;
+        int type  = 1;
         if(type == 0){
             // 第一个参数 xClearCountOnExit 为 pdTRUE 时， 退出之前 清零 ， 不会影响 拿到的值； 只能获取 1 次；
             value = ulTaskNotifyTake(pdTRUE, portMAX_DELAY);
@@ -80,7 +80,8 @@ void vTASK2_TASK_NOTIFY(void *pvParameters){
             // 第一个参数 xClearCountOnExit 为 pdFALSE 时，退出之前 不清零 只 减一 ， 不会影响 拿到的值;可以 获取 10 次
             value = ulTaskNotifyTake(pdFALSE, portMAX_DELAY);
         }
-        printf("vTASK2_TASK_NOTIFY value = %d\r\n", value);
+        vTaskDelay(10);
+        printf("vTASK2 value = %d\r\n", value);
 
     }
 }
