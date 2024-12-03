@@ -133,6 +133,7 @@ include_directories(
         components/FreeRTOSTech/FREERTOS_RECURSIVE_MUTEX # 互斥信号 递归锁
         components/FreeRTOSTech/FREERTOS_EVENT_GROUP #事件组
         components/FreeRTOSTech/FREERTOS_EVENT_GROUP_SYNC # 同步点
+        components/FreeRTOSTech/FREERTOS_TASK_NOTIFY # 任务通知 轻量级 信号量
 
 
         restarComponets/DATA_REGISTER_EXPLORE # 探索 寄存器
