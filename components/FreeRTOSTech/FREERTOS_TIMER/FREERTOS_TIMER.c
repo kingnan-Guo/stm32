@@ -73,10 +73,10 @@ void myTimerCallbackFunction(TimerHandle_t xTimer){
 }
 
 //开始任务任务函数
-    void START_TASK_TIMER(void *pvParameters)
-    {
+void START_TASK_TIMER(void *pvParameters)
+{
 
-
+        // 创建定时器
         // 返回值成功 返回 句柄否则返回 NULL
         xTIMER_HANDLER = xTimerCreate(
            "pcTimer",   // 名称

@@ -18,21 +18,20 @@
 #include "EXTI_Interrupt.h"
 
 //任务优先级
-#define START_TASK_TIMER_DEBOUNCE_PRIO		            1
+#define START_TASK_TIMER_DEBOUNCE_PRIO		     1
 //任务堆栈大小
-#define START_STK_SIZE 		                    128
+#define START_STK_SIZE 		                     128
 
-#define vTASK1_TIMER_DEBOUNCE_uxStackDepth       512
+#define vTASK1_TIMER_DEBOUNCE_uxStackDepth       128
 #define vTASK1_TIMER_DEBOUNCE_uxPriority         3
-#define vTASK2_TIMER_DEBOUNCE_uxStackDepth       512
+#define vTASK2_TIMER_DEBOUNCE_uxStackDepth       128
 #define vTASK2_TIMER_DEBOUNCE_uxPriority         3
-#define vTASK3_TIMER_DEBOUNCE_uxStackDepth       512
-#define vTASK3_TIMER_DEBOUNCE_uxPriority         3
+
 //任务句柄
 TaskHandle_t    START_TASK_HANDLER_TIMER_DEBOUNCE;
 TaskHandle_t    TASK1_HANDLER_TIMER_DEBOUNCE;
 TaskHandle_t    TASK2_HANDLER_TIMER_DEBOUNCE;
-TaskHandle_t    DELETE_HANDLER_TIMER_DEBOUNCE;
+
 
 // 定时器 任务句柄
 static TimerHandle_t xTIMER_DEBOUNCE_HANDLER;
@@ -43,15 +42,14 @@ static int FlagTimer = 0;
 void vTASK1_TIMER_DEBOUNCE(void *pvParameters){
 
     //启动定时器 xTIMER_HANDLER
-    xTimerStart(xTIMER_DEBOUNCE_HANDLER, 0);// 启动定时器, 启动定时器 的本质 是把启动定时器的命令发到 定时器命令队列，由守护任务来启动。这个队列又可能满，所以 有可能需要等到 ， 0 不等待
+    //xTimerStart(xTIMER_DEBOUNCE_HANDLER, 0);// 启动定时器, 启动定时器 的本质 是把启动定时器的命令发到 定时器命令队列，由守护任务来启动。这个队列又可能满，所以 有可能需要等到 ， 0 不等待
     while (1) {
-        printf("vTASK1 running %d\r\n");
+        // printf("vTASK1 running %d\r\n");
     }
 }
 
 void vTASK2_TIMER_DEBOUNCE(void *pvParameters){
     while (1) {
-
     }
 }
 
@@ -65,10 +63,10 @@ void DEBOUNCETimerCallbackFunction(TimerHandle_t xTimer){
 }
 
 //开始任务任务函数
-    void START_TASK_TIMER_DEBOUNCE(void *pvParameters)
-    {
+void START_TASK_TIMER_DEBOUNCE(void *pvParameters)
+{
 
-
+        // 创建定时器
         // 返回值成功 返回 句柄否则返回 NULL
         xTIMER_DEBOUNCE_HANDLER = xTimerCreate(
            "pcTimer",   // 名称
@@ -100,7 +98,7 @@ void DEBOUNCETimerCallbackFunction(TimerHandle_t xTimer){
 }
 
 
-// TIM2 中断函数
+// TIM2 中断函数 如要使用 改成 TIM2_IRQHandler
 void ____TIM2_IRQHandler(void){
     /// TIM_IT_Update 代表 要看 哪个中断标志位
     if(TIM_GetITStatus(TIM2, TIM_IT_Update) == SET){
@@ -122,15 +120,5 @@ void FREERTOS_TIMER_DEBOUNCE_MAIN(){
     Serial_Init();
     RetargetInit(USART1);
     EXTI_Interrup_R_MAIN();// 外部中断
-//    xTaskCreate(
-//            START_TASK_TIMER_DEBOUNCE,
-//            "START_TASK_TIMER_DEBOUNCE",
-//            START_STK_SIZE,
-//            NULL,
-//            START_TASK_TIMER_DEBOUNCE_PRIO,
-//            &START_TASK_HANDLER_TIMER_DEBOUNCE
-//    );
-//    vTaskStartScheduler();// 开启任务调度器;
-
     START_TASK_TIMER_DEBOUNCE("pvParameters");
 }
