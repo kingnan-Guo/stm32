@@ -48,6 +48,10 @@ uint16_t getNum(){
     return  InterruptCount;
 }
 
+void addInterruptCount(){
+    InterruptCount++;
+}
+
 
 
 // 中断函数; 中断函数的名字都是固定的 ,每一个 中断通道 中断对应一个 中断函数,我的理解是  这个 中断发生后会到固定的地址去 找到函数 调用函数, 固定地址里可能储存的是 要调用 函数的地址
@@ -67,7 +71,7 @@ uint16_t getNum(){
 //}
 
 
-void EXTI9_5_IRQHandler(void) {
+void ____EXTI9_5_IRQHandler(void) {
     //判定  中断 标志位 是否 为 1
     if(EXTI_GetITStatus(EXTI_Line5) == SET){
         // 执行 中断 程序 start
@@ -84,6 +88,10 @@ void Interrupt_MAIN(){
     OLED_Init();
     Interrupt_Init();
     OLED_ShowNum(1, 1,  1, 5);
+
+    while (1){
+        OLED_ShowNum(3, 1,  getNum(), 5);
+    }
 }
 void Interrupt_WHILE(){
     OLED_ShowNum(3, 1,  getNum(), 5);

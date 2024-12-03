@@ -15,8 +15,8 @@
 #include "Serial.h"
 #include "retarget.h"
 #include "FREERTOS_TIMER_DEBOUNCE.h"
-#include "countSensor.h"
-
+//#include "countSensor.h"
+#include "customizeInterrupt.h"
 //任务优先级
 #define START_TASK_TIMER_DEBOUNCE_PRIO		     1
 //任务堆栈大小
@@ -42,14 +42,18 @@ static int FlagTimer = 0;
 void vTASK1_TIMER_DEBOUNCE(void *pvParameters){
 
     //启动定时器 xTIMER_HANDLER
-    //xTimerStart(xTIMER_DEBOUNCE_HANDLER, 0);// 启动定时器, 启动定时器 的本质 是把启动定时器的命令发到 定时器命令队列，由守护任务来启动。这个队列又可能满，所以 有可能需要等到 ， 0 不等待
+    xTimerStart(xTIMER_DEBOUNCE_HANDLER, 0);// 启动定时器, 启动定时器 的本质 是把启动定时器的命令发到 定时器命令队列，由守护任务来启动。这个队列又可能满，所以 有可能需要等到 ， 0 不等待
     while (1) {
-        // printf("vTASK1 running %d\r\n");
+        printf("vTASK1 running\r\n");
+        vTaskDelay(1000);
     }
+
 }
 
 void vTASK2_TIMER_DEBOUNCE(void *pvParameters){
     while (1) {
+        printf("vTASK2 running\r\n");
+        vTaskDelay(1000);
     }
 }
 
@@ -150,23 +154,42 @@ void _____TIM2_IRQHandler(void){
 
 
 
-void EXTI15_10_IRQHandler(void) {
+//void EXTI15_10_IRQHandler(void) {
+//    BaseType_t xHigherPriorityTaskWoken =  pdFALSE;//
+//    //判定  中断 标志位 是否 为 1
+//    if(EXTI_GetITStatus(EXTI_Line15) == SET){
+//        // 执行 中断 程序 start
+//        addCount();
+//
+//        printf("EXTI15_10_IRQHandler count \r\n");
+//        if (xTimerResetFromISR(xTIMER_DEBOUNCE_HANDLER, &xHigherPriorityTaskWoken) != pdPASS) {
+//            printf("Timer reset failed in ISR!\r\n");
+//        }
+//        //执行中断程序 end
+//        // 最后 清除中断 标志位， 如果不清除  会一直进入到中断程序 中
+//        EXTI_ClearITPendingBit(EXTI_Line15);
+//
+//    }
+//}
+
+void EXTI9_5_IRQHandler(void) {
     BaseType_t xHigherPriorityTaskWoken =  pdFALSE;//
     //判定  中断 标志位 是否 为 1
-    if(EXTI_GetITStatus(EXTI_Line15) == SET){
+    if(EXTI_GetITStatus(EXTI_Line5) == SET){
         // 执行 中断 程序 start
-        addCount();
+        addInterruptCount();
 
         printf("EXTI15_10_IRQHandler count \r\n");
+
 //        if (xTimerResetFromISR(xTIMER_DEBOUNCE_HANDLER, &xHigherPriorityTaskWoken) != pdPASS) {
 //            printf("Timer reset failed in ISR!\r\n");
 //        }
         //执行中断程序 end
         // 最后 清除中断 标志位， 如果不清除  会一直进入到中断程序 中
-        EXTI_ClearITPendingBit(EXTI_Line15);
-
+        EXTI_ClearITPendingBit(EXTI_Line5);
     }
 }
+
 
 
 
@@ -174,6 +197,6 @@ void EXTI15_10_IRQHandler(void) {
 void FREERTOS_TIMER_DEBOUNCE_MAIN(){
     Serial_Init();
     RetargetInit(USART1);
-    countSensor_Init_MAIN();// 外部中断
+    Interrupt_MAIN();
     START_TASK_TIMER_DEBOUNCE("pvParameters");
 }
