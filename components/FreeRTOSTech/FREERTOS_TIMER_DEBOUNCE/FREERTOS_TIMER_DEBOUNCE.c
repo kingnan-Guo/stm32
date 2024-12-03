@@ -15,6 +15,7 @@
 #include "Serial.h"
 #include "retarget.h"
 #include "FREERTOS_TIMER_DEBOUNCE.h"
+#include "EXTI_Interrupt.h"
 
 //任务优先级
 #define START_TASK_TIMER_DEBOUNCE_PRIO		            1
@@ -56,7 +57,7 @@ void vTASK2_TIMER_DEBOUNCE(void *pvParameters){
 
 
 // 定时器 回调
-// 当前项目  每隔 100 ms 运行一次
+// // 当前项目 由于 每一次进行 按键 操作后 电平抖动会 触发多次 中断，每一次中断 后 复位一次定时器，100ms 后 执行 回调函数
 void DEBOUNCETimerCallbackFunction(TimerHandle_t xTimer){
     static  int count = 0;
     FlagTimer = !FlagTimer;
@@ -72,7 +73,7 @@ void DEBOUNCETimerCallbackFunction(TimerHandle_t xTimer){
         xTIMER_DEBOUNCE_HANDLER = xTimerCreate(
            "pcTimer",   // 名称
            100,     // 间隔周期 tick 为单位
-           pdTRUE,       // pdTRUE 自动加载 pdFLASE 一次性
+           pdFALSE,       // pdTRUE 自动加载 pdFALSE 一次性
            NULL,            // 回调函数可使用此为参数，比如分辨是哪个定时器，也可以
            DEBOUNCETimerCallbackFunction  // 回调函数
 
@@ -99,10 +100,28 @@ void DEBOUNCETimerCallbackFunction(TimerHandle_t xTimer){
 }
 
 
+// TIM2 中断函数
+void ____TIM2_IRQHandler(void){
+    /// TIM_IT_Update 代表 要看 哪个中断标志位
+    if(TIM_GetITStatus(TIM2, TIM_IT_Update) == SET){
+        summationCount();
+
+
+        // 这里放置 定时器相关的 功能， 定时器消除 抖动
+        // 定时器 复位; 本质 是 往 定时器命令队列里 写入命令， 守护任务 会根据 复位的命令进行 复位操作 复位定时器
+        xTimerReset(xTIMER_DEBOUNCE_HANDLER, 0);//
+
+
+        // 清除标志位
+        TIM_ClearITPendingBit(TIM2, TIM_IT_Update);
+    }
+}
+
 
 void FREERTOS_TIMER_DEBOUNCE_MAIN(){
     Serial_Init();
     RetargetInit(USART1);
+    EXTI_Interrup_R_MAIN();// 外部中断
 //    xTaskCreate(
 //            START_TASK_TIMER_DEBOUNCE,
 //            "START_TASK_TIMER_DEBOUNCE",
