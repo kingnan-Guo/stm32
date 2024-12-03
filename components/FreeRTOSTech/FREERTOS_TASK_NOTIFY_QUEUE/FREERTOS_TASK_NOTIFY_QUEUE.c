@@ -53,7 +53,17 @@ void vTASK1_TASK_NOTIFY_QUEUE(void *pvParameters){
         }
         // 通知 TASK2  10次  会从 1 累加到 10
         for (int j = 0; j < 10; ++j) {
-            xTaskNotifyGive(TASK2_HANDLER_TASK_NOTIFY_QUEUE);
+
+            int type  = 0;
+            // xTaskToNotify : 要给谁传送数据, ulValue: 发送数据的 值, eAction : eSetValueWithOverwrite 覆盖 ， eSetValueWithoutOverwrite 不覆盖
+            if(type == 0){
+                // 不覆盖 task2 得到的值是 1
+                xTaskNotify(TASK2_HANDLER_TASK_NOTIFY_QUEUE, j, eSetValueWithoutOverwrite);
+            } else {
+                // 覆盖 后 得到的值 是 10
+                xTaskNotify(TASK2_HANDLER_TASK_NOTIFY_QUEUE, j, eSetValueWithOverwrite);
+            }
+
         }
         vTASK1_NUM++;
 
@@ -71,14 +81,16 @@ void vTASK2_TASK_NOTIFY_QUEUE(void *pvParameters){
     int value;
     while (1) {
 
-        // 接收 来自  task1  的 通知 分为 获取 多次 和 获取 一次
+        // 接收 来自  task1  的 通知
         int type  = 0;
         if(type == 0){
-            // 第一个参数 xClearCountOnExit 为 pdTRUE 时， 退出之前 清零 ， 不会影响 拿到的值； 只能获取 1 次；
-            value = ulTaskNotifyTake(pdTRUE, portMAX_DELAY);
+            // ulBitsToClearOnEntry: 调这个函数 是否要清除 某一位 0 不需要,
+            // ulBitsToClearOnExit:  退出 的时候 要不要清除 某一位 ， 0 不需要
+            // pulNotificationValue: 获取的值
+            // xTicksToWait: 等待多久
+            xTaskNotifyWait(0, 0, &value, portMAX_DELAY);
         } else {
-            // 第一个参数 xClearCountOnExit 为 pdFALSE 时，退出之前 不清零 只 减一 ， 不会影响 拿到的值;可以 获取 10 次
-            value = ulTaskNotifyTake(pdFALSE, portMAX_DELAY);
+
         }
         printf("vTASK2_TASK_NOTIFY_QUEUE value = %d\r\n", value);
 
