@@ -139,6 +139,7 @@ include_directories(
         components/FreeRTOSTech/FREERTOS_TIMER # 定时器
         components/FreeRTOSTech/FREERTOS_TIMER_DEBOUNCE # 定时器防抖
         components/FreeRTOSTech/FREERTOS_INTERRUPT # FreeRTOS 中断
+        components/FreeRTOSTech/FREERTOS_RESOURCE_MANAGEMENT # FreeRTOS 资源管理
 
 
         restarComponets/DATA_REGISTER_EXPLORE # 探索 寄存器
