@@ -59,7 +59,8 @@ void vTASK1_TASK_NOYIFY_EVENT_GROUP(void *pvParameters){
         // xEventGroupSetBits(EVENT_GROUP_CALC, 1<<0);// EVENT_GROUP_CALC 事件组 的  第 0 位
         xTaskNotify(TASK3_HANDLER_TASK_NOYIFY_EVENT_GROUP, (1<<0), eSetBits);// 使用 eSetBits 通知值 =  原来的值 | ulValue ， 按位或
 
-        printf("vTASK1 set bit 0 \r\n");
+        printf("vTASK1 bit 0 \r\n");
+        vTaskDelay(20);
         vTaskDelete(NULL);
     }
 }
@@ -80,7 +81,8 @@ void vTASK2_TASK_NOYIFY_EVENT_GROUP(void *pvParameters){
         //xEventGroupSetBits(EVENT_GROUP_CALC, 1<<1); // EVENT_GROUP_CALC 事件组 的  第 1 位
         xTaskNotify(TASK3_HANDLER_TASK_NOYIFY_EVENT_GROUP, (1<<1), eSetBits);// 通知 任务 3
 
-        printf("vTASK2 set bit 1 \r\n");
+        printf("vTASK2 bit 1 \r\n");
+        vTaskDelay(20);
         vTaskDelete(NULL);
     }
 }
@@ -111,7 +113,8 @@ void vTASK3_TASK_NOYIFY_EVENT_GROUP(void *pvParameters){
         );
         // 判断 bit0 bit1  是不是都发生了
         // if(bits & ((1<<0) | (1<<1))){
-        if((bits & 0x30) == 0x30){// 为啥？？
+        printf("bits %d  \r\n", bits);
+        if((bits & 0x03) == 0x03){// 为啥？？
             vTaskDelay(20);
             // 队列里 连续 取出两条数据
             xQueueReceive(xQueue_Handle, &val1, 0);
