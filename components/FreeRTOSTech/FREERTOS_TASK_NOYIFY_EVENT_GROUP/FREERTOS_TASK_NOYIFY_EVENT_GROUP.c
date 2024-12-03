@@ -57,10 +57,11 @@ void vTASK1_TASK_NOYIFY_EVENT_GROUP(void *pvParameters){
         }
         // 队列里插入数据
         xQueueSend(xQueue_Handle, &sum, 0);
-        // 设置 事件 0
 
+        // 设置 事件 0
         // xEventGroupSetBits(EVENT_GROUP_CALC, 1<<0);// EVENT_GROUP_CALC 事件组 的  第 0 位
         xTaskNotify(TASK3_HANDLER_TASK_NOYIFY_EVENT_GROUP, (1<<0), eSetBits);// 使用 eSetBits 通知值 =  原来的值 | ulValue ， 按位或
+        
         printf("vTASK1 set bit 0 \r\n");
         vTaskDelete(NULL);
     }
@@ -77,11 +78,11 @@ void vTASK2_TASK_NOYIFY_EVENT_GROUP(void *pvParameters){
         }
         // 队列里插入数据
         xQueueSend(xQueue_Handle, &dec, 0);
+
         // 设置 事件 1
-
         //xEventGroupSetBits(EVENT_GROUP_CALC, 1<<1); // EVENT_GROUP_CALC 事件组 的  第 1 位
-
         xTaskNotify(TASK3_HANDLER_TASK_NOYIFY_EVENT_GROUP, (1<<1), eSetBits);// 通知 任务 3
+
         printf("vTASK2 set bit 1 \r\n");
         vTaskDelete(NULL);
     }
