@@ -78,7 +78,7 @@ void vTASK1_TASK_NOTIFY_QUEUE(void *pvParameters){
 void vTASK2_TASK_NOTIFY_QUEUE(void *pvParameters){
     printf("vTASK2_TASK_NOTIFY_QUEUE start \r\n");
     //vTaskDelay(1);
-    int value;
+    uint32_t value;
     while (1) {
 
         // 接收 来自  task1  的 通知
