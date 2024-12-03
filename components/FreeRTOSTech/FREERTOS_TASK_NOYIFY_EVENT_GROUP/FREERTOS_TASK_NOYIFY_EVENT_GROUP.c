@@ -17,9 +17,6 @@
 #include "FREERTOS_TASK_NOYIFY_EVENT_GROUP.h"
 
 
-
-
-
 //任务优先级
 #define START_TASK_TASK_NOYIFY_EVENT_GROUP_PRIO		                1
 //任务堆栈大小
@@ -104,8 +101,6 @@ void vTASK3_TASK_NOYIFY_EVENT_GROUP(void *pvParameters){
         //         pdTRUE,// 是等待 两个都发生 还是 其中一个
         //         portMAX_DELAY// 等待时间长度, 最大长度
         // );
-
-
 
 
         xTaskNotifyWait(
