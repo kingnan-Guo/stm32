@@ -138,6 +138,7 @@ include_directories(
         components/FreeRTOSTech/FREERTOS_TASK_NOYIFY_EVENT_GROUP # 任务通知 轻量级 任务组
         components/FreeRTOSTech/FREERTOS_TIMER # 定时器
         components/FreeRTOSTech/FREERTOS_TIMER_DEBOUNCE # 定时器防抖
+        components/FreeRTOSTech/FREERTOS_INTERRUPT # FreeRTOS 中断
 
 
         restarComponets/DATA_REGISTER_EXPLORE # 探索 寄存器
