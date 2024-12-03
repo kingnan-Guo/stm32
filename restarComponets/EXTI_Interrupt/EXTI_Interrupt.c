@@ -14,7 +14,7 @@ void EXTI_Interrup_R_Init(){
     RCC_APB1PeriphClockCmd(RCC_APB1Periph_TIM2, ENABLE);// 刚才 这里 写的 有错误， 写成了 RCC_APB1PeriphResetCmd；这个 是用来 复位 外设的
 
     // 开启 GPIO 时钟
-    RCC_APB2PeriphClockCmd(RCC_APB2Periph_GPIOA, ENABLE);
+    RCC_APB2PeriphClockCmd(RCC_APB2Periph_GPIOC, ENABLE);
     // 初始化  GPIO
     GPIO_InitTypeDef GPIO_InitStruct;
     GPIO_InitStruct.GPIO_Mode = GPIO_Mode_IPU;// 上拉 输入
@@ -84,10 +84,10 @@ void  summationCount(){
 }
 
 
-void _______TIM2_IRQHandler(void){
+void TIM2_IRQHandler(void){
     /// TIM_IT_Update 代表 要看 哪个中断标志位
     if(TIM_GetITStatus(TIM2, TIM_IT_Update) == SET){
-        extiInterruptCount++;
+        summationCount();
         // 清除标志位
         TIM_ClearITPendingBit(TIM2, TIM_IT_Update);
     }
@@ -101,18 +101,6 @@ void _______TIM2_IRQHandler(void){
 
 // ===================
 
-//#include "EXTI_Interrupt.h"
-//// RCC_APB2Periph_GPIOA pin14 接口  下降沿触发
-//int main(void) {
-//    // 初始化 I2C 的引脚
-//    OLED_Init();
-//    EXTI_Interrup_R_Init();
-//
-//    while(1) {
-//        OLED_ShowNum(1,1,getTIM2Count(), 5);
-//        OLED_ShowNum(2,1,getExtiInterruptCount(), 5);
-//    }
-//}
 
 
 void EXTI_Interrup_R_MAIN(){
