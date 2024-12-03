@@ -107,6 +107,7 @@ void ____TIM2_IRQHandler(void){
 
         // 这里放置 定时器相关的 功能， 定时器消除 抖动
         // 定时器 复位; 本质 是 往 定时器命令队列里 写入命令， 守护任务 会根据 复位的命令进行 复位操作 复位定时器
+        // 中断中  不能等待
         xTimerReset(xTIMER_DEBOUNCE_HANDLER, 0);//这里的 时间是  ： 当前时间 + 超时时间（100ms）
 
 
@@ -114,6 +115,39 @@ void ____TIM2_IRQHandler(void){
         TIM_ClearITPendingBit(TIM2, TIM_IT_Update);
     }
 }
+
+
+// 中断中 要使用 函数 要加 ISR
+void _____TIM2_IRQHandler(void){
+    BaseType_t xHigherPriorityTaskWoken =  pdFALSE;//
+    /// TIM_IT_Update 代表 要看 哪个中断标志位
+    if(TIM_GetITStatus(TIM2, TIM_IT_Update) == SET){
+        summationCount();
+
+
+        // 这里放置 定时器相关的 功能， 定时器消除 抖动
+        // 定时器 复位; 本质 是 往 定时器命令队列里 写入命令， 守护任务 会根据 复位的命令进行 复位操作 复位定时器
+
+        // 在 xTimerResetFromISR 中，xHigherPriorityTaskWoken参数 传入到函数里 ，
+        // xTimerResetFromISR 的逻辑 是如果 遇到 需要调度 那么不会直接调度，而是 要记录，记录的标记 就是 xHigherPriorityTaskWoken
+        // xTimerResetFromISR 中一定不能是太长时间的 函数，当然也不会去等待， 如果可以写入那么运行 写入，
+        //          如果是队列相关的 写入 操作，当前如果是 队列满了，那么 不会等待，如果没有 满那么直接写入，入伙由 函数在等待 获取队列中的值 （比当前优先级大） 正常来说 是要开启调度器， 去执行获取的函数，
+        //          但是  ISR 不会 ，只会记录
+        // 所以 xHigherPriorityTaskWoken参数 是标记
+
+
+        xTimerResetFromISR(xTIMER_DEBOUNCE_HANDLER, &xHigherPriorityTaskWoken);//这里的 时间是  ： 当前时间 + 超时时间（100ms）
+
+        // 开启一个 低优先级的中断 进行任务调度， 不会影响 当前中断
+        // 如果 xHigherPriorityTaskWoken 为 true 那么 触发 调度，但是不会立刻 引起调度，这里的源码 是设置一个 中断，一会处理一下， 这个 TIM2的 中断 结束之后 才会 即刻 执行 执行 调度的中断，才会正真的调度
+        // 任何的调度不会 打断 中断
+        portYIELD_FROM_ISR(xHigherPriorityTaskWoken);
+
+        // 清除标志位
+        TIM_ClearITPendingBit(TIM2, TIM_IT_Update);
+    }
+}
+
 
 
 void FREERTOS_TIMER_DEBOUNCE_MAIN(){
