@@ -107,7 +107,7 @@ void ____TIM2_IRQHandler(void){
 
         // 这里放置 定时器相关的 功能， 定时器消除 抖动
         // 定时器 复位; 本质 是 往 定时器命令队列里 写入命令， 守护任务 会根据 复位的命令进行 复位操作 复位定时器
-        xTimerReset(xTIMER_DEBOUNCE_HANDLER, 0);//
+        xTimerReset(xTIMER_DEBOUNCE_HANDLER, 0);//这里的 时间是  ： 当前时间 + 超时时间（100ms）
 
 
         // 清除标志位
