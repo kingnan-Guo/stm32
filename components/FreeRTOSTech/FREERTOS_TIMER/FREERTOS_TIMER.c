@@ -7,6 +7,13 @@
 //任务 1 会 创建一个定时器，每隔 100ms 之后去打印信息
 //任务 2 优先级跟守护任务不一样，看看 定时器 会不会被其他 优先级的任务打断
 
+//===============
+// 这里 任务1 运行到 一半 的时候 ，如果这时 定时器时间到了，定时器 优先级 更高 ，所以 守护任务就会来执行 定时器的 回调函数
+// 所以 有可能   vTASK1 running 打印一半 例如 (vTASK1 ru),  就 开始打印 myTimerCallbackFunction count
+// ===========
+
+// 如果 任务1 的优先级 大于 守护任务优先级 （#define configTIMER_TASK_PRIORITY 31） ， 那么不会执行定时任务
+// 比如说 任务1 优先级 (vTASK1_TIMER_uxPriority) 31 . 守护任务 优先级 （configTIMER_TASK_PRIORITY） 2
 
 #include "stm32f10x.h"
 #include "OLED.h"
@@ -37,25 +44,30 @@ TaskHandle_t    DELETE_HANDLER_TIMER;
 // 定时器 任务句柄
 static TimerHandle_t xTIMER_HANDLER;
 
+static int FlagTimer = 0;
+
 // 任务1  里 创建定时器 ，并且 启动
 void vTASK1_TIMER(void *pvParameters){
 
     //启动定时器 xTIMER_HANDLER
     xTimerStart(xTIMER_HANDLER, 0);// 启动定时器, 启动定时器 的本质 是把启动定时器的命令发到 定时器命令队列，由守护任务来启动。这个队列又可能满，所以 有可能需要等到 ， 0 不等待
     while (1) {
-        printf("vTASK1 ing %d\r\n");
+        printf("vTASK1 running %d\r\n");
     }
 }
 
 void vTASK2_TIMER(void *pvParameters){
     while (1) {
+
     }
 }
 
 
 // 定时器 回调
+// 当前项目  每隔 100 ms 运行一次
 void myTimerCallbackFunction(TimerHandle_t xTimer){
     static  int count = 0;
+    FlagTimer = !FlagTimer;
     printf("myTimerCallbackFunction count = %d\r\n", count++);
 }
 

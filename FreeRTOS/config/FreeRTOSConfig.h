@@ -143,10 +143,10 @@ extern uint32_t SystemCoreClock;// 只是声明一下系统时钟 ，后面要�
  * FreeRTOS与软件定时器有关的配置选项 （在硬件定时器 上 做一些 补充）
  *  ==========================================================================================================
  */
-#define configUSE_TIMERS                         1                         // 1 为 1 时 启动软件定时器； 是由 任务来管理的 ，所以要配置 任务优先级
-#define configTIMER_TASK_PRIORITY                ( 2 )                     // 软件定时器 优先级 （在FreeRTOS 中 数字越到 优先级 越高，所以 2 算低优先级）
-#define configTIMER_QUEUE_LENGTH                 10                        // 软件定时器队列长度
-#define configTIMER_TASK_STACK_DEPTH             256                       // 软件定时器 任务 堆栈大小 ； 因为有任务 所以必须设置堆栈的大小
+#define configUSE_TIMERS                         1                         // 1 为 1 时 启动软件定时器； 是由 任务来管理的 ，所以要配置 任务优先级; 使用定时器 xTimerCreate()
+#define configTIMER_TASK_PRIORITY                ( configMAX_PRIORITIES - 1)  // 软件定时器 优先级 （在FreeRTOS 中 数字越到 优先级 越高，所以 2 算低优先级）; 所有 定时命令都是由 守护任务 来启动的 ，所以这里 配置 守护惹怒我优先级 一般配置 最高 优先级 configMAX_PRIORITIES
+#define configTIMER_QUEUE_LENGTH                 10                        // 软件定时器 队列长度 ，所有的定时器 命令 要发到在这个队列里
+#define configTIMER_TASK_STACK_DEPTH             256                       // 软件定时器 任务 堆栈大小 ； 因为有任务 所以必须设置堆栈的大小; 守护队列的栈的深度
 
 /** ==========================================================================================================
  * 可选函数 配置选项
