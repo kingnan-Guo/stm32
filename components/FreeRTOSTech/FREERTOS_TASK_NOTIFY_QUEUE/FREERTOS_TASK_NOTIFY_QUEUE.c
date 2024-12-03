@@ -52,22 +52,22 @@ void vTASK1_TASK_NOTIFY_QUEUE(void *pvParameters){
             OLED_ShowNum(1, 1, sum, 5);
         }
         // 通知 TASK2  10次  会从 1 累加到 10
-        for (int j = 0; j < 10; ++j) {
+        for (int j = 1; j < 10; j++) {
 
-            int type  = 0;
+            int type  = 1;
             // xTaskToNotify : 要给谁传送数据, ulValue: 发送数据的 值, eAction : eSetValueWithOverwrite 覆盖 ， eSetValueWithoutOverwrite 不覆盖
             if(type == 0){
                 // 不覆盖 task2 得到的值是 1
                 xTaskNotify(TASK2_HANDLER_TASK_NOTIFY_QUEUE, j, eSetValueWithoutOverwrite);
             } else {
-                // 覆盖 后 得到的值 是 10
+                // 覆盖 后 得到的值 是 9
                 xTaskNotify(TASK2_HANDLER_TASK_NOTIFY_QUEUE, j, eSetValueWithOverwrite);
             }
 
         }
         vTASK1_NUM++;
 
-        printf("vTASK1_TASK_NOTIFY_QUEUE %d\r\n", vTASK1_NUM);
+        printf("vTASK1 QUEUE %d\r\n", vTASK1_NUM);
         OLED_ShowNum(1, 8, vTASK1_NUM, 5);
         vTaskDelete(NULL);//
     }
@@ -76,7 +76,7 @@ void vTASK1_TASK_NOTIFY_QUEUE(void *pvParameters){
 
 // 任务 2  接收 任务以 通知 的数据
 void vTASK2_TASK_NOTIFY_QUEUE(void *pvParameters){
-    printf("vTASK2_TASK_NOTIFY_QUEUE start \r\n");
+    printf("vTASK2 QUEUE start \r\n");
     //vTaskDelay(1);
     uint32_t value;
     while (1) {
@@ -92,7 +92,7 @@ void vTASK2_TASK_NOTIFY_QUEUE(void *pvParameters){
         } else {
 
         }
-        printf("vTASK2_TASK_NOTIFY_QUEUE value = %d\r\n", value);
+        printf("vTASK2 QUEUE value = %d\r\n", value);
 
     }
 }
