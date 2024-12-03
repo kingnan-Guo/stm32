@@ -54,7 +54,7 @@ uint16_t getTime2InterruptCount(){
 }
 
 // 跟  restarComponets/EXTI_Interrupt/EXTI_Interrupt.c 和 components/Timer/Timer.c 的 中断函数 重复了 所以 ，这里注掉
-void TIM2_IRQHandler(void){
+void __________TIM2_IRQHandler(void){
     /// TIM_IT_Update 代表 要看 哪个中断标志位
     if(TIM_GetITStatus(TIM2, TIM_IT_Update) == SET){
         time2InterruptCount++;

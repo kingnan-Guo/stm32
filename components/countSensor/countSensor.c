@@ -10,6 +10,7 @@
  * 4、配置 EXTI
  */
 #include "stm32f10x.h"
+#include "OLED.h"
 uint16_t counsensor_count = 1;
 void countSensor_Init(void){
 
@@ -49,8 +50,8 @@ void countSensor_Init(void){
     NVIC_InitTypeDef NVIC_InitStructure;
     NVIC_InitStructure.NVIC_IRQChannel = EXTI15_10_IRQn;//指定 中断 通道开启 或 关闭
     NVIC_InitStructure.NVIC_IRQChannelCmd = ENABLE;//指定 中断 通道 是 使能 还是  失能
-    NVIC_InitStructure.NVIC_IRQChannelPreemptionPriority = 1;// 指定 所选通道的抢占 优先级
-    NVIC_InitStructure.NVIC_IRQChannelSubPriority = 1;// 指定 所选通道的  响应优先级
+    NVIC_InitStructure.NVIC_IRQChannelPreemptionPriority = 5;// 指定 所选通道的抢占 优先级
+    NVIC_InitStructure.NVIC_IRQChannelSubPriority = 0;// 指定 所选通道的  响应优先级
     NVIC_Init(&NVIC_InitStructure);
 
 
@@ -61,8 +62,13 @@ uint16_t getCount(void){
     return  counsensor_count;
 }
 
+
+void addCount(){
+    counsensor_count++;
+}
+
 //中断 函数  固定的名称
-void EXTI15_10_IRQHandler(void) {
+void ______EXTI15_10_IRQHandler(void) {
     //判定  中断 标志位 是否 为 1
     if(EXTI_GetITStatus(EXTI_Line15) == SET){
         // 执行 中断 程序 start
@@ -71,5 +77,13 @@ void EXTI15_10_IRQHandler(void) {
         // 最后 清除中断 标志位， 如果不清除  会一直进入到中断程序 中
         EXTI_ClearITPendingBit(EXTI_Line15);
 
+    }
+}
+
+void countSensor_Init_MAIN(){
+    countSensor_Init();
+    while(1) {
+        OLED_ShowNum(1, 1,  1,5);
+        OLED_ShowNum(3, 1,  getCount(),5);
     }
 }
