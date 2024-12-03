@@ -37,8 +37,7 @@ TaskHandle_t    TASK3_HANDLER_TASK_NOTIFY;
 TaskHandle_t    TASK4_HANDLER_TASK_NOTIFY;
 TaskHandle_t    DELETE_HANDLER_TASK_NOTIFY;
 
-static SemaphoreHandle_t xSEMAPHORE_HANDLE_COUNT;//信号量 句柄
-static SemaphoreHandle_t xSEMAPHORE_HANDLE_BIN;// 二进制 信号量 句柄
+
 
 static int sum = 0;
 static volatile int flagCalcEnd = 0;
@@ -57,7 +56,6 @@ void vTASK1_TASK_NOTIFY(void *pvParameters){
             xTaskNotifyGive(TASK2_HANDLER_TASK_NOTIFY);
         }
         vTASK1_NUM++;
-        // xSemaphoreGive(xSEMAPHORE_HANDLE_COUNT);// 信号量 的 give 函数
         printf("vTASK1_TASK_NOTIFY %d\r\n", vTASK1_NUM);
         OLED_ShowNum(1, 8, vTASK1_NUM, 5);
 
@@ -94,13 +92,6 @@ void vTASK2_TASK_NOTIFY(void *pvParameters){
 //开始任务任务函数
 void START_TASK_TASK_NOTIFY(void *pvParameters)
 {
-
-    // // 创建 计数型 信号量
-    // xSEMAPHORE_HANDLE_COUNT = xSemaphoreCreateCounting(10, 0);// 最大值 是 10， 初始值 是 0
-    // // 创建 二进制 信号量
-    // xSEMAPHORE_HANDLE_BIN = xSemaphoreCreateBinary();
-    // xSemaphoreGive(xSEMAPHORE_HANDLE_BIN);// 二进制信号量 默认 创建 是 0 ，所以这里传入 1
-
     xTaskCreate(
             vTASK1_TASK_NOTIFY,
             "Task1",
