@@ -57,7 +57,7 @@ void vTASK2_TIMER_DEBOUNCE(void *pvParameters){
 
 // 定时器 回调
 // 当前项目  每隔 100 ms 运行一次
-void myTimerCallbackFunction(TimerHandle_t xTimer){
+void DEBOUNCETimerCallbackFunction(TimerHandle_t xTimer){
     static  int count = 0;
     FlagTimer = !FlagTimer;
     printf("myTimerCallbackFunction count = %d\r\n", count++);
@@ -74,7 +74,7 @@ void myTimerCallbackFunction(TimerHandle_t xTimer){
            100,     // 间隔周期 tick 为单位
            pdTRUE,       // pdTRUE 自动加载 pdFLASE 一次性
            NULL,            // 回调函数可使用此为参数，比如分辨是哪个定时器，也可以
-           myTimerCallbackFunction  // 回调函数
+           DEBOUNCETimerCallbackFunction  // 回调函数
 
         );
 

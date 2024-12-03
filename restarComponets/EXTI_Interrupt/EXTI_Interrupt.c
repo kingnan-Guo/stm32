@@ -78,9 +78,13 @@ uint16_t getExtiInterruptCount(){
     return extiInterruptCount;
 }
 
+// 累加
+void  summationCount(){
+    extiInterruptCount++;
+}
 
 
-void ____TIM2_IRQHandler(void){
+void _______TIM2_IRQHandler(void){
     /// TIM_IT_Update 代表 要看 哪个中断标志位
     if(TIM_GetITStatus(TIM2, TIM_IT_Update) == SET){
         extiInterruptCount++;
@@ -88,8 +92,7 @@ void ____TIM2_IRQHandler(void){
         TIM_ClearITPendingBit(TIM2, TIM_IT_Update);
     }
 }
-//
-//
+
 
 
 

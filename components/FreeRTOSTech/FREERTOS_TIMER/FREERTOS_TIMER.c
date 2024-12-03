@@ -23,6 +23,7 @@
 #include "Serial.h"
 #include "retarget.h"
 #include "FREERTOS_TIMER.h"
+#include "EXTI_Interrupt.h"
 
 //任务优先级
 #define START_TASK_TIMER_PRIO		            1
@@ -50,9 +51,9 @@ static int FlagTimer = 0;
 void vTASK1_TIMER(void *pvParameters){
 
     //启动定时器 xTIMER_HANDLER
-    xTimerStart(xTIMER_HANDLER, 0);// 启动定时器, 启动定时器 的本质 是把启动定时器的命令发到 定时器命令队列，由守护任务来启动。这个队列又可能满，所以 有可能需要等到 ， 0 不等待
+    // xTimerStart(xTIMER_HANDLER, 0);// 启动定时器, 启动定时器 的本质 是把启动定时器的命令发到 定时器命令队列，由守护任务来启动。这个队列又可能满，所以 有可能需要等到 ， 0 不等待
     while (1) {
-        printf("vTASK1 running %d\r\n");
+        //printf("vTASK1 running %d\r\n");
     }
 }
 
@@ -64,11 +65,12 @@ void vTASK2_TIMER(void *pvParameters){
 
 
 // 定时器 回调
-// 当前项目  每隔 100 ms 运行一次
+// 当前项目 由于 每一次进行 按键 操作后 电平抖动会 触发多次 中断，每一次中断 后 复位一次定时器，100ms 后 执行 回调函数
 void myTimerCallbackFunction(TimerHandle_t xTimer){
     static  int count = 0;
     FlagTimer = !FlagTimer;
-    printf("myTimerCallbackFunction count = %d\r\n", count++);
+
+    printf("callback gpio key count = %d\r\n", count++);
 }
 
 //开始任务任务函数
@@ -80,7 +82,7 @@ void myTimerCallbackFunction(TimerHandle_t xTimer){
         xTIMER_HANDLER = xTimerCreate(
            "pcTimer",   // 名称
            100,     // 间隔周期 tick 为单位
-           pdTRUE,       // pdTRUE 自动加载 pdFLASE 一次性
+           pdFALSE,       // pdTRUE 自动加载 pdFALSE 一次性
            NULL,            // 回调函数可使用此为参数，比如分辨是哪个定时器，也可以
            myTimerCallbackFunction  // 回调函数
 
@@ -106,11 +108,32 @@ void myTimerCallbackFunction(TimerHandle_t xTimer){
     vTaskStartScheduler();// 开启任务调度器;
 }
 
+// TIM2 中断函数
+void ____TIM2_IRQHandler(void){
+    /// TIM_IT_Update 代表 要看 哪个中断标志位
+    if(TIM_GetITStatus(TIM2, TIM_IT_Update) == SET){
+        summationCount();
+
+
+        // 这里放置 定时器相关的 功能， 定时器消除 抖动
+        // 定时器 复位; 本质 是 往 定时器命令队列里 写入命令， 守护任务 会根据 复位的命令进行 复位操作 复位定时器
+        xTimerReset(xTIMER_HANDLER, 0);//
+
+
+        // 清除标志位
+        TIM_ClearITPendingBit(TIM2, TIM_IT_Update);
+    }
+}
+
+
+
 
 
 void FREERTOS_TIMER_MAIN(){
     Serial_Init();
     RetargetInit(USART1);
+
+    EXTI_Interrup_R_MAIN();// 外部中断
 //    xTaskCreate(
 //            START_TASK_TIMER,
 //            "START_TASK_TIMER",
