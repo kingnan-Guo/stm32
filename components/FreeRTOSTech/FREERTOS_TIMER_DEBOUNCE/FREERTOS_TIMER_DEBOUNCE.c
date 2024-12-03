@@ -117,7 +117,7 @@ void ____TIM2_IRQHandler(void){
 }
 
 
-// 中断中 要使用 函数 要加 ISR
+// 中断中 要使用 函数 要加 ISR ； 如要使用 改成 TIM2_IRQHandler
 void _____TIM2_IRQHandler(void){
     BaseType_t xHigherPriorityTaskWoken =  pdFALSE;//
     /// TIM_IT_Update 代表 要看 哪个中断标志位
