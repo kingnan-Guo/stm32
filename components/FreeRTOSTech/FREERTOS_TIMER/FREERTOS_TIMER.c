@@ -30,12 +30,11 @@
 //任务堆栈大小
 #define START_STK_SIZE 		                    128
 
-#define vTASK1_TIMER_uxStackDepth       512
+#define vTASK1_TIMER_uxStackDepth       1024
 #define vTASK1_TIMER_uxPriority         3
-#define vTASK2_TIMER_uxStackDepth       512
+#define vTASK2_TIMER_uxStackDepth       1024
 #define vTASK2_TIMER_uxPriority         3
-#define vTASK3_TIMER_uxStackDepth       512
-#define vTASK3_TIMER_uxPriority         3
+
 //任务句柄
 TaskHandle_t    START_TASK_HANDLER_TIMER;
 TaskHandle_t    TASK1_HANDLER_TIMER;
@@ -52,14 +51,17 @@ void vTASK1_TIMER(void *pvParameters){
 
     //启动定时器 xTIMER_HANDLER
     xTimerStart(xTIMER_HANDLER, 0);// 启动定时器, 启动定时器 的本质 是把启动定时器的命令发到 定时器命令队列，由守护任务来启动。这个队列又可能满，所以 有可能需要等到 ， 0 不等待
+//    OLED_ShowNum(1,1,1,5);
     while (1) {
-        printf("vTASK1 running %d\r\n");
+        printf("vTASK1 running\r\n");
+        vTaskDelay(1000);
     }
 }
 
 void vTASK2_TIMER(void *pvParameters){
     while (1) {
-
+        printf("vTASK2 running\r\n");
+        vTaskDelay(1000);
     }
 }
 
@@ -67,7 +69,7 @@ void vTASK2_TIMER(void *pvParameters){
 // 定时器 回调
 // 当前项目  每隔 100 ms 运行一次
 void myTimerCallbackFunction(TimerHandle_t xTimer){
-    static  int count = 0;
+    static int count = 0;
     FlagTimer = !FlagTimer;
     printf("myTimerCallbackFunction count = %d\r\n", count++);
 }
@@ -80,13 +82,16 @@ void START_TASK_TIMER(void *pvParameters)
         // 返回值成功 返回 句柄否则返回 NULL
         xTIMER_HANDLER = xTimerCreate(
            "pcTimer",   // 名称
-           100,     // 间隔周期 tick 为单位
+           1000,     // 间隔周期 tick 为单位
            pdTRUE,       // pdTRUE 自动加载 pdFLASE 一次性
            NULL,            // 回调函数可使用此为参数，比如分辨是哪个定时器，也可以
            myTimerCallbackFunction  // 回调函数
 
         );
-
+        if (xTIMER_HANDLER == NULL) {
+            printf("Failed to create timer\n");
+            return;  // 或者做一些错误处理
+        }
 
         xTaskCreate(
                 vTASK1_TIMER,
@@ -103,7 +108,7 @@ void START_TASK_TIMER(void *pvParameters)
                 "vTask2",// 传递给任务函数的参数
             vTASK2_TIMER_uxPriority,// 任务优先级 范围 0～ configMAX_PRIORITIES-1
             &TASK2_HANDLER_TIMER // 任务句柄，任务创建成功以后会返回次惹怒我的任务句柄， 这个 句柄其实就是任务的 任务堆栈，此参数 就用来保存这个任务句柄；其他API函数可能会使用到这个 句柄
-    );
+        );
     vTaskStartScheduler();// 开启任务调度器;
 }
 
@@ -112,15 +117,6 @@ void START_TASK_TIMER(void *pvParameters)
 void FREERTOS_TIMER_MAIN(){
     Serial_Init();
     RetargetInit(USART1);
-//    xTaskCreate(
-//            START_TASK_TIMER,
-//            "START_TASK_TIMER",
-//            START_STK_SIZE,
-//            NULL,
-//            START_TASK_TIMER_PRIO,
-//            &START_TASK_HANDLER_TIMER
-//    );
-//    vTaskStartScheduler();// 开启任务调度器;
 
     START_TASK_TIMER("pvParameters");
 }
