@@ -16,11 +16,12 @@
 //#include "FREERTOS_TIMER.h"
 #include "FREERTOS_TIMER_DEBOUNCE.h"
 
-//#include "EXTI_Interrupt.h"
+#include "EXTI_Interrupt.h"
 
 //#include "countSensor.h"
 
 #include "customizeInterrupt.h"
+#include "FREERTOS_STATISTICAL.h"
 int main(void) {
     OLED_Init();
 //    OLED_ShowNum(1,1,2,5);
@@ -36,12 +37,14 @@ int main(void) {
 //    FREERTOS_TASK_NOYIFY_EVENT_GROUP_MAIN();
 //    FREERTOS_TIMER_MAIN();
 
-    FREERTOS_TIMER_DEBOUNCE_MAIN();
+//    FREERTOS_TIMER_DEBOUNCE_MAIN();
 //    countSensor_Init_MAIN();
 
 
 //    EXTI_Interrup_R_MAIN();
 //    Interrupt_MAIN();
+
+    FREERTOS_STATISTICAL_MAIN();
 
 
 }

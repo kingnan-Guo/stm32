@@ -40,7 +40,7 @@ void EXTI_Interrup_R_Init(){
     // 由于要对 信号 进行采样 判定， 所以 使用 内部时钟的频率 作为采样的 频率， 而 TIM_ClockDivision 就是 将采样频率分频 划分，采样次数越多 精度越高，但是 延时 增加
     TIM_TimeBaseInitStruct.TIM_ClockDivision = TIM_CKD_DIV1;// 指定时钟划分频  TIM_CKD_DIV1 一分频，
     TIM_TimeBaseInitStruct.TIM_CounterMode = TIM_CounterMode_Up;// 计数 模式， 向上计数
-    TIM_TimeBaseInitStruct.TIM_Period = 10 -1 ;// 计数器 重装 器的值； 要在  0~ 65535 以内
+    TIM_TimeBaseInitStruct.TIM_Period = 2 -1 ;// 计数器 重装 器的值； 要在  0~ 65535 以内
     TIM_TimeBaseInitStruct.TIM_Prescaler = 1 - 1;// 预分频器 的值; 这里目的 是 定时 一秒钟；  要在 0~ 65535 以内
     TIM_TimeBaseInitStruct.TIM_RepetitionCounter = 0;// 指定重复计数器值； 高级计数器 才有的 给 0
     //配置时机 单元

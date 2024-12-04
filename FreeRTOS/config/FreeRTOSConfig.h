@@ -124,7 +124,9 @@ extern uint32_t SystemCoreClock;// 只是声明一下系统时钟 ，后面要�
  * FreeRTOS与运行时间和任务状态收集有关的配置选项
  *  ==========================================================================================================
  */
-#define configGENERATE_RUN_TIME_STATS	        0                       //为1时启用运行时间统计功能 ； 可以查看任务运行多久；（新增  未启用）
+#define configGENERATE_RUN_TIME_STATS	        1                       //为1时启用运行时间统计功能 ； 可以查看任务运行多久；（新增  未启用）
+
+
 #define configUSE_TRACE_FACILITY				1                       //为1启用可视化跟踪调试; 获取 系统所有的 任务状态 uxTaskGetSystemState
 #define configUSE_STATS_FORMATTING_FUNCTIONS	1                       //与宏 configUSE_TRACE_FACILITY 同时为1时会编译下面3个函数 prvWriteNameToBuffer(),vTaskList(), vTaskGetRunTimeStats() ；  （新增  启用）
 
@@ -246,5 +248,7 @@ standard names. */
 #define INCLUDE_xTaskGetHandle          1// 根据 任务 名称 获取 任务句柄的 Handle : xTaskGetHandle
 
 
-
+#include "EXTI_Interrupt.h"
+#define portCONFIGURE_TIMER_FOR_RUN_TIME_STATS    EXTI_Interrup_R_Init
+#define portGET_RUN_TIME_COUNTER_VALUE           getExtiInterruptCount
 #endif /* FREERTOS_CONFIG_H */
