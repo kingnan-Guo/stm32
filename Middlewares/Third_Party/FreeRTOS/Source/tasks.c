@@ -2857,6 +2857,8 @@ void vTaskSwitchContext( void )
 
 		#if ( configGENERATE_RUN_TIME_STATS == 1 )
 		{
+                // 如果定义宏   portALT_GET_RUN_TIME_COUNTER_VALUE 那么会有 函数要定义，
+                // 作用是 获取 总的运行时间, 这里要得到的是 要用更快的定时器 得到总的运行时间，除此之外还要 初始化 定时器
 				#ifdef portALT_GET_RUN_TIME_COUNTER_VALUE
 					portALT_GET_RUN_TIME_COUNTER_VALUE( ulTotalRunTime );
 				#else
@@ -2870,6 +2872,7 @@ void vTaskSwitchContext( void )
 				overflows.  The guard against negative values is to protect
 				against suspect run time stat counter implementations - which
 				are provided by the application, not the kernel. */
+                   // 这里 总的 运行时间  ulTotalRunTime  减去 切换时 切入记录的时间，累加进  ulRunTimeCounter 时间中
 				if( ulTotalRunTime > ulTaskSwitchedInTime )
 				{
 					pxCurrentTCB->ulRunTimeCounter += ( ulTotalRunTime - ulTaskSwitchedInTime );

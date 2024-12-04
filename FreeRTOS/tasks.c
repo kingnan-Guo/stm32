@@ -6301,16 +6301,16 @@ static void prvCheckTasksWaitingTermination( void )
 
 #endif /* configUSE_TRACE_FACILITY */
 /*-----------------------------------------------------------*/
-
+// 空闲函数
 #if ( ( configUSE_TRACE_FACILITY == 1 ) || ( INCLUDE_uxTaskGetStackHighWaterMark == 1 ) || ( INCLUDE_uxTaskGetStackHighWaterMark2 == 1 ) )
 
     static configSTACK_DEPTH_TYPE prvTaskCheckFreeStackSpace( const uint8_t * pucStackByte )
     {
         configSTACK_DEPTH_TYPE uxCount = 0U;
-
-        while( *pucStackByte == ( uint8_t ) tskSTACK_FILL_BYTE )
+        // 如果 等于 0xA5 就 执行 while 循环 ，向上查找，统计 0xA5的数量，最终返回 (字节数 / 4)
+        while( *pucStackByte == ( uint8_t ) tskSTACK_FILL_BYTE )// tskSTACK_FILL_BYTE 是 0xA5
         {
-            pucStackByte -= portSTACK_GROWTH;
+            pucStackByte -= portSTACK_GROWTH;// portSTACK_GROWTH 为 -1
             uxCount++;
         }
 
@@ -6376,11 +6376,11 @@ static void prvCheckTasksWaitingTermination( void )
 
         traceENTER_uxTaskGetStackHighWaterMark( xTask );
 
-        pxTCB = prvGetTCBFromHandle( xTask );
+        pxTCB = prvGetTCBFromHandle( xTask );// 根据 传入的指针获得到一个 TCB 结构体
 
         #if portSTACK_GROWTH < 0
         {
-            pucEndOfStack = ( uint8_t * ) pxTCB->pxStack;
+            pucEndOfStack = ( uint8_t * ) pxTCB->pxStack;// 栈底
         }
         #else
         {
@@ -6388,7 +6388,7 @@ static void prvCheckTasksWaitingTermination( void )
         }
         #endif
 
-        uxReturn = ( UBaseType_t ) prvTaskCheckFreeStackSpace( pucEndOfStack );
+        uxReturn = ( UBaseType_t ) prvTaskCheckFreeStackSpace( pucEndOfStack );// 空闲函数
 
         traceRETURN_uxTaskGetStackHighWaterMark( uxReturn );
 
