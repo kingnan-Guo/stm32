@@ -179,21 +179,32 @@ static UBaseType_t uxCriticalNesting = 0xaaaaaaaa;
 /*
  * See header file for description.
  */
+
+
+
+
+
+
+
+
+
+
 StackType_t * pxPortInitialiseStack( StackType_t * pxTopOfStack,
                                      TaskFunction_t pxCode,
                                      void * pvParameters )
 {
+    /* 通过模拟上下文切换中断所创建的栈帧来初始化任务的栈。 */
     /* Simulate the stack frame as it would be created by a context switch
      * interrupt. */
-    pxTopOfStack--;                                                      /* Offset added to account for the way the MCU uses the stack on entry/exit of interrupts. */
-    *pxTopOfStack = portINITIAL_XPSR;                                    /* xPSR */
-    pxTopOfStack--;
-    *pxTopOfStack = ( ( StackType_t ) pxCode ) & portSTART_ADDRESS_MASK; /* PC */
-    pxTopOfStack--;
-    *pxTopOfStack = ( StackType_t ) portTASK_RETURN_ADDRESS;             /* LR */
-    pxTopOfStack -= 5;                                                   /* R12, R3, R2 and R1. */
-    *pxTopOfStack = ( StackType_t ) pvParameters;                        /* R0 */
-    pxTopOfStack -= 8;                                                   /* R11, R10, R9, R8, R7, R6, R5 and R4. */
+    pxTopOfStack--;                                                      /* Offset added to account for the way the MCU uses the stack on entry/exit of interrupts. */  /* 将栈顶指针向下移动一个位置，适应MCU在进入/退出中断时使用的栈。 */
+    *pxTopOfStack = portINITIAL_XPSR;                                    /* xPSR */                                                                                     /* 设置 xPSR 寄存器的初始值，表示程序状态。 */
+    pxTopOfStack--;                                                                                                                                                     /* 将栈顶指针向下移动一个位置，为下一项准备空间。 */
+    *pxTopOfStack = ( ( StackType_t ) pxCode ) & portSTART_ADDRESS_MASK; /* PC */                                                                                        /* 设置程序计数器 (PC)，即任务的启动地址。  注意使用 portSTART_ADDRESS_MASK 确保地址对齐。 */ // 是用于处理任务起始地址的一种方式，通过位掩码确保在处理器调用一个任务的函数入口时，该地址是对齐的并且是有效的。在实现任务切换或上下文切换时，使用这样的掩码可以增强系统的稳定性和可靠性
+    pxTopOfStack--;                                                                                                                                                          /* 将栈顶指针向下移动一个位置，为LR准备空间。 */
+    *pxTopOfStack = ( StackType_t ) portTASK_RETURN_ADDRESS;             /* LR */                                                                                       /* 设置链接寄存器 (LR)，用于从任务中返回到调度器。 */
+    pxTopOfStack -= 5;                                                   /* R12, R3, R2 and R1. */                                                                           /* 向下移动5个位置，为R12, R3, R2 和 R1 留出空间。 */
+    *pxTopOfStack = ( StackType_t ) pvParameters;                        /* R0 */                                                                                       /* 设置函数参数 (R0)，传递给任务的参数。 */
+    pxTopOfStack -= 8;                                                   /* R11, R10, R9, R8, R7, R6, R5 and R4. */                                                     /* 向下移动8个位置，为R11, R10, R9, R8, R7, R6, R5 和 R4 留出空间。 */
 
     return pxTopOfStack;
 }
@@ -248,23 +259,23 @@ void vPortSVCHandler( void )
 static void prvPortStartFirstTask( void )
 {
     __asm volatile (
-        " ldr r0, =0xE000ED08   \n" /* Use the NVIC offset register to locate the stack. */
-        " ldr r0, [r0]          \n"
-        " ldr r0, [r0]          \n"
-        " msr msp, r0           \n" /* Set the msp back to the start of the stack. */
-        " cpsie i               \n" /* Globally enable interrupts. */
-        " cpsie f               \n"
-        " dsb                   \n"
-        " isb                   \n"
-        " svc 0                 \n" /* System call to start first task. */
-        " nop                   \n"
-        " .ltorg                \n"
+        " ldr r0, =0xE000ED08   \n" /* Use the NVIC offset register to locate the stack. */ /* 使用 NVIC 偏移寄存器地址获取堆栈指针的起始地址。 */
+        " ldr r0, [r0]          \n"                                                         /* 从 NVIC 偏移寄存器中加载值到 r0。 */
+        " ldr r0, [r0]          \n"                                                         /* 再次从 r0 指向的地址中加载堆栈顶地址到 r0（通常是 MSP 的值）。 */
+        " msr msp, r0           \n" /* Set the msp back to the start of the stack. */       /* 将 msp（主堆栈指针）寄存器设置为堆栈的起始地址。 */
+        " cpsie i               \n" /* Globally enable interrupts. */                       /* 使能所有中断（IRQ）。 */
+        " cpsie f               \n"                                                         /* 使能所有快速中断（FIQ），在 FreeRTOS 中可能不常用。 */
+        " dsb                   \n"                                                         /* 数据同步屏障，确保所有先前的内存操作完成。 */
+        " isb                   \n"                                                         /* 指令同步屏障，确保所有之后的指令在当前指令执行完成后执行。 */
+        " svc 0                 \n" /* System call to start first task. */                  /* 发起系统调用，将控制权转移到第一个任务。 */
+        " nop                   \n"                                                         /* 无操作指令，用于占位，确保 svc 后有指令并避免直接跳转到错误地址。 */
+        " .ltorg                \n"                                                         /* 用于处理文字常量，确保常量正确定位。 */
         );
 }
 /*-----------------------------------------------------------*/
 
 /*
- * See header file for description.
+ * See header file for description. 启动调度器
  */
 BaseType_t xPortStartScheduler( void )
 {
@@ -394,13 +405,13 @@ BaseType_t xPortStartScheduler( void )
 
     /* Start the timer that generates the tick ISR.  Interrupts are disabled
      * here already. */
-    vPortSetupTimerInterrupt();
+    vPortSetupTimerInterrupt();//配置系统时钟，使用节拍中断, 为 FreeRTOS 提供 系统节拍时钟， 实现任务调度和系统节拍控制的关键
 
     /* Initialise the critical nesting count ready for the first task. */
-    uxCriticalNesting = 0;
+    uxCriticalNesting = 0;// 用于管理临界区的计数器。它的作用是确保在进入临界区时的嵌套调用能够正确地被处理，以维护系统的中断保护机制
 
     /* Start the first task. */
-    prvPortStartFirstTask();
+    prvPortStartFirstTask();// 主要作用是启动第一个任务并进行初始的上下文切换
 
     /* Should never get here as the tasks will now be executing!  Call the task
      * exit error function to prevent compiler warnings about a static function
@@ -408,8 +419,8 @@ BaseType_t xPortStartScheduler( void )
      * functionality by defining configTASK_RETURN_ADDRESS.  Call
      * vTaskSwitchContext() so link time optimisation does not remove the
      * symbol. */
-    vTaskSwitchContext();
-    prvTaskExitError();
+    vTaskSwitchContext();// 主要功能是根据调度算法（如优先级调度）选择下一个要执行的任务。它利用系统的任务就绪列表来找出高优先级且就绪的任务
+    prvTaskExitError();// 添加判断
 
     /* Should not get here! */
     return 0;
@@ -758,8 +769,9 @@ __attribute__( ( weak ) ) void vPortSetupTimerInterrupt( void )
     portNVIC_SYSTICK_CURRENT_VALUE_REG = 0UL;
 
     /* Configure SysTick to interrupt at the requested rate. */
-    portNVIC_SYSTICK_LOAD_REG = ( configSYSTICK_CLOCK_HZ / configTICK_RATE_HZ ) - 1UL;
-    portNVIC_SYSTICK_CTRL_REG = ( portNVIC_SYSTICK_CLK_BIT_CONFIG | portNVIC_SYSTICK_INT_BIT | portNVIC_SYSTICK_ENABLE_BIT );
+    // 下面是 滴答定时器的 寄存器
+    portNVIC_SYSTICK_LOAD_REG = ( configSYSTICK_CLOCK_HZ / configTICK_RATE_HZ ) - 1UL;// 重装载值 ; configSYSTICK_CLOCK_HZ 72MHZ
+    portNVIC_SYSTICK_CTRL_REG = ( portNVIC_SYSTICK_CLK_BIT_CONFIG | portNVIC_SYSTICK_INT_BIT | portNVIC_SYSTICK_ENABLE_BIT );// 控制寄存器； portNVIC_SYSTICK_CLK_BIT_CONFIG 使能
 }
 /*-----------------------------------------------------------*/
 
