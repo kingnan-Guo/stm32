@@ -94,7 +94,7 @@ typedef unsigned long    UBaseType_t;
     }
 
 #define portNVIC_INT_CTRL_REG     ( *( ( volatile uint32_t * ) 0xe000ed04 ) )
-#define portNVIC_PENDSVSET_BIT    ( 1UL << 28UL )
+#define portNVIC_PENDSVSET_BIT    ( 1UL << 28UL ) // ICSR bit28 置 1
 #define portEND_SWITCHING_ISR( xSwitchRequired ) \
     do                                           \
     {                                            \

@@ -156,7 +156,7 @@
     #define configIDLE_TASK_NAME    "IDLE"
 #endif
 
-#if ( configUSE_PORT_OPTIMISED_TASK_SELECTION == 0 )
+#if ( configUSE_PORT_OPTIMISED_TASK_SELECTION == 0 )// 使用这个宏 判断 使用通用方法 还是 硬件方法
 
 /* If configUSE_PORT_OPTIMISED_TASK_SELECTION is 0 then task selection is
  * performed in a generic way that is not optimised to any particular
@@ -175,12 +175,12 @@
 /*-----------------------------------------------------------*/
 
     #if ( configNUMBER_OF_CORES == 1 )
-        #define taskSELECT_HIGHEST_PRIORITY_TASK()                                       \
+        #define taskSELECT_HIGHEST_PRIORITY_TASK()                                       \      /** 选择最高优先级*/
     do {                                                                                 \
-        UBaseType_t uxTopPriority = uxTopReadyPriority;                                  \
+        UBaseType_t uxTopPriority = uxTopReadyPriority;                                  \          /** 获取 最高优先级的 置*/
                                                                                          \
         /* Find the highest priority queue that contains ready tasks. */                 \
-        while( listLIST_IS_EMPTY( &( pxReadyTasksLists[ uxTopPriority ] ) ) != pdFALSE ) \
+        while( listLIST_IS_EMPTY( &( pxReadyTasksLists[ uxTopPriority ] ) ) != pdFALSE ) \           /** 在 pxReadyTasksLists 中 找到 uxTopPriority 的队列， 但是要判断如果当前优先级 为 空 那么 就判断 比当前 优先级低 一个优先级 是否有 */
         {                                                                                \
             configASSERT( uxTopPriority );                                               \
             --uxTopPriority;                                                             \
@@ -219,9 +219,16 @@
  * portGET_HIGHEST_PRIORITY( uxTopPriority, uxTopReadyPriority );：
  *          这个宏调用是用于从系统的就绪任务列表中获取最高优先级的任务。uxTopPriority 将被设置为当前的最高优先级。
  *          uxTopReadyPriority 可能是指向当前优先级的一部分，具体取决于使用的调度器实现
+ *
+ *  pxReadyTasksLists 就绪态列表 ，在 就绪态列表中找到 对应的 优先级 uxTopPriority
  *  listGET_OWNER_OF_NEXT_ENTRY
  *          当前最高优先级的就绪任务列表中获取下一个任务。pxCurrentTCB 将被更新为该任务的控制块（Task Control Block，TCB）。
  *          这行代码的运行意味着系统将调度到这个新的任务
+ *
+ *          从某一个 列表 （pxReadyTasksLists[ uxTopPriority ] ） 中取出 第一个列表项， 列表 项中保存了 任务的控制块，
+ *          将任务控制块保存到   pxCurrentTCB  中
+ *
+ *          listGET_OWNER_OF_NEXT_ENTRY 中是对列表操作的方法， pxIndex->pxNext 不断取出下一个，因为是环形 ，这里每一个列表项都是保存着 同一个 优先级的任务
  */
     #define taskSELECT_HIGHEST_PRIORITY_TASK()                                                  \
     do {                                                                                        \
@@ -472,7 +479,7 @@ typedef tskTCB TCB_t;
  * xDelayedTaskList1 and xDelayedTaskList2 could be moved to function scope but
  * doing so breaks some kernel aware debuggers and debuggers that rely on removing
  * the static qualifier. */
-PRIVILEGED_DATA static List_t pxReadyTasksLists[ configMAX_PRIORITIES ]; /**< Prioritised ready tasks. */
+PRIVILEGED_DATA static List_t pxReadyTasksLists[ configMAX_PRIORITIES ]; /**< Prioritised ready tasks. */ // 就绪列表 中有  32 个元素， 每个元素 是一个 列表， 列表中包含 同等优先级的 列表项
 PRIVILEGED_DATA static List_t xDelayedTaskList1;                         /**< Delayed tasks. */
 PRIVILEGED_DATA static List_t xDelayedTaskList2;                         /**< Delayed tasks (two lists are used - one for delays that have overflowed the current tick count. */
 PRIVILEGED_DATA static List_t * volatile pxDelayedTaskList;              /**< Points to the delayed task list currently being used. */
@@ -5098,7 +5105,7 @@ BaseType_t xTaskIncrementTick( void )
     {
         traceENTER_vTaskSwitchContext();
 
-        if( uxSchedulerSuspended != ( UBaseType_t ) 0U )
+        if( uxSchedulerSuspended != ( UBaseType_t ) 0U )// 首先 判断任务是否挂起
         {
             /* The scheduler is currently suspended - do not allow a context
              * switch. */
@@ -5106,7 +5113,7 @@ BaseType_t xTaskIncrementTick( void )
         }
         else
         {
-            xYieldPendings[ 0 ] = pdFALSE;
+            xYieldPendings[ 0 ] = pdFALSE;//
             traceTASK_SWITCHED_OUT();
             // 记录任务 运行时间 ，要使用的话 要定义相关宏
             #if ( configGENERATE_RUN_TIME_STATS == 1 )
@@ -5138,7 +5145,7 @@ BaseType_t xTaskIncrementTick( void )
             #endif /* configGENERATE_RUN_TIME_STATS */
 
             /* Check for stack overflow, if configured. */
-            taskCHECK_FOR_STACK_OVERFLOW();
+            taskCHECK_FOR_STACK_OVERFLOW();// 检查堆栈 是否溢出
 
             /* Before the currently running task is switched out, save its errno. */
             #if ( configUSE_POSIX_ERRNO == 1 )

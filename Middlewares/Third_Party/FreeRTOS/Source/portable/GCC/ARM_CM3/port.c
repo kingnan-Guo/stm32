@@ -130,7 +130,7 @@ static void prvTaskExitError( void );
 
 /* Each task maintains its own interrupt status in the critical nesting
 variable. */
-static UBaseType_t uxCriticalNesting = 0xaaaaaaaa;
+static UBaseType_t uxCriticalNesting = 0xaaaaaaaa;// 栈顶置针
 
 /*
  * The number of SysTick increments that make up one tick period.
@@ -386,39 +386,48 @@ void vPortExitCritical( void )
 }
 /*-----------------------------------------------------------*/
 
+
+// 执行任务 的时候 有两个 置针 msp 和 psp
 void xPortPendSVHandler( void )
 {
 	/* This is a naked function. */
-
 	__asm volatile
 	(
-	"	mrs r0, psp							\n"
-	"	isb									\n"
+    // 保存当前任务的上下文
+	"	mrs r0, psp							\n"                                                                         // 获取当前任务的堆栈指针 (PSP - Process Stack Pointer)，存入 R0
+	"	isb									\n"                                                                         // 防止指令执行顺序的乱序优化，确保 psp 的值已被正确读取
 	"										\n"
-	"	ldr	r3, pxCurrentTCBConst			\n" /* Get the location of the current TCB. */
-	"	ldr	r2, [r3]						\n"
+    // 获取当前任务的 TCB（任务控制块）地址
+	"	ldr	r3, pxCurrentTCBConst			\n" /* Get the location of the current TCB. */                              // 加载 pxCurrentTCB（当前任务的控制块指针变量地址）到 R3
+	"	ldr	r2, [r3]						\n"                                                                         // 加载 pxCurrentTCB 的值（当前任务控制块地址）到 R2
 	"										\n"
-	"	stmdb r0!, {r4-r11}					\n" /* Save the remaining registers. */
-	"	str r0, [r2]						\n" /* Save the new top of stack into the first member of the TCB. */
+    // 保存非易失性寄存器到当前任务堆栈
+	"	stmdb r0!, {r4-r11}					\n" /* Save the remaining registers. */                                     // 将 R4-R11 压栈，保存当前任务的非易失性寄存器
+	"	str r0, [r2]						\n" /* Save the new top of stack into the first member of the TCB. */       // 更新当前任务控制块中保存的任务堆栈指针 (pxCurrentTCB->topOfStack = R0)
 	"										\n"
-	"	stmdb sp!, {r3, r14}				\n"
-	"	mov r0, %0							\n"
-	"	msr basepri, r0						\n"
-	"	bl vTaskSwitchContext				\n"
-	"	mov r0, #0							\n"
-	"	msr basepri, r0						\n"
-	"	ldmia sp!, {r3, r14}				\n"
+    // 切换到新任务前，保护临时寄存器
+	"	stmdb sp!, {r3, r14}				\n"                                                                         // 保存 R3 和返回地址 (LR) 到主堆栈
+	"	mov r0, %0							\n"                                                                         // 将 `configMAX_SYSCALL_INTERRUPT_PRIORITY` 载入 R0
+	"	msr basepri, r0						\n"                                                                         // 设置中断屏蔽优先级，防止高优先级中断打断任务切换
+	"	bl vTaskSwitchContext				\n"                                                                         // 调用 FreeRTOS 的任务切换函数，选择下一个要运行的任务
+	"	mov r0, #0							\n"                                                                         // 清除中断屏蔽
+	"	msr basepri, r0						\n"                                                                         // 恢复全局中断
+    // 恢复之前保存的临时寄存器
+	"	ldmia sp!, {r3, r14}				\n"                                                                         // 恢复 R3 和返回地址 (LR)
 	"										\n" /* Restore the context, including the critical nesting count. */
-	"	ldr r1, [r3]						\n"
-	"	ldr r0, [r1]						\n" /* The first item in pxCurrentTCB is the task top of stack. */
-	"	ldmia r0!, {r4-r11}					\n" /* Pop the registers. */
-	"	msr psp, r0							\n"
-	"	isb									\n"
-	"	bx r14								\n"
+    // 恢复下一个任务的上下文
+	"	ldr r1, [r3]						\n"                                                                         // 加载 pxCurrentTCB 的值（新任务控制块地址）到 R1
+	"	ldr r0, [r1]						\n" /* The first item in pxCurrentTCB is the task top of stack. */          // 加载新任务的堆栈指针 (pxCurrentTCB->topOfStack) 到 R0
+	"	ldmia r0!, {r4-r11}					\n" /* Pop the registers. */                                                // 从新任务堆栈中弹出 R4-R11，恢复非易失性寄存器
+	"	msr psp, r0							\n"                                                                         // 更新 PSP，指向新任务的堆栈
+	"	isb									\n"                                                                         // 确保 PSP 已正确加载
+    // 返回到新任务的执行位置
+	"	bx r14								\n"                                                                         // 返回到新任务的程序计数器 (通过 LR 跳转)
 	"										\n"
-	"	.align 4							\n"
-	"pxCurrentTCBConst: .word pxCurrentTCB	\n"
-	::"i"(configMAX_SYSCALL_INTERRUPT_PRIORITY)
+    // pxCurrentTCB 地址常量
+	"	.align 4							\n"                                                                         // 保证 pxCurrentTCBConst 地址对齐
+	"pxCurrentTCBConst: .word pxCurrentTCB	\n"                                                                         // 定义 pxCurrentTCB 的地址常量
+	::"i"(configMAX_SYSCALL_INTERRUPT_PRIORITY)                                                                         // 将 `configMAX_SYSCALL_INTERRUPT_PRIORITY` 作为输入常量
 	);
 }
 /*-----------------------------------------------------------*/

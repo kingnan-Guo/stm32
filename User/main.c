@@ -24,7 +24,7 @@
 #include "FREERTOS_STATISTICAL.h"
 int main(void) {
     OLED_Init();
-//    OLED_ShowNum(1,1,2,5);
+    OLED_ShowNum(1,1,2,5);
 //    FREERTOS_MUTEX_MAIN();
 //    FREERTOS_SEMAPHORE_MAIN();
 //    FREERTOS_MUTEX_PRIORITY_INVERSION_MAIN();
