@@ -152,7 +152,7 @@ add_definitions(-DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB)
 
 #file(GLOB_RECURSE SOURCES "Core/*.*" "Drivers/*.*")
 #官网版
-file(GLOB_RECURSE SOURCES "startup/*.*" "Libraries/*.*" "User/*.*" "components/*.*" "system/*.*" "restarComponets/*.*")
+file(GLOB_RECURSE SOURCES "Startup/*.*" "Libraries/*.*" "User/*.*" "components/*.*" "system/*.*" "restarComponets/*.*")
 
 
 # RTOS
