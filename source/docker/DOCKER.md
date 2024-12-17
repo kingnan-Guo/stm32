@@ -32,8 +32,7 @@
 使用以下命令添加 Docker 官方仓库：
     sudo yum-config-manager --add-repo https://download.docker.com/linux/centos/docker-ce.repo
 
- 发现会失败 ，所以要添加代理
-
+添加代理
 # 设置docker镜像源
     yum-config-manager \
     --add-repo \
@@ -69,9 +68,15 @@ sudo systemctl start docker
 
 
 
+# 下载镜像
+```markdown
 
-https://hub.docker.com/r/kingnan/centos7_stm32_build_burn
-docker pull kingnan/centos7_stm32_build_burn
+    地址 https://hub.docker.com/r/kingnan/centos7_stm32_build_burn
+
+    命令  docker pull kingnan/centos7_stm32_build_burn
+
+
+```
 
 
 
