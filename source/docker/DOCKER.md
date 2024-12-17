@@ -84,6 +84,23 @@ sudo systemctl start docker
 
 # 安装 cmake
 
+```markdown
+
+下载 gcc
+
+    yum install -y gcc gcc-c++ make automake
+
+    yum install -y wget
+
+下载 cmake
+    wget https://cmake.org/files/v3.6/cmake-3.6.2.tar.gz
+    https://cmake.org/download/ 
+
+./bootstrap && make -j4 && sudo make install
+
+
+```
+
 
 
 # 交叉编译工具链安装 
