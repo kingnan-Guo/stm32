@@ -2,29 +2,57 @@
 
 搭建 docker 环境
 ```markdown
+参考： https://blog.csdn.net/weixin_56781779/article/details/132258636
+
 如果系统上已安装旧版本的 Docker，请先卸载：
-sudo dnf remove docker \
-    docker-client \
-    docker-client-latest \
-    docker-common \
-    docker-latest \
-    docker-latest-logrotate \
-    docker-logrotate \
-    docker-engine
+    yum remove docker \
+        docker-client \
+        docker-client-latest \
+        docker-common \
+        docker-latest \
+        docker-latest-logrotate \
+        docker-logrotate \
+        docker-selinux \
+        docker-engine-selinux \
+        docker-engine \
+        docker-ce
+
+
+
+
+
+
 
 
 安装依赖工具来支持 Docker 仓库和软件包管理：
-    sudo dnf -y install yum-utils device-mapper-persistent-data lvm2
+    yum install -y yum-utils device-mapper-persistent-data  lvm2 --skip-broken
 
 
 
 使用以下命令添加 Docker 官方仓库：
     sudo yum-config-manager --add-repo https://download.docker.com/linux/centos/docker-ce.repo
 
-从刚刚添加的仓库中安装 Docker 引擎： 发现会失败 ，所以要添加代理
-    sudo dnf install -y docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
+ 发现会失败 ，所以要添加代理
+
+# 设置docker镜像源
+    yum-config-manager \
+    --add-repo \
+    https://mirrors.aliyun.com/docker-ce/linux/centos/docker-ce.repo
+    
+    sed -i 's/download.docker.com/mirrors.aliyun.com\/docker-ce/g' /etc/yum.repos.d/docker-ce.repo
+    
+    yum makecache fast
 
 
+安装
+yum install -y docker-ce
+
+
+
+# 启动docker前，一定要关闭防火墙后！！
+    systemctl stop firewalld # 关闭
+
+    systemctl disable firewalld # 禁止开机启动防火墙
 
 
 启动和启用 Docker 服务
